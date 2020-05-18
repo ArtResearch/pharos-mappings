@@ -38,6 +38,10 @@
 	<pattern>{Start} - {End}</pattern>
 </generator>
 
+<generator name="DimensionConcatenated">
+	<pattern>{length} x {height} {unit}</pattern>
+</generator>
+
 <generator name="PageUri" prefix="prefix" shorten="yes">
 	<pattern>{resourceType}/{resourceId}/page/{pageId}</pattern>
 </generator>
