@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<generator_policy>
+
+
+<generator name="URIwithType" prefix="prefix" shorten="yes">
+	<pattern>{type}/{id}</pattern>
+</generator>
+
+<generator name="URIwithTypeAndId" prefix="prefix">
+	<pattern>{type}/{id}</pattern>
+</generator>
+
+<generator name="IdentifierURI" prefix="prefix" shorten="yes">
+	<pattern>{subject_type}/{subject_id}/{identifier_type}/{identifier_id}</pattern>
+</generator>
+
+<generator name="DimensionURI" prefix="prefix" shorten="yes">
+	<pattern>{subject_type}/{subject_id}/dimension/{type}/{unit}/{value}</pattern>
+</generator>
+
+<generator name="EventUri" prefix="prefix">
+	<pattern>{resourceType}/{resourceId}/{eventType}</pattern>
+</generator>
+
+<generator name="Image_Generator" prefix="image">
+	<pattern>{id}{postfix}</pattern>
+</generator>
+
+<generator name="PropertyTypeUri" prefix="prefix">
+	<pattern>{propertyType}/{domain}/{range}</pattern>
+</generator>
+
+<generator name="TimespanUri" prefix="prefix">
+	<pattern>{resourceType}/{resourceId}/{eventType}/timespan</pattern>
+</generator>
+
+<generator name="DateConcatenated">
+	<pattern>{Start} - {End}</pattern>
+</generator>
+
+<generator name="DimensionConcatenated">
+	<pattern>{length} x {height} {unit}</pattern>
+</generator>
+
+<generator name="PageUri" prefix="prefix" shorten="yes">
+	<pattern>{resourceType}/{resourceId}/page/{pageId}</pattern>
+</generator>
+
+<generator name="ComplexTimespanUri" prefix="prefix" shorten="yes">
+	<pattern>{resourceType}/{resourceId}/{eventType}/timespan/{timespan}</pattern>
+</generator>
+
+<generator name="AcquisitionUri" prefix="prefix" shorten="yes">
+	<pattern>{resourceType}/{resourceId}/{eventType}/{from}{to}{timespan}</pattern>
+</generator>
+
+<generator name="RightsUri" prefix="prefix" shorten="yes">
+	<pattern>{resourceType}/{resourceId}/rights/{rights_id}</pattern>
+</generator>
+
+<generator name="InformationObjectUri" prefix="prefix" shorten="yes">
+	<pattern>{resourceType}/{resourceId}/information_object/{type}/{id}</pattern>
+</generator>
+
+<generator name="SubjectUri" prefix="prefix" shorten="yes">
+	<pattern>{resourceType}/{resourceId}/subject/{subject_id}</pattern>
+</generator>
+
+<generator name="VisualItemUri" prefix="prefix">
+	<pattern>{resourceType}/{resourceId}/visual_item</pattern>
+</generator>
+
+<generator name="PhotoMMFUri" prefix="prefix" shorten="yes">
+	<pattern>photo/{photoId}/{mmf_type}/{id}</pattern>
+</generator>
+
+<generator name="ComplexEventUri" prefix="prefix" shorten="yes">
+	<pattern>{resourceType}/{resourceId}/{id}/{event_type}</pattern>
+</generator>
+
+<generator name="FrickPhotoURI" prefix="prefix" shorten="yes">
+	<pattern>photo/{work_id}{count_id}/</pattern>
+</generator>
+
+<generator name="FrickPhotoLabel">
+	<pattern>{work_id} {count_id}</pattern>
+</generator>
+
+<generator name="FrickImageURI" prefix="img">
+	<pattern>{id}</pattern>
+</generator>
+
+<generator name="ConditionURI" prefix="prefix" shorten="yes">
+	<pattern>{resourceType}/{resourceId}/condition/{id}</pattern>
+</generator>
+
+<generator name="OriginalURI" prefix="prefix">
+	<pattern>obj{id}</pattern>
+</generator>
+
+
+
+<generator name="URIwith2Types" prefix="fot">
+	<pattern>{type1}/{type2}/{id}</pattern>
+</generator>
+
+<generator name="workIdentifierUri" prefix="fot">
+	<pattern>work/{work_id}/{identifier_type}/{identifier}</pattern>
+</generator>
+
+<generator name="actorIdentifierUri" prefix="fot">
+	<pattern>actor/{actor_id}/{identifier_type}/{identifier}</pattern>
+</generator>
+
+<generator name="eventIdentifierUri" prefix="fot">
+	<pattern>{resourceType}/{resourceId}/{eventType}</pattern>
+</generator>
+
+<generator name="eventLabel">
+	<pattern>{eventType} of {resourceId}</pattern>
+</generator>
+
+<generator name="subjectVisualItemUri" prefix="fot">
+	<pattern>{resourceType}/{resourceId}/{type}/{id}</pattern>
+</generator>
+
+<generator name="TypedLiteralGen">
+	<custom generatorClass="gr.forth.TypedLiteralGenerator">
+		<set-arg name="text"/>
+	</custom>
+</generator>
+
+<generator name="IIIF_Image_Generator" prefix="iiif_image">
+	<pattern>{id}/{postfix}</pattern>
+</generator>
+
+<generator name="IIIF_Json_Generator" prefix="iiif_json">
+	<pattern>{id}/info.json</pattern>
+</generator>
+
+
+<generator name="LocalTermURI" prefix="pref">
+    <pattern>{hierarchy}/{term}</pattern>
+ </generator> 
+ 
+<generator name="URI">
+ <pattern>{text}</pattern>
+</generator>
+ 
+ 
+<generator name="URIorUUID">
+	<custom generatorClass="gr.forth.URIorUUID">
+		<set-arg name="text"></set-arg>
+	</custom>
+</generator>
+
+</generator_policy>
+ 
