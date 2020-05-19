@@ -94,7 +94,9 @@
 	<pattern>{resourceType}/{resourceId}/condition/{id}</pattern>
 </generator>
 
-
+<generator name="OriginalURI" prefix="prefix">
+	<pattern>obj{id}</pattern>
+</generator>
 
 
 
