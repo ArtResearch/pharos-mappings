@@ -6,16 +6,16 @@
 		<namespace prefix="crmdig" uri="http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/"/>
 		<namespace prefix="ssw" uri="http://catalog.sharedshelf.artstor.org/ssw"/>
 		<namespace prefix="display" uri="http://catalog.sharedshelf.artstor.org/display"/>
-		<namespace prefix="prefix" uri="https://pharos.artresearch.net/resource/hertziana/"/>
+		<namespace prefix="prefix" uri="https://pharos.artresearch.net/resource/marburg/"/>
 		<namespace prefix="custom" uri="https://pharos.artresearch.net/custom/"/>
 		<namespace prefix="owl" uri="http://www.w3.org/2002/07/owl#"/>
 		<namespace prefix="iiif_image" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
-		<namespace prefix="image" uri="http://fotothek.biblhertz.it/bh/320px/"/>
+		<namespace prefix="image" uri="http://www.bildindex.de/bilder/d/"/>
 		<namespace prefix="iiif_json" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
 	</namespaces>
 	
 	<mappings>
-		<mapping>
+		<mapping namedgraph="http://graph">
 			<domain>
 				<source_node>/root/obj/a8450</source_node>
 				<target_node>
@@ -41,6 +41,18 @@
 								<label_generator name="Literal">
 									<arg name="text" type="constant">photographs</arg>
 								</label_generator>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>crm:E55_Type</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">https://pharos.artresearch.net/resource/vocab/maintype</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">main type</arg>
+										</label_generator>
+									</entity>
+								</additional>
 							</entity>
 						</additional>
 						<additional>
@@ -61,10 +73,10 @@
 								<type>custom:Provider</type>
 								<instance_generator name="URIwithType">
 									<arg name="type" type="constant">source</arg>
-									<arg name="id" type="constant">Hertziana</arg>
+									<arg name="id" type="constant">Marburg</arg>
 								</instance_generator>
 								<label_generator name="Literal">
-									<arg name="text" type="constant">Hertziana</arg>
+									<arg name="text" type="constant">Marburg</arg>
 								</label_generator>
 							</entity>
 						</additional>
@@ -74,7 +86,7 @@
 								<type>crm:E38_Image</type>
 								<instance_generator name="Image_Generator">
 									<arg name="id" type="xpath">a8540/text()</arg>
-									<arg name="postfix" type="constant">.jpg</arg>
+									<arg name="postfix" type="constant"></arg>
 								</instance_generator>
 							</entity>
 						</additional>
@@ -817,7 +829,7 @@
 			
 		</mapping>	
 	
-		<mapping>
+		<mapping namedgraph="http://graph">
 			<domain>
 				<source_node>/root/obj/obj/a8450</source_node>
 				<target_node>
@@ -843,6 +855,18 @@
 								<label_generator name="Literal">
 									<arg name="text" type="constant">photographs</arg>
 								</label_generator>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>crm:E55_Type</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">https://pharos.artresearch.net/resource/vocab/maintype</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">main type</arg>
+										</label_generator>
+									</entity>
+								</additional>
 							</entity>
 						</additional>
 						<additional>
@@ -863,10 +887,10 @@
 								<type>custom:Provider</type>
 								<instance_generator name="URIwithType">
 									<arg name="type" type="constant">source</arg>
-									<arg name="id" type="constant">Hertziana</arg>
+									<arg name="id" type="constant">Marburg</arg>
 								</instance_generator>
 								<label_generator name="Literal">
-									<arg name="text" type="constant">Hertziana</arg>
+									<arg name="text" type="constant">Marburg</arg>
 								</label_generator>
 							</entity>
 						</additional>
@@ -876,7 +900,7 @@
 								<type>crm:E38_Image</type>
 								<instance_generator name="Image_Generator">
 									<arg name="id" type="xpath">a8540/text()</arg>
-									<arg name="postfix" type="constant">.jpg</arg>
+									<arg name="postfix" type="constant"></arg>
 								</instance_generator>
 							</entity>
 						</additional>
@@ -1621,7 +1645,7 @@
 
 
 		
-		<mapping>
+		<mapping namedgraph="http://graph">
 			<domain>
 				<source_node>/root/obj/obj/obj/a8450</source_node>
 				<target_node>
@@ -1647,6 +1671,18 @@
 								<label_generator name="Literal">
 									<arg name="text" type="constant">photographs</arg>
 								</label_generator>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>crm:E55_Type</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">https://pharos.artresearch.net/resource/vocab/maintype</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">main type</arg>
+										</label_generator>
+									</entity>
+								</additional>
 							</entity>
 						</additional>
 						<additional>
@@ -1667,10 +1703,10 @@
 								<type>custom:Provider</type>
 								<instance_generator name="URIwithType">
 									<arg name="type" type="constant">source</arg>
-									<arg name="id" type="constant">Hertziana</arg>
+									<arg name="id" type="constant">Marburg</arg>
 								</instance_generator>
 								<label_generator name="Literal">
-									<arg name="text" type="constant">Hertziana</arg>
+									<arg name="text" type="constant">Marburg</arg>
 								</label_generator>
 							</entity>
 						</additional>
@@ -1680,7 +1716,7 @@
 								<type>crm:E38_Image</type>
 								<instance_generator name="Image_Generator">
 									<arg name="id" type="xpath">a8540/text()</arg>
-									<arg name="postfix" type="constant">.jpg</arg>
+									<arg name="postfix" type="constant"></arg>
 								</instance_generator>
 							</entity>
 						</additional>
@@ -2424,7 +2460,7 @@
 		</mapping>	
 
 		
-		<mapping>
+		<mapping namedgraph="http://graph">
 			<domain>
 				<source_node>/root/obj/obj/obj/obj/a8450</source_node>
 				<target_node>
@@ -2450,6 +2486,18 @@
 								<label_generator name="Literal">
 									<arg name="text" type="constant">photographs</arg>
 								</label_generator>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>crm:E55_Type</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">https://pharos.artresearch.net/resource/vocab/maintype</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">main type</arg>
+										</label_generator>
+									</entity>
+								</additional>
 							</entity>
 						</additional>
 						<additional>
@@ -2470,10 +2518,10 @@
 								<type>custom:Provider</type>
 								<instance_generator name="URIwithType">
 									<arg name="type" type="constant">source</arg>
-									<arg name="id" type="constant">Hertziana</arg>
+									<arg name="id" type="constant">Marburg</arg>
 								</instance_generator>
 								<label_generator name="Literal">
-									<arg name="text" type="constant">Hertziana</arg>
+									<arg name="text" type="constant">Marburg</arg>
 								</label_generator>
 							</entity>
 						</additional>
@@ -2483,7 +2531,7 @@
 								<type>crm:E38_Image</type>
 								<instance_generator name="Image_Generator">
 									<arg name="id" type="xpath">a8540/text()</arg>
-									<arg name="postfix" type="constant">.jpg</arg>
+									<arg name="postfix" type="constant"></arg>
 								</instance_generator>
 							</entity>
 						</additional>
@@ -3226,7 +3274,7 @@
 			
 		</mapping>	
 		
-		<mapping>		
+		<mapping namedgraph="http://graph">		
 			<domain>
 				<source_node>/root/obj/a8450/a8470</source_node>
 				<target_node>
@@ -3248,10 +3296,10 @@
 								<type>custom:Provider</type>
 								<instance_generator name="URIwithType">
 									<arg name="type" type="constant">source</arg>
-									<arg name="id" type="constant">Hertziana</arg>
+									<arg name="id" type="constant">Marburg</arg>
 								</instance_generator>
 								<label_generator name="Literal">
-									<arg name="text" type="constant">Hertziana</arg>
+									<arg name="text" type="constant">Marburg</arg>
 								</label_generator>
 							</entity>
 						</additional>	
@@ -3353,7 +3401,7 @@
 	
 		</mapping>	
 		
-		<mapping>		
+		<mapping namedgraph="http://graph">		
 			<domain>
 				<source_node>/root/obj/obj/a8450/a8470</source_node>
 				<target_node>
@@ -3375,10 +3423,10 @@
 								<type>custom:Provider</type>
 								<instance_generator name="URIwithType">
 									<arg name="type" type="constant">source</arg>
-									<arg name="id" type="constant">Hertziana</arg>
+									<arg name="id" type="constant">Marburg</arg>
 								</instance_generator>
 								<label_generator name="Literal">
-									<arg name="text" type="constant">Hertziana</arg>
+									<arg name="text" type="constant">Marburg</arg>
 								</label_generator>
 							</entity>
 						</additional>	
@@ -3480,7 +3528,7 @@
 	
 		</mapping>	
 		
-		<mapping>		
+		<mapping namedgraph="http://graph">		
 			<domain>
 				<source_node>/root/obj/obj/obj/a8450/a8470</source_node>
 				<target_node>
@@ -3502,10 +3550,10 @@
 								<type>custom:Provider</type>
 								<instance_generator name="URIwithType">
 									<arg name="type" type="constant">source</arg>
-									<arg name="id" type="constant">Hertziana</arg>
+									<arg name="id" type="constant">Marburg</arg>
 								</instance_generator>
 								<label_generator name="Literal">
-									<arg name="text" type="constant">Hertziana</arg>
+									<arg name="text" type="constant">Marburg</arg>
 								</label_generator>
 							</entity>
 						</additional>	
@@ -3607,7 +3655,7 @@
 	
 		</mapping>	
 		
-		<mapping>		
+		<mapping namedgraph="http://graph">		
 			<domain>
 				<source_node>/root/obj/obj/obj/obj/a8450/a8470</source_node>
 				<target_node>
@@ -3629,10 +3677,10 @@
 								<type>custom:Provider</type>
 								<instance_generator name="URIwithType">
 									<arg name="type" type="constant">source</arg>
-									<arg name="id" type="constant">Hertziana</arg>
+									<arg name="id" type="constant">Marburg</arg>
 								</instance_generator>
 								<label_generator name="Literal">
-									<arg name="text" type="constant">Hertziana</arg>
+									<arg name="text" type="constant">Marburg</arg>
 								</label_generator>
 							</entity>
 						</additional>	

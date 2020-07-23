@@ -6,7 +6,7 @@
 		<namespace prefix="crmdig" uri="http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/"/>
 		<namespace prefix="ssw" uri="http://catalog.sharedshelf.artstor.org/ssw"/>
 		<namespace prefix="display" uri="http://catalog.sharedshelf.artstor.org/display"/>
-		<namespace prefix="prefix" uri="https://pharos.artresearch.net/resource/hertziana/"/>
+		<namespace prefix="prefix" uri="https://pharos.artresearch.net/resource/marburg/"/>
 		<namespace prefix="custom" uri="https://pharos.artresearch.net/custom/"/>
 		<namespace prefix="owl" uri="http://www.w3.org/2002/07/owl#"/>
 		<namespace prefix="iiif_image" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
@@ -14,7 +14,7 @@
 		<namespace prefix="iiif_json" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
 	</namespaces>
 	<mappings>
-		<mapping>
+		<mapping namedgraph="http://graph">
 			<domain>
 				<source_node>/root/obj</source_node>
 				<target_node>
@@ -36,10 +36,10 @@
 								<type>custom:Provider</type>
 								<instance_generator name="URIwithType">
 									<arg name="type" type="constant">source</arg>
-									<arg name="id" type="constant">Hertziana</arg>
+									<arg name="id" type="constant">Marburg</arg>
 								</instance_generator>
 								<label_generator name="Literal">
-									<arg name="text" type="constant">Hertziana</arg>
+									<arg name="text" type="constant">Marburg</arg>
 								</label_generator>
 							</entity>
 						</additional>
@@ -53,6 +53,18 @@
 								<label_generator name="Literal">
 									<arg name="text" type="constant">works of art</arg>
 								</label_generator>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>crm:E55_Type</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">https://pharos.artresearch.net/resource/vocab/maintype</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">main type</arg>
+										</label_generator>
+									</entity>
+								</additional>
 							</entity>
 						</additional>		
 						<additional>
@@ -1636,6 +1648,7 @@
 					</target_node>
 				</range>
 			</link>
+			
 			<link>
 				<path>
 					<source_relation>
@@ -1643,7 +1656,7 @@
 					</source_relation>
 					<target_relation>
 						<if>
-							<equals value="Herstellung">../../aob30/text()</equals>
+							<equals value="Datierung">../text()</equals>
 						</if>
 						<relationship>crm:P108i_was_produced_by</relationship>
 						<entity>
@@ -1662,6 +1675,19 @@
 								<arg name="resourceId" type="xpath">../../a5000/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>crm:E55_Type</type>
+									<instance_generator name="URIwithType">
+									<arg name="type" type="constant">type</arg>
+										<arg name="id" type="constant">Datierung</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="constant">Datierung</arg>
+									</label_generator>
+								</entity>
+							</additional>		
 						</entity>
 						<relationship>crm:P82_at_some_time_within</relationship>
 					</target_relation>
@@ -1679,6 +1705,7 @@
 				</range>
 			</link>
 			
+			<!--
 			<link>
 				<path>
 					<source_relation>
@@ -1725,6 +1752,7 @@
 					</target_node>
 				</range>
 			</link>
+			-->
 			
 			<link>
 				<path>

@@ -15,7 +15,7 @@
 
 	</namespaces>
 	<mappings>
-		<mapping>
+		<mapping namedgraph="http://graph">
 			<domain>
 				<source_node>/root/obj/aob30</source_node>
 				<target_node>
@@ -399,7 +399,7 @@
 		</mapping>	
 		
 
-		<mapping>
+		<mapping namedgraph="http://graph">
 			<domain>
 				<source_node>/root/obj/obj/aob30</source_node>
 				<target_node>
@@ -783,7 +783,7 @@
 		
 		</mapping>	
 		
-		<mapping>
+		<mapping namedgraph="http://graph">
 			<domain>
 				<source_node>/root/obj/obj/obj/aob30</source_node>
 				<target_node>
@@ -1168,7 +1168,7 @@
 		
 		</mapping>	
 		
-		<mapping>
+		<mapping namedgraph="http://graph">
 			<domain>
 				<source_node>/root/obj/obj/obj/obj/aob30</source_node>
 				<target_node>

@@ -14,7 +14,7 @@
 		<namespace prefix="skos" uri="http://www.w3.org/2004/02/skos/core#"/>
 	</namespaces>
 	<mappings>
-		<mapping>
+		<mapping namedgraph="http://graph">
 			<domain>
 				<source_node>//Collection</source_node>
 				<target_node>

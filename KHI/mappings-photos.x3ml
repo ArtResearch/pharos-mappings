@@ -15,7 +15,7 @@
 	</namespaces>
 	
 	<mappings>
-		<mapping>
+		<mapping namedgraph="http://graph">
 			<domain>
 				<source_node>/root/obj/a8450</source_node>
 				<target_node>
@@ -41,6 +41,18 @@
 								<label_generator name="Literal">
 									<arg name="text" type="constant">photographs</arg>
 								</label_generator>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>crm:E55_Type</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">https://pharos.artresearch.net/resource/vocab/maintype</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">main type</arg>
+										</label_generator>
+									</entity>
+								</additional>
 							</entity>
 						</additional>
 						<additional>
@@ -817,7 +829,7 @@
 			
 		</mapping>	
 	
-		<mapping>
+		<mapping namedgraph="http://graph">
 			<domain>
 				<source_node>/root/obj/obj/a8450</source_node>
 				<target_node>
@@ -843,6 +855,18 @@
 								<label_generator name="Literal">
 									<arg name="text" type="constant">photographs</arg>
 								</label_generator>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>crm:E55_Type</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">https://pharos.artresearch.net/resource/vocab/maintype</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">main type</arg>
+										</label_generator>
+									</entity>
+								</additional>
 							</entity>
 						</additional>
 						<additional>
@@ -1621,7 +1645,7 @@
 
 
 		
-		<mapping>
+		<mapping namedgraph="http://graph">
 			<domain>
 				<source_node>/root/obj/obj/obj/a8450</source_node>
 				<target_node>
@@ -1647,6 +1671,18 @@
 								<label_generator name="Literal">
 									<arg name="text" type="constant">photographs</arg>
 								</label_generator>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>crm:E55_Type</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">https://pharos.artresearch.net/resource/vocab/maintype</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">main type</arg>
+										</label_generator>
+									</entity>
+								</additional>
 							</entity>
 						</additional>
 						<additional>
@@ -2424,7 +2460,7 @@
 		</mapping>	
 
 		
-		<mapping>
+		<mapping namedgraph="http://graph">
 			<domain>
 				<source_node>/root/obj/obj/obj/obj/a8450</source_node>
 				<target_node>
@@ -2450,6 +2486,18 @@
 								<label_generator name="Literal">
 									<arg name="text" type="constant">photographs</arg>
 								</label_generator>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>crm:E55_Type</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">https://pharos.artresearch.net/resource/vocab/maintype</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">main type</arg>
+										</label_generator>
+									</entity>
+								</additional>
 							</entity>
 						</additional>
 						<additional>
@@ -3226,7 +3274,7 @@
 			
 		</mapping>	
 		
-		<mapping>		
+		<mapping namedgraph="http://graph">		
 			<domain>
 				<source_node>/root/obj/a8450/a8470</source_node>
 				<target_node>
@@ -3353,7 +3401,7 @@
 	
 		</mapping>	
 		
-		<mapping>		
+		<mapping namedgraph="http://graph">		
 			<domain>
 				<source_node>/root/obj/obj/a8450/a8470</source_node>
 				<target_node>
@@ -3480,7 +3528,7 @@
 	
 		</mapping>	
 		
-		<mapping>		
+		<mapping namedgraph="http://graph">		
 			<domain>
 				<source_node>/root/obj/obj/obj/a8450/a8470</source_node>
 				<target_node>
@@ -3607,7 +3655,7 @@
 	
 		</mapping>	
 		
-		<mapping>		
+		<mapping namedgraph="http://graph">		
 			<domain>
 				<source_node>/root/obj/obj/obj/obj/a8450/a8470</source_node>
 				<target_node>

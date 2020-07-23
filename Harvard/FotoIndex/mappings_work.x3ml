@@ -13,7 +13,7 @@
 		<namespace prefix="iiif_json" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
 	</namespaces>
 	<mappings>
-		<mapping>
+		<mapping namedgraph="http://graph">
 			<domain>
 				<source_node>//Work</source_node>
 				<target_node>
@@ -62,6 +62,18 @@
 								<label_generator name="Literal">
 									<arg name="text" type="constant">works of art</arg>
 								</label_generator>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>crm:E55_Type</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">https://pharos.artresearch.net/resource/vocab/maintype</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">main type</arg>
+										</label_generator>
+									</entity>
+								</additional>
 							</entity>
 						</additional>		
 					</entity>
@@ -190,7 +202,7 @@
 					</target_node>
 				</range>
 			</link>
-			<!--
+			
 			<link>
 				<path>
 					<source_relation>
@@ -270,7 +282,6 @@
 					</target_node>
 				</range>
 			</link>
-			-->
 			
 			<link>
 				<path>

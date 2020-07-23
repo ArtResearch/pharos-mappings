@@ -15,13 +15,13 @@
 		<namespace prefix="marc" uri="http://www.loc.gov/MARC21/slim"/>
 	</namespaces>
 	<mappings>
-		<mapping>
+		<mapping namedgraph="http://graph">
 			<domain>
 				<source_node>//RISULTATI/SCHEDA</source_node>
 				<target_node>
                     <entity>
                         <type>crm:E22_Man-Made_Object</type>
-						<instance_generator name="URIwithType">
+						<instance_generator name="URIwithTypeAndId">
 						    <arg name="type" type="constant">photo</arg>
 							<arg name="id" type="xpath">PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
 						</instance_generator>
@@ -1153,16 +1153,16 @@
 						<relation>PARAGRAFO[@etichetta="LOCATION"]/LDCM[@etichetta="Collection"]</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>crm:P106i_forms_part_of</relationship>
+						<relationship>crm:P50_has_current_keeper</relationship>
 					</target_relation>
 				</path>
 				<range>
 					<source_node>PARAGRAFO[@etichetta="LOCATION"]/LDCM[@etichetta="Collection"]</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E78_Curated_Holding</type>
+							<type>crm:E39_Actor</type>
 							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">collection</arg>
+								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
 							<label_generator name="Literal">
@@ -1271,7 +1271,7 @@
 								<entity>
 									<type>rdfs:Literal</type>
 									<instance_generator name="DimensionConcatenated">
-										<arg name="length" type="xpath">../MISL[@etichetta="Length"]/text()</arg>
+										<arg name="length" type="xpath">../MISA[@etichetta="Height"]/text()</arg>
 										<arg name="height" type="xpath">text()</arg>
 										<arg name="unit" type="xpath">../MISU[@etichetta="Unit of measurement"]/text()</arg>
 									</instance_generator>

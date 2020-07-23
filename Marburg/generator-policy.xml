@@ -98,6 +98,9 @@
 	<pattern>obj{id}</pattern>
 </generator>
 
+<generator name="SourceRecordVIT" prefix="vit">
+	<pattern>{id}/catalog</pattern>
+</generator>
 
 
 <generator name="URIwith2Types" prefix="fot">

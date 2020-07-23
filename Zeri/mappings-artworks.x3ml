@@ -16,7 +16,7 @@
 	</namespaces>
 
 	<mappings>
-		<mapping>
+		<mapping namedgraph="http://graph">
 			<domain>
 				<source_node>//RISULTATI/SCHEDA</source_node>
 				<target_node>
@@ -52,6 +52,18 @@
 								<label_generator name="Literal">
 									<arg name="text" type="constant">works of art</arg>
 								</label_generator>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>crm:E55_Type</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">https://pharos.artresearch.net/resource/vocab/maintype</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">main type</arg>
+										</label_generator>
+									</entity>
+								</additional>
 							</entity>
 						</additional>		
 						<additional>
@@ -788,33 +800,6 @@
 							<label_generator name="Literal">
 								<arg name="text" type="xpath">text()</arg>
 							</label_generator>
-							<additional>
-								<relationship>crm:P1_is_identified_by</relationship>
-								<entity>
-									<type>crm:E41_Appellation</type>
-									<instance_generator name="IdentifierURI">	
-										<arg name="subject_type" type="constant">work</arg>
-										<arg name="subject_id" type="xpath">text()</arg>
-										<arg name="identifier_type" type="constant">appellation</arg>
-										<arg name="identifier_id" type="xpath">text()</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="xpath">text()</arg>
-									</label_generator>
-									<additional>
-										<relationship>crm:P2_has_type</relationship>
-										<entity>
-											<type>crm:E55_Type</type>
-											<instance_generator name="URIorUUID">
-												<arg name="text" type="constant">http://vocab.getty.edu/aat/300417193</arg>
-											</instance_generator>
-											<label_generator name="Literal">
-												<arg name="text" type="constant">titles (general, names)</arg>
-											</label_generator>
-										</entity>
-									</additional>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -925,33 +910,6 @@
 							<label_generator name="Literal">
 								<arg name="text" type="xpath">text()</arg>
 							</label_generator>
-							<additional>
-								<relationship>crm:P1_is_identified_by</relationship>
-								<entity>
-									<type>crm:E41_Appellation</type>
-									<instance_generator name="IdentifierURI">	
-										<arg name="subject_type" type="constant">work</arg>
-										<arg name="subject_id" type="xpath">text()</arg>
-										<arg name="identifier_type" type="constant">appellation</arg>
-										<arg name="identifier_id" type="xpath">text()</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="xpath">text()</arg>
-									</label_generator>
-									<additional>
-										<relationship>crm:P2_has_type</relationship>
-										<entity>
-											<type>crm:E55_Type</type>
-											<instance_generator name="URIorUUID">
-												<arg name="text" type="constant">http://vocab.getty.edu/aat/300417193</arg>
-											</instance_generator>
-											<label_generator name="Literal">
-												<arg name="text" type="constant">titles (general, names)</arg>
-											</label_generator>
-										</entity>
-									</additional>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -2588,6 +2546,18 @@
 										<arg name="type" type="constant">photo</arg>
 										<arg name="id" type="xpath">substring(@ftan,14,5)</arg>
 									</instance_generator>
+									<additional>
+										<relationship>crm:P2_has_type</relationship>
+										<entity>
+											<type>crm:E55_Type</type>
+											<instance_generator name="URIorUUID">
+												<arg name="text" type="constant">http://vocab.getty.edu/aat/300046300</arg>
+											</instance_generator>
+											<label_generator name="Literal">
+												<arg name="text" type="constant">photographs</arg>
+											</label_generator>
+										</entity>
+									</additional>
 								</entity>
 							</additional>
 						</entity>
@@ -2621,7 +2591,7 @@
 			</link>
 		</mapping>
 		
-		<mapping>	
+		<mapping namedgraph="http://graph">	
 			<domain>
 				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="AUTHOR"]/RIPETIZIONE</source_node>
 				<target_node>
@@ -2760,7 +2730,7 @@
 			
 		</mapping>
 		
-			<mapping>	
+			<mapping namedgraph="http://graph">	
 		
 			<domain>
 				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="DIFFERENT ATTRIBUTIONS"]/RIPETIZIONE</source_node>
