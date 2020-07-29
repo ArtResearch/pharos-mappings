@@ -7,7 +7,7 @@
 		<namespace prefix="ssw" uri="http://catalog.sharedshelf.artstor.org/ssw"/>
 		<namespace prefix="display" uri="http://catalog.sharedshelf.artstor.org/display"/>
 		<namespace prefix="owl" uri="http://www.w3.org/2002/07/owl#"/>
-		<namespace prefix="prefix" uri="https://pharos.artresearch.net/resource/villaitatti/"/>
+		<namespace prefix="prefix" uri="https://pharos.artresearch.net/resource/itatti/"/>
 		<namespace prefix="custom" uri="https://pharos.artresearch.net/custom/"/>
 		<namespace prefix="vit" uri="http://id.lib.harvard.edu/images/olvwork"/>
 		<namespace prefix="iiif_image" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
@@ -1362,7 +1362,6 @@
 								<arg name="resourceId" type="xpath">../../../@id</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
-
 						</entity>
 						<relationship>crm:P82b_end_of_the_end</relationship>
 					</target_relation>
@@ -1748,10 +1747,9 @@
 						<relationship>crm:P65_shows_visual_item</relationship>
 						<entity>
 							<type>crm:E36_Visual_Item</type>
-							<instance_generator name="SubjectUri">
-								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../@id</arg>
-								<arg name="subject_id" type="xpath">@id</arg>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">subject</arg>
+								<arg name="id" type="xpath">@id</arg>
 							</instance_generator>
 							<label_generator name="Literal">
 								<arg name="text" type="xpath">@term</arg>
@@ -1822,10 +1820,9 @@
 					<target_node>
 						<entity>
 							<type>crm:E36_Visual_Item</type>
-							<instance_generator name="SubjectUri">
-								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../@id</arg>
-								<arg name="subject_id" type="xpath">@id</arg>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">subject</arg>
+								<arg name="id" type="xpath">@id</arg>
 							</instance_generator>
 							<label_generator name="Literal">
 								<arg name="text" type="xpath">@term</arg>
@@ -1858,20 +1855,27 @@
 					</target_node>
 				</range>
 			</link>
-			
-			<link>
+		
+			<link>			
 				<path>
 					<source_relation>
 						<relation>display:DR/DisplayRecord/field_string[@label="Image Accession Number"]</relation>
 					</source_relation>
 					<target_relation>
 						<if>
-							<not>
+							<and>
 								<if>
-									<equals value="digital photograph">../field_lookup[@label="Image Type"]/linkedField/@preferredTerm</equals>
+									<not>
+										<if>
+											<equals value="digital photograph">../field_lookup[@label="Image Type"]/linkedField/@preferredTerm</equals>
+										</if>
+									</not>
+								</if>	
+								<if>
+									<equals value="true">../field_boolean[@label="Send To Harvard"]/@value</equals>
 								</if>
-							</not>
-						</if>						
+							</and>
+						</if>					
 						<relationship>crm:P138i_is_represented_by</relationship>
 						<entity>
 							<type>crm:E36_Visual_Item</type>
@@ -1907,8 +1911,15 @@
 					</source_relation>
 					<target_relation>
 						<if>
-							<equals value="digital photograph">../field_lookup[@label="Image Type"]/linkedField/@preferredTerm</equals>
-						</if>
+							<and>
+								<if>
+									<equals value="digital photograph">../field_lookup[@label="Image Type"]/linkedField/@preferredTerm</equals>
+								</if>
+								<if>
+									<equals value="true">../field_boolean[@label="Send To Harvard"]/@value</equals>
+								</if>
+							</and>
+						</if>	
 						<relationship>crm:P138i_is_represented_by</relationship>
 						<entity>
 							<type>crm:E36_Visual_Item</type>
@@ -1917,7 +1928,7 @@
 								<arg name="resourceId" type="xpath">../../../@id</arg>
 							</instance_generator>
 						</entity>
-						<relationship>crm:P165i_is_incorported_in</relationship>
+						<relationship>crm:P165i_is_incorporated_in</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -1943,12 +1954,19 @@
 				<source_node>//ssw:Work/display:DR/DisplayRecord/field_string[@label="Image Accession Number"]</source_node>
 				<target_node>
 					<if>
-						<not>
+						<and>
 							<if>
-								<equals value="digital photograph">../field_lookup[@label="Image Type"]/linkedField/@preferredTerm</equals>
+								<not>
+									<if>
+										<equals value="digital photograph">../field_lookup[@label="Image Type"]/linkedField/@preferredTerm</equals>
+									</if>
+								</not>
 							</if>
-						</not>
-					</if>
+							<if>
+								<equals value="true">../field_boolean[@label="Send To Harvard"]/@value</equals>
+							</if>
+						</and>
+					</if>	
                     <entity>
 						<type>crm:E22_Man-Made_Object</type>
 						<instance_generator name="URIwithTypeAndId">
@@ -2110,7 +2128,35 @@
 						<relation>../../../display:DR/@sequence</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>custom:has_sequence</relationship>
+						<if>
+							<equals value="1">../DisplayRecord/field_string[@label="Image Accession Number"]/substring(@value,string-length(@value),string-length(@value))</equals>
+						</if>
+						<relationship>custom:recto_has_sequence</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../../../display:DR/@sequence</source_node>
+					<target_node>
+						<entity>
+							<type>rdfs:Literal</type>
+							<instance_generator name="Literal">
+								<arg name="text" type="xpath">../@sequence</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>../../../display:DR/@sequence</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="2">../DisplayRecord/field_string[@label="Image Accession Number"]/substring(@value,string-length(@value),string-length(@value))</equals>
+						</if>
+						<relationship>custom:verso_has_sequence</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -2444,6 +2490,56 @@
 									</label_generator>
 								</entity>
 							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link>
+				<path>
+					<source_relation>
+						<relation>../field_string[@label="Image View Description"]</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="3">../field_string[@label="Image Accession Number"]/substring(@value,string-length(@value),string-length(@value))</equals>
+						</if>
+						<relationship>crm:P128_carries</relationship>
+						<entity>
+							<type>crm:E36_Visual_Item</type>
+							<instance_generator name="VisualItemUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../../@id</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P128i_is_carried_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../field_string[@label="Image View Description"]</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E22_Man-Made_Object</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">photo_card</arg>
+								<arg name="id" type="xpath">../field_string[@label="Image Accession Number"]/substring(@value,1,string-length(@value)-2)</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">../field_string[@label="Image Accession Number"]/substring(@value,1,string-length(@value)-2)</arg>
+							</label_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>crm:E55_Type</type>
+									<instance_generator name="URIwithType">
+										<arg name="type" type="constant">type</arg>
+										<arg name="id" type="constant">Photo Card</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="constant">Photo Card</arg>
+									</label_generator>
+								</entity>
+							</additional>	
 						</entity>
 					</target_node>
 				</range>
@@ -2862,9 +2958,9 @@
 						<if>
 							<equals value="1">../../../DisplayRecord/field_string[@label="Image Accession Number"]/substring(@value,string-length(@value),string-length(@value))</equals>
 						</if>
-						<relationship>crm:P138i_has_representation</relationship>
+						<relationship>crm:P129i_is_subject_of</relationship>
 						<entity>
-							<type>crm:E38_Image</type>
+							<type>crmdig:D1_Digital_Object</type>
 								<instance_generator name="IIIF_Image_Generator">
                                     <arg name="id" type="xpath">.</arg>
 									<arg name="postfix" type="constant">full/200,/0/native.jpg</arg>
@@ -2920,9 +3016,9 @@
 						<if>
 							<equals value="2">../../../DisplayRecord/field_string[@label="Image Accession Number"]/substring(@value,string-length(@value),string-length(@value))</equals>
 						</if>
-						<relationship>crm:P138i_has_representation</relationship>
+						<relationship>crm:P129i_is_subject_of</relationship>
 						<entity>
-							<type>crm:E38_Image</type>
+							<type>crmdig:D1_Digital_Object</type>
 								<instance_generator name="IIIF_Image_Generator">
                                     <arg name="id" type="xpath">.</arg>
 									<arg name="postfix" type="constant">full/200,/0/native.jpg</arg>
@@ -2975,8 +3071,15 @@
 				<source_node>//ssw:Work/display:DR/DisplayRecord/field_string[@label="Image Accession Number"]</source_node>
 				<target_node>
 					<if>
-						<equals value="digital photograph">../field_lookup[@label="Image Type"]/linkedField/@preferredTerm</equals>
-					</if>
+						<and>
+							<if>
+								<equals value="digital photograph">../field_lookup[@label="Image Type"]/linkedField/@preferredTerm</equals>
+							</if>
+							<if>
+								<equals value="true">../field_boolean[@label="Send To Harvard"]/@value</equals>
+							</if>
+						</and>
+					</if>	
                     <entity>
 						<type>crmdig:D1_Digital_Object</type>
 						<instance_generator name="URIwithTypeAndId">
@@ -3095,7 +3198,7 @@
 				</target_node>
 			</domain>
 				
-					<link> 
+			<link> 
 				<path>
 					<source_relation>
 						<relation>../../../display:DR[@primary="true"]</relation>
@@ -3126,7 +3229,7 @@
 						<relation>../../../display:DR/@sequence</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>custom:has_sequence</relationship>
+						<relationship>custom:recto_has_sequence</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -3783,9 +3886,9 @@
 						<relation>../../Assets/Asset/@id</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>crm:P138i_has_representation</relationship>
+						<relationship>crm:P129i_is_subject_of</relationship>
 						<entity>
-							<type>crm:E38_Image</type>
+							<type>crmdig:D1_Digital_Object</type>
 							<instance_generator name="IIIF_Image_Generator">
                                    <arg name="id" type="xpath">.</arg>
 								<arg name="postfix" type="constant">full/200,/0/native.jpg</arg>

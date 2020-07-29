@@ -81,9 +81,9 @@
 							</entity>
 						</additional>
 						<additional>
-							<relationship>crm:P138i_has_representation</relationship>
+							<relationship>crm:P129i_is_subject_of</relationship>
 							<entity>
-								<type>crm:E38_Image</type>
+								<type>crmdig:D1_Digital_Object</type>
 								<instance_generator name="Image_Generator">
 									<arg name="id" type="xpath">a8540/text()</arg>
 									<arg name="postfix" type="constant">.jpg</arg>
@@ -653,19 +653,25 @@
 						<relation>a8540h</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>crm:P1_is_identified_by</relationship>
+						<relationship>crm:P128_carries</relationship>
+						<entity>
+							<type>crm:E36_Visual_Item</type>
+							<instance_generator name="VisualItemUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../a5000/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P128i_is_carried_by</relationship>
 					</target_relation>
 				</path>
 				<range>
 					<source_node>a8540h</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E42_Identifier</type>
-							<instance_generator name="IdentifierURI">	
-								<arg name="subject_type" type="constant">photo</arg>
-								<arg name="subject_id" type="xpath">../a8540/text()</arg>
-								<arg name="identifier_type" type="constant">identifier</arg>
-								<arg name="identifier_id" type="xpath">text()</arg>
+							<type>crm:E22_Man-Made_Object</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">negative</arg>
+								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
 							<label_generator name="Literal">
 								<arg name="text" type="xpath">text()</arg>
@@ -675,10 +681,10 @@
 								<entity>
 									<type>crm:E55_Type</type>
 									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300417226</arg>
+										<arg name="text" type="constant">http://vocab.getty.edu/aat/300127173</arg>
 									</instance_generator>
 									<label_generator name="Literal">
-										<arg name="text" type="constant">alternative titles</arg>
+										<arg name="text" type="constant">negatives (photographs)</arg>
 									</label_generator>
 								</entity>
 							</additional>
@@ -686,6 +692,7 @@
 					</target_node>
 				</range>
 			</link>
+			
 			
 			<link> 
 				<path>
@@ -895,9 +902,9 @@
 							</entity>
 						</additional>
 						<additional>
-							<relationship>crm:P138i_has_representation</relationship>
+							<relationship>crm:P129i_is_subject_of</relationship>
 							<entity>
-								<type>crm:E38_Image</type>
+								<type>crmdig:D1_Digital_Object</type>
 								<instance_generator name="Image_Generator">
 									<arg name="id" type="xpath">a8540/text()</arg>
 									<arg name="postfix" type="constant">.jpg</arg>
@@ -1467,19 +1474,25 @@
 						<relation>a8540h</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>crm:P1_is_identified_by</relationship>
+						<relationship>crm:P128_carries</relationship>
+						<entity>
+							<type>crm:E36_Visual_Item</type>
+							<instance_generator name="VisualItemUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../a5000/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P128i_is_carried_by</relationship>
 					</target_relation>
 				</path>
 				<range>
 					<source_node>a8540h</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E42_Identifier</type>
-							<instance_generator name="IdentifierURI">	
-								<arg name="subject_type" type="constant">photo</arg>
-								<arg name="subject_id" type="xpath">../a8540/text()</arg>
-								<arg name="identifier_type" type="constant">identifier</arg>
-								<arg name="identifier_id" type="xpath">text()</arg>
+							<type>crm:E22_Man-Made_Object</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">negative</arg>
+								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
 							<label_generator name="Literal">
 								<arg name="text" type="xpath">text()</arg>
@@ -1489,10 +1502,10 @@
 								<entity>
 									<type>crm:E55_Type</type>
 									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300417226</arg>
+										<arg name="text" type="constant">http://vocab.getty.edu/aat/300127173</arg>
 									</instance_generator>
 									<label_generator name="Literal">
-										<arg name="text" type="constant">alternative titles</arg>
+										<arg name="text" type="constant">negatives (photographs)</arg>
 									</label_generator>
 								</entity>
 							</additional>
@@ -1711,9 +1724,9 @@
 							</entity>
 						</additional>
 						<additional>
-							<relationship>crm:P138i_has_representation</relationship>
+							<relationship>crm:P129i_is_subject_of</relationship>
 							<entity>
-								<type>crm:E38_Image</type>
+								<type>crmdig:D1_Digital_Object</type>
 								<instance_generator name="Image_Generator">
 									<arg name="id" type="xpath">a8540/text()</arg>
 									<arg name="postfix" type="constant">.jpg</arg>
@@ -2277,25 +2290,31 @@
 				</range>
 			</link>
 			
-			<link> 
+		<link> 
 				<path>
 					<source_relation>
 						<relation>a8540h</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>crm:P1_is_identified_by</relationship>
+						<relationship>crm:P128_carries</relationship>
+						<entity>
+							<type>crm:E36_Visual_Item</type>
+							<instance_generator name="VisualItemUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../a5000/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P128i_is_carried_by</relationship>
 					</target_relation>
 				</path>
 				<range>
 					<source_node>a8540h</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E42_Identifier</type>
-							<instance_generator name="IdentifierURI">	
-								<arg name="subject_type" type="constant">photo</arg>
-								<arg name="subject_id" type="xpath">../a8540/text()</arg>
-								<arg name="identifier_type" type="constant">identifier</arg>
-								<arg name="identifier_id" type="xpath">text()</arg>
+							<type>crm:E22_Man-Made_Object</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">negative</arg>
+								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
 							<label_generator name="Literal">
 								<arg name="text" type="xpath">text()</arg>
@@ -2305,10 +2324,10 @@
 								<entity>
 									<type>crm:E55_Type</type>
 									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300417226</arg>
+										<arg name="text" type="constant">http://vocab.getty.edu/aat/300127173</arg>
 									</instance_generator>
 									<label_generator name="Literal">
-										<arg name="text" type="constant">alternative titles</arg>
+										<arg name="text" type="constant">negatives (photographs)</arg>
 									</label_generator>
 								</entity>
 							</additional>
@@ -2526,9 +2545,9 @@
 							</entity>
 						</additional>
 						<additional>
-							<relationship>crm:P138i_has_representation</relationship>
+							<relationship>crm:P129i_is_subject_of</relationship>
 							<entity>
-								<type>crm:E38_Image</type>
+								<type>crmdig:D1_Digital_Object</type>
 								<instance_generator name="Image_Generator">
 									<arg name="id" type="xpath">a8540/text()</arg>
 									<arg name="postfix" type="constant">.jpg</arg>
@@ -3098,19 +3117,25 @@
 						<relation>a8540h</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>crm:P1_is_identified_by</relationship>
+						<relationship>crm:P128_carries</relationship>
+						<entity>
+							<type>crm:E36_Visual_Item</type>
+							<instance_generator name="VisualItemUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../a5000/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P128i_is_carried_by</relationship>
 					</target_relation>
 				</path>
 				<range>
 					<source_node>a8540h</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E42_Identifier</type>
-							<instance_generator name="IdentifierURI">	
-								<arg name="subject_type" type="constant">photo</arg>
-								<arg name="subject_id" type="xpath">../a8540/text()</arg>
-								<arg name="identifier_type" type="constant">identifier</arg>
-								<arg name="identifier_id" type="xpath">text()</arg>
+							<type>crm:E22_Man-Made_Object</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">negative</arg>
+								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
 							<label_generator name="Literal">
 								<arg name="text" type="xpath">text()</arg>
@@ -3120,10 +3145,10 @@
 								<entity>
 									<type>crm:E55_Type</type>
 									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300417226</arg>
+										<arg name="text" type="constant">http://vocab.getty.edu/aat/300127173</arg>
 									</instance_generator>
 									<label_generator name="Literal">
-										<arg name="text" type="constant">alternative titles</arg>
+										<arg name="text" type="constant">negatives (photographs)</arg>
 									</label_generator>
 								</entity>
 							</additional>

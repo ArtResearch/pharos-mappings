@@ -81,12 +81,12 @@
 							</entity>
 						</additional>
 						<additional>
-							<relationship>crm:P138i_has_representation</relationship>
+							<relationship>crm:P129i_is_subject_of</relationship>
 							<entity>
-								<type>crm:E38_Image</type>
+								<type>crmdig:D1_Digital_Object</type>
 								<instance_generator name="Image_Generator">
 									<arg name="id" type="xpath">a8540/text()</arg>
-									<arg name="postfix" type="constant"></arg>
+									<arg name="postfix" type="constant">.jpg</arg>
 								</instance_generator>
 							</entity>
 						</additional>
@@ -895,12 +895,12 @@
 							</entity>
 						</additional>
 						<additional>
-							<relationship>crm:P138i_has_representation</relationship>
+							<relationship>crm:P129i_is_subject_of</relationship>
 							<entity>
-								<type>crm:E38_Image</type>
+								<type>crmdig:D1_Digital_Object</type>
 								<instance_generator name="Image_Generator">
 									<arg name="id" type="xpath">a8540/text()</arg>
-									<arg name="postfix" type="constant"></arg>
+									<arg name="postfix" type="constant">.jpg</arg>
 								</instance_generator>
 							</entity>
 						</additional>
@@ -1711,12 +1711,12 @@
 							</entity>
 						</additional>
 						<additional>
-							<relationship>crm:P138i_has_representation</relationship>
+							<relationship>crm:P129i_is_subject_of</relationship>
 							<entity>
-								<type>crm:E38_Image</type>
+								<type>crmdig:D1_Digital_Object</type>
 								<instance_generator name="Image_Generator">
 									<arg name="id" type="xpath">a8540/text()</arg>
-									<arg name="postfix" type="constant"></arg>
+									<arg name="postfix" type="constant">.jpg</arg>
 								</instance_generator>
 							</entity>
 						</additional>
@@ -2526,12 +2526,12 @@
 							</entity>
 						</additional>
 						<additional>
-							<relationship>crm:P138i_has_representation</relationship>
+							<relationship>crm:P129i_is_subject_of</relationship>
 							<entity>
-								<type>crm:E38_Image</type>
+								<type>crmdig:D1_Digital_Object</type>
 								<instance_generator name="Image_Generator">
 									<arg name="id" type="xpath">a8540/text()</arg>
-									<arg name="postfix" type="constant"></arg>
+									<arg name="postfix" type="constant">.jpg</arg>
 								</instance_generator>
 							</entity>
 						</additional>

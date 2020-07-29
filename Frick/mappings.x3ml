@@ -1834,9 +1834,9 @@
 								<arg name="text" type="xpath">marc:subfield[@code="d"]/text()</arg>
 							</label_generator>
 							<additional>
-								<relationship>crm:P138i_has_representation</relationship>
+								<relationship>crm:P129i_is_subject_of</relationship>
 								<entity>
-									<type>crm:E38_Image</type>
+									<type>crmdig:D1_Digital_Object</type>
 									<instance_generator name="FrickImageURI">
 										<arg name="id" type="xpath">marc:subfield[@code="g"]/text()</arg>
 									</instance_generator>
@@ -1891,9 +1891,9 @@
 								<arg name="text" type="xpath">marc:subfield[@code="g"]/text()</arg>
 							</label_generator>
 							<additional>
-								<relationship>crm:P138i_has_representation</relationship>
+								<relationship>crm:P129i_is_subject_of</relationship>
 								<entity>
-									<type>crm:E38_Image</type>
+									<type>crmdig:D1_Digital_Object</type>
 									<instance_generator name="FrickImageURI">
 										<arg name="id" type="xpath">marc:subfield[@code="g"]/text()</arg>
 									</instance_generator>

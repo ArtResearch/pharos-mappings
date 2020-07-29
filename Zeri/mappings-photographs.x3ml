@@ -92,9 +92,9 @@
 							</entity>
 						</additional>
 						<additional>
-							<relationship>crm:P138i_has_representation</relationship>
+							<relationship>crm:P129i_is_subject_of</relationship>
 							<entity>
-								<type>crm:E38_Image</type>
+								<type>crmdig:D1_Digital_Object</type>
 								<instance_generator name="Image_Generator">
 									<arg name="id" type="xpath">ALLEGATI/FOTO/text()</arg>
 									<arg name="postfix" type="constant"></arg>
@@ -180,10 +180,9 @@
 					<target_node>
 						<entity>
 							<type>crm:E36_Visual_Item</type>
-							<instance_generator name="SubjectUri">
-								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
-								<arg name="subject_id" type="constant">text()</arg>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">subject</arg>
+								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
 							<label_generator name="Literal">
 								<arg name="text" type="xpath">text()</arg>
@@ -2318,7 +2317,7 @@
 								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
 							</instance_generator>
 						</entity>
-						<relationship>crm:P128_is_carried_by</relationship>
+						<relationship>crm:P128i_is_carried_by</relationship>
 						<entity>
 							<type>crm:E22_Man-Made_Object</type>
 							<instance_generator name="URIwithType">
@@ -2389,7 +2388,7 @@
 								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
 							</instance_generator>
 						</entity>
-						<relationship>crm:P128_is_carried_by</relationship>
+						<relationship>crm:P128i_is_carried_by</relationship>
 						<entity>
 							<type>crm:E22_Man-Made_Object</type>
 							<instance_generator name="URIwithType">
@@ -2445,7 +2444,7 @@
 								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
 							</instance_generator>
 						</entity>
-						<relationship>crm:P128_is_carried_by</relationship>
+						<relationship>crm:P128i_is_carried_by</relationship>
 						<entity>
 							<type>crm:E22_Man-Made_Object</type>
 							<instance_generator name="URIwithType">
@@ -2509,7 +2508,7 @@
 								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
 							</instance_generator>
 						</entity>
-						<relationship>crm:P128_is_carried_by</relationship>
+						<relationship>crm:P128i_is_carried_by</relationship>
 						<entity>
 							<type>crm:E22_Man-Made_Object</type>
 							<instance_generator name="URIwithType">
@@ -2573,7 +2572,7 @@
 								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
 							</instance_generator>
 						</entity>
-						<relationship>crm:P128_is_carried_by</relationship>
+						<relationship>crm:P128i_is_carried_by</relationship>
 						<entity>
 							<type>crm:E22_Man-Made_Object</type>
 							<instance_generator name="URIwithType">

@@ -1084,7 +1084,7 @@
 								<arg name="event_type" type="constant">attribute_assignment</arg>
 							</instance_generator>
 							<additional>
-								<relationship>crm:P141_attributed</relationship>
+								<relationship>crm:P141_assigned</relationship>
 								<entity>
 									<type>crm:PC14_carried_out_by</type>
 									<instance_generator name="PropertyTypeUri">

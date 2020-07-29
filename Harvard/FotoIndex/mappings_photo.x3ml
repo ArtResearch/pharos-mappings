@@ -6,7 +6,7 @@
 		<namespace prefix="crmdig" uri="http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/"/>
 		<namespace prefix="ssw" uri="http://catalog.sharedshelf.artstor.org/ssw"/>
 		<namespace prefix="display" uri="http://catalog.sharedshelf.artstor.org/display"/>
-		<namespace prefix="prefix" uri="https://pharos.artresearch.net/resource/villaitatti/"/>
+		<namespace prefix="prefix" uri="https://pharos.artresearch.net/resource/itatti/"/>
 		<namespace prefix="custom" uri="https://pharos.artresearch.net/custom/"/>
 		<namespace prefix="owl" uri="http://www.w3.org/2002/07/owl#"/>
 		<namespace prefix="iiif_image" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
@@ -87,6 +87,58 @@
 									<arg name="text" type="constant">FotoIndex</arg>
 								</label_generator>
 							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P56_bears_feature</relationship>
+							<entity>
+								<type>crm:E25_Man-Made_Feature</type>
+								<instance_generator name="PhotoMMFUri">
+									<arg name="photoId" type="xpath">Photograph_ID/text()</arg>
+									<arg name="mmf_type" type="constant">recto</arg>
+									<arg name="id" type="xpath">Photograph_ID/text()</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="xpath">Photograph_ID/text()</arg>
+								</label_generator>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>crm:E55_Type</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">http://vocab.getty.edu/aat/300078817</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">rectos</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>	
+						<additional>
+							<relationship>crm:P56_bears_feature</relationship>
+							<entity>
+								<type>crm:E25_Man-Made_Feature</type>
+								<instance_generator name="PhotoMMFUri">
+									<arg name="photoId" type="xpath">Photograph_ID/text()</arg>
+									<arg name="mmf_type" type="constant">verso</arg>
+									<arg name="id" type="xpath">Photograph_ID/text()</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="xpath">Photograph_ID/text()</arg>
+								</label_generator>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>crm:E55_Type</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">http://vocab.getty.edu/aat/300010292</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">versos</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
 						</additional>	
 					</entity>
 				</target_node>
@@ -164,9 +216,9 @@
 						<relation>Recto_Image_URI</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>crm:P138i_has_representation</relationship>
+						<relationship>crm:P129i_is_subject_of</relationship>
 						<entity>
-							<type>crm:E38_Image</type>
+							<type>crmdig:D1_Digital_Object</type>
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="xpath">text()</arg>
 								</instance_generator>
@@ -227,9 +279,9 @@
 						<relation>Verso_Image_URI</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>crm:P138i_has_representation</relationship>
+						<relationship>crm:P129i_is_subject_of</relationship>
 						<entity>
-							<type>crm:E38_Image</type>
+							<type>crmdig:D1_Digital_Object</type>
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="xpath">text()</arg>
 								</instance_generator>
