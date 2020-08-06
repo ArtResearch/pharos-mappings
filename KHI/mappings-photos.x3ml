@@ -784,6 +784,60 @@
 			<link> 
 				<path>
 					<source_relation>
+						<relation>a84fl</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<not>
+								<if>
+									<equals value="x">text()</equals>
+								</if>
+							</not>
+						</if>
+						<relationship>crm:P128_carries</relationship>
+						<entity>
+							<type>crm:E36_Visual_Item</type>
+							<instance_generator name="VisualItemUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../a5000/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P128i_is_carried_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a84fl</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E22_Man-Made_Object</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">photo_card</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>crm:E55_Type</type>
+									<instance_generator name="URIwithType">
+										<arg name="type" type="constant">type</arg>
+										<arg name="id" type="constant">Photo Card</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="constant">Photo Card</arg>
+									</label_generator>
+								</entity>
+							</additional>	
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
 						<relation>a8470</relation>
 					</source_relation>
 					<target_relation>
@@ -1567,6 +1621,60 @@
 				</path>
 				<range>
 					<source_node>a84bh</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E22_Man-Made_Object</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">photo_card</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>crm:E55_Type</type>
+									<instance_generator name="URIwithType">
+										<arg name="type" type="constant">type</arg>
+										<arg name="id" type="constant">Photo Card</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="constant">Photo Card</arg>
+									</label_generator>
+								</entity>
+							</additional>	
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>a84fl</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<not>
+								<if>
+									<equals value="x">text()</equals>
+								</if>
+							</not>
+						</if>
+						<relationship>crm:P128_carries</relationship>
+						<entity>
+							<type>crm:E36_Visual_Item</type>
+							<instance_generator name="VisualItemUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../a5000/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P128i_is_carried_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a84fl</source_node>
 					<target_node>
 						<entity>
 							<type>crm:E22_Man-Made_Object</type>
@@ -2414,6 +2522,60 @@
 			<link> 
 				<path>
 					<source_relation>
+						<relation>a84fl</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<not>
+								<if>
+									<equals value="x">text()</equals>
+								</if>
+							</not>
+						</if>
+						<relationship>crm:P128_carries</relationship>
+						<entity>
+							<type>crm:E36_Visual_Item</type>
+							<instance_generator name="VisualItemUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../a5000/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P128i_is_carried_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a84fl</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E22_Man-Made_Object</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">photo_card</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>crm:E55_Type</type>
+									<instance_generator name="URIwithType">
+										<arg name="type" type="constant">type</arg>
+										<arg name="id" type="constant">Photo Card</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="constant">Photo Card</arg>
+									</label_generator>
+								</entity>
+							</additional>	
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
 						<relation>a8470</relation>
 					</source_relation>
 					<target_relation>
@@ -3198,6 +3360,60 @@
 				</path>
 				<range>
 					<source_node>a84bh</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E22_Man-Made_Object</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">photo_card</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>crm:E55_Type</type>
+									<instance_generator name="URIwithType">
+										<arg name="type" type="constant">type</arg>
+										<arg name="id" type="constant">Photo Card</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="constant">Photo Card</arg>
+									</label_generator>
+								</entity>
+							</additional>	
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>a84fl</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<not>
+								<if>
+									<equals value="x">text()</equals>
+								</if>
+							</not>
+						</if>
+						<relationship>crm:P128_carries</relationship>
+						<entity>
+							<type>crm:E36_Visual_Item</type>
+							<instance_generator name="VisualItemUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../a5000/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P128i_is_carried_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a84fl</source_node>
 					<target_node>
 						<entity>
 							<type>crm:E22_Man-Made_Object</type>

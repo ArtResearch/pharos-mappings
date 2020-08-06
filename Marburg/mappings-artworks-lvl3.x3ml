@@ -1769,6 +1769,11 @@
 								<arg name="resourceId" type="xpath">../a5002/text()</arg>
 								<arg name="eventType" type="constant">destruction</arg>
 							</instance_generator>
+							<label_generator name="EventConcatenated">
+								<arg name="Actor" type="xpath">../aob30/a3000/text()</arg>
+								<arg name="Date" type="xpath">../a5002/text()</arg>
+								<arg name="Type" type="xpath">text()</arg>
+							</label_generator>
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
@@ -1839,6 +1844,11 @@
 								<arg name="id" type="xpath">a5064/text()</arg>
 								<arg name="event_type" type="constant">transformation</arg>
 							</instance_generator>
+							<label_generator name="EventConcatenated">
+								<arg name="Actor" type="xpath">../aob30/a3000/text()</arg>
+								<arg name="Date" type="xpath">../a5002/text()</arg>
+								<arg name="Type" type="xpath">text()</arg>
+							</label_generator>
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
@@ -1910,6 +1920,11 @@
 								<arg name="id" type="xpath">a5064/text()</arg>
 								<arg name="event_type" type="constant">modification</arg>
 							</instance_generator>
+							<label_generator name="EventConcatenated">
+								<arg name="Actor" type="xpath">../aob30/a3000/text()</arg>
+								<arg name="Date" type="xpath">../a5002/text()</arg>
+								<arg name="Type" type="xpath">text()</arg>
+							</label_generator>
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>

@@ -10,6 +10,22 @@
 	<pattern>{type}/{id}</pattern>
 </generator>
 
+<generator name="ExhibitionConcatenated">
+	<pattern>Title: {Title}, Place: {Place}, Date: {Date}</pattern>
+</generator>
+<generator name="BiblioConcatenated">
+	<pattern>Title: {Title}, Type: {Type}, Author: {Author}, Date: {Date}</pattern>
+</generator>
+<generator name="PublicationConcatenated">
+	<pattern>Date: {Date}, Publisher: {Publisher}, Place: {Place}</pattern>
+</generator>
+<generator name="ShotConcatenated">
+	<pattern>Date: {Date}, Place: {Place}</pattern>
+</generator>
+<generator name="EventConcatenated">
+	<pattern>Actor: {Actor}, Date: {Date}, Type: {Type}</pattern>
+</generator>
+
 <generator name="IdentifierURI" prefix="prefix" shorten="yes">
 	<pattern>{subject_type}/{subject_id}/{identifier_type}/{identifier_id}</pattern>
 </generator>
@@ -98,6 +114,9 @@
 	<pattern>obj{id}</pattern>
 </generator>
 
+<generator name="SourceRecordVIT" prefix="vit">
+	<pattern>{id}/catalog</pattern>
+</generator>
 
 
 <generator name="URIwith2Types" prefix="fot">

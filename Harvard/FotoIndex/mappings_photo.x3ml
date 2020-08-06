@@ -265,8 +265,8 @@
 					<target_node>
 						<entity>
 							<type>crm:E73_Information_Object</type>
-							<instance_generator name="IIIF_Json_Generator">
-                                   <arg name="id" type="xpath">.</arg>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">../Recto_Image_JSON/text()</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -328,8 +328,8 @@
 					<target_node>
 						<entity>
 							<type>crm:E73_Information_Object</type>
-							<instance_generator name="IIIF_Json_Generator">
-                                <arg name="id" type="xpath">.</arg>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">../Verso_Image_JSON/text()</arg>
 							</instance_generator>
 						</entity>
 					</target_node>

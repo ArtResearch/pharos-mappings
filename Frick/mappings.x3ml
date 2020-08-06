@@ -1904,6 +1904,53 @@
 				</range>
 			</link>
 			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>marc:datafield[@tag="590" and @ind1="9"]</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<or>
+								<if>
+									<equals value="Postcard">marc:subfield[@code="a"]/text()</equals>
+								</if>
+								<if>
+									<equals value="Photostat">marc:subfield[@code="a"]/text()</equals>
+								</if>
+								<if>
+									<equals value="Publication">marc:subfield[@code="a"]/text()</equals>
+								</if>
+							</or>
+						</if>
+						<relationship>crm:P138i_is_represented_by</relationship>
+						<entity>
+							<type>crm:E36_Visual_Item</type>
+							<instance_generator name="VisualItemUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P128i_is_carried_by</relationship>
+					</target_relation>
+				</path>				
+				<range>
+					<source_node>marc:datafield[@tag="590" and @ind1="9"]</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E22_Man-Made_Object</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">photo</arg>
+								<arg name="id" type="xpath">marc:subfield[@code="k"]/text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">marc:subfield[@code="k"]/text()</arg>
+							</label_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
 			<!--
 			<link> 
 				<path>
@@ -4908,6 +4955,510 @@
 			
 		</mapping>	
 
+		<mapping namedgraph="http://graph">
+			<domain>
+				<source_node>//marc:datafield[@tag="590" and @ind1="9"]</source_node>
+				<target_node>
+					<if>
+						<or>
+							<if>
+								<equals value="Photostat">marc:subfield[@code="a"]/text()</equals>
+							</if>
+							<if>
+								<equals value="Postcard">marc:subfield[@code="a"]/text()</equals>
+							</if>
+							<if>
+								<equals value="Publication">marc:subfield[@code="a"]/text()</equals>
+							</if>
+						</or>
+					</if>
+					<entity>
+						<type>crm:E22_Man-Made_Object</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">photo</arg>
+							<arg name="id" type="xpath">marc:subfield[@code="k"]/text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">marc:subfield[@code="k"]/text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIorUUID">
+									<arg name="text" type="constant">http://vocab.getty.edu/aat/300046300</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">photographs</arg>
+								</label_generator>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>crm:E55_Type</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">https://pharos.artresearch.net/resource/vocab/maintype</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">main type</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithType">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">Frick</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">Frick</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>marc:subfield[@code="a"]</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="Publication">text()</equals>
+						</if>
+						<relationship>crm:P2_has_type</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>marc:subfield[@code="a"]</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E55_Type</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">type</arg>
+								<arg name="id" type="constant">Publication</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="constant">Publication</arg>
+							</label_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>marc:subfield[@code="a"]</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="Postcard">text()</equals>
+						</if>
+						<relationship>crm:P2_has_type</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>marc:subfield[@code="a"]</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E55_Type</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">type</arg>
+								<arg name="id" type="constant">Postcard</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="constant">Postcard</arg>
+							</label_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>marc:subfield[@code="a"]</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="Photostat">text()</equals>
+						</if>
+						<relationship>crm:P2_has_type</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>marc:subfield[@code="a"]</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E55_Type</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">type</arg>
+								<arg name="id" type="constant">Photostat</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="constant">Photostat</arg>
+							</label_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>marc:subfield[@code="b"]</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<exists>@place</exists>
+						</if>
+						<relationship>crm:P108i_was_produced_by</relationship>
+						<entity>
+							<type>crm:E12_Production</type>
+							<instance_generator name="EventUri">
+								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="resourceId" type="xpath">../marc:subfield[@code="k"]/text()</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P14_carried_out_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>marc:subfield[@code="b"]</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E39_Actor</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">@person</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">@person</arg>
+							</label_generator>
+							<additional>
+								<relationship>crm:P74_has_current_or_former_residence</relationship>
+								<entity>
+									<type>crm:E53_Place</type>
+									<instance_generator name="URIwithType">
+										<arg name="type" type="constant">place</arg>
+										<arg name="id" type="xpath">@place</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="xpath">@place</arg>
+									</label_generator>
+									<additional>
+										<relationship>crm:P2_has_type</relationship>
+										<entity>
+											<type>crm:E55_Type</type>
+											<instance_generator name="URIorUUID">
+												<arg name="text" type="constant">http://vocab.getty.edu/aat/300008389</arg>
+											</instance_generator>
+											<label_generator name="Literal">
+												<arg name="text" type="constant">cities</arg>
+											</label_generator>
+										</entity>
+									</additional>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>marc:subfield[@code="b"]</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<not>
+								<if>
+									<exists>@place</exists>
+								</if>
+							</not>
+						</if>
+						<relationship>crm:P108i_was_produced_by</relationship>
+						<entity>
+							<type>crm:E12_Production</type>
+							<instance_generator name="EventUri">
+								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="resourceId" type="xpath">../marc:subfield[@code="k"]/text()</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P14_carried_out_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>marc:subfield[@code="b"]</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E39_Actor</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>marc:subfield[@code="m"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P67i_is_referred_to_by</relationship>
+						<entity>
+							<type>crm:E73_Information_Object</type>
+							<instance_generator name="InformationObjectUri">
+								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="resourceId" type="xpath">../marc:subfield[@code="k"]/text()</arg>
+								<arg name="type" type="constant">image_info</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>crm:E55_Type</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">http://vocab.getty.edu/aat/300435416</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="constant">descriptive note</arg>
+									</label_generator>
+								</entity>
+							</additional>
+						</entity>	
+						<relationship>crm:P190_has_symbolic_content</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>marc:subfield[@code="m"]</source_node>
+					<target_node>
+						<entity>
+							<type>rdfs:Literal</type>
+							<instance_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+	
+			<link> 
+				<path>
+					<source_relation>
+						<relation>marc:subfield[@code="k"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P24i_changed_ownership_through</relationship>
+						<entity>
+							<type>crm:E8_Acquisition</type>
+							<instance_generator name="AcquisitionUri">
+								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="resourceId" type="xpath">../marc:subfield[@code="k"]/text()</arg>
+								<arg name="eventType" type="constant">acquisition</arg>
+								<arg name="from" type="xpath">text()</arg>
+								<arg name="to" type="constant">-</arg>
+								<arg name="timespan" type="constant">-</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P23_transferred_title_from</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>marc:subfield[@code="k"]</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E39_Actor</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>marc:subfield[@code="j"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P24i_changed_ownership_through</relationship>
+						<entity>
+							<type>crm:E8_Acquisition</type>
+							<instance_generator name="AcquisitionUri">
+								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="resourceId" type="xpath">../marc:subfield[@code="k"]/text()</arg>
+								<arg name="eventType" type="constant">acquisition</arg>
+								<arg name="from" type="xpath">../marc:subfield[@code="k"]/text()</arg>
+								<arg name="to" type="constant">-</arg>
+								<arg name="timespan" type="constant">-</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P2_has_type</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>marc:subfield[@code="j"]</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E55_Type</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">type</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>marc:subfield[@code="l"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P24i_changed_ownership_through</relationship>
+						<entity>
+							<type>crm:E8_Acquisition</type>
+							<instance_generator name="AcquisitionUri">
+								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="resourceId" type="xpath">../marc:subfield[@code="k"]/text()</arg>
+								<arg name="eventType" type="constant">acquisition</arg>
+								<arg name="from" type="xpath">../marc:subfield[@code="k"]/text()</arg>
+								<arg name="to" type="constant">-</arg>
+								<arg name="timespan" type="constant">-</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P4_has_time-span</relationship>
+						<entity>
+							<type>crm:E52_Time-Span</type>
+							<instance_generator name="ComplexTimespanUri">
+								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="resourceId" type="xpath">../marc:subfield[@code="k"]/text()</arg>
+								<arg name="eventType" type="constant">acquisition</arg>
+								<arg name="timespan" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P82_at_some_time_within</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>marc:subfield[@code="l"]</source_node>
+					<target_node>
+						<entity>
+							<type>rdfs:Literal</type>
+							<instance_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>marc:subfield[@code="n"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P1_is_identified_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>marc:subfield[@code="n"]</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E42_Identifier</type>
+							<instance_generator name="IdentifierURI">	
+								<arg name="subject_type" type="constant">photo</arg>
+								<arg name="subject_id" type="xpath">../marc:subfield[@code="k"]/text()</arg>
+								<arg name="identifier_type" type="constant">identifier</arg>
+								<arg name="identifier_id" type="xpath">text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>crm:E55_Type</type>
+									<instance_generator name="URIwithType">
+										<arg name="type" type="constant">type</arg>
+										<arg name="id" type="constant">Mount Number</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="constant">Mount Number</arg>
+									</label_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>			
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>marc:subfield[@code="f"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P34i_was_assessed_by</relationship>
+						<entity>
+							<type>crm:E14_Condition_Assessment</type>
+								<instance_generator name="ComplexEventUri">
+								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="resourceId" type="xpath">../marc:subfield[@code="k"]/text()</arg>
+								<arg name="id" type="xpath">text()</arg>
+								<arg name="event_type" type="constant">condition_assessment</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P35_has_assigned</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>marc:subfield[@code="f"]</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E3_Condition_State</type>
+							<instance_generator name="ConditionURI">
+								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="resourceId" type="xpath">../marc:subfield[@code="k"]/text()</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+	
+		</mapping>
 
 	</mappings>
 </x3ml>
