@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <generator_policy>
 
+<generator name="namedgraph" prefix="prefix">
+	<pattern>{type}/{id}/graph</pattern>
+</generator>
 
 <generator name="URIwithType" prefix="prefix" shorten="yes">
 	<pattern>{type}/{id}</pattern>
