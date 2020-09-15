@@ -14,8 +14,39 @@
 		<namespace prefix="iiif_json" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
 		<namespace prefix="marc" uri="http://www.loc.gov/MARC21/slim"/>
 	</namespaces>
+	
 	<mappings>
-		<mapping namedgraph="http://graph">
+		<mapping namedgraph="">
+			<domain>
+				<source_node>//RISULTATI</source_node>
+				<target_node>
+					<entity>
+						<type>custom:SourceNamedgraph</type>
+						<instance_generator name="namedgraph">
+							<arg name="type" type="constant">zeri</arg>
+							<arg name="id" type="constant">namedgraphs</arg>
+						</instance_generator>
+						
+						<additional>
+							<relationship>custom:consists_of</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="namedgraph">
+									<arg name="type" type="constant">photo</arg>
+									<arg name="id" type="xpath">SCHEDA/PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+				
+					</entity>
+				</target_node>
+			</domain>
+	
+		</mapping>
+	
+	
+	
+		<mapping namedgraph="graph">
 			<domain>
 				<source_node>//RISULTATI/SCHEDA</source_node>
 				<target_node>
@@ -56,13 +87,36 @@
 							<relationship>custom:has_provider</relationship>
 							<entity>
 								<type>custom:Provider</type>
-								<instance_generator name="URIwithType">
+								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Zeri</arg>
 								</instance_generator>
 								<label_generator name="Literal">
 									<arg name="text" type="constant">Zeri</arg>
 								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="namedgraph">
+									<arg name="type" type="constant">photo</arg>
+									<arg name="id" type="xpath">PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">Zeri</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">Zeri</arg>
+										</label_generator>
+									</entity>
+								</additional>
 							</entity>
 						</additional>
 						<additional>
@@ -80,12 +134,11 @@
 									<relationship>crm:P2_has_type</relationship>
 									<entity>
 										<type>crm:E55_Type</type>
-										<instance_generator name="URIwithType">
-											<arg name="type" type="constant">type</arg>
-											<arg name="id" type="constant">Inventory Number</arg>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">http://vocab.getty.edu/aat/300404621</arg>
 										</instance_generator>
 										<label_generator name="Literal">
-											<arg name="text" type="constant">Inventory Number</arg>
+											<arg name="text" type="constant">repository number</arg>
 										</label_generator>
 									</entity>
 								</additional>
@@ -905,7 +958,7 @@
 						<entity>
 							<type>crm:E57_Material</type>
 							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">vocabulary/technique</arg>
+								<arg name="type" type="constant">vocabulary/material</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
 							<label_generator name="Literal">
