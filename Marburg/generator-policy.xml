@@ -2,12 +2,42 @@
 <generator_policy>
 
 
+<generator name="MultiHashingGenerator" prefix="prefix">
+        <custom generatorClass="gr.forth.MultiHashingGenerator">
+            <set-arg name="hierarchy"/>
+			<set-arg name="object_HASHED_CONTENTS"/>
+			<set-arg name="term_simple"/>
+        </custom>
+</generator>
+
+
+<generator name="namedgraph" prefix="prefix">
+	<pattern>{type}/{id}/graph</pattern>
+</generator>
+
+
 <generator name="URIwithType" prefix="prefix" shorten="yes">
 	<pattern>{type}/{id}</pattern>
 </generator>
 
 <generator name="URIwithTypeAndId" prefix="prefix">
 	<pattern>{type}/{id}</pattern>
+</generator>
+
+<generator name="ExhibitionConcatenated">
+	<pattern>Title: {Title}, Place: {Place}, Date: {Date}</pattern>
+</generator>
+<generator name="BiblioConcatenated">
+	<pattern>Title: {Title}, Type: {Type}, Author: {Author}, Date: {Date}</pattern>
+</generator>
+<generator name="PublicationConcatenated">
+	<pattern>Date: {Date}, Publisher: {Publisher}, Place: {Place}</pattern>
+</generator>
+<generator name="ShotConcatenated">
+	<pattern>Date: {Date}, Place: {Place}</pattern>
+</generator>
+<generator name="EventConcatenated">
+	<pattern>Actor: {Actor}, Date: {Date}, Type: {Type}</pattern>
 </generator>
 
 <generator name="IdentifierURI" prefix="prefix" shorten="yes">

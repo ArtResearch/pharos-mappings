@@ -12,8 +12,8 @@
 		<namespace prefix="vit" uri="http://id.lib.harvard.edu/images/olvwork"/>
 		<namespace prefix="iiif_image" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
 		<namespace prefix="iiif_json" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
-		<namespace prefix="fc" uri="https://pharos.net/resource/fc/"/>
-		<namespace prefix="fr" uri="https://pharos.net/resource/fr/"/>
+		<namespace prefix="fc" uri="https://pharos.artresearch.net/resource/fc/"/>
+		<namespace prefix="fr" uri="https://pharos.artresearch.net/resource/fr/"/>
 	</namespaces>
 	<mappings>
 		<mapping>
@@ -30,7 +30,7 @@
 							<relationship>fr:Work_has_provider_Institution</relationship>
 							<entity>
 								<type>fc:institution</type>
-								<instance_generator name="URIwithType">
+								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Marburg</arg>
 								</instance_generator>
@@ -517,6 +517,81 @@
 				</range>
 			</link>
 			
+			<link>
+				<path>
+					<source_relation>
+						<relation>a5358</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="Herstellung">../aob30/text()</equals>
+						</if>
+						<relationship>fr:Work_produced_using_technique_Technique</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a5358</source_node>
+					<target_node>
+						<entity>
+							<type>fc:technique</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">vocabulary/technique</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link>
+				<path>
+					<source_relation>
+						<relation>a5300</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="Herstellung">../aob30/text()</equals>
+						</if>
+						<relationship>fr:Work_produced_using_technique_Technique</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a5300</source_node>
+					<target_node>
+						<entity>
+							<type>fc:technique</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">vocabulary/technique</arg>
+								<arg name="id" type="xpath">a533s/text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>a5260</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>fr:Work_consists_of_Material</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a5260</source_node>
+					<target_node>
+						<entity>
+							<type>fc:material</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">vocabulary/material</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
 		</mapping>
 	
 		<mapping>
@@ -533,7 +608,7 @@
 							<relationship>fr:Work_has_provider_Institution</relationship>
 							<entity>
 								<type>fc:institution</type>
-								<instance_generator name="URIwithType">
+								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Marburg</arg>
 								</instance_generator>
@@ -1020,6 +1095,81 @@
 				</range>
 			</link>
 			
+						<link>
+				<path>
+					<source_relation>
+						<relation>a5358</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="Herstellung">../aob30/text()</equals>
+						</if>
+						<relationship>fr:Work_produced_using_technique_Technique</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a5358</source_node>
+					<target_node>
+						<entity>
+							<type>fc:technique</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">vocabulary/technique</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link>
+				<path>
+					<source_relation>
+						<relation>a5300</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="Herstellung">../aob30/text()</equals>
+						</if>
+						<relationship>fr:Work_produced_using_technique_Technique</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a5300</source_node>
+					<target_node>
+						<entity>
+							<type>fc:technique</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">vocabulary/technique</arg>
+								<arg name="id" type="xpath">a533s/text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>a5260</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>fr:Work_consists_of_Material</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a5260</source_node>
+					<target_node>
+						<entity>
+							<type>fc:material</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">vocabulary/material</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
 		</mapping>
 			
 	
@@ -1037,7 +1187,7 @@
 							<relationship>fr:Work_has_provider_Institution</relationship>
 							<entity>
 								<type>fc:institution</type>
-								<instance_generator name="URIwithType">
+								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Marburg</arg>
 								</instance_generator>
@@ -1524,6 +1674,81 @@
 				</range>
 			</link>
 			
+						<link>
+				<path>
+					<source_relation>
+						<relation>a5358</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="Herstellung">../aob30/text()</equals>
+						</if>
+						<relationship>fr:Work_produced_using_technique_Technique</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a5358</source_node>
+					<target_node>
+						<entity>
+							<type>fc:technique</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">vocabulary/technique</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link>
+				<path>
+					<source_relation>
+						<relation>a5300</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="Herstellung">../aob30/text()</equals>
+						</if>
+						<relationship>fr:Work_produced_using_technique_Technique</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a5300</source_node>
+					<target_node>
+						<entity>
+							<type>fc:technique</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">vocabulary/technique</arg>
+								<arg name="id" type="xpath">a533s/text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>a5260</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>fr:Work_consists_of_Material</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a5260</source_node>
+					<target_node>
+						<entity>
+							<type>fc:material</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">vocabulary/material</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
 		</mapping>
 		
 		<mapping>
@@ -1540,7 +1765,7 @@
 							<relationship>fr:Work_has_provider_Institution</relationship>
 							<entity>
 								<type>fc:institution</type>
-								<instance_generator name="URIwithType">
+								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Marburg</arg>
 								</instance_generator>
@@ -2022,6 +2247,81 @@
 									</instance_generator>
 								</entity>
 							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+						<link>
+				<path>
+					<source_relation>
+						<relation>a5358</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="Herstellung">../aob30/text()</equals>
+						</if>
+						<relationship>fr:Work_produced_using_technique_Technique</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a5358</source_node>
+					<target_node>
+						<entity>
+							<type>fc:technique</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">vocabulary/technique</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link>
+				<path>
+					<source_relation>
+						<relation>a5300</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="Herstellung">../aob30/text()</equals>
+						</if>
+						<relationship>fr:Work_produced_using_technique_Technique</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a5300</source_node>
+					<target_node>
+						<entity>
+							<type>fc:technique</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">vocabulary/technique</arg>
+								<arg name="id" type="xpath">a533s/text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>a5260</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>fr:Work_consists_of_Material</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a5260</source_node>
+					<target_node>
+						<entity>
+							<type>fc:material</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">vocabulary/material</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
 						</entity>
 					</target_node>
 				</range>

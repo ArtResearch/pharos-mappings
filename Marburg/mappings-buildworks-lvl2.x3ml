@@ -6,7 +6,7 @@
 		<namespace prefix="crmdig" uri="http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/"/>
 		<namespace prefix="ssw" uri="http://catalog.sharedshelf.artstor.org/ssw"/>
 		<namespace prefix="display" uri="http://catalog.sharedshelf.artstor.org/display"/>
-		<namespace prefix="prefix" uri="https://pharos.artresearch.net/resource/Marburg/"/>
+		<namespace prefix="prefix" uri="https://pharos.artresearch.net/resource/marburg/"/>
 		<namespace prefix="custom" uri="https://pharos.artresearch.net/custom/"/>
 		<namespace prefix="owl" uri="http://www.w3.org/2002/07/owl#"/>
 		<namespace prefix="iiif_image" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
@@ -14,7 +14,35 @@
 		<namespace prefix="iiif_json" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
 	</namespaces>
 	<mappings>
-		<mapping namedgraph="http://graph">
+		<mapping namedgraph="">
+		
+			<domain>
+				<source_node>/root/obj/obj/a5001</source_node>
+				<target_node>
+	
+					<entity>
+						<type>custom:SourceNamedgraph</type>
+						<instance_generator name="namedgraph">
+							<arg name="type" type="constant">marburg</arg>
+							<arg name="id" type="constant">namedgraphs</arg>
+						</instance_generator>
+						<additional>
+							<relationship>custom:consists_of</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="namedgraph">
+									<arg name="type" type="constant">work</arg>
+									<arg name="id" type="xpath">text()</arg>
+								</instance_generator>
+							</entity>
+						</additional>						
+					</entity>
+				</target_node>
+			</domain>
+
+		</mapping>
+		
+		<mapping namedgraph="graph">
 			<domain>
 				<source_node>/root/obj/obj</source_node>
 				<target_node>
@@ -34,13 +62,36 @@
 							<relationship>custom:has_provider</relationship>
 							<entity>
 								<type>custom:Provider</type>
-								<instance_generator name="URIwithType">
+								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Marburg</arg>
 								</instance_generator>
 								<label_generator name="Literal">
 									<arg name="text" type="constant">Marburg</arg>
 								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="namedgraph">
+									<arg name="type" type="constant">work</arg>
+									<arg name="id" type="xpath">a5001/text()</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">Marburg</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">Marburg</arg>
+										</label_generator>
+									</entity>
+								</additional>
 							</entity>
 						</additional>
 						<additional>
@@ -52,19 +103,6 @@
 								</instance_generator>
 								<label_generator name="Literal">
 									<arg name="text" type="constant">works of art</arg>
-								</label_generator>
-							</entity>
-						</additional>
-						<additional>
-							<relationship>crm:P2_has_type</relationship>
-							<entity>
-								<type>crm:E55_Type</type>
-								<instance_generator name="URIwithType">
-									<arg name="type" type="constant">type</arg>
-									<arg name="id" type="constant">Builtwork</arg>
-								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">Builtwork</arg>
 								</label_generator>
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
@@ -79,7 +117,7 @@
 									</entity>
 								</additional>
 							</entity>
-						</additional>	
+						</additional>		
 						<additional>
 							<relationship>custom:has_original_record</relationship>
 							<entity>
@@ -251,6 +289,7 @@
 				</range>
 			</link>
 			
+			<!--
 			<link> 
 				<path>
 					<source_relation>
@@ -265,7 +304,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E55_Type</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -287,8 +326,47 @@
 						</entity>
 					</target_node>
 				</range>
+			</link> -->
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>a5220</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P2_has_type</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a5220</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E55_Type</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">type</arg>
+								<arg name="id" type="xpath">a520s/text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>crm:E55_Type</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">http://vocab.getty.edu/aat/300264092</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="constant">objects facet</arg>
+									</label_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
 			</link>
 			
+			<!--
 			<link> 
 				<path>
 					<source_relation>
@@ -325,8 +403,47 @@
 						</entity>
 					</target_node>
 				</range>
+			</link>-->
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>a5230</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P2_has_type</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a5230</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E55_Type</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">type</arg>
+								<arg name="id" type="xpath">a523s/text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>crm:E55_Type</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">http://vocab.getty.edu/aat/300264092</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="constant">objects facet</arg>
+									</label_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
 			</link>
 			
+			<!--
 			<link> 
 				<path>
 					<source_relation>
@@ -363,8 +480,47 @@
 						</entity>
 					</target_node>
 				</range>
+			</link>-->
+							
+			<link> 
+				<path>
+					<source_relation>
+						<relation>a5226</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P2_has_type</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a5226</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E55_Type</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">type</arg>
+								<arg name="id" type="xpath">a522s/text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>crm:E55_Type</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">http://vocab.getty.edu/aat/300264092</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="constant">objects facet</arg>
+									</label_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
 			</link>
 			
+			<!--
 			<link>
 				<path>
 					<source_relation>
@@ -382,6 +538,46 @@
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>crm:E55_Type</type>
+									<instance_generator name="URIwithType">
+										<arg name="type" type="constant">type</arg>
+										<arg name="id" type="constant">Shape Classification</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="constant">Shape Classification</arg>
+									</label_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			-->
+			
+			<link>
+				<path>
+					<source_relation>
+						<relation>a5240</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P2_has_type</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a5240</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E55_Type</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">type</arg>
+								<arg name="id" type="xpath">a524s/text()</arg>
 							</instance_generator>
 							<label_generator name="Literal">
 								<arg name="text" type="xpath">text()</arg>
@@ -880,9 +1076,43 @@
 					<target_node>
 						<entity>
 							<type>crm:E22_Man-Made_Object</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">photo</arg>
 								<arg name="id" type="xpath">a8540/text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>a8450</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<exists>a8555/text()</exists>
+						</if>
+						<relationship>crm:P138i_is_represented_by</relationship>
+						<entity>
+							<type>crm:E36_Visual_Item</type>
+							<instance_generator name="VisualItemUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../a5001/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P128i_is_carried_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a8450</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E22_Man-Made_Object</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">photo</arg>
+								<arg name="id" type="xpath">a8555/text()</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -1623,7 +1853,7 @@
 					</target_node>
 				</range>
 			</link>
-			
+			<!--
 			<link>
 				<path>
 					<source_relation>
@@ -1660,7 +1890,46 @@
 						</entity>
 					</target_node>
 				</range>
+			</link>-->
+			
+			<link>
+				<path>
+					<source_relation>
+						<relation>a5300</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="Herstellung">../aob30/text()</equals>
+						</if>
+						<relationship>crm:P108i_was_produced_by</relationship>
+						<entity>
+							<type>crm:E12_Production</type>
+							<instance_generator name="EventUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../a5001/text()</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P33_used_specific_technique</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a5300</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E29_Design_or_Procedure</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">vocabulary/technique</arg>
+								<arg name="id" type="xpath">a533s/text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
+						</entity>
+					</target_node>
+				</range>
 			</link>
+			
 			<link>
 				<path>
 					<source_relation>
@@ -1668,7 +1937,7 @@
 					</source_relation>
 					<target_relation>
 						<if>
-							<equals value="Herstellung">../../aob30/text()</equals>
+							<equals value="Datierung">../text()</equals>
 						</if>
 						<relationship>crm:P108i_was_produced_by</relationship>
 						<entity>
@@ -1687,6 +1956,19 @@
 								<arg name="resourceId" type="xpath">../../a5001/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>crm:E55_Type</type>
+									<instance_generator name="URIwithType">
+									<arg name="type" type="constant">type</arg>
+										<arg name="id" type="constant">Datierung</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="constant">Datierung</arg>
+									</label_generator>
+								</entity>
+							</additional>		
 						</entity>
 						<relationship>crm:P82_at_some_time_within</relationship>
 					</target_relation>
@@ -1704,6 +1986,7 @@
 				</range>
 			</link>
 			
+			<!--
 			<link>
 				<path>
 					<source_relation>
@@ -1750,6 +2033,7 @@
 					</target_node>
 				</range>
 			</link>
+			-->
 			
 			<link>
 				<path>
@@ -2897,7 +3181,7 @@
 					</target_node>
 				</range>
 			</link>
-			
+
 			<link> 
 				<path>
 					<source_relation>
@@ -2920,7 +3204,7 @@
 					</target_node>
 				</range>
 			</link>
-
+			
 		</mapping>	
 	
 	</mappings>

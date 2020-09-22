@@ -12,8 +12,8 @@
 		<namespace prefix="vit" uri="http://id.lib.harvard.edu/images/olvwork"/>
 		<namespace prefix="iiif_image" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
 		<namespace prefix="iiif_json" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
-		<namespace prefix="fc" uri="https://pharos.net/resource/fc/"/>
-		<namespace prefix="fr" uri="https://pharos.net/resource/fr/"/>
+		<namespace prefix="fc" uri="https://pharos.artresearch.net/resource/fc/"/>
+		<namespace prefix="fr" uri="https://pharos.artresearch.net/resource/fr/"/>
 	</namespaces>
 	<mappings>
 	
@@ -26,7 +26,7 @@
 					</if>
                     <entity>
 						<type>fc:photo</type>
-						<instance_generator name="URIwithType">
+						<instance_generator name="URIwithTypeAndId">
 						    <arg name="type" type="constant">photo</arg>
 							<arg name="id" type="xpath">a8540/text()</arg>
 						</instance_generator>
@@ -34,7 +34,7 @@
 							<relationship>fr:Photo_has_provider_Institution</relationship>
 							<entity>
 								<type>fc:institution</type>
-								<instance_generator name="URIwithType">
+								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Marburg</arg>
 								</instance_generator>
@@ -138,7 +138,7 @@
 					</if>
                     <entity>
 						<type>fc:photo</type>
-						<instance_generator name="URIwithType">
+						<instance_generator name="URIwithTypeAndId">
 						    <arg name="type" type="constant">photo</arg>
 							<arg name="id" type="xpath">a8540/text()</arg>
 						</instance_generator>
@@ -146,7 +146,7 @@
 							<relationship>fr:Photo_has_provider_Institution</relationship>
 							<entity>
 								<type>fc:institution</type>
-								<instance_generator name="URIwithType">
+								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Marburg</arg>
 								</instance_generator>
@@ -250,7 +250,7 @@
 					</if>
                     <entity>
 						<type>fc:photo</type>
-						<instance_generator name="URIwithType">
+						<instance_generator name="URIwithTypeAndId">
 						    <arg name="type" type="constant">photo</arg>
 							<arg name="id" type="xpath">a8540/text()</arg>
 						</instance_generator>
@@ -258,7 +258,7 @@
 							<relationship>fr:Photo_has_provider_Institution</relationship>
 							<entity>
 								<type>fc:institution</type>
-								<instance_generator name="URIwithType">
+								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Marburg</arg>
 								</instance_generator>
@@ -362,7 +362,7 @@
 					</if>
                     <entity>
 						<type>fc:photo</type>
-						<instance_generator name="URIwithType">
+						<instance_generator name="URIwithTypeAndId">
 						    <arg name="type" type="constant">photo</arg>
 							<arg name="id" type="xpath">a8540/text()</arg>
 						</instance_generator>
@@ -370,7 +370,7 @@
 							<relationship>fr:Photo_has_provider_Institution</relationship>
 							<entity>
 								<type>fc:institution</type>
-								<instance_generator name="URIwithType">
+								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Marburg</arg>
 								</instance_generator>
