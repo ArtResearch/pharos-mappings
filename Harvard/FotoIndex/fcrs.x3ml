@@ -12,8 +12,8 @@
 		<namespace prefix="vit" uri="http://id.lib.harvard.edu/images/olvwork"/>
 		<namespace prefix="iiif_image" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
 		<namespace prefix="iiif_json" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
-		<namespace prefix="fc" uri="https://pharos.net/resource/fc/"/>
-		<namespace prefix="fr" uri="https://pharos.net/resource/fr/"/>
+		<namespace prefix="fc" uri="https://pharos.artresearch.net/resource/fc/"/>
+		<namespace prefix="fr" uri="https://pharos.artresearch.net/resource/fr/"/>
 	</namespaces>
 	<mappings>
 		<mapping>
@@ -30,9 +30,9 @@
 							<relationship>fr:Work_has_provider_Institution</relationship>
 							<entity>
 								<type>fc:institution</type>
-								<instance_generator name="URIwithType">
+								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
-									<arg name="id" type="constant">Villa i Tatti</arg>
+									<arg name="id" type="constant">ITatti</arg>
 								</instance_generator>
 							</entity>
 						</additional>
@@ -54,7 +54,7 @@
 					<target_node>
 						<entity>
 							<type>fc:artist</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -87,7 +87,7 @@
 					<target_node>
 						<entity>
 							<type>fc:artist</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -210,9 +210,9 @@
 							<relationship>fr:Photo_has_provider_Institution</relationship>
 							<entity>
 								<type>fc:institution</type>
-								<instance_generator name="URIwithType">
+								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
-									<arg name="id" type="constant">Villa i Tatti</arg>
+									<arg name="id" type="constant">ITatti</arg>
 								</instance_generator>
 							</entity>
 						</additional>
@@ -261,7 +261,7 @@
 				<target_node>
                    	<entity>
 						<type>fc:artist</type>
-						<instance_generator name="URIwithType">
+						<instance_generator name="URIwithTypeAndId">
 							<arg name="type" type="constant">actor</arg>
 							<arg name="id" type="xpath">Artist_ID/text()</arg>
 						</instance_generator>	
@@ -309,9 +309,9 @@
 				<target_node>
                    	<entity>
 						<type>fc:institution</type>
-						<instance_generator name="URIwithType">
+						<instance_generator name="URIwithTypeAndId">
 							<arg name="type" type="constant">actor</arg>
-							<arg name="id" type="xpath">Artist_ID/text()</arg>
+							<arg name="id" type="xpath">Institution_ID/text()</arg>
 						</instance_generator>	
 					</entity>	
 				</target_node>

@@ -3432,6 +3432,9 @@
 								<if>
 									<equals value="DRS_full">../@size</equals>
 								</if>
+								<if>
+									<equals value="f">../@restriction</equals>
+								</if>
 							</and>
 						</if>
 						<relationship>crm:P129i_is_subject_of</relationship>
@@ -3486,13 +3489,13 @@
 						<entity>
 							<type>crm:E73_Information_Object</type>
 								<instance_generator name="IIIF_Json_Generator">
-                                    <arg name="id" type="constant">no</arg>
+                                    <arg name="id" type="xpath">.</arg>
 								</instance_generator>
 						</entity>
 					</target_node>
 				</range>
 			</link>	 
-			
+
 			<link>
 				<path>
 					<source_relation>
@@ -3506,6 +3509,9 @@
 								</if>
 								<if>
 									<equals value="DRS_full">../@size</equals>
+								</if>
+								<if>
+									<equals value="f">../@restriction</equals>
 								</if>
 							</and>
 						</if>
@@ -3561,7 +3567,7 @@
 						<entity>
 							<type>crm:E73_Information_Object</type>
 								<instance_generator name="IIIF_Json_Generator">
-                                    <arg name="id" type="constant">no</arg>
+                                    <arg name="id" type="xpath">.</arg>
 								</instance_generator>
 						</entity>
 					</target_node>
@@ -4413,7 +4419,14 @@
 					</source_relation>
 					<target_relation>
 						<if>
-							<equals value="DRS_full">../@size</equals>
+							<and>
+								<if>
+									<equals value="DRS_full">../@size</equals>
+								</if>
+								<if>
+									<equals value="f">../@restriction</equals>
+								</if>
+							</and>
 						</if>
 						<relationship>crm:P129i_is_subject_of</relationship>
 						<entity>
@@ -4467,7 +4480,7 @@
 						<entity>
 							<type>crm:E73_Information_Object</type>
 								<instance_generator name="IIIF_Json_Generator">
-                                    <arg name="id" type="constant">no</arg>
+                                    <arg name="id" type="xpath">.</arg>
 								</instance_generator>
 						</entity>
 					</target_node>

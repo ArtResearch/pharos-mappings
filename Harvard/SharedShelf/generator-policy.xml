@@ -15,6 +15,7 @@
 	<pattern>{type}/{id}/graph</pattern>
 </generator>
 
+
 <generator name="URIwithType" prefix="prefix" shorten="yes">
 	<pattern>{type}/{id}</pattern>
 </generator>
@@ -123,7 +124,7 @@
 	<pattern>{resourceType}/{resourceId}/condition/{id}</pattern>
 </generator>
 
-<generator name="OriginalURI" prefix="prefix">
+<generator name="OriginalURI" prefix="original">
 	<pattern>obj{id}</pattern>
 </generator>
 

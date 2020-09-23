@@ -228,9 +228,10 @@
 					<target_node>
 						<entity>
 							<type>custom:Namedgraph</type>
-							<instance_generator name="namedgraph">
-								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">../@person</arg>
+							<instance_generator name="MultiHashingGenerator">
+								<arg name="hierarchy" type="constant">actor</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">../@person</arg>
+								<arg name="term_simple" type="constant">graph</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -4481,9 +4482,10 @@
 							<relationship>crm:P67i_is_referred_to_by</relationship>
 							<entity>
 								<type>custom:Namedgraph</type>
-								<instance_generator name="namedgraph">
-									<arg name="type" type="constant">actor</arg>
-									<arg name="id" type="xpath">marc:subfield[@code="a"]/text()</arg>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">actor</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">marc:subfield[@code="a"]/text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
 								</instance_generator>
 								<additional>
 									<relationship>custom:has_provider</relationship>
@@ -4701,9 +4703,10 @@
 							<relationship>crm:P67i_is_referred_to_by</relationship>
 							<entity>
 								<type>custom:Namedgraph</type>
-								<instance_generator name="namedgraph">
-									<arg name="type" type="constant">actor</arg>
-									<arg name="id" type="xpath">marc:subfield[@code="a"]/text()</arg>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">actor</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">marc:subfield[@code="a"]/text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
 								</instance_generator>
 								<additional>
 									<relationship>custom:has_provider</relationship>
@@ -4876,9 +4879,10 @@
 							<relationship>crm:P67i_is_referred_to_by</relationship>
 							<entity>
 								<type>custom:Namedgraph</type>
-								<instance_generator name="namedgraph">
-									<arg name="type" type="constant">actor</arg>
-									<arg name="id" type="xpath">marc:subfield[@code="a"]/text()</arg>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">actor</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">marc:subfield[@code="a"]/text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
 								</instance_generator>
 								<additional>
 									<relationship>custom:has_provider</relationship>
@@ -5057,9 +5061,10 @@
 							<relationship>crm:P67i_is_referred_to_by</relationship>
 							<entity>
 								<type>custom:Namedgraph</type>
-								<instance_generator name="namedgraph">
-									<arg name="type" type="constant">actor</arg>
-									<arg name="id" type="xpath">@person</arg>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">actor</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">@person</arg>
+									<arg name="term_simple" type="constant">graph</arg>
 								</instance_generator>
 								<additional>
 									<relationship>custom:has_provider</relationship>
@@ -5156,9 +5161,10 @@
 							<relationship>crm:P67i_is_referred_to_by</relationship>
 							<entity>
 								<type>custom:Namedgraph</type>
-								<instance_generator name="namedgraph">
-									<arg name="type" type="constant">actor</arg>
-									<arg name="id" type="xpath">text()</arg>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">actor</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
 								</instance_generator>
 								<additional>
 									<relationship>custom:has_provider</relationship>
@@ -5216,9 +5222,10 @@
 							<relationship>crm:P67i_is_referred_to_by</relationship>
 							<entity>
 								<type>custom:Namedgraph</type>
-								<instance_generator name="namedgraph">
-									<arg name="type" type="constant">actor</arg>
-									<arg name="id" type="xpath">marc:subfield[@code="a"]/text()</arg>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">actor</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">marc:subfield[@code="a"]/text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
 								</instance_generator>
 								<additional>
 									<relationship>custom:has_provider</relationship>

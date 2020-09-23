@@ -9,6 +9,7 @@
 		<namespace prefix="prefix" uri="https://pharos.artresearch.net/resource/marburg/"/>
 		<namespace prefix="custom" uri="https://pharos.artresearch.net/custom/"/>
 		<namespace prefix="owl" uri="http://www.w3.org/2002/07/owl#"/>
+		<namespace prefix="original" uri="http://bildarchiv.foto.marburg.com/"/>
 		<namespace prefix="iiif_image" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
 		<namespace prefix="image" uri="http://fotothek.biblhertz.it/bh/320px/"/>
 		<namespace prefix="iiif_json" uri="https://ids.lib.harvard.edu/ids/iiif/"/>

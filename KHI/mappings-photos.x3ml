@@ -6,16 +6,126 @@
 		<namespace prefix="crmdig" uri="http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/"/>
 		<namespace prefix="ssw" uri="http://catalog.sharedshelf.artstor.org/ssw"/>
 		<namespace prefix="display" uri="http://catalog.sharedshelf.artstor.org/display"/>
-		<namespace prefix="prefix" uri="https://pharos.artresearch.net/resource/KHI/"/>
+		<namespace prefix="prefix" uri="https://pharos.artresearch.net/resource/khi/"/>
 		<namespace prefix="custom" uri="https://pharos.artresearch.net/custom/"/>
 		<namespace prefix="owl" uri="http://www.w3.org/2002/07/owl#"/>
+		<namespace prefix="original" uri="http://bildarchiv.foto.KHI.com/"/>
 		<namespace prefix="iiif_image" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
 		<namespace prefix="image" uri="http://fotothek.biblhertz.it/bh/320px/"/>
 		<namespace prefix="iiif_json" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
 	</namespaces>
-	
 	<mappings>
-		<mapping namedgraph="http://graph">
+		<mapping namedgraph="">
+		
+			<domain>
+				<source_node>/root/obj</source_node>
+				<target_node>
+	
+					<entity>
+						<type>custom:SourceNamedgraph</type>
+						<instance_generator name="namedgraph">
+							<arg name="type" type="constant">KHI</arg>
+							<arg name="id" type="constant">namedgraphs</arg>
+						</instance_generator>					
+					</entity>
+				</target_node>
+			</domain>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>a8450/a8540/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a8450/a8540/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="namedgraph">
+								<arg name="type" type="constant">photo</arg>
+								<arg name="id" type="xpath">.</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+				
+			<link> 
+				<path>
+					<source_relation>
+						<relation>obj/a8450/a8540/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>obj/a8450/a8540/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="namedgraph">
+								<arg name="type" type="constant">photo</arg>
+								<arg name="id" type="xpath">.</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>obj/obj/a8450/a8540/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>obj/obj/a8450/a8540/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="namedgraph">
+								<arg name="type" type="constant">photo</arg>
+								<arg name="id" type="xpath">.</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>obj/obj/obj/a8450/a8540/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>obj/obj/a8450/a8540/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="namedgraph">
+								<arg name="type" type="constant">photo</arg>
+								<arg name="id" type="xpath">.</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+		</mapping>
+		
+		<mapping namedgraph="graph">
 			<domain>
 				<source_node>/root/obj/a8450</source_node>
 				<target_node>
@@ -24,14 +134,14 @@
 					</if>
                     <entity>
                         <type>crm:E22_Man-Made_Object</type>
-						<instance_generator name="URIwithType">
+						<instance_generator name="URIwithTypeAndId">
 						    <arg name="type" type="constant">photo</arg>
 							<arg name="id" type="xpath">a8540/text()</arg>
 						</instance_generator>
 						<label_generator name="Literal">
 							<arg name="text" type="xpath">a8540/text()</arg>
 						</label_generator>
-							<additional>
+						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
 								<type>crm:E55_Type</type>
@@ -68,10 +178,33 @@
 							</entity>
 						</additional>
 						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="namedgraph">
+									<arg name="type" type="constant">photo</arg>
+									<arg name="id" type="xpath">a8540/text()</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
 								<type>custom:Provider</type>
-								<instance_generator name="URIwithType">
+								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">KHI</arg>
 								</instance_generator>
@@ -756,61 +889,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E22_Man-Made_Object</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">photo_card</arg>
-								<arg name="id" type="xpath">text()</arg>
-							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
-										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="constant">Photo Card</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">Photo Card</arg>
-									</label_generator>
-								</entity>
-							</additional>	
-						</entity>
-					</target_node>
-				</range>
-			</link>
-			
-			<link> 
-				<path>
-					<source_relation>
-						<relation>a84fl</relation>
-					</source_relation>
-					<target_relation>
-						<if>
-							<not>
-								<if>
-									<equals value="x">text()</equals>
-								</if>
-							</not>
-						</if>
-						<relationship>crm:P128_carries</relationship>
-						<entity>
-							<type>crm:E36_Visual_Item</type>
-							<instance_generator name="VisualItemUri">
-								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../a5000/text()</arg>
-							</instance_generator>
-						</entity>
-						<relationship>crm:P128i_is_carried_by</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>a84fl</source_node>
-					<target_node>
-						<entity>
-							<type>crm:E22_Man-Made_Object</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">photo_card</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -857,7 +936,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E22_Man-Made_Object</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">negative</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -883,7 +962,7 @@
 			
 		</mapping>	
 	
-		<mapping namedgraph="http://graph">
+		<mapping namedgraph="graph">
 			<domain>
 				<source_node>/root/obj/obj/a8450</source_node>
 				<target_node>
@@ -892,7 +971,7 @@
 					</if>
                     <entity>
                         <type>crm:E22_Man-Made_Object</type>
-						<instance_generator name="URIwithType">
+						<instance_generator name="URIwithTypeAndId">
 						    <arg name="type" type="constant">photo</arg>
 							<arg name="id" type="xpath">a8540/text()</arg>
 						</instance_generator>
@@ -936,10 +1015,33 @@
 							</entity>
 						</additional>
 						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="namedgraph">
+									<arg name="type" type="constant">photo</arg>
+									<arg name="id" type="xpath">a8540/text()</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
 								<type>custom:Provider</type>
-								<instance_generator name="URIwithType">
+								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">KHI</arg>
 								</instance_generator>
@@ -954,7 +1056,7 @@
 								<type>crmdig:D1_Digital_Object</type>
 								<instance_generator name="Image_Generator">
 									<arg name="id" type="xpath">a8540/text()</arg>
-									<arg name="postfix" type="constant">.jpg</arg>
+									<arg name="postfix" type="constant"></arg>
 								</instance_generator>
 							</entity>
 						</additional>
@@ -1624,61 +1726,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E22_Man-Made_Object</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">photo_card</arg>
-								<arg name="id" type="xpath">text()</arg>
-							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
-										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="constant">Photo Card</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">Photo Card</arg>
-									</label_generator>
-								</entity>
-							</additional>	
-						</entity>
-					</target_node>
-				</range>
-			</link>
-			
-			<link> 
-				<path>
-					<source_relation>
-						<relation>a84fl</relation>
-					</source_relation>
-					<target_relation>
-						<if>
-							<not>
-								<if>
-									<equals value="x">text()</equals>
-								</if>
-							</not>
-						</if>
-						<relationship>crm:P128_carries</relationship>
-						<entity>
-							<type>crm:E36_Visual_Item</type>
-							<instance_generator name="VisualItemUri">
-								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../a5000/text()</arg>
-							</instance_generator>
-						</entity>
-						<relationship>crm:P128i_is_carried_by</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>a84fl</source_node>
-					<target_node>
-						<entity>
-							<type>crm:E22_Man-Made_Object</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">photo_card</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -1725,7 +1773,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E22_Man-Made_Object</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">negative</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -1753,7 +1801,7 @@
 
 
 		
-		<mapping namedgraph="http://graph">
+		<mapping namedgraph="graph">
 			<domain>
 				<source_node>/root/obj/obj/obj/a8450</source_node>
 				<target_node>
@@ -1762,7 +1810,7 @@
 					</if>
                     <entity>
                         <type>crm:E22_Man-Made_Object</type>
-						<instance_generator name="URIwithType">
+						<instance_generator name="URIwithTypeAndId">
 						    <arg name="type" type="constant">photo</arg>
 							<arg name="id" type="xpath">a8540/text()</arg>
 						</instance_generator>
@@ -1806,10 +1854,33 @@
 							</entity>
 						</additional>
 						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="namedgraph">
+									<arg name="type" type="constant">photo</arg>
+									<arg name="id" type="xpath">a8540/text()</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
 								<type>custom:Provider</type>
-								<instance_generator name="URIwithType">
+								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">KHI</arg>
 								</instance_generator>
@@ -1824,7 +1895,7 @@
 								<type>crmdig:D1_Digital_Object</type>
 								<instance_generator name="Image_Generator">
 									<arg name="id" type="xpath">a8540/text()</arg>
-									<arg name="postfix" type="constant">.jpg</arg>
+									<arg name="postfix" type="constant"></arg>
 								</instance_generator>
 							</entity>
 						</additional>
@@ -2494,61 +2565,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E22_Man-Made_Object</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">photo_card</arg>
-								<arg name="id" type="xpath">text()</arg>
-							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
-										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="constant">Photo Card</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">Photo Card</arg>
-									</label_generator>
-								</entity>
-							</additional>	
-						</entity>
-					</target_node>
-				</range>
-			</link>
-			
-			<link> 
-				<path>
-					<source_relation>
-						<relation>a84fl</relation>
-					</source_relation>
-					<target_relation>
-						<if>
-							<not>
-								<if>
-									<equals value="x">text()</equals>
-								</if>
-							</not>
-						</if>
-						<relationship>crm:P128_carries</relationship>
-						<entity>
-							<type>crm:E36_Visual_Item</type>
-							<instance_generator name="VisualItemUri">
-								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../a5000/text()</arg>
-							</instance_generator>
-						</entity>
-						<relationship>crm:P128i_is_carried_by</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>a84fl</source_node>
-					<target_node>
-						<entity>
-							<type>crm:E22_Man-Made_Object</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">photo_card</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -2595,7 +2612,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E22_Man-Made_Object</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">negative</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -2622,7 +2639,7 @@
 		</mapping>	
 
 		
-		<mapping namedgraph="http://graph">
+		<mapping namedgraph="graph">
 			<domain>
 				<source_node>/root/obj/obj/obj/obj/a8450</source_node>
 				<target_node>
@@ -2631,7 +2648,7 @@
 					</if>
                     <entity>
                         <type>crm:E22_Man-Made_Object</type>
-						<instance_generator name="URIwithType">
+						<instance_generator name="URIwithTypeAndId">
 						    <arg name="type" type="constant">photo</arg>
 							<arg name="id" type="xpath">a8540/text()</arg>
 						</instance_generator>
@@ -2678,7 +2695,7 @@
 							<relationship>custom:has_provider</relationship>
 							<entity>
 								<type>custom:Provider</type>
-								<instance_generator name="URIwithType">
+								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">KHI</arg>
 								</instance_generator>
@@ -2688,12 +2705,35 @@
 							</entity>
 						</additional>
 						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="namedgraph">
+									<arg name="type" type="constant">photo</arg>
+									<arg name="id" type="xpath">a8540/text()</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
 							<relationship>crm:P129i_is_subject_of</relationship>
 							<entity>
 								<type>crmdig:D1_Digital_Object</type>
 								<instance_generator name="Image_Generator">
 									<arg name="id" type="xpath">a8540/text()</arg>
-									<arg name="postfix" type="constant">.jpg</arg>
+									<arg name="postfix" type="constant"></arg>
 								</instance_generator>
 							</entity>
 						</additional>
@@ -3363,61 +3403,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E22_Man-Made_Object</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">photo_card</arg>
-								<arg name="id" type="xpath">text()</arg>
-							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
-										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="constant">Photo Card</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">Photo Card</arg>
-									</label_generator>
-								</entity>
-							</additional>	
-						</entity>
-					</target_node>
-				</range>
-			</link>
-			
-			<link> 
-				<path>
-					<source_relation>
-						<relation>a84fl</relation>
-					</source_relation>
-					<target_relation>
-						<if>
-							<not>
-								<if>
-									<equals value="x">text()</equals>
-								</if>
-							</not>
-						</if>
-						<relationship>crm:P128_carries</relationship>
-						<entity>
-							<type>crm:E36_Visual_Item</type>
-							<instance_generator name="VisualItemUri">
-								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../a5000/text()</arg>
-							</instance_generator>
-						</entity>
-						<relationship>crm:P128i_is_carried_by</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>a84fl</source_node>
-					<target_node>
-						<entity>
-							<type>crm:E22_Man-Made_Object</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">photo_card</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -3464,7 +3450,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E22_Man-Made_Object</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">negative</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -3490,7 +3476,7 @@
 			
 		</mapping>	
 		
-		<mapping namedgraph="http://graph">		
+		<mapping namedgraph="graph">		
 			<domain>
 				<source_node>/root/obj/a8450/a8470</source_node>
 				<target_node>
@@ -3499,7 +3485,7 @@
 					</if>
                     <entity>
                         <type>crm:E22_Man-Made_Object</type>
-						<instance_generator name="URIwithType">
+						<instance_generator name="URIwithTypeAndId">
 						    <arg name="type" type="constant">negative</arg>
 							<arg name="id" type="xpath">text()</arg>
 						</instance_generator>
@@ -3510,7 +3496,7 @@
 							<relationship>custom:has_provider</relationship>
 							<entity>
 								<type>custom:Provider</type>
-								<instance_generator name="URIwithType">
+								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">KHI</arg>
 								</instance_generator>
@@ -3519,6 +3505,29 @@
 								</label_generator>
 							</entity>
 						</additional>	
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="namedgraph">
+									 <arg name="type" type="constant">negative</arg>
+									<arg name="id" type="xpath">text()</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
@@ -3617,7 +3626,7 @@
 	
 		</mapping>	
 		
-		<mapping namedgraph="http://graph">		
+		<mapping namedgraph="graph">		
 			<domain>
 				<source_node>/root/obj/obj/a8450/a8470</source_node>
 				<target_node>
@@ -3626,7 +3635,7 @@
 					</if>
                     <entity>
                         <type>crm:E22_Man-Made_Object</type>
-						<instance_generator name="URIwithType">
+						<instance_generator name="URIwithTypeAndId">
 						    <arg name="type" type="constant">negative</arg>
 							<arg name="id" type="xpath">text()</arg>
 						</instance_generator>
@@ -3637,7 +3646,7 @@
 							<relationship>custom:has_provider</relationship>
 							<entity>
 								<type>custom:Provider</type>
-								<instance_generator name="URIwithType">
+								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">KHI</arg>
 								</instance_generator>
@@ -3646,6 +3655,29 @@
 								</label_generator>
 							</entity>
 						</additional>	
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="namedgraph">
+									 <arg name="type" type="constant">negative</arg>
+									<arg name="id" type="xpath">text()</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
@@ -3744,7 +3776,7 @@
 	
 		</mapping>	
 		
-		<mapping namedgraph="http://graph">		
+		<mapping namedgraph="graph">		
 			<domain>
 				<source_node>/root/obj/obj/obj/a8450/a8470</source_node>
 				<target_node>
@@ -3753,7 +3785,7 @@
 					</if>
                     <entity>
                         <type>crm:E22_Man-Made_Object</type>
-						<instance_generator name="URIwithType">
+						<instance_generator name="URIwithTypeAndId">
 						    <arg name="type" type="constant">negative</arg>
 							<arg name="id" type="xpath">text()</arg>
 						</instance_generator>
@@ -3764,7 +3796,7 @@
 							<relationship>custom:has_provider</relationship>
 							<entity>
 								<type>custom:Provider</type>
-								<instance_generator name="URIwithType">
+								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">KHI</arg>
 								</instance_generator>
@@ -3773,6 +3805,29 @@
 								</label_generator>
 							</entity>
 						</additional>	
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="namedgraph">
+									 <arg name="type" type="constant">negative</arg>
+									<arg name="id" type="xpath">text()</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
@@ -3871,7 +3926,7 @@
 	
 		</mapping>	
 		
-		<mapping namedgraph="http://graph">		
+		<mapping namedgraph="graph">		
 			<domain>
 				<source_node>/root/obj/obj/obj/obj/a8450/a8470</source_node>
 				<target_node>
@@ -3880,7 +3935,7 @@
 					</if>
                     <entity>
                         <type>crm:E22_Man-Made_Object</type>
-						<instance_generator name="URIwithType">
+						<instance_generator name="URIwithTypeAndId">
 						    <arg name="type" type="constant">negative</arg>
 							<arg name="id" type="xpath">text()</arg>
 						</instance_generator>
@@ -3891,7 +3946,7 @@
 							<relationship>custom:has_provider</relationship>
 							<entity>
 								<type>custom:Provider</type>
-								<instance_generator name="URIwithType">
+								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">KHI</arg>
 								</instance_generator>
@@ -3899,7 +3954,30 @@
 									<arg name="text" type="constant">KHI</arg>
 								</label_generator>
 							</entity>
-						</additional>	
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="namedgraph">
+									 <arg name="type" type="constant">negative</arg>
+									<arg name="id" type="xpath">text()</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>

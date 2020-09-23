@@ -2,6 +2,20 @@
 <generator_policy>
 
 
+<generator name="MultiHashingGenerator" prefix="prefix">
+        <custom generatorClass="gr.forth.MultiHashingGenerator">
+            <set-arg name="hierarchy"/>
+			<set-arg name="object_HASHED_CONTENTS"/>
+			<set-arg name="term_simple"/>
+        </custom>
+</generator>
+
+
+<generator name="namedgraph" prefix="prefix">
+	<pattern>{type}/{id}/graph</pattern>
+</generator>
+
+
 <generator name="URIwithType" prefix="prefix" shorten="yes">
 	<pattern>{type}/{id}</pattern>
 </generator>
@@ -110,7 +124,7 @@
 	<pattern>{resourceType}/{resourceId}/condition/{id}</pattern>
 </generator>
 
-<generator name="OriginalURI" prefix="prefix">
+<generator name="OriginalURI" prefix="original">
 	<pattern>obj{id}</pattern>
 </generator>
 

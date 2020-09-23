@@ -6,15 +6,44 @@
 		<namespace prefix="crmdig" uri="http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/"/>
 		<namespace prefix="ssw" uri="http://catalog.sharedshelf.artstor.org/ssw"/>
 		<namespace prefix="display" uri="http://catalog.sharedshelf.artstor.org/display"/>
-		<namespace prefix="prefix" uri="https://pharos.artresearch.net/resource/KHI/"/>
+		<namespace prefix="prefix" uri="https://pharos.artresearch.net/resource/khi/"/>
 		<namespace prefix="custom" uri="https://pharos.artresearch.net/custom/"/>
 		<namespace prefix="owl" uri="http://www.w3.org/2002/07/owl#"/>
+		<namespace prefix="original" uri="http://foto.biblhertz.it/"/>
 		<namespace prefix="iiif_image" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
 		<namespace prefix="image" uri="http://fotothek.biblhertz.it/bh/320px/"/>
 		<namespace prefix="iiif_json" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
 	</namespaces>
 	<mappings>
-		<mapping namedgraph="http://graph">
+		
+		<mapping namedgraph="">
+			<domain>
+				<source_node>/root/obj/obj/a5001</source_node>
+				<target_node>
+	
+					<entity>
+						<type>custom:SourceNamedgraph</type>
+						<instance_generator name="namedgraph">
+							<arg name="type" type="constant">KHI</arg>
+							<arg name="id" type="constant">namedgraphs</arg>
+						</instance_generator>
+						<additional>
+							<relationship>custom:consists_of</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="namedgraph">
+									<arg name="type" type="constant">work</arg>
+									<arg name="id" type="xpath">text()</arg>
+								</instance_generator>
+							</entity>
+						</additional>						
+					</entity>
+				</target_node>
+			</domain>
+
+		</mapping>
+		
+		<mapping namedgraph="graph">
 			<domain>
 				<source_node>/root/obj/obj</source_node>
 				<target_node>
@@ -34,13 +63,36 @@
 							<relationship>custom:has_provider</relationship>
 							<entity>
 								<type>custom:Provider</type>
-								<instance_generator name="URIwithType">
+								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">KHI</arg>
 								</instance_generator>
 								<label_generator name="Literal">
 									<arg name="text" type="constant">KHI</arg>
 								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="namedgraph">
+									<arg name="type" type="constant">work</arg>
+									<arg name="id" type="xpath">a5001/text()</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
 							</entity>
 						</additional>
 						<additional>
@@ -252,7 +304,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E55_Type</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -290,7 +342,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E55_Type</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -328,7 +380,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E55_Type</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -366,7 +418,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E55_Type</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -867,7 +919,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E22_Man-Made_Object</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">photo</arg>
 								<arg name="id" type="xpath">a8540/text()</arg>
 							</instance_generator>
@@ -901,7 +953,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E22_Man-Made_Object</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">negative</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -1637,7 +1689,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E29_Design_or_Procedure</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">vocabulary/technique</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -2579,6 +2631,9 @@
 								<arg name="type" type="constant">place</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
@@ -2884,7 +2939,7 @@
 					</target_node>
 				</range>
 			</link>
-			
+
 			<link> 
 				<path>
 					<source_relation>
@@ -2907,7 +2962,6 @@
 					</target_node>
 				</range>
 			</link>
-
 		</mapping>	
 	
 	</mappings>

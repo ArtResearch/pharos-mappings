@@ -48,9 +48,7 @@
 									<arg name="object_HASHED_CONTENTS" type="xpath">SCHEDA/PARAGRAFO[@etichetta="AUTHOR"]/RIPETIZIONE/AUTN[@etichetta="Artist's name"]/text()</arg>
 									<arg name="term_simple" type="constant">graph</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-							<arg name="text" type="xpath">SCHEDA/PARAGRAFO[@etichetta="AUTHOR"]/RIPETIZIONE/AUTN[@etichetta="Artist's name"]/text()</arg>
-						</label_generator>
+
 							</entity>
 						</additional>
 						
@@ -2710,9 +2708,10 @@
 							<relationship>crm:P67i_is_referred_to_by</relationship>
 							<entity>
 								<type>custom:Namedgraph</type>
-								<instance_generator name="namedgraph">
-									<arg name="type" type="constant">actor</arg>
-									<arg name="id" type="xpath">AUTN[@etichetta="Artist's name"]/text()</arg>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">actor</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">AUTN[@etichetta="Artist's name"]/text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
 								</instance_generator>
 								<additional>
 									<relationship>custom:has_provider</relationship>
@@ -2741,7 +2740,7 @@
 									<arg name="identifier_id" type="xpath">AUTN[@etichetta="Artist's name"]/text()</arg>
 								</instance_generator>
 								<label_generator name="Literal">
-									<arg name="text" type="xpath">text()</arg>
+									<arg name="text" type="xpath">AUTN[@etichetta="Artist's name"]/text()</arg>
 								</label_generator>
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
@@ -2904,9 +2903,10 @@
 							<relationship>crm:P67i_is_referred_to_by</relationship>
 							<entity>
 								<type>custom:Namedgraph</type>
-								<instance_generator name="namedgraph">
-									<arg name="type" type="constant">actor</arg>
-									<arg name="id" type="xpath">AAT[@etichetta="Name"]/text()</arg>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">actor</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">AAT[@etichetta="Name"]/text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
 								</instance_generator>
 								<additional>
 									<relationship>custom:has_provider</relationship>
@@ -2935,7 +2935,7 @@
 									<arg name="identifier_id" type="xpath">AAT[@etichetta="Name"]/text()</arg>
 								</instance_generator>
 								<label_generator name="Literal">
-									<arg name="text" type="xpath">text()</arg>
+									<arg name="text" type="xpath">AAT[@etichetta="Name"]/text()</arg>
 								</label_generator>
 								<additional>
 									<relationship>crm:P2_has_type</relationship>

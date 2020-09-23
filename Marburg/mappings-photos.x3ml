@@ -27,52 +27,104 @@
 							<arg name="type" type="constant">marburg</arg>
 							<arg name="id" type="constant">namedgraphs</arg>
 						</instance_generator>
-						<additional>
-							<relationship>custom:consists_of</relationship>
-							<entity>
-								<type>custom:Namedgraph</type>
-								<instance_generator name="namedgraph">
-									<arg name="type" type="constant">photo</arg>
-									<arg name="id" type="xpath">a8450/a8540/text()</arg>
-								</instance_generator>
-							</entity>
-						</additional>
-						<additional>
-							<relationship>custom:consists_of</relationship>
-							<entity>
-								<type>custom:Namedgraph</type>
-								<instance_generator name="namedgraph">
-									<arg name="type" type="constant">photo</arg>
-									<arg name="id" type="xpath">obj/a8450/a8540/text()</arg>
-								</instance_generator>
-							</entity>
-						</additional>
-						<additional>
-							<relationship>custom:consists_of</relationship>
-							<entity>
-								<type>custom:Namedgraph</type>
-								<instance_generator name="namedgraph">
-									<arg name="type" type="constant">photo</arg>
-									<arg name="id" type="xpath">obj/obj/a8450/a8540/text()</arg>
-								</instance_generator>
-							</entity>
-						</additional>
-						<additional>
-							<relationship>custom:consists_of</relationship>
-							<entity>
-								<type>custom:Namedgraph</type>
-								<instance_generator name="namedgraph">
-									<arg name="type" type="constant">photo</arg>
-									<arg name="id" type="xpath">obj/obj/obj/a8450/a8540/text()</arg>
-								</instance_generator>
-							</entity>
-						</additional>							
+											
 					</entity>
 				</target_node>
 			</domain>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>a8450/a8540/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a8450/a8540/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="namedgraph">
+								<arg name="type" type="constant">photo</arg>
+								<arg name="id" type="xpath">.</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+				
+			<link> 
+				<path>
+					<source_relation>
+						<relation>obj/a8450/a8540/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>obj/a8450/a8540/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="namedgraph">
+								<arg name="type" type="constant">photo</arg>
+								<arg name="id" type="xpath">.</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>obj/obj/a8450/a8540/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>obj/obj/a8450/a8540/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="namedgraph">
+								<arg name="type" type="constant">photo</arg>
+								<arg name="id" type="xpath">.</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>obj/obj/obj/a8450/a8540/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>obj/obj/a8450/a8540/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="namedgraph">
+								<arg name="type" type="constant">photo</arg>
+								<arg name="id" type="xpath">.</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
 
 		</mapping>
-		
 		
 		<mapping namedgraph="graph">
 			<domain>
@@ -168,7 +220,7 @@
 								<type>crmdig:D1_Digital_Object</type>
 								<instance_generator name="Image_Generator">
 									<arg name="id" type="xpath">a8540/text()</arg>
-									<arg name="postfix" type="constant">.jpg</arg>
+									<arg name="postfix" type="constant"></arg>
 								</instance_generator>
 							</entity>
 						</additional>
@@ -1005,7 +1057,7 @@
 								<type>crmdig:D1_Digital_Object</type>
 								<instance_generator name="Image_Generator">
 									<arg name="id" type="xpath">a8540/text()</arg>
-									<arg name="postfix" type="constant">.jpg</arg>
+									<arg name="postfix" type="constant"></arg>
 								</instance_generator>
 							</entity>
 						</additional>
@@ -1844,7 +1896,7 @@
 								<type>crmdig:D1_Digital_Object</type>
 								<instance_generator name="Image_Generator">
 									<arg name="id" type="xpath">a8540/text()</arg>
-									<arg name="postfix" type="constant">.jpg</arg>
+									<arg name="postfix" type="constant"></arg>
 								</instance_generator>
 							</entity>
 						</additional>
@@ -2682,7 +2734,7 @@
 								<type>crmdig:D1_Digital_Object</type>
 								<instance_generator name="Image_Generator">
 									<arg name="id" type="xpath">a8540/text()</arg>
-									<arg name="postfix" type="constant">.jpg</arg>
+									<arg name="postfix" type="constant"></arg>
 								</instance_generator>
 							</entity>
 						</additional>

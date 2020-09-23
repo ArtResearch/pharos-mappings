@@ -7,13 +7,13 @@
 		<namespace prefix="ssw" uri="http://catalog.sharedshelf.artstor.org/ssw"/>
 		<namespace prefix="display" uri="http://catalog.sharedshelf.artstor.org/display"/>
 		<namespace prefix="owl" uri="http://www.w3.org/2002/07/owl#"/>
-		<namespace prefix="prefix" uri="https://pharos.artresearch.net/resource/villaitatti/"/>
+		<namespace prefix="prefix" uri="https://pharos.artresearch.net/resource/itatti/"/>
 		<namespace prefix="custom" uri="https://pharos.artresearch.net/custom/"/>
 		<namespace prefix="vit" uri="http://id.lib.harvard.edu/images/olvwork"/>
 		<namespace prefix="iiif_image" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
 		<namespace prefix="iiif_json" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
-		<namespace prefix="fc" uri="https://pharos.net/resource/fc/"/>
-		<namespace prefix="fr" uri="https://pharos.net/resource/fr/"/>
+		<namespace prefix="fc" uri="https://pharos.artresearch.net/resource/fc/"/>
+		<namespace prefix="fr" uri="https://pharos.artresearch.net/resource/fr/"/>
 	</namespaces>
 	<mappings>
 		<mapping>
@@ -30,9 +30,9 @@
 							<relationship>fr:Work_has_provider_Institution</relationship>
 							<entity>
 								<type>fc:institution</type>
-								<instance_generator name="URIwithType">
+								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
-									<arg name="id" type="constant">Villa i Tatti</arg>
+									<arg name="id" type="constant">ITatti</arg>
 								</instance_generator>
 							</entity>
 						</additional>
@@ -345,6 +345,28 @@
 				</range>
 			</link>
 			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>Materials/Material</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>fr:Work_consists_of_Material</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>Materials/Material</source_node>
+					<target_node>
+						<entity>
+							<type>fc:material</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">@uri</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
 		</mapping>
 	
 		<mapping>
@@ -368,9 +390,9 @@
 							<relationship>fr:Photo_has_provider_Institution</relationship>
 							<entity>
 								<type>fc:institution</type>
-								<instance_generator name="URIwithType">
+								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
-									<arg name="id" type="constant">Villa i Tatti</arg>
+									<arg name="id" type="constant">ITatti</arg>
 								</instance_generator>
 							</entity>
 						</additional>
@@ -488,6 +510,31 @@
 					</target_node>
 				</range>
 			</link> 
+			
+			<link>
+			    <path>
+					<source_relation>
+						<relation>../field_lookup[@label="Image Support"]</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<exists>linkedField/@preferredTerm</exists>
+						</if>
+						<relationship>fr:Photo_consists_of_Material</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../field_lookup[@label="Image Support"]</source_node>
+					<target_node>
+						<entity>
+							<type>fc:material</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">linkedField/@uri</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
 			
 		</mapping>	
 		

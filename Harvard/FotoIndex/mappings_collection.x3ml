@@ -6,21 +6,53 @@
 		<namespace prefix="crmdig" uri="http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/"/>
 		<namespace prefix="ssw" uri="http://catalog.sharedshelf.artstor.org/ssw"/>
 		<namespace prefix="display" uri="http://catalog.sharedshelf.artstor.org/display"/>
+		<namespace prefix="owl" uri="http://www.w3.org/2002/07/owl#"/>
 		<namespace prefix="prefix" uri="https://pharos.artresearch.net/resource/itatti/"/>
 		<namespace prefix="custom" uri="https://pharos.artresearch.net/custom/"/>
-		<namespace prefix="owl" uri="http://www.w3.org/2002/07/owl#"/>
+		<namespace prefix="vit" uri="http://id.lib.harvard.edu/images/olvwork"/>
 		<namespace prefix="iiif_image" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
 		<namespace prefix="iiif_json" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
 		<namespace prefix="skos" uri="http://www.w3.org/2004/02/skos/core#"/>
 	</namespaces>
 	<mappings>
-		<mapping namedgraph="http://graph">
+	
+		<mapping namedgraph="">
+		
+			<domain>
+				<source_node>//Collection/Collection_ID/text()</source_node>
+				<target_node>
+	
+					<entity>
+						<type>custom:SourceNamedgraph</type>
+						<instance_generator name="namedgraph">
+							<arg name="type" type="constant">itatti</arg>
+							<arg name="id" type="constant">namedgraphs</arg>
+						</instance_generator>
+						
+						<additional>
+							<relationship>custom:consists_of</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="namedgraph">
+									<arg name="type" type="constant">collection</arg>
+									<arg name="id" type="xpath">.</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+
+					</entity>
+				</target_node>
+			</domain>
+			
+		</mapping>	
+	
+		<mapping namedgraph="graph">
 			<domain>
 				<source_node>//Collection</source_node>
 				<target_node>
                    	<entity>
 						<type>crm:E78_Curated_Holding</type>
-						<instance_generator name="URIwithType">
+						<instance_generator name="URIwithTypeAndId">
 							<arg name="type" type="constant">collection</arg>
 							<arg name="id" type="xpath">Collection_ID/text()</arg>
 						</instance_generator>	
@@ -44,20 +76,43 @@
 							<relationship>custom:has_provider</relationship>
 							<entity>
 								<type>custom:Provider</type>
-								<instance_generator name="URIwithType">
+								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
-									<arg name="id" type="constant">I Tatti</arg>
+									<arg name="id" type="constant">ITatti</arg>
 								</instance_generator>
 								<label_generator name="Literal">
-									<arg name="text" type="constant">Villa i Tatti</arg>
+									<arg name="text" type="constant">I Tatti</arg>
 								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="namedgraph">
+									<arg name="type" type="constant">collection</arg>
+									<arg name="id" type="xpath">Collection_ID/text()</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">ITatti</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">I Tatti</arg>
+										</label_generator>
+									</entity>
+								</additional>
 							</entity>
 						</additional>
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
 								<type>custom:Provider</type>
-								<instance_generator name="URIwithType">
+								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">FotoIndex</arg>
 								</instance_generator>
@@ -65,7 +120,7 @@
 									<arg name="text" type="constant">FotoIndex</arg>
 								</label_generator>
 							</entity>
-						</additional>	
+						</additional>
 					</entity>
 				</target_node>
 			</domain>
