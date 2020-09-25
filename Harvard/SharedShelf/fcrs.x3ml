@@ -538,5 +538,170 @@
 			
 		</mapping>	
 		
+		<mapping>
+			<domain>
+				<source_node>//ssw:Work/display:DR/DisplayRecord/field_string[@label="Image Accession Number"]</source_node>
+				<target_node>
+					<if>
+						<equals value="digital photograph">../field_lookup[@label="Image Type"]/linkedField/@preferredTerm</equals>
+					</if>
+                    <entity>
+						<type>fc:photo</type>
+						<instance_generator name="URIwithTypeAndId">
+							<arg name="type" type="constant">photo</arg>
+							<arg name="id" type="xpath">../field_string[@label="Image Accession Number"]/text()</arg>
+						</instance_generator>
+						<additional>
+							<relationship>fr:Photo_has_provider_Institution</relationship>
+							<entity>
+								<type>fc:institution</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">ITatti</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>../field_lookup[@label="Photographer"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>fr:Photo_created_by_Photographer</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../field_lookup[@label="Photographer"]</source_node>
+					<target_node>
+						<entity>
+							<type>fc:photographer</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">linkedField/@id</arg>
+							</instance_generator>
+							<additional>
+								<relationship>fr:Photographer_photographed_Photo</relationship>
+								<entity>
+									<type>fc:photo</type>
+									<instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">work</arg>
+										<arg name="id" type="xpath">../field_string[@label="Image Accession Number"]/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link>
+				<path>
+					<source_relation>
+						<relation>../field_string[@label="Image Start Year"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>fr:Photo_from_Date</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../field_string[@label="Image Start Year"]</source_node>
+					<target_node>
+						<entity>
+							<type>fc:date</type>
+							<instance_generator name="TimespanUri">
+								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="resourceId" type="xpath">../field_string[@label="Image Accession Number"]/text()</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">@value</arg>
+							</label_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link>
+				<path>
+					<source_relation>
+						<relation>../field_string[@label="Image End Year"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>fr:Photo_to_Date</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../field_string[@label="Image End Year"]</source_node>
+					<target_node>
+						<entity>
+							<type>fc:date</type>
+							<instance_generator name="TimespanUri">
+								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="resourceId" type="xpath">../field_string[@label="Image Accession Number"]/text()</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">@value</arg>
+							</label_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			
+			<link>
+				<path>
+					<source_relation>
+						<relation>../field_lookup[@label="Image Repository"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>fr:Photo_kept_by_Institution</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../field_lookup[@label="Image Repository"]</source_node>
+					<target_node>
+						<entity>
+							<type>fc:institution</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">linkedField/@id</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link> 
+			
+			<link>
+			    <path>
+					<source_relation>
+						<relation>../field_lookup[@label="Image Support"]</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<exists>linkedField/@preferredTerm</exists>
+						</if>
+						<relationship>fr:Photo_consists_of_Material</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../field_lookup[@label="Image Support"]</source_node>
+					<target_node>
+						<entity>
+							<type>fc:material</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">linkedField/@uri</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+		</mapping>	
+		
 	</mappings>
 </x3ml>
