@@ -125,7 +125,7 @@
 </generator>
 
 <generator name="OriginalURI" prefix="original">
-	<pattern>obj{id}</pattern>
+	<pattern>obj/{id}</pattern>
 </generator>
 
 <generator name="SourceRecordVIT" prefix="vit">
