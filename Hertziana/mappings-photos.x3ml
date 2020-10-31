@@ -12,7 +12,7 @@
 		<namespace prefix="original" uri="http://foto.biblhertz.it/"/>
 		<namespace prefix="iiif_image" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
 		<namespace prefix="image" uri="http://fotothek.biblhertz.it/bh/320px/"/>
-		<namespace prefix="iiif_json" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
+		<namespace prefix="iiif_json" uri="https://foto.biblhertz.it/exist/foto/"/>
 	</namespaces>
 	<mappings>
 		<mapping namedgraph="">
@@ -221,6 +221,28 @@
 									<arg name="id" type="xpath">a8540/text()</arg>
 									<arg name="postfix" type="constant">.jpg</arg>
 								</instance_generator>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>crm:E55_Type</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">http://iiif.io/api/image</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">http://iiif.io/api/image</arg>
+										</label_generator>
+									</entity>
+								</additional>
+								<additional>
+									<relationship>crm:P129i_is_subject_of</relationship>
+									<entity>
+										<type>crm:E73_Information_Object</type>
+										<instance_generator name="JSON_Generator">
+											<arg name="id" type="xpath">a8540/text()</arg>
+											<arg name="postfix" type="constant">/manifest.json</arg>
+										</instance_generator>
+									</entity>
+								</additional>
 							</entity>
 						</additional>
 					 </entity>
@@ -1056,8 +1078,30 @@
 								<type>crmdig:D1_Digital_Object</type>
 								<instance_generator name="Image_Generator">
 									<arg name="id" type="xpath">a8540/text()</arg>
-									<arg name="postfix" type="constant"></arg>
+									<arg name="postfix" type="constant">.jpg</arg>
 								</instance_generator>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>crm:E55_Type</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">http://iiif.io/api/image</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">http://iiif.io/api/image</arg>
+										</label_generator>
+									</entity>
+								</additional>
+								<additional>
+									<relationship>crm:P129i_is_subject_of</relationship>
+									<entity>
+										<type>crm:E73_Information_Object</type>
+										<instance_generator name="JSON_Generator">
+											<arg name="id" type="xpath">a8540/text()</arg>
+											<arg name="postfix" type="constant">/manifest.json</arg>
+										</instance_generator>
+									</entity>
+								</additional>
 							</entity>
 						</additional>
 					 </entity>
@@ -1895,8 +1939,30 @@
 								<type>crmdig:D1_Digital_Object</type>
 								<instance_generator name="Image_Generator">
 									<arg name="id" type="xpath">a8540/text()</arg>
-									<arg name="postfix" type="constant"></arg>
+									<arg name="postfix" type="constant">.jpg</arg>
 								</instance_generator>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>crm:E55_Type</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">http://iiif.io/api/image</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">http://iiif.io/api/image</arg>
+										</label_generator>
+									</entity>
+								</additional>
+								<additional>
+									<relationship>crm:P129i_is_subject_of</relationship>
+									<entity>
+										<type>crm:E73_Information_Object</type>
+										<instance_generator name="JSON_Generator">
+											<arg name="id" type="xpath">a8540/text()</arg>
+											<arg name="postfix" type="constant">/manifest.json</arg>
+										</instance_generator>
+									</entity>
+								</additional>
 							</entity>
 						</additional>
 					 </entity>
@@ -2733,8 +2799,30 @@
 								<type>crmdig:D1_Digital_Object</type>
 								<instance_generator name="Image_Generator">
 									<arg name="id" type="xpath">a8540/text()</arg>
-									<arg name="postfix" type="constant"></arg>
+									<arg name="postfix" type="constant">.jpg</arg>
 								</instance_generator>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>crm:E55_Type</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">http://iiif.io/api/image</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">http://iiif.io/api/image</arg>
+										</label_generator>
+									</entity>
+								</additional>
+								<additional>
+									<relationship>crm:P129i_is_subject_of</relationship>
+									<entity>
+										<type>crm:E73_Information_Object</type>
+										<instance_generator name="JSON_Generator">
+											<arg name="id" type="xpath">a8540/text()</arg>
+											<arg name="postfix" type="constant">/manifest.json</arg>
+										</instance_generator>
+									</entity>
+								</additional>
 							</entity>
 						</additional>
 					 </entity>
