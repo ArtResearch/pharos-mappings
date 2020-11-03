@@ -10,6 +10,13 @@
         </custom>
 </generator>
 
+<generator name="IIIF_Generator" prefix="iiif_image">
+	<pattern>{id}{postfix}</pattern>
+</generator>
+
+<generator name="JSON_Generator" prefix="iiif_image">
+	<pattern>{id}{postfix}</pattern>
+</generator>
 
 <generator name="namedgraph" prefix="prefix">
 	<pattern>{type}/{id}/graph</pattern>
