@@ -121,7 +121,8 @@
 									</entity>
 								</additional>
 							</entity>
-						</additional>		
+						</additional>
+						<!--
 						<additional>
 							<relationship>crm:P129i_is_subject_of</relationship>
 							<entity>
@@ -132,6 +133,7 @@
 								</instance_generator>
 							</entity>
 						</additional>
+						-->
 						<additional>
 							<relationship>custom:has_original_record</relationship>
 							<entity>

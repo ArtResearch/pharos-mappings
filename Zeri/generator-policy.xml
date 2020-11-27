@@ -2,6 +2,7 @@
 <generator_policy>
 
 
+
 <generator name="MultiHashingGenerator" prefix="prefix">
         <custom generatorClass="gr.forth.MultiHashingGenerator">
             <set-arg name="hierarchy"/>
