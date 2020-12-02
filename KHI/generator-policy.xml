@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <generator_policy>
 
+<generator name="IIIF_Generator" prefix="iiif_image">
+	<pattern>{id}{postfix}</pattern>
+</generator>
+
+<generator name="JSON_Generator" prefix="iiif_image">
+	<pattern>{id}{postfix}</pattern>
+</generator>
 
 <generator name="MultiHashingGenerator" prefix="prefix">
         <custom generatorClass="gr.forth.MultiHashingGenerator">
@@ -163,13 +170,6 @@
 	</custom>
 </generator>
 
-<generator name="IIIF_Image_Generator" prefix="iiif_image">
-	<pattern>{id}/{postfix}</pattern>
-</generator>
-
-<generator name="IIIF_Json_Generator" prefix="iiif_json">
-	<pattern>{id}/info.json</pattern>
-</generator>
 
 
 <generator name="LocalTermURI" prefix="pref">

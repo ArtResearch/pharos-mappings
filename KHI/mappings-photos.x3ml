@@ -10,9 +10,7 @@
 		<namespace prefix="custom" uri="https://pharos.artresearch.net/custom/"/>
 		<namespace prefix="owl" uri="http://www.w3.org/2002/07/owl#"/>
 		<namespace prefix="original" uri="http://bildarchiv.foto.KHI.com/"/>
-		<namespace prefix="iiif_image" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
-		<namespace prefix="image" uri="http://fotothek.biblhertz.it/bh/320px/"/>
-		<namespace prefix="iiif_json" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
+		<namespace prefix="iiif_image" uri="https://iiif.khi.fi.it/iiif/2/thumbnails%2F"/>
 	</namespaces>
 	<mappings>
 		<mapping namedgraph="">
@@ -217,10 +215,45 @@
 							<relationship>crm:P129i_is_subject_of</relationship>
 							<entity>
 								<type>crmdig:D1_Digital_Object</type>
-								<instance_generator name="Image_Generator">
+								<instance_generator name="IIIF_Generator">
 									<arg name="id" type="xpath">a8540/text()</arg>
-									<arg name="postfix" type="constant">.jpg</arg>
+									<arg name="postfix" type="constant">.jpg/full/full/0/default.jpg</arg>
 								</instance_generator>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>crm:E55_Type</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">http://iiif.io/api/image</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">http://iiif.io/api/image</arg>
+										</label_generator>
+									</entity>
+								</additional>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>crm:E55_Type</type>
+										<instance_generator name="URIwithType">
+											<arg name="type" type="constant">type</arg>
+											<arg name="id" type="constant">recto</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">recto</arg>
+										</label_generator>
+									</entity>
+								</additional>
+								<additional>
+									<relationship>crm:P129i_is_subject_of</relationship>
+									<entity>
+										<type>crm:E73_Information_Object</type>
+										<instance_generator name="JSON_Generator">
+											<arg name="id" type="xpath">a8540/text()</arg>
+											<arg name="postfix" type="constant">.jpg/info.json</arg>
+										</instance_generator>
+									</entity>
+								</additional>
 							</entity>
 						</additional>
 					 </entity>
@@ -1054,10 +1087,45 @@
 							<relationship>crm:P129i_is_subject_of</relationship>
 							<entity>
 								<type>crmdig:D1_Digital_Object</type>
-								<instance_generator name="Image_Generator">
+								<instance_generator name="IIIF_Generator">
 									<arg name="id" type="xpath">a8540/text()</arg>
-									<arg name="postfix" type="constant"></arg>
+									<arg name="postfix" type="constant">.jpg/full/full/0/default.jpg</arg>
 								</instance_generator>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>crm:E55_Type</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">http://iiif.io/api/image</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">http://iiif.io/api/image</arg>
+										</label_generator>
+									</entity>
+								</additional>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>crm:E55_Type</type>
+										<instance_generator name="URIwithType">
+											<arg name="type" type="constant">type</arg>
+											<arg name="id" type="constant">recto</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">recto</arg>
+										</label_generator>
+									</entity>
+								</additional>
+								<additional>
+									<relationship>crm:P129i_is_subject_of</relationship>
+									<entity>
+										<type>crm:E73_Information_Object</type>
+										<instance_generator name="JSON_Generator">
+											<arg name="id" type="xpath">a8540/text()</arg>
+											<arg name="postfix" type="constant">.jpg/info.json</arg>
+										</instance_generator>
+									</entity>
+								</additional>
 							</entity>
 						</additional>
 					 </entity>
@@ -1893,10 +1961,45 @@
 							<relationship>crm:P129i_is_subject_of</relationship>
 							<entity>
 								<type>crmdig:D1_Digital_Object</type>
-								<instance_generator name="Image_Generator">
+								<instance_generator name="IIIF_Generator">
 									<arg name="id" type="xpath">a8540/text()</arg>
-									<arg name="postfix" type="constant"></arg>
+									<arg name="postfix" type="constant">.jpg/full/full/0/default.jpg</arg>
 								</instance_generator>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>crm:E55_Type</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">http://iiif.io/api/image</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">http://iiif.io/api/image</arg>
+										</label_generator>
+									</entity>
+								</additional>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>crm:E55_Type</type>
+										<instance_generator name="URIwithType">
+											<arg name="type" type="constant">type</arg>
+											<arg name="id" type="constant">recto</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">recto</arg>
+										</label_generator>
+									</entity>
+								</additional>
+								<additional>
+									<relationship>crm:P129i_is_subject_of</relationship>
+									<entity>
+										<type>crm:E73_Information_Object</type>
+										<instance_generator name="JSON_Generator">
+											<arg name="id" type="xpath">a8540/text()</arg>
+											<arg name="postfix" type="constant">.jpg/info.json</arg>
+										</instance_generator>
+									</entity>
+								</additional>
 							</entity>
 						</additional>
 					 </entity>
@@ -2731,10 +2834,45 @@
 							<relationship>crm:P129i_is_subject_of</relationship>
 							<entity>
 								<type>crmdig:D1_Digital_Object</type>
-								<instance_generator name="Image_Generator">
+								<instance_generator name="IIIF_Generator">
 									<arg name="id" type="xpath">a8540/text()</arg>
-									<arg name="postfix" type="constant"></arg>
+									<arg name="postfix" type="constant">.jpg/full/full/0/default.jpg</arg>
 								</instance_generator>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>crm:E55_Type</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">http://iiif.io/api/image</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">http://iiif.io/api/image</arg>
+										</label_generator>
+									</entity>
+								</additional>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>crm:E55_Type</type>
+										<instance_generator name="URIwithType">
+											<arg name="type" type="constant">type</arg>
+											<arg name="id" type="constant">recto</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">recto</arg>
+										</label_generator>
+									</entity>
+								</additional>
+								<additional>
+									<relationship>crm:P129i_is_subject_of</relationship>
+									<entity>
+										<type>crm:E73_Information_Object</type>
+										<instance_generator name="JSON_Generator">
+											<arg name="id" type="xpath">a8540/text()</arg>
+											<arg name="postfix" type="constant">.jpg/info.json</arg>
+										</instance_generator>
+									</entity>
+								</additional>
 							</entity>
 						</additional>
 					 </entity>
