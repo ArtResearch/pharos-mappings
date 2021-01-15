@@ -2327,7 +2327,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="OBJECT"]/MISV[@etichetta="Other dimensions"]</relation>
+						<relation>PARAGRAFO[@etichetta="OBJECT"]/MISV[@etichetta="Other dimentions"]</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P67i_is_referred_to_by</relationship>
@@ -2357,7 +2357,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="OBJECT"]/MISV[@etichetta="Other dimensions"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="OBJECT"]/MISV[@etichetta="Other dimentions"]</source_node>
 					<target_node>
 						<entity>
 							<type>rdfs:Literal</type>

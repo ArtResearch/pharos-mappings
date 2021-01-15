@@ -2704,7 +2704,7 @@
 								<arg name="subject_type" type="constant">work</arg>
 								<arg name="subject_id" type="xpath">../../a5001/text()</arg>
 								<arg name="type" type="xpath">../text()</arg>
-								<arg name="unit" type="constant"></arg>
+								<arg name="unit" type="constant">-</arg>
 								<arg name="value" type="xpath">text()</arg>
 							</instance_generator>
 							<additional>
