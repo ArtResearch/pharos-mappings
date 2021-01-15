@@ -57,7 +57,7 @@
 					<source_node>BeginDate</source_node>
 					<target_node>
 						<entity>
-							<type>xsd:DateTime</type>
+							<type>xsd:date</type>
 							<instance_generator name="TypedLiteralGen">
 								<arg name="text" type="xpath">text()</arg>
 							</instance_generator>
@@ -100,7 +100,7 @@
 					<source_node>EndDate</source_node>
 					<target_node>
 						<entity>
-							<type>xsd:DateTime</type>
+							<type>xsd:date</type>
 							<instance_generator name="TypedLiteralGen">
 								<arg name="text" type="xpath">text()</arg>
 							</instance_generator>
@@ -192,7 +192,7 @@
 					<source_node>BeginDate</source_node>
 					<target_node>
 						<entity>
-							<type>xsd:DateTime</type>
+							<type>xsd:date</type>
 							<instance_generator name="TypedLiteralGen">
 								<arg name="text" type="xpath">text()</arg>
 							</instance_generator>
@@ -235,7 +235,7 @@
 					<source_node>EndDate</source_node>
 					<target_node>
 						<entity>
-							<type>xsd:DateTime</type>
+							<type>xsd:date</type>
 							<instance_generator name="TypedLiteralGen">
 								<arg name="text" type="xpath">text()</arg>
 							</instance_generator>
@@ -327,7 +327,7 @@
 					<source_node>BeginDate</source_node>
 					<target_node>
 						<entity>
-							<type>xsd:DateTime</type>
+							<type>xsd:date</type>
 							<instance_generator name="TypedLiteralGen">
 								<arg name="text" type="xpath">text()</arg>
 							</instance_generator>
@@ -369,7 +369,7 @@
 					<source_node>EndDate</source_node>
 					<target_node>
 						<entity>
-							<type>xsd:DateTime</type>
+							<type>xsd:date</type>
 							<instance_generator name="TypedLiteralGen">
 								<arg name="text" type="xpath">text()</arg>
 							</instance_generator>
@@ -461,7 +461,7 @@
 					<source_node>BeginDate</source_node>
 					<target_node>
 						<entity>
-							<type>xsd:DateTime</type>
+							<type>xsd:date</type>
 							<instance_generator name="TypedLiteralGen">
 								<arg name="text" type="xpath">text()</arg>
 							</instance_generator>
@@ -503,7 +503,7 @@
 					<source_node>EndDate</source_node>
 					<target_node>
 						<entity>
-							<type>xsd:DateTime</type>
+							<type>xsd:date</type>
 							<instance_generator name="TypedLiteralGen">
 								<arg name="text" type="xpath">text()</arg>
 							</instance_generator>

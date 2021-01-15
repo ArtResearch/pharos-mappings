@@ -714,8 +714,8 @@
 					<source_node>PARAGRAFO[@etichetta="DATING"]/RIPETIZIONE/DTSI[@etichetta="From"]</source_node>
 					<target_node>
 						<entity>
-							<type>rdfs:Literal</type>
-							<instance_generator name="Literal">
+							<type>xsd:date</type>
+							<instance_generator name="TypedLiteralGen">
 								<arg name="text" type="xpath">text()</arg>
 							</instance_generator>
 						</entity>
@@ -754,8 +754,8 @@
 					<source_node>PARAGRAFO[@etichetta="DATING"]/RIPETIZIONE/DTSF[@etichetta="To"]</source_node>
 					<target_node>
 						<entity>
-							<type>rdfs:Literal</type>
-							<instance_generator name="Literal">
+							<type>xsd:date</type>
+							<instance_generator name="TypedLiteralGen">
 								<arg name="text" type="xpath">text()</arg>
 							</instance_generator>
 						</entity>
@@ -1793,7 +1793,7 @@
 								<arg name="timespan" type="xpath">../MSTT[@etichetta="Title of exhibition"]/text()</arg>
 							</instance_generator>
 						</entity>
-						<relationship>crm:P82_at_some_point_within</relationship>
+						<relationship>crm:P82_at_some_time_within</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -2281,7 +2281,7 @@
 							<instance_generator name="DimensionURI">
 								<arg name="subject_type" type="constant">work</arg>
 								<arg name="subject_id" type="xpath">../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]</arg>
-								<arg name="type" type="constant">depth</arg>
+								<arg name="type" type="constant">diameter</arg>
 								<arg name="unit" type="xpath">../MISU[@etichetta="Unit of measurement"]/text()</arg>
 								<arg name="value" type="xpath">text()</arg>
 							</instance_generator>
@@ -2532,7 +2532,7 @@
 								<arg name="eventType" type="constant">creation</arg>
 							</instance_generator>
 						</entity>
-						<relationship>crm:P82_at_some_point_within</relationship>
+						<relationship>crm:P82_at_some_time_within</relationship>
 					</target_relation>
 				</path>
 				<range>

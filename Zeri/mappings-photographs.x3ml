@@ -677,8 +677,8 @@
 					<source_node>PARAGRAFO[@etichetta="DATING"]/RIPETIZIONE/DTSI[@etichetta="From"]</source_node>
 					<target_node>
 						<entity>
-							<type>rdfs:Literal</type>
-							<instance_generator name="Literal">
+							<type>xsd:date</type>
+							<instance_generator name="TypedLiteralGen">
 								<arg name="text" type="xpath">text()</arg>
 							</instance_generator>
 						</entity>
@@ -717,8 +717,8 @@
 					<source_node>PARAGRAFO[@etichetta="DATING"]/RIPETIZIONE/DTSF[@etichetta="To"]</source_node>
 					<target_node>
 						<entity>
-							<type>rdfs:Literal</type>
-							<instance_generator name="Literal">
+							<type>xsd:date</type>
+							<instance_generator name="TypedLiteralGen">
 								<arg name="text" type="xpath">text()</arg>
 							</instance_generator>
 						</entity>
@@ -2900,7 +2900,7 @@
 								<arg name="eventType" type="constant">digitization</arg>
 							</instance_generator>
 						</entity>
-						<relationship>crm:P82_at_some_point_within</relationship>
+						<relationship>crm:P82_at_some_time_within</relationship>
 					</target_relation>
 				</path>
 				<range>
