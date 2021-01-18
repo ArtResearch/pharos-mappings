@@ -308,7 +308,7 @@
 						<relation>PARAGRAFO[@etichetta="LOCATION"]/LDCS[@etichetta="Precise location"]</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>crm:P106i_forms_part_of</relationship>
+						<relationship>crm:P46i_forms_part_of</relationship>
 					</target_relation>
 				</path>
 				<range>
