@@ -7,6 +7,7 @@
 		<namespace prefix="ssw" uri="http://catalog.sharedshelf.artstor.org/ssw"/>
 		<namespace prefix="display" uri="http://catalog.sharedshelf.artstor.org/display"/>
 		<namespace prefix="prefix" uri="https://pharos.artresearch.net/resource/khi/"/>
+		<namespace prefix="vocab" uri="https://pharos.artresearch.net/resource/midas/vocabulary/"/>
 		<namespace prefix="custom" uri="https://pharos.artresearch.net/custom/"/>
 		<namespace prefix="owl" uri="http://www.w3.org/2002/07/owl#"/>
 		<namespace prefix="original" uri="http://foto.biblhertz.it/"/>
@@ -304,7 +305,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E55_Type</type>
-							<instance_generator name="URIwithTypeAndId">
+							<instance_generator name="URIwithVocabType">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -342,7 +343,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E55_Type</type>
-							<instance_generator name="URIwithTypeAndId">
+							<instance_generator name="URIwithVocabType">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -380,7 +381,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E55_Type</type>
-							<instance_generator name="URIwithTypeAndId">
+							<instance_generator name="URIwithVocabType">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -418,7 +419,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E55_Type</type>
-							<instance_generator name="URIwithTypeAndId">
+							<instance_generator name="URIwithVocabType">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -988,7 +989,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E55_Type</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithVocabType">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -1089,7 +1090,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E55_Type</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithVocabType">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -1155,7 +1156,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E55_Type</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithVocabType">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -1249,7 +1250,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E55_Type</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithVocabType">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -1308,7 +1309,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E55_Type</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithVocabType">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -1402,7 +1403,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E55_Type</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithVocabType">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -1460,7 +1461,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E55_Type</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithVocabType">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -1651,8 +1652,8 @@
 					<target_node>
 						<entity>
 							<type>crm:E29_Design_or_Procedure</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">vocabulary/technique</arg>
+							<instance_generator name="URIwithVocabType">
+								<arg name="type" type="constant">technique</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
 							<label_generator name="Literal">
@@ -1689,8 +1690,8 @@
 					<target_node>
 						<entity>
 							<type>crm:E29_Design_or_Procedure</type>
-							<instance_generator name="URIwithTypeAndId">
-								<arg name="type" type="constant">vocabulary/technique</arg>
+							<instance_generator name="URIwithVocabType">
+								<arg name="type" type="constant">technique</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
 							<label_generator name="Literal">
@@ -1778,7 +1779,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E55_Type</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithVocabType">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -1816,7 +1817,7 @@
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
 									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
+									<instance_generator name="URIwithVocabType">
 										<arg name="type" type="constant">type</arg>
 										<arg name="id" type="xpath">text()</arg>
 									</instance_generator>
@@ -1891,7 +1892,7 @@
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
 									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
+									<instance_generator name="URIwithVocabType">
 										<arg name="type" type="constant">type</arg>
 										<arg name="id" type="xpath">text()</arg>
 									</instance_generator>
@@ -1967,7 +1968,7 @@
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
 									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
+									<instance_generator name="URIwithVocabType">
 										<arg name="type" type="constant">type</arg>
 										<arg name="id" type="xpath">text()</arg>
 									</instance_generator>
@@ -2057,7 +2058,7 @@
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
 									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
+									<instance_generator name="URIwithVocabType">
 										<arg name="type" type="constant">type</arg>
 										<arg name="id" type="xpath">../a2890/text()</arg>
 									</instance_generator>
@@ -2198,7 +2199,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E55_Type</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithVocabType">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -2711,12 +2712,12 @@
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
 									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
+									<instance_generator name="URIwithVocabType">
 										<arg name="type" type="constant">type</arg>
 										<arg name="id" type="xpath">../text()</arg>
 									</instance_generator>
 									<label_generator name="Literal">
-										<arg name="text" type="constant">../text()</arg>
+										<arg name="text" type="xpath">../text()</arg>
 									</label_generator>
 								</entity>
 							</additional>
@@ -2761,8 +2762,8 @@
 					<target_node>
 						<entity>
 							<type>crm:E57_Material</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">vocabulary/material</arg>
+							<instance_generator name="URIwithVocabType">
+								<arg name="type" type="constant">material</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
 							<label_generator name="Literal">
@@ -2795,7 +2796,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E55_Type</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithVocabType">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -2842,7 +2843,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E55_Type</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithVocabType">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -2889,7 +2890,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E55_Type</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithVocabType">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
