@@ -9,6 +9,7 @@
 		<namespace prefix="owl" uri="http://www.w3.org/2002/07/owl#"/>
 		<namespace prefix="iiif_image" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
 		<namespace prefix="prefix" uri="https://pharos.artresearch.net/resource/frick/"/>
+		<namespace prefix="vocab" uri="https://pharos.artresearch.net/resource/frick/vocabulary/"/>
 		<namespace prefix="custom" uri="https://pharos.artresearch.net/custom/"/>
 		<namespace prefix="iiif_json" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
 		<namespace prefix="marc" uri="http://www.loc.gov/MARC21/slim"/>
@@ -102,9 +103,10 @@
 					<target_node>
 						<entity>
 							<type>custom:Namedgraph</type>
-							<instance_generator name="namedgraph">
+							<instance_generator name="FrickPhotoNamedgraph">
 								<arg name="type" type="constant">photo</arg>
-								<arg name="id" type="xpath">../marc:subfield[@code="c"]/text()</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
+								<arg name="photo_id" type="xpath">../marc:subfield[@code="c"]/text()</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -135,9 +137,10 @@
 					<target_node>
 						<entity>
 							<type>custom:Namedgraph</type>
-							<instance_generator name="namedgraph">
+							<instance_generator name="FrickPhotoNamedgraph">
 								<arg name="type" type="constant">photo</arg>
-								<arg name="id" type="xpath">../marc:subfield[@code="d"]/text()</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
+								<arg name="photo_id" type="xpath">../marc:subfield[@code="d"]/text()</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -172,9 +175,10 @@
 					<target_node>
 						<entity>
 							<type>custom:Namedgraph</type>
-							<instance_generator name="namedgraph">
+							<instance_generator name="FrickPhotoNamedgraph">
 								<arg name="type" type="constant">photo</arg>
-								<arg name="id" type="xpath">../marc:subfield[@code="g"]/text()</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
+								<arg name="photo_id" type="xpath">../marc:subfield[@code="g"]/text()</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -205,9 +209,10 @@
 					<target_node>
 						<entity>
 							<type>custom:Namedgraph</type>
-							<instance_generator name="namedgraph">
+							<instance_generator name="FrickPhotoNamedgraph">
 								<arg name="type" type="constant">photo</arg>
-								<arg name="id" type="xpath">../marc:subfield[@code="d"]/text()</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
+								<arg name="photo_id" type="xpath">../marc:subfield[@code="d"]/text()</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -296,9 +301,10 @@
 					<target_node>
 						<entity>
 							<type>custom:Namedgraph</type>
-							<instance_generator name="namedgraph">
+							<instance_generator name="FrickPhotoNamedgraph">
 								<arg name="type" type="constant">photo</arg>
-								<arg name="id" type="xpath">../marc:subfield[@code="k"]/text()</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
+								<arg name="photo_id" type="xpath">../marc:subfield[@code="k"]/text()</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -942,8 +948,8 @@
 					<target_node>
 						<entity>
 							<type>crm:E29_Design_or_Procedure</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">vocabulary/technique</arg>
+							<instance_generator name="URIwithVocabType">
+								<arg name="type" type="constant">technique</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
 							<label_generator name="Literal">
@@ -2094,9 +2100,10 @@
 					<target_node>
 						<entity>
 							<type>crm:E22_Man-Made_Object</type>
-							<instance_generator name="URIwithTypeAndId">
+							<instance_generator name="FrickPhotowithTypeAndId">
 								<arg name="type" type="constant">photo</arg>
-								<arg name="id" type="xpath">marc:subfield[@code="c"]/text()</arg>
+								<arg name="work_id" type="xpath">../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
+								<arg name="photo_id" type="xpath">marc:subfield[@code="c"]/text()</arg>
 							</instance_generator>
 							<label_generator name="Literal">
 								<arg name="text" type="xpath">marc:subfield[@code="c"]/text()</arg>
@@ -2138,9 +2145,10 @@
 					<target_node>
 						<entity>
 							<type>crm:E22_Man-Made_Object</type>
-							<instance_generator name="URIwithTypeAndId">
+							<instance_generator name="FrickPhotowithTypeAndId">
 								<arg name="type" type="constant">photo</arg>
-								<arg name="id" type="xpath">marc:subfield[@code="d"]/text()</arg>
+								<arg name="work_id" type="xpath">../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
+								<arg name="photo_id" type="xpath">marc:subfield[@code="d"]/text()</arg>
 							</instance_generator>
 							<label_generator name="Literal">
 								<arg name="text" type="xpath">marc:subfield[@code="d"]/text()</arg>
@@ -2182,9 +2190,10 @@
 					<target_node>
 						<entity>
 							<type>crm:E22_Man-Made_Object</type>
-							<instance_generator name="URIwithTypeAndId">
+							<instance_generator name="FrickPhotowithTypeAndId">
 								<arg name="type" type="constant">photo</arg>
-								<arg name="id" type="xpath">marc:subfield[@code="d"]/text()</arg>
+								<arg name="work_id" type="xpath">../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
+								<arg name="photo_id" type="xpath">marc:subfield[@code="d"]/text()</arg>
 							</instance_generator>
 							<label_generator name="Literal">
 								<arg name="text" type="xpath">marc:subfield[@code="d"]/text()</arg>
@@ -2239,9 +2248,10 @@
 					<target_node>
 						<entity>
 							<type>crm:E22_Man-Made_Object</type>
-							<instance_generator name="URIwithTypeAndId">
+							<instance_generator name="FrickPhotowithTypeAndId">
 								<arg name="type" type="constant">photo</arg>
-								<arg name="id" type="xpath">marc:subfield[@code="g"]/text()</arg>
+								<arg name="work_id" type="xpath">../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
+								<arg name="photo_id" type="xpath">marc:subfield[@code="g"]/text()</arg>
 							</instance_generator>
 							<label_generator name="Literal">
 								<arg name="text" type="xpath">marc:subfield[@code="g"]/text()</arg>
@@ -2295,9 +2305,10 @@
 					<target_node>
 						<entity>
 							<type>crm:E22_Man-Made_Object</type>
-							<instance_generator name="URIwithTypeAndId">
+							<instance_generator name="FrickPhotowithTypeAndId">
 								<arg name="type" type="constant">photo</arg>
-								<arg name="id" type="xpath">marc:subfield[@code="k"]/text()</arg>
+								<arg name="work_id" type="xpath">../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
+								<arg name="photo_id" type="xpath">marc:subfield[@code="k"]/text()</arg>
 							</instance_generator>
 							<label_generator name="Literal">
 								<arg name="text" type="xpath">marc:subfield[@code="k"]/text()</arg>
@@ -2675,9 +2686,10 @@
 					</if>
 					<entity>
 						<type>crm:E22_Man-Made_Object</type>
-						<instance_generator name="URIwithTypeAndId">
+						<instance_generator name="FrickPhotowithTypeAndId">
 							<arg name="type" type="constant">photo</arg>
-							<arg name="id" type="xpath">marc:subfield[@code="c"]/text()</arg>
+							<arg name="work_id" type="xpath">../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
+							<arg name="photo_id" type="xpath">marc:subfield[@code="c"]/text()</arg>
 						</instance_generator>
 						<label_generator name="Literal">
 							<arg name="text" type="xpath">marc:subfield[@code="c"]/text()</arg>
@@ -2735,9 +2747,10 @@
 							<relationship>crm:P67i_is_referred_to_by</relationship>
 							<entity>
 								<type>custom:Namedgraph</type>
-								<instance_generator name="namedgraph">
+								<instance_generator name="FrickPhotoNamedgraph">
 									<arg name="type" type="constant">photo</arg>
-									<arg name="id" type="xpath">marc:subfield[@code="c"]/text()</arg>
+									<arg name="work_id" type="xpath">../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
+									<arg name="photo_id" type="xpath">marc:subfield[@code="c"]/text()</arg>
 								</instance_generator>
 								<additional>
 									<relationship>custom:has_provider</relationship>
@@ -2770,8 +2783,9 @@
 						<relationship>crm:P108i_was_produced_by</relationship>
 						<entity>
 							<type>crm:E12_Production</type>
-							<instance_generator name="EventUri">
+							<instance_generator name="FrickPhotoEventUri">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="c"]/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
@@ -2837,8 +2851,9 @@
 						<relationship>crm:P108i_was_produced_by</relationship>
 						<entity>
 							<type>crm:E12_Production</type>
-							<instance_generator name="EventUri">
+							<instance_generator name="FrickPhotoEventUri">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="c"]/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
@@ -2872,8 +2887,9 @@
 						<relationship>crm:P67i_is_referred_to_by</relationship>
 						<entity>
 							<type>crm:E73_Information_Object</type>
-							<instance_generator name="InformationObjectUri">
+							<instance_generator name="FrickPhotoInformationObjectUri">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="c"]/text()</arg>
 								<arg name="type" type="constant">image_info</arg>
 								<arg name="id" type="xpath">text()</arg>
@@ -2916,8 +2932,9 @@
 						<relationship>crm:P24i_changed_ownership_through</relationship>
 						<entity>
 							<type>crm:E8_Acquisition</type>
-							<instance_generator name="AcquisitionUri">
+							<instance_generator name="FrickPhotoAcquisitionUri">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="c"]/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
 								<arg name="from" type="xpath">text()</arg>
@@ -2955,8 +2972,9 @@
 						<relationship>crm:P24i_changed_ownership_through</relationship>
 						<entity>
 							<type>crm:E8_Acquisition</type>
-							<instance_generator name="AcquisitionUri">
+							<instance_generator name="FrickPhotoAcquisitionUri">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="c"]/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
 								<arg name="from" type="xpath">../marc:subfield[@code="k"]/text()</arg>
@@ -2993,8 +3011,9 @@
 						<relationship>crm:P24i_changed_ownership_through</relationship>
 						<entity>
 							<type>crm:E8_Acquisition</type>
-							<instance_generator name="AcquisitionUri">
+							<instance_generator name="FrickPhotoAcquisitionUri">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="c"]/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
 								<arg name="from" type="xpath">../marc:subfield[@code="k"]/text()</arg>
@@ -3005,8 +3024,9 @@
 						<relationship>crm:P4_has_time-span</relationship>
 						<entity>
 							<type>crm:E52_Time-Span</type>
-							<instance_generator name="ComplexTimespanUri">
+							<instance_generator name="FrickPhotoComplexTimespanUri">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="c"]/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
 								<arg name="timespan" type="xpath">text()</arg>
@@ -3042,8 +3062,9 @@
 					<target_node>
 						<entity>
 							<type>crm:E42_Identifier</type>
-							<instance_generator name="IdentifierURI">	
+							<instance_generator name="FrickPhotoIdentifierURI">	
 								<arg name="subject_type" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="subject_id" type="xpath">../marc:subfield[@code="c"]/text()</arg>
 								<arg name="identifier_type" type="constant">identifier</arg>
 								<arg name="identifier_id" type="xpath">text()</arg>
@@ -3078,8 +3099,9 @@
 						<relationship>crm:P34i_was_assessed_by</relationship>
 						<entity>
 							<type>crm:E14_Condition_Assessment</type>
-								<instance_generator name="ComplexEventUri">
+							<instance_generator name="FrickPhotoComplexEventUri">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="c"]/text()</arg>
 								<arg name="id" type="xpath">text()</arg>
 								<arg name="event_type" type="constant">condition_assessment</arg>
@@ -3093,8 +3115,9 @@
 					<target_node>
 						<entity>
 							<type>crm:E3_Condition_State</type>
-							<instance_generator name="ConditionURI">
+							<instance_generator name="FrickPhotoConditionURI">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="c"]/text()</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -3124,9 +3147,10 @@
 					</if>
 					<entity>
 						<type>crm:E22_Man-Made_Object</type>
-						<instance_generator name="URIwithTypeAndId">
+						<instance_generator name="FrickPhotowithTypeAndId">
 							<arg name="type" type="constant">photo</arg>
-							<arg name="id" type="xpath">marc:subfield[@code="d"]/text()</arg>
+							<arg name="work_id" type="xpath">../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
+							<arg name="photo_id" type="xpath">marc:subfield[@code="d"]/text()</arg>
 						</instance_generator>
 						<label_generator name="Literal">
 							<arg name="text" type="xpath">marc:subfield[@code="d"]/text()</arg>
@@ -3184,9 +3208,10 @@
 							<relationship>crm:P67i_is_referred_to_by</relationship>
 							<entity>
 								<type>custom:Namedgraph</type>
-								<instance_generator name="namedgraph">
+								<instance_generator name="FrickPhotoNamedgraph">
 									<arg name="type" type="constant">photo</arg>
-									<arg name="id" type="xpath">marc:subfield[@code="d"]/text()</arg>
+									<arg name="work_id" type="xpath">../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
+									<arg name="photo_id" type="xpath">marc:subfield[@code="d"]/text()</arg>
 								</instance_generator>
 								<additional>
 									<relationship>custom:has_provider</relationship>
@@ -3219,8 +3244,9 @@
 						<relationship>crm:P108i_was_produced_by</relationship>
 						<entity>
 							<type>crm:E12_Production</type>
-							<instance_generator name="EventUri">
+							<instance_generator name="FrickPhotoEventUri">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="d"]/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
@@ -3286,8 +3312,9 @@
 						<relationship>crm:P108i_was_produced_by</relationship>
 						<entity>
 							<type>crm:E12_Production</type>
-							<instance_generator name="EventUri">
+							<instance_generator name="FrickPhotoEventUri">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="d"]/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
@@ -3315,14 +3342,15 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>marc:datafield[@tag="590" and @ind1="9"]/marc:subfield[@code="m"]</relation>
+						<relation>marc:subfield[@code="m"]</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P67i_is_referred_to_by</relationship>
 						<entity>
 							<type>crm:E73_Information_Object</type>
-							<instance_generator name="InformationObjectUri">
+							<instance_generator name="FrickPhotoInformationObjectUri">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="d"]/text()</arg>
 								<arg name="type" type="constant">image_info</arg>
 								<arg name="id" type="xpath">text()</arg>
@@ -3342,7 +3370,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>marc:datafield[@tag="590" and @ind1="9"]/marc:subfield[@code="m"]</source_node>
+					<source_node>marc:subfield[@code="m"]</source_node>
 					<target_node>
 						<entity>
 							<type>rdfs:Literal</type>
@@ -3363,8 +3391,9 @@
 						<relationship>crm:P24i_changed_ownership_through</relationship>
 						<entity>
 							<type>crm:E8_Acquisition</type>
-							<instance_generator name="AcquisitionUri">
+							<instance_generator name="FrickPhotoAcquisitionUri">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="d"]/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
 								<arg name="from" type="xpath">text()</arg>
@@ -3402,8 +3431,9 @@
 						<relationship>crm:P24i_changed_ownership_through</relationship>
 						<entity>
 							<type>crm:E8_Acquisition</type>
-							<instance_generator name="AcquisitionUri">
+							<instance_generator name="FrickPhotoAcquisitionUri">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="d"]/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
 								<arg name="from" type="xpath">../marc:subfield[@code="k"]/text()</arg>
@@ -3415,7 +3445,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>marc:datafield[@tag="590" and @ind1="9"]/marc:subfield[@code="k"]</source_node>
+					<source_node>marc:subfield[@code="j"]</source_node>
 					<target_node>
 						<entity>
 							<type>crm:E55_Type</type>
@@ -3440,8 +3470,9 @@
 						<relationship>crm:P24i_changed_ownership_through</relationship>
 						<entity>
 							<type>crm:E8_Acquisition</type>
-							<instance_generator name="AcquisitionUri">
+							<instance_generator name="FrickPhotoAcquisitionUri">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="d"]/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
 								<arg name="from" type="xpath">../marc:subfield[@code="k"]/text()</arg>
@@ -3452,8 +3483,9 @@
 						<relationship>crm:P4_has_time-span</relationship>
 						<entity>
 							<type>crm:E52_Time-Span</type>
-							<instance_generator name="ComplexTimespanUri">
+							<instance_generator name="FrickPhotoComplexTimespanUri">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="d"]/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
 								<arg name="timespan" type="xpath">text()</arg>
@@ -3489,8 +3521,9 @@
 					<target_node>
 						<entity>
 							<type>crm:E42_Identifier</type>
-							<instance_generator name="IdentifierURI">	
+							<instance_generator name="FrickPhotoIdentifierURI">	
 								<arg name="subject_type" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="subject_id" type="xpath">../marc:subfield[@code="d"]/text()</arg>
 								<arg name="identifier_type" type="constant">identifier</arg>
 								<arg name="identifier_id" type="xpath">text()</arg>
@@ -3525,8 +3558,9 @@
 						<relationship>crm:P34i_was_assessed_by</relationship>
 						<entity>
 							<type>crm:E14_Condition_Assessment</type>
-								<instance_generator name="ComplexEventUri">
+							<instance_generator name="FrickPhotoComplexEventUri">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="d"]/text()</arg>
 								<arg name="id" type="xpath">text()</arg>
 								<arg name="event_type" type="constant">condition_assessment</arg>
@@ -3540,8 +3574,9 @@
 					<target_node>
 						<entity>
 							<type>crm:E3_Condition_State</type>
-							<instance_generator name="ConditionURI">
+							<instance_generator name="FrickPhotoConditionURI">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="d"]/text()</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -3575,9 +3610,10 @@
 					</if>
 					<entity>
 						<type>crm:E22_Man-Made_Object</type>
-						<instance_generator name="URIwithTypeAndId">
+						<instance_generator name="FrickPhotowithTypeAndId">
 							<arg name="type" type="constant">photo</arg>
-							<arg name="id" type="xpath">marc:subfield[@code="g"]/text()</arg>
+							<arg name="work_id" type="xpath">../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
+							<arg name="photo_id" type="xpath">marc:subfield[@code="g"]/text()</arg>
 						</instance_generator>
 						<label_generator name="Literal">
 							<arg name="text" type="xpath">marc:subfield[@code="g"]/text()</arg>
@@ -3635,9 +3671,10 @@
 							<relationship>crm:P67i_is_referred_to_by</relationship>
 							<entity>
 								<type>custom:Namedgraph</type>
-								<instance_generator name="namedgraph">
+								<instance_generator name="FrickPhotoNamedgraph">
 									<arg name="type" type="constant">photo</arg>
-									<arg name="id" type="xpath">marc:subfield[@code="g"]/text()</arg>
+									<arg name="work_id" type="xpath">../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
+									<arg name="photo_id" type="xpath">marc:subfield[@code="g"]/text()</arg>
 								</instance_generator>
 								<additional>
 									<relationship>custom:has_provider</relationship>
@@ -3670,8 +3707,9 @@
 						<relationship>crm:P108i_was_produced_by</relationship>
 						<entity>
 							<type>crm:E12_Production</type>
-							<instance_generator name="EventUri">
+							<instance_generator name="FrickPhotoEventUri">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="g"]/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
@@ -3737,8 +3775,9 @@
 						<relationship>crm:P108i_was_produced_by</relationship>
 						<entity>
 							<type>crm:E12_Production</type>
-							<instance_generator name="EventUri">
+							<instance_generator name="FrickPhotoEventUri">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="g"]/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
@@ -3766,14 +3805,15 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>marc:datafield[@tag="590" and @ind1="9"]/marc:subfield[@code="m"]</relation>
+						<relation>marc:subfield[@code="m"]</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P67i_is_referred_to_by</relationship>
 						<entity>
 							<type>crm:E73_Information_Object</type>
-							<instance_generator name="InformationObjectUri">
+							<instance_generator name="FrickPhotoInformationObjectUri">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="g"]/text()</arg>
 								<arg name="type" type="constant">image_info</arg>
 								<arg name="id" type="xpath">text()</arg>
@@ -3793,7 +3833,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>marc:datafield[@tag="590" and @ind1="9"]/marc:subfield[@code="m"]</source_node>
+					<source_node>marc:subfield[@code="m"]</source_node>
 					<target_node>
 						<entity>
 							<type>rdfs:Literal</type>
@@ -3814,8 +3854,9 @@
 						<relationship>crm:P24i_changed_ownership_through</relationship>
 						<entity>
 							<type>crm:E8_Acquisition</type>
-							<instance_generator name="AcquisitionUri">
+							<instance_generator name="FrickPhotoAcquisitionUri">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="g"]/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
 								<arg name="from" type="xpath">text()</arg>
@@ -3852,8 +3893,9 @@
 						<relationship>crm:P24i_changed_ownership_through</relationship>
 						<entity>
 							<type>crm:E8_Acquisition</type>
-							<instance_generator name="AcquisitionUri">
+							<instance_generator name="FrickPhotoAcquisitionUri">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="g"]/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
 								<arg name="from" type="xpath">../marc:subfield[@code="k"]/text()</arg>
@@ -3865,7 +3907,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>marc:datafield[@tag="590" and @ind1="9"]/marc:subfield[@code="k"]</source_node>
+					<source_node>marc:subfield[@code="j"]</source_node>
 					<target_node>
 						<entity>
 							<type>crm:E55_Type</type>
@@ -3890,8 +3932,9 @@
 						<relationship>crm:P24i_changed_ownership_through</relationship>
 						<entity>
 							<type>crm:E8_Acquisition</type>
-							<instance_generator name="AcquisitionUri">
+							<instance_generator name="FrickPhotoAcquisitionUri">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="g"]/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
 								<arg name="from" type="xpath">../marc:subfield[@code="k"]/text()</arg>
@@ -3902,8 +3945,9 @@
 						<relationship>crm:P4_has_time-span</relationship>
 						<entity>
 							<type>crm:E52_Time-Span</type>
-							<instance_generator name="ComplexTimespanUri">
+							<instance_generator name="FrickPhotoComplexTimespanUri">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="g"]/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
 								<arg name="timespan" type="xpath">text()</arg>
@@ -3939,8 +3983,9 @@
 					<target_node>
 						<entity>
 							<type>crm:E42_Identifier</type>
-							<instance_generator name="IdentifierURI">	
+							<instance_generator name="FrickPhotoIdentifierURI">	
 								<arg name="subject_type" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="subject_id" type="xpath">../marc:subfield[@code="g"]/text()</arg>
 								<arg name="identifier_type" type="constant">identifier</arg>
 								<arg name="identifier_id" type="xpath">text()</arg>
@@ -3975,8 +4020,9 @@
 						<relationship>crm:P34i_was_assessed_by</relationship>
 						<entity>
 							<type>crm:E14_Condition_Assessment</type>
-								<instance_generator name="ComplexEventUri">
+							<instance_generator name="FrickPhotoComplexEventUri">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="g"]/text()</arg>
 								<arg name="id" type="xpath">text()</arg>
 								<arg name="event_type" type="constant">condition_assessment</arg>
@@ -3990,8 +4036,9 @@
 					<target_node>
 						<entity>
 							<type>crm:E3_Condition_State</type>
-							<instance_generator name="ConditionURI">
+							<instance_generator name="FrickPhotoConditionURI">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="g"]/text()</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -4022,9 +4069,10 @@
 					</if>
 					<entity>
 						<type>crm:E22_Man-Made_Object</type>
-						<instance_generator name="URIwithTypeAndId">
+						<instance_generator name="FrickPhotowithTypeAndId">
 							<arg name="type" type="constant">photo</arg>
-							<arg name="id" type="xpath">marc:subfield[@code="d"]/text()</arg>
+							<arg name="work_id" type="xpath">../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
+							<arg name="photo_id" type="xpath">marc:subfield[@code="d"]/text()</arg>
 						</instance_generator>
 						<label_generator name="Literal">
 							<arg name="text" type="xpath">marc:subfield[@code="d"]/text()</arg>
@@ -4082,9 +4130,10 @@
 							<relationship>crm:P67i_is_referred_to_by</relationship>
 							<entity>
 								<type>custom:Namedgraph</type>
-								<instance_generator name="namedgraph">
+								<instance_generator name="FrickPhotoNamedgraph">
 									<arg name="type" type="constant">photo</arg>
-									<arg name="id" type="xpath">marc:subfield[@code="d"]/text()</arg>
+									<arg name="work_id" type="xpath">../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
+									<arg name="photo_id" type="xpath">marc:subfield[@code="d"]/text()</arg>
 								</instance_generator>
 								<additional>
 									<relationship>custom:has_provider</relationship>
@@ -4117,8 +4166,9 @@
 						<relationship>crm:P108i_was_produced_by</relationship>
 						<entity>
 							<type>crm:E12_Production</type>
-							<instance_generator name="EventUri">
+							<instance_generator name="FrickPhotoEventUri">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="d"]/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
@@ -4184,8 +4234,9 @@
 						<relationship>crm:P108i_was_produced_by</relationship>
 						<entity>
 							<type>crm:E12_Production</type>
-							<instance_generator name="EventUri">
+							<instance_generator name="FrickPhotoEventUri">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="d"]/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
@@ -4213,14 +4264,15 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>marc:datafield[@tag="590" and @ind1="9"]/marc:subfield[@code="m"]</relation>
+						<relation>marc:subfield[@code="m"]</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P67i_is_referred_to_by</relationship>
 						<entity>
 							<type>crm:E73_Information_Object</type>
-							<instance_generator name="InformationObjectUri">
+							<instance_generator name="FrickPhotoInformationObjectUri">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="d"]/text()</arg>
 								<arg name="type" type="constant">image_info</arg>
 								<arg name="id" type="xpath">text()</arg>
@@ -4240,7 +4292,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>marc:datafield[@tag="590" and @ind1="9"]/marc:subfield[@code="m"]</source_node>
+					<source_node>marc:subfield[@code="m"]</source_node>
 					<target_node>
 						<entity>
 							<type>rdfs:Literal</type>
@@ -4261,8 +4313,9 @@
 						<relationship>crm:P24i_changed_ownership_through</relationship>
 						<entity>
 							<type>crm:E8_Acquisition</type>
-							<instance_generator name="AcquisitionUri">
+							<instance_generator name="FrickPhotoAcquisitionUri">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="d"]/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
 								<arg name="from" type="xpath">text()</arg>
@@ -4299,8 +4352,9 @@
 						<relationship>crm:P24i_changed_ownership_through</relationship>
 						<entity>
 							<type>crm:E8_Acquisition</type>
-							<instance_generator name="AcquisitionUri">
+							<instance_generator name="FrickPhotoAcquisitionUri">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="d"]/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
 								<arg name="from" type="xpath">../marc:subfield[@code="k"]/text()</arg>
@@ -4312,7 +4366,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>marc:datafield[@tag="590" and @ind1="9"]/marc:subfield[@code="k"]</source_node>
+					<source_node>marc:subfield[@code="j"]</source_node>
 					<target_node>
 						<entity>
 							<type>crm:E55_Type</type>
@@ -4337,8 +4391,9 @@
 						<relationship>crm:P24i_changed_ownership_through</relationship>
 						<entity>
 							<type>crm:E8_Acquisition</type>
-							<instance_generator name="AcquisitionUri">
+							<instance_generator name="FrickPhotoAcquisitionUri">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="d"]/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
 								<arg name="from" type="xpath">../marc:subfield[@code="k"]/text()</arg>
@@ -4349,8 +4404,9 @@
 						<relationship>crm:P4_has_time-span</relationship>
 						<entity>
 							<type>crm:E52_Time-Span</type>
-							<instance_generator name="ComplexTimespanUri">
+							<instance_generator name="FrickPhotoComplexTimespanUri">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="d"]/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
 								<arg name="timespan" type="xpath">text()</arg>
@@ -4386,8 +4442,9 @@
 					<target_node>
 						<entity>
 							<type>crm:E42_Identifier</type>
-							<instance_generator name="IdentifierURI">	
+							<instance_generator name="FrickPhotoIdentifierURI">	
 								<arg name="subject_type" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="subject_id" type="xpath">../marc:subfield[@code="d"]/text()</arg>
 								<arg name="identifier_type" type="constant">identifier</arg>
 								<arg name="identifier_id" type="xpath">text()</arg>
@@ -4422,8 +4479,9 @@
 						<relationship>crm:P34i_was_assessed_by</relationship>
 						<entity>
 							<type>crm:E14_Condition_Assessment</type>
-								<instance_generator name="ComplexEventUri">
+							<instance_generator name="FrickPhotoComplexEventUri">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="d"]/text()</arg>
 								<arg name="id" type="xpath">text()</arg>
 								<arg name="event_type" type="constant">condition_assessment</arg>
@@ -4437,8 +4495,9 @@
 					<target_node>
 						<entity>
 							<type>crm:E3_Condition_State</type>
-							<instance_generator name="ConditionURI">
+							<instance_generator name="FrickPhotoConditionURI">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="d"]/text()</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -5563,9 +5622,10 @@
 					</if>
 					<entity>
 						<type>crm:E22_Man-Made_Object</type>
-						<instance_generator name="URIwithTypeAndId">
+						<instance_generator name="FrickPhotowithTypeAndId">
 							<arg name="type" type="constant">photo</arg>
-							<arg name="id" type="xpath">marc:subfield[@code="k"]/text()</arg>
+							<arg name="work_id" type="xpath">../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
+							<arg name="photo_id" type="xpath">marc:subfield[@code="k"]/text()</arg>
 						</instance_generator>
 						<label_generator name="Literal">
 							<arg name="text" type="xpath">marc:subfield[@code="k"]/text()</arg>
@@ -5611,9 +5671,10 @@
 							<relationship>crm:P67i_is_referred_to_by</relationship>
 							<entity>
 								<type>custom:Namedgraph</type>
-								<instance_generator name="namedgraph">
+								<instance_generator name="FrickPhotoNamedgraph">
 									<arg name="type" type="constant">photo</arg>
-									<arg name="id" type="xpath">marc:subfield[@code="k"]/text()</arg>
+									<arg name="work_id" type="xpath">../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
+									<arg name="photo_id" type="xpath">marc:subfield[@code="k"]/text()</arg>
 								</instance_generator>
 								<additional>
 									<relationship>custom:has_provider</relationship>
@@ -5734,8 +5795,9 @@
 						<relationship>crm:P108i_was_produced_by</relationship>
 						<entity>
 							<type>crm:E12_Production</type>
-							<instance_generator name="EventUri">
+							<instance_generator name="FrickPhotoEventUri">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="k"]/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
@@ -5801,8 +5863,9 @@
 						<relationship>crm:P108i_was_produced_by</relationship>
 						<entity>
 							<type>crm:E12_Production</type>
-							<instance_generator name="EventUri">
+							<instance_generator name="FrickPhotoEventUri">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="k"]/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
@@ -5836,8 +5899,9 @@
 						<relationship>crm:P67i_is_referred_to_by</relationship>
 						<entity>
 							<type>crm:E73_Information_Object</type>
-							<instance_generator name="InformationObjectUri">
+							<instance_generator name="FrickPhotoInformationObjectUri">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="k"]/text()</arg>
 								<arg name="type" type="constant">image_info</arg>
 								<arg name="id" type="xpath">text()</arg>
@@ -5880,8 +5944,9 @@
 						<relationship>crm:P24i_changed_ownership_through</relationship>
 						<entity>
 							<type>crm:E8_Acquisition</type>
-							<instance_generator name="AcquisitionUri">
+							<instance_generator name="FrickPhotoAcquisitionUri">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="k"]/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
 								<arg name="from" type="xpath">text()</arg>
@@ -5919,8 +5984,9 @@
 						<relationship>crm:P24i_changed_ownership_through</relationship>
 						<entity>
 							<type>crm:E8_Acquisition</type>
-							<instance_generator name="AcquisitionUri">
+							<instance_generator name="FrickPhotoAcquisitionUri">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="k"]/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
 								<arg name="from" type="xpath">../marc:subfield[@code="k"]/text()</arg>
@@ -5957,8 +6023,9 @@
 						<relationship>crm:P24i_changed_ownership_through</relationship>
 						<entity>
 							<type>crm:E8_Acquisition</type>
-							<instance_generator name="AcquisitionUri">
+							<instance_generator name="FrickPhotoAcquisitionUri">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="k"]/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
 								<arg name="from" type="xpath">../marc:subfield[@code="k"]/text()</arg>
@@ -5969,8 +6036,9 @@
 						<relationship>crm:P4_has_time-span</relationship>
 						<entity>
 							<type>crm:E52_Time-Span</type>
-							<instance_generator name="ComplexTimespanUri">
+							<instance_generator name="FrickPhotoComplexTimespanUri">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="k"]/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
 								<arg name="timespan" type="xpath">text()</arg>
@@ -6006,8 +6074,9 @@
 					<target_node>
 						<entity>
 							<type>crm:E42_Identifier</type>
-							<instance_generator name="IdentifierURI">	
+							<instance_generator name="FrickPhotoIdentifierURI">	
 								<arg name="subject_type" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="subject_id" type="xpath">../marc:subfield[@code="k"]/text()</arg>
 								<arg name="identifier_type" type="constant">identifier</arg>
 								<arg name="identifier_id" type="xpath">text()</arg>
@@ -6042,8 +6111,9 @@
 						<relationship>crm:P34i_was_assessed_by</relationship>
 						<entity>
 							<type>crm:E14_Condition_Assessment</type>
-								<instance_generator name="ComplexEventUri">
+							<instance_generator name="FrickPhotoComplexEventUri">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="k"]/text()</arg>
 								<arg name="id" type="xpath">text()</arg>
 								<arg name="event_type" type="constant">condition_assessment</arg>
@@ -6057,8 +6127,9 @@
 					<target_node>
 						<entity>
 							<type>crm:E3_Condition_State</type>
-							<instance_generator name="ConditionURI">
+							<instance_generator name="FrickPhotoConditionURI">
 								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="resourceId" type="xpath">../marc:subfield[@code="k"]/text()</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>

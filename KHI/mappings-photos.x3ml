@@ -3679,10 +3679,37 @@
 								</label_generator>
 							</entity>
 						</additional>
+						<additional>
+							<relationship>crm:P1_is_identified_by</relationship>
+							<entity>
+								<type>crm:E42_Identifier</type>
+								<instance_generator name="IdentifierURI">	
+									<arg name="subject_type" type="constant">negative</arg>
+									<arg name="subject_id" type="xpath">text()</arg>
+									<arg name="identifier_type" type="constant">identifier</arg>
+									<arg name="identifier_id" type="xpath">text()</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="xpath">text()</arg>
+								</label_generator>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>crm:E55_Type</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">http://vocab.getty.edu/aat/300417193</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">titles (general, names)</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
 					 </entity>
 				</target_node>
 			</domain>
-
+<!--
 			<link> 
 				<path>
 					<source_relation>
@@ -3722,7 +3749,7 @@
 					</target_node>
 				</range>
 			</link>
-			
+			-->
 			<link> 
 				<path>
 					<source_relation>
@@ -3738,7 +3765,7 @@
 						<entity>
 							<type>crm:E41_Appellation</type>
 							<instance_generator name="IdentifierURI">	
-								<arg name="subject_type" type="constant">actor</arg>
+								<arg name="subject_type" type="constant">negative</arg>
 								<arg name="subject_id" type="xpath">../a8470/text()</arg>
 								<arg name="identifier_type" type="constant">identifier</arg>
 								<arg name="identifier_id" type="xpath">text()</arg>
@@ -3829,10 +3856,37 @@
 								</label_generator>
 							</entity>
 						</additional>
+						<additional>
+							<relationship>crm:P1_is_identified_by</relationship>
+							<entity>
+								<type>crm:E42_Identifier</type>
+								<instance_generator name="IdentifierURI">	
+									<arg name="subject_type" type="constant">negative</arg>
+									<arg name="subject_id" type="xpath">text()</arg>
+									<arg name="identifier_type" type="constant">identifier</arg>
+									<arg name="identifier_id" type="xpath">text()</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="xpath">text()</arg>
+								</label_generator>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>crm:E55_Type</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">http://vocab.getty.edu/aat/300417193</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">titles (general, names)</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
 					 </entity>
 				</target_node>
 			</domain>
-
+<!--
 			<link> 
 				<path>
 					<source_relation>
@@ -3872,7 +3926,7 @@
 					</target_node>
 				</range>
 			</link>
-			
+			-->
 			<link> 
 				<path>
 					<source_relation>
@@ -3888,7 +3942,7 @@
 						<entity>
 							<type>crm:E41_Appellation</type>
 							<instance_generator name="IdentifierURI">	
-								<arg name="subject_type" type="constant">actor</arg>
+								<arg name="subject_type" type="constant">negative</arg>
 								<arg name="subject_id" type="xpath">../a8470/text()</arg>
 								<arg name="identifier_type" type="constant">identifier</arg>
 								<arg name="identifier_id" type="xpath">text()</arg>
@@ -3979,10 +4033,37 @@
 								</label_generator>
 							</entity>
 						</additional>
+						<additional>
+							<relationship>crm:P1_is_identified_by</relationship>
+							<entity>
+								<type>crm:E42_Identifier</type>
+								<instance_generator name="IdentifierURI">	
+									<arg name="subject_type" type="constant">negative</arg>
+									<arg name="subject_id" type="xpath">text()</arg>
+									<arg name="identifier_type" type="constant">identifier</arg>
+									<arg name="identifier_id" type="xpath">text()</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="xpath">text()</arg>
+								</label_generator>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>crm:E55_Type</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">http://vocab.getty.edu/aat/300417193</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">titles (general, names)</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
 					 </entity>
 				</target_node>
 			</domain>
-
+<!--
 			<link> 
 				<path>
 					<source_relation>
@@ -4022,7 +4103,7 @@
 					</target_node>
 				</range>
 			</link>
-			
+			-->
 			<link> 
 				<path>
 					<source_relation>
@@ -4038,7 +4119,7 @@
 						<entity>
 							<type>crm:E41_Appellation</type>
 							<instance_generator name="IdentifierURI">	
-								<arg name="subject_type" type="constant">actor</arg>
+								<arg name="subject_type" type="constant">negative</arg>
 								<arg name="subject_id" type="xpath">../a8470/text()</arg>
 								<arg name="identifier_type" type="constant">identifier</arg>
 								<arg name="identifier_id" type="xpath">text()</arg>
@@ -4129,10 +4210,37 @@
 								</label_generator>
 							</entity>
 						</additional>
+						<additional>
+							<relationship>crm:P1_is_identified_by</relationship>
+							<entity>
+								<type>crm:E42_Identifier</type>
+								<instance_generator name="IdentifierURI">	
+									<arg name="subject_type" type="constant">negative</arg>
+									<arg name="subject_id" type="xpath">text()</arg>
+									<arg name="identifier_type" type="constant">identifier</arg>
+									<arg name="identifier_id" type="xpath">text()</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="xpath">text()</arg>
+								</label_generator>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>crm:E55_Type</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">http://vocab.getty.edu/aat/300417193</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">titles (general, names)</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
 					 </entity>
 				</target_node>
 			</domain>
-
+<!--
 			<link> 
 				<path>
 					<source_relation>
@@ -4171,7 +4279,7 @@
 						</entity>
 					</target_node>
 				</range>
-			</link>
+			</link>-->
 			
 			<link> 
 				<path>
@@ -4188,7 +4296,7 @@
 						<entity>
 							<type>crm:E41_Appellation</type>
 							<instance_generator name="IdentifierURI">	
-								<arg name="subject_type" type="constant">actor</arg>
+								<arg name="subject_type" type="constant">negative</arg>
 								<arg name="subject_id" type="xpath">../a8470/text()</arg>
 								<arg name="identifier_type" type="constant">identifier</arg>
 								<arg name="identifier_id" type="xpath">text()</arg>

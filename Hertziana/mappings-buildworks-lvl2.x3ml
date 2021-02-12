@@ -305,7 +305,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E55_Type</type>
-							<instance_generator name="URIwithVocabType">
+							<instance_generator name="URIwithVocabTypeAndId">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -343,7 +343,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E55_Type</type>
-							<instance_generator name="URIwithVocabType">
+							<instance_generator name="URIwithVocabTypeAndId">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -381,7 +381,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E55_Type</type>
-							<instance_generator name="URIwithVocabType">
+							<instance_generator name="URIwithVocabTypeAndId">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -419,7 +419,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E55_Type</type>
-							<instance_generator name="URIwithVocabType">
+							<instance_generator name="URIwithVocabTypeAndId">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -1690,7 +1690,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E29_Design_or_Procedure</type>
-							<instance_generator name="URIwithVocabType">
+							<instance_generator name="URIwithVocabTypeAndId">
 								<arg name="type" type="constant">technique</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -2500,53 +2500,14 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>a5117</relation>
+						<relation>a5108/a5116</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P55_has_current_location</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>a5117</source_node>
-					<target_node>
-						<entity>
-							<type>crm:E53_Place</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">place</arg>
-								<arg name="id" type="xpath">text()</arg>
-							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
-										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="constant">Address</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">Address</arg>
-									</label_generator>
-								</entity>
-							</additional>
-						</entity>
-					</target_node>
-				</range>
-			</link>
-			
-			<link>
-				<path>
-					<source_relation>
-						<relation>a5117</relation>
-					</source_relation>
-					<target_relation>
-						<relationship>crm:P55_has_current_location</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>a5117</source_node>
+					<source_node>a5108/a5116</source_node>
 					<target_node>
 						<entity>
 							<type>crm:E53_Place</type>
@@ -2567,6 +2528,45 @@
 									</instance_generator>
 									<label_generator name="Literal">
 										<arg name="text" type="constant">Street</arg>
+									</label_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link>
+				<path>
+					<source_relation>
+						<relation>a5108/a5117</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P55_has_current_location</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a5108/a5117</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E53_Place</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">place</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>crm:E55_Type</type>
+									<instance_generator name="URIwithType">
+										<arg name="type" type="constant">type</arg>
+										<arg name="id" type="constant">Street Number</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="constant">Street Number</arg>
 									</label_generator>
 								</entity>
 							</additional>

@@ -15,12 +15,23 @@
 	<pattern>{type}/{id}/graph</pattern>
 </generator>
 
+<generator name="FrickPhotoNamedgraph" prefix="prefix">
+	<pattern>{type}/{work_id}/{photo_id}/graph</pattern>
+</generator>
 
 <generator name="URIwithType" prefix="prefix" shorten="yes">
 	<pattern>{type}/{id}</pattern>
 </generator>
 
 <generator name="URIwithTypeAndId" prefix="prefix">
+	<pattern>{type}/{id}</pattern>
+</generator>
+
+<generator name="URIwithVocabType" prefix="vocab" shorten="yes">
+	<pattern>{type}/{id}</pattern>
+</generator>
+
+<generator name="URIwithVocabTypeAndId" prefix="vocab">
 	<pattern>{type}/{id}</pattern>
 </generator>
 
@@ -44,12 +55,20 @@
 	<pattern>{subject_type}/{subject_id}/{identifier_type}/{identifier_id}</pattern>
 </generator>
 
+<generator name="FrickPhotoIdentifierURI" prefix="prefix" shorten="yes">
+	<pattern>{subject_type}/{work_id}/{subject_id}/{identifier_type}/{identifier_id}</pattern>
+</generator>
+
 <generator name="DimensionURI" prefix="prefix" shorten="yes">
 	<pattern>{subject_type}/{subject_id}/dimension/{type}/{unit}/{value}</pattern>
 </generator>
 
 <generator name="EventUri" prefix="prefix">
 	<pattern>{resourceType}/{resourceId}/{eventType}</pattern>
+</generator>
+
+<generator name="FrickPhotoEventUri" prefix="prefix">
+	<pattern>{resourceType}/{work_id}/{resourceId}/{eventType}</pattern>
 </generator>
 
 <generator name="Image_Generator" prefix="image">
@@ -80,8 +99,16 @@
 	<pattern>{resourceType}/{resourceId}/{eventType}/timespan/{timespan}</pattern>
 </generator>
 
+<generator name="FrickPhotoComplexTimespanUri" prefix="prefix" shorten="yes">
+	<pattern>{resourceType}/{work_id}/{resourceId}/{eventType}/timespan/{timespan}</pattern>
+</generator>
+
 <generator name="AcquisitionUri" prefix="prefix" shorten="yes">
 	<pattern>{resourceType}/{resourceId}/{eventType}/{from}{to}{timespan}</pattern>
+</generator>
+
+<generator name="FrickPhotoAcquisitionUri" prefix="prefix" shorten="yes">
+	<pattern>{resourceType}/{work_id}/{resourceId}/{eventType}/{from}{to}{timespan}</pattern>
 </generator>
 
 <generator name="RightsUri" prefix="prefix" shorten="yes">
@@ -90,6 +117,10 @@
 
 <generator name="InformationObjectUri" prefix="prefix" shorten="yes">
 	<pattern>{resourceType}/{resourceId}/information_object/{type}/{id}</pattern>
+</generator>
+
+<generator name="FrickPhotoInformationObjectUri" prefix="prefix" shorten="yes">
+	<pattern>{resourceType}/{work_id}/{resourceId}/information_object/{type}/{id}</pattern>
 </generator>
 
 <generator name="SubjectUri" prefix="prefix" shorten="yes">
@@ -108,6 +139,10 @@
 	<pattern>{resourceType}/{resourceId}/{id}/{event_type}</pattern>
 </generator>
 
+<generator name="FrickPhotoComplexEventUri" prefix="prefix" shorten="yes">
+	<pattern>{resourceType}/{work_id}/{resourceId}/{id}/{event_type}</pattern>
+</generator>
+
 <generator name="FrickPhotoURI" prefix="prefix" shorten="yes">
 	<pattern>photo/{work_id}{count_id}/</pattern>
 </generator>
@@ -116,12 +151,20 @@
 	<pattern>{work_id} {count_id}</pattern>
 </generator>
 
+<generator name="FrickPhotowithTypeAndId" prefix="prefix">
+	<pattern>{type}/{work_id}/{photo_id}</pattern>
+</generator>
+
 <generator name="FrickImageURI" prefix="img">
 	<pattern>{id}</pattern>
 </generator>
 
 <generator name="ConditionURI" prefix="prefix" shorten="yes">
 	<pattern>{resourceType}/{resourceId}/condition/{id}</pattern>
+</generator>
+
+<generator name="FrickPhotoConditionURI" prefix="prefix" shorten="yes">
+	<pattern>{resourceType}/{work_id}/{resourceId}/condition/{id}</pattern>
 </generator>
 
 <generator name="OriginalURI" prefix="original">

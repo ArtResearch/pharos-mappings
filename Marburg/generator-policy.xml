@@ -27,11 +27,15 @@
 	<pattern>{type}/{id}</pattern>
 </generator>
 
+<generator name="URIwithTypeAndId" prefix="prefix">
+	<pattern>{type}/{id}</pattern>
+</generator>
+
 <generator name="URIwithVocabType" prefix="vocab" shorten="yes">
 	<pattern>{type}/{id}</pattern>
 </generator>
 
-<generator name="URIwithTypeAndId" prefix="prefix">
+<generator name="URIwithVocabTypeAndId" prefix="vocab">
 	<pattern>{type}/{id}</pattern>
 </generator>
 

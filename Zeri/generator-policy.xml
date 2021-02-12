@@ -32,6 +32,14 @@
 	<pattern>{type}/{id}</pattern>
 </generator>
 
+<generator name="URIwithVocabType" prefix="vocab" shorten="yes">
+	<pattern>{type}/{id}</pattern>
+</generator>
+
+<generator name="URIwithVocabTypeAndId" prefix="vocab">
+	<pattern>{type}/{id}</pattern>
+</generator>
+
 <generator name="ExhibitionConcatenated">
 	<pattern>Title: {Title}, Place: {Place}, Date: {Date}</pattern>
 </generator>
