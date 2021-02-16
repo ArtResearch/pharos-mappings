@@ -2872,53 +2872,6 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>a5510</relation>
-					</source_relation>
-					<target_relation>
-						<relationship>crm:P138i_is_represented_by</relationship>
-						<entity>
-							<type>crm:E36_Visual_Item</type>
-							<instance_generator name="VisualItemUri">
-								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../a5003/text()</arg>
-							</instance_generator>
-						</entity>
-						<relationship>crm:P138_represents</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>a5510</source_node>
-					<target_node>
-						<entity>
-							<type>crm:E55_Type</type>
-							<instance_generator name="URIwithVocabType">
-								<arg name="type" type="constant">type</arg>
-								<arg name="id" type="xpath">text()</arg>
-							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
-										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="constant">Alternate Iconography</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">Alternate Iconography</arg>
-									</label_generator>
-								</entity>
-							</additional>
-						</entity>
-					</target_node>
-				</range>
-			</link>
-			
-				<link> 
-				<path>
-					<source_relation>
 						<relation>aob28/a2940</relation>
 					</source_relation>
 					<target_relation>

@@ -20,6 +20,10 @@
 	<pattern>{type}/{id}</pattern>
 </generator>
 
+<generator name="PlaceURIwithType" prefix="prefix" shorten="yes">
+	<pattern>{type}/{resourceId}/{id}</pattern>
+</generator>
+
 <generator name="URIwithTypeAndId" prefix="prefix">
 	<pattern>{type}/{id}</pattern>
 </generator>

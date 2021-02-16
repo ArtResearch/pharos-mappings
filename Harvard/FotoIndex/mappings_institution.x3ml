@@ -300,8 +300,9 @@
 					<target_node>
 						<entity>
 							<type>crm:E53_Place</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="PlaceURIwithType">
 								<arg name="type" type="constant">place</arg>
+								<arg name="resourceId" type="xpath">../Institution_ID/text()</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
 							<label_generator name="Literal">

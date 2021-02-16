@@ -332,8 +332,9 @@
 					<target_node>
 						<entity>
 							<type>fc:place</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="PlaceURIwithType">
 								<arg name="type" type="constant">place</arg>
+								<arg name="resourceId" type="xpath">../Institution_ID/text()</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
 						</entity>
