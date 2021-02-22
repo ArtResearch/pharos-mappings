@@ -156,15 +156,10 @@
 					<source_node>Dates/Date/@startDate</source_node>
 					<target_node>
 						<entity>
-							<type>fc:date</type>
-							<instance_generator name="TimespanUri">
-								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../../@id</arg>
-								<arg name="eventType" type="constant">production</arg>
-							</instance_generator>
-							<label_generator name="Literal">
+							<type>rdfs:Literal</type>
+							<instance_generator name="Literal">
 								<arg name="text" type="xpath">../@startDate</arg>
-							</label_generator>
+							</instance_generator>
 						</entity>
 					</target_node>
 				</range>
@@ -183,15 +178,10 @@
 					<source_node>Dates/Date/@endDate</source_node>
 					<target_node>
 						<entity>
-							<type>fc:date</type>
-							<instance_generator name="TimespanUri">
-								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../../@id</arg>
-								<arg name="eventType" type="constant">production</arg>
-							</instance_generator>
-							<label_generator name="Literal">
+							<type>rdfs:Literal</type>
+							<instance_generator name="Literal">
 								<arg name="text" type="xpath">../@endDate</arg>
-							</label_generator>
+							</instance_generator>
 						</entity>
 					</target_node>
 				</range>
@@ -210,15 +200,10 @@
 					<source_node>Dates/Display</source_node>
 					<target_node>
 						<entity>
-							<type>fc:date</type>
-							<instance_generator name="TimespanUri">
-								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../@id</arg>
-								<arg name="eventType" type="constant">production</arg>
-							</instance_generator>
-							<label_generator name="Literal">
+							<type>rdfs:Literal</type>
+							<instance_generator name="Literal">
 								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
+							</instance_generator>
 						</entity>
 					</target_node>
 				</range>
@@ -447,15 +432,10 @@
 					<source_node>../field_string[@label="Image Start Year"]</source_node>
 					<target_node>
 						<entity>
-							<type>fc:date</type>
-							<instance_generator name="TimespanUri">
-								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../field_string[@label="Image Accession Number"]/substring(@value,1,string-length(@value)-2)</arg>
-								<arg name="eventType" type="constant">production</arg>
-							</instance_generator>
-							<label_generator name="Literal">
+							<type>rdfs:Literal</type>
+							<instance_generator name="Literal">
 								<arg name="text" type="xpath">@value</arg>
-							</label_generator>
+							</instance_generator>
 						</entity>
 					</target_node>
 				</range>
@@ -474,15 +454,10 @@
 					<source_node>../field_string[@label="Image End Year"]</source_node>
 					<target_node>
 						<entity>
-							<type>fc:date</type>
-							<instance_generator name="TimespanUri">
-								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../field_string[@label="Image Accession Number"]/substring(@value,1,string-length(@value)-2)</arg>
-								<arg name="eventType" type="constant">production</arg>
-							</instance_generator>
-							<label_generator name="Literal">
+							<type>rdfs:Literal</type>
+							<instance_generator name="Literal">
 								<arg name="text" type="xpath">@value</arg>
-							</label_generator>
+							</instance_generator>
 						</entity>
 					</target_node>
 				</range>
@@ -612,15 +587,10 @@
 					<source_node>../field_string[@label="Image Start Year"]</source_node>
 					<target_node>
 						<entity>
-							<type>fc:date</type>
-							<instance_generator name="TimespanUri">
-								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../field_string[@label="Image Accession Number"]/text()</arg>
-								<arg name="eventType" type="constant">production</arg>
-							</instance_generator>
-							<label_generator name="Literal">
+							<type>rdfs:Literal</type>
+							<instance_generator name="Literal">
 								<arg name="text" type="xpath">@value</arg>
-							</label_generator>
+							</instance_generator>
 						</entity>
 					</target_node>
 				</range>
@@ -639,15 +609,10 @@
 					<source_node>../field_string[@label="Image End Year"]</source_node>
 					<target_node>
 						<entity>
-							<type>fc:date</type>
-							<instance_generator name="TimespanUri">
-								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../field_string[@label="Image Accession Number"]/text()</arg>
-								<arg name="eventType" type="constant">production</arg>
-							</instance_generator>
-							<label_generator name="Literal">
+							<type>rdfs:Literal</type>
+							<instance_generator name="Literal">
 								<arg name="text" type="xpath">@value</arg>
-							</label_generator>
+							</instance_generator>
 						</entity>
 					</target_node>
 				</range>

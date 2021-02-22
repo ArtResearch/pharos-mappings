@@ -7,7 +7,7 @@
 		<namespace prefix="ssw" uri="http://catalog.sharedshelf.artstor.org/ssw"/>
 		<namespace prefix="display" uri="http://catalog.sharedshelf.artstor.org/display"/>
 		<namespace prefix="owl" uri="http://www.w3.org/2002/07/owl#"/>
-		<namespace prefix="prefix" uri="https://pharos.artresearch.net/resource/hertziana/"/>
+		<namespace prefix="prefix" uri="https://pharos.artresearch.net/resource/khi/"/>
 		<namespace prefix="vocab" uri="https://pharos.artresearch.net/resource/midas/vocabulary/"/>
 		<namespace prefix="custom" uri="https://pharos.artresearch.net/custom/"/>
 		<namespace prefix="vit" uri="http://id.lib.harvard.edu/images/olvwork"/>
@@ -21,6 +21,9 @@
 			<domain>
 				<source_node>/root/obj</source_node>
 				<target_node>
+					<if>
+						<exists>a5202/text()</exists>
+					</if>
                     <entity>
                         <type>fc:work</type>
 						<instance_generator name="URIwithTypeAndId">
@@ -33,7 +36,7 @@
 								<type>fc:institution</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
-									<arg name="id" type="constant">Hertziana</arg>
+									<arg name="id" type="constant">KHI</arg>
 								</instance_generator>
 							</entity>
 						</additional>
@@ -402,15 +405,10 @@
 					<source_node>a5060/a5064</source_node>
 					<target_node>
 						<entity>
-							<type>fc:date</type>
-							<instance_generator name="TimespanUri">
-								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../a5000/text()</arg>
-								<arg name="eventType" type="constant">production</arg>
-							</instance_generator>
-							<label_generator name="Literal">
+							<type>rdfs:Literal</type>
+							<instance_generator name="Literal">
 								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
+							</instance_generator>
 						</entity>
 					</target_node>
 				</range>
@@ -599,6 +597,9 @@
 			<domain>
 				<source_node>/root/obj/obj</source_node>
 				<target_node>
+					<if>
+						<exists>a5202/text()</exists>
+					</if>
                     <entity>
                         <type>fc:work</type>
 						<instance_generator name="URIwithTypeAndId">
@@ -611,7 +612,7 @@
 								<type>fc:institution</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
-									<arg name="id" type="constant">Hertziana</arg>
+									<arg name="id" type="constant">KHI</arg>
 								</instance_generator>
 							</entity>
 						</additional>
@@ -980,15 +981,10 @@
 					<source_node>a5060/a5064</source_node>
 					<target_node>
 						<entity>
-							<type>fc:date</type>
-							<instance_generator name="TimespanUri">
-								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../a5001/text()</arg>
-								<arg name="eventType" type="constant">production</arg>
-							</instance_generator>
-							<label_generator name="Literal">
+							<type>rdfs:Literal</type>
+							<instance_generator name="Literal">
 								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
+							</instance_generator>
 						</entity>
 					</target_node>
 				</range>
@@ -1178,6 +1174,9 @@
 			<domain>
 				<source_node>/root/obj/obj/obj</source_node>
 				<target_node>
+					<if>
+						<exists>a5202/text()</exists>
+					</if>
                     <entity>
                         <type>fc:work</type>
 						<instance_generator name="URIwithTypeAndId">
@@ -1190,7 +1189,7 @@
 								<type>fc:institution</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
-									<arg name="id" type="constant">Hertziana</arg>
+									<arg name="id" type="constant">KHI</arg>
 								</instance_generator>
 							</entity>
 						</additional>
@@ -1559,15 +1558,10 @@
 					<source_node>a5060/a5064</source_node>
 					<target_node>
 						<entity>
-							<type>fc:date</type>
-							<instance_generator name="TimespanUri">
-								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../a5002/text()</arg>
-								<arg name="eventType" type="constant">production</arg>
-							</instance_generator>
-							<label_generator name="Literal">
+							<type>rdfs:Literal</type>
+							<instance_generator name="Literal">
 								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
+							</instance_generator>
 						</entity>
 					</target_node>
 				</range>
@@ -1756,6 +1750,9 @@
 			<domain>
 				<source_node>/root/obj/obj/obj/obj</source_node>
 				<target_node>
+					<if>
+						<exists>a5202/text()</exists>
+					</if>
                     <entity>
                         <type>fc:work</type>
 						<instance_generator name="URIwithTypeAndId">
@@ -1768,7 +1765,7 @@
 								<type>fc:institution</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
-									<arg name="id" type="constant">Hertziana</arg>
+									<arg name="id" type="constant">KHI</arg>
 								</instance_generator>
 							</entity>
 						</additional>
@@ -2137,15 +2134,10 @@
 					<source_node>a5060/a5064</source_node>
 					<target_node>
 						<entity>
-							<type>fc:date</type>
-							<instance_generator name="TimespanUri">
-								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../a5003/text()</arg>
-								<arg name="eventType" type="constant">production</arg>
-							</instance_generator>
-							<label_generator name="Literal">
+							<type>rdfs:Literal</type>
+							<instance_generator name="Literal">
 								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
+							</instance_generator>
 						</entity>
 					</target_node>
 				</range>

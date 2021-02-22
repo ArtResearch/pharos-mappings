@@ -119,7 +119,19 @@
 									</entity>
 								</additional>
 							</entity>
-						</additional>		
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIorUUID">
+									<arg name="text" type="constant">http://vocab.getty.edu/aat/300265418</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">built works</arg>
+								</label_generator>
+							</entity>
+						</additional>	
 						<additional>
 							<relationship>custom:has_original_record</relationship>
 							<entity>

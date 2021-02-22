@@ -120,15 +120,10 @@
 					<source_node>year_start</source_node>
 					<target_node>
 						<entity>
-							<type>fc:date</type>
-							<instance_generator name="TimespanUri">
-								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../Artwork_ID/text()</arg>
-								<arg name="eventType" type="constant">production</arg>
-							</instance_generator>
-							<label_generator name="Literal">
+							<type>rdfs:Literal</type>
+							<instance_generator name="Literal">
 								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
+							</instance_generator>
 						</entity>
 					</target_node>
 				</range>
@@ -147,15 +142,10 @@
 					<source_node>year_end</source_node>
 					<target_node>
 						<entity>
-							<type>fc:date</type>
-							<instance_generator name="TimespanUri">
-								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../Artwork_ID/text()</arg>
-								<arg name="eventType" type="constant">production</arg>
-							</instance_generator>
-							<label_generator name="Literal">
+							<type>rdfs:Literal</type>
+							<instance_generator name="Literal">
 								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
+							</instance_generator>
 						</entity>
 					</target_node>
 				</range>
