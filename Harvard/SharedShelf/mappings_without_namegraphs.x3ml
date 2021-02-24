@@ -301,17 +301,24 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>WorkTypes/WorkType/@uri</relation>
+						<relation>WorkTypes/WorkType/@id</relation>
 					</source_relation>
 					<target_relation>
 						<if>
-							<equals value="http://forum.jstor.org/oai/AAT/300265418">.</equals>
+							<and>
+								<if>
+									<equals value="300265418">.</equals>
+								</if>
+								<if>
+									<equals value="AAT">../@vocab</equals>
+								</if>
+							</and>
 						</if>
 						<relationship>crm:P2_has_type</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>WorkTypes/WorkType/@uri</source_node>
+					<source_node>WorkTypes/WorkType/@id</source_node>
 					<target_node>
 						<entity>
 							<type>crm:E55_Type</type>
@@ -1776,6 +1783,32 @@
 									</label_generator>
 								</entity>
 							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link>
+				<path>
+					<source_relation>
+						<relation>Locations/Repository/location</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P55_has_current_location</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>Locations/Repository/location</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E53_Place</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">place</arg>
+								<arg name="id" type="xpath">@id</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">@term</arg>
+							</label_generator>
 						</entity>
 					</target_node>
 				</range>

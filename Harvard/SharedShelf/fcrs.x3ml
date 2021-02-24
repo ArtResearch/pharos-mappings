@@ -245,6 +245,40 @@
 			<link>
 				<path>
 					<source_relation>
+						<relation>Locations/Repository/location</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>fr:Work_from_Place</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>Locations/Repository/location</source_node>
+					<target_node>
+						<entity>
+							<type>fc:place</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">place</arg>
+								<arg name="id" type="xpath">@id</arg>
+							</instance_generator>
+							<additional>
+								<relationship>fr:Place_of_Work</relationship>
+								<entity>
+									<type>fc:work</type>
+									<instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">work</arg>
+										<arg name="id" type="xpath">../../../@id</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			
+			<link>
+				<path>
+					<source_relation>
 						<relation>Subjects/Subject</relation>
 					</source_relation>
 					<target_relation>
