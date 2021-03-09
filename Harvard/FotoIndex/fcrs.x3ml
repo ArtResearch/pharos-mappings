@@ -331,6 +331,28 @@
 					</target_node>
 				</range>
 			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>WktObject</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>fr:Institution_has_Wkt</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>WktObject</source_node>
+					<target_node>
+						<entity>
+							<type>rdfs:Literal</type>
+							<instance_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
 		</mapping>			
 	</mappings>
 </x3ml>
