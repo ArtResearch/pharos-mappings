@@ -266,7 +266,7 @@
 						<relation>Geonames_URI</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>fr:artist_from_place</relationship>
+						<relationship>fr:Artist_from_Place</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -313,7 +313,7 @@
 						<relation>Name</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>fr:institution_from_place</relationship>
+						<relationship>fr:Institution_from_Place</relationship>
 					</target_relation>
 				</path>
 				<range>
