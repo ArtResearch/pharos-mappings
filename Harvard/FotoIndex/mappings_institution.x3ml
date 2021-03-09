@@ -28,7 +28,6 @@
 							<arg name="type" type="constant">itatti</arg>
 							<arg name="id" type="constant">namedgraphs</arg>
 						</instance_generator>
-						
 						<additional>
 							<relationship>custom:consists_of</relationship>
 							<entity>
@@ -39,10 +38,32 @@
 								</instance_generator>
 							</entity>
 						</additional>
-
 					</entity>
 				</target_node>
 			</domain>
+			
+			<!-- institution type namegraph -->
+			<link>
+				<path>
+					<source_relation>
+						<relation>../../AAT_URI/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../../AAT_URI/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text">string-join((.,"graph"),'/')</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>	
 			
 		</mapping>	
 		
@@ -113,18 +134,6 @@
 							<entity>
 								<type>crm:E55_Type</type>
 								<instance_generator name="URIorUUID">
-									<arg name="text">AAT_URI/text()</arg>
-								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="xpath">Institute_Type/text()</arg>
-								</label_generator>
-							</entity>
-						</additional>
-						<additional>
-							<relationship>crm:P2_has_type</relationship>
-							<entity>
-								<type>crm:E55_Type</type>
-								<instance_generator name="URIorUUID">
 									<arg name="text" type="constant">http://vocab.getty.edu/aat/300264595</arg>
 								</instance_generator>
 								<label_generator name="Literal">
@@ -147,7 +156,29 @@
 					</entity>
 				</target_node>
 			</domain>
-		
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>AAT_URI</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P2_has_type</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>AAT_URI</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E55_Type</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
 			<link> 
 				<path>
 					<source_relation>
@@ -365,103 +396,71 @@
 					</target_node>
 				</range>
 			</link>
-			<!--
-			<link>
-				<path>
-					<source_relation>
-						<relation>To_Review</relation>
-					</source_relation>
-					<target_relation>
-						<relationship>crm:P41i_was_classified_by</relationship>
-						<entity>
-							<type>crm:E17_Type_Assignment</type>
-							<instance_generator name="eventIdentifierUri">
-								<arg name="resourceType" type="constant">institution</arg>
-								<arg name="resourceId" type="xpath">../Institution_ID/text()</arg>
-								<arg name="eventType" type="constant">assignment</arg>
-							</instance_generator>
-						</entity>
-						<relationship>crm:P42_assigned</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>To_Review</source_node>
-					<target_node>
-						<entity>
-							<type>crm:E55_Type</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">type</arg>
-								<arg name="id" type="xpath">text()</arg>
-							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-						</entity>
-					</target_node>
-				</range>
-			</link>
-			-->
-			<!--
-			<link>
-				<path>
-					<source_relation>
-						<relation>Sub_Collection</relation>
-					</source_relation>
-					<target_relation>
-						<relationship>crm:P14_performed</relationship>
-						<entity>
-							<type>crm:E87_Curation_Activity</type>
-							<instance_generator name="eventIdentifierUri">
-								<arg name="resourceType" type="constant">institution</arg>
-								<arg name="resourceId" type="xpath">../Institution_ID/text()</arg>
-								<arg name="eventType" type="constant">curation</arg>
-							</instance_generator>
-						</entity>
-						<relationship>crm:P147_curated</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>Sub_Collection</source_node>
-					<target_node>
-						<entity>
-							<type>crm:E78_Curated_Holding</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">collection</arg>
-								<arg name="id" type="xpath">text()</arg>
-							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-						</entity>
-					</target_node>
-				</range>
-			</link>
-			-->
-			<!--
-			<link>
-				<path>
-					<source_relation>
-						<relation>Does_Not_Exist</relation>
-					</source_relation>
-					<target_relation>
-						<relationship>crm:P93_was_taken_out_of_existence_by</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>Does_Not_Exist</source_node>
-					<target_node>
-						<entity>
-							<type>crm:E68_Dissolution</type>
-							<instance_generator name="eventIdentifierUri">
-								<arg name="resourceType" type="constant">institution</arg>
-								<arg name="resourceId" type="xpath">../Institution_ID/text()</arg>
-								<arg name="eventType" type="constant">dissolution</arg>
-							</instance_generator>
-						</entity>
-					</target_node>
-				</range>
-			</link>
-			-->
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/dataroot/Institution/AAT_URI</source_node>
+				<target_node>
+                   	<entity>
+						<type>crm:E55_Type</type>
+						<instance_generator name="URIorUUID">
+							<arg name="text">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">../Institute_Type/text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">ITatti</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">I Tatti</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="URIorUUID">
+									<arg name="text">string-join((text(),"graph"),'/')</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">ITatti</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">I Tatti</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">FotoIndex</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">FotoIndex</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
 		</mapping>
 	</mappings>
 </x3ml>
