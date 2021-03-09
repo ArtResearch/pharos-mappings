@@ -251,56 +251,6 @@
 					</target_node>
 				</range>
 			</link>
-
-			<!--
-			<link>
-				<path>
-					<source_relation>
-						<relation>Place_ID</relation>
-					</source_relation>
-					<target_relation>
-						<relationship>crm:P74_has_current_or_former_residence</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>Place_ID</source_node>
-					<target_node>
-						<entity>
-							<type>crm:E53_Place</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">place</arg>
-								<arg name="id" type="xpath">text()</arg>
-							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>skos:CloseMatch</relationship>
-								<entity>
-									<type>crm:E53_Place</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="xpath">../Geonames_URI/text()</arg>
-									</instance_generator>
-									<additional>
-									<relationship>crm:P2_has_type</relationship>
-									<entity>
-										<type>crm:E55_Type</type>
-										<instance_generator name="URIwithType">
-											<arg name="type" type="constant">type</arg>
-											<arg name="id" type="constant">Geonames_URI</arg>
-										</instance_generator>
-										<label_generator name="Literal">
-											<arg name="text" type="constant">Geonames URI</arg>
-										</label_generator>
-									</entity>
-								</additional>
-								</entity>
-							</additional>
-						</entity>
-					</target_node>
-				</range>
-			</link>
-			-->
 		</mapping>
 		
 		<mapping namedgraph="graph">
@@ -465,44 +415,31 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>Place_ID</relation>
+						<relation>Geonames_URI</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P74_has_current_or_former_residence</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>Place_ID</source_node>
+					<source_node>Geonames_URI</source_node>
 					<target_node>
 						<entity>
 							<type>crm:E53_Place</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">place</arg>
-								<arg name="id" type="xpath">text()</arg>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">../Artist_Name/text()</arg>
-							</label_generator>
 							<additional>
-								<relationship>skos:CloseMatch</relationship>
+								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E53_Place</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="xpath">../Geonames_URI/text()</arg>
+									<type>crm:E55_Type</type>
+									<instance_generator name="URIwithType">
+										<arg name="type" type="constant">type</arg>
+										<arg name="id" type="constant">Geonames_URI</arg>
 									</instance_generator>
-									<additional>
-									<relationship>crm:P2_has_type</relationship>
-									<entity>
-										<type>crm:E55_Type</type>
-										<instance_generator name="URIwithType">
-											<arg name="type" type="constant">type</arg>
-											<arg name="id" type="constant">Geonames_URI</arg>
-										</instance_generator>
-										<label_generator name="Literal">
-											<arg name="text" type="constant">Geonames URI</arg>
-										</label_generator>
-									</entity>
-								</additional>
+									<label_generator name="Literal">
+										<arg name="text" type="constant">Geonames URI</arg>
+									</label_generator>
 								</entity>
 							</additional>
 						</entity>

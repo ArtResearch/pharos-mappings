@@ -263,20 +263,19 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>Place_ID</relation>
+						<relation>Geonames_URI</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>fr:artist_from_place</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>Place_ID</source_node>
+					<source_node>Geonames_URI</source_node>
 					<target_node>
 						<entity>
 							<type>fc:place</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">place</arg>
-								<arg name="id" type="xpath">text()</arg>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">text()</arg>
 							</instance_generator>
 							<additional>
 								<relationship>fr:Place_of_Artist</relationship>
