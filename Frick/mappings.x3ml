@@ -50,6 +50,18 @@
 								</instance_generator>
 							</entity>
 						</additional>
+
+						<additional>
+							<relationship>custom:consists_of</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">actor</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">../marc:datafield[@tag="590" and @ind1="1"]/marc:subfield[@code="a"]/text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+							</entity>
+						</additional>
 						
 						<additional>
 							<relationship>custom:consists_of</relationship>
@@ -74,7 +86,66 @@
 								</instance_generator>
 							</entity>
 						</additional>
-						
+						<!-- place cities -->
+						<additional>
+							<relationship>custom:consists_of</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">place</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">../marc:datafield[@tag="590" and @ind1="1"]/marc:subfield[@code="b"]/text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+						<!-- place local regions -->
+						<additional>
+							<relationship>custom:consists_of</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">place</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">../marc:datafield[@tag="590" and @ind1="1"]/marc:subfield[@code="c"]/text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+						<!-- place countries -->
+						<additional>
+							<relationship>custom:consists_of</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">place</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">../marc:datafield[@tag="590" and @ind1="1"]/marc:subfield[@code="d"]/text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+						<!--place-->
+						<additional>
+							<relationship>custom:consists_of</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">place</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">../marc:datafield[@tag="590" and @ind1="9"]/marc:subfield[@code="b"]/@place</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+						<!--actor/person-->
+						<additional>
+							<relationship>custom:consists_of</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">actor</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">../marc:datafield[@tag="590" and @ind1="9"]/marc:subfield[@code="b"]/@person</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+							</entity>
+						</additional>
 					</entity>
 				</target_node>
 			</domain>
@@ -222,37 +293,13 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>../marc:datafield[@tag="590" and @ind1="9"]/marc:subfield[@code="b"]/@person</relation>
-					</source_relation>
-					<target_relation>
-						<relationship>custom:consists_of</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>../marc:datafield[@tag="590" and @ind1="9"]/marc:subfield[@code="b"]/@person</source_node>
-					<target_node>
-						<entity>
-							<type>custom:Namedgraph</type>
-							<instance_generator name="MultiHashingGenerator">
-								<arg name="hierarchy" type="constant">actor</arg>
-								<arg name="object_HASHED_CONTENTS" type="xpath">../@person</arg>
-								<arg name="term_simple" type="constant">graph</arg>
-							</instance_generator>
-						</entity>
-					</target_node>
-				</range>
-			</link>
-			<!--
-			<link>
-				<path>
-					<source_relation>
-						<relation>../marc:datafield[@tag="590" and @ind1="9"]/marc:subfield[@code="b"]</relation>
+						<relation>../marc:datafield[@tag="590" and @ind1="9"]/marc:subfield[@code="b"]/text()</relation>
 					</source_relation>
 					<target_relation>
 						<if>
 							<not>
 								<if>
-									<exists>@person</exists>
+									<exists>../@person</exists>
 								</if>
 							</not>
 						</if>
@@ -260,20 +307,20 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>../marc:datafield[@tag="590" and @ind1="9"]/marc:subfield[@code="b"]</source_node>
+					<source_node>../marc:datafield[@tag="590" and @ind1="9"]/marc:subfield[@code="b"]/text()</source_node>
 					<target_node>
 						<entity>
 							<type>custom:Namedgraph</type>
-							<instance_generator name="namedgraph">
-								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">text()</arg>
+							<instance_generator name="MultiHashingGenerator">
+								<arg name="hierarchy" type="constant">actor</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="term_simple" type="constant">graph</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
 				</range>
 			</link>
-			-->
-				
+		
 			<link>
 				<path>
 					<source_relation>
@@ -305,33 +352,6 @@
 								<arg name="type" type="constant">photo</arg>
 								<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="photo_id" type="xpath">../marc:subfield[@code="k"]/text()</arg>
-							</instance_generator>
-						</entity>
-					</target_node>
-				</range>
-			</link>
-			
-			
-			<link>
-				<path>
-					<source_relation>
-						<relation>../marc:datafield[@tag="590" and @ind1="1"]/@tag</relation>
-					</source_relation>
-					<target_relation>
-						<if>
-							<exists>../marc:subfield[@code="a"]/text()</exists>
-						</if>
-						<relationship>custom:consists_of</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>../marc:datafield[@tag="590" and @ind1="1"]/@tag</source_node>
-					<target_node>
-						<entity>
-							<type>custom:Namedgraph</type>
-							<instance_generator name="namedgraph">
-								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">../marc:subfield[@code="a"]/text()</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -540,15 +560,18 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>marc:datafield[@tag="100"]/marc:subfield[@code="a"]</relation>
+						<relation>marc:datafield[@tag="100"]</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<exists>marc:subfield[@code="a"]</exists>
+						</if>
 						<relationship>crm:P108i_was_produced_by</relationship>
 						<entity>
 							<type>crm:E12_Production</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
+								<arg name="resourceId" type="xpath">../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
@@ -557,25 +580,22 @@
 							<type>crm:PC14_carried_out_by</type>
 							<instance_generator name="PropertyTypeUri">
 								<arg name="propertyType" type="constant">carried_out_by</arg>
-								<arg name="domain" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
-								<arg name="range" type="xpath">text()</arg>
+								<arg name="domain" type="xpath">../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
+								<arg name="range" type="xpath">marc:subfield[@code="a"]/text()</arg>
 							</instance_generator>
 						</entity>
 						<relationship>crm:P02_has_range</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>marc:datafield[@tag="100"]/marc:subfield[@code="a"]</source_node>
+					<source_node>marc:datafield[@tag="100"]</source_node>
 					<target_node>
 						<entity>
 							<type>crm:E21_Person</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">text()</arg>
+								<arg name="id" type="xpath">marc:subfield[@code="a"]/text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
 						</entity>
 					</target_node>
 				</range>
@@ -603,9 +623,6 @@
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">../marc:subfield[@code="a"]/text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">../marc:subfield[@code="a"]/text()</arg>
-							</label_generator>
 						</entity>
 						<relationship>crm:P14.1_in_the_role_of</relationship>
 					</target_relation>
@@ -654,9 +671,6 @@
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
 						</entity>
 					</target_node>
 				</range>
@@ -1712,36 +1726,24 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>marc:datafield[@tag="590" and @ind1="1"]/marc:subfield[@code="a"]</relation>
+						<relation>marc:datafield[@tag="590" and @ind1="1"]</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<exists>marc:subfield[@code="a"]</exists>
+						</if>
 						<relationship>crm:P50_has_current_keeper</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>marc:datafield[@tag="590" and @ind1="1"]/marc:subfield[@code="a"]</source_node>
+					<source_node>marc:datafield[@tag="590" and @ind1="1"]</source_node>
 					<target_node>
 						<entity>
 							<type>crm:E39_Actor</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">text()</arg>
+								<arg name="id" type="xpath">marc:subfield[@code="a"]/text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300264595</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">repositories (institutions)</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -1765,21 +1767,6 @@
 								<arg name="type" type="constant">place</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300008389</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">cities</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -1803,21 +1790,6 @@
 								<arg name="type" type="constant">place</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300387079</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">local regions</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -1841,21 +1813,6 @@
 								<arg name="type" type="constant">place</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300387506</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">countries (sovereign states)</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -2778,7 +2735,7 @@
 					</source_relation>
 					<target_relation>
 						<if>
-							<exists>@place</exists>
+							<exists>@person</exists>
 						</if>
 						<relationship>crm:P108i_was_produced_by</relationship>
 						<entity>
@@ -2802,39 +2759,11 @@
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">@person</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">@person</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P74_has_current_or_former_residence</relationship>
-								<entity>
-									<type>crm:E53_Place</type>
-									<instance_generator name="URIwithType">
-										<arg name="type" type="constant">place</arg>
-										<arg name="id" type="xpath">@place</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="xpath">@place</arg>
-									</label_generator>
-									<additional>
-										<relationship>crm:P2_has_type</relationship>
-										<entity>
-											<type>crm:E55_Type</type>
-											<instance_generator name="URIorUUID">
-												<arg name="text" type="constant">http://vocab.getty.edu/aat/300008389</arg>
-											</instance_generator>
-											<label_generator name="Literal">
-												<arg name="text" type="constant">cities</arg>
-											</label_generator>
-										</entity>
-									</additional>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
 			</link>
-			
+
 			<link> 
 				<path>
 					<source_relation>
@@ -2844,7 +2773,7 @@
 						<if>
 							<not>
 								<if>
-									<exists>@place</exists>
+									<exists>@person</exists>
 								</if>
 							</not>
 						</if>
@@ -2870,14 +2799,11 @@
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
 						</entity>
 					</target_node>
 				</range>
 			</link>
-			
+
 			<link> 
 				<path>
 					<source_relation>
@@ -3239,7 +3165,7 @@
 					</source_relation>
 					<target_relation>
 						<if>
-							<exists>@place</exists>
+							<exists>@person</exists>
 						</if>
 						<relationship>crm:P108i_was_produced_by</relationship>
 						<entity>
@@ -3263,34 +3189,6 @@
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">@person</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">@person</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P74_has_current_or_former_residence</relationship>
-								<entity>
-									<type>crm:E53_Place</type>
-									<instance_generator name="URIwithType">
-										<arg name="type" type="constant">place</arg>
-										<arg name="id" type="xpath">@place</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="xpath">@place</arg>
-									</label_generator>
-									<additional>
-										<relationship>crm:P2_has_type</relationship>
-										<entity>
-											<type>crm:E55_Type</type>
-											<instance_generator name="URIorUUID">
-												<arg name="text" type="constant">http://vocab.getty.edu/aat/300008389</arg>
-											</instance_generator>
-											<label_generator name="Literal">
-												<arg name="text" type="constant">cities</arg>
-											</label_generator>
-										</entity>
-									</additional>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -3305,7 +3203,7 @@
 						<if>
 							<not>
 								<if>
-									<exists>@place</exists>
+									<exists>@person</exists>
 								</if>
 							</not>
 						</if>
@@ -3331,9 +3229,6 @@
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
 						</entity>
 					</target_node>
 				</range>
@@ -3702,7 +3597,7 @@
 					</source_relation>
 					<target_relation>
 						<if>
-							<exists>@place</exists>
+							<exists>@person</exists>
 						</if>
 						<relationship>crm:P108i_was_produced_by</relationship>
 						<entity>
@@ -3726,34 +3621,6 @@
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">@person</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">@person</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P74_has_current_or_former_residence</relationship>
-								<entity>
-									<type>crm:E53_Place</type>
-									<instance_generator name="URIwithType">
-										<arg name="type" type="constant">place</arg>
-										<arg name="id" type="xpath">@place</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="xpath">@place</arg>
-									</label_generator>
-									<additional>
-										<relationship>crm:P2_has_type</relationship>
-										<entity>
-											<type>crm:E55_Type</type>
-											<instance_generator name="URIorUUID">
-												<arg name="text" type="constant">http://vocab.getty.edu/aat/300008389</arg>
-											</instance_generator>
-											<label_generator name="Literal">
-												<arg name="text" type="constant">cities</arg>
-											</label_generator>
-										</entity>
-									</additional>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -3768,7 +3635,7 @@
 						<if>
 							<not>
 								<if>
-									<exists>@place</exists>
+									<exists>@person</exists>
 								</if>
 							</not>
 						</if>
@@ -3794,9 +3661,6 @@
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
 						</entity>
 					</target_node>
 				</range>
@@ -4161,7 +4025,7 @@
 					</source_relation>
 					<target_relation>
 						<if>
-							<exists>@place</exists>
+							<exists>@person</exists>
 						</if>
 						<relationship>crm:P108i_was_produced_by</relationship>
 						<entity>
@@ -4185,34 +4049,6 @@
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">@person</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">@person</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P74_has_current_or_former_residence</relationship>
-								<entity>
-									<type>crm:E53_Place</type>
-									<instance_generator name="URIwithType">
-										<arg name="type" type="constant">place</arg>
-										<arg name="id" type="xpath">@place</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="xpath">@place</arg>
-									</label_generator>
-									<additional>
-										<relationship>crm:P2_has_type</relationship>
-										<entity>
-											<type>crm:E55_Type</type>
-											<instance_generator name="URIorUUID">
-												<arg name="text" type="constant">http://vocab.getty.edu/aat/300008389</arg>
-											</instance_generator>
-											<label_generator name="Literal">
-												<arg name="text" type="constant">cities</arg>
-											</label_generator>
-										</entity>
-									</additional>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -4227,7 +4063,7 @@
 						<if>
 							<not>
 								<if>
-									<exists>@place</exists>
+									<exists>@person</exists>
 								</if>
 							</not>
 						</if>
@@ -4253,9 +4089,6 @@
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
 						</entity>
 					</target_node>
 				</range>
@@ -5157,28 +4990,15 @@
 					<source_node>@place</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E53_Place</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">place</arg>
 								<arg name="id" type="xpath">../@place</arg>
 							</instance_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300008389</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">cities</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
 			</link>
-			
 		
 		</mapping>	
 		
@@ -5301,6 +5121,30 @@
 								</additional>
 							</entity>
 						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIorUUID">
+									<arg name="text" type="constant">http://vocab.getty.edu/aat/300264595</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">repositories (institutions)</arg>
+								</label_generator>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>crm:E55_Type</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">https://pharos.artresearch.net/resource/vocab/maintype</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">main type</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
 					</entity>
 				</target_node>
 			</domain>
@@ -5358,23 +5202,11 @@
 					<source_node>marc:subfield[@code="b"]</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E53_Place</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">place</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300008389</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">cities</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -5393,23 +5225,11 @@
 					<source_node>marc:subfield[@code="c"]</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E53_Place</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">place</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300387079</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">local regions</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -5428,23 +5248,11 @@
 					<source_node>marc:subfield[@code="d"]</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E53_Place</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">place</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300387506</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">countries (sovereign states)</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -5782,7 +5590,6 @@
 				</range>
 			</link>
 			
-			
 			<link> 
 				<path>
 					<source_relation>
@@ -5790,7 +5597,7 @@
 					</source_relation>
 					<target_relation>
 						<if>
-							<exists>@place</exists>
+							<exists>@person</exists>
 						</if>
 						<relationship>crm:P108i_was_produced_by</relationship>
 						<entity>
@@ -5814,34 +5621,6 @@
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">@person</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">@person</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P74_has_current_or_former_residence</relationship>
-								<entity>
-									<type>crm:E53_Place</type>
-									<instance_generator name="URIwithType">
-										<arg name="type" type="constant">place</arg>
-										<arg name="id" type="xpath">@place</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="xpath">@place</arg>
-									</label_generator>
-									<additional>
-										<relationship>crm:P2_has_type</relationship>
-										<entity>
-											<type>crm:E55_Type</type>
-											<instance_generator name="URIorUUID">
-												<arg name="text" type="constant">http://vocab.getty.edu/aat/300008389</arg>
-											</instance_generator>
-											<label_generator name="Literal">
-												<arg name="text" type="constant">cities</arg>
-											</label_generator>
-										</entity>
-									</additional>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -5856,7 +5635,7 @@
 						<if>
 							<not>
 								<if>
-									<exists>@place</exists>
+									<exists>@person</exists>
 								</if>
 							</not>
 						</if>
@@ -5882,9 +5661,6 @@
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
 						</entity>
 					</target_node>
 				</range>
@@ -6141,6 +5917,325 @@
 				</range>
 			</link>
 	
+		</mapping>
+		
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>//marc:datafield[@tag="590" and @ind1="1"]/marc:subfield[@code="b"]</source_node>
+				<target_node>
+                    <entity>
+						<type>crm:E53_Place</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">place</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">Frick</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">Frick</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">place</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+										<entity>
+											<type>custom:Provider</type>
+											<instance_generator name="URIwithTypeAndId">
+												<arg name="type" type="constant">source</arg>
+												<arg name="id" type="constant">Frick</arg>
+											</instance_generator>
+											<label_generator name="Literal">
+												<arg name="text" type="constant">Frick</arg>
+											</label_generator>
+										</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIorUUID">
+									<arg name="text" type="constant">http://vocab.getty.edu/aat/300008389</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">cities</arg>
+								</label_generator>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>crm:E55_Type</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">https://pharos.artresearch.net/resource/vocab/maintype</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">main type</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>//marc:datafield[@tag="590" and @ind1="1"]/marc:subfield[@code="c"]</source_node>
+				<target_node>
+                    <entity>
+						<type>crm:E53_Place</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">place</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">Frick</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">Frick</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">place</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+										<entity>
+											<type>custom:Provider</type>
+											<instance_generator name="URIwithTypeAndId">
+												<arg name="type" type="constant">source</arg>
+												<arg name="id" type="constant">Frick</arg>
+											</instance_generator>
+											<label_generator name="Literal">
+												<arg name="text" type="constant">Frick</arg>
+											</label_generator>
+										</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIorUUID">
+									<arg name="text" type="constant">http://vocab.getty.edu/aat/300387079</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">local regions</arg>
+								</label_generator>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>crm:E55_Type</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">https://pharos.artresearch.net/resource/vocab/maintype</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">main type</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>//marc:datafield[@tag="590" and @ind1="1"]/marc:subfield[@code="d"]</source_node>
+				<target_node>
+                    <entity>
+						<type>crm:E53_Place</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">place</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">Frick</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">Frick</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">place</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+										<entity>
+											<type>custom:Provider</type>
+											<instance_generator name="URIwithTypeAndId">
+												<arg name="type" type="constant">source</arg>
+												<arg name="id" type="constant">Frick</arg>
+											</instance_generator>
+											<label_generator name="Literal">
+												<arg name="text" type="constant">Frick</arg>
+											</label_generator>
+										</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIorUUID">
+									<arg name="text" type="constant">http://vocab.getty.edu/aat/300387506</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">countries (sovereign states)</arg>
+								</label_generator>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>crm:E55_Type</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">https://pharos.artresearch.net/resource/vocab/maintype</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">main type</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>//marc:datafield[@tag="590" and @ind1="9"]/marc:subfield[@code="b"]/@place</source_node>
+				<target_node>
+					<if>
+						<exists>../@person</exists>
+					</if>
+                    <entity>
+						<type>crm:E53_Place</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">place</arg>
+							<arg name="id" type="xpath">../@place</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">../@place</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">Frick</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">Frick</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">place</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">../@place</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+										<entity>
+											<type>custom:Provider</type>
+											<instance_generator name="URIwithTypeAndId">
+												<arg name="type" type="constant">source</arg>
+												<arg name="id" type="constant">Frick</arg>
+											</instance_generator>
+											<label_generator name="Literal">
+												<arg name="text" type="constant">Frick</arg>
+											</label_generator>
+										</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIorUUID">
+									<arg name="text" type="constant">http://vocab.getty.edu/aat/300008389</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">cities</arg>
+								</label_generator>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>crm:E55_Type</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">https://pharos.artresearch.net/resource/vocab/maintype</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">main type</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
 		</mapping>
 
 	</mappings>

@@ -1946,7 +1946,7 @@
 					<source_node>Locations/Repository</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E39_Actor</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">@id</arg>
@@ -1969,7 +1969,7 @@
 					<source_node>Locations/Repository/location</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E53_Place</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">place</arg>
 								<arg name="id" type="xpath">@id</arg>
