@@ -2787,7 +2787,7 @@
 					<source_node>../field_lookup[@label="Photographer"]</source_node>
 					<target_node>
 						<entity>
-							<type>crm:custom:noType</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">linkedField/@id</arg>
@@ -3446,7 +3446,7 @@
 					<source_node>../field_lookup[@label="Image Repository"]</source_node>
 					<target_node>
 						<entity>
-							<type>crm:custom:noType</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">linkedField/@id</arg>
@@ -4065,7 +4065,7 @@
 					<source_node>../field_lookup[@label="Photographer"]</source_node>
 					<target_node>
 						<entity>
-							<type>crm:custom:noType</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">linkedField/@id</arg>
@@ -4554,7 +4554,7 @@
 					<source_node>../field_lookup[@label="Image Repository"]</source_node>
 					<target_node>
 						<entity>
-							<type>crm:custom:noType</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">linkedField/@id</arg>
@@ -4953,7 +4953,7 @@
 					<source_node>../field_lookup[@label="Photographer"]</source_node>
 					<target_node>
 						<entity>
-							<type>crm:custom:noType</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">linkedField/@id</arg>
@@ -5453,7 +5453,7 @@
 					<source_node>../field_lookup[@label="Image Repository"]</source_node>
 					<target_node>
 						<entity>
-							<type>crm:custom:noType</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">linkedField/@id</arg>
