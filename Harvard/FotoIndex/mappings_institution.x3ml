@@ -170,7 +170,7 @@
 					<source_node>AAT_URI</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E55_Type</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIorUUID">
 								<arg name="text">text()</arg>
 							</instance_generator>

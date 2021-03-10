@@ -490,7 +490,7 @@
 					<source_node>WorkTypes/WorkType</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E55_Type</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIorUUID">
 								<arg name="text">@uri</arg>
 							</instance_generator>
@@ -888,7 +888,7 @@
 					<source_node>Materials/Material</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E57_Material</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIorUUID">
 								<arg name="text" type="xpath">@uri</arg>
 							</instance_generator>
@@ -1804,7 +1804,7 @@
 					<source_node>Cultures/Culture</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E55_Type</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIorUUID">
 								<arg name="text">@uri</arg>
 							</instance_generator>					
@@ -2005,7 +2005,7 @@
 					<source_node>Rights/Right</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E55_Type</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">@type_lkup_id</arg>
@@ -2787,7 +2787,7 @@
 					<source_node>../field_lookup[@label="Photographer"]</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E39_Actor</type>
+							<type>crm:custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">linkedField/@id</arg>
@@ -2872,7 +2872,7 @@
 					<source_node>../field_lookup[@label="Image Technique"]</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E29_Design_or_Procedure</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIorUUID">
 								<arg name="text" type="xpath">linkedField/@uri</arg>
 							</instance_generator>
@@ -2897,7 +2897,7 @@
 					<source_node>../field_lookup[@label="Image Support"]</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E57_Material</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIorUUID">
 								<arg name="text" type="xpath">linkedField/@uri</arg>
 							</instance_generator>
@@ -3446,7 +3446,7 @@
 					<source_node>../field_lookup[@label="Image Repository"]</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E39_Actor</type>
+							<type>crm:custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">linkedField/@id</arg>
@@ -4065,7 +4065,7 @@
 					<source_node>../field_lookup[@label="Photographer"]</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E39_Actor</type>
+							<type>crm:custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">linkedField/@id</arg>
@@ -4150,7 +4150,7 @@
 					<source_node>../field_lookup[@label="Image Technique"]</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E29_Design_or_Procedure</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIorUUID">
 								<arg name="text" type="xpath">linkedField/@uri</arg>
 							</instance_generator>
@@ -4175,7 +4175,7 @@
 					<source_node>../field_lookup[@label="Image Support"]</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E57_Material</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIorUUID">
 								<arg name="text" type="xpath">linkedField/@uri</arg>
 							</instance_generator>
@@ -4554,7 +4554,7 @@
 					<source_node>../field_lookup[@label="Image Repository"]</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E39_Actor</type>
+							<type>crm:custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">linkedField/@id</arg>
@@ -4953,7 +4953,7 @@
 					<source_node>../field_lookup[@label="Photographer"]</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E39_Actor</type>
+							<type>crm:custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">linkedField/@id</arg>
@@ -5035,7 +5035,7 @@
 					<source_node>../field_lookup[@label="Image Technique"]</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E29_Design_or_Procedure</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIorUUID">
 								<arg name="text" type="xpath">linkedField/@uri</arg>
 							</instance_generator>
@@ -5453,7 +5453,7 @@
 					<source_node>../field_lookup[@label="Image Repository"]</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E39_Actor</type>
+							<type>crm:custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">linkedField/@id</arg>
@@ -5513,7 +5513,7 @@
 					<source_node>../field_lookup[@label="Image Support"]</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E57_Material</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIorUUID">
 								<arg name="text" type="xpath">linkedField/@uri</arg>
 							</instance_generator>
