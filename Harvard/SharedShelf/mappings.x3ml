@@ -107,11 +107,73 @@
 								</instance_generator>
 							</entity>
 						</additional>
-						
+						<!-- rightholder -->
+						<additional>
+							<relationship>custom:consists_of</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">actor</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">../Rights/Right/@rightholder</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+							</entity>
+						</additional>
 					</entity>
 				</target_node>
 			</domain>
-			
+
+			<!-- subjects (visual item) -->
+			<link>
+				<path>
+					<source_relation>
+						<relation>../Subjects/Subject/@id</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../Subjects/Subject/@id</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="namedgraph">
+								<arg name="type" type="constant">subject</arg>
+								<arg name="id" type="xpath">.</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<!-- subjects (depicted person) -->
+			<link>
+				<path>
+					<source_relation>
+						<relation>../Subjects/Subject/@type_lkup_id</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="11309059">.</equals>
+						</if>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../Subjects/Subject/@type_lkup_id</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="namedgraph">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">../@id</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
 			<!--material-->
 			<link>
 				<path>
@@ -339,6 +401,29 @@
 					</target_node>
 				</range>
 			</link>
+			<!-- image associated name-->
+			<link>
+				<path>
+					<source_relation>
+						<relation>../display:DR/DisplayRecord/field_lookup[@label="Image Associated Name"]/linkedField/@id</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../display:DR/DisplayRecord/field_lookup[@label="Image Associated Name"]/linkedField/@id</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="namedgraph">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">.</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
 
 		</mapping>
 
@@ -441,8 +526,7 @@
 					</entity>
 				</target_node>
 			</domain>
-			
-			
+				
 			<link>
 				<path>
 					<source_relation>
@@ -569,21 +653,6 @@
 									</label_generator>
 								</entity>
 							</additional>
-							<!--							
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
-										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="constant">PreferredTerm</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">Preferred Term</arg>
-									</label_generator>
-								</entity>
-							</additional>
-							-->
 						</entity>
 					</target_node>
 				</range>
@@ -785,23 +854,11 @@
 					<source_node>Agents/Agent</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E21_Person</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">@id</arg>
 							</instance_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300025103</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">artists (visual artists)</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -853,23 +910,11 @@
 					<source_node>Agents/Agent</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E21_Person</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">@id</arg>
 							</instance_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300025103</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">artists (visual artists)</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -943,23 +988,11 @@
 					<source_node>Agents/Agent</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E21_Person</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">@id</arg>
 							</instance_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300025103</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">artists (visual artists)</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -1011,23 +1044,11 @@
 					<source_node>Agents/Agent</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E21_Person</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">@id</arg>
 							</instance_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300025103</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">artists (visual artists)</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -1079,23 +1100,11 @@
 					<source_node>Agents/Agent</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E21_Person</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">@id</arg>
 							</instance_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300025103</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">artists (visual artists)</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -1147,23 +1156,11 @@
 					<source_node>Agents/Agent</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E21_Person</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">@id</arg>
 							</instance_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300025103</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">artists (visual artists)</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -1215,23 +1212,11 @@
 					<source_node>Agents/Agent</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E21_Person</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">@id</arg>
 							</instance_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300025103</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">artists (visual artists)</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -1283,23 +1268,11 @@
 					<source_node>Agents/Agent</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E21_Person</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">@id</arg>
 							</instance_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300025103</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">artists (visual artists)</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -1351,23 +1324,11 @@
 					<source_node>Agents/Agent</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E21_Person</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">@id</arg>
 							</instance_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300025103</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">artists (visual artists)</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -1419,23 +1380,11 @@
 					<source_node>Agents/Agent</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E21_Person</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">@id</arg>
 							</instance_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300025103</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">artists (visual artists)</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -1487,23 +1436,11 @@
 					<source_node>Agents/Agent</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E21_Person</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">@id</arg>
 							</instance_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300025103</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">artists (visual artists)</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -1555,23 +1492,11 @@
 					<source_node>Agents/Agent</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E21_Person</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">@id</arg>
 							</instance_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300025103</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">artists (visual artists)</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -1623,23 +1548,11 @@
 					<source_node>Agents/Agent</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E21_Person</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">@id</arg>
 							</instance_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300025103</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">artists (visual artists)</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -1691,23 +1604,11 @@
 					<source_node>Agents/Agent</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E21_Person</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">@id</arg>
 							</instance_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300025103</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">artists (visual artists)</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -1760,23 +1661,11 @@
 					<source_node>Agents/Agent</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E21_Person</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">@id</arg>
 							</instance_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300025103</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">artists (visual artists)</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -2040,14 +1929,11 @@
 					<source_node>Rights/Right/@rightholder</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E39_Actor</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">../@rightholder</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">../@rightholder</arg>
-							</label_generator>
 						</entity>
 					</target_node>
 				</range>
@@ -2249,77 +2135,6 @@
 						<relation>Subjects/Subject</relation>
 					</source_relation>
 					<target_relation>
-					    <if>
-							<equals value="associated names">@type_lkup</equals>
-						</if>
-						<relationship>crm:P65_shows_visual_item</relationship>
-						<entity>
-							<type>crm:E36_Visual_Item</type>
-							<instance_generator name="URIwithTypeAndId">
-								<arg name="type" type="constant">subject</arg>
-								<arg name="id" type="xpath">@id</arg>
-							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">@term</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300404126</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">subjects (content of works)</arg>
-									</label_generator>
-								</entity>
-							</additional>
-						</entity>
-						<relationship>crm:P138_represents</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>Subjects/Subject</source_node>
-					<target_node>
-						<entity>
-							<type>crm:E21_Person</type>
-							<instance_generator name="URIwithTypeAndId">
-								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">@id</arg>
-							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">@term</arg>
-							</label_generator>
-							<additional>
-								<relationship>owl:sameAs</relationship>
-								<entity>
-									<type>crm:E21_Person</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="xpath">@uri</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="xpath">@term</arg>
-									</label_generator>
-								</entity>
-							</additional>
-						</entity>
-					</target_node>
-				</range>
-			</link>
-			
-			<link>
-				<path>
-					<source_relation>
-						<relation>Subjects/Subject</relation>
-					</source_relation>
-					<target_relation>
-						<if>
-							<not>
-								<if>
-									<equals value="associated names">@type_lkup</equals>
-								</if>
-							</not>
-						</if>
 						<relationship>crm:P65_shows_visual_item</relationship>
 					</target_relation>
 				</path>
@@ -2327,38 +2142,11 @@
 					<source_node>Subjects/Subject</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E36_Visual_Item</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">subject</arg>
 								<arg name="id" type="xpath">@id</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">@term</arg>
-							</label_generator>
-							<additional>
-								<relationship>owl:sameAs</relationship>
-								<entity>
-									<type>crm:E36_Visual_Item</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="xpath">@uri</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="xpath">@term</arg>
-									</label_generator>
-								</entity>
-							</additional>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300404126</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">subjects (content of works)</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -2406,7 +2194,7 @@
 					<source_node>display:DR/DisplayRecord/field_string[@label="Image Accession Number"]</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E22_Man-Made_Object</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">photo</arg>
 								<arg name="id" type="xpath">../field_string[@label="Image Accession Number"]/substring(@value,1,string-length(@value)-2)</arg>
@@ -2447,7 +2235,7 @@
 					<source_node>display:DR/DisplayRecord/field_string[@label="Image Accession Number"]</source_node>
 					<target_node>
 						<entity>
-							<type>crmdig:D1_Digital_Object</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">digital_object</arg>
 								<arg name="id" type="xpath">../field_string[@label="Image Accession Number"]/@value</arg>
@@ -2496,7 +2284,7 @@
 					<source_node>display:DR/DisplayRecord/field_string[@label="Image Accession Number"]</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E22_Man-Made_Object</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">photo</arg>
 								<arg name="id" type="xpath">../field_string[@label="Image Accession Number"]/@value</arg>
@@ -2800,18 +2588,18 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>../field_lookup[@label="Image Associated Name"]</relation>
+						<relation>../field_lookup[@label="Image Associated Name"]/linkedField</relation>
 					</source_relation>
 					<target_relation>
 						<if>
-							<exists>linkedField/@id</exists>
+							<exists>@id</exists>
 						</if>
 						<relationship>crm:P108i_was_produced_by</relationship>
 						<entity>
 							<type>crm:E12_Production</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../field_string[@label="Image Accession Number"]/substring(@value,1,string-length(@value)-2)</arg>
+								<arg name="resourceId" type="xpath">../../field_string[@label="Image Accession Number"]/substring(@value,1,string-length(@value)-2)</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
@@ -2819,29 +2607,14 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>../field_lookup[@label="Image Associated Name"]</source_node>
+					<source_node>../field_lookup[@label="Image Associated Name"]/linkedField</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E39_Actor</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">linkedField/@id</arg>
+								<arg name="id" type="xpath">@id</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">linkedField/@preferredTerm</arg>
-							</label_generator>
-							<additional>
-								<relationship>owl:sameAs</relationship>
-								<entity>
-									<type>crm:E39_Actor</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="xpath">linkedField/@uri</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="xpath">linkedField/@preferredTerm</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -3730,9 +3503,9 @@
 					<target_node>
 						<entity>
 							<type>crm:E73_Information_Object</type>
-								<instance_generator name="IIIF_Json_Generator">
-                                    <arg name="id" type="xpath">.</arg>
-								</instance_generator>
+							<instance_generator name="IIIF_Json_Generator">
+								<arg name="id" type="xpath">.</arg>
+							</instance_generator>
 						</entity>
 					</target_node>
 				</range>
@@ -4078,18 +3851,18 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>../field_lookup[@label="Image Associated Name"]</relation>
+						<relation>../field_lookup[@label="Image Associated Name"]/linkedField</relation>
 					</source_relation>
 					<target_relation>
 						<if>
-							<exists>linkedField/@id</exists>
+							<exists>@id</exists>
 						</if>
 						<relationship>crm:P108i_was_produced_by</relationship>
 						<entity>
 							<type>crm:E12_Production</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../field_string[@label="Image Accession Number"]/@value</arg>
+								<arg name="resourceId" type="xpath">../../field_string[@label="Image Accession Number"]/@value</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
@@ -4097,29 +3870,14 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>../field_lookup[@label="Image Associated Name"]</source_node>
+					<source_node>../field_lookup[@label="Image Associated Name"]/linkedField</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E39_Actor</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">linkedField/@id</arg>
+								<arg name="id" type="xpath">@id</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">linkedField/@preferredTerm</arg>
-							</label_generator>
-							<additional>
-								<relationship>owl:sameAs</relationship>
-								<entity>
-									<type>crm:E39_Actor</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="xpath">linkedField/@uri</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="xpath">linkedField/@preferredTerm</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -4966,15 +4724,18 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>../field_lookup[@label="Image Associated Name"]</relation>
+						<relation>../field_lookup[@label="Image Associated Name"]/linkedField</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<exists>@id</exists>
+						</if>
 						<relationship>crmdig:L1i_was_digitized_by</relationship>
 						<entity>
 							<type>crmdig:D2_Digitization_Process</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../field_string[@label="Image Accession Number"]/@value</arg>
+								<arg name="resourceId" type="xpath">../../field_string[@label="Image Accession Number"]/@value</arg>
 								<arg name="eventType" type="constant">digitization</arg>
 							</instance_generator>
 						</entity>
@@ -4982,29 +4743,14 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>../field_lookup[@label="Image Associated Name"]</source_node>
+					<source_node>../field_lookup[@label="Image Associated Name"]/linkedField</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E39_Actor</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">linkedField/@id</arg>
+								<arg name="id" type="xpath">@id</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">linkedField/@preferredTerm</arg>
-							</label_generator>
-							<additional>
-								<relationship>owl:sameAs</relationship>
-								<entity>
-									<type>crm:E39_Actor</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="xpath">linkedField/@uri</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="xpath">linkedField/@preferredTerm</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -5664,7 +5410,6 @@
 		</mapping>
 		
 		<mapping namedgraph="graph">
-
 			<domain>
 				<source_node>//ssw:Work/Agents/Agent</source_node>
 				<target_node>
@@ -6430,7 +6175,7 @@
 							<entity>
 								<type>custom:Namedgraph</type>
 								<instance_generator name="URIorUUID">
-									<arg name="text">string-join((@uri,"graph"),'/')</arg>
+									<arg name="text">string-join((linkedField/@uri,"graph"),'/')</arg>
 								</instance_generator>
 								<additional>
 									<relationship>custom:has_provider</relationship>
@@ -6467,14 +6212,14 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>@uri</relation>
+						<relation>linkedField/@uri</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>owl:sameAs</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>@uri</source_node>
+					<source_node>linkedField/@uri</source_node>
 					<target_node>
 						<entity>
 							<type>crm:E57_Material</type>
@@ -6618,6 +6363,400 @@
 					</entity>
 				</target_node>
 			</domain>
-		</mapping>		
+		</mapping>
+		
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>//ssw:Work/Rights/Right/@rightholder</source_node>
+				<target_node>
+                   <entity>
+						<type>crm:E39_Actor</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">actor</arg>
+							<arg name="id" type="xpath">../@rightholder</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">../@rightholder</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">ITatti</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">I Tatti</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">actor</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">../@rightholder</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">ITatti</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">I Tatti</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">SharedShelf</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">SharedShelf</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>//ssw:Work/Subjects/Subject</source_node>
+				<target_node>
+                   	<entity>
+						<type>crm:E36_Visual_Item</type>
+						<instance_generator name="URIwithTypeAndId">
+							<arg name="type" type="constant">subject</arg>
+							<arg name="id" type="xpath">@id</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">@term</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">ITatti</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">I Tatti</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="namedgraph">
+									<arg name="type" type="constant">subject</arg>
+									<arg name="id" type="xpath">@id</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">ITatti</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">I Tatti</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">SharedShelf</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">SharedShelf</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIorUUID">
+									<arg name="text" type="constant">http://vocab.getty.edu/aat/300404126</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">subjects (content of works)</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>@uri</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<not>
+								<if>
+									<equals value="associated names">../@type_lkup</equals>
+								</if>
+							</not>
+						</if>
+						<relationship>owl:sameAs</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>@uri</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E36_Visual_Item</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">.</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">../@term</arg>
+							</label_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>@type_lkup</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="associated names">.</equals>
+						</if>
+						<relationship>crm:P138_represents</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>@type_lkup</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">../@id</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>//ssw:Work/Subjects/Subject/@type_lkup</source_node>
+				<target_node>
+					<if>
+						<equals value="associated names">.</equals>
+					</if>
+                   	<entity>
+						<type>crm:E21_Person</type>
+						<instance_generator name="URIwithTypeAndId">
+							<arg name="type" type="constant">actor</arg>
+							<arg name="id" type="xpath">../@id</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">../@term</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">ITatti</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">I Tatti</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="namedgraph">
+									<arg name="type" type="constant">actor</arg>
+									<arg name="id" type="xpath">../@id</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">ITatti</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">I Tatti</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">SharedShelf</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">SharedShelf</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../@uri</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>owl:sameAs</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../@uri</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E21_Person</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">.</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">../@term</arg>
+							</label_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>//ssw:Work/display:DR/DisplayRecord/field_lookup[@label="Image Associated Name"]/linkedField</source_node>
+				<target_node>
+                   	<entity>
+						<type>crm:E39_Actor</type>
+						<instance_generator name="URIwithTypeAndId">
+							<arg name="type" type="constant">actor</arg>
+							<arg name="id" type="xpath">@id</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">@preferredTerm</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">ITatti</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">I Tatti</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="namedgraph">
+									<arg name="type" type="constant">actor</arg>
+									<arg name="id" type="xpath">@id</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">ITatti</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">I Tatti</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">SharedShelf</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">SharedShelf</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>@uri</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>owl:sameAs</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>@uri</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E39_Actor</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">.</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">../@preferredTerm</arg>
+							</label_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+		</mapping>
+
 	</mappings>
 </x3ml>
