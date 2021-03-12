@@ -38,6 +38,18 @@
 								</instance_generator>
 							</entity>
 						</additional>
+						<additional>
+							<relationship>custom:consists_of</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGeneratorPlace">
+									<arg name="type" type="constant">place</arg>
+									<arg name="hierarchy" type="xpath">.</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">../../Name/text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+							</entity>
+						</additional>
 					</entity>
 				</target_node>
 			</domain>
@@ -330,68 +342,12 @@
 					<source_node>Name</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E53_Place</type>
+							<type>custom:noType</type>
 							<instance_generator name="PlaceURIwithType">
 								<arg name="type" type="constant">place</arg>
 								<arg name="resourceId" type="xpath">../Institution_ID/text()</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>owl:sameAs</relationship>
-								<entity>
-									<type>crm:E53_Place</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="xpath">../Geonames/text()</arg>
-									</instance_generator>
-									<additional>
-									<relationship>crm:P2_has_type</relationship>
-										<entity>
-											<type>crm:E55_Type</type>
-											<instance_generator name="URIwithType">
-												<arg name="type" type="constant">type</arg>
-												<arg name="id" type="constant">Geonames_URI</arg>
-											</instance_generator>
-											<label_generator name="Literal">
-												<arg name="text" type="constant">Geonames URI</arg>
-											</label_generator>
-										</entity>
-									</additional>
-								</entity>
-							</additional>
-							<additional>
-								<relationship>owl:sameAs</relationship>
-								<entity>
-									<type>crm:E53_Place</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="xpath">../VIAF_Geographic/text()</arg>
-									</instance_generator>
-									<additional>
-									<relationship>crm:P2_has_type</relationship>
-										<entity>
-											<type>crm:E55_Type</type>
-											<instance_generator name="URIwithType">
-												<arg name="type" type="constant">type</arg>
-												<arg name="id" type="constant">VIAF</arg>
-											</instance_generator>
-											<label_generator name="Literal">
-												<arg name="text" type="constant">VIAF ID</arg>
-											</label_generator>
-										</entity>
-									</additional>
-								</entity>
-							</additional>
-							<additional>
-								<relationship>crm:P67i_is_referred_to_by</relationship>
-								<entity>
-									<type>crm:E73_Information_Object</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="xpath">../Google_Maps/text()</arg>
-									</instance_generator>
-								</entity>	
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -461,6 +417,166 @@
 					</entity>
 				</target_node>
 			</domain>
+		</mapping>
+
+		<!-- institution place-->
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/dataroot/Institution/Name</source_node>
+				<target_node>
+                   	<entity>
+						<type>crm:E53_Place</type>
+						<instance_generator name="PlaceURIwithType">
+							<arg name="type" type="constant">place</arg>
+							<arg name="resourceId" type="xpath">../Institution_ID/text()</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">ITatti</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">I Tatti</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGeneratorPlace">
+									<arg name="type" type="constant">place</arg>
+									<arg name="hierarchy" type="xpath">../Institution_ID/text()</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">ITatti</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">I Tatti</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">FotoIndex</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">FotoIndex</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../Geonames</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>owl:sameAs</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../Geonames</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E53_Place</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+							<additional>
+							<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>crm:E55_Type</type>
+									<instance_generator name="URIwithType">
+										<arg name="type" type="constant">type</arg>
+										<arg name="id" type="constant">Geonames_URI</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="constant">Geonames URI</arg>
+									</label_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../VIAF_Geographic</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>owl:sameAs</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../VIAF_Geographic</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E53_Place</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+							<additional>
+							<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>crm:E55_Type</type>
+									<instance_generator name="URIwithType">
+										<arg name="type" type="constant">type</arg>
+										<arg name="id" type="constant">VIAF</arg>
+									</instance_generator>
+									<label_generator name="Literal">
+										<arg name="text" type="constant">VIAF ID</arg>
+									</label_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../Google_Maps</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P67i_is_referred_to_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../Google_Maps</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E73_Information_Object</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
 		</mapping>
 	</mappings>
 </x3ml>

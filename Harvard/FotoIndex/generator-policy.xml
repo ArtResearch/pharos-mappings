@@ -10,11 +10,18 @@
         </custom>
 </generator>
 
+<generator name="MultiHashingGeneratorPlace" prefix="prefix">
+	<custom generatorClass="gr.forth.MultiHashingGenerator">
+		<set-arg name="type"/>
+		<set-arg name="hierarchy"/>
+		<set-arg name="object_HASHED_CONTENTS"/>
+		<set-arg name="term_simple"/>
+	</custom>
+</generator>
 
 <generator name="namedgraph" prefix="prefix">
 	<pattern>{type}/{id}/graph</pattern>
 </generator>
-
 
 <generator name="URIwithType" prefix="prefix" shorten="yes">
 	<pattern>{type}/{id}</pattern>
@@ -200,4 +207,3 @@
 </generator>
 
 </generator_policy>
- 
