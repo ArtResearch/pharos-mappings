@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <generator_policy>
 
-
-
 <generator name="MultiHashingGenerator" prefix="prefix">
         <custom generatorClass="gr.forth.MultiHashingGenerator">
             <set-arg name="hierarchy"/>
 			<set-arg name="object_HASHED_CONTENTS"/>
 			<set-arg name="term_simple"/>
         </custom>
+</generator>
+
+<generator name="MultiHashingGeneratorVocab" prefix="vocab">
+	<custom generatorClass="gr.forth.MultiHashingGenerator">
+		<set-arg name="hierarchy"/>
+		<set-arg name="object_HASHED_CONTENTS"/>
+		<set-arg name="term_simple"/>
+	</custom>
 </generator>
 
 <generator name="IIIF_Generator" prefix="iiif_image">
@@ -204,4 +210,3 @@
 </generator>
 
 </generator_policy>
- 

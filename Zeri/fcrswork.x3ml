@@ -221,14 +221,14 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="LOCATION"]/PVCP[@etichetta="Province"]</relation>
+						<relation>PARAGRAFO[@etichetta="LOCATION"]/PVCP[@etichetta="District"]</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>fr:Work_from_Place</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PPARAGRAFO[@etichetta="LOCATION"]/PVCP[@etichetta="Province"]</source_node>
+					<source_node>PPARAGRAFO[@etichetta="LOCATION"]/PVCP[@etichetta="District"]</source_node>
 					<target_node>
 						<entity>
 							<type>fc:place</type>

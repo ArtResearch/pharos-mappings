@@ -1122,14 +1122,14 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="LOCATION"]/PVCP[@etichetta="Province"]</relation>
+						<relation>PARAGRAFO[@etichetta="LOCATION"]/PVCP[@etichetta="District"]</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P55_has_current_location</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="LOCATION"]/PVCP[@etichetta="Province"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="LOCATION"]/PVCP[@etichetta="District"]</source_node>
 					<target_node>
 						<entity>
 							<type>crm:E53_Place</type>
@@ -1889,7 +1889,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRVP[@etichetta="Province"]</relation>
+						<relation>PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRVP[@etichetta="District"]</relation>
 					</source_relation>
 					<target_relation>
 						<if>
@@ -1922,7 +1922,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRVP[@etichetta="Province"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRVP[@etichetta="District"]</source_node>
 					<target_node>
 						<entity>
 							<type>crm:E53_Place</type>

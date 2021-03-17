@@ -19,7 +19,7 @@
 		<mapping namedgraph="">
 		
 			<domain>
-				<source_node>//Work/Artwork_ID/text()</source_node>
+				<source_node>//FINAL_EXPORT_Work/Artwork_ID/text()</source_node>
 				<target_node>
 	
 					<entity>
@@ -28,7 +28,6 @@
 							<arg name="type" type="constant">itatti</arg>
 							<arg name="id" type="constant">namedgraphs</arg>
 						</instance_generator>
-						
 						<additional>
 							<relationship>custom:consists_of</relationship>
 							<entity>
@@ -39,17 +38,6 @@
 								</instance_generator>
 							</entity>
 						</additional>
-						<additional>
-							<relationship>custom:consists_of</relationship>
-							<entity>
-								<type>custom:Namedgraph</type>
-								<instance_generator name="namedgraph">
-									<arg name="type" type="constant">actor</arg>
-									<arg name="id" type="xpath">./../../P29/text()</arg>
-								</instance_generator>
-							</entity>
-						</additional>
-
 					</entity>
 				</target_node>
 			</domain>
@@ -59,7 +47,7 @@
 	
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>//Work</source_node>
+				<source_node>//FINAL_EXPORT_Work</source_node>
 				<target_node>
                     <entity>
                         <type>crm:E22_Man-Made_Object</type>
@@ -219,7 +207,7 @@
 					<source_node>E21_ID</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E21_Person</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">text()</arg>
@@ -260,7 +248,7 @@
 					<source_node>E39_ID</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E39_Actor</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">text()</arg>
@@ -408,7 +396,7 @@
 					<source_node>P28</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E39_Actor</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">text()</arg>
@@ -420,96 +408,5 @@
 			
 		</mapping>
 
-
-		<mapping namedgraph="graph">
-			<domain>
-				<source_node>//Work/P29</source_node>
-				<target_node>
-                    <entity>
-                        <type>crm:E39_Actor</type>
-						<instance_generator name="URIwithTypeAndId">
-							<arg name="type" type="constant">actor</arg>
-							<arg name="id" type="xpath">text()</arg>
-						</instance_generator>
-						<label_generator name="Literal">
-							<arg name="text" type="xpath">text()</arg>
-						</label_generator>
-						<additional>
-							<relationship>custom:has_provider</relationship>
-							<entity>
-								<type>custom:Provider</type>
-								<instance_generator name="URIwithTypeAndId">
-									<arg name="type" type="constant">source</arg>
-									<arg name="id" type="constant">ITatti</arg>
-								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">I Tatti</arg>
-								</label_generator>
-							</entity>
-						</additional>
-						<additional>
-							<relationship>crm:P67i_is_referred_to_by</relationship>
-							<entity>
-								<type>custom:Namedgraph</type>
-								<instance_generator name="namedgraph">
-									<arg name="type" type="constant">actor</arg>
-									<arg name="id" type="xpath">text()</arg>
-								</instance_generator>
-								<additional>
-									<relationship>custom:has_provider</relationship>
-									<entity>
-										<type>custom:Provider</type>
-										<instance_generator name="URIwithTypeAndId">
-											<arg name="type" type="constant">source</arg>
-											<arg name="id" type="constant">ITatti</arg>
-										</instance_generator>
-										<label_generator name="Literal">
-											<arg name="text" type="constant">I Tatti</arg>
-										</label_generator>
-									</entity>
-								</additional>
-							</entity>
-						</additional>
-						<additional>
-							<relationship>custom:has_provider</relationship>
-							<entity>
-								<type>custom:Provider</type>
-								<instance_generator name="URIwithTypeAndId">
-									<arg name="type" type="constant">source</arg>
-									<arg name="id" type="constant">FotoIndex</arg>
-								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">FotoIndex</arg>
-								</label_generator>
-							</entity>
-						</additional>
-						<additional>
-							<relationship>crm:P2_has_type</relationship>
-							<entity>
-								<type>crm:E55_Type</type>
-								<instance_generator name="URIorUUID">
-									<arg name="text" type="constant">http://vocab.getty.edu/aat/300264595</arg>
-								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">repositories (institutions)</arg>
-								</label_generator>
-								<additional>
-									<relationship>crm:P2_has_type</relationship>
-									<entity>
-										<type>crm:E55_Type</type>
-										<instance_generator name="URIorUUID">
-											<arg name="text" type="constant">https://pharos.artresearch.net/resource/vocab/maintype</arg>
-										</instance_generator>
-										<label_generator name="Literal">
-											<arg name="text" type="constant">main type</arg>
-										</label_generator>
-									</entity>
-								</additional>
-							</entity>
-						</additional>		
-					</entity>
-				</target_node>
-			</domain>
-		</mapping>
 	</mappings>
 </x3ml>

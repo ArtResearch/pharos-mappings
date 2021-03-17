@@ -15,11 +15,12 @@
 		<namespace prefix="iiif_json" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
 		<namespace prefix="fc" uri="https://pharos.artresearch.net/resource/fc/"/>
 		<namespace prefix="fr" uri="https://pharos.artresearch.net/resource/fr/"/>
+		<namespace prefix="geo" uri="http://sws.geonames.org/"/>
 	</namespaces>
 	<mappings>
 		<mapping>
 			<domain>
-				<source_node>//Work</source_node>
+				<source_node>//FINAL_EXPORT_Work</source_node>
 				<target_node>
                     <entity>
                         <type>fc:work</type>
@@ -189,7 +190,7 @@
 		<mapping>
 		
 			<domain>
-				<source_node>//Photograph</source_node>
+				<source_node>//FINAL_EXPORT_Photograph</source_node>
 				<target_node>
                     <entity>
 						<type>fc:photo</type>
@@ -248,7 +249,7 @@
 		
 		<mapping>
 			<domain>
-				<source_node>//Artist</source_node>
+				<source_node>//FINAL_EXPORT_Artist</source_node>
 				<target_node>
                    	<entity>
 						<type>fc:artist</type>
@@ -274,9 +275,10 @@
 					<target_node>
 						<entity>
 							<type>fc:place</type>
-							<instance_generator name="URIorUUID">
-								<arg name="text" type="xpath">text()</arg>
-							</instance_generator>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">place</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>	
 							<additional>
 								<relationship>fr:Place_of_Artist</relationship>
 								<entity>
@@ -295,7 +297,7 @@
 		
 		<mapping>
 			<domain>
-				<source_node>//Institution</source_node>
+				<source_node>//FINAL_EXPORT_Institution</source_node>
 				<target_node>
                    	<entity>
 						<type>fc:institution</type>
@@ -310,14 +312,14 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>Name</relation>
+						<relation>Intitution_city</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>fr:Institution_from_Place</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>Name</source_node>
+					<source_node>Intitution_city</source_node>
 					<target_node>
 						<entity>
 							<type>fc:place</type>
@@ -334,14 +336,14 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>WktObject</relation>
+						<relation>Institution_lat</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>fr:Institution_has_Wkt</relationship>
+						<relationship>fr:Institution_has_Lat</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>WktObject</source_node>
+					<source_node>Institution_lat</source_node>
 					<target_node>
 						<entity>
 							<type>rdfs:Literal</type>
@@ -352,6 +354,29 @@
 					</target_node>
 				</range>
 			</link>
-		</mapping>			
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>Institution_long</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>fr:Institution_has_Long</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>Institution_long</source_node>
+					<target_node>
+						<entity>
+							<type>rdfs:Literal</type>
+							<instance_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+		</mapping>
 	</mappings>
 </x3ml>

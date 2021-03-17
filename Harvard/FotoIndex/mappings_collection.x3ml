@@ -20,7 +20,7 @@
 		<mapping namedgraph="">
 		
 			<domain>
-				<source_node>//Collection/Collection_ID/text()</source_node>
+				<source_node>//FINAL_EXPORT_Collection/Collection_ID/text()</source_node>
 				<target_node>
 					<entity>
 						<type>custom:SourceNamedgraph</type>
@@ -28,6 +28,7 @@
 							<arg name="type" type="constant">itatti</arg>
 							<arg name="id" type="constant">namedgraphs</arg>
 						</instance_generator>
+						<!-- main collection graph -->
 						<additional>
 							<relationship>custom:consists_of</relationship>
 							<entity>
@@ -49,6 +50,16 @@
 								</instance_generator>
 							</entity>
 						</additional>
+						<additional>
+							<relationship>custom:consists_of</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="namedgraph">
+									<arg name="type" type="constant">collection</arg>
+									<arg name="id" type="xpath">../../VIT_Location/text()</arg>
+								</instance_generator>
+							</entity>
+						</additional>
 					</entity>
 				</target_node>
 			</domain>
@@ -57,7 +68,7 @@
 	
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>//Collection</source_node>
+				<source_node>//FINAL_EXPORT_Collection</source_node>
 				<target_node>
                    	<entity>
 						<type>crm:E78_Curated_Holding</type>
@@ -250,11 +261,34 @@
 					</target_node>
 				</range>
 			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>VIT_Location</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P46i_forms_part_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>VIT_Location</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">collection</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
 		</mapping>
 
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>//Collection/Box_Target_Metadata</source_node>
+				<source_node>//FINAL_EXPORT_Collection/Box_Target_Metadata</source_node>
 				<target_node>
                    	<entity>
 						<type>crm:E39_Actor</type>
@@ -319,5 +353,87 @@
 				</target_node>
 			</domain>
 		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>//FINAL_EXPORT_Collection/VIT_Location</source_node>
+				<target_node>
+                   	<entity>
+						<type>crm:E78_Curated_Holding</type>
+						<instance_generator name="URIwithTypeAndId">
+							<arg name="type" type="constant">collection</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>	
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">ITatti</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">I Tatti</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">actor</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">ITatti</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">I Tatti</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">FotoIndex</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">FotoIndex</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIwithType">
+									<arg name="type" type="constant">type</arg>
+									<arg name="id" type="constant">VIT_Location</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">VIT Location</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+		</mapping>
+
 	</mappings>
 </x3ml>

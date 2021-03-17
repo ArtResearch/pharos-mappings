@@ -19,7 +19,7 @@
 		<mapping namedgraph="">
 		
 			<domain>
-				<source_node>//Institution/Institution_ID/text()</source_node>
+				<source_node>//FINAL_EXPORT_Institution/Institution_ID/text()</source_node>
 				<target_node>
 	
 					<entity>
@@ -45,7 +45,7 @@
 								<instance_generator name="MultiHashingGeneratorPlace">
 									<arg name="type" type="constant">place</arg>
 									<arg name="hierarchy" type="xpath">.</arg>
-									<arg name="object_HASHED_CONTENTS" type="xpath">../../Name/text()</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">../../Intitution_city/text()</arg>
 									<arg name="term_simple" type="constant">graph</arg>
 								</instance_generator>
 							</entity>
@@ -58,14 +58,14 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>../../AAT_URI/text()</relation>
+						<relation>../../Institution_Type_URI/text()</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>custom:consists_of</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>../../AAT_URI/text()</source_node>
+					<source_node>../../Institution_Type_URI/text()</source_node>
 					<target_node>
 						<entity>
 							<type>custom:Namedgraph</type>
@@ -76,12 +76,104 @@
 					</target_node>
 				</range>
 			</link>	
-			
+
+			<!-- viaf -->
+			<link>
+				<path>
+					<source_relation>
+						<relation>../../VIAF_Corporate/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../../VIAF_Corporate/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text">string-join((.,"graph"),'/')</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<!-- wikidata -->
+			<link>
+				<path>
+					<source_relation>
+						<relation>../../Wikidata/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../../Wikidata/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text">string-join((.,"graph"),'/')</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>	
+
+			<!-- viaf -->
+			<link>
+				<path>
+					<source_relation>
+						<relation>../../VIAF_Personal/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../../VIAF_Personal/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text">string-join((.,"graph"),'/')</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>	
+
+			<!-- viaf -->
+			<link>
+				<path>
+					<source_relation>
+						<relation>../../VIAF_Geographic/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../../VIAF_Geographic/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text">string-join((.,"graph"),'/')</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>	
+
 		</mapping>	
 		
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>/dataroot/Institution</source_node>
+				<source_node>/dataroot/FINAL_EXPORT_Institution</source_node>
 				<target_node>
                    	<entity>
 						<type>crm:E39_Actor</type>
@@ -172,14 +264,14 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>AAT_URI</relation>
+						<relation>Institution_Type_URI</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P2_has_type</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>AAT_URI</source_node>
+					<source_node>Institution_Type_URI</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
@@ -204,23 +296,32 @@
 					<source_node>VIAF_Corporate</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E39_Actor</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIorUUID">
 								<arg name="text">text()</arg>
 							</instance_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
-										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="constant">VIAF</arg>
-									</instance_generator>
-										<label_generator name="Literal">
-										<arg name="text" type="constant">VIAF ID</arg>
-									</label_generator>
-								</entity>
-							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>Wikidata</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>owl:sameAs</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>Wikidata</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text">text()</arg>
+							</instance_generator>
 						</entity>
 					</target_node>
 				</range>
@@ -239,23 +340,10 @@
 					<source_node>VIAF_Personal</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E39_Actor</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIorUUID">
 								<arg name="text">text()</arg>
 							</instance_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
-										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="constant">VIAF</arg>
-									</instance_generator>
-										<label_generator name="Literal">
-										<arg name="text" type="constant">VIAF ID</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -332,14 +420,14 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>Name</relation>
+						<relation>Intitution_city</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P74_has_current_or_former_residence</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>Name</source_node>
+					<source_node>Intitution_city</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
@@ -356,7 +444,7 @@
 
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>/dataroot/Institution/AAT_URI</source_node>
+				<source_node>/dataroot/FINAL_EXPORT_Institution/Institution_Type_URI</source_node>
 				<target_node>
                    	<entity>
 						<type>crm:E55_Type</type>
@@ -414,6 +502,19 @@
 								</label_generator>
 							</entity>
 						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIwithType">
+									<arg name="type" type="constant">type</arg>
+									<arg name="id" type="constant">AAT</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">AAT ID</arg>
+								</label_generator>
+							</entity>
+						</additional>
 					</entity>
 				</target_node>
 			</domain>
@@ -422,7 +523,7 @@
 		<!-- institution place-->
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>/dataroot/Institution/Name</source_node>
+				<source_node>/dataroot/FINAL_EXPORT_Institution/Intitution_city</source_node>
 				<target_node>
                    	<entity>
 						<type>crm:E53_Place</type>
@@ -431,6 +532,9 @@
 							<arg name="resourceId" type="xpath">../Institution_ID/text()</arg>
 							<arg name="id" type="xpath">text()</arg>
 						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
@@ -499,23 +603,10 @@
 					<source_node>../Geonames</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E53_Place</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIorUUID">
 								<arg name="text" type="xpath">text()</arg>
 							</instance_generator>
-							<additional>
-							<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
-										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="constant">Geonames_URI</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">Geonames URI</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -534,23 +625,10 @@
 					<source_node>../VIAF_Geographic</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E53_Place</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIorUUID">
 								<arg name="text" type="xpath">text()</arg>
 							</instance_generator>
-							<additional>
-							<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
-										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="constant">VIAF</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">VIAF ID</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -577,6 +655,397 @@
 					</target_node>
 				</range>
 			</link>
+		</mapping>
+
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/dataroot/FINAL_EXPORT_Institution/VIAF_Corporate</source_node>
+				<target_node>
+                   	<entity>
+						<type>crm:E39_Actor</type>
+						<instance_generator name="URIorUUID">
+							<arg name="text">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">../Institution/text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">ITatti</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">I Tatti</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="URIorUUID">
+									<arg name="text">string-join((text(),"graph"),'/')</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">ITatti</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">I Tatti</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">FotoIndex</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">FotoIndex</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIwithType">
+									<arg name="type" type="constant">type</arg>
+									<arg name="id" type="constant">VIAF</arg>
+								</instance_generator>
+									<label_generator name="Literal">
+									<arg name="text" type="constant">VIAF ID</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/dataroot/FINAL_EXPORT_Institution/VIAF_Personal</source_node>
+				<target_node>
+                   	<entity>
+						<type>crm:E39_Actor</type>
+						<instance_generator name="URIorUUID">
+							<arg name="text">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">../Institution/text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">ITatti</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">I Tatti</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="URIorUUID">
+									<arg name="text">string-join((text(),"graph"),'/')</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">ITatti</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">I Tatti</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">FotoIndex</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">FotoIndex</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIwithType">
+									<arg name="type" type="constant">type</arg>
+									<arg name="id" type="constant">VIAF</arg>
+								</instance_generator>
+									<label_generator name="Literal">
+									<arg name="text" type="constant">VIAF ID</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/dataroot/FINAL_EXPORT_Institution/VIAF_Geographic</source_node>
+				<target_node>
+                   	<entity>
+						<type>crm:E53_Place</type>
+						<instance_generator name="URIorUUID">
+							<arg name="text" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">../Intitution_city/text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">ITatti</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">I Tatti</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="URIorUUID">
+									<arg name="text">string-join((text(),"graph"),'/')</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">ITatti</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">I Tatti</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">FotoIndex</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">FotoIndex</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIwithType">
+									<arg name="type" type="constant">type</arg>
+									<arg name="id" type="constant">VIAF</arg>
+								</instance_generator>
+									<label_generator name="Literal">
+									<arg name="text" type="constant">VIAF ID</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/dataroot/FINAL_EXPORT_Institution/Geonames</source_node>
+				<target_node>
+                   	<entity>
+						<type>crm:E53_Place</type>
+						<instance_generator name="URIorUUID">
+							<arg name="text" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">../Intitution_city/text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">ITatti</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">I Tatti</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="URIorUUID">
+									<arg name="text">string-join((text(),"graph"),'/')</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">ITatti</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">I Tatti</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">FotoIndex</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">FotoIndex</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIwithType">
+									<arg name="type" type="constant">type</arg>
+									<arg name="id" type="constant">Geonames_URI</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">Geonames URI</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/dataroot/FINAL_EXPORT_Institution/Wikidata</source_node>
+				<target_node>
+                   	<entity>
+						<type>crm:E39_Actor</type>
+						<instance_generator name="URIorUUID">
+							<arg name="text">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">../Institution/text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">ITatti</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">I Tatti</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="URIorUUID">
+									<arg name="text">string-join((text(),"graph"),'/')</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">ITatti</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">I Tatti</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">FotoIndex</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">FotoIndex</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIwithType">
+									<arg name="type" type="constant">type</arg>
+									<arg name="id" type="constant">Wikidata</arg>
+								</instance_generator>
+									<label_generator name="Literal">
+									<arg name="text" type="constant">Wikidata ID</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
 		</mapping>
 	</mappings>
 </x3ml>

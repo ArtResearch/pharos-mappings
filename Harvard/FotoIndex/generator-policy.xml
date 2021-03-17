@@ -199,6 +199,9 @@
  <pattern>{text}</pattern>
 </generator>
  
+<generator name="GeonamesURI" prefix="geo">
+	<pattern>{id}</pattern>
+</generator>
  
 <generator name="URIorUUID">
 	<custom generatorClass="gr.forth.URIorUUID">

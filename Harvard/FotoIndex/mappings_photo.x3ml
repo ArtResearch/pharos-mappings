@@ -20,9 +20,8 @@
 		<mapping namedgraph="">
 		
 			<domain>
-				<source_node>//Photograph/Photograph_ID/text()</source_node>
+				<source_node>//FINAL_EXPORT_Photograph/Photograph_ID/text()</source_node>
 				<target_node>
-	
 					<entity>
 						<type>custom:SourceNamedgraph</type>
 						<instance_generator name="namedgraph">
@@ -39,26 +38,6 @@
 								</instance_generator>
 							</entity>
 						</additional>
-						<additional>
-							<relationship>custom:consists_of</relationship>
-							<entity>
-								<type>custom:Namedgraph</type>
-								<instance_generator name="namedgraph">
-									<arg name="type" type="constant">collection</arg>
-									<arg name="id" type="xpath">../../Coll_ID/text()</arg>
-								</instance_generator>
-							</entity>
-						</additional>
-						<additional>
-							<relationship>custom:consists_of</relationship>
-							<entity>
-								<type>custom:Namedgraph</type>
-								<instance_generator name="namedgraph">
-									<arg name="type" type="constant">work</arg>
-									<arg name="id" type="xpath">../../Artwork_ID/text()</arg>
-								</instance_generator>
-							</entity>
-						</additional>
 					</entity>
 				</target_node>
 			</domain>
@@ -67,7 +46,7 @@
 
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>//Photograph</source_node>
+				<source_node>//FINAL_EXPORT_Photograph</source_node>
 				<target_node>
 					  <entity>
 						<type>crm:E22_Man-Made_Object</type>
@@ -338,7 +317,7 @@
 						<entity>
 							<type>crm:E73_Information_Object</type>
 							<instance_generator name="URIorUUID">
-								<arg name="text" type="xpath">../Recto_Image_JSON/text()</arg>
+								<arg name="text" type="xpath">../Recto_Image_IIIF_URI_Manifest/text()</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -401,14 +380,14 @@
 						<entity>
 							<type>crm:E73_Information_Object</type>
 							<instance_generator name="URIorUUID">
-								<arg name="text" type="xpath">../Verso_Image_JSON/text()</arg>
+								<arg name="text" type="xpath">../Verso_Image_IIIF_URI_Manifest/text()</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
 				</range>
 			</link>	 
 
-			<link> 
+			<link>
 				<path>
 					<source_relation>
 						<relation>Primary_Work</relation>
@@ -441,7 +420,7 @@
 		
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>//Photograph/Artwork_ID</source_node>
+				<source_node>//FINAL_EXPORT_Photograph/Artwork_ID</source_node>
 				<target_node>
                     <entity>
                         <type>crm:E22_Man-Made_Object</type>
@@ -449,55 +428,6 @@
 						    <arg name="type" type="constant">work</arg>
 							<arg name="id" type="xpath">text()</arg>
 						</instance_generator>
-						<additional>
-							<relationship>custom:has_provider</relationship>
-							<entity>
-								<type>custom:Provider</type>
-								<instance_generator name="URIwithTypeAndId">
-									<arg name="type" type="constant">source</arg>
-									<arg name="id" type="constant">ITatti</arg>
-								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">I Tatti</arg>
-								</label_generator>
-							</entity>
-						</additional>
-						<additional>
-							<relationship>crm:P67i_is_referred_to_by</relationship>
-							<entity>
-								<type>custom:Namedgraph</type>
-								<instance_generator name="namedgraph">
-									<arg name="type" type="constant">work</arg>
-									<arg name="id" type="xpath">text()</arg>
-								</instance_generator>
-								<additional>
-									<relationship>custom:has_provider</relationship>
-									<entity>
-										<type>custom:Provider</type>
-										<instance_generator name="URIwithTypeAndId">
-											<arg name="type" type="constant">source</arg>
-											<arg name="id" type="constant">ITatti</arg>
-										</instance_generator>
-										<label_generator name="Literal">
-											<arg name="text" type="constant">I Tatti</arg>
-										</label_generator>
-									</entity>
-								</additional>
-							</entity>
-						</additional>
-						<additional>
-							<relationship>custom:has_provider</relationship>
-							<entity>
-								<type>custom:Provider</type>
-								<instance_generator name="URIwithTypeAndId">
-									<arg name="type" type="constant">source</arg>
-									<arg name="id" type="constant">FotoIndex</arg>
-								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">FotoIndex</arg>
-								</label_generator>
-							</entity>
-						</additional>
 						<additional>
 							<relationship>crm:P138i_is_represented_by</relationship>
 							<entity>
@@ -509,7 +439,7 @@
 								<additional>
 									<relationship>crm:P128i_is_carried_by</relationship>
 									<entity>
-										<type>crm:E22_Man-Made_Object</type>
+										<type>custom:noType</type>
 										<instance_generator name="URIwithTypeAndId">
 											<arg name="type" type="constant">photo</arg>
 											<arg name="id" type="xpath">../Photograph_ID/text()</arg>
@@ -522,75 +452,6 @@
 				</target_node>
 			</domain>
 		</mapping>
-
-
-
-		<mapping namedgraph="graph">
-			<domain>
-				<source_node>//Photograph/Coll_ID</source_node>
-				<target_node>
-                    <entity>
-                        <type>crm:E78_Curated_Holding</type>
-						<instance_generator name="URIwithTypeAndId">
-							<arg name="type" type="constant">collection</arg>
-							<arg name="id" type="xpath">text()</arg>
-						</instance_generator>
-						<label_generator name="Literal">
-							<arg name="text" type="xpath">text()</arg>
-						</label_generator>
-						<additional>
-							<relationship>custom:has_provider</relationship>
-							<entity>
-								<type>custom:Provider</type>
-								<instance_generator name="URIwithTypeAndId">
-									<arg name="type" type="constant">source</arg>
-									<arg name="id" type="constant">ITatti</arg>
-								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">I Tatti</arg>
-								</label_generator>
-							</entity>
-						</additional>
-						<additional>
-							<relationship>crm:P67i_is_referred_to_by</relationship>
-							<entity>
-								<type>custom:Namedgraph</type>
-								<instance_generator name="namedgraph">
-									<arg name="type" type="constant">collection</arg>
-									<arg name="id" type="xpath">text()</arg>
-								</instance_generator>
-								<additional>
-									<relationship>custom:has_provider</relationship>
-									<entity>
-										<type>custom:Provider</type>
-										<instance_generator name="URIwithTypeAndId">
-											<arg name="type" type="constant">source</arg>
-											<arg name="id" type="constant">ITatti</arg>
-										</instance_generator>
-										<label_generator name="Literal">
-											<arg name="text" type="constant">I Tatti</arg>
-										</label_generator>
-									</entity>
-								</additional>
-							</entity>
-						</additional>
-						<additional>
-							<relationship>custom:has_provider</relationship>
-							<entity>
-								<type>custom:Provider</type>
-								<instance_generator name="URIwithTypeAndId">
-									<arg name="type" type="constant">source</arg>
-									<arg name="id" type="constant">FotoIndex</arg>
-								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">FotoIndex</arg>
-								</label_generator>
-							</entity>
-						</additional>
-					</entity>
-				</target_node>
-			</domain>
-		</mapping>
-
+		
 	</mappings>
 </x3ml>

@@ -14,13 +14,14 @@
 		<namespace prefix="iiif_image" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
 		<namespace prefix="iiif_json" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
 		<namespace prefix="skos" uri="http://www.w3.org/2004/02/skos/core#"/>
+		<namespace prefix="geo" uri="http://sws.geonames.org/"/>
 	</namespaces>
 	<mappings>
 	
 		<mapping namedgraph="">
 		
 			<domain>
-				<source_node>//Artist/Artist_ID/text()</source_node>
+				<source_node>//FINAL_EXPORT_Artist/Artist_ID/text()</source_node>
 				<target_node>
 	
 					<entity>
@@ -29,7 +30,6 @@
 							<arg name="type" type="constant">itatti</arg>
 							<arg name="id" type="constant">namedgraphs</arg>
 						</instance_generator>
-						
 						<additional>
 							<relationship>custom:consists_of</relationship>
 							<entity>
@@ -44,13 +44,124 @@
 					</entity>
 				</target_node>
 			</domain>
-			
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../../Geonames_URI/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../../Geonames_URI/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="GeonamesURI">
+								<arg name="id" type="xpath">string-join((../../Geonames_Place_ID/text(),"graph"),'/')</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../../Geonames_Place_ID/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../../Geonames_Place_ID/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="namedgraph">
+								<arg name="type" type="constant">place</arg>
+								<arg name="id" type="xpath">.</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../../ULAN_Artist_ID/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../../ULAN_Artist_ID/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">string-join((.,"graph"),'/')</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../../Wikdata_URI/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../../Wikdata_URI/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">string-join((.,"graph"),'/')</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../../ULAN_URI_Geographic/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../../ULAN_URI_Geographic/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">string-join((.,"graph"),'/')</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
 		</mapping>	
 	
 	
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>//Artist</source_node>
+				<source_node>//FINAL_EXPORT_Artist</source_node>
 				<target_node>
 					<if>
 						<not>
@@ -117,27 +228,53 @@
 								</label_generator>
 							</entity>
 						</additional>
-						<additional>
-							<relationship>owl:sameAs</relationship>
-							<entity>
-								<type>crm:E39_Actor</type>
-								<instance_generator name="URI">
-									<arg name="text">ULAN_Artist_ID/text()</arg>
-								</instance_generator>
-							</entity>
-						</additional>
-						<additional>
-							<relationship>owl:sameAs</relationship>
-							<entity>
-								<type>crm:E39_Actor</type>
-								<instance_generator name="URI">
-									<arg name="text">Wikdata_URI/text()</arg>
-								</instance_generator>
-							</entity>
-						</additional>
 					</entity>
 				</target_node>
 			</domain>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>ULAN_Artist_ID</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>owl:sameAs</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>ULAN_Artist_ID</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>Wikdata_URI</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>owl:sameAs</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>Wikdata_URI</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
 			
 			<link> 
 				<path>
@@ -255,7 +392,7 @@
 		
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>//Artist</source_node>
+				<source_node>//FINAL_EXPORT_Artist</source_node>
 				<target_node>
 					<if>
 						<exists>Uknown_Artist/text()</exists>
@@ -331,19 +468,33 @@
 								</label_generator>
 							</entity>
 						</additional>
-						<additional>
-							<relationship>owl:sameAs</relationship>
-							<entity>
-								<type>crm:E39_Actor</type>
-								<instance_generator name="URI">
-									<arg name="text">ULAN_URI_Geographic/text()</arg>
-								</instance_generator>
-							</entity>
-						</additional>
 					</entity>
 				</target_node>
 			</domain>
 			
+			<link>
+				<path>
+					<source_relation>
+						<relation>ULAN_URI_Geographic</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>owl:sameAs</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>ULAN_URI_Geographic</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+
 			<link> 
 				<path>
 					<source_relation>
@@ -415,38 +566,412 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>Geonames_URI</relation>
+						<relation>Geonames_Place_ID</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P74_has_current_or_former_residence</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>Geonames_URI</source_node>
+					<source_node>Geonames_Place_ID</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E53_Place</type>
-							<instance_generator name="URIorUUID">
-								<arg name="text" type="xpath">text()</arg>
-							</instance_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
-										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="constant">Geonames_URI</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">Geonames URI</arg>
-									</label_generator>
-								</entity>
-							</additional>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">place</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>	
 						</entity>
 					</target_node>
 				</range>
 			</link>
-			
+
 		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>//FINAL_EXPORT_Artist/Geonames_Place_ID</source_node>
+				<target_node>
+                   	<entity>
+						<type>crm:E53_Place</type>
+						<instance_generator name="URIwithTypeAndId">
+							<arg name="type" type="constant">place</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>	
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">ITatti</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">I Tatti</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="namedgraph">
+									<arg name="type" type="constant">place</arg>
+									<arg name="id" type="xpath">text()</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">ITatti</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">I Tatti</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">FotoIndex</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">FotoIndex</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>owl:sameAs</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="GeonamesURI">
+									<arg name="id" type="xpath">../Geonames_Place_ID/text()</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>//FINAL_EXPORT_Artist/Geonames_URI</source_node>
+				<target_node>
+                   	<entity>
+						<type>crm:E53_Place</type>
+						<instance_generator name="GeonamesURI">
+							<arg name="id" type="xpath">../Geonames_Place_ID/text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">ITatti</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">I Tatti</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="GeonamesURI">
+									<arg name="id" type="xpath">string-join((../Geonames_Place_ID/text(),"graph"),'/')</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">ITatti</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">I Tatti</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">FotoIndex</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">FotoIndex</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIwithType">
+									<arg name="type" type="constant">type</arg>
+									<arg name="id" type="constant">Geonames_URI</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">Geonames URI</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>//FINAL_EXPORT_Artist/ULAN_Artist_ID</source_node>
+				<target_node>
+                   	<entity>
+						<type>crm:E21_Person</type>
+						<instance_generator name="URIorUUID">
+							<arg name="text">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">../Artist_Name/text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">ITatti</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">I Tatti</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="URIorUUID">
+									<arg name="text" type="xpath">string-join((text(),"graph"),'/')</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">ITatti</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">I Tatti</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">FotoIndex</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">FotoIndex</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIwithType">
+									<arg name="type" type="constant">type</arg>
+									<arg name="id" type="constant">ULAN</arg>
+								</instance_generator>
+									<label_generator name="Literal">
+									<arg name="text" type="constant">ULAN ID</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>//FINAL_EXPORT_Artist/Wikdata_URI</source_node>
+				<target_node>
+                   	<entity>
+						<type>crm:E21_Person</type>
+						<instance_generator name="URIorUUID">
+							<arg name="text">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">../Artist_Name/text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">ITatti</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">I Tatti</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="URIorUUID">
+									<arg name="text" type="xpath">string-join((text(),"graph"),'/')</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">ITatti</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">I Tatti</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">FotoIndex</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">FotoIndex</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIwithType">
+									<arg name="type" type="constant">type</arg>
+									<arg name="id" type="constant">Wikidata</arg>
+								</instance_generator>
+									<label_generator name="Literal">
+									<arg name="text" type="constant">Wikidata ID</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>//FINAL_EXPORT_Artist/ULAN_URI_Geographic</source_node>
+				<target_node>
+                   	<entity>
+						<type>crm:E39_Actor</type>
+						<instance_generator name="URIorUUID">
+							<arg name="text">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">../Artist_Name/text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">ITatti</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">I Tatti</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="URIorUUID">
+									<arg name="text" type="xpath">string-join((text(),"graph"),'/')</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">ITatti</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">I Tatti</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">FotoIndex</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">FotoIndex</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIwithType">
+									<arg name="type" type="constant">type</arg>
+									<arg name="id" type="constant">ULAN</arg>
+								</instance_generator>
+									<label_generator name="Literal">
+									<arg name="text" type="constant">ULAN ID</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+		</mapping>
+
 	</mappings>
 </x3ml>
