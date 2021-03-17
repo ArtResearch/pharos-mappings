@@ -545,6 +545,102 @@
 				</range>
 			</link>
 
+			<link>
+				<path>
+					<source_relation>
+						<relation>SCHEDA/PARAGRAFO[@etichetta="BIBLIOGRAPHY"]/RIPETIZIONE/BIBX[@etichetta="Type"]/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>SCHEDA/PARAGRAFO[@etichetta="BIBLIOGRAPHY"]/RIPETIZIONE/BIBX[@etichetta="Type"]/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGenerator">
+								<arg name="hierarchy" type="constant">type</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			<!-- bib actor -->
+			<link>
+				<path>
+					<source_relation>
+						<relation>SCHEDA/PARAGRAFO[@etichetta="BIBLIOGRAPHY"]/RIPETIZIONE/BIBA[@etichetta="Author"]/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>SCHEDA/PARAGRAFO[@etichetta="BIBLIOGRAPHY"]/RIPETIZIONE/BIBA[@etichetta="Author"]/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGenerator">
+								<arg name="hierarchy" type="constant">actor</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<!-- info obj -->
+			<link>
+				<path>
+					<source_relation>
+						<relation>SCHEDA/PARAGRAFO[@etichetta="BIBLIOGRAPHY"]/RIPETIZIONE/BIBG[@etichetta="Title"]/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>SCHEDA/PARAGRAFO[@etichetta="BIBLIOGRAPHY"]/RIPETIZIONE/BIBG[@etichetta="Title"]/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGenerator">
+								<arg name="hierarchy" type="constant">bibliography</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>SCHEDA/ALLEGATI[@etichetta="Attached documents"]/FOTO/@fotoID</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>SCHEDA/ALLEGATI[@etichetta="Attached documents"]/FOTO/@fotoID</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="namedgraph">
+								<arg name="type" type="constant">photo</arg>
+								<arg name="id" type="xpath">.</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
 		</mapping>
 
 
@@ -2586,54 +2682,23 @@
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P67i_is_referred_to_by</relationship>
-						<entity>
-							<type>crm:E73_Information_Object</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">bibliography</arg>
-								<arg name="id" type="xpath">text()</arg>
-							</instance_generator>
-							<label_generator name="BiblioConcatenated">
-								<arg name="Title" type="xpath">text()</arg>
-								<arg name="Type" type="xpath">../BIBX[@etichetta="Type"]/text()</arg>
-								<arg name="Author" type="xpath">../BIBA[@etichetta="Author"]/text()</arg>
-								<arg name="Date" type="xpath">../BIBD[@etichetta="Publication date"]/text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300435419</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">bibliography (category)</arg>
-									</label_generator>
-								</entity>
-							</additional>
-						</entity>
-						<relationship>crm:P1_is_identified_by</relationship>
 					</target_relation>
 				</path>
 				<range>
 					<source_node>PARAGRAFO[@etichetta="BIBLIOGRAPHY"]/RIPETIZIONE/BIBG[@etichetta="Title"]</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E41_Appellation</type>
-							<instance_generator name="IdentifierURI">
-								<arg name="subject_type" type="constant">bibliography</arg>
-								<arg name="subject_id" type="xpath">text()</arg>
-								<arg name="identifier_type" type="constant">appellation</arg>
-								<arg name="identifier_id" type="xpath">text()</arg>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">bibliography</arg>
+								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
 						</entity>
 					</target_node>
 				</range>
 			</link>
 			
-			<link> 
+			<!-- <link> 
 				<path>
 					<source_relation>
 						<relation>PARAGRAFO[@etichetta="BIBLIOGRAPHY"]/RIPETIZIONE/BIBX[@etichetta="Type"]</relation>
@@ -2641,7 +2706,7 @@
 					<target_relation>
 						<relationship>crm:P67i_is_referred_to_by</relationship>
 						<entity>
-							<type>crm:E73_Information_Object</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">bibliography</arg>
 								<arg name="id" type="xpath">../BIBG[@etichetta="Title"]/text()</arg>
@@ -2654,20 +2719,17 @@
 					<source_node>PARAGRAFO[@etichetta="BIBLIOGRAPHY"]/RIPETIZIONE/BIBX[@etichetta="Type"]</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E55_Type</type>
-							<instance_generator name="URIwithTypeAndId">
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
 						</entity>
 					</target_node>
 				</range>
-			</link>
+			</link> -->
 
-			<link> 
+			<!-- <link> 
 				<path>
 					<source_relation>
 						<relation>PARAGRAFO[@etichetta="BIBLIOGRAPHY"]/RIPETIZIONE/BIBA[@etichetta="Author"]</relation>
@@ -2697,20 +2759,17 @@
 					<source_node>PARAGRAFO[@etichetta="BIBLIOGRAPHY"]/RIPETIZIONE/BIBA[@etichetta="Author"]</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E39_Actor</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
 						</entity>
 					</target_node>
 				</range>
-			</link>
+			</link> -->
 			
-			<link> 
+			<!-- <link> 
 				<path>
 					<source_relation>
 						<relation>PARAGRAFO[@etichetta="BIBLIOGRAPHY"]/RIPETIZIONE/BIBD[@etichetta="Publication date"]</relation>
@@ -2756,7 +2815,7 @@
 						</entity>
 					</target_node>
 				</range>
-			</link>
+			</link> -->
 
 			<link> 
 				<path>
@@ -2791,14 +2850,11 @@
 							<additional>
 								<relationship>crm:P106i_forms_part_of</relationship>
 								<entity>
-									<type>crm:E73_Information_Object</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIwithType">
 										<arg name="type" type="constant">bibliography</arg>
 										<arg name="id" type="xpath">../BIBG[@etichetta="Title"]/text()</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="xpath">../BIBG[@etichetta="Title"]/text()</arg>
-									</label_generator>
 								</entity>
 							</additional>	
 						</entity>
@@ -2838,11 +2894,11 @@
 								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]</arg>
 							</instance_generator>
 							<additional>
-								<relationship>crm:P128i_is_carried_by</relationship>
+								<relationship>crm:P165i_is_incorporated_in</relationship>
 								<entity>
-									<type>crm:E22_Man-Made_Object</type>
+									<type>crm:D1_Digital_Object</type>
 									<instance_generator name="URIwithTypeAndId">
-										<arg name="type" type="constant">photo</arg>
+										<arg name="type" type="constant">digital_object</arg>
 										<arg name="id" type="xpath">@fotoID</arg>
 									</instance_generator>
 									<additional>
@@ -2850,40 +2906,28 @@
 										<entity>
 											<type>crm:E55_Type</type>
 											<instance_generator name="URIorUUID">
-												<arg name="text" type="constant">http://vocab.getty.edu/aat/300046300</arg>
+												<arg name="text" type="constant">http://vocab.getty.edu/aat/300417379</arg>
 											</instance_generator>
 											<label_generator name="Literal">
-												<arg name="text" type="constant">photographs</arg>
+												<arg name="text" type="constant">digital photographs</arg>
 											</label_generator>
 										</entity>
 									</additional>
 								</entity>
 							</additional>
 						</entity>
-						<relationship>crm:P165i_is_incorporated_in</relationship>
+						<relationship>crm:P128i_is_carried_by</relationship>
 					</target_relation>
 				</path>
 				<range>
 					<source_node>ALLEGATI[@etichetta="Attached documents"]/FOTO</source_node>
 					<target_node>
 						<entity>
-							<type>crm:D1_Digital_Object</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
-								<arg name="type" type="constant">digital_object</arg>
+								<arg name="type" type="constant">photo</arg>
 								<arg name="id" type="xpath">@fotoID</arg>
 							</instance_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300417379</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">digital photographs</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -2972,48 +3016,6 @@
 					 </entity>
 				</target_node>
 			</domain>
-	
-			<!--
-			<link> 
-				<path>
-					<source_relation>
-						<relation>AUTN[@etichetta="Artist's name"]</relation>
-					</source_relation>
-					<target_relation>
-						<relationship>crm:P1_is_identified_by</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>AUTN[@etichetta="Artist's name"]</source_node>
-					<target_node>
-						<entity>
-							<type>crm:E41_Appellation</type>
-							<instance_generator name="IdentifierURI">	
-								<arg name="subject_type" type="constant">actor</arg>
-								<arg name="subject_id" type="xpath">text()</arg>
-								<arg name="identifier_type" type="constant">appellation</arg>
-								<arg name="identifier_id" type="xpath">text()</arg>
-							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300417193</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">titles (general, names)</arg>
-									</label_generator>
-								</entity>
-							</additional>
-						</entity>
-					</target_node>
-				</range>
-			</link>
-			-->
 
 			<link> 
 				<path>
@@ -5081,5 +5083,360 @@
 			</domain>
 		</mapping>
 
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="BIBLIOGRAPHY"]/RIPETIZIONE/BIBX[@etichetta="Type"]</source_node>
+				<target_node>
+					<entity>
+						<type>crm:E55_Type</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">type</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">Zeri</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">Zeri</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">type</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">Zeri</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">Zeri</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+					 </entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="BIBLIOGRAPHY"]/RIPETIZIONE/BIBA[@etichetta="Author"]</source_node>
+				<target_node>
+					<entity>
+						<type>crm:E39_Actor</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">actor</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">Zeri</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">Zeri</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">actor</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">Zeri</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">Zeri</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+					 </entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="BIBLIOGRAPHY"]/RIPETIZIONE/BIBG[@etichetta="Title"]</source_node>
+				<target_node>
+					<entity>
+						<type>crm:E73_Information_Object</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">bibliography</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="BiblioConcatenated">
+							<arg name="Title" type="xpath">text()</arg>
+							<arg name="Type" type="xpath">../BIBX[@etichetta="Type"]/text()</arg>
+							<arg name="Author" type="xpath">../BIBA[@etichetta="Author"]/text()</arg>
+							<arg name="Date" type="xpath">../BIBD[@etichetta="Publication date"]/text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>crm:P1_is_identified_by</relationship>
+							<entity>
+								<type>crm:E41_Appellation</type>
+								<instance_generator name="IdentifierURI">
+									<arg name="subject_type" type="constant">bibliography</arg>
+									<arg name="subject_id" type="xpath">text()</arg>
+									<arg name="identifier_type" type="constant">appellation</arg>
+									<arg name="identifier_id" type="xpath">text()</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="xpath">text()</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">Zeri</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">Zeri</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">bibliography</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">Zeri</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">Zeri</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIorUUID">
+									<arg name="text" type="constant">http://vocab.getty.edu/aat/300435419</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">bibliography (category)</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					 </entity>
+				</target_node>
+			</domain>
+
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>../BIBX[@etichetta="Type"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P2_has_type</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../BIBX[@etichetta="Type"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">type</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>../BIBA[@etichetta="Author"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P94i_was_created_by</relationship>
+						<entity>
+							<type>crm:E65_Creation</type>
+							<instance_generator name="EventUri">
+								<arg name="resourceType" type="constant">bibliography</arg>
+								<arg name="resourceId" type="xpath">../BIBG[@etichetta="Title"]/text()</arg>
+								<arg name="eventType" type="constant">creation</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P14_carried_out_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../BIBA[@etichetta="Author"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>../BIBD[@etichetta="Publication date"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P94i_was_created_by</relationship>
+						<entity>
+							<type>crm:E65_Creation</type>
+							<instance_generator name="EventUri">
+								<arg name="resourceType" type="constant">bibliography</arg>
+								<arg name="resourceId" type="xpath">../BIBG[@etichetta="Title"]/text()</arg>
+								<arg name="eventType" type="constant">creation</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P4_has_time-span</relationship>
+						<entity>
+							<type>crm:E52_Time-Span</type>
+							<instance_generator name="TimespanUri">
+								<arg name="resourceType" type="constant">bibliography</arg>
+								<arg name="resourceId" type="xpath">../BIBG[@etichetta="Title"]/text()</arg>
+								<arg name="eventType" type="constant">creation</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P82_at_some_time_within</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../BIBD[@etichetta="Publication date"]</source_node>
+					<target_node>
+						<entity>
+							<type>rdfs:Literal</type>
+							<instance_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>//RISULTATI/SCHEDA/ALLEGATI[@etichetta="Attached documents"]/FOTO</source_node>
+				<target_node>
+					<entity>
+						<type>crm:E22_Man-Made_Object</type>
+						<instance_generator name="URIwithTypeAndId">
+							<arg name="type" type="constant">photo</arg>
+							<arg name="id" type="xpath">@fotoID</arg>
+						</instance_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">Zeri</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">Zeri</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="namedgraph">
+									<arg name="type" type="constant">photo</arg>
+									<arg name="id" type="xpath">@fotoID</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">Zeri</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">Zeri</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIorUUID">
+									<arg name="text" type="constant">http://vocab.getty.edu/aat/300046300</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">photographs</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					 </entity>
+				</target_node>
+			</domain>
+		</mapping>
 	</mappings>
 </x3ml>
