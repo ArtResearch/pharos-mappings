@@ -3421,6 +3421,7 @@
 			</domain>
 		</mapping>
 	-->
+	
 		<mapping namedgraph="graph">
 			<domain>
 				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="LOCATION"]/PVCC[@etichetta="Town / Municipality"]</source_node>
