@@ -15,8 +15,8 @@
 		<namespace prefix="iiif_json" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
 		<namespace prefix="marc" uri="http://www.loc.gov/MARC21/slim"/>
 	</namespaces>
-		<mappings>
-	<mapping namedgraph="">
+	<mappings>
+		<mapping namedgraph="">
 		
 			<domain>
 				<source_node>//RISULTATI</source_node>
@@ -520,11 +520,11 @@
 				</range>
 			</link>
 
-			<!-- place of exhibition -->
+			<!-- mesaurement unit -->
 			<link>
 				<path>
 					<source_relation>
-						<relation>SCHEDA/PARAGRAFO[@etichetta="OBJECT"]/text()</relation>
+						<relation>SCHEDA/PARAGRAFO[@etichetta="OBJECT"]/MISU[@etichetta="Unit of measurement"]/text()</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>custom:consists_of</relationship>
@@ -640,7 +640,30 @@
 					</target_node>
 				</range>
 			</link>
-
+			
+			<link>
+				<path>
+					<source_relation>
+						<relation>SCHEDA/PARAGRAFO[@etichetta="AUTHOR"]/RIPETIZIONE/ATBD[@etichetta="Cultural context"]/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>SCHEDA/PARAGRAFO[@etichetta="AUTHOR"]/RIPETIZIONE/ATBD[@etichetta="Cultural context"]/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGenerator">
+								<arg name="hierarchy" type="constant">group</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
 		</mapping>
 
 
@@ -3061,31 +3084,83 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>ATBD[@etichetta="Artist's background"]</relation>
+						<relation>ATBD[@etichetta="Cultural context"]</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P107i_is_current_or_former_member_of</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>ATBD[@etichetta="Artist's background"]</source_node>
+					<source_node>ATBD[@etichetta="Cultural context"]</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E74_Group</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">group</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
 						</entity>
 					</target_node>
 				</range>
 			</link>
 			
 		</mapping>
-		
+
+		<mapping namedgraph="graph">	
+			<domain>
+				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="AUTHOR"]/RIPETIZIONE/ATBD[@etichetta="Cultural context"]</source_node>
+				<target_node>
+					<entity>
+						<type>crm:E74_Group</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">group</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">Zeri</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">Zeri</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">group</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">Zeri</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">Zeri</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+					 </entity>
+				</target_node>
+			</domain>
+		</mapping>
+
 		<mapping namedgraph="graph">
 			<domain>
 				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="DIFFERENT ATTRIBUTIONS"]/RIPETIZIONE</source_node>
@@ -4433,7 +4508,7 @@
 
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="LOCATION"]/PVCS[@etichetta="Country"]</source_node>
+				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRVS[@etichetta="Country"]</source_node>
 				<target_node>
 					<if>
 						<exists>../PRDU[@etichetta="Date OUT"]/text()</exists>
@@ -5082,7 +5157,6 @@
 				</target_node>
 			</domain>
 		</mapping>
-
 
 		<mapping namedgraph="graph">
 			<domain>

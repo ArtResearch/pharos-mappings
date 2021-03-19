@@ -414,7 +414,7 @@
 					<target_node>
 						<entity>
 							<type>fc:subject</type>
-							<instance_generator name="URIwithTypeAndId">
+							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">subject</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
