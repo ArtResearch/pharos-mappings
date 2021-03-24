@@ -17,10 +17,12 @@
 	</namespaces>
 	<mappings>
 		<mapping namedgraph="">
-		
 			<domain>
 				<source_node>/root/obj/obj/obj/a5002</source_node>
 				<target_node>
+					<if>
+						<exists>a5200/text()</exists>
+					</if>
 					<entity>
 						<type>custom:SourceNamedgraph</type>
 						<instance_generator name="namedgraph">
@@ -4369,6 +4371,9 @@
 			<domain>
 				<source_node>/root/obj/obj/obj/aob30</source_node>
 				<target_node>
+					<if>
+						<exists>../a5200/text()</exists>
+					</if>
                     <entity>
 						<type>crm:E55_Type</type>
 						<instance_generator name="URIwithVocabType">
@@ -4424,6 +4429,9 @@
 			<domain>
 				<source_node>/root/obj/obj/obj/aob30/a3000</source_node>
 				<target_node>
+					<if>
+						<exists>../../a5200/text()</exists>
+					</if>
                     <entity>
 						<type>crm:E21_Person</type>
 						<instance_generator name="URIwithTypeAndId">
@@ -4479,6 +4487,9 @@
 			<domain>
 				<source_node>/root/obj/obj/obj/aob30/a3475</source_node>
 				<target_node>
+					<if>
+						<exists>../../a5200/text()</exists>
+					</if>
                     <entity>
 						<type>crm:E55_Type</type>
 						<instance_generator name="URIwithVocabType">
@@ -4535,6 +4546,9 @@
 			<domain>
 				<source_node>/root/obj/obj/obj/aob30/a3470</source_node>
 				<target_node>
+					<if>
+						<exists>../../a5200/text()</exists>
+					</if>
                     <entity>
 						<type>crm:E55_Type</type>
 						<instance_generator name="URIwithVocabType">
@@ -4590,6 +4604,9 @@
 			<domain>
 				<source_node>/root/obj/obj/obj/aob35/a3600</source_node>
 				<target_node>
+					<if>
+						<exists>../../a5200/text()</exists>
+					</if>
                     <entity>
 						<type>crm:E39_Actor</type>
 						<instance_generator name="URIwithType">
@@ -4645,6 +4662,9 @@
 			<domain>
 				<source_node>/root/obj/obj/obj/aob35/a3970</source_node>
 				<target_node>
+					<if>
+						<exists>../../a5200/text()</exists>
+					</if>
                     <entity>
 						<type>crm:E55_Type</type>
 						<instance_generator name="URIwithVocabType">
@@ -4700,6 +4720,9 @@
 			<domain>
 				<source_node>/root/obj/obj/obj/a309a/a3090</source_node>
 				<target_node>
+					<if>
+						<exists>../../a5200/text()</exists>
+					</if>
                     <entity>
 						<type>crm:E39_Actor</type>
 						<instance_generator name="URIwithType">
@@ -4755,6 +4778,9 @@
 			<domain>
 				<source_node>/root/obj/obj/obj/a309a/a3094</source_node>
 				<target_node>
+					<if>
+						<exists>../../a5200/text()</exists>
+					</if>
                     <entity>
 						<type>crm:E55_Type</type>
 						<instance_generator name="URIwithVocabType">
@@ -4810,6 +4836,9 @@
 			<domain>
 				<source_node>/root/obj/obj/obj/a309a</source_node>
 				<target_node>
+					<if>
+						<exists>../a5200/text()</exists>
+					</if>
                     <entity>
 						<type>crm:E55_Type</type>
 						<instance_generator name="URIwithVocabType">
@@ -4865,6 +4894,9 @@
 			<domain>
 				<source_node>/root/obj/obj/obj/a5130</source_node>
 				<target_node>
+					<if>
+						<exists>../a5200/text()</exists>
+					</if>
                     <entity>
 						<type>crm:E39_Actor</type>
 						<instance_generator name="URIwithType">
@@ -4920,6 +4952,9 @@
 			<domain>
 				<source_node>/root/obj/obj/obj/a5140/a5145</source_node>
 				<target_node>
+					<if>
+						<exists>../../a5200/text()</exists>
+					</if>
                     <entity>
 						<type>crm:E53_Place</type>
 						<instance_generator name="URIwithType">
@@ -5044,6 +5079,9 @@
 			<domain>
 				<source_node>/root/obj/obj/obj/a5060</source_node>
 				<target_node>
+					<if>
+						<exists>../a5200/text()</exists>
+					</if>
                     <entity>
 						<type>crm:E55_Type</type>
 						<instance_generator name="URIwithType">
@@ -5099,6 +5137,9 @@
 			<domain>
 				<source_node>/root/obj/obj/obj/aob28/a2900</source_node>
 				<target_node>
+					<if>
+						<exists>../../a5200/text()</exists>
+					</if>
                     <entity>
 						<type>crm:E39_Actor</type>
 						<instance_generator name="URIwithType">
@@ -5200,6 +5241,9 @@
 			<domain>
 				<source_node>/root/obj/obj/obj/aob28/a2864</source_node>
 				<target_node>
+					<if>
+						<exists>../../a5200/text()</exists>
+					</if>
                     <entity>
 						<type>crm:E53_Place</type>
 						<instance_generator name="URIwithType">
@@ -5256,6 +5300,9 @@
 			<domain>
 				<source_node>/root/obj/obj/obj/aob28/a2890</source_node>
 				<target_node>
+					<if>
+						<exists>../../a5200/text()</exists>
+					</if>
                     <entity>
 						<type>crm:E55_Type</type>
 						<instance_generator name="URIwithVocabType">
@@ -5311,6 +5358,9 @@
 			<domain>
 				<source_node>/root/obj/obj/obj/aob28/a2910</source_node>
 				<target_node>
+					<if>
+						<exists>../../a5200/text()</exists>
+					</if>
 					<entity>
 						<type>crm:E39_Actor</type>
 						<instance_generator name="URIwithType">
@@ -5413,6 +5463,9 @@
 			<domain>
 				<source_node>/root/obj/obj/obj/aob28</source_node>
 				<target_node>
+					<if>
+						<exists>../a5200/text()</exists>
+					</if>
                     <entity>
 						<type>crm:E55_Type</type>
 						<instance_generator name="URIwithVocabType">
@@ -5468,6 +5521,9 @@
 			<domain>
 				<source_node>/root/obj/obj/obj/aob26/a2780</source_node>
 				<target_node>
+					<if>
+						<exists>../../a5200/text()</exists>
+					</if>
                     <entity>
 						<type>crm:E53_Place</type>
 						<instance_generator name="URIwithType">
@@ -5536,6 +5592,9 @@
 			<domain>
 				<source_node>/root/obj/obj/obj/aob26/a2750</source_node>
 				<target_node>
+					<if>
+						<exists>../../a5200/text()</exists>
+					</if>
                     <entity>
 						<type>crm:E53_Place</type>
 						<instance_generator name="URIwithType">
@@ -5604,6 +5663,9 @@
 			<domain>
 				<source_node>/root/obj/obj/obj/aob26/a2700</source_node>
 				<target_node>
+					<if>
+						<exists>../../a5200/text()</exists>
+					</if>
                     <entity>
 						<type>crm:E53_Place</type>
 						<instance_generator name="URIwithType">
@@ -5672,6 +5734,9 @@
 			<domain>
 				<source_node>/root/obj/obj/obj/aob26/a2662</source_node>
 				<target_node>
+					<if>
+						<exists>../../a5200/text()</exists>
+					</if>
                     <entity>
 						<type>crm:E53_Place</type>
 						<instance_generator name="URIwithType">
@@ -5740,6 +5805,9 @@
 			<domain>
 				<source_node>/root/obj/obj/obj/aob26/a2664</source_node>
 				<target_node>
+					<if>
+						<exists>../../a5200/text()</exists>
+					</if>
                     <entity>
 						<type>crm:E53_Place</type>
 						<instance_generator name="URIwithType">
@@ -5807,6 +5875,9 @@
 			<domain>
 				<source_node>/root/obj/obj/obj/a5108/a5116</source_node>
 				<target_node>
+					<if>
+						<exists>../../a5200/text()</exists>
+					</if>
                     <entity>
 						<type>crm:E53_Place</type>
 						<instance_generator name="URIwithType">
@@ -5876,6 +5947,9 @@
 			<domain>
 				<source_node>/root/obj/obj/obj/a5108/a5117</source_node>
 				<target_node>
+					<if>
+						<exists>../../a5200/text()</exists>
+					</if>
                     <entity>
 						<type>crm:E53_Place</type>
 						<instance_generator name="URIwithType">
@@ -5940,11 +6014,13 @@
 			</domain>
 		</mapping>
 
-
 		<mapping namedgraph="graph">
 			<domain>
 				<source_node>/root/obj/obj/obj/a5108/a5110</source_node>
 				<target_node>
+					<if>
+						<exists>../../a5200/text()</exists>
+					</if>
                     <entity>
 						<type>crm:E53_Place</type>
 						<instance_generator name="URIwithType">
@@ -6013,6 +6089,9 @@
 			<domain>
 				<source_node>/root/obj/obj/obj/a5108</source_node>
 				<target_node>
+					<if>
+						<exists>../a5200/text()</exists>
+					</if>
                     <entity>
 						<type>crm:E53_Place</type>
 						<instance_generator name="URIwithType">
@@ -6080,6 +6159,9 @@
 			<domain>
 				<source_node>/root/obj/obj/obj/a5364</source_node>
 				<target_node>
+					<if>
+						<exists>../a5200/text()</exists>
+					</if>
                     <entity>
 						<type>crm:E55_Type</type>
 						<instance_generator name="URIwithVocabType">
@@ -6131,11 +6213,13 @@
 			</domain>
 		</mapping>
 
-
 		<mapping namedgraph="graph">
 			<domain>
 				<source_node>/root/obj/obj/obj/a5500</source_node>
 				<target_node>
+					<if>
+						<exists>../a5200/text()</exists>
+					</if>
                     <entity>
 						<type>crm:E55_Type</type>
 						<instance_generator name="URIwithType">
@@ -6200,11 +6284,13 @@
 			</domain>
 		</mapping>
 
-
 		<mapping namedgraph="graph">
 			<domain>
 				<source_node>/root/obj/obj/obj/a5510</source_node>
 				<target_node>
+					<if>
+						<exists>../a5200/text()</exists>
+					</if>
                     <entity>
 						<type>crm:E55_Type</type>
 						<instance_generator name="URIwithType">
@@ -6273,6 +6359,9 @@
 			<domain>
 				<source_node>/root/obj/obj/obj/a5260/a526s</source_node>
 				<target_node>
+					<if>
+						<exists>../../a5200/text()</exists>
+					</if>
                     <entity>
                         <type>crm:E57_Material</type>
 						<instance_generator name="URIwithVocabTypeAndId">
@@ -6323,11 +6412,13 @@
 			</domain>
 		</mapping>
 
-
 		<mapping namedgraph="graph">
 			<domain>
 				<source_node>/root/obj/obj/obj/aob28/a2940</source_node>
 				<target_node>
+					<if>
+						<exists>../../a5200/text()</exists>
+					</if>
                     <entity>
 						<type>crm:E78_Curated_Holding</type>
 						<instance_generator name="URIwithType">

@@ -21,6 +21,9 @@
 			<domain>
 				<source_node>/root/obj</source_node>
 				<target_node>
+					<if>
+						<exists>a5200/text()</exists>
+					</if>
                     <entity>
                         <type>fc:work</type>
 						<instance_generator name="URIwithTypeAndId">
@@ -594,6 +597,9 @@
 			<domain>
 				<source_node>/root/obj/obj</source_node>
 				<target_node>
+					<if>
+						<exists>a5200/text()</exists>
+					</if>
                     <entity>
                         <type>fc:work</type>
 						<instance_generator name="URIwithTypeAndId">
@@ -1163,11 +1169,13 @@
 			
 		</mapping>
 			
-	
 		<mapping>
 			<domain>
 				<source_node>/root/obj/obj/obj</source_node>
 				<target_node>
+					<if>
+						<exists>a5200/text()</exists>
+					</if>
                     <entity>
                         <type>fc:work</type>
 						<instance_generator name="URIwithTypeAndId">
@@ -1741,6 +1749,9 @@
 			<domain>
 				<source_node>/root/obj/obj/obj/obj</source_node>
 				<target_node>
+					<if>
+						<exists>a5200/text()</exists>
+					</if>
                     <entity>
                         <type>fc:work</type>
 						<instance_generator name="URIwithTypeAndId">
