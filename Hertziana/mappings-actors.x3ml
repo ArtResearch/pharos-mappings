@@ -28,6 +28,7 @@
 							<arg name="type" type="constant">hertziana</arg>
 							<arg name="id" type="constant">namedgraphs</arg>
 						</instance_generator>
+						<!--lvl1-->
 						<additional>
 							<relationship>custom:consists_of</relationship>
 							<entity>
@@ -38,6 +39,7 @@
 								</instance_generator>
 							</entity>
 						</additional>
+						<!--lvl2-->
 						<additional>
 							<relationship>custom:consists_of</relationship>
 							<entity>
@@ -48,6 +50,7 @@
 								</instance_generator>
 							</entity>
 						</additional>
+						<!--lvl3-->
 						<additional>
 							<relationship>custom:consists_of</relationship>
 							<entity>
@@ -58,6 +61,7 @@
 								</instance_generator>
 							</entity>
 						</additional>
+						<!--lvl4-->
 						<additional>
 							<relationship>custom:consists_of</relationship>
 							<entity>
@@ -72,9 +76,342 @@
 				</target_node>
 			</domain>
 
+			<!-- gender 1-->
+			<link>
+				<path>
+					<source_relation>
+						<relation>aob30/a3162/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>aob30/a3162/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGeneratorVocab">
+								<arg name="hierarchy" type="constant">type</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+			<!-- gender 2-->
+			<link>
+				<path>
+					<source_relation>
+						<relation>obj/aob30/a3162/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>obj/aob30/a3162/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGeneratorVocab">
+								<arg name="hierarchy" type="constant">type</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+
+			<!-- gender 3-->
+			<link>
+				<path>
+					<source_relation>
+						<relation>obj/obj/aob30/a3162/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>obj/obj/aob30/a3162/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGeneratorVocab">
+								<arg name="hierarchy" type="constant">type</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+
+			<!-- gender 4-->
+			<link>
+				<path>
+					<source_relation>
+						<relation>obj/obj/obj/aob30/a3162/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>obj/obj/obj/aob30/a3162/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGeneratorVocab">
+								<arg name="hierarchy" type="constant">type</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+
+			<!-- group 1-->
+			<link>
+				<path>
+					<source_relation>
+						<relation>aob30/a3200/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>aob30/a3200/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGenerator">
+								<arg name="hierarchy" type="constant">group</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+			<!-- group 2-->
+			<link>
+				<path>
+					<source_relation>
+						<relation>obj/aob30/a3200/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>obj/aob30/a3200/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGenerator">
+								<arg name="hierarchy" type="constant">group</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+
+			<!-- group 3-->
+			<link>
+				<path>
+					<source_relation>
+						<relation>obj/obj/aob30/a3200/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>obj/obj/aob30/a3200/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGenerator">
+								<arg name="hierarchy" type="constant">group</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+
+			<!-- group 4-->
+			<link>
+				<path>
+					<source_relation>
+						<relation>obj/obj/obj/aob30/a3200/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>obj/obj/obj/aob30/a3200/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGenerator">
+								<arg name="hierarchy" type="constant">group</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+			<!-- member of actor 1 -->
+			<link> 
+				<path>
+					<source_relation>
+						<relation>aob28/a2930/text()</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<not>
+								<if>
+									<equals value="x">.</equals>
+								</if>
+							</not>
+						</if>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>aob28/a2930/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGenerator">
+								<arg name="hierarchy" type="constant">actor</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<!-- member of actor 2 -->
+			<link> 
+				<path>
+					<source_relation>
+						<relation>obj/aob28/a2930/text()</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<not>
+								<if>
+									<equals value="x">.</equals>
+								</if>
+							</not>
+						</if>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>obj/aob28/a2930/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGenerator">
+								<arg name="hierarchy" type="constant">actor</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<!-- member of actor 3 -->
+			<link> 
+				<path>
+					<source_relation>
+						<relation>obj/obj/aob28/a2930/text()</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<not>
+								<if>
+									<equals value="x">.</equals>
+								</if>
+							</not>
+						</if>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>obj/obj/aob28/a2930/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGenerator">
+								<arg name="hierarchy" type="constant">actor</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<!-- member of actor 4 -->
+			<link> 
+				<path>
+					<source_relation>
+						<relation>obj/obj/obj/aob28/a2930/text()</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<not>
+								<if>
+									<equals value="x">.</equals>
+								</if>
+							</not>
+						</if>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>obj/obj/obj/aob28/a2930/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGenerator">
+								<arg name="hierarchy" type="constant">actor</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
 		</mapping>
 		
-		
+		<!--lvl1-->
 		<mapping namedgraph="graph">
 			<domain>
 				<source_node>/root/obj/aob30</source_node>
@@ -330,7 +667,7 @@
 					</target_node>
 				</range>
 			</link>
-
+			
 			<link> 
 				<path>
 					<source_relation>
@@ -344,27 +681,11 @@
 					<source_node>a3162</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E55_Type</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithVocabType">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
-										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="constant">Gender</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">Gender</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -383,27 +704,11 @@
 					<source_node>a3200</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E74_Group</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">group</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
-										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="constant">National Group</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">National Group</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -412,7 +717,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>a2930</relation>
+						<relation>../aob28/a2930</relation>
 					</source_relation>
 					<target_relation>
 						<if>
@@ -426,17 +731,14 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>a2930</source_node>
+					<source_node>../aob28/a2930</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E39_Actor</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
 						</entity>
 					</target_node>
 				</range>
@@ -494,7 +796,196 @@
 			</link>
 		</mapping>	
 		
+		<!--lvl1 gender-->
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/aob30/a3162</source_node>
+				<target_node>
+                   <entity>
+						<type>crm:E55_Type</type>
+						<instance_generator name="URIwithVocabType">
+							<arg name="type" type="constant">type</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">Hertziana</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">Hertziana</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGeneratorVocab">
+									<arg name="hierarchy" type="constant">type</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">Hertziana</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">Hertziana</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIwithType">
+									<arg name="type" type="constant">type</arg>
+									<arg name="id" type="constant">Gender</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">Gender</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+		</mapping>
 
+		<!--lvl1 group-->
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/aob30/a3200</source_node>
+				<target_node>
+					<if>
+						<not>
+							<if>
+								<equals value="x">text()</equals>
+							</if>
+						</not>
+					</if>
+                   <entity>
+						<type>crm:E39_Actor</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">actor</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">Hertziana</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">Hertziana</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">group</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">Hertziana</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">Hertziana</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<!--lvl1 group actor-->
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/aob28/a2930</source_node>
+				<target_node>
+                   <entity>
+						<type>crm:E39_Actor</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">actor</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">Hertziana</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">Hertziana</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">actor</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">Hertziana</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">Hertziana</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+
+		<!--lvl2-->
 		<mapping namedgraph="graph">
 			<domain>
 				<source_node>/root/obj/obj/aob30</source_node>
@@ -764,27 +1255,11 @@
 					<source_node>a3162</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E55_Type</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithVocabType">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
-										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="constant">Gender</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">Gender</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -803,27 +1278,11 @@
 					<source_node>a3200</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E74_Group</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">group</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
-										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="constant">National Group</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">National Group</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -832,7 +1291,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>a2930</relation>
+						<relation>../aob28/a2930</relation>
 					</source_relation>
 					<target_relation>
 						<if>
@@ -846,17 +1305,14 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>a2930</source_node>
+					<source_node>../aob28/a2930</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E39_Actor</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
 						</entity>
 					</target_node>
 				</range>
@@ -915,6 +1371,201 @@
 		
 		</mapping>	
 		
+		<!--lvl2 gender-->
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/obj/aob30/a3162</source_node>
+				<target_node>
+					<entity>
+						<type>crm:E55_Type</type>
+						<instance_generator name="URIwithVocabType">
+							<arg name="type" type="constant">type</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">Hertziana</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">Hertziana</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGeneratorVocab">
+									<arg name="hierarchy" type="constant">type</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">Hertziana</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">Hertziana</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIwithType">
+									<arg name="type" type="constant">type</arg>
+									<arg name="id" type="constant">Gender</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">Gender</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<!--lvl2 group-->
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/obj/aob30/a3200</source_node>
+				<target_node>
+					<entity>
+						<type>crm:E74_Group</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">group</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">Hertziana</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">Hertziana</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">group</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">Hertziana</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">Hertziana</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIwithType">
+									<arg name="type" type="constant">type</arg>
+									<arg name="id" type="constant">National Group</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">National Group</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<!--lvl2 group actor-->
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/obj/aob28/a2930</source_node>
+				<target_node>
+				<entity>
+						<type>crm:E39_Actor</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">actor</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">Hertziana</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">Hertziana</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">actor</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">Hertziana</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">Hertziana</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<!--lvl3-->
 		<mapping namedgraph="graph">
 			<domain>
 				<source_node>/root/obj/obj/obj/aob30</source_node>
@@ -1184,27 +1835,11 @@
 					<source_node>a3162</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E55_Type</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithVocabType">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
-										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="constant">Gender</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">Gender</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -1223,27 +1858,11 @@
 					<source_node>a3200</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E74_Group</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">group</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
-										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="constant">National Group</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">National Group</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -1252,7 +1871,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>a2930</relation>
+						<relation>../aob28/a2930</relation>
 					</source_relation>
 					<target_relation>
 						<if>
@@ -1266,17 +1885,14 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>a2930</source_node>
+					<source_node>../aob28/a2930</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E39_Actor</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
 						</entity>
 					</target_node>
 				</range>
@@ -1336,6 +1952,201 @@
 		
 		</mapping>	
 		
+		<!--lvl2 gender-->
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/obj/obj/aob30/a3162</source_node>
+				<target_node>
+					<entity>
+						<type>crm:E55_Type</type>
+						<instance_generator name="URIwithVocabType">
+							<arg name="type" type="constant">type</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">Hertziana</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">Hertziana</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGeneratorVocab">
+									<arg name="hierarchy" type="constant">type</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">Hertziana</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">Hertziana</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIwithType">
+									<arg name="type" type="constant">type</arg>
+									<arg name="id" type="constant">Gender</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">Gender</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<!--lvl3 group-->
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/obj/obj/aob30/a3200</source_node>
+				<target_node>
+					<entity>
+						<type>crm:E74_Group</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">group</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">Hertziana</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">Hertziana</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">group</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">Hertziana</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">Hertziana</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIwithType">
+									<arg name="type" type="constant">type</arg>
+									<arg name="id" type="constant">National Group</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">National Group</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<!--lvl3 group actor-->
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/obj/obj/aob28/a2930</source_node>
+				<target_node>
+				<entity>
+						<type>crm:E39_Actor</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">actor</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">Hertziana</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">Hertziana</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">actor</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">Hertziana</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">Hertziana</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<!--lvl4-->
 		<mapping namedgraph="graph">
 			<domain>
 				<source_node>/root/obj/obj/obj/obj/aob30</source_node>
@@ -1605,27 +2416,11 @@
 					<source_node>a3162</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E55_Type</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithVocabType">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
-										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="constant">Gender</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">Gender</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -1644,27 +2439,11 @@
 					<source_node>a3200</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E74_Group</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">group</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
-										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="constant">National Group</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">National Group</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -1673,7 +2452,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>a2930</relation>
+						<relation>../aob28/a2930</relation>
 					</source_relation>
 					<target_relation>
 						<if>
@@ -1687,17 +2466,14 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>a2930</source_node>
+					<source_node>../aob28/a2930</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E39_Actor</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
 						</entity>
 					</target_node>
 				</range>
@@ -1754,6 +2530,200 @@
 				</range>
 			</link>
 		
-		</mapping>	
+		</mapping>
+
+		<!--lvl2 gender-->
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/obj/obj/obj/aob30/a3162</source_node>
+				<target_node>
+					<entity>
+						<type>crm:E55_Type</type>
+						<instance_generator name="URIwithVocabType">
+							<arg name="type" type="constant">type</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">Hertziana</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">Hertziana</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGeneratorVocab">
+									<arg name="hierarchy" type="constant">type</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">Hertziana</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">Hertziana</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIwithType">
+									<arg name="type" type="constant">type</arg>
+									<arg name="id" type="constant">Gender</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">Gender</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<!--lvl4 group-->
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/obj/obj/obj/aob30/a3200</source_node>
+				<target_node>
+					<entity>
+						<type>crm:E74_Group</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">group</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">Hertziana</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">Hertziana</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">group</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">Hertziana</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">Hertziana</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIwithType">
+									<arg name="type" type="constant">type</arg>
+									<arg name="id" type="constant">National Group</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">National Group</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<!--lvl4 group actor-->
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/obj/obj/obj/aob28/a2930</source_node>
+				<target_node>
+				<entity>
+						<type>crm:E39_Actor</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">actor</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">Hertziana</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">Hertziana</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">actor</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">Hertziana</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">Hertziana</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+		</mapping>
 	</mappings>
 </x3ml>

@@ -10,6 +10,14 @@
         </custom>
 </generator>
 
+<generator name="MultiHashingGeneratorVocab" prefix="vocab">
+	<custom generatorClass="gr.forth.MultiHashingGenerator">
+		<set-arg name="hierarchy"/>
+		<set-arg name="object_HASHED_CONTENTS"/>
+		<set-arg name="term_simple"/>
+	</custom>
+</generator>
+
 <generator name="IIIF_Generator" prefix="iiif_image">
 	<pattern>{id}{postfix}</pattern>
 </generator>
@@ -203,4 +211,3 @@
 </generator>
 
 </generator_policy>
- 

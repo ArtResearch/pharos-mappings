@@ -804,7 +804,7 @@
 									<arg name="type" type="constant">type</arg>
 									<arg name="id" type="constant">VIAF</arg>
 								</instance_generator>
-									<label_generator name="Literal">
+								<label_generator name="Literal">
 									<arg name="text" type="constant">VIAF ID</arg>
 								</label_generator>
 							</entity>

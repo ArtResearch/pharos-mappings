@@ -513,7 +513,7 @@
 				</range>
 			</link>
 			
-			<link>
+			<!-- <link>
 				<path>
 					<source_relation>
 						<relation>a5358</relation>
@@ -537,7 +537,7 @@
 						</entity>
 					</target_node>
 				</range>
-			</link>
+			</link> -->
 			
 			<link>
 				<path>
@@ -556,7 +556,7 @@
 					<target_node>
 						<entity>
 							<type>fc:technique</type>
-							<instance_generator name="URIwithVocabType">
+							<instance_generator name="URIwithVocabTypeAndId">
 								<arg name="type" type="constant">technique</arg>
 								<arg name="id" type="xpath">a533s/text()</arg>
 							</instance_generator>
@@ -579,9 +579,9 @@
 					<target_node>
 						<entity>
 							<type>fc:material</type>
-							<instance_generator name="URIwithVocabType">
+							<instance_generator name="URIwithVocabTypeAndId">
 								<arg name="type" type="constant">material</arg>
-								<arg name="id" type="xpath">text()</arg>
+								<arg name="id" type="xpath">a526s/text()</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -1086,7 +1086,7 @@
 				</range>
 			</link>
 			
-						<link>
+						<!-- <link>
 				<path>
 					<source_relation>
 						<relation>a5358</relation>
@@ -1110,7 +1110,7 @@
 						</entity>
 					</target_node>
 				</range>
-			</link>
+			</link> -->
 			
 			<link>
 				<path>
@@ -1129,7 +1129,7 @@
 					<target_node>
 						<entity>
 							<type>fc:technique</type>
-							<instance_generator name="URIwithVocabType">
+							<instance_generator name="URIwithVocabTypeAndId">
 								<arg name="type" type="constant">technique</arg>
 								<arg name="id" type="xpath">a533s/text()</arg>
 							</instance_generator>
@@ -1152,9 +1152,9 @@
 					<target_node>
 						<entity>
 							<type>fc:material</type>
-							<instance_generator name="URIwithVocabType">
+							<instance_generator name="URIwithVocabTypeAndId">
 								<arg name="type" type="constant">material</arg>
-								<arg name="id" type="xpath">text()</arg>
+								<arg name="id" type="xpath">a526s/text()</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -1660,7 +1660,7 @@
 				</range>
 			</link>
 			
-						<link>
+						<!-- <link>
 				<path>
 					<source_relation>
 						<relation>a5358</relation>
@@ -1684,7 +1684,7 @@
 						</entity>
 					</target_node>
 				</range>
-			</link>
+			</link> -->
 			
 			<link>
 				<path>
@@ -1703,7 +1703,7 @@
 					<target_node>
 						<entity>
 							<type>fc:technique</type>
-							<instance_generator name="URIwithVocabType">
+							<instance_generator name="URIwithVocabTypeAndId">
 								<arg name="type" type="constant">technique</arg>
 								<arg name="id" type="xpath">a533s/text()</arg>
 							</instance_generator>
@@ -1726,9 +1726,9 @@
 					<target_node>
 						<entity>
 							<type>fc:material</type>
-							<instance_generator name="URIwithVocabType">
+							<instance_generator name="URIwithVocabTypeAndId">
 								<arg name="type" type="constant">material</arg>
-								<arg name="id" type="xpath">text()</arg>
+								<arg name="id" type="xpath">a526s/text()</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -2233,7 +2233,7 @@
 				</range>
 			</link>
 			
-						<link>
+						<!-- <link>
 				<path>
 					<source_relation>
 						<relation>a5358</relation>
@@ -2257,7 +2257,7 @@
 						</entity>
 					</target_node>
 				</range>
-			</link>
+			</link> -->
 			
 			<link>
 				<path>
@@ -2276,7 +2276,7 @@
 					<target_node>
 						<entity>
 							<type>fc:technique</type>
-							<instance_generator name="URIwithVocabType">
+							<instance_generator name="URIwithVocabTypeAndId">
 								<arg name="type" type="constant">technique</arg>
 								<arg name="id" type="xpath">a533s/text()</arg>
 							</instance_generator>
@@ -2299,9 +2299,9 @@
 					<target_node>
 						<entity>
 							<type>fc:material</type>
-							<instance_generator name="URIwithVocabType">
+							<instance_generator name="URIwithVocabTypeAndId">
 								<arg name="type" type="constant">material</arg>
-								<arg name="id" type="xpath">text()</arg>
+								<arg name="id" type="xpath">a526s/text()</arg>
 							</instance_generator>
 						</entity>
 					</target_node>

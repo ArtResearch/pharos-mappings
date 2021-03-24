@@ -339,7 +339,7 @@
 						<relation>Institution_lat</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>fr:Institution_has_Lat</relationship>
+						<relationship>fr:Institution_has_Latitude</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -361,7 +361,7 @@
 						<relation>Institution_long</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>fr:Institution_has_Long</relationship>
+						<relationship>fr:Institution_has_Longitude</relationship>
 					</target_relation>
 				</path>
 				<range>
