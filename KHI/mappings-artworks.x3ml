@@ -16,12 +16,13 @@
 		<namespace prefix="iiif_json" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
 	</namespaces>
 	<mappings>
-		
 		<mapping namedgraph="">
 			<domain>
 				<source_node>/root/obj/a5000</source_node>
 				<target_node>
-	
+					<if>
+						<exists>../a5200/text()</exists>
+					</if>
 					<entity>
 						<type>custom:SourceNamedgraph</type>
 						<instance_generator name="namedgraph">
@@ -41,6 +42,873 @@
 					</entity>
 				</target_node>
 			</domain>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../a5220/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../a5220/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGeneratorVocab">
+								<arg name="hierarchy" type="constant">type</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../a5230/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../a5230/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGeneratorVocab">
+								<arg name="hierarchy" type="constant">type</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">../text()</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../a5226/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../a5226/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGeneratorVocab">
+								<arg name="hierarchy" type="constant">type</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../a5240/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../a5240/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGeneratorVocab">
+								<arg name="hierarchy" type="constant">type</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../aob30/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../aob30/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGeneratorVocab">
+								<arg name="hierarchy" type="constant">type</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">../text()</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../aob30/a3000/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../aob30/a3000/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="namedgraph">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">.</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../aob30/a3475/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../aob30/a3475/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGeneratorVocab">
+								<arg name="hierarchy" type="constant">type</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../aob30/a3470/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../aob30/a3470/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGeneratorVocab">
+								<arg name="hierarchy" type="constant">type</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../aob35/a3600/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../aob35/a3600/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGenerator">
+								<arg name="hierarchy" type="constant">actor</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../aob35/a3970/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../aob35/a3970/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGeneratorVocab">
+								<arg name="hierarchy" type="constant">type</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../a309a/a3090/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../a309a/a3090/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="namedgraph">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">../../a3000/text()</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../a309a/a3094/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../a309a/a3094/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGeneratorVocab">
+								<arg name="hierarchy" type="constant">type</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../a309a/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../a309a/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGeneratorVocab">
+								<arg name="hierarchy" type="constant">type</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">../text()</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../a5130/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../a5130/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGenerator">
+								<arg name="hierarchy" type="constant">actor</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">../text()</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../a5140/a5145/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../a5140/a5145/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGenerator">
+								<arg name="hierarchy" type="constant">place</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../a5300/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../a5300/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGeneratorVocab">
+								<arg name="hierarchy" type="constant">technique</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">../text()</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+			
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../a5060/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../a5060/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGenerator">
+								<arg name="hierarchy" type="constant">type</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">../text()</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../aob28/a2900/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../aob28/a2900/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGenerator">
+								<arg name="hierarchy" type="constant">actor</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../aob28/a2864/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../aob28/a2864/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGenerator">
+								<arg name="hierarchy" type="constant">place</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../aob28/a2890/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../aob28/a2890/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGeneratorVocab">
+								<arg name="hierarchy" type="constant">type</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../aob28/a2910/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../aob28/a2910/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGenerator">
+								<arg name="hierarchy" type="constant">actor</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../aob28/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../aob28/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGeneratorVocab">
+								<arg name="hierarchy" type="constant">type</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">../text()</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../aob26/a2780/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../aob26/a2780/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGenerator">
+								<arg name="hierarchy" type="constant">place</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../aob26/a2750/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../aob26/a2750/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGenerator">
+								<arg name="hierarchy" type="constant">place</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../aob26/a2700/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../aob26/a2700/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGenerator">
+								<arg name="hierarchy" type="constant">place</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../aob26/a2662/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../aob26/a2662/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGenerator">
+								<arg name="hierarchy" type="constant">place</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../aob26/a2664/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../aob26/a2664/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGenerator">
+								<arg name="hierarchy" type="constant">place</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../a5108/a5116/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../a5108/a5116/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGenerator">
+								<arg name="hierarchy" type="constant">place</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../a5108/a5117/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../a5108/a5117/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGenerator">
+								<arg name="hierarchy" type="constant">place</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../a5108/a5110/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../a5108/a5110/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGenerator">
+								<arg name="hierarchy" type="constant">place</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../a5108/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../a5108/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGenerator">
+								<arg name="hierarchy" type="constant">place</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">../text()</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../a5364/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../a5364/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGeneratorVocab">
+								<arg name="hierarchy" type="constant">type</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">../text()</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../a5500/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../a5500/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGenerator">
+								<arg name="hierarchy" type="constant">type</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">../text()</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../a5510/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../a5510/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGenerator">
+								<arg name="hierarchy" type="constant">type</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">../text()</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../a5260/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../a5260/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGeneratorVocab">
+								<arg name="hierarchy" type="constant">material</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../aob28/a2940/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../aob28/a2940/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGenerator">
+								<arg name="hierarchy" type="constant">collection</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
 
 		</mapping>
 		
@@ -171,6 +1039,7 @@
 				</range>
 			</link>
 -->
+			
 			<link> 
 				<path>
 					<source_relation>
@@ -290,7 +1159,7 @@
 					</target_node>
 				</range>
 			</link>
-			
+	
 			<link> 
 				<path>
 					<source_relation>
@@ -304,26 +1173,11 @@
 					<source_node>a5220</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E55_Type</type>
-							<instance_generator name="URIwithVocabTypeAndId">
+							<type>custom:noType</type>
+							<instance_generator name="URIwithVocabType">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300264092</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">objects facet</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -342,26 +1196,11 @@
 					<source_node>a5230</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E55_Type</type>
-							<instance_generator name="URIwithVocabTypeAndId">
+							<type>custom:noType</type>
+							<instance_generator name="URIwithVocabType">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300264092</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">objects facet</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -380,26 +1219,11 @@
 					<source_node>a5226</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E55_Type</type>
-							<instance_generator name="URIwithVocabTypeAndId">
+							<type>custom:noType</type>
+							<instance_generator name="URIwithVocabType">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300264092</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">objects facet</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -418,27 +1242,11 @@
 					<source_node>a5240</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E55_Type</type>
-							<instance_generator name="URIwithVocabTypeAndId">
+							<type>custom:noType</type>
+							<instance_generator name="URIwithVocabType">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
-										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="constant">Shape Classification</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">Shape Classification</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -687,6 +1495,7 @@
 					</target_node>
 				</range>
 			</link>
+			
 			<!--
 			<link>
 				<path>
@@ -733,6 +1542,7 @@
 				</range>
 			</link>
 			-->
+			
 			<link>
 				<path>
 					<source_relation>
@@ -988,14 +1798,11 @@
 					<source_node>aob30</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E55_Type</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithVocabType">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
 						</entity>
 					</target_node>
 				</range>
@@ -1035,14 +1842,11 @@
 					<source_node>aob30/a3000</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E21_Person</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">../a3100/text()</arg>
-							</label_generator>
 						</entity>
 					</target_node>
 				</range>
@@ -1089,14 +1893,11 @@
 					<source_node>aob30/a3475</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E55_Type</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithVocabType">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
 						</entity>
 					</target_node>
 				</range>
@@ -1155,14 +1956,11 @@
 					<source_node>aob30/a3470</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E55_Type</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithVocabType">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
 						</entity>
 					</target_node>
 				</range>
@@ -1171,7 +1969,7 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>aob30/a3600</relation>
+						<relation>aob35/a3600</relation>
 					</source_relation>
 					<target_relation>
 						<if>
@@ -1199,17 +1997,14 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>aob30/a3600</source_node>
+					<source_node>aob35/a3600</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E39_Actor</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
 						</entity>
 					</target_node>
 				</range>
@@ -1265,7 +2060,7 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>aob30/a3970</relation>
+						<relation>aob35/a3970</relation>
 					</source_relation>
 					<target_relation>
 						<if>
@@ -1305,17 +2100,14 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>aob30/a3970</source_node>
+					<source_node>aob35/a3970</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E55_Type</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithVocabType">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
 						</entity>
 					</target_node>
 				</range>
@@ -1324,11 +2116,11 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>aob30/a3090</relation>
+						<relation>a309a/a3090</relation>
 					</source_relation>
 					<target_relation>
 						<if>
-							<equals value="Herstellung">../text()</equals>
+							<equals value="Herstellung">../../aob30/text()</equals>
 						</if>
 						<relationship>crm:P108i_was_produced_by</relationship>
 						<entity>
@@ -1352,17 +2144,14 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>aob30/a3090</source_node>
+					<source_node>a309a/a3090</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E39_Actor</type>
-							<instance_generator name="URIwithType">
+							<type>custom:noType</type>
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">text()</arg>
+								<arg name="id" type="xpath">../a3000/text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
 						</entity>
 					</target_node>
 				</range>
@@ -1371,11 +2160,11 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>aob30/a3094</relation>
+						<relation>a309a/a3094</relation>
 					</source_relation>
 					<target_relation>
 						<if>
-							<equals value="Herstellung">../text()</equals>
+							<equals value="Herstellung">../../aob30/text()</equals>
 						</if>
 						<relationship>crm:P108i_was_produced_by</relationship>
 						<entity>
@@ -1392,24 +2181,21 @@
 							<instance_generator name="PropertyTypeUri">
 								<arg name="propertyType" type="constant">was_influenced_by</arg>
 								<arg name="domain" type="xpath">../../a5000/text()</arg>
-								<arg name="range" type="xpath">../a3090/text()</arg>
+								<arg name="range" type="xpath">../a3000/text()</arg>
 							</instance_generator>
 						</entity>
 						<relationship>crm:P15.1_in_the_role_of</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>aob30/a3094</source_node>
+					<source_node>a309a/a3094</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E55_Type</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithVocabType">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
 						</entity>
 					</target_node>
 				</range>
@@ -1418,28 +2204,28 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>aob30/a309a</relation>
+						<relation>a309a</relation>
 					</source_relation>
 					<target_relation>
 						<if>
-							<equals value="Herstellung">../text()</equals>
+							<equals value="Herstellung">../aob30/text()</equals>
 						</if>
 						<relationship>crm:P108i_was_produced_by</relationship>
 						<entity>
 							<type>crm:E12_Production</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../a5000/text()</arg>
+								<arg name="resourceId" type="xpath">../a5000/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
 						<relationship>crm:P140i_was_attributed_by</relationship>
 						<entity>
 							<type>crm:E13_Attribute_Assignment</type>
-							<instance_generator name="URIwith2Ids">
-								<arg name="type" type="constant">attribute_assignment</arg>
-								<arg name="id1" type="xpath">../../a5000/text()</arg>
-								<arg name="id2" type="xpath">../a3090/text()</arg>
+							<instance_generator name="PropertyTypeUri">
+								<arg name="propertyType" type="constant">attribute_assignment</arg>
+								<arg name="domain" type="xpath">../a5000/text()</arg>
+								<arg name="range" type="xpath">a3000/text()</arg>
 							</instance_generator>
 							<additional>
 								<relationship>crm:P141_assigned</relationship>
@@ -1447,8 +2233,8 @@
 									<type>crm:PC15_was_influenced_by</type>
 									<instance_generator name="PropertyTypeUri">
 										<arg name="propertyType" type="constant">was_influenced_by</arg>
-										<arg name="domain" type="xpath">../../a5000/text()</arg>
-										<arg name="range" type="xpath">../a3090/text()</arg>
+										<arg name="domain" type="xpath">../a5000/text()</arg>
+										<arg name="range" type="xpath">a3000/text()</arg>
 									</instance_generator>
 								</entity>
 							</additional>
@@ -1457,17 +2243,14 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>aob30/a309a</source_node>
+					<source_node>a309a</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E55_Type</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithVocabType">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
 						</entity>
 					</target_node>
 				</range>
@@ -1476,7 +2259,7 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>aob30/a3092</relation>
+						<relation>a309a/a3092</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P67i_is_referred_to_by</relationship>
@@ -1505,7 +2288,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>aob30/a3092</source_node>
+					<source_node>a309a/a3092</source_node>
 					<target_node>
 						<entity>
 							<type>rdfs:Literal</type>
@@ -1563,14 +2346,11 @@
 					<source_node>a5130</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E39_Actor</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
 						</entity>
 					</target_node>
 				</range>
@@ -1601,32 +2381,18 @@
 					<source_node>a5140/a5145</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E53_Place</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">place</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300008389</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">cities</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
 			</link>
 			
-			<link>
+			<!-- if it uncomments, it should be an info object not a technique
+				 <link>
 				<path>
 					<source_relation>
 						<relation>a5358</relation>
@@ -1662,7 +2428,7 @@
 						</entity>
 					</target_node>
 				</range>
-			</link>
+			</link> -->
 			
 			<link>
 				<path>
@@ -1689,18 +2455,16 @@
 					<source_node>a5300</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E29_Design_or_Procedure</type>
-							<instance_generator name="URIwithVocabTypeAndId">
+							<type>custom:noType</type>
+							<instance_generator name="URIwithVocabType">
 								<arg name="type" type="constant">technique</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
 						</entity>
 					</target_node>
 				</range>
 			</link>
+			
 			<link>
 				<path>
 					<source_relation>
@@ -1708,7 +2472,7 @@
 					</source_relation>
 					<target_relation>
 						<if>
-							<equals value="Herstellung">../../aob30/text()</equals>
+							<equals value="Datierung">../text()</equals>
 						</if>
 						<relationship>crm:P108i_was_produced_by</relationship>
 						<entity>
@@ -1727,6 +2491,16 @@
 								<arg name="resourceId" type="xpath">../../a5000/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIwithType">
+									<arg name="type" type="constant">type</arg>
+										<arg name="id" type="xpath">../text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>		
 						</entity>
 						<relationship>crm:P82_at_some_time_within</relationship>
 					</target_relation>
@@ -1744,6 +2518,7 @@
 				</range>
 			</link>
 			
+			<!--
 			<link>
 				<path>
 					<source_relation>
@@ -1779,7 +2554,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E55_Type</type>
-							<instance_generator name="URIwithVocabType">
+							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -1790,6 +2565,7 @@
 					</target_node>
 				</range>
 			</link>
+			-->
 			
 			<link>
 				<path>
@@ -1809,34 +2585,28 @@
 								<arg name="eventType" type="constant">destruction</arg>
 							</instance_generator>
 							<label_generator name="EventConcatenated">
-								<arg name="Actor" type="xpath">../aob30/a3000/text()</arg>
+								<arg name="Actor" type="xpath">../aob30/a3100/text()</arg>
 								<arg name="Date" type="xpath">../a5000/text()</arg>
 								<arg name="Type" type="xpath">text()</arg>
 							</label_generator>
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithVocabType">
+									<type>custom:noType</type>
+									<instance_generator name="URIwithType">
 										<arg name="type" type="constant">type</arg>
 										<arg name="id" type="xpath">text()</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="xpath">text()</arg>
-									</label_generator>
 								</entity>
 							</additional>
 							<additional>
 								<relationship>crm:P14_carried_out_by</relationship>
 								<entity>
-									<type>crm:E21_Person</type>
-									<instance_generator name="URIwithType">
+									<type>custom:noType</type>
+									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">actor</arg>
 										<arg name="id" type="xpath">../aob30/a3000/text()</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="xpath">../aob30/a3100/text()</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>
@@ -1872,7 +2642,7 @@
 					</source_relation>
 					<target_relation>
 						<if>
-							<equals value="Umgestaltung (innen)">../aob30/text()</equals>
+							<equals value="Umgestaltung (innen)">text()</equals>
 						</if>
 						<relationship>crm:P124i_was_transformed_by</relationship>
 						<entity>
@@ -1884,34 +2654,28 @@
 								<arg name="event_type" type="constant">transformation</arg>
 							</instance_generator>
 							<label_generator name="EventConcatenated">
-								<arg name="Actor" type="xpath">../aob30/a3000/text()</arg>
+								<arg name="Actor" type="xpath">../aob30/a3100/text()</arg>
 								<arg name="Date" type="xpath">../a5000/text()</arg>
 								<arg name="Type" type="xpath">text()</arg>
 							</label_generator>
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithVocabType">
+									<type>custom:noType</type>
+									<instance_generator name="URIwithType">
 										<arg name="type" type="constant">type</arg>
 										<arg name="id" type="xpath">text()</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="xpath">text()</arg>
-									</label_generator>
 								</entity>
 							</additional>
 							<additional>
 								<relationship>crm:P14_carried_out_by</relationship>
 								<entity>
-									<type>crm:E21_Person</type>
-									<instance_generator name="URIwithType">
+									<type>custom:noType</type>
+									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">actor</arg>
 										<arg name="id" type="xpath">../aob30/a3000/text()</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="xpath">../aob30/a3100/text()</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>
@@ -1960,34 +2724,28 @@
 								<arg name="event_type" type="constant">modification</arg>
 							</instance_generator>
 							<label_generator name="EventConcatenated">
-								<arg name="Actor" type="xpath">../aob30/a3000/text()</arg>
+								<arg name="Actor" type="xpath">../aob30/a3100/text()</arg>
 								<arg name="Date" type="xpath">../a5000/text()</arg>
 								<arg name="Type" type="xpath">text()</arg>
 							</label_generator>
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithVocabType">
+									<type>custom:noType</type>
+									<instance_generator name="URIwithType">
 										<arg name="type" type="constant">type</arg>
 										<arg name="id" type="xpath">text()</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="xpath">text()</arg>
-									</label_generator>
 								</entity>
 							</additional>
 							<additional>
 								<relationship>crm:P14_carried_out_by</relationship>
 								<entity>
-									<type>crm:E21_Person</type>
-									<instance_generator name="URIwithType">
+									<type>custom:noType</type>
+									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">actor</arg>
 										<arg name="id" type="xpath">../aob30/a3000/text()</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="xpath">../aob30/a3100/text()</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>
@@ -2016,61 +2774,6 @@
 					</target_node>
 				</range>
 			</link>
-				
-			<link>
-				<path>
-					<source_relation>
-						<relation>aob28/a2900</relation>
-					</source_relation>
-					<target_relation>
-						<if>
-							<exists>../a2890/text()</exists>
-						</if>
-						<relationship>crm:P50_has_current_keeper</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>aob28/a2900</source_node>
-					<target_node>
-						<entity>
-							<type>crm:E39_Actor</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">text()</arg>
-							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P74_has_current_or_former_residence</relationship>
-								<entity>
-									<type>crm:E53_Place</type>
-									<instance_generator name="URIwithType">
-										<arg name="type" type="constant">place</arg>
-										<arg name="id" type="xpath">../a2864/text()</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="xpath">../a2864/text()</arg>
-									</label_generator>
-								</entity>
-							</additional>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithVocabType">
-										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="xpath">../a2890/text()</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="xpath">../a2890/text()</arg>
-									</label_generator>
-								</entity>
-							</additional>
-						</entity>
-					</target_node>
-				</range>
-			</link>
 			
 			<link>
 				<path>
@@ -2078,13 +2781,6 @@
 						<relation>aob28/a2900</relation>
 					</source_relation>
 					<target_relation>
-						<if>
-							<not>
-								<if>
-									<exists>../a2890/text()</exists>
-								</if>
-							</not>
-						</if>
 						<relationship>crm:P50_has_current_keeper</relationship>
 					</target_relation>
 				</path>
@@ -2092,27 +2788,11 @@
 					<source_node>aob28/a2900</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E39_Actor</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P74_has_current_or_former_residence</relationship>
-								<entity>
-									<type>crm:E53_Place</type>
-									<instance_generator name="URIwithType">
-										<arg name="type" type="constant">place</arg>
-										<arg name="id" type="xpath">../a2864/text()</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="xpath">../a2864/text()</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -2131,40 +2811,11 @@
 					<source_node>aob28/a2910</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E39_Actor</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P74_has_current_or_former_residence</relationship>
-								<entity>
-									<type>crm:E53_Place</type>
-									<instance_generator name="URIwithType">
-										<arg name="type" type="constant">place</arg>
-										<arg name="id" type="xpath">../a2864/text()</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="xpath">../a2864/text()</arg>
-									</label_generator>
-								</entity>
-							</additional>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithVocabType">
-										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="xpath">../a2890/text()</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="xpath">../a2890/text()</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -2198,14 +2849,11 @@
 					<source_node>aob28</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E55_Type</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithVocabType">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
 						</entity>
 					</target_node>
 				</range>
@@ -2316,27 +2964,11 @@
 					<source_node>aob26/a2780</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E53_Place</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">place</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
-										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="constant">Precise Location</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">Precise Location</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -2355,27 +2987,11 @@
 					<source_node>aob26/a2750</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E53_Place</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">place</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
-										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="constant">Builtwork Part</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">Builtwork Part</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -2394,27 +3010,11 @@
 					<source_node>aob26/a2700</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E53_Place</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">place</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
-										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="constant">Builtwork Part</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">Builtwork Part</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -2433,27 +3033,11 @@
 					<source_node>aob26/a2662</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E53_Place</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">place</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
-										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="constant">District</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">District</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -2472,26 +3056,11 @@
 					<source_node>aob26/a2664</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E53_Place</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">place</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300008389</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">cities</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -2510,32 +3079,16 @@
 					<source_node>a5108/a5116</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E53_Place</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">place</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
-										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="constant">Street</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">Street</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
 			</link>
-	
+
 			<link>
 				<path>
 					<source_relation>
@@ -2549,27 +3102,11 @@
 					<source_node>a5108/a5117</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E53_Place</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">place</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
-										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="constant">Street Number</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">Street Number</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -2578,37 +3115,21 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>a5110</relation>
+						<relation>a5108/a5110</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P55_has_current_location</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>a5110</source_node>
+					<source_node>a5108/a5110</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E53_Place</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">place</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
-										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="constant">District</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">District</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -2627,26 +3148,11 @@
 					<source_node>a5108</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E53_Place</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">place</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300008389</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">cities</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -2711,14 +3217,11 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIwithVocabType">
 										<arg name="type" type="constant">type</arg>
 										<arg name="id" type="xpath">../text()</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="xpath">../text()</arg>
-									</label_generator>
 								</entity>
 							</additional>
 							<additional>
@@ -2761,14 +3264,11 @@
 					<source_node>a5260</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E57_Material</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithVocabType">
 								<arg name="type" type="constant">material</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
 						</entity>
 					</target_node>
 				</range>
@@ -2795,27 +3295,11 @@
 					<source_node>a5500</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E55_Type</type>
-							<instance_generator name="URIwithVocabType">
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
-										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="constant">Primary Iconography</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">Primary Iconography</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -2842,27 +3326,11 @@
 					<source_node>a5510</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E55_Type</type>
-							<instance_generator name="URIwithVocabType">
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
-										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="constant">Secondary Iconography</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">Secondary Iconography</arg>
-									</label_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -2881,14 +3349,11 @@
 					<source_node>aob28/a2940</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E78_Curated_Holding</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">collection</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
 						</entity>
 					</target_node>
 				</range>
@@ -2896,5 +3361,2397 @@
 
 		</mapping>	
 	
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/a5220</source_node>
+				<target_node>
+					<if>
+						<exists>../a5200/text()</exists>
+					</if>
+                    <entity>
+                        <type>crm:E55_Type</type>
+						<instance_generator name="URIwithVocabType">
+							<arg name="type" type="constant">type</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">KHI</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">KHI</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGeneratorVocab">
+									<arg name="hierarchy" type="constant">type</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIorUUID">
+									<arg name="text" type="constant">http://vocab.getty.edu/aat/300264092</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">objects facet</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					 </entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/a5230</source_node>
+				<target_node>
+					<if>
+						<exists>../a5200/text()</exists>
+					</if>
+                    <entity>
+                        <type>crm:E55_Type</type>
+						<instance_generator name="URIwithVocabType">
+							<arg name="type" type="constant">type</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">KHI</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">KHI</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGeneratorVocab">
+									<arg name="hierarchy" type="constant">type</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIorUUID">
+									<arg name="text" type="constant">http://vocab.getty.edu/aat/300264092</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">objects facet</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					 </entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/a5226</source_node>
+				<target_node>
+					<if>
+						<exists>../a5200/text()</exists>
+					</if>
+                    <entity>
+                        <type>crm:E55_Type</type>
+						<instance_generator name="URIwithVocabType">
+							<arg name="type" type="constant">type</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">KHI</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">KHI</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGeneratorVocab">
+									<arg name="hierarchy" type="constant">type</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIorUUID">
+									<arg name="text" type="constant">http://vocab.getty.edu/aat/300264092</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">objects facet</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					 </entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/a5240</source_node>
+				<target_node>
+					<if>
+						<exists>../a5200/text()</exists>
+					</if>
+                    <entity>
+                        <type>crm:E55_Type</type>
+						<instance_generator name="URIwithVocabType">
+							<arg name="type" type="constant">type</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">KHI</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">KHI</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGeneratorVocab">
+									<arg name="hierarchy" type="constant">type</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIwithType">
+									<arg name="type" type="constant">type</arg>
+									<arg name="id" type="constant">Shape Classification</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">Shape Classification</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					 </entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/aob30</source_node>
+				<target_node>
+					<if>
+						<exists>../a5200/text()</exists>
+					</if>
+                    <entity>
+						<type>crm:E55_Type</type>
+						<instance_generator name="URIwithVocabType">
+							<arg name="type" type="constant">type</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">KHI</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">KHI</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGeneratorVocab">
+									<arg name="hierarchy" type="constant">type</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+					 </entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/aob30/a3000</source_node>
+				<target_node>
+					<if>
+						<exists>../../a5200/text()</exists>
+					</if>
+                    <entity>
+						<type>crm:E21_Person</type>
+						<instance_generator name="URIwithTypeAndId">
+							<arg name="type" type="constant">actor</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">../a3100/text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">KHI</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">KHI</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="namedgraph">
+									<arg name="type" type="constant">actor</arg>
+									<arg name="id" type="xpath">text()</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+					 </entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/aob30/a3475</source_node>
+				<target_node>
+					<if>
+						<exists>../../a5200/text()</exists>
+					</if>
+                    <entity>
+						<type>crm:E55_Type</type>
+						<instance_generator name="URIwithVocabType">
+							<arg name="type" type="constant">type</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">KHI</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">KHI</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGeneratorVocab">
+									<arg name="hierarchy" type="constant">type</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+					 </entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/aob30/a3470</source_node>
+				<target_node>
+					<if>
+						<exists>../../a5200/text()</exists>
+					</if>
+                    <entity>
+						<type>crm:E55_Type</type>
+						<instance_generator name="URIwithVocabType">
+							<arg name="type" type="constant">type</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">KHI</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">KHI</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGeneratorVocab">
+									<arg name="hierarchy" type="constant">type</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+					 </entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/aob35/a3600</source_node>
+				<target_node>
+					<if>
+						<exists>../../a5200/text()</exists>
+					</if>
+                    <entity>
+						<type>crm:E39_Actor</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">actor</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">KHI</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">KHI</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">actor</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+					 </entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/aob35/a3970</source_node>
+				<target_node>
+					<if>
+						<exists>../../a5200/text()</exists>
+					</if>
+                    <entity>
+						<type>crm:E55_Type</type>
+						<instance_generator name="URIwithVocabType">
+							<arg name="type" type="constant">type</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">KHI</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">KHI</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGeneratorVocab">
+									<arg name="hierarchy" type="constant">type</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+					 </entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/a309a/a3090</source_node>
+				<target_node>
+					<if>
+						<exists>../../a5200/text()</exists>
+					</if>
+                    <entity>
+						<type>crm:E39_Actor</type>
+						<instance_generator name="URIwithTypeAndId">
+							<arg name="type" type="constant">actor</arg>
+							<arg name="id" type="xpath">../a3000/text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">KHI</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">KHI</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="namedgraph">
+									<arg name="type" type="constant">actor</arg>
+									<arg name="id" type="xpath">../a3000/text()</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+					 </entity>
+				</target_node>
+			</domain>
+		</mapping>
+		
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/a309a/a3094</source_node>
+				<target_node>
+					<if>
+						<exists>../../a5200/text()</exists>
+					</if>
+                    <entity>
+						<type>crm:E55_Type</type>
+						<instance_generator name="URIwithVocabType">
+							<arg name="type" type="constant">type</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">KHI</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">KHI</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGeneratorVocab">
+									<arg name="hierarchy" type="constant">type</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+					 </entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/a309a</source_node>
+				<target_node>
+					<if>
+						<exists>../a5200/text()</exists>
+					</if>
+                    <entity>
+						<type>crm:E55_Type</type>
+						<instance_generator name="URIwithVocabType">
+							<arg name="type" type="constant">type</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">KHI</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">KHI</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGeneratorVocab">
+									<arg name="hierarchy" type="constant">type</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+					 </entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/a5130</source_node>
+				<target_node>
+					<if>
+						<exists>../a5200/text()</exists>
+					</if>
+                    <entity>
+						<type>crm:E39_Actor</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">actor</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">KHI</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">KHI</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">actor</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+					 </entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/a5140/a5145</source_node>
+				<target_node>
+					<if>
+						<exists>../../a5200/text()</exists>
+					</if>
+                    <entity>
+						<type>crm:E53_Place</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">place</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">KHI</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">KHI</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">place</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIorUUID">
+									<arg name="text" type="constant">http://vocab.getty.edu/aat/300008389</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">cities</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					 </entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/a5300</source_node>
+				<target_node>
+					<if>
+						<exists>../a5200/text()</exists>
+					</if>
+                    <entity>
+                        <type>crm:E29_Design_or_Procedure</type>
+						<instance_generator name="URIwithVocabType">
+							<arg name="type" type="constant">technique</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">KHI</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">KHI</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGeneratorVocab">
+									<arg name="hierarchy" type="constant">technique</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+					 </entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/a5060</source_node>
+				<target_node>
+					<if>
+						<exists>../a5200/text()</exists>
+					</if>
+                    <entity>
+						<type>crm:E55_Type</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">type</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">KHI</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">KHI</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">type</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+					 </entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/aob28/a2900</source_node>
+				<target_node>
+					<if>
+						<exists>../../a5200/text()</exists>
+					</if>
+                    <entity>
+						<type>crm:E39_Actor</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">actor</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">KHI</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">KHI</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">actor</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+					 </entity>
+				</target_node>
+			</domain>
+
+			 <link>
+				<path>
+					<source_relation>
+						<relation>../a2864</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P74_has_current_or_former_residence</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../a2864</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">place</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+	
+			<link>
+				<path>
+					<source_relation>
+						<relation>../a2890</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P2_has_type</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../a2890</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithVocabType">
+								<arg name="type" type="constant">type</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/aob28/a2864</source_node>
+				<target_node>
+					<if>
+						<exists>../../a5200/text()</exists>
+					</if>
+                    <entity>
+						<type>crm:E53_Place</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">place</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">KHI</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">KHI</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">place</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+					 </entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/aob28/a2890</source_node>
+				<target_node>
+					<if>
+						<exists>../../a5200/text()</exists>
+					</if>
+                    <entity>
+						<type>crm:E55_Type</type>
+						<instance_generator name="URIwithVocabType">
+							<arg name="type" type="constant">type</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">KHI</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">KHI</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGeneratorVocab">
+									<arg name="hierarchy" type="constant">type</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+					 </entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/aob28/a2910</source_node>
+				<target_node>
+					<if>
+						<exists>../../a5200/text()</exists>
+					</if>
+					<entity>
+						<type>crm:E39_Actor</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">actor</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">KHI</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">KHI</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">actor</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+					 </entity>
+				</target_node>
+			</domain>
+	
+			<link>
+				<path>
+					<source_relation>
+						<relation>../a2864</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P74_has_current_or_former_residence</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../a2864</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">place</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+	
+			<link>
+				<path>
+					<source_relation>
+						<relation>../a2890</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P2_has_type</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../a2890</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithVocabType">
+								<arg name="type" type="constant">type</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/aob28</source_node>
+				<target_node>
+					<if>
+						<exists>../a5200/text()</exists>
+					</if>
+                    <entity>
+						<type>crm:E55_Type</type>
+						<instance_generator name="URIwithVocabType">
+							<arg name="type" type="constant">type</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">KHI</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">KHI</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGeneratorVocab">
+									<arg name="hierarchy" type="constant">type</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+					 </entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/aob26/a2780</source_node>
+				<target_node>
+					<if>
+						<exists>../../a5200/text()</exists>
+					</if>
+                    <entity>
+						<type>crm:E53_Place</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">place</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">KHI</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">KHI</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">place</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIwithType">
+									<arg name="type" type="constant">type</arg>
+									<arg name="id" type="constant">Precise Location</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">Precise Location</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					 </entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/aob26/a2750</source_node>
+				<target_node>
+					<if>
+						<exists>../../a5200/text()</exists>
+					</if>
+                    <entity>
+						<type>crm:E53_Place</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">place</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">KHI</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">KHI</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">place</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIwithType">
+									<arg name="type" type="constant">type</arg>
+									<arg name="id" type="constant">Builtwork Part</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">Builtwork Part</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					 </entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/aob26/a2700</source_node>
+				<target_node>
+					<if>
+						<exists>../../a5200/text()</exists>
+					</if>
+                    <entity>
+						<type>crm:E53_Place</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">place</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">KHI</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">KHI</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">place</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIwithType">
+									<arg name="type" type="constant">type</arg>
+									<arg name="id" type="constant">Builtwork Part</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">Builtwork Part</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					 </entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/aob26/a2662</source_node>
+				<target_node>
+					<if>
+						<exists>../../a5200/text()</exists>
+					</if>
+                    <entity>
+						<type>crm:E53_Place</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">place</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">KHI</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">KHI</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">place</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIwithType">
+									<arg name="type" type="constant">type</arg>
+									<arg name="id" type="constant">District</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">District</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					 </entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/aob26/a2664</source_node>
+				<target_node>
+					<if>
+						<exists>../../a5200/text()</exists>
+					</if>
+                    <entity>
+						<type>crm:E53_Place</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">place</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">KHI</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">KHI</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">place</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIorUUID">
+									<arg name="text" type="constant">http://vocab.getty.edu/aat/300008389</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">cities</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					 </entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/a5108/a5116</source_node>
+				<target_node>
+					<if>
+						<exists>../../a5200/text()</exists>
+					</if>
+                    <entity>
+						<type>crm:E53_Place</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">place</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">KHI</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">KHI</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">place</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIwithType">
+									<arg name="type" type="constant">type</arg>
+									<arg name="id" type="constant">Street</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">Street</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					 </entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/a5108/a5117</source_node>
+				<target_node>
+					<if>
+						<exists>../../a5200/text()</exists>
+					</if>
+                    <entity>
+						<type>crm:E53_Place</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">place</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">KHI</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">KHI</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">place</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIwithType">
+									<arg name="type" type="constant">type</arg>
+									<arg name="id" type="constant">Street Number</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">Street Number</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					 </entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/a5108/a5110</source_node>
+				<target_node>
+					<if>
+						<exists>../../a5200/text()</exists>
+					</if>
+                    <entity>
+						<type>crm:E53_Place</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">place</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">KHI</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">KHI</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">place</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIwithType">
+									<arg name="type" type="constant">type</arg>
+									<arg name="id" type="constant">District</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">District</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					 </entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/a5108</source_node>
+				<target_node>
+					<if>
+						<exists>../a5200/text()</exists>
+					</if>
+                    <entity>
+						<type>crm:E53_Place</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">place</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">KHI</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">KHI</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">place</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIorUUID">
+									<arg name="text" type="constant">http://vocab.getty.edu/aat/300008389</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">cities</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					 </entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/a5364</source_node>
+				<target_node>
+					<if>
+						<exists>../a5200/text()</exists>
+					</if>
+                    <entity>
+						<type>crm:E55_Type</type>
+						<instance_generator name="URIwithVocabType">
+							<arg name="type" type="constant">type</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">KHI</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">KHI</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGeneratorVocab">
+									<arg name="hierarchy" type="constant">type</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+					 </entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/a5500</source_node>
+				<target_node>
+					<if>
+						<exists>../a5200/text()</exists>
+					</if>
+                    <entity>
+						<type>crm:E55_Type</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">type</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">KHI</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">KHI</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">type</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIwithType">
+									<arg name="type" type="constant">type</arg>
+									<arg name="id" type="constant">Primary Iconography</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">Primary Iconography</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					 </entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/a5510</source_node>
+				<target_node>
+					<if>
+						<exists>../a5200/text()</exists>
+					</if>
+                    <entity>
+						<type>crm:E55_Type</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">type</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">KHI</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">KHI</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">type</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIwithType">
+									<arg name="type" type="constant">type</arg>
+									<arg name="id" type="constant">Secondary Iconography</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">Secondary Iconography</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					 </entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/a5260</source_node>
+				<target_node>
+					<if>
+						<exists>../a5200/text()</exists>
+					</if>
+                    <entity>
+                        <type>crm:E57_Material</type>
+						<instance_generator name="URIwithVocabType">
+							<arg name="type" type="constant">material</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">KHI</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">KHI</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGeneratorVocab">
+									<arg name="hierarchy" type="constant">material</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+					 </entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/aob28/a2940</source_node>
+				<target_node>
+					<if>
+						<exists>../../a5200/text()</exists>
+					</if>
+                    <entity>
+						<type>crm:E78_Curated_Holding</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">collection</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:Provider</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">KHI</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">KHI</arg>
+								</label_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">collection</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:Provider</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+											<arg name="text" type="constant">KHI</arg>
+										</label_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+					 </entity>
+				</target_node>
+			</domain>
+		</mapping>
+
 	</mappings>
+
+
+
+
 </x3ml>

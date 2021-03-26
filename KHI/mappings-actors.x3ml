@@ -27,54 +27,106 @@
 						<instance_generator name="namedgraph">
 							<arg name="type" type="constant">KHI</arg>
 							<arg name="id" type="constant">namedgraphs</arg>
-						</instance_generator>
-						<!--lvl1-->
-						<additional>
-							<relationship>custom:consists_of</relationship>
-							<entity>
-								<type>custom:Namedgraph</type>
-								<instance_generator name="namedgraph">
-									<arg name="type" type="constant">actor</arg>
-									<arg name="id" type="xpath">aob30/a3000/text()</arg>
-								</instance_generator>
-							</entity>
-						</additional>
-						<!--lvl2-->
-						<additional>
-							<relationship>custom:consists_of</relationship>
-							<entity>
-								<type>custom:Namedgraph</type>
-								<instance_generator name="namedgraph">
-									<arg name="type" type="constant">actor</arg>
-									<arg name="id" type="xpath">obj/aob30/a3000/text()</arg>
-								</instance_generator>
-							</entity>
-						</additional>
-						<!--lvl3-->
-						<additional>
-							<relationship>custom:consists_of</relationship>
-							<entity>
-								<type>custom:Namedgraph</type>
-								<instance_generator name="namedgraph">
-									<arg name="type" type="constant">actor</arg>
-									<arg name="id" type="xpath">obj/obj/aob30/a3000/text()</arg>
-								</instance_generator>
-							</entity>
-						</additional>
-						<!--lvl4-->
-						<additional>
-							<relationship>custom:consists_of</relationship>
-							<entity>
-								<type>custom:Namedgraph</type>
-								<instance_generator name="namedgraph">
-									<arg name="type" type="constant">actor</arg>
-									<arg name="id" type="xpath">obj/obj/obj/aob30/a3000/text()</arg>
-								</instance_generator>
-							</entity>
-						</additional>							
+						</instance_generator>						
 					</entity>
 				</target_node>
 			</domain>
+
+			<!-- lvl1 -->
+			<link>
+				<path>
+					<source_relation>
+						<relation>a3000/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a3000/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+								<instance_generator name="namedgraph">
+									<arg name="type" type="constant">actor</arg>
+									<arg name="id" type="xpath">.</arg>
+								</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+			<!-- lvl2 -->
+			<link>
+				<path>
+					<source_relation>
+						<relation>obj/aob30/a3000/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>obj/aob30/a3000/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+								<instance_generator name="namedgraph">
+									<arg name="type" type="constant">actor</arg>
+									<arg name="id" type="xpath">.</arg>
+								</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+			<!-- lvl3 -->
+			<link>
+				<path>
+					<source_relation>
+						<relation>obj/obj/aob30/a3000/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>obj/obj/aob30/a3000/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+								<instance_generator name="namedgraph">
+									<arg name="type" type="constant">actor</arg>
+									<arg name="id" type="xpath">.</arg>
+								</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+			<!-- lvl4 -->
+			<link>
+				<path>
+					<source_relation>
+						<relation>obj/obj/obj/aob30/a3000/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>obj/obj/obj/aob30/a3000/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+								<instance_generator name="namedgraph">
+									<arg name="type" type="constant">actor</arg>
+									<arg name="id" type="xpath">.</arg>
+								</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
 
 			<!-- gender 1-->
 			<link>

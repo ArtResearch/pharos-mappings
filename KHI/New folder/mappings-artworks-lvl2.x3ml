@@ -19,11 +19,9 @@
 		
 		<mapping namedgraph="">
 			<domain>
-				<source_node>/root/obj/a5000</source_node>
+				<source_node>/root/obj/obj/a5001</source_node>
 				<target_node>
-					<if>
-						<exists>../a5202/text()</exists>
-					</if>
+	
 					<entity>
 						<type>custom:SourceNamedgraph</type>
 						<instance_generator name="namedgraph">
@@ -48,19 +46,19 @@
 		
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>/root/obj</source_node>
+				<source_node>/root/obj/obj</source_node>
 				<target_node>
 					<if>
-						<exists>a5202/text()</exists>
+						<exists>a5200/text()</exists>
 					</if>
                     <entity>
                         <type>crm:E22_Man-Made_Object</type>
 						<instance_generator name="URIwithTypeAndId">
 						    <arg name="type" type="constant">work</arg>
-							<arg name="id" type="xpath">a5000/text()</arg>
+							<arg name="id" type="xpath">a5001/text()</arg>
 						</instance_generator>
 						<label_generator name="Literal">
-							<arg name="text" type="xpath">a5202/text()</arg>
+							<arg name="text" type="xpath">a5200/text()</arg>
 						</label_generator>
 						<additional>
 							<relationship>custom:has_provider</relationship>
@@ -81,7 +79,7 @@
 								<type>custom:Namedgraph</type>
 								<instance_generator name="namedgraph">
 									<arg name="type" type="constant">work</arg>
-									<arg name="id" type="xpath">a5000/text()</arg>
+									<arg name="id" type="xpath">a5001/text()</arg>
 								</instance_generator>
 								<additional>
 									<relationship>custom:has_provider</relationship>
@@ -121,25 +119,13 @@
 									</entity>
 								</additional>
 							</entity>
-						</additional>
-						<additional>
-							<relationship>crm:P2_has_type</relationship>
-							<entity>
-								<type>crm:E55_Type</type>
-								<instance_generator name="URIorUUID">
-									<arg name="text" type="constant">http://vocab.getty.edu/aat/300265418</arg>
-								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">built works</arg>
-								</label_generator>
-							</entity>
 						</additional>		
 						<additional>
 							<relationship>custom:has_original_record</relationship>
 							<entity>
 								<type>crm:E32_Identifier</type>
 								<instance_generator name="OriginalURI">
-									<arg name="id" type="xpath">a5000/text()</arg>
+									<arg name="id" type="xpath">a5001/text()</arg>
 								</instance_generator>
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
@@ -201,7 +187,7 @@
 							<type>crm:E41_Appellation</type>
 							<instance_generator name="IdentifierURI">	
 								<arg name="subject_type" type="constant">work</arg>
-								<arg name="subject_id" type="xpath">../a5000/text()</arg>
+								<arg name="subject_id" type="xpath">../a5001/text()</arg>
 								<arg name="identifier_type" type="constant">appellation</arg>
 								<arg name="identifier_id" type="xpath">text()</arg>
 							</instance_generator>
@@ -241,7 +227,7 @@
 							<type>crm:E41_Appellation</type>
 							<instance_generator name="IdentifierURI">	
 								<arg name="subject_type" type="constant">work</arg>
-								<arg name="subject_id" type="xpath">../a5000/text()</arg>
+								<arg name="subject_id" type="xpath">../a5001/text()</arg>
 								<arg name="identifier_type" type="constant">appellation</arg>
 								<arg name="identifier_id" type="xpath">text()</arg>
 							</instance_generator>
@@ -281,7 +267,7 @@
 							<type>crm:E41_Appellation</type>
 							<instance_generator name="IdentifierURI">	
 								<arg name="subject_type" type="constant">work</arg>
-								<arg name="subject_id" type="xpath">../a5000/text()</arg>
+								<arg name="subject_id" type="xpath">../a5001/text()</arg>
 								<arg name="identifier_type" type="constant">appellation</arg>
 								<arg name="identifier_id" type="xpath">text()</arg>
 							</instance_generator>
@@ -474,7 +460,7 @@
 							<type>crm:E42_Identifier</type>
 							<instance_generator name="IdentifierURI">	
 								<arg name="subject_type" type="constant">work</arg>
-								<arg name="subject_id" type="xpath">../../a5000/text()</arg>
+								<arg name="subject_id" type="xpath">../../a5001/text()</arg>
 								<arg name="identifier_type" type="constant">identifier</arg>
 								<arg name="identifier_id" type="xpath">text()</arg>
 							</instance_generator>
@@ -514,7 +500,7 @@
 							<type>crm:E42_Identifier</type>
 							<instance_generator name="IdentifierURI">	
 								<arg name="subject_type" type="constant">work</arg>
-								<arg name="subject_id" type="xpath">../../a5000/text()</arg>
+								<arg name="subject_id" type="xpath">../../a5001/text()</arg>
 								<arg name="identifier_type" type="constant">identifier</arg>
 								<arg name="identifier_id" type="xpath">text()</arg>
 							</instance_generator>
@@ -555,7 +541,7 @@
 							<type>crm:E42_Identifier</type>
 							<instance_generator name="IdentifierURI">	
 								<arg name="subject_type" type="constant">work</arg>
-								<arg name="subject_id" type="xpath">../../a5000/text()</arg>
+								<arg name="subject_id" type="xpath">../../a5001/text()</arg>
 								<arg name="identifier_type" type="constant">identifier</arg>
 								<arg name="identifier_id" type="xpath">text()</arg>
 							</instance_generator>
@@ -596,7 +582,7 @@
 							<type>crm:E42_Identifier</type>
 							<instance_generator name="IdentifierURI">	
 								<arg name="subject_type" type="constant">work</arg>
-								<arg name="subject_id" type="xpath">../../a5000/text()</arg>
+								<arg name="subject_id" type="xpath">../../a5001/text()</arg>
 								<arg name="identifier_type" type="constant">identifier</arg>
 								<arg name="identifier_id" type="xpath">text()</arg>
 							</instance_generator>
@@ -637,7 +623,7 @@
 							<type>crm:E42_Identifier</type>
 							<instance_generator name="IdentifierURI">	
 								<arg name="subject_type" type="constant">work</arg>
-								<arg name="subject_id" type="xpath">../a5000/text()</arg>
+								<arg name="subject_id" type="xpath">../a5001/text()</arg>
 								<arg name="identifier_type" type="constant">identifier</arg>
 								<arg name="identifier_id" type="xpath">text()</arg>
 							</instance_generator>
@@ -678,7 +664,7 @@
 							<type>crm:E41_Appellation</type>
 							<instance_generator name="IdentifierURI">	
 								<arg name="subject_type" type="constant">work</arg>
-								<arg name="subject_id" type="xpath">../a5000/text()</arg>
+								<arg name="subject_id" type="xpath">../a5001/text()</arg>
 								<arg name="identifier_type" type="constant">appellation</arg>
 								<arg name="identifier_id" type="xpath">text()</arg>
 							</instance_generator>
@@ -923,7 +909,7 @@
 							<type>crm:E36_Visual_Item</type>
 							<instance_generator name="VisualItemUri">
 								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../a5000/text()</arg>
+								<arg name="resourceId" type="xpath">../a5001/text()</arg>
 							</instance_generator>
 						</entity>
 						<relationship>crm:P128i_is_carried_by</relationship>
@@ -957,7 +943,7 @@
 							<type>crm:E36_Visual_Item</type>
 							<instance_generator name="VisualItemUri">
 								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../a5000/text()</arg>
+								<arg name="resourceId" type="xpath">../../a5001/text()</arg>
 							</instance_generator>
 						</entity>
 						<relationship>crm:P128i_is_carried_by</relationship>
@@ -991,7 +977,7 @@
 							<type>crm:E12_Production</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../a5000/text()</arg>
+								<arg name="resourceId" type="xpath">../a5001/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
@@ -1029,7 +1015,7 @@
 							<type>crm:E12_Production</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../a5000/text()</arg>
+								<arg name="resourceId" type="xpath">../../a5001/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
@@ -1038,7 +1024,7 @@
 							<type>crm:PC14_carried_out_by</type>
 							<instance_generator name="PropertyTypeUri">
 								<arg name="propertyType" type="constant">carried_out_by</arg>
-								<arg name="domain" type="xpath">../../a5000/text()</arg>
+								<arg name="domain" type="xpath">../../a5001/text()</arg>
 								<arg name="range" type="xpath">text()</arg>
 							</instance_generator>
 						</entity>
@@ -1083,7 +1069,7 @@
 							<type>crm:E12_Production</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../a5000/text()</arg>
+								<arg name="resourceId" type="xpath">../../a5001/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
@@ -1092,7 +1078,7 @@
 							<type>crm:PC14_carried_out_by</type>
 							<instance_generator name="PropertyTypeUri">
 								<arg name="propertyType" type="constant">carried_out_by</arg>
-								<arg name="domain" type="xpath">../../a5000/text()</arg>
+								<arg name="domain" type="xpath">../../a5001/text()</arg>
 								<arg name="range" type="xpath">../a3000/text()</arg>
 							</instance_generator>
 						</entity>
@@ -1137,7 +1123,7 @@
 							<type>crm:E12_Production</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../a5000/text()</arg>
+								<arg name="resourceId" type="xpath">../../a5001/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
@@ -1146,7 +1132,7 @@
 							<type>crm:E13_Attribute_Assignment</type>
 							<instance_generator name="ComplexEventUri">
 								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../a5000/text()</arg>
+								<arg name="resourceId" type="xpath">../../a5001/text()</arg>
 								<arg name="id" type="xpath">../a3000/text()</arg>
 								<arg name="event_type" type="constant">attribute_assignment</arg>
 							</instance_generator>
@@ -1156,7 +1142,7 @@
 									<type>crm:PC14_carried_out_by</type>
 									<instance_generator name="PropertyTypeUri">
 										<arg name="propertyType" type="constant">carried_out_by</arg>
-										<arg name="domain" type="xpath">../../a5000/text()</arg>
+										<arg name="domain" type="xpath">../../a5001/text()</arg>
 										<arg name="range" type="xpath">../a3000/text()</arg>
 									</instance_generator>
 								</entity>
@@ -1196,7 +1182,7 @@
 							<type>crm:E12_Production</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../a5000/text()</arg>
+								<arg name="resourceId" type="xpath">../../a5001/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
@@ -1205,7 +1191,7 @@
 							<type>crm:PC14_carried_out_by</type>
 							<instance_generator name="PropertyTypeUri">
 								<arg name="propertyType" type="constant">carried_out_by</arg>
-								<arg name="domain" type="xpath">../../a5000/text()</arg>
+								<arg name="domain" type="xpath">../../a5001/text()</arg>
 								<arg name="range" type="xpath">text()</arg>
 							</instance_generator>
 						</entity>
@@ -1243,7 +1229,7 @@
 							<type>crm:E12_Production</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../a5000/text()</arg>
+								<arg name="resourceId" type="xpath">../../a5001/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
@@ -1252,7 +1238,7 @@
 							<type>crm:PC14_carried_out_by</type>
 							<instance_generator name="PropertyTypeUri">
 								<arg name="propertyType" type="constant">carried_out_by</arg>
-								<arg name="domain" type="xpath">../../a5000/text()</arg>
+								<arg name="domain" type="xpath">../../a5001/text()</arg>
 								<arg name="range" type="xpath">../a3600/text()</arg>
 							</instance_generator>
 						</entity>
@@ -1290,7 +1276,7 @@
 							<type>crm:E12_Production</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../a5000/text()</arg>
+								<arg name="resourceId" type="xpath">../../a5001/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
@@ -1299,7 +1285,7 @@
 							<type>crm:E13_Attribute_Assignment</type>
 							<instance_generator name="ComplexEventUri">
 								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../a5000/text()</arg>
+								<arg name="resourceId" type="xpath">../../a5001/text()</arg>
 								<arg name="id" type="xpath">../a3600/text()</arg>
 								<arg name="event_type" type="constant">attribute_assignment</arg>
 							</instance_generator>
@@ -1309,7 +1295,7 @@
 									<type>crm:PC14_carried_out_by</type>
 									<instance_generator name="PropertyTypeUri">
 										<arg name="propertyType" type="constant">carried_out_by</arg>
-										<arg name="domain" type="xpath">../../a5000/text()</arg>
+										<arg name="domain" type="xpath">../../a5001/text()</arg>
 										<arg name="range" type="xpath">../a3600/text()</arg>
 									</instance_generator>
 								</entity>
@@ -1349,7 +1335,7 @@
 							<type>crm:E12_Production</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../a5000/text()</arg>
+								<arg name="resourceId" type="xpath">../../a5001/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
@@ -1358,7 +1344,7 @@
 							<type>crm:PC15_was_influenced_by</type>
 							<instance_generator name="PropertyTypeUri">
 								<arg name="propertyType" type="constant">was_influenced_by</arg>
-								<arg name="domain" type="xpath">../../a5000/text()</arg>
+								<arg name="domain" type="xpath">../../a5001/text()</arg>
 								<arg name="range" type="xpath">text()</arg>
 							</instance_generator>
 						</entity>
@@ -1396,7 +1382,7 @@
 							<type>crm:E12_Production</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../a5000/text()</arg>
+								<arg name="resourceId" type="xpath">../../a5001/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
@@ -1405,7 +1391,7 @@
 							<type>crm:PC15_was_influenced_by</type>
 							<instance_generator name="PropertyTypeUri">
 								<arg name="propertyType" type="constant">was_influenced_by</arg>
-								<arg name="domain" type="xpath">../../a5000/text()</arg>
+								<arg name="domain" type="xpath">../../a5001/text()</arg>
 								<arg name="range" type="xpath">../a3090/text()</arg>
 							</instance_generator>
 						</entity>
@@ -1443,7 +1429,7 @@
 							<type>crm:E12_Production</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../a5000/text()</arg>
+								<arg name="resourceId" type="xpath">../../a5001/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
@@ -1452,7 +1438,7 @@
 							<type>crm:E13_Attribute_Assignment</type>
 							<instance_generator name="URIwith2Ids">
 								<arg name="type" type="constant">attribute_assignment</arg>
-								<arg name="id1" type="xpath">../../a5000/text()</arg>
+								<arg name="id1" type="xpath">../../a5001/text()</arg>
 								<arg name="id2" type="xpath">../a3090/text()</arg>
 							</instance_generator>
 							<additional>
@@ -1461,7 +1447,7 @@
 									<type>crm:PC15_was_influenced_by</type>
 									<instance_generator name="PropertyTypeUri">
 										<arg name="propertyType" type="constant">was_influenced_by</arg>
-										<arg name="domain" type="xpath">../../a5000/text()</arg>
+										<arg name="domain" type="xpath">../../a5001/text()</arg>
 										<arg name="range" type="xpath">../a3090/text()</arg>
 									</instance_generator>
 								</entity>
@@ -1498,7 +1484,7 @@
 							<type>crm:E73_Information_Object</type>
 							<instance_generator name="InformationObjectUri">
 								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../a5000/text()</arg>
+								<arg name="resourceId" type="xpath">../../a5001/text()</arg>
 								<arg name="type" type="constant">attribution_info</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -1545,7 +1531,7 @@
 							<type>crm:E12_Production</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../a5000/text()</arg>
+								<arg name="resourceId" type="xpath">../a5001/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
@@ -1554,7 +1540,7 @@
 							<type>crm:PC15_was_influenced_by</type>
 							<instance_generator name="PropertyTypeUri">
 								<arg name="propertyType" type="constant">was_influenced_by</arg>
-								<arg name="domain" type="xpath">../a5000/text()</arg>
+								<arg name="domain" type="xpath">../a5001/text()</arg>
 								<arg name="range" type="xpath">text()</arg>
 							</instance_generator>
 							<additional>
@@ -1604,7 +1590,7 @@
 							<type>crm:E12_Production</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../a5000/text()</arg>
+								<arg name="resourceId" type="xpath">../../a5001/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
@@ -1654,7 +1640,7 @@
 							<type>crm:E12_Production</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../a5000/text()</arg>
+								<arg name="resourceId" type="xpath">../a5001/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
@@ -1692,7 +1678,7 @@
 							<type>crm:E12_Production</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../a5000/text()</arg>
+								<arg name="resourceId" type="xpath">../a5001/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
@@ -1729,7 +1715,7 @@
 							<type>crm:E12_Production</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../a5000/text()</arg>
+								<arg name="resourceId" type="xpath">../../a5001/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
@@ -1738,7 +1724,7 @@
 							<type>crm:E52_Time-Span</type>
 							<instance_generator name="TimespanUri">
 								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../a5000/text()</arg>
+								<arg name="resourceId" type="xpath">../../a5001/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
@@ -1772,7 +1758,7 @@
 							<type>crm:E12_Production</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../a5000/text()</arg>
+								<arg name="resourceId" type="xpath">../a5001/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
@@ -1781,7 +1767,7 @@
 							<type>crm:E52_Time-Span</type>
 							<instance_generator name="TimespanUri">
 								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../a5000/text()</arg>
+								<arg name="resourceId" type="xpath">../a5001/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
@@ -1819,12 +1805,12 @@
 							<type>crm:E6_Destruction</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../a5000/text()</arg>
+								<arg name="resourceId" type="xpath">../a5001/text()</arg>
 								<arg name="eventType" type="constant">destruction</arg>
 							</instance_generator>
 							<label_generator name="EventConcatenated">
 								<arg name="Actor" type="xpath">../aob30/a3000/text()</arg>
-								<arg name="Date" type="xpath">../a5000/text()</arg>
+								<arg name="Date" type="xpath">../a5001/text()</arg>
 								<arg name="Type" type="xpath">text()</arg>
 							</label_generator>
 							<additional>
@@ -1859,7 +1845,7 @@
 							<type>crm:E52_Time-Span</type>
 							<instance_generator name="TimespanUri">
 								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../a5000/text()</arg>
+								<arg name="resourceId" type="xpath">../a5001/text()</arg>
 								<arg name="eventType" type="constant">destruction</arg>
 							</instance_generator>
 						</entity>
@@ -1893,13 +1879,13 @@
 							<type>crm:E81_Transformation</type>
 							<instance_generator name="ComplexEventUri">
 								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../a5000/text()</arg>
+								<arg name="resourceId" type="xpath">../a5001/text()</arg>
 								<arg name="id" type="xpath">a5064/text()</arg>
 								<arg name="event_type" type="constant">transformation</arg>
 							</instance_generator>
 							<label_generator name="EventConcatenated">
 								<arg name="Actor" type="xpath">../aob30/a3000/text()</arg>
-								<arg name="Date" type="xpath">../a5000/text()</arg>
+								<arg name="Date" type="xpath">../a5001/text()</arg>
 								<arg name="Type" type="xpath">text()</arg>
 							</label_generator>
 							<additional>
@@ -1934,7 +1920,7 @@
 							<type>crm:E52_Time-Span</type>
 							<instance_generator name="ComplexTimespanUri">
 								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../a5000/text()</arg>
+								<arg name="resourceId" type="xpath">../a5001/text()</arg>
 								<arg name="eventType" type="constant">transformation</arg>
 								<arg name="timespan" type="xpath">a5064/text()</arg>
 							</instance_generator>
@@ -1969,13 +1955,13 @@
 							<type>crm:E11_Modification</type>
 							<instance_generator name="ComplexEventUri">
 								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../a5000/text()</arg>
+								<arg name="resourceId" type="xpath">../a5001/text()</arg>
 								<arg name="id" type="xpath">a5064/text()</arg>
 								<arg name="event_type" type="constant">modification</arg>
 							</instance_generator>
 							<label_generator name="EventConcatenated">
 								<arg name="Actor" type="xpath">../aob30/a3000/text()</arg>
-								<arg name="Date" type="xpath">../a5000/text()</arg>
+								<arg name="Date" type="xpath">../a5001/text()</arg>
 								<arg name="Type" type="xpath">text()</arg>
 							</label_generator>
 							<additional>
@@ -2010,7 +1996,7 @@
 							<type>crm:E52_Time-Span</type>
 							<instance_generator name="ComplexTimespanUri">
 								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../a5000/text()</arg>
+								<arg name="resourceId" type="xpath">../a5001/text()</arg>
 								<arg name="eventType" type="constant">modification</arg>
 								<arg name="timespan" type="xpath">a5064/text()</arg>
 							</instance_generator>
@@ -2170,7 +2156,7 @@
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
 									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
+									<instance_generator name="URIwithVocabType">
 										<arg name="type" type="constant">type</arg>
 										<arg name="id" type="xpath">../a2890/text()</arg>
 									</instance_generator>
@@ -2198,7 +2184,7 @@
 							<type>crm:E8_Acquisition</type>
 							<instance_generator name="AcquisitionUri">
 								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../a5000/text()</arg>
+								<arg name="resourceId" type="xpath">../a5001/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
 								<arg name="from" type="constant">-</arg>
 								<arg name="to" type="xpath">a2900/text()</arg>
@@ -2239,7 +2225,7 @@
 							<type>crm:E8_Acquisition</type>
 							<instance_generator name="AcquisitionUri">
 								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../a5000/text()</arg>
+								<arg name="resourceId" type="xpath">../../a5001/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
 								<arg name="from" type="constant">-</arg>
 								<arg name="to" type="xpath">../a2900/text()</arg>
@@ -2251,7 +2237,7 @@
 							<type>crm:E52_Time-Span</type>
 							<instance_generator name="ComplexTimespanUri">
 								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../a5000/text()</arg>
+								<arg name="resourceId" type="xpath">../../a5001/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
 								<arg name="timespan" type="xpath">text()</arg>
 							</instance_generator>
@@ -2283,7 +2269,7 @@
 							<type>crm:E73_Information_Object</type>
 							<instance_generator name="InformationObjectUri">
 								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../a5000/text()</arg>
+								<arg name="resourceId" type="xpath">../../a5001/text()</arg>
 								<arg name="type" type="constant">location_info</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -2682,7 +2668,7 @@
 							<type>crm:E54_Dimension</type>
 							<instance_generator name="DimensionURI">
 								<arg name="subject_type" type="constant">work</arg>
-								<arg name="subject_id" type="xpath">../a5000/text()</arg>
+								<arg name="subject_id" type="xpath">../a5001/text()</arg>
 								<arg name="type" type="constant">-</arg>
 								<arg name="unit" type="constant">-</arg>
 								<arg name="value" type="xpath">text()</arg>
@@ -2717,7 +2703,7 @@
 							<type>crm:E54_Dimension</type>
 							<instance_generator name="DimensionURI">
 								<arg name="subject_type" type="constant">work</arg>
-								<arg name="subject_id" type="xpath">../../a5000/text()</arg>
+								<arg name="subject_id" type="xpath">../../a5001/text()</arg>
 								<arg name="type" type="xpath">../text()</arg>
 								<arg name="unit" type="constant">-</arg>
 								<arg name="value" type="xpath">text()</arg>
@@ -2799,7 +2785,7 @@
 							<type>crm:E36_Visual_Item</type>
 							<instance_generator name="VisualItemUri">
 								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../a5000/text()</arg>
+								<arg name="resourceId" type="xpath">../a5001/text()</arg>
 							</instance_generator>
 						</entity>
 						<relationship>crm:P138_represents</relationship>
@@ -2846,7 +2832,7 @@
 							<type>crm:E36_Visual_Item</type>
 							<instance_generator name="VisualItemUri">
 								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../a5000/text()</arg>
+								<arg name="resourceId" type="xpath">../a5001/text()</arg>
 							</instance_generator>
 						</entity>
 						<relationship>crm:P138_represents</relationship>
@@ -2908,6 +2894,28 @@
 				</range>
 			</link>
 
+			<link> 
+				<path>
+					<source_relation>
+						<relation>../a5000</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P46i_forms_part_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../a5000</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E22_Man-Made_Object</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">work</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
 		</mapping>	
 	
 	</mappings>

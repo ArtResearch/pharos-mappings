@@ -21,7 +21,7 @@
 				<source_node>/root/obj/obj/a5001</source_node>
 				<target_node>
 					<if>
-						<exists>a5200/text()</exists>
+						<exists>../a5200/text()</exists>
 					</if>
 					<entity>
 						<type>custom:SourceNamedgraph</type>
@@ -1439,7 +1439,7 @@
 					</source_relation>
 					<target_relation>
 						<if>
-							<exists>a520s/text()</exists>
+							<exists>a523s/text()</exists>
 						</if>
 						<relationship>crm:P2_has_type</relationship>
 					</target_relation>
@@ -2139,7 +2139,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E22_Man-Made_Object</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">negative</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
