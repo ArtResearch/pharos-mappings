@@ -10,7 +10,7 @@
 		<namespace prefix="vocab" uri="https://pharos.artresearch.net/resource/midas/vocabulary/"/>
 		<namespace prefix="custom" uri="https://pharos.artresearch.net/custom/"/>
 		<namespace prefix="owl" uri="http://www.w3.org/2002/07/owl#"/>
-		<namespace prefix="original" uri="http://foto.biblhertz.it/"/>
+		<namespace prefix="original" uri="http://photothek.khi.fi.it/documents/"/>
 		<namespace prefix="iiif_image" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
 		<namespace prefix="image" uri="http://fotothek.biblhertz.it/bh/320px/"/>
 		<namespace prefix="iiif_json" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
@@ -59,7 +59,7 @@
 							<type>custom:Namedgraph</type>
 							<instance_generator name="MultiHashingGeneratorVocab">
 								<arg name="hierarchy" type="constant">type</arg>
-								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">../text()</arg>
 								<arg name="term_simple" type="constant">graph</arg>
 							</instance_generator>
 						</entity>	
@@ -107,7 +107,7 @@
 							<type>custom:Namedgraph</type>
 							<instance_generator name="MultiHashingGeneratorVocab">
 								<arg name="hierarchy" type="constant">type</arg>
-								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">../text()</arg>
 								<arg name="term_simple" type="constant">graph</arg>
 							</instance_generator>
 						</entity>	
@@ -131,7 +131,7 @@
 							<type>custom:Namedgraph</type>
 							<instance_generator name="MultiHashingGeneratorVocab">
 								<arg name="hierarchy" type="constant">type</arg>
-								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">../text()</arg>
 								<arg name="term_simple" type="constant">graph</arg>
 							</instance_generator>
 						</entity>	
@@ -993,7 +993,7 @@
 							<entity>
 								<type>crm:E32_Identifier</type>
 								<instance_generator name="OriginalURI">
-									<arg name="id" type="xpath">a5003/text()</arg>
+									<arg name="id" type="xpath">../../../a5000/text()</arg>
 								</instance_generator>
 								<additional>
 									<relationship>crm:P2_has_type</relationship>

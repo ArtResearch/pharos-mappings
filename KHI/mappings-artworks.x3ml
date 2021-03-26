@@ -59,7 +59,7 @@
 							<type>custom:Namedgraph</type>
 							<instance_generator name="MultiHashingGeneratorVocab">
 								<arg name="hierarchy" type="constant">type</arg>
-								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">../text()</arg>
 								<arg name="term_simple" type="constant">graph</arg>
 							</instance_generator>
 						</entity>	
@@ -107,7 +107,7 @@
 							<type>custom:Namedgraph</type>
 							<instance_generator name="MultiHashingGeneratorVocab">
 								<arg name="hierarchy" type="constant">type</arg>
-								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">../text()</arg>
 								<arg name="term_simple" type="constant">graph</arg>
 							</instance_generator>
 						</entity>	
@@ -131,7 +131,7 @@
 							<type>custom:Namedgraph</type>
 							<instance_generator name="MultiHashingGeneratorVocab">
 								<arg name="hierarchy" type="constant">type</arg>
-								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">../text()</arg>
 								<arg name="term_simple" type="constant">graph</arg>
 							</instance_generator>
 						</entity>	
