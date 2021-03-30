@@ -19,7 +19,6 @@
 	<mappings>
 	
 		<mapping namedgraph="">
-		
 			<domain>
 				<source_node>//FINAL_EXPORT_Artist/Artist_ID/text()</source_node>
 				<target_node>
@@ -158,7 +157,6 @@
 
 		</mapping>	
 	
-	
 		<mapping namedgraph="graph">
 			<domain>
 				<source_node>//FINAL_EXPORT_Artist</source_node>
@@ -182,14 +180,11 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">ITatti</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">I Tatti</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -203,14 +198,11 @@
 								<additional>
 									<relationship>custom:has_provider</relationship>
 									<entity>
-										<type>custom:Provider</type>
+										<type>custom:noType</type>
 										<instance_generator name="URIwithTypeAndId">
 											<arg name="type" type="constant">source</arg>
 											<arg name="id" type="constant">ITatti</arg>
 										</instance_generator>
-										<label_generator name="Literal">
-											<arg name="text" type="constant">I Tatti</arg>
-										</label_generator>
 									</entity>
 								</additional>
 							</entity>
@@ -218,14 +210,11 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">FotoIndex</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">FotoIndex</arg>
-								</label_generator>
 							</entity>
 						</additional>
 					</entity>
@@ -330,13 +319,10 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
 										<arg name="text" type="constant">http://vocab.getty.edu/aat/300417193</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">titles (general, names)</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>
@@ -362,14 +348,11 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIwithType">
 										<arg name="type" type="constant">type</arg>
 										<arg name="id" type="constant">Hollis Record</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">Hollis Record</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>	
@@ -409,14 +392,11 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">ITatti</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">I Tatti</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -430,14 +410,11 @@
 								<additional>
 									<relationship>custom:has_provider</relationship>
 									<entity>
-										<type>custom:Provider</type>
+										<type>custom:noType</type>
 										<instance_generator name="URIwithTypeAndId">
 											<arg name="type" type="constant">source</arg>
 											<arg name="id" type="constant">ITatti</arg>
 										</instance_generator>
-										<label_generator name="Literal">
-											<arg name="text" type="constant">I Tatti</arg>
-										</label_generator>
 									</entity>
 								</additional>
 							</entity>
@@ -445,27 +422,21 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">FotoIndex</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">FotoIndex</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithType">
 									<arg name="type" type="constant">type</arg>
 									<arg name="id" type="constant">Unknown</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">Unknown Artist</arg>
-								</label_generator>
 							</entity>
 						</additional>
 					</entity>
@@ -549,13 +520,10 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
 										<arg name="text" type="constant">http://vocab.getty.edu/aat/300417193</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">titles (general, names)</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>
@@ -601,14 +569,11 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">ITatti</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">I Tatti</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -622,14 +587,11 @@
 								<additional>
 									<relationship>custom:has_provider</relationship>
 									<entity>
-										<type>custom:Provider</type>
+										<type>custom:noType</type>
 										<instance_generator name="URIwithTypeAndId">
 											<arg name="type" type="constant">source</arg>
 											<arg name="id" type="constant">ITatti</arg>
 										</instance_generator>
-										<label_generator name="Literal">
-											<arg name="text" type="constant">I Tatti</arg>
-										</label_generator>
 									</entity>
 								</additional>
 							</entity>
@@ -637,14 +599,11 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">FotoIndex</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">FotoIndex</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -676,14 +635,11 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">ITatti</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">I Tatti</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -696,14 +652,11 @@
 								<additional>
 									<relationship>custom:has_provider</relationship>
 									<entity>
-										<type>custom:Provider</type>
+										<type>custom:noType</type>
 										<instance_generator name="URIwithTypeAndId">
 											<arg name="type" type="constant">source</arg>
 											<arg name="id" type="constant">ITatti</arg>
 										</instance_generator>
-										<label_generator name="Literal">
-											<arg name="text" type="constant">I Tatti</arg>
-										</label_generator>
 									</entity>
 								</additional>
 							</entity>
@@ -711,27 +664,21 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">FotoIndex</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">FotoIndex</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithType">
 									<arg name="type" type="constant">type</arg>
 									<arg name="id" type="constant">Geonames_URI</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">Geonames URI</arg>
-								</label_generator>
 							</entity>
 						</additional>
 					</entity>
@@ -754,14 +701,11 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">ITatti</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">I Tatti</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -774,14 +718,11 @@
 								<additional>
 									<relationship>custom:has_provider</relationship>
 									<entity>
-										<type>custom:Provider</type>
+										<type>custom:noType</type>
 										<instance_generator name="URIwithTypeAndId">
 											<arg name="type" type="constant">source</arg>
 											<arg name="id" type="constant">ITatti</arg>
 										</instance_generator>
-										<label_generator name="Literal">
-											<arg name="text" type="constant">I Tatti</arg>
-										</label_generator>
 									</entity>
 								</additional>
 							</entity>
@@ -789,27 +730,21 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">FotoIndex</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">FotoIndex</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithType">
 									<arg name="type" type="constant">type</arg>
 									<arg name="id" type="constant">ULAN</arg>
 								</instance_generator>
-									<label_generator name="Literal">
-									<arg name="text" type="constant">ULAN ID</arg>
-								</label_generator>
 							</entity>
 						</additional>
 					</entity>
@@ -832,14 +767,11 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">ITatti</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">I Tatti</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -852,14 +784,11 @@
 								<additional>
 									<relationship>custom:has_provider</relationship>
 									<entity>
-										<type>custom:Provider</type>
+										<type>custom:noType</type>
 										<instance_generator name="URIwithTypeAndId">
 											<arg name="type" type="constant">source</arg>
 											<arg name="id" type="constant">ITatti</arg>
 										</instance_generator>
-										<label_generator name="Literal">
-											<arg name="text" type="constant">I Tatti</arg>
-										</label_generator>
 									</entity>
 								</additional>
 							</entity>
@@ -867,27 +796,21 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">FotoIndex</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">FotoIndex</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithType">
 									<arg name="type" type="constant">type</arg>
 									<arg name="id" type="constant">Wikidata</arg>
 								</instance_generator>
-									<label_generator name="Literal">
-									<arg name="text" type="constant">Wikidata ID</arg>
-								</label_generator>
 							</entity>
 						</additional>
 					</entity>
@@ -910,14 +833,11 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">ITatti</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">I Tatti</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -930,14 +850,11 @@
 								<additional>
 									<relationship>custom:has_provider</relationship>
 									<entity>
-										<type>custom:Provider</type>
+										<type>custom:noType</type>
 										<instance_generator name="URIwithTypeAndId">
 											<arg name="type" type="constant">source</arg>
 											<arg name="id" type="constant">ITatti</arg>
 										</instance_generator>
-										<label_generator name="Literal">
-											<arg name="text" type="constant">I Tatti</arg>
-										</label_generator>
 									</entity>
 								</additional>
 							</entity>
@@ -945,27 +862,21 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">FotoIndex</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">FotoIndex</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithType">
 									<arg name="type" type="constant">type</arg>
 									<arg name="id" type="constant">ULAN</arg>
 								</instance_generator>
-									<label_generator name="Literal">
-									<arg name="text" type="constant">ULAN ID</arg>
-								</label_generator>
 							</entity>
 						</additional>
 					</entity>

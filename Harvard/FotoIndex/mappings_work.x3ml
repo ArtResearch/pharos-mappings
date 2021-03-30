@@ -17,7 +17,6 @@
 	<mappings>
 	
 		<mapping namedgraph="">
-		
 			<domain>
 				<source_node>//FINAL_EXPORT_Work/Artwork_ID/text()</source_node>
 				<target_node>
@@ -42,8 +41,7 @@
 				</target_node>
 			</domain>
 			
-		</mapping>	
-	
+		</mapping>
 	
 		<mapping namedgraph="graph">
 			<domain>
@@ -61,14 +59,11 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">ITatti</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">I Tatti</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -82,14 +77,11 @@
 								<additional>
 									<relationship>custom:has_provider</relationship>
 									<entity>
-										<type>custom:Provider</type>
+										<type>custom:noType</type>
 										<instance_generator name="URIwithTypeAndId">
 											<arg name="type" type="constant">source</arg>
 											<arg name="id" type="constant">ITatti</arg>
 										</instance_generator>
-										<label_generator name="Literal">
-											<arg name="text" type="constant">I Tatti</arg>
-										</label_generator>
 									</entity>
 								</additional>
 							</entity>
@@ -97,36 +89,27 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">FotoIndex</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">FotoIndex</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="constant">http://vocab.getty.edu/aat/300133025</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">works of art</arg>
-								</label_generator>
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
 									<entity>
-										<type>crm:E55_Type</type>
+										<type>custom:noType</type>
 										<instance_generator name="URIorUUID">
 											<arg name="text" type="constant">https://pharos.artresearch.net/resource/vocab/maintype</arg>
 										</instance_generator>
-										<label_generator name="Literal">
-											<arg name="text" type="constant">main type</arg>
-										</label_generator>
 									</entity>
 								</additional>
 							</entity>
@@ -161,20 +144,16 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
 										<arg name="text" type="constant">http://vocab.getty.edu/aat/300417193</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">titles (general, names)</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>
 					</target_node>
 				</range>
 			</link>
-
 
 			<link>
 				<path>

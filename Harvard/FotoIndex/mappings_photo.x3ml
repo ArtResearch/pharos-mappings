@@ -18,7 +18,6 @@
 	<mappings>
 	
 		<mapping namedgraph="">
-		
 			<domain>
 				<source_node>//FINAL_EXPORT_Photograph/Photograph_ID/text()</source_node>
 				<target_node>
@@ -60,23 +59,17 @@
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="constant">http://vocab.getty.edu/aat/300046300</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">photographs</arg>
-								</label_generator>
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
 									<entity>
-										<type>crm:E55_Type</type>
+										<type>custom:noType</type>
 										<instance_generator name="URIorUUID">
 											<arg name="text" type="constant">https://pharos.artresearch.net/resource/vocab/maintype</arg>
 										</instance_generator>
-										<label_generator name="Literal">
-											<arg name="text" type="constant">main type</arg>
-										</label_generator>
 									</entity>
 								</additional>
 							</entity>
@@ -84,26 +77,20 @@
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="constant">http://vocab.getty.edu/aat/300127104</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">photographic prints</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">ITatti</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">I Tatti</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -117,14 +104,11 @@
 								<additional>
 									<relationship>custom:has_provider</relationship>
 									<entity>
-										<type>custom:Provider</type>
+										<type>custom:noType</type>
 										<instance_generator name="URIwithTypeAndId">
 											<arg name="type" type="constant">source</arg>
 											<arg name="id" type="constant">ITatti</arg>
 										</instance_generator>
-										<label_generator name="Literal">
-											<arg name="text" type="constant">I Tatti</arg>
-										</label_generator>
 									</entity>
 								</additional>
 							</entity>
@@ -132,14 +116,11 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">FotoIndex</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">FotoIndex</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -157,13 +138,10 @@
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
 									<entity>
-										<type>crm:E55_Type</type>
+										<type>custom:noType</type>
 										<instance_generator name="URIorUUID">
 											<arg name="text" type="constant">http://vocab.getty.edu/aat/300078817</arg>
 										</instance_generator>
-										<label_generator name="Literal">
-											<arg name="text" type="constant">rectos</arg>
-										</label_generator>
 									</entity>
 								</additional>
 							</entity>
@@ -183,13 +161,10 @@
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
 									<entity>
-										<type>crm:E55_Type</type>
+										<type>custom:noType</type>
 										<instance_generator name="URIorUUID">
 											<arg name="text" type="constant">http://vocab.getty.edu/aat/300010292</arg>
 										</instance_generator>
-										<label_generator name="Literal">
-											<arg name="text" type="constant">versos</arg>
-										</label_generator>
 									</entity>
 								</additional>
 							</entity>
@@ -224,13 +199,10 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
 										<arg name="text" type="constant">http://vocab.getty.edu/aat/300417193</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">titles (general, names)</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>
@@ -276,32 +248,26 @@
 							   <additional>
 									<relationship>crm:P2_has_type</relationship>
 									<entity>
-										<type>crm:E55_Type</type>
+										<type>custom:noType</type>
 										<instance_generator name="URIorUUID">
 											<arg name="text" type="constant">http://iiif.io/api/image</arg>
 										</instance_generator>
-										<label_generator name="Literal">
-											<arg name="text" type="constant">http://iiif.io/api/image</arg>
-										</label_generator>
 									</entity>
 								</additional>
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
 									<entity>
-										<type>crm:E55_Type</type>
+										<type>custom:noType</type>
 										<instance_generator name="URIwithType">
 											<arg name="type" type="constant">type</arg>
 											<arg name="id" type="constant">recto</arg>
 										</instance_generator>
-										<label_generator name="Literal">
-											<arg name="text" type="constant">recto</arg>
-										</label_generator>
 									</entity>
 								</additional>
 								<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
 										<arg name="text" type="constant">http://vocab.getty.edu/aat/300078817</arg>
 									</instance_generator>
@@ -339,32 +305,26 @@
 							   <additional>
 									<relationship>crm:P2_has_type</relationship>
 									<entity>
-										<type>crm:E55_Type</type>
+										<type>custom:noType</type>
 										<instance_generator name="URIorUUID">
 											<arg name="text" type="constant">http://iiif.io/api/image</arg>
 										</instance_generator>
-										<label_generator name="Literal">
-											<arg name="text" type="constant">http://iiif.io/api/image</arg>
-										</label_generator>
 									</entity>
 								</additional>
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
 									<entity>
-										<type>crm:E55_Type</type>
+										<type>custom:noType</type>
 										<instance_generator name="URIwithType">
 											<arg name="type" type="constant">type</arg>
 											<arg name="id" type="constant">verso</arg>
 										</instance_generator>
-										<label_generator name="Literal">
-											<arg name="text" type="constant">verso</arg>
-										</label_generator>
 									</entity>
 								</additional>
 								<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
 										<arg name="text" type="constant">http://vocab.getty.edu/aat/300010292</arg>
 									</instance_generator>
@@ -403,14 +363,10 @@
 					<source_node>Primary_Work</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E55_Type</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">type</arg>
-								<arg name="id" type="constant">Primary</arg>
+							<type>custom:noType</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="constant">https://pharos.artresearch.net/resource/vocab/primaryphoto</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="constant">Primary Photo</arg>
-							</label_generator>
 						</entity>
 					</target_node>
 				</range>

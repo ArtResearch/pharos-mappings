@@ -34,14 +34,14 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>a3000/text()</relation>
+						<relation>aob30/a3000/text()</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>custom:consists_of</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>a3000/text()</source_node>
+					<source_node>aob30/a3000/text()</source_node>
 					<target_node>
 						<entity>
 							<type>custom:Namedgraph</type>

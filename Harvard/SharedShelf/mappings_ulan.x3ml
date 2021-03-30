@@ -19,7 +19,6 @@
 	<mappings>
 	
 		<mapping namedgraph="">
-		
 			<domain>
 				<source_node>//ssn:Name/Terms</source_node>
 				<target_node>
@@ -32,8 +31,6 @@
 							<arg name="type" type="constant">itatti</arg>
 							<arg name="id" type="constant">namedgraphs</arg>
 						</instance_generator>
-					
-
 						<additional>
 							<relationship>custom:consists_of</relationship>
 							<entity>
@@ -44,16 +41,12 @@
 								</instance_generator>
 							</entity>
 						</additional>
-						
-
 					</entity>
 				</target_node>
 			</domain>
-
 		</mapping>
 		
 		<mapping namedgraph="graph">
-
 			<domain>
 				<source_node>//ssn:Name</source_node>
 				<target_node>
@@ -80,14 +73,11 @@
 								<additional>
 									<relationship>custom:has_provider</relationship>
 									<entity>
-										<type>custom:Provider</type>
+										<type>custom:noType</type>
 										<instance_generator name="URIwithTypeAndId">
 											<arg name="type" type="constant">source</arg>
 											<arg name="id" type="constant">ITatti</arg>
 										</instance_generator>
-										<label_generator name="Literal">
-											<arg name="text" type="constant">I Tatti</arg>
-										</label_generator>
 									</entity>
 								</additional>
 							</entity>
@@ -95,26 +85,20 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">SharedShelf</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">SharedShelf</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="constant">http://vocab.getty.edu/aat/300025103</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">artists (visual artists)</arg>
-								</label_generator>
 							</entity>
 						</additional>
 					</entity>

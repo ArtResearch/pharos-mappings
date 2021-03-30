@@ -1,0 +1,789 @@
+<https://pharos.artresearch.net/resource/frick/source/Frick/graph> {
+        <https://pharos.artresearch.net/resource/frick/source/Frick>
+            a       <https://pharos.artresearch.net/custom/Provider> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Frick" .
+}
+
+<http://vocab.getty.edu/aat/300133025/graph> {
+    <http://vocab.getty.edu/aat/300133025>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "works of art".
+}
+
+<http://vocab.getty.edu/aat/300417193/graph> {
+    <http://vocab.getty.edu/aat/300417193>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "titles (general, names)" .
+}
+
+<https://pharos.artresearch.net/resource/vocab/maintype/graph> {
+    <https://pharos.artresearch.net/resource/vocab/maintype>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "main type" .
+}
+
+<http://vocab.getty.edu/aat/300417226/graph> {
+    <http://vocab.getty.edu/aat/300417226>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "alternative titles" .
+}
+
+<http://vocab.getty.edu/aat/300056109/graph> {
+    <http://vocab.getty.edu/aat/300056109>
+        a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "attribution" .
+}
+
+<http://vocab.getty.edu/aat/300404621/graph> {
+    <http://vocab.getty.edu/aat/300404621>
+        a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "repository numbers" .
+}
+
+<https://pharos.artresearch.net/resource/frick/type/QDYCHFM8/graph> {
+    <https://pharos.artresearch.net/resource/frick/type/QDYCHFM8>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "IAP" .    
+}
+
+<http://vocab.getty.edu/aat/300055863/graph> {
+    <http://vocab.getty.edu/aat/300055863>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "provenance (history of ownership)" .    
+}
+
+<http://vocab.getty.edu/aat/300435424/graph> {
+    <http://vocab.getty.edu/aat/300435424>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "exhibitions description" .    
+}
+
+<http://vocab.getty.edu/aat/300435425/graph> {
+    <http://vocab.getty.edu/aat/300435425>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "condition/examination description" .    
+}
+
+<http://vocab.getty.edu/aat/300404764/graph> {
+    <http://vocab.getty.edu/aat/300404764>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "sources (general concept)" .
+}
+
+<https://pharos.artresearch.net/resource/frick/type/1H7FVNNV/graph> {
+    <https://pharos.artresearch.net/resource/frick/type/1H7FVNNV>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Subject Description" .
+}
+
+<http://vocab.getty.edu/aat/300015640/graph> {
+    <http://vocab.getty.edu/aat/300015640>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "copies (derivative objects)" .
+}
+
+<http://vocab.getty.edu/aat/300435418/graph> {
+    <http://vocab.getty.edu/aat/300435418>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "credit line" .
+}
+
+<https://pharos.artresearch.net/resource/frick/type/QXR2LP6A/graph> {
+    <https://pharos.artresearch.net/resource/frick/type/QXR2LP6A>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Color Description" .
+}
+
+<http://vocab.getty.edu/aat/300055644/graph> {
+    <http://vocab.getty.edu/aat/300055644>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "height" .
+}
+
+<http://vocab.getty.edu/aat/300055645/graph> {
+    <http://vocab.getty.edu/aat/300055645>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "length" .
+}
+
+<http://vocab.getty.edu/aat/300028702/graph> {
+    <http://vocab.getty.edu/aat/300028702>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "inscriptions" .
+}
+
+<https://pharos.artresearch.net/resource/frick/type/S18DPYNR/graph> {
+    <https://pharos.artresearch.net/resource/frick/type/S18DPYNR>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Photo Card" .
+}
+
+<http://vocab.getty.edu/aat/300435416/graph> {
+    <http://vocab.getty.edu/aat/300435416>
+        a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+                "descriptive note" .
+}
+
+<http://vocab.getty.edu/aat/300404630/graph> {
+    <http://vocab.getty.edu/aat/300404630>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "uniform resource locators" .
+}
+
+<http://vocab.getty.edu/aat/300046300/graph> {
+    <http://vocab.getty.edu/aat/300046300>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "photographs".
+}
+
+<http://vocab.getty.edu/aat/300127104/graph> {
+    <http://vocab.getty.edu/aat/300127104>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "photographic prints" .
+}
+
+<https://pharos.artresearch.net/resource/frick/type/VB6V45M7/graph> {
+    <https://pharos.artresearch.net/resource/frick/type/VB6V45M7>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Mount Number" .
+}
+
+<https://pharos.artresearch.net/resource/frick/type/1HBAGDWS/graph> {
+    <https://pharos.artresearch.net/resource/frick/type/1HBAGDWS>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Image Description" .
+}
+
+<http://vocab.getty.edu/aat/300264595/graph> {
+        <http://vocab.getty.edu/aat/300264595>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "repositories (institutions)" .
+}
+
+<https://pharos.artresearch.net/resource/frick/type/TRU4D8VM/graph> {
+        <https://pharos.artresearch.net/resource/frick/type/TRU4D8VM>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Publication" .
+}
+
+<https://pharos.artresearch.net/resource/frick/type/1HR842YN/graph> {
+        <https://pharos.artresearch.net/resource/frick/type/1HR842YN>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Postcard" .
+}
+
+<https://pharos.artresearch.net/resource/frick/type/T86V55W3/graph> {
+        <https://pharos.artresearch.net/resource/frick/type/T86V55W3>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Photostat" .
+}
+
+<http://vocab.getty.edu/aat/300008389/graph> {
+        <http://vocab.getty.edu/aat/300008389>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "cities" .
+}
+
+<http://vocab.getty.edu/aat/300387079/graph> {
+        <http://vocab.getty.edu/aat/300387079>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "local regions" .
+}
+
+<http://vocab.getty.edu/aat/300387506/graph> {
+        <http://vocab.getty.edu/aat/300387506>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "countries (sovereign states)" .
+}
+
+<http://vocab.getty.edu/aat/300387329/graph> {
+        <http://vocab.getty.edu/aat/300387329>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "terms (controlled vocabulary)" .
+}
+
+<http://vocab.getty.edu/aat/300264092/graph> {
+        <http://vocab.getty.edu/aat/300264092>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "objects facet" .
+}
+
+<http://vocab.getty.edu/aat/300054631/graph> {
+        <http://vocab.getty.edu/aat/300054631>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "classification (information handling function)" .
+}
+
+<https://pharos.artresearch.net/resource/frick/type/QHNBSHMZ/graph> {
+        <https://pharos.artresearch.net/resource/frick/type/QHNBSHMZ>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Institution Type" .
+}
+
+<https://pharos.artresearch.net/resource/itatti/source/ITatti/graph> {
+        <https://pharos.artresearch.net/resource/itatti/source/ITatti>
+            a       <https://pharos.artresearch.net/custom/Provider> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "I Tatti" .
+}
+
+<https://pharos.artresearch.net/resource/itatti/source/FotoIndex/graph> {
+        <https://pharos.artresearch.net/resource/itatti/source/FotoIndex>
+            a       <https://pharos.artresearch.net/custom/Provider> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "FotoIndex" .
+}
+
+<https://pharos.artresearch.net/resource/itatti/type/1JYJBFKJ/graph> {
+        <https://pharos.artresearch.net/resource/itatti/type/1JYJBFKJ>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Hollis Record" .
+}
+
+<https://pharos.artresearch.net/resource/itatti/type/US06J6XQ/graph> {
+        <https://pharos.artresearch.net/resource/itatti/type/US06J6XQ>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Unknown Artist" .
+}
+
+<https://pharos.artresearch.net/resource/itatti/type/SKQ1TXPV/graph> {
+        <https://pharos.artresearch.net/resource/itatti/type/SKQ1TXPV>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Geonames URI" .
+}
+
+<https://pharos.artresearch.net/resource/itatti/type/VF6GM283/graph> {
+        <https://pharos.artresearch.net/resource/itatti/type/VF6GM283>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "ULAN ID" .
+}
+
+<https://pharos.artresearch.net/resource/itatti/type/TODDT1JB/graph> {
+        <https://pharos.artresearch.net/resource/itatti/type/TODDT1JB>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Wikidata ID" .
+}
+
+<https://pharos.artresearch.net/resource/itatti/type/RL7VIRM4/graph> {
+        <https://pharos.artresearch.net/resource/itatti/type/RL7VIRM4>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "AAT ID" .
+}
+
+<https://pharos.artresearch.net/resource/itatti/type/QY1MJ9D7/graph> {
+        <https://pharos.artresearch.net/resource/itatti/type/QY1MJ9D7>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "VIAF ID" .
+}
+
+<https://pharos.artresearch.net/resource/itatti/type/RHGLZLF6/graph> {
+        <https://pharos.artresearch.net/resource/itatti/type/RHGLZLF6>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Hist. Photo Col." .
+}
+
+<https://pharos.artresearch.net/resource/itatti/type/QXG0LQH6/graph> {
+        <https://pharos.artresearch.net/resource/itatti/type/QXG0LQH6>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "VIT Location" .
+}
+
+
+<http://vocab.getty.edu/aat/300078817/graph> {
+        <http://vocab.getty.edu/aat/300078817>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "rectos" .
+}
+
+<http://vocab.getty.edu/aat/300010292/graph> {
+        <http://vocab.getty.edu/aat/300010292>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "versos" .
+}
+
+<http://iiif.io/api/image/graph> {
+        <http://iiif.io/api/image>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "http://iiif.io/api/image" .
+}
+
+<https://pharos.artresearch.net/resource/itatti/type/SOPP167C/graph> {
+        <https://pharos.artresearch.net/resource/itatti/type/SOPP167C>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "recto" .
+}
+
+<https://pharos.artresearch.net/resource/itatti/type/1IYNSVTU/graph> {
+        <https://pharos.artresearch.net/resource/itatti/type/1IYNSVTU>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "verso" .
+}
+
+<https://pharos.artresearch.net/resource/vocab/primaryphoto/graph> {
+        <https://pharos.artresearch.net/resource/vocab/primaryphoto>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Primary Photo" .
+}
+
+<https://pharos.artresearch.net/resource/itatti/source/SharedShelf/graph> {
+        <https://pharos.artresearch.net/resource/itatti/source/SharedShelf>
+                a       <https://pharos.artresearch.net/custom/Provider> ;
+                <http://www.w3.org/2000/01/rdf-schema#label>
+                        "SharedShelf" .
+}
+
+<http://vocab.getty.edu/aat/300265418/graph> {
+        <http://vocab.getty.edu/aat/300265418>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "built works" .
+}
+
+<http://vocab.getty.edu/aat/300055644/graph> {
+        <http://vocab.getty.edu/aat/300055644>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "height" .
+}
+
+<http://vocab.getty.edu/aat/300055645/graph> {
+        <http://vocab.getty.edu/aat/300055645>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "length" .
+}
+
+<http://vocab.getty.edu/aat/300404287/graph> {
+        <http://vocab.getty.edu/aat/300404287>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "copyist of (attribution qualifier)" .
+}
+
+
+<http://vocab.getty.edu/aat/300404285/graph> {
+        <http://vocab.getty.edu/aat/300404285>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "style of (attribution qualifier)" .
+}
+
+<http://vocab.getty.edu/aat/300404284/graph> {
+        <http://vocab.getty.edu/aat/300404284>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "school of (attribution qualifier)" .
+}
+
+<http://vocab.getty.edu/aat/300404269/graph> {
+        <http://vocab.getty.edu/aat/300404269>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "attributed to (attribution qualifier)" .
+}
+
+<http://vocab.getty.edu/aat/300404288/graph> {
+        <http://vocab.getty.edu/aat/300404288>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "manner of (attribution qualifier)" .
+}
+
+<http://vocab.getty.edu/aat/300404283/graph> {
+        <http://vocab.getty.edu/aat/300404283>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "circle of (attribution qualifier)" .
+}
+
+<http://vocab.getty.edu/aat/300404286/graph> {
+        <http://vocab.getty.edu/aat/300404286>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "after (attribution qualifier)" .
+}
+
+<http://vocab.getty.edu/aat/300404282/graph> {
+        <http://vocab.getty.edu/aat/300404282>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "follower of (attribution qualifier)" .
+}
+
+<http://vocab.getty.edu/aat/300404274/graph> {
+        <http://vocab.getty.edu/aat/300404274>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "workshop of (attribution qualifier)" .
+}
+
+<http://vocab.getty.edu/aat/300404270/graph> {
+        <http://vocab.getty.edu/aat/300404270>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "formerly attributed to (attribution qualifier)" .
+}
+
+<https://pharos.artresearch.net/resource/itatti/type/1JY27MWT/graph> {
+        <https://pharos.artresearch.net/resource/itatti/type/1JY27MWT>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "?" .
+}
+
+<http://vocab.getty.edu/aat/300435429/graph> {
+        <http://vocab.getty.edu/aat/300435429>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "materials/technique description" .
+}
+
+<https://pharos.artresearch.net/resource/itatti/type/QXFGC0W7/graph> {
+        <https://pharos.artresearch.net/resource/itatti/type/QXFGC0W7>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Representation Id" .
+}
+
+<https://pharos.artresearch.net/resource/itatti/type/S18DPYNR/graph> {
+        <https://pharos.artresearch.net/resource/itatti/type/S18DPYNR>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Photo Card" .
+}
+
+<http://vocab.getty.edu/aat/300435704/graph> {
+        <http://vocab.getty.edu/aat/300435704>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "record identifiers" .
+}
+
+<https://pharos.artresearch.net/resource/itatti/type/1H7GDWR4/graph> {
+        <https://pharos.artresearch.net/resource/itatti/type/1H7GDWR4>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Image Classification Number" .
+}
+
+
+<http://vocab.getty.edu/aat/300417379/graph> {
+        <http://vocab.getty.edu/aat/300417379>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "digital photographs"
+}
+
+<http://vocab.getty.edu/aat/300435414/graph> {
+        <http://vocab.getty.edu/aat/300435414>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "inscription description"
+}
+
+<http://vocab.getty.edu/aat/300025103/graph> {
+        <http://vocab.getty.edu/aat/300025103>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "artists (visual artists)" .
+}
+
+<http://vocab.getty.edu/aat/300404126/graph> {
+        <http://vocab.getty.edu/aat/300404126>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "subjects (content of works)" .
+}
+
+<https://pharos.artresearch.net/resource/zeri/source/Zeri/graph> {
+        <https://pharos.artresearch.net/resource/zeri/source/Zeri>
+            a       <https://pharos.artresearch.net/custom/Provider> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Zeri" .
+}
+
+<https://pharos.artresearch.net/resource/zeri/type/1JECOI9N/graph> {
+        <https://pharos.artresearch.net/resource/zeri/type/1JECOI9N>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Century" .
+}
+
+<https://pharos.artresearch.net/resource/zeri/type/QE73H5NI/graph> {
+        <https://pharos.artresearch.net/resource/zeri/type/QE73H5NI>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Part of Century" .
+}
+
+<https://pharos.artresearch.net/resource/zeri/type/T86X3P9H/graph> {
+        <https://pharos.artresearch.net/resource/zeri/type/T86X3P9H>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Alternative Date" .
+}
+
+<https://pharos.artresearch.net/resource/zeri/type/QE4DNBEX/graph> {
+        <https://pharos.artresearch.net/resource/zeri/type/QE4DNBEX>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Exhibition" .
+}
+
+<http://vocab.getty.edu/aat/300265639/graph> {
+        <http://vocab.getty.edu/aat/300265639>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "research notes" .
+}
+
+<http://vocab.getty.edu/aat/300015640/graph> {
+        <http://vocab.getty.edu/aat/300015640>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "copies (derivative objects)" .
+}
+
+<http://vocab.getty.edu/aat/300072633/graph> {
+        <http://vocab.getty.edu/aat/300072633>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "depth" .
+}
+
+ <http://vocab.getty.edu/aat/300055624/graph> {
+        <http://vocab.getty.edu/aat/300055624>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "diameter" .
+}
+
+<https://pharos.artresearch.net/resource/zeri/type/RH7TIBC1/graph> {
+        <https://pharos.artresearch.net/resource/zeri/type/RH7TIBC1>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Dimension Description" .
+}
+
+<https://pharos.artresearch.net/resource/zeri/type/QY4F5M87/graph> {
+        <https://pharos.artresearch.net/resource/zeri/type/QY4F5M87>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Page" .
+}
+
+<https://pharos.artresearch.net/resource/zeri/type/1IB5XOTI/graph> {
+        <https://pharos.artresearch.net/resource/zeri/type/1IB5XOTI>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Pseudonym" .
+}
+
+<https://pharos.artresearch.net/resource/zeri/type/VBSI570G/graph> {
+        <https://pharos.artresearch.net/resource/zeri/type/VBSI570G>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "LOT" .
+}
+
+<https://pharos.artresearch.net/resource/zeri/type/R1IVXXII/graph> {
+        <https://pharos.artresearch.net/resource/zeri/type/R1IVXXII>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Specific Object Type" .
+}
+
+<https://pharos.artresearch.net/resource/zeri/type/RLB7660V/graph> {
+        <https://pharos.artresearch.net/resource/zeri/type/RLB7660V>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Parthood Status" .
+}
+
+<https://pharos.artresearch.net/resource/zeri/type/1HBAY8T0/graph> {
+        <https://pharos.artresearch.net/resource/zeri/type/1HBAY8T0>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Village" .
+}
+
+<https://pharos.artresearch.net/resource/zeri/type/1IBC0CDO/graph> {
+        <https://pharos.artresearch.net/resource/zeri/type/1IBC0CDO>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Province" .
+}
+
+<https://pharos.artresearch.net/resource/zeri/type/VB92JRF4/graph> {
+        <https://pharos.artresearch.net/resource/zeri/type/VB92JRF4>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Primary Iconography" .
+}
+
+<https://pharos.artresearch.net/resource/zeri/type/RHAHUREM/graph> {
+        <https://pharos.artresearch.net/resource/zeri/type/RHAHUREM>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Keyword" .
+}
+
+<http://vocab.getty.edu/aat/300435419/graph> {
+        <http://vocab.getty.edu/aat/300435419>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "bibliography (category)" .
+}
+
+<https://pharos.artresearch.net/resource/zeri/type/SOPP167C/graph> {
+        <https://pharos.artresearch.net/resource/zeri/type/SOPP167C>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "recto" .
+}
+
+<http://vocab.getty.edu/aat/300404704/graph> {
+        <http://vocab.getty.edu/aat/300404704>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "shelf marks" .
+}
+
+<https://pharos.artresearch.net/resource/zeri/type/URGSHXQZ/graph> {
+        <https://pharos.artresearch.net/resource/zeri/type/URGSHXQZ>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Specific Ownership" .
+}
+
+<https://pharos.artresearch.net/resource/zeri/type/1H7Z9MGN/graph> {
+        <https://pharos.artresearch.net/resource/zeri/type/1H7Z9MGN>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "General Ownership" .
+}
+
+
+<http://vocab.getty.edu/aat/300055646/graph> {
+        <http://vocab.getty.edu/aat/300055646>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "thickness" .
+}
+
+<http://vocab.getty.edu/aat/300127013/graph> {
+        <http://vocab.getty.edu/aat/300127013>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "color (perceived attribute)" .
+}
+
+<http://vocab.getty.edu/aat/300127173/graph> {
+        <http://vocab.getty.edu/aat/300127173>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "negatives (photographs)" .
+}
+
+
+<http://vocab.getty.edu/aat/300215302/graph> {
+        <http://vocab.getty.edu/aat/300215302>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "digital images" .
+}
+
+<http://vocab.getty.edu/aat/300404024/graph> {
+        <http://vocab.getty.edu/aat/300404024>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "items (cataloging focus)" .
+}
+
+<https://pharos.artresearch.net/resource/zeri/type/T4F0PGKK/graph> {
+        <https://pharos.artresearch.net/resource/zeri/type/T4F0PGKK>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Format" .
+}
+
+
+<http://vocab.getty.edu/aat/300027349/graph> {
+        <http://vocab.getty.edu/aat/300027349>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "series (object groupings)" .
+}
+
+<http://vocab.getty.edu/aat/300197578/graph> {
+        <http://vocab.getty.edu/aat/300197578>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "document containers" .
+}
+
+<http://vocab.getty.edu/aat/300197602/graph> {
+        <http://vocab.getty.edu/aat/300197602>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "folders (containers)" .
+}
+
+<https://pharos.artresearch.net/resource/zeri/type/VBBWCNEK/graph> {
+        <https://pharos.artresearch.net/resource/zeri/type/VBBWCNEK>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Village / Foreign placename" .
+}

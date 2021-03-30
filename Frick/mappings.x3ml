@@ -714,36 +714,27 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Frick</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">Frick</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="constant">http://vocab.getty.edu/aat/300133025</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">works of art</arg>
-								</label_generator>
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
 									<entity>
-										<type>crm:E55_Type</type>
+										<type>custom:noType</type>
 										<instance_generator name="URIorUUID">
 											<arg name="text" type="constant">https://pharos.artresearch.net/resource/vocab/maintype</arg>
 										</instance_generator>
-										<label_generator name="Literal">
-											<arg name="text" type="constant">main type</arg>
-										</label_generator>
 									</entity>
 								</additional>
 							</entity>
@@ -759,14 +750,11 @@
 								<additional>
 									<relationship>custom:has_provider</relationship>
 										<entity>
-											<type>custom:Provider</type>
+											<type>custom:noType</type>
 											<instance_generator name="URIwithTypeAndId">
 												<arg name="type" type="constant">source</arg>
 												<arg name="id" type="constant">Frick</arg>
 											</instance_generator>
-											<label_generator name="Literal">
-												<arg name="text" type="constant">Frick</arg>
-											</label_generator>
 										</entity>
 								</additional>
 							</entity>
@@ -801,13 +789,10 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
 										<arg name="text" type="constant">http://vocab.getty.edu/aat/300417193</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">titles (general, names)</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>
@@ -841,13 +826,10 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
 										<arg name="text" type="constant">http://vocab.getty.edu/aat/300417226</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">alternative titles</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>
@@ -881,13 +863,10 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
 										<arg name="text" type="constant">http://vocab.getty.edu/aat/300417226</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">alternative titles</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>
@@ -1029,13 +1008,10 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
 										<arg name="text" type="constant">http://vocab.getty.edu/aat/300056109</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">attribution</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>	
@@ -1092,13 +1068,10 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
 										<arg name="text" type="constant">http://vocab.getty.edu/aat/300056109</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">attribution</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>	
@@ -1330,13 +1303,10 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
 										<arg name="text" type="constant">http://vocab.getty.edu/aat/300404621</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">repository numbers</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>
@@ -1370,14 +1340,11 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIwithType">
 										<arg name="type" type="constant">type</arg>
 										<arg name="id" type="constant">IAP</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">IAP</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>
@@ -1501,13 +1468,10 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
 										<arg name="text" type="constant">http://vocab.getty.edu/aat/300055863</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">provenance (history of ownership)</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>
@@ -1545,13 +1509,10 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
 										<arg name="text" type="constant">http://vocab.getty.edu/aat/300435424</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">exhibitions description</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>
@@ -1589,13 +1550,10 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
 										<arg name="text" type="constant">http://vocab.getty.edu/aat/300435425</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">condition/examination description</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>
@@ -1633,13 +1591,10 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
 										<arg name="text" type="constant">http://vocab.getty.edu/aat/300404764</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">sources (general concept)</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>
@@ -1677,14 +1632,11 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIwithType">
 										<arg name="type" type="constant">type</arg>
 										<arg name="id" type="constant">Subject Description</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">Subject Description</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>
@@ -1722,13 +1674,10 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
 										<arg name="text" type="constant">http://vocab.getty.edu/aat/300015640</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">copies (derivative objects)</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>
@@ -1766,13 +1715,10 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
 										<arg name="text" type="constant">http://vocab.getty.edu/aat/300435418</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">credit line</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>
@@ -1810,14 +1756,11 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIwithType">
 										<arg name="type" type="constant">type</arg>
 										<arg name="id" type="constant">Color Description</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">Color Description</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>
@@ -1862,13 +1805,10 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
 										<arg name="text" type="constant">http://vocab.getty.edu/aat/300055644</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">height</arg>
-									</label_generator>
 								</entity>
 							</additional>
 							<additional>
@@ -1922,13 +1862,10 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
 										<arg name="text" type="constant">http://vocab.getty.edu/aat/300055645</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">length</arg>
-									</label_generator>
 								</entity>
 							</additional>
 							<additional>
@@ -2255,13 +2192,10 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
 										<arg name="text" type="constant">http://vocab.getty.edu/aat/300028702</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">inscriptions</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>	
@@ -2566,13 +2500,10 @@
 									<additional>
 										<relationship>crm:P2_has_type</relationship>
 										<entity>
-											<type>crm:E55_Type</type>
+											<type>custom:noType</type>
 											<instance_generator name="URIorUUID">
 												<arg name="text" type="constant">http://vocab.getty.edu/aat/300417193</arg>
 											</instance_generator>
-											<label_generator name="Literal">
-												<arg name="text" type="constant">titles (general, names)</arg>
-											</label_generator>
 										</entity>
 									</additional>
 								</entity>
@@ -2649,13 +2580,10 @@
 									<additional>
 										<relationship>crm:P2_has_type</relationship>
 										<entity>
-											<type>crm:E55_Type</type>
+											<type>custom:noType</type>
 											<instance_generator name="URIorUUID">
 												<arg name="text" type="constant">http://vocab.getty.edu/aat/300417193</arg>
 											</instance_generator>
-											<label_generator name="Literal">
-												<arg name="text" type="constant">titles (general, names)</arg>
-											</label_generator>
 										</entity>
 									</additional>
 								</entity>
@@ -2755,14 +2683,11 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIwithType">
 										<arg name="type" type="constant">type</arg>
 										<arg name="id" type="constant">Photo Card</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">Photo Card</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>
@@ -2788,13 +2713,10 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
 										<arg name="text" type="constant">http://vocab.getty.edu/aat/300435416</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">descriptive note</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>
@@ -2834,13 +2756,10 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
 										<arg name="text" type="constant">http://vocab.getty.edu/aat/300404630</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">uniform resource locators</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>
@@ -2877,23 +2796,17 @@
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="constant">http://vocab.getty.edu/aat/300046300</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">photographs</arg>
-								</label_generator>
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
 									<entity>
-										<type>crm:E55_Type</type>
+										<type>custom:noType</type>
 										<instance_generator name="URIorUUID">
 											<arg name="text" type="constant">https://pharos.artresearch.net/resource/vocab/maintype</arg>
 										</instance_generator>
-										<label_generator name="Literal">
-											<arg name="text" type="constant">main type</arg>
-										</label_generator>
 									</entity>
 								</additional>
 							</entity>
@@ -2901,26 +2814,20 @@
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="constant">http://vocab.getty.edu/aat/300127104</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">photographic prints</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Frick</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">Frick</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -2935,14 +2842,11 @@
 								<additional>
 									<relationship>custom:has_provider</relationship>
 										<entity>
-											<type>custom:Provider</type>
+											<type>custom:noType</type>
 											<instance_generator name="URIwithTypeAndId">
 												<arg name="type" type="constant">source</arg>
 												<arg name="id" type="constant">Frick</arg>
 											</instance_generator>
-											<label_generator name="Literal">
-												<arg name="text" type="constant">Frick</arg>
-											</label_generator>
 										</entity>
 								</additional>
 							</entity>
@@ -3046,13 +2950,10 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
 										<arg name="text" type="constant">http://vocab.getty.edu/aat/300435416</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">descriptive note</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>	
@@ -3218,14 +3119,11 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIwithType">
 										<arg name="type" type="constant">type</arg>
 										<arg name="id" type="constant">Mount Number</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">Mount Number</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>
@@ -3301,23 +3199,17 @@
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="constant">http://vocab.getty.edu/aat/300046300</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">photographs</arg>
-								</label_generator>
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
 									<entity>
-										<type>crm:E55_Type</type>
+										<type>custom:noType</type>
 										<instance_generator name="URIorUUID">
 											<arg name="text" type="constant">https://pharos.artresearch.net/resource/vocab/maintype</arg>
 										</instance_generator>
-										<label_generator name="Literal">
-											<arg name="text" type="constant">main type</arg>
-										</label_generator>
 									</entity>
 								</additional>
 							</entity>
@@ -3325,26 +3217,20 @@
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="constant">http://vocab.getty.edu/aat/300127104</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">photographic prints</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Frick</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">Frick</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -3359,14 +3245,11 @@
 								<additional>
 									<relationship>custom:has_provider</relationship>
 										<entity>
-											<type>custom:Provider</type>
+											<type>custom:noType</type>
 											<instance_generator name="URIwithTypeAndId">
 												<arg name="type" type="constant">source</arg>
 												<arg name="id" type="constant">Frick</arg>
 											</instance_generator>
-											<label_generator name="Literal">
-												<arg name="text" type="constant">Frick</arg>
-											</label_generator>
 										</entity>
 								</additional>
 							</entity>
@@ -3470,7 +3353,7 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIwithType">
 										<arg name="type" type="constant">type</arg>
 										<arg name="id" type="constant">Image Description</arg>
@@ -3528,8 +3411,7 @@
 						</entity>
 					</target_node>
 				</range>
-			</link>
-			
+			</link>		
 			
 			<link> 
 				<path>
@@ -3640,14 +3522,11 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIwithType">
 										<arg name="type" type="constant">type</arg>
 										<arg name="id" type="constant">Mount Number</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">Mount Number</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>
@@ -3727,23 +3606,17 @@
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="constant">http://vocab.getty.edu/aat/300046300</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">photographs</arg>
-								</label_generator>
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
 									<entity>
-										<type>crm:E55_Type</type>
+										<type>custom:noType</type>
 										<instance_generator name="URIorUUID">
 											<arg name="text" type="constant">https://pharos.artresearch.net/resource/vocab/maintype</arg>
 										</instance_generator>
-										<label_generator name="Literal">
-											<arg name="text" type="constant">main type</arg>
-										</label_generator>
 									</entity>
 								</additional>
 							</entity>
@@ -3751,26 +3624,20 @@
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="constant">http://vocab.getty.edu/aat/300127104</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">photographic prints</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Frick</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">Frick</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -3785,14 +3652,11 @@
 								<additional>
 									<relationship>custom:has_provider</relationship>
 										<entity>
-											<type>custom:Provider</type>
+											<type>custom:noType</type>
 											<instance_generator name="URIwithTypeAndId">
 												<arg name="type" type="constant">source</arg>
 												<arg name="id" type="constant">Frick</arg>
 											</instance_generator>
-											<label_generator name="Literal">
-												<arg name="text" type="constant">Frick</arg>
-											</label_generator>
 										</entity>
 								</additional>
 							</entity>
@@ -3905,7 +3769,7 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIwithType">
 										<arg name="type" type="constant">type</arg>
 										<arg name="id" type="constant">Image Description</arg>
@@ -4074,14 +3938,11 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIwithType">
 										<arg name="type" type="constant">type</arg>
 										<arg name="id" type="constant">Mount Number</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">Mount Number</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>
@@ -4158,23 +4019,17 @@
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="constant">http://vocab.getty.edu/aat/300046300</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">photographs</arg>
-								</label_generator>
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
 									<entity>
-										<type>crm:E55_Type</type>
+										<type>custom:noType</type>
 										<instance_generator name="URIorUUID">
 											<arg name="text" type="constant">https://pharos.artresearch.net/resource/vocab/maintype</arg>
 										</instance_generator>
-										<label_generator name="Literal">
-											<arg name="text" type="constant">main type</arg>
-										</label_generator>
 									</entity>
 								</additional>
 							</entity>
@@ -4182,26 +4037,20 @@
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="constant">http://vocab.getty.edu/aat/300127104</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">photographic prints</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Frick</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">Frick</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -4216,14 +4065,11 @@
 								<additional>
 									<relationship>custom:has_provider</relationship>
 										<entity>
-											<type>custom:Provider</type>
+											<type>custom:noType</type>
 											<instance_generator name="URIwithTypeAndId">
 												<arg name="type" type="constant">source</arg>
 												<arg name="id" type="constant">Frick</arg>
 											</instance_generator>
-											<label_generator name="Literal">
-												<arg name="text" type="constant">Frick</arg>
-											</label_generator>
 										</entity>
 								</additional>
 							</entity>
@@ -4336,7 +4182,7 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIwithType">
 										<arg name="type" type="constant">type</arg>
 										<arg name="id" type="constant">Image Description</arg>
@@ -4505,14 +4351,11 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIwithType">
 										<arg name="type" type="constant">type</arg>
 										<arg name="id" type="constant">Mount Number</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">Mount Number</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>
@@ -4577,14 +4420,11 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Frick</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">Frick</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -4599,14 +4439,11 @@
 								<additional>
 									<relationship>custom:has_provider</relationship>
 										<entity>
-											<type>custom:Provider</type>
+											<type>custom:noType</type>
 											<instance_generator name="URIwithTypeAndId">
 												<arg name="type" type="constant">source</arg>
 												<arg name="id" type="constant">Frick</arg>
 											</instance_generator>
-											<label_generator name="Literal">
-												<arg name="text" type="constant">Frick</arg>
-											</label_generator>
 										</entity>
 								</additional>
 							</entity>
@@ -4641,13 +4478,10 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
 										<arg name="text" type="constant">http://vocab.getty.edu/aat/300417193</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">titles (general, names)</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>
@@ -4797,14 +4631,11 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Frick</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">Frick</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -4819,14 +4650,11 @@
 								<additional>
 									<relationship>custom:has_provider</relationship>
 										<entity>
-											<type>custom:Provider</type>
+											<type>custom:noType</type>
 											<instance_generator name="URIwithTypeAndId">
 												<arg name="type" type="constant">source</arg>
 												<arg name="id" type="constant">Frick</arg>
 											</instance_generator>
-											<label_generator name="Literal">
-												<arg name="text" type="constant">Frick</arg>
-											</label_generator>
 										</entity>
 								</additional>
 							</entity>
@@ -4861,13 +4689,10 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
 										<arg name="text" type="constant">http://vocab.getty.edu/aat/300417193</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">titles (general, names)</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>
@@ -4972,14 +4797,11 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Frick</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">Frick</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -4994,14 +4816,11 @@
 								<additional>
 									<relationship>custom:has_provider</relationship>
 										<entity>
-											<type>custom:Provider</type>
+											<type>custom:noType</type>
 											<instance_generator name="URIwithTypeAndId">
 												<arg name="type" type="constant">source</arg>
 												<arg name="id" type="constant">Frick</arg>
 											</instance_generator>
-											<label_generator name="Literal">
-												<arg name="text" type="constant">Frick</arg>
-											</label_generator>
 										</entity>
 								</additional>
 							</entity>
@@ -5036,13 +4855,10 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
 										<arg name="text" type="constant">http://vocab.getty.edu/aat/300417193</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">titles (general, names)</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>
@@ -5149,14 +4965,11 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Frick</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">Frick</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -5171,14 +4984,11 @@
 								<additional>
 									<relationship>custom:has_provider</relationship>
 										<entity>
-											<type>custom:Provider</type>
+											<type>custom:noType</type>
 											<instance_generator name="URIwithTypeAndId">
 												<arg name="type" type="constant">source</arg>
 												<arg name="id" type="constant">Frick</arg>
 											</instance_generator>
-											<label_generator name="Literal">
-												<arg name="text" type="constant">Frick</arg>
-											</label_generator>
 										</entity>
 								</additional>
 							</entity>
@@ -5189,7 +4999,6 @@
 		</mapping>
 
 		<mapping namedgraph="graph">
-
 			<domain>
 				<source_node>//marc:datafield[@tag="590" and @ind1="9"]/marc:subfield[@code="b"]</source_node>
 				<target_node>
@@ -5208,14 +5017,11 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Frick</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">Frick</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -5230,14 +5036,11 @@
 								<additional>
 									<relationship>custom:has_provider</relationship>
 										<entity>
-											<type>custom:Provider</type>
+											<type>custom:noType</type>
 											<instance_generator name="URIwithTypeAndId">
 												<arg name="type" type="constant">source</arg>
 												<arg name="id" type="constant">Frick</arg>
 											</instance_generator>
-											<label_generator name="Literal">
-												<arg name="text" type="constant">Frick</arg>
-											</label_generator>
 										</entity>
 								</additional>
 							</entity>
@@ -5295,14 +5098,11 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Frick</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">Frick</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -5317,14 +5117,11 @@
 								<additional>
 									<relationship>custom:has_provider</relationship>
 										<entity>
-											<type>custom:Provider</type>
+											<type>custom:noType</type>
 											<instance_generator name="URIwithTypeAndId">
 												<arg name="type" type="constant">source</arg>
 												<arg name="id" type="constant">Frick</arg>
 											</instance_generator>
-											<label_generator name="Literal">
-												<arg name="text" type="constant">Frick</arg>
-											</label_generator>
 										</entity>
 								</additional>
 							</entity>
@@ -5356,14 +5153,11 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Frick</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">Frick</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -5378,14 +5172,11 @@
 								<additional>
 									<relationship>custom:has_provider</relationship>
 										<entity>
-											<type>custom:Provider</type>
+											<type>custom:noType</type>
 											<instance_generator name="URIwithTypeAndId">
 												<arg name="type" type="constant">source</arg>
 												<arg name="id" type="constant">Frick</arg>
 											</instance_generator>
-											<label_generator name="Literal">
-												<arg name="text" type="constant">Frick</arg>
-											</label_generator>
 										</entity>
 								</additional>
 							</entity>
@@ -5393,23 +5184,17 @@
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="constant">http://vocab.getty.edu/aat/300264595</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">repositories (institutions)</arg>
-								</label_generator>
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
 									<entity>
-										<type>crm:E55_Type</type>
+										<type>custom:noType</type>
 										<instance_generator name="URIorUUID">
 											<arg name="text" type="constant">https://pharos.artresearch.net/resource/vocab/maintype</arg>
 										</instance_generator>
-										<label_generator name="Literal">
-											<arg name="text" type="constant">main type</arg>
-										</label_generator>
 									</entity>
 								</additional>
 							</entity>
@@ -5444,13 +5229,10 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
 										<arg name="text" type="constant">http://vocab.getty.edu/aat/300417193</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">titles (general, names)</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>
@@ -5570,14 +5352,11 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithType">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Frick</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">Frick</arg>
-								</label_generator>
 							</entity>
 						</additional>
 					</entity>
@@ -5610,13 +5389,10 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
 										<arg name="text" type="constant">http://vocab.getty.edu/aat/300417193</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">titles (general, names)</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>
@@ -5696,23 +5472,17 @@
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="constant">http://vocab.getty.edu/aat/300046300</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">photographs</arg>
-								</label_generator>
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
 									<entity>
-										<type>crm:E55_Type</type>
+										<type>custom:noType</type>
 										<instance_generator name="URIorUUID">
 											<arg name="text" type="constant">https://pharos.artresearch.net/resource/vocab/maintype</arg>
 										</instance_generator>
-										<label_generator name="Literal">
-											<arg name="text" type="constant">main type</arg>
-										</label_generator>
 									</entity>
 								</additional>
 							</entity>
@@ -5720,14 +5490,11 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Frick</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">Frick</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -5742,14 +5509,11 @@
 								<additional>
 									<relationship>custom:has_provider</relationship>
 									<entity>
-										<type>custom:Provider</type>
+										<type>custom:noType</type>
 										<instance_generator name="URIwithTypeAndId">
 											<arg name="type" type="constant">source</arg>
 											<arg name="id" type="constant">Frick</arg>
 										</instance_generator>
-										<label_generator name="Literal">
-											<arg name="text" type="constant">Frick</arg>
-										</label_generator>
 									</entity>
 								</additional>
 							</entity>
@@ -5774,14 +5538,11 @@
 					<source_node>marc:subfield[@code="a"]</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E55_Type</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="constant">Publication</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="constant">Publication</arg>
-							</label_generator>
 						</entity>
 					</target_node>
 				</range>
@@ -5803,14 +5564,11 @@
 					<source_node>marc:subfield[@code="a"]</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E55_Type</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="constant">Postcard</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="constant">Postcard</arg>
-							</label_generator>
 						</entity>
 					</target_node>
 				</range>
@@ -5832,14 +5590,11 @@
 					<source_node>marc:subfield[@code="a"]</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E55_Type</type>
+							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="constant">Photostat</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="constant">Photostat</arg>
-							</label_generator>
 						</entity>
 					</target_node>
 				</range>
@@ -5940,13 +5695,10 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
 										<arg name="text" type="constant">http://vocab.getty.edu/aat/300435416</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">descriptive note</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>	
@@ -6112,14 +5864,11 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIwithType">
 										<arg name="type" type="constant">type</arg>
 										<arg name="id" type="constant">Mount Number</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">Mount Number</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>
@@ -6184,14 +5933,11 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Frick</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">Frick</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -6206,14 +5952,11 @@
 								<additional>
 									<relationship>custom:has_provider</relationship>
 										<entity>
-											<type>custom:Provider</type>
+											<type>custom:noType</type>
 											<instance_generator name="URIwithTypeAndId">
 												<arg name="type" type="constant">source</arg>
 												<arg name="id" type="constant">Frick</arg>
 											</instance_generator>
-											<label_generator name="Literal">
-												<arg name="text" type="constant">Frick</arg>
-											</label_generator>
 										</entity>
 								</additional>
 							</entity>
@@ -6239,14 +5982,11 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Frick</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">Frick</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -6261,14 +6001,11 @@
 								<additional>
 									<relationship>custom:has_provider</relationship>
 										<entity>
-											<type>custom:Provider</type>
+											<type>custom:noType</type>
 											<instance_generator name="URIwithTypeAndId">
 												<arg name="type" type="constant">source</arg>
 												<arg name="id" type="constant">Frick</arg>
 											</instance_generator>
-											<label_generator name="Literal">
-												<arg name="text" type="constant">Frick</arg>
-											</label_generator>
 										</entity>
 								</additional>
 							</entity>
@@ -6276,23 +6013,17 @@
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="constant">http://vocab.getty.edu/aat/300008389</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">cities</arg>
-								</label_generator>
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
 									<entity>
-										<type>crm:E55_Type</type>
+										<type>custom:noType</type>
 										<instance_generator name="URIorUUID">
 											<arg name="text" type="constant">https://pharos.artresearch.net/resource/vocab/maintype</arg>
 										</instance_generator>
-										<label_generator name="Literal">
-											<arg name="text" type="constant">main type</arg>
-										</label_generator>
 									</entity>
 								</additional>
 							</entity>
@@ -6318,14 +6049,11 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Frick</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">Frick</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -6340,14 +6068,11 @@
 								<additional>
 									<relationship>custom:has_provider</relationship>
 										<entity>
-											<type>custom:Provider</type>
+											<type>custom:noType</type>
 											<instance_generator name="URIwithTypeAndId">
 												<arg name="type" type="constant">source</arg>
 												<arg name="id" type="constant">Frick</arg>
 											</instance_generator>
-											<label_generator name="Literal">
-												<arg name="text" type="constant">Frick</arg>
-											</label_generator>
 										</entity>
 								</additional>
 							</entity>
@@ -6355,23 +6080,17 @@
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="constant">http://vocab.getty.edu/aat/300387079</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">local regions</arg>
-								</label_generator>
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
 									<entity>
-										<type>crm:E55_Type</type>
+										<type>custom:noType</type>
 										<instance_generator name="URIorUUID">
 											<arg name="text" type="constant">https://pharos.artresearch.net/resource/vocab/maintype</arg>
 										</instance_generator>
-										<label_generator name="Literal">
-											<arg name="text" type="constant">main type</arg>
-										</label_generator>
 									</entity>
 								</additional>
 							</entity>
@@ -6397,14 +6116,11 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Frick</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">Frick</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -6419,14 +6135,11 @@
 								<additional>
 									<relationship>custom:has_provider</relationship>
 										<entity>
-											<type>custom:Provider</type>
+											<type>custom:noType</type>
 											<instance_generator name="URIwithTypeAndId">
 												<arg name="type" type="constant">source</arg>
 												<arg name="id" type="constant">Frick</arg>
 											</instance_generator>
-											<label_generator name="Literal">
-												<arg name="text" type="constant">Frick</arg>
-											</label_generator>
 										</entity>
 								</additional>
 							</entity>
@@ -6434,23 +6147,17 @@
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="constant">http://vocab.getty.edu/aat/300387506</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">countries (sovereign states)</arg>
-								</label_generator>
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
 									<entity>
-										<type>crm:E55_Type</type>
+										<type>custom:noType</type>
 										<instance_generator name="URIorUUID">
 											<arg name="text" type="constant">https://pharos.artresearch.net/resource/vocab/maintype</arg>
 										</instance_generator>
-										<label_generator name="Literal">
-											<arg name="text" type="constant">main type</arg>
-										</label_generator>
 									</entity>
 								</additional>
 							</entity>
@@ -6476,14 +6183,11 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Frick</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">Frick</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -6498,14 +6202,11 @@
 								<additional>
 									<relationship>custom:has_provider</relationship>
 										<entity>
-											<type>custom:Provider</type>
+											<type>custom:noType</type>
 											<instance_generator name="URIwithTypeAndId">
 												<arg name="type" type="constant">source</arg>
 												<arg name="id" type="constant">Frick</arg>
 											</instance_generator>
-											<label_generator name="Literal">
-												<arg name="text" type="constant">Frick</arg>
-											</label_generator>
 										</entity>
 								</additional>
 							</entity>
@@ -6538,14 +6239,11 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Frick</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">Frick</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -6560,14 +6258,11 @@
 								<additional>
 									<relationship>custom:has_provider</relationship>
 										<entity>
-											<type>custom:Provider</type>
+											<type>custom:noType</type>
 											<instance_generator name="URIwithTypeAndId">
 												<arg name="type" type="constant">source</arg>
 												<arg name="id" type="constant">Frick</arg>
 											</instance_generator>
-											<label_generator name="Literal">
-												<arg name="text" type="constant">Frick</arg>
-											</label_generator>
 										</entity>
 								</additional>
 							</entity>
@@ -6575,13 +6270,10 @@
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="constant">http://vocab.getty.edu/aat/300387329</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">terms (controlled vocabulary)</arg>
-								</label_generator>
 							</entity>
 						</additional>
 					</entity>
@@ -6605,14 +6297,11 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Frick</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">Frick</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -6627,14 +6316,11 @@
 								<additional>
 									<relationship>custom:has_provider</relationship>
 										<entity>
-											<type>custom:Provider</type>
+											<type>custom:noType</type>
 											<instance_generator name="URIwithTypeAndId">
 												<arg name="type" type="constant">source</arg>
 												<arg name="id" type="constant">Frick</arg>
 											</instance_generator>
-											<label_generator name="Literal">
-												<arg name="text" type="constant">Frick</arg>
-											</label_generator>
 										</entity>
 								</additional>
 							</entity>
@@ -6642,13 +6328,10 @@
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="constant">http://vocab.getty.edu/aat/300264092</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">objects facet</arg>
-								</label_generator>
 							</entity>
 						</additional>
 					</entity>
@@ -6672,14 +6355,11 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Frick</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">Frick</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -6694,14 +6374,11 @@
 								<additional>
 									<relationship>custom:has_provider</relationship>
 										<entity>
-											<type>custom:Provider</type>
+											<type>custom:noType</type>
 											<instance_generator name="URIwithTypeAndId">
 												<arg name="type" type="constant">source</arg>
 												<arg name="id" type="constant">Frick</arg>
 											</instance_generator>
-											<label_generator name="Literal">
-												<arg name="text" type="constant">Frick</arg>
-											</label_generator>
 										</entity>
 								</additional>
 							</entity>
@@ -6727,14 +6404,11 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Frick</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">Frick</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -6749,14 +6423,11 @@
 								<additional>
 									<relationship>custom:has_provider</relationship>
 										<entity>
-											<type>custom:Provider</type>
+											<type>custom:noType</type>
 											<instance_generator name="URIwithTypeAndId">
 												<arg name="type" type="constant">source</arg>
 												<arg name="id" type="constant">Frick</arg>
 											</instance_generator>
-											<label_generator name="Literal">
-												<arg name="text" type="constant">Frick</arg>
-											</label_generator>
 										</entity>
 								</additional>
 							</entity>
@@ -6764,13 +6435,10 @@
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="constant">http://vocab.getty.edu/aat/300054631</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">classification (information handling function)</arg>
-								</label_generator>
 							</entity>
 						</additional>
 					</entity>
@@ -6794,14 +6462,11 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Frick</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">Frick</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -6816,14 +6481,11 @@
 								<additional>
 									<relationship>custom:has_provider</relationship>
 										<entity>
-											<type>custom:Provider</type>
+											<type>custom:noType</type>
 											<instance_generator name="URIwithTypeAndId">
 												<arg name="type" type="constant">source</arg>
 												<arg name="id" type="constant">Frick</arg>
 											</instance_generator>
-											<label_generator name="Literal">
-												<arg name="text" type="constant">Frick</arg>
-											</label_generator>
 										</entity>
 								</additional>
 							</entity>
@@ -6849,14 +6511,11 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Frick</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">Frick</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -6871,14 +6530,11 @@
 								<additional>
 									<relationship>custom:has_provider</relationship>
 										<entity>
-											<type>custom:Provider</type>
+											<type>custom:noType</type>
 											<instance_generator name="URIwithTypeAndId">
 												<arg name="type" type="constant">source</arg>
 												<arg name="id" type="constant">Frick</arg>
 											</instance_generator>
-											<label_generator name="Literal">
-												<arg name="text" type="constant">Frick</arg>
-											</label_generator>
 										</entity>
 								</additional>
 							</entity>
@@ -6886,14 +6542,11 @@
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithType">
 									<arg name="type" type="constant">type</arg>
 									<arg name="id" type="constant">Institution Type</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">Institution Type</arg>
-								</label_generator>
 							</entity>
 						</additional>
 					</entity>
@@ -6917,14 +6570,11 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Frick</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">Frick</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -6939,14 +6589,11 @@
 								<additional>
 									<relationship>custom:has_provider</relationship>
 										<entity>
-											<type>custom:Provider</type>
+											<type>custom:noType</type>
 											<instance_generator name="URIwithTypeAndId">
 												<arg name="type" type="constant">source</arg>
 												<arg name="id" type="constant">Frick</arg>
 											</instance_generator>
-											<label_generator name="Literal">
-												<arg name="text" type="constant">Frick</arg>
-											</label_generator>
 										</entity>
 								</additional>
 							</entity>
@@ -6972,14 +6619,11 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Frick</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">Frick</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -6994,14 +6638,11 @@
 								<additional>
 									<relationship>custom:has_provider</relationship>
 										<entity>
-											<type>custom:Provider</type>
+											<type>custom:noType</type>
 											<instance_generator name="URIwithTypeAndId">
 												<arg name="type" type="constant">source</arg>
 												<arg name="id" type="constant">Frick</arg>
 											</instance_generator>
-											<label_generator name="Literal">
-												<arg name="text" type="constant">Frick</arg>
-											</label_generator>
 										</entity>
 								</additional>
 							</entity>
@@ -7027,14 +6668,11 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Frick</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">Frick</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -7049,14 +6687,11 @@
 								<additional>
 									<relationship>custom:has_provider</relationship>
 										<entity>
-											<type>custom:Provider</type>
+											<type>custom:noType</type>
 											<instance_generator name="URIwithTypeAndId">
 												<arg name="type" type="constant">source</arg>
 												<arg name="id" type="constant">Frick</arg>
 											</instance_generator>
-											<label_generator name="Literal">
-												<arg name="text" type="constant">Frick</arg>
-											</label_generator>
 										</entity>
 								</additional>
 							</entity>
@@ -7082,14 +6717,11 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Frick</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">Frick</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -7104,14 +6736,11 @@
 								<additional>
 									<relationship>custom:has_provider</relationship>
 										<entity>
-											<type>custom:Provider</type>
+											<type>custom:noType</type>
 											<instance_generator name="URIwithTypeAndId">
 												<arg name="type" type="constant">source</arg>
 												<arg name="id" type="constant">Frick</arg>
 											</instance_generator>
-											<label_generator name="Literal">
-												<arg name="text" type="constant">Frick</arg>
-											</label_generator>
 										</entity>
 								</additional>
 							</entity>
@@ -7137,14 +6766,11 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Frick</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">Frick</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -7159,14 +6785,11 @@
 								<additional>
 									<relationship>custom:has_provider</relationship>
 										<entity>
-											<type>custom:Provider</type>
+											<type>custom:noType</type>
 											<instance_generator name="URIwithTypeAndId">
 												<arg name="type" type="constant">source</arg>
 												<arg name="id" type="constant">Frick</arg>
 											</instance_generator>
-											<label_generator name="Literal">
-												<arg name="text" type="constant">Frick</arg>
-											</label_generator>
 										</entity>
 								</additional>
 							</entity>
@@ -7191,14 +6814,11 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Frick</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">Frick</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -7211,14 +6831,11 @@
 								<additional>
 									<relationship>custom:has_provider</relationship>
 										<entity>
-											<type>custom:Provider</type>
+											<type>custom:noType</type>
 											<instance_generator name="URIwithTypeAndId">
 												<arg name="type" type="constant">source</arg>
 												<arg name="id" type="constant">Frick</arg>
 											</instance_generator>
-											<label_generator name="Literal">
-												<arg name="text" type="constant">Frick</arg>
-											</label_generator>
 										</entity>
 								</additional>
 							</entity>
@@ -7260,14 +6877,11 @@
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
-								<type>custom:Provider</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Frick</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">Frick</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -7282,14 +6896,11 @@
 								<additional>
 									<relationship>custom:has_provider</relationship>
 										<entity>
-											<type>custom:Provider</type>
+											<type>custom:noType</type>
 											<instance_generator name="URIwithTypeAndId">
 												<arg name="type" type="constant">source</arg>
 												<arg name="id" type="constant">Frick</arg>
 											</instance_generator>
-											<label_generator name="Literal">
-												<arg name="text" type="constant">Frick</arg>
-											</label_generator>
 										</entity>
 								</additional>
 							</entity>
@@ -7297,23 +6908,17 @@
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="constant">http://vocab.getty.edu/aat/300008389</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">cities</arg>
-								</label_generator>
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
 									<entity>
-										<type>crm:E55_Type</type>
+										<type>custom:noType</type>
 										<instance_generator name="URIorUUID">
 											<arg name="text" type="constant">https://pharos.artresearch.net/resource/vocab/maintype</arg>
 										</instance_generator>
-										<label_generator name="Literal">
-											<arg name="text" type="constant">main type</arg>
-										</label_generator>
 									</entity>
 								</additional>
 							</entity>
