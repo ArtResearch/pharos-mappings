@@ -787,3 +787,477 @@
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Village / Foreign placename" .
 }
+
+<https://pharos.artresearch.net/resource/marburg/source/Marburg/graph> {
+        <https://pharos.artresearch.net/resource/marburg/source/Marburg>
+            a       <https://pharos.artresearch.net/custom/Provider> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Marburg" .
+}
+
+
+<https://pharos.artresearch.net/resource/marburg/type/UREK7LBZ/graph> {
+        <https://pharos.artresearch.net/resource/marburg/type/UREK7LBZ>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Surname, Name" .
+}
+
+<https://pharos.artresearch.net/resource/khi/type/UREK7LBZ/graph> {
+        <https://pharos.artresearch.net/resource/khi/type/UREK7LBZ>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Surname, Name" .
+}
+
+<https://pharos.artresearch.net/resource/hertziana/type/UREK7LBZ/graph> {
+        <https://pharos.artresearch.net/resource/hertziana/type/UREK7LBZ>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Surname, Name" .
+}
+
+
+<https://pharos.artresearch.net/resource/marburg/type/S18UV9H6/graph> {
+        <https://pharos.artresearch.net/resource/marburg/type/S18UV9H6>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Name, Surname" .
+}
+
+<https://pharos.artresearch.net/resource/khi/type/S18UV9H6/graph> {
+        <https://pharos.artresearch.net/resource/khi/type/S18UV9H6>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Name, Surname" .
+}
+
+<https://pharos.artresearch.net/resource/hertziana/type/S18UV9H6/graph> {
+        <https://pharos.artresearch.net/resource/hertziana/type/S18UV9H6>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Name, Surname" .
+}
+
+<https://pharos.artresearch.net/resource/marburg/type/RHG2W0TD/graph> {
+        <https://pharos.artresearch.net/resource/marburg/type/RHG2W0TD>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "GND or ULAN" .
+}
+
+<https://pharos.artresearch.net/resource/khi/type/RHG2W0TD/graph> {
+        <https://pharos.artresearch.net/resource/khi/type/RHG2W0TD>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "GND or ULAN" .
+}
+
+<https://pharos.artresearch.net/resource/hertziana/type/RHG2W0TD/graph> {
+        <https://pharos.artresearch.net/resource/hertziana/type/RHG2W0TD>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "GND or ULAN" .
+}
+
+<https://pharos.artresearch.net/resource/hertziana/type/1JI28RVI/graph> {
+        <https://pharos.artresearch.net/resource/hertziana/type/1JI28RVI>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Floruit" .
+}
+
+<https://pharos.artresearch.net/resource/khi/type/1JI28RVI/graph> {
+        <https://pharos.artresearch.net/resource/khi/type/1JI28RVI>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Floruit" .
+}
+
+<https://pharos.artresearch.net/resource/marburg/type/1JI28RVI/graph> {
+        <https://pharos.artresearch.net/resource/marburg/type/1JI28RVI>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Floruit" .
+}
+
+<https://pharos.artresearch.net/resource/khi/type/Gender/graph> {
+        <https://pharos.artresearch.net/resource/khi/type/Gender>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Gender" .
+}
+
+<https://pharos.artresearch.net/resource/hertziana/type/Gender/graph> {
+        <https://pharos.artresearch.net/resource/hertziana/type/Gender>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Gender" .
+}
+
+<https://pharos.artresearch.net/resource/marburg/type/Gender/graph> {
+        <https://pharos.artresearch.net/resource/marburg/type/Gender>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Gender" .
+}
+
+<https://pharos.artresearch.net/resource/nypl/type/Gender/graph> {
+        <https://pharos.artresearch.net/resource/nypl/type/Gender>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Gender" .
+}
+
+<https://pharos.artresearch.net/resource/marburg/type/URPMIQ78/graph> {
+        <https://pharos.artresearch.net/resource/marburg/type/URPMIQ78>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "National Group" .
+}
+
+<https://pharos.artresearch.net/resource/khi/type/URPMIQ78/graph> {
+        <https://pharos.artresearch.net/resource/khi/type/URPMIQ78>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "National Group" .
+}
+
+<https://pharos.artresearch.net/resource/hertziana/type/URPMIQ78/graph> {
+        <https://pharos.artresearch.net/resource/hertziana/type/URPMIQ78>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "National Group" .
+}
+
+
+<https://pharos.artresearch.net/resource/marburg/type/Alternate_Inventory_Number/graph> {
+        <https://pharos.artresearch.net/resource/marburg/type/Alternate_Inventory_Number>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Alternate Inventory Number" .
+}
+
+<https://pharos.artresearch.net/resource/khi/type/Alternate_Inventory_Number/graph> {
+        <https://pharos.artresearch.net/resource/khi/type/Alternate_Inventory_Number>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Alternate Inventory Number" .
+}
+
+<https://pharos.artresearch.net/resource/hertziana/type/Alternate_Inventory_Number/graph> {
+        <https://pharos.artresearch.net/resource/hertziana/type/Alternate_Inventory_Number>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Alternate Inventory Number" .
+}
+
+<https://pharos.artresearch.net/resource/marburg/type/SKK0CWZ8/graph> {
+        <https://pharos.artresearch.net/resource/marburg/type/SKK0CWZ8>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Catalogue Number" .
+}
+
+<https://pharos.artresearch.net/resource/khi/type/SKK0CWZ8/graph> {
+        <https://pharos.artresearch.net/resource/khi/type/SKK0CWZ8>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Catalogue Number" .
+}
+
+<https://pharos.artresearch.net/resource/hertziana/type/SKK0CWZ8/graph> {
+        <https://pharos.artresearch.net/resource/hertziana/type/SKK0CWZ8>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Catalogue Number" .
+}
+
+<https://pharos.artresearch.net/resource/khi/type/SL0NUQWC/graph> {
+        <https://pharos.artresearch.net/resource/khi/type/SL0NUQWC>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Alternate Catalogue Number" .
+}
+
+<https://pharos.artresearch.net/resource/hertziana/type/SL0NUQWC/graph> {
+        <https://pharos.artresearch.net/resource/hertziana/type/SL0NUQWC>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Alternate Catalogue Number" .
+}
+
+<https://pharos.artresearch.net/resource/marburg/type/SL0NUQWC/graph> {
+        <https://pharos.artresearch.net/resource/marburg/type/SL0NUQWC>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Alternate Catalogue Number" .
+}
+
+
+<https://pharos.artresearch.net/resource/khi/type/GND/graph> {
+        <https://pharos.artresearch.net/resource/khi/type/GND>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "GND" .
+}
+
+<https://pharos.artresearch.net/resource/hertziana/type/GND/graph> {
+        <https://pharos.artresearch.net/resource/hertziana/type/GND>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "GND" .
+}
+
+<https://pharos.artresearch.net/resource/marburg/type/GND/graph> {
+        <https://pharos.artresearch.net/resource/marburg/type/GND>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "GND" .
+}
+
+<https://pharos.artresearch.net/resource/hertziana/type/QY4F5M87/graph> {
+        <https://pharos.artresearch.net/resource/hertziana/type/QY4F5M87>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Page" .
+}
+
+<https://pharos.artresearch.net/resource/khi/type/QY4F5M87/graph> {
+        <https://pharos.artresearch.net/resource/khi/type/QY4F5M87>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Page" .
+}
+
+
+<https://pharos.artresearch.net/resource/marburg/type/QY4F5M87/graph> {
+        <https://pharos.artresearch.net/resource/marburg/type/QY4F5M87>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Page" .
+}
+
+<https://pharos.artresearch.net/resource/hertziana/type/1HR5DVB8/graph> {
+        <https://pharos.artresearch.net/resource/hertziana/type/1HR5DVB8>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Precise Location Description" .
+}
+
+<https://pharos.artresearch.net/resource/khi/type/1HR5DVB8/graph> {
+        <https://pharos.artresearch.net/resource/khi/type/1HR5DVB8>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Precise Location Description" .
+}
+
+<https://pharos.artresearch.net/resource/marburg/type/1HR5DVB8/graph> {
+        <https://pharos.artresearch.net/resource/marburg/type/1HR5DVB8>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Precise Location Description" .
+}
+
+<https://pharos.artresearch.net/resource/hertziana/measurement_unit/URJJKC29/graph> {
+        <https://pharos.artresearch.net/resource/hertziana/measurement_unit/URJJKC29>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E58_Measurement_Unit> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "cm" .
+}
+
+<https://pharos.artresearch.net/resource/marburg/measurement_unit/URJJKC29/graph> {
+        <https://pharos.artresearch.net/resource/marburg/measurement_unit/URJJKC29>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E58_Measurement_Unit> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "cm" .
+}
+
+<https://pharos.artresearch.net/resource/khi/measurement_unit/URJJKC29/graph> {
+        <https://pharos.artresearch.net/resource/khi/measurement_unit/URJJKC29>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E58_Measurement_Unit> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "cm" .
+}
+
+<https://pharos.artresearch.net/resource/hertziana/type/1IB8RVMY/graph> {
+        <https://pharos.artresearch.net/resource/hertziana/type/1IB8RVMY>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Shape Classification" .
+}
+
+<https://pharos.artresearch.net/resource/marburg/type/1IB8RVMY/graph> {
+        <https://pharos.artresearch.net/resource/marburg/type/1IB8RVMY>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Shape Classification" .
+}
+
+<https://pharos.artresearch.net/resource/khi/type/1IB8RVMY/graph> {
+        <https://pharos.artresearch.net/resource/khi/type/1IB8RVMY>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Shape Classification" .
+}
+
+<https://pharos.artresearch.net/resource/hertziana/type/1IUYAK3D/graph> {
+        <https://pharos.artresearch.net/resource/hertziana/type/1IUYAK3D>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Precise Location" .
+}
+
+<https://pharos.artresearch.net/resource/marburg/type/1IUYAK3D/graph> {
+        <https://pharos.artresearch.net/resource/marburg/type/1IUYAK3D>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Precise Location" .
+}
+
+<https://pharos.artresearch.net/resource/khi/type/1IUYAK3D/graph> {
+        <https://pharos.artresearch.net/resource/khi/type/1IUYAK3D>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Precise Location" .
+}
+
+<https://pharos.artresearch.net/resource/hertziana/type/QEC5VEJU/graph> {
+        <https://pharos.artresearch.net/resource/hertziana/type/QEC5VEJU>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Builtwork Part" .
+}
+
+<https://pharos.artresearch.net/resource/khi/type/QEC5VEJU/graph> {
+        <https://pharos.artresearch.net/resource/khi/type/QEC5VEJU>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Builtwork Part" .
+}
+
+<https://pharos.artresearch.net/resource/marburg/type/QEC5VEJU/graph> {
+        <https://pharos.artresearch.net/resource/marburg/type/QEC5VEJU>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Builtwork Part" .
+}
+
+<https://pharos.artresearch.net/resource/hertziana/type/1JEAEC2L/graph> {
+        <https://pharos.artresearch.net/resource/hertziana/type/1JEAEC2L>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "District" .
+}
+
+<https://pharos.artresearch.net/resource/marburg/type/1JEAEC2L/graph> {
+        <https://pharos.artresearch.net/resource/marburg/type/1JEAEC2L>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "District" .
+}
+
+<https://pharos.artresearch.net/resource/khi/type/1JEAEC2L/graph> {
+        <https://pharos.artresearch.net/resource/khi/type/1JEAEC2L>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "District" .
+}
+
+<https://pharos.artresearch.net/resource/hertziana/type/1IV0ZLRR/graph> {
+        <https://pharos.artresearch.net/resource/hertziana/type/1IV0ZLRR>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Street" .
+}
+
+<https://pharos.artresearch.net/resource/marburg/type/1IV0ZLRR/graph> {
+        <https://pharos.artresearch.net/resource/marburg/type/1IV0ZLRR>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Street" .
+}
+
+<https://pharos.artresearch.net/resource/khi/type/1IV0ZLRR/graph> {
+        <https://pharos.artresearch.net/resource/khi/type/1IV0ZLRR>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Street" .
+}
+
+<https://pharos.artresearch.net/resource/hertziana/type/1H7J64WY/graph> {
+        <https://pharos.artresearch.net/resource/hertziana/type/1H7J64WY>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Street Number" .
+}
+
+<https://pharos.artresearch.net/resource/marburg/type/1H7J64WY/graph> {
+        <https://pharos.artresearch.net/resource/marburg/type/1H7J64WY>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Street Number" .
+}
+
+<https://pharos.artresearch.net/resource/khi/type/1H7J64WY/graph> {
+        <https://pharos.artresearch.net/resource/khi/type/1H7J64WY>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Street Number" .
+}
+
+<https://pharos.artresearch.net/resource/hertziana/type/VB92JRF4/graph> {
+        <https://pharos.artresearch.net/resource/hertziana/type/VB92JRF4>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Primary Iconography" .
+}
+
+<https://pharos.artresearch.net/resource/marburg/type/VB92JRF4/graph> {
+        <https://pharos.artresearch.net/resource/marburg/type/VB92JRF4>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Primary Iconography" .
+}
+
+<https://pharos.artresearch.net/resource/khi/type/VB92JRF4/graph> {
+        <https://pharos.artresearch.net/resource/khi/type/VB92JRF4>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Primary Iconography" .
+}
+
+<https://pharos.artresearch.net/resource/hertziana/type/U82EXOKR> {
+        <https://pharos.artresearch.net/resource/hertziana/type/U82EXOKR>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Secondary Iconography" .
+}
+
+<https://pharos.artresearch.net/resource/marburg/type/U82EXOKR> {
+        <https://pharos.artresearch.net/resource/marburg/type/U82EXOKR>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Secondary Iconography" .
+}
+
+<https://pharos.artresearch.net/resource/khi/type/U82EXOKR> {
+        <https://pharos.artresearch.net/resource/khi/type/U82EXOKR>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Secondary Iconography" .
+}
+
+<https://pharos.artresearch.net/resource/khi/source/KHI/graph> {
+        <https://pharos.artresearch.net/resource/khi/source/KHI>
+            a       <https://pharos.artresearch.net/custom/Provider> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "KHI" .
+}
+
+<https://pharos.artresearch.net/resource/hertziana/source/Hertziana/graph> {
+        <https://pharos.artresearch.net/resource/hertziana/source/Hertziana>
+            a       <https://pharos.artresearch.net/custom/Provider> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Hertziana" .
+}

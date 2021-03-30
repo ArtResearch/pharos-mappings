@@ -24,14 +24,11 @@
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
-								<instance_generator name="URIwithType">
+								<type>custom:noType</type>
+								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">type</arg>
-									<arg name="id" type="constant">gender</arg>
+									<arg name="id" type="constant">Gender</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">Gender</arg>
-								</label_generator>
 							</entity>
 						</additional>
 					</entity>
