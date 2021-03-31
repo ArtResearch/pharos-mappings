@@ -629,7 +629,6 @@
 			
 		</mapping>	
 		
-		
 		<mapping>
 			<domain>
 				<source_node>//marc:datafield[@tag="590" and @ind1="9"]</source_node>

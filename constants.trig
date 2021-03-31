@@ -603,7 +603,7 @@
                     "depth" .
 }
 
- <http://vocab.getty.edu/aat/300055624/graph> {
+<http://vocab.getty.edu/aat/300055624/graph> {
         <http://vocab.getty.edu/aat/300055624>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
@@ -1260,4 +1260,25 @@
             a       <https://pharos.artresearch.net/custom/Provider> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Hertziana" .
+}
+
+<https://pharos.artresearch.net/resource/midas/source/MIDAS/graph> {
+        <https://pharos.artresearch.net/resource/midas/source/MIDAS>
+            a       <https://pharos.artresearch.net/custom/Provider> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "MIDAS" .
+}
+
+<http://vocab.getty.edu/aat/300264091/graph> {
+        <http://vocab.getty.edu/aat/300264091>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Materials Facet" .
+}
+
+<http://vocab.getty.edu/aat/300264090/graph> {
+        <http://vocab.getty.edu/aat/300264090>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Activities Facet" .
 }
