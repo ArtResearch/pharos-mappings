@@ -319,31 +319,6 @@
 				</range>
 			</link>
 
-			<!-- document -->
-			<link> 
-				<path>
-					<source_relation>
-						<relation>../marc:datafield[@tag="556"]/marc:subfield[@code="a"]/text()</relation>
-					</source_relation>
-					<target_relation>
-						<relationship>custom:consists_of</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>../marc:datafield[@tag="556"]/marc:subfield[@code="a"]/text()</source_node>
-					<target_node>
-						<entity>
-							<type>custom:Namedgraph</type>
-							<instance_generator name="MultiHashingGenerator">
-								<arg name="hierarchy" type="constant">document</arg>
-								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
-								<arg name="term_simple" type="constant">graph</arg>
-							</instance_generator>
-						</entity>	
-					</target_node>
-				</range>
-			</link>
-
 			<!-- type -->
 			<link>
 				<path>
@@ -1353,29 +1328,52 @@
 					</target_node>
 				</range>
 			</link>
-			
-			<link> 
+
+			<link>
 				<path>
 					<source_relation>
 						<relation>marc:datafield[@tag="556"]/marc:subfield[@code="a"]</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>crm:P70i_is_documented_in</relationship>
+						<relationship>crm:P67i_is_referred_to_by</relationship>
+						<entity>
+							<type>crm:E73_Information_Object</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">bibliography</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">http://vocab.getty.edu/aat/300435419</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+						<relationship>crm:P190_has_symbolic_content</relationship>
 					</target_relation>
 				</path>
 				<range>
 					<source_node>marc:datafield[@tag="556"]/marc:subfield[@code="a"]</source_node>
 					<target_node>
 						<entity>
-							<type>custom:noType</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">document</arg>
-								<arg name="id" type="xpath">text()</arg>
+							<type>rdfs:Literal</type>
+							<instance_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
 				</range>
 			</link>
+
+
+
+
 			
 			<link> 
 				<path>
@@ -6195,55 +6193,6 @@
 								<type>custom:Namedgraph</type>
 								<instance_generator name="MultiHashingGenerator">
 									<arg name="hierarchy" type="constant">type</arg>
-									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
-									<arg name="term_simple" type="constant">graph</arg>
-								</instance_generator>
-								<additional>
-									<relationship>custom:has_provider</relationship>
-										<entity>
-											<type>custom:noType</type>
-											<instance_generator name="URIwithTypeAndId">
-												<arg name="type" type="constant">source</arg>
-												<arg name="id" type="constant">Frick</arg>
-											</instance_generator>
-										</entity>
-								</additional>
-							</entity>
-						</additional>
-					</entity>
-				</target_node>
-			</domain>
-		</mapping>
-
-		<mapping namedgraph="graph">
-			<domain>
-				<source_node>//marc:datafield[@tag="556"]/marc:subfield[@code="a"]</source_node>
-				<target_node>
-                    <entity>
-						<type>crm:E31_Document</type>
-						<instance_generator name="URIwithType">
-							<arg name="type" type="constant">document</arg>
-							<arg name="id" type="xpath">text()</arg>
-						</instance_generator>
-						<label_generator name="Literal">
-							<arg name="text" type="xpath">text()</arg>
-						</label_generator>
-						<additional>
-							<relationship>custom:has_provider</relationship>
-							<entity>
-								<type>custom:noType</type>
-								<instance_generator name="URIwithTypeAndId">
-									<arg name="type" type="constant">source</arg>
-									<arg name="id" type="constant">Frick</arg>
-								</instance_generator>
-							</entity>
-						</additional>
-						<additional>
-							<relationship>crm:P67i_is_referred_to_by</relationship>
-							<entity>
-								<type>custom:Namedgraph</type>
-								<instance_generator name="MultiHashingGenerator">
-									<arg name="hierarchy" type="constant">document</arg>
 									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
 									<arg name="term_simple" type="constant">graph</arg>
 								</instance_generator>
