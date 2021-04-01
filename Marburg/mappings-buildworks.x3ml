@@ -2877,7 +2877,7 @@
 							</instance_generator>
 							<label_generator name="EventConcatenated">
 								<arg name="Actor" type="xpath">../aob30/a3100/text()</arg>
-								<arg name="Date" type="xpath">../a5000/text()</arg>
+								<arg name="Date" type="xpath">a5064/text()</arg>
 								<arg name="Type" type="xpath">text()</arg>
 							</label_generator>
 							<additional>
@@ -2941,12 +2941,12 @@
 							<instance_generator name="ComplexEventUri">
 								<arg name="resourceType" type="constant">work</arg>
 								<arg name="resourceId" type="xpath">../a5000/text()</arg>
-								<arg name="id" type="xpath">a5064/text()</arg>
+								<arg name="id" type="xpath">../a5000/text()</arg>
 								<arg name="event_type" type="constant">transformation</arg>
 							</instance_generator>
 							<label_generator name="EventConcatenated">
 								<arg name="Actor" type="xpath">../aob30/a3100/text()</arg>
-								<arg name="Date" type="xpath">../a5000/text()</arg>
+								<arg name="Date" type="xpath">a5064/text()</arg>
 								<arg name="Type" type="xpath">text()</arg>
 							</label_generator>
 							<additional>
@@ -3011,12 +3011,12 @@
 							<instance_generator name="ComplexEventUri">
 								<arg name="resourceType" type="constant">work</arg>
 								<arg name="resourceId" type="xpath">../a5000/text()</arg>
-								<arg name="id" type="xpath">a5064/text()</arg>
+								<arg name="id" type="xpath">../a5000/text()</arg>
 								<arg name="event_type" type="constant">modification</arg>
 							</instance_generator>
 							<label_generator name="EventConcatenated">
 								<arg name="Actor" type="xpath">../aob30/a3100/text()</arg>
-								<arg name="Date" type="xpath">../a5000/text()</arg>
+								<arg name="Date" type="xpath">a5064/text()</arg>
 								<arg name="Type" type="xpath">text()</arg>
 							</label_generator>
 							<additional>
