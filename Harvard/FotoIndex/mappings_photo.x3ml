@@ -265,14 +265,14 @@
 									</entity>
 								</additional>
 								<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>custom:noType</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300078817</arg>
-									</instance_generator>
-								</entity>
-							</additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>custom:noType</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">http://vocab.getty.edu/aat/300078817</arg>
+										</instance_generator>
+									</entity>
+								</additional>
 						</entity>
 						<relationship>crm:P129i_is_subject_of</relationship>
 					</target_relation>

@@ -1282,3 +1282,31 @@
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Activities Facet" .
 }
+
+<https://pharos.artresearch.net/resource/marburg/type/SOPP167C/graph> {
+        <https://pharos.artresearch.net/resource/marburg/type/SOPP167C>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "recto" .
+}
+
+<https://pharos.artresearch.net/resource/khi/type/SOPP167C/graph> {
+        <https://pharos.artresearch.net/resource/khi/type/SOPP167C>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "recto" .
+}
+
+<https://pharos.artresearch.net/resource/hertziana/type/SOPP167C/graph> {
+        <https://pharos.artresearch.net/resource/hertziana/type/SOPP167C>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "recto" .
+}
+
+<https://pharos.artresearch.net/resource/frick/type/SOPP167C/graph> {
+        <https://pharos.artresearch.net/resource/frick/type/SOPP167C>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "recto" .
+}

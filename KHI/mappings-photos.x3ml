@@ -928,14 +928,20 @@
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
 									<entity>
-										<type>crm:E55_Type</type>
+										<type>custom:noType</type>
 										<instance_generator name="URIwithType">
 											<arg name="type" type="constant">type</arg>
 											<arg name="id" type="constant">recto</arg>
 										</instance_generator>
-										<label_generator name="Literal">
-											<arg name="text" type="constant">recto</arg>
-										</label_generator>
+									</entity>
+								</additional>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>custom:noType</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">http://vocab.getty.edu/aat/300078817</arg>
+										</instance_generator>
 									</entity>
 								</additional>
 								<additional>
@@ -1747,14 +1753,20 @@
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
 									<entity>
-										<type>crm:E55_Type</type>
+										<type>custom:noType</type>
 										<instance_generator name="URIwithType">
 											<arg name="type" type="constant">type</arg>
 											<arg name="id" type="constant">recto</arg>
 										</instance_generator>
-										<label_generator name="Literal">
-											<arg name="text" type="constant">recto</arg>
-										</label_generator>
+									</entity>
+								</additional>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>custom:noType</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">http://vocab.getty.edu/aat/300078817</arg>
+										</instance_generator>
 									</entity>
 								</additional>
 								<additional>
@@ -2567,14 +2579,20 @@
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
 									<entity>
-										<type>crm:E55_Type</type>
+										<type>custom:noType</type>
 										<instance_generator name="URIwithType">
 											<arg name="type" type="constant">type</arg>
 											<arg name="id" type="constant">recto</arg>
 										</instance_generator>
-										<label_generator name="Literal">
-											<arg name="text" type="constant">recto</arg>
-										</label_generator>
+									</entity>
+								</additional>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>custom:noType</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">http://vocab.getty.edu/aat/300078817</arg>
+										</instance_generator>
 									</entity>
 								</additional>
 								<additional>
@@ -3386,14 +3404,20 @@
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
 									<entity>
-										<type>crm:E55_Type</type>
+										<type>custom:noType</type>
 										<instance_generator name="URIwithType">
 											<arg name="type" type="constant">type</arg>
 											<arg name="id" type="constant">recto</arg>
 										</instance_generator>
-										<label_generator name="Literal">
-											<arg name="text" type="constant">recto</arg>
-										</label_generator>
+									</entity>
+								</additional>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>custom:noType</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">http://vocab.getty.edu/aat/300078817</arg>
+										</instance_generator>
 									</entity>
 								</additional>
 								<additional>

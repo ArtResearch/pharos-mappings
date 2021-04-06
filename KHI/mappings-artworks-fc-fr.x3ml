@@ -428,7 +428,7 @@
 					<target_node>
 						<entity>
 							<type>fc:institution</type>
-							<instance_generator name="URIwithTypeAndId">
+							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -1004,7 +1004,7 @@
 					<target_node>
 						<entity>
 							<type>fc:institution</type>
-							<instance_generator name="URIwithTypeAndId">
+							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -1581,7 +1581,7 @@
 					<target_node>
 						<entity>
 							<type>fc:institution</type>
-							<instance_generator name="URIwithTypeAndId">
+							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -2157,7 +2157,7 @@
 					<target_node>
 						<entity>
 							<type>fc:institution</type>
-							<instance_generator name="URIwithTypeAndId">
+							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
