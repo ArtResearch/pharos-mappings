@@ -1210,13 +1210,10 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
 										<arg name="text" type="constant">http://vocab.getty.edu/aat/300127013</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">color (perceived attribute)</arg>
-									</label_generator>
 								</entity>
 							</additional>
 							<additional>
@@ -2031,13 +2028,10 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
 										<arg name="text" type="constant">http://vocab.getty.edu/aat/300127013</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">color (perceived attribute)</arg>
-									</label_generator>
 								</entity>
 							</additional>
 							<additional>
@@ -2854,13 +2848,10 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
 										<arg name="text" type="constant">http://vocab.getty.edu/aat/300127013</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">color (perceived attribute)</arg>
-									</label_generator>
 								</entity>
 							</additional>
 							<additional>
@@ -3677,13 +3668,10 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
 										<arg name="text" type="constant">http://vocab.getty.edu/aat/300127013</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">color (perceived attribute)</arg>
-									</label_generator>
 								</entity>
 							</additional>
 							<additional>
