@@ -940,7 +940,7 @@
 						<relation>marc:subfield[@code="d"]/@birth</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>fr:Artist_from_Date</relationship>
+						<relationship>fr:Person_has_Date_of_Birth</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -978,7 +978,7 @@
 						<relation>marc:subfield[@code="d"]/@birth</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>fr:Artist_from_Date</relationship>
+						<relationship>fr:Person_has_Date_of_Birth</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -1016,7 +1016,7 @@
 						<relation>marc:subfield[@code="d"]/@birth</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>fr:Artist_from_Date</relationship>
+						<relationship>fr:Person_has_Date_of_Birth</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -1026,6 +1026,28 @@
 							<type>rdfs:Literal</type>
 							<instance_generator name="Literal">
 								<arg name="text" type="xpath">../@birth</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>marc:subfield[@code="d"]/@death</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>fr:Person_has_Date_of_Death</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>marc:subfield[@code="d"]/@death</source_node>
+					<target_node>
+						<entity>
+							<type>rdfs:Literal</type>
+							<instance_generator name="Literal">
+								<arg name="text" type="xpath">../@death</arg>
 							</instance_generator>
 						</entity>
 					</target_node>

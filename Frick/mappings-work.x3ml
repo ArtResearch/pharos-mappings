@@ -4667,46 +4667,7 @@
 					</target_node>
 				</range>
 			</link>
-			<!--
-			<link> 
-				<path>
-					<source_relation>
-						<relation>marc:subfield[@code="d"]</relation>
-					</source_relation>
-					<target_relation>
-						<relationship>crm:P100i_died_in</relationship>
-						<entity>
-							<type>crm:E69_Death</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">death</arg>
-								<arg name="id" type="xpath">../marc:subfield[@code="a"]/text()</arg>
-							</instance_generator>
-						</entity>
-						<relationship>crm:P4_has_time-span</relationship>
-						<entity>
-							<type>crm:E52_Time-Span</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">timespan_of_death</arg>
-								<arg name="id" type="xpath">../marc:subfield[@code="a"]/text()</arg>
-							</instance_generator>
-						</entity>
-						<relationship>crm:P82_at_some_time_within</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>marc:subfield[@code="d"]</source_node>
-					<target_node>
-						<entity>
-							<type>rdfs:Literal</type>
-							<instance_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</instance_generator>
-						</entity>
-					</target_node>
-				</range>
-			</link>
-			-->
-		
+			
 		</mapping>	
 		
 		<mapping namedgraph="graph">
@@ -4834,46 +4795,6 @@
 				</range>
 			</link>
 			
-			<!--
-			<link> 
-				<path>
-					<source_relation>
-						<relation>marc:subfield[@code="d"]</relation>
-					</source_relation>
-					<target_relation>
-						<relationship>crm:P100i_died_in</relationship>
-						<entity>
-							<type>crm:E69_Death</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">death</arg>
-								<arg name="id" type="xpath">../marc:subfield[@code="a"]/text()</arg>
-							</instance_generator>
-						</entity>
-						<relationship>crm:P4_has_time-span</relationship>
-						<entity>
-							<type>crm:E52_Time-Span</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">timespan_of_death</arg>
-								<arg name="id" type="xpath">../marc:subfield[@code="a"]/text()</arg>
-							</instance_generator>
-						</entity>
-						<relationship>crm:P82_at_some_time_within</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>marc:subfield[@code="d"]</source_node>
-					<target_node>
-						<entity>
-							<type>rdfs:Literal</type>
-							<instance_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</instance_generator>
-						</entity>
-					</target_node>
-				</range>
-			</link>
-			-->
-		
 		</mapping>	
 		
 		

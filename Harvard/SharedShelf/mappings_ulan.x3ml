@@ -184,49 +184,7 @@
 					</target_node>
 				</range>
 			</link>
-						<!--
-			<link> 
-				<path>
-					<source_relation>
-						<relation>marc:subfield[@code="d"]/@death</relation>
-					</source_relation>
-					<target_relation>
-						<relationship>crm:P100i_died_in</relationship>
-						<entity>
-							<type>crm:E69_Death</type>
-							<instance_generator name="EventUri">
-								<arg name="resourceType" type="constant">actor</arg>
-								<arg name="resourceId" type="xpath">../../marc:subfield[@code="a"]/text()</arg>
-								<arg name="eventType" type="constant">death</arg>
-							</instance_generator>
-						</entity>
-						<relationship>crm:P4_has_time-span</relationship>
-						<entity>
-							<type>crm:E52_Time-Span</type>
-							<instance_generator name="TimespanUri">
-								<arg name="resourceType" type="constant">actor</arg>
-								<arg name="resourceId" type="xpath">../../marc:subfield[@code="a"]/text()</arg>
-								<arg name="eventType" type="constant">death</arg>
-							</instance_generator>
-						</entity>
-						<relationship>crm:P82_at_some_time_within</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>marc:subfield[@code="d"]/@death</source_node>
-					<target_node>
-						<entity>
-							<type>rdfs:Literal</type>
-							<instance_generator name="Literal">
-								<arg name="text" type="xpath">../@death</arg>
-							</instance_generator>
-						</entity>
-					</target_node>
-				</range>
-			</link>
-		-->
-			<!-- we can include nationality/birhplace/deathplace/ -->
-	
+
 		</mapping>
 		
 	</mappings>

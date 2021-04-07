@@ -757,5 +757,78 @@
 			
 		</mapping>	
 		
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>//ssn:Name</source_node>
+				<target_node>
+					<if>
+						<equals value="ULAN">Terms/Term/TermSource/@name</equals>
+					</if>
+                   <entity>
+						<type>fc:artist</type>
+						<instance_generator name="URIwithTypeAndId">
+							<arg name="type" type="constant">actor</arg>
+							<arg name="id" type="xpath">@conceptId</arg>
+						</instance_generator>
+						<additional>
+							<relationship>fr:Work_has_provider_Institution</relationship>
+							<entity>
+								<type>fc:institution</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">ITatti</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+				   </entity>
+				</target_node>
+			</domain>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>Biographies/Biography/birthDate</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>fr:Person_has_Date_of_Birth</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>Biographies/Biography/birthDate</source_node>
+					<target_node>
+						<entity>
+							<type>rdfs:Literal</type>
+							<instance_generator name="Literal">
+								<arg name="text" type="xpath">@year</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>Biographies/Biography/deathDate</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>fr:Person_has_Date_of_Death</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>Biographies/Biography/deathDate</source_node>
+					<target_node>
+						<entity>
+							<type>rdfs:Literal</type>
+							<instance_generator name="Literal">
+								<arg name="text" type="xpath">@year</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+		</mapping>
+
 	</mappings>
 </x3ml>
