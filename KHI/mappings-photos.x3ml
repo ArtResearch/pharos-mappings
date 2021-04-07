@@ -1378,6 +1378,11 @@
 								<arg name="to" type="xpath">../a8460/text()</arg>
 								<arg name="timespan" type="xpath">../a8496/text()</arg>
 							</instance_generator>
+							<label_generator name="AcquisitionFormerLocation">
+								<arg name="From" type="xpath">string-join((text(),"-"),' ')</arg>
+								<arg name="Type" type="xpath">string-join((../a8497/text(),"-"),' ')</arg>
+								<arg name="Date" type="xpath">string-join((../a8496/text(),"-"),' ')</arg>
+							</label_generator>
 						</entity>
 						<relationship>crm:P22_transferred_title_from</relationship>
 					</target_relation>
@@ -2202,6 +2207,11 @@
 								<arg name="to" type="xpath">../a8460/text()</arg>
 								<arg name="timespan" type="xpath">../a8496/text()</arg>
 							</instance_generator>
+							<label_generator name="AcquisitionFormerLocation">
+								<arg name="From" type="xpath">string-join((text(),"-"),' ')</arg>
+								<arg name="Type" type="xpath">string-join((../a8497/text(),"-"),' ')</arg>
+								<arg name="Date" type="xpath">string-join((../a8496/text(),"-"),' ')</arg>
+							</label_generator>
 						</entity>
 						<relationship>crm:P22_transferred_title_from</relationship>
 					</target_relation>
@@ -3028,6 +3038,11 @@
 								<arg name="to" type="xpath">../a8460/text()</arg>
 								<arg name="timespan" type="xpath">../a8496/text()</arg>
 							</instance_generator>
+							<label_generator name="AcquisitionFormerLocation">
+								<arg name="From" type="xpath">string-join((text(),"-"),' ')</arg>
+								<arg name="Type" type="xpath">string-join((../a8497/text(),"-"),' ')</arg>
+								<arg name="Date" type="xpath">string-join((../a8496/text(),"-"),' ')</arg>
+							</label_generator>
 						</entity>
 						<relationship>crm:P22_transferred_title_from</relationship>
 					</target_relation>
@@ -3854,6 +3869,11 @@
 								<arg name="to" type="xpath">../a8460/text()</arg>
 								<arg name="timespan" type="xpath">../a8496/text()</arg>
 							</instance_generator>
+							<label_generator name="AcquisitionFormerLocation">
+								<arg name="From" type="xpath">string-join((text(),"-"),' ')</arg>
+								<arg name="Type" type="xpath">string-join((../a8497/text(),"-"),' ')</arg>
+								<arg name="Date" type="xpath">string-join((../a8496/text(),"-"),' ')</arg>
+							</label_generator>
 						</entity>
 						<relationship>crm:P22_transferred_title_from</relationship>
 					</target_relation>

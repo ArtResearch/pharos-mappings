@@ -1310,3 +1310,10 @@
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "recto" .
 }
+
+<https://pharos.artresearch.net/resource/zeri/actor/1JIDAS03/graph> {
+        <https://pharos.artresearch.net/resource/zeri/actor/1JIDAS03>
+            a       <https://pharos.artresearch.net/custom/E39_Actor> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Fondazione Federico Zeri - Università di Bologna" .
+}

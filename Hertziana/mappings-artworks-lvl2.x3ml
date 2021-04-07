@@ -2783,6 +2783,11 @@
 								<arg name="to" type="xpath">a2900/text()</arg>
 								<arg name="timespan" type="constant">-</arg>
 							</instance_generator>
+							<label_generator name="AcquisitionCurrentLocation">
+								<arg name="To" type="xpath">a2900/text()</arg>
+								<arg name="Type" type="xpath">text()</arg>
+								<arg name="Date" type="xpath">string-join((a2996/text(),"-"),' ')</arg>
+							</label_generator>
 						</entity>
 						<relationship>crm:P2_has_type</relationship>
 					</target_relation>

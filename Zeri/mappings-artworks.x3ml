@@ -670,6 +670,9 @@
 			<domain>
 				<source_node>//RISULTATI/SCHEDA</source_node>
 				<target_node>
+					<if>
+						<exists>PARAGRAFO[@etichetta="OBJECT"]/SGTT[@etichetta="Traditional title"]</exists>
+					</if>
                     <entity>
                         <type>crm:E22_Man-Made_Object</type>
 						<instance_generator name="URIwithTypeAndId">
@@ -677,7 +680,7 @@
 							<arg name="id" type="xpath">PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
 						</instance_generator>
 						<label_generator name="Literal">
-							<arg name="text" type="xpath">@intestazione</arg>
+							<arg name="text" type="xpath">PARAGRAFO[@etichetta="OBJECT"]/SGTT[@etichetta="Traditional title"]</arg>
 						</label_generator>
 						<additional>
 							<relationship>custom:has_provider</relationship>
@@ -707,18 +710,6 @@
 								</additional>
 							</entity>
 						</additional>
-						<!--
-						<additional>
-							<relationship>crm:P129i_is_subject_of</relationship>
-							<entity>
-								<type>crmdig:D1_Digital_Object</type>
-								<instance_generator name="Image_Generator">
-									<arg name="id" type="xpath">ALLEGATI/FOTO/text()</arg>
-									<arg name="postfix" type="constant"></arg>
-								</instance_generator>
-							</entity>
-						</additional>
-						-->
 						<additional>
 							<relationship>custom:has_original_record</relationship>
 							<entity>
@@ -789,7 +780,7 @@
 								<entity>
 									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300417193</arg>
+										<arg name="text" type="constant">http://vocab.getty.edu/aat/300417226</arg>
 									</instance_generator>
 								</entity>
 							</additional>
@@ -863,7 +854,7 @@
 								<entity>
 									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300417226</arg>
+										<arg name="text" type="constant">http://vocab.getty.edu/aat/300417193</arg>
 									</instance_generator>
 								</entity>
 							</additional>
@@ -1634,6 +1625,9 @@
 								<arg name="to" type="constant">-</arg>
 								<arg name="timespan" type="xpath">../PRDU[@etichetta="Date OUT"]/text()</arg>
 							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">string-join(("Former Location:",text(),"- Acquisition:",../PRDU[@etichetta="Date OUT"]/text()),' ')</arg>
+							</label_generator>
 						</entity>
 						<relationship>crm:P23_transferred_title_from</relationship>
 					</target_relation>
@@ -1652,15 +1646,18 @@
 				</range>
 			</link>
 
-			<!--
-			<link> 
+			<link>
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRVL[@etichetta="Village"]</relation>
+						<relation>PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRCD[@etichetta="Repository"]</relation>
 					</source_relation>
 					<target_relation>
 						<if>
-							<exists>../PRDU[@etichetta="Date OUT"]/text()</exists>
+							<not>
+								<if>
+									<exists>../PRDU[@etichetta="Date OUT"]/text()</exists>
+								</if>
+							</not>
 						</if>
 						<relationship>crm:P24i_changed_ownership_through</relationship>
 						<entity>
@@ -1669,301 +1666,37 @@
 								<arg name="resourceType" type="constant">work</arg>
 								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
-								<arg name="from" type="xpath">../PRCD[@etichetta="Repository"]/text()</arg>
+								<arg name="from" type="xpath">text()</arg>
 								<arg name="to" type="constant">-</arg>
-								<arg name="timespan" type="xpath">../PRDU[@etichetta="Date OUT"]/text()</arg>
+								<arg name="timespan" type="constant">-</arg>
 							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">string-join(("Former Location:",text()),' ')</arg>
+							</label_generator>
 						</entity>
 						<relationship>crm:P23_transferred_title_from</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRCD[@etichetta="Repository"]</source_node>
+					<target_node>
 						<entity>
 							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">../PRCD[@etichetta="Repository"]/text()</arg>
-							</instance_generator>
-						</entity>	
-						<relationship>crm:P74_has_current_or_former_residence</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRVL[@etichetta="Village"]</source_node>
-					<target_node>
-						<entity>
-							<type>crm:E53_Place</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">place</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>custom:noType</type>
-									<instance_generator name="URIwithType">
-										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="constant">Village</arg>
-									</instance_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
 			</link>
-			
-			<link> 
-				<path>
-					<source_relation>
-						<relation>PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRVC[@etichetta="Town / Municipality"]</relation>
-					</source_relation>
-					<target_relation>
-						<if>
-							<exists>../PRDU[@etichetta="Date OUT"]/text()</exists>
-						</if>
-						<relationship>crm:P24i_changed_ownership_through</relationship>
-						<entity>
-							<type>crm:E8_Acquisition</type>
-							<instance_generator name="AcquisitionUri">
-								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
-								<arg name="eventType" type="constant">acquisition</arg>
-								<arg name="from" type="xpath">../PRCD[@etichetta="Repository"]/text()</arg>
-								<arg name="to" type="constant">-</arg>
-								<arg name="timespan" type="xpath">../PRDU[@etichetta="Date OUT"]/text()</arg>
-							</instance_generator>
-						</entity>
-						<relationship>crm:P23_transferred_title_from</relationship>
-						<entity>
-							<type>custom:noType</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">../PRCD[@etichetta="Repository"]/text()</arg>
-							</instance_generator>
-						</entity>	
-						<relationship>crm:P74_has_current_or_former_residence</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRVC[@etichetta="Town / Municipality"]</source_node>
-					<target_node>
-						<entity>
-							<type>crm:E53_Place</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">place</arg>
-								<arg name="id" type="xpath">text()</arg>
-							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300008389</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">cities</arg>
-									</label_generator>
-								</entity>
-							</additional>
-						</entity>
-					</target_node>
-				</range>
-			</link>
-			
-			<link> 
-				<path>
-					<source_relation>
-						<relation>PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRVP[@etichetta="District"]</relation>
-					</source_relation>
-					<target_relation>
-						<if>
-							<exists>../PRDU[@etichetta="Date OUT"]/text()</exists>
-						</if>
-						<relationship>crm:P24i_changed_ownership_through</relationship>
-						<entity>
-							<type>crm:E8_Acquisition</type>
-							<instance_generator name="AcquisitionUri">
-								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
-								<arg name="eventType" type="constant">acquisition</arg>
-								<arg name="from" type="xpath">../PRCD[@etichetta="Repository"]/text()</arg>
-								<arg name="to" type="constant">-</arg>
-								<arg name="timespan" type="xpath">../PRDU[@etichetta="Date OUT"]/text()</arg>
-							</instance_generator>
-						</entity>
-						<relationship>crm:P23_transferred_title_from</relationship>
-						<entity>
-							<type>custom:noType</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">../PRCD[@etichetta="Repository"]/text()</arg>
-							</instance_generator>
-						</entity>	
-						<relationship>crm:P74_has_current_or_former_residence</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRVP[@etichetta="District"]</source_node>
-					<target_node>
-						<entity>
-							<type>crm:E53_Place</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">place</arg>
-								<arg name="id" type="xpath">text()</arg>
-							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
-										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="constant">Province</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">Province</arg>
-									</label_generator>
-								</entity>
-							</additional>
-						</entity>
-					</target_node>
-				</range>
-			</link>
-			
-			<link> 
-				<path>
-					<source_relation>
-						<relation>PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRVR[@etichetta="Region / Federal State"]</relation>
-					</source_relation>
-					<target_relation>
-						<if>
-							<exists>../PRDU[@etichetta="Date OUT"]/text()</exists>
-						</if>
-						<relationship>crm:P24i_changed_ownership_through</relationship>
-						<entity>
-							<type>crm:E8_Acquisition</type>
-							<instance_generator name="AcquisitionUri">
-								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
-								<arg name="eventType" type="constant">acquisition</arg>
-								<arg name="from" type="xpath">../PRCD[@etichetta="Repository"]/text()</arg>
-								<arg name="to" type="constant">-</arg>
-								<arg name="timespan" type="xpath">../PRDU[@etichetta="Date OUT"]/text()</arg>
-							</instance_generator>
-						</entity>
-						<relationship>crm:P23_transferred_title_from</relationship>
-						<entity>
-							<type>custom:noType</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">../PRCD[@etichetta="Repository"]/text()</arg>
-							</instance_generator>
-						</entity>	
-						<relationship>crm:P74_has_current_or_former_residence</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRVR[@etichetta="Region / Federal State"]</source_node>
-					<target_node>
-						<entity>
-							<type>crm:E53_Place</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">place</arg>
-								<arg name="id" type="xpath">text()</arg>
-							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300387079</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">local regions</arg>
-									</label_generator>
-								</entity>
-							</additional>
-						</entity>
-					</target_node>
-				</range>
-			</link>
-						
-			<link> 
-				<path>
-					<source_relation>
-						<relation>PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRVS[@etichetta="Country"]</relation>
-					</source_relation>
-					<target_relation>
-						<if>
-							<exists>../PRDU[@etichetta="Date OUT"]/text()</exists>
-						</if>
-						<relationship>crm:P24i_changed_ownership_through</relationship>
-						<entity>
-							<type>crm:E8_Acquisition</type>
-							<instance_generator name="AcquisitionUri">
-								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
-								<arg name="eventType" type="constant">acquisition</arg>
-								<arg name="from" type="xpath">../PRCD[@etichetta="Repository"]/text()</arg>
-								<arg name="to" type="constant">-</arg>
-								<arg name="timespan" type="xpath">../PRDU[@etichetta="Date OUT"]/text()</arg>
-							</instance_generator>
-						</entity>
-						<relationship>crm:P23_transferred_title_from</relationship>
-						<entity>
-							<type>custom:noType</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">../PRCD[@etichetta="Repository"]/text()</arg>
-							</instance_generator>
-						</entity>	
-						<relationship>crm:P74_has_current_or_former_residence</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRVS[@etichetta="Country"]</source_node>
-					<target_node>
-						<entity>
-							<type>crm:E53_Place</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">place</arg>
-								<arg name="id" type="xpath">text()</arg>
-							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>custom:noType</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300387506</arg>
-									</instance_generator>
-								</entity>
-							</additional>
-						</entity>
-					</target_node>
-				</range>
-			</link>
-			-->
-			
+
 			<link> 
 				<path>
 					<source_relation>
 						<relation>PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRCS[@etichetta="Precise location"]</relation>
 					</source_relation>
 					<target_relation>
-						<if>
-							<exists>../PRDU[@etichetta="Date OUT"]/text()</exists>
-						</if>
 						<relationship>custom:formed_part_of</relationship>
 					</target_relation>
 				</path>
@@ -1998,6 +1731,1929 @@
 								<arg name="to" type="constant">-</arg>
 								<arg name="timespan" type="xpath">../PRDU[@etichetta="Date OUT"]/text()</arg>
 							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">string-join(("Former Location:",../PRCD[@etichetta="Repository"]/text(),"- Acquisition:",text()),' ')</arg>
+							</label_generator>
+						</entity>
+						<relationship>crm:P4_has_time-span</relationship>
+						<entity>
+							<type>crm:E52_Time-Span</type>
+							<instance_generator name="ComplexTimespanUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+								<arg name="eventType" type="constant">acquisition</arg>
+								<arg name="timespan" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P82_at_some_time_within</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRDU[@etichetta="Date OUT"]</source_node>
+					<target_node>
+						<entity>
+							<type>rdfs:Literal</type>
+							<instance_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="EXHIBITIONS"]/RIPETIZIONE/MSTT[@etichetta="Title of exhibition"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P12i_was_present_at</relationship>
+						<entity>
+							<type>crm:E7_Activity</type>
+							<instance_generator name="ComplexEventUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+								<arg name="id" type="xpath">text()</arg>
+								<arg name="event_type" type="constant">exhibition</arg>
+							</instance_generator>
+							<label_generator name="ExhibitionConcatenated">
+								<arg name="Title" type="xpath">text()</arg>
+								<arg name="Place" type="xpath">../MSTL[@etichetta="Place of exhibition"]/text()</arg>
+								<arg name="Date" type="xpath">../MSTD[@etichetta="Date of exhibition"]/text()</arg>
+							</label_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIwithType">
+										<arg name="type" type="constant">type</arg>
+										<arg name="id" type="constant">Exhibition</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>	
+						<relationship>crm:P1_is_identified_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="EXHIBITIONS"]/RIPETIZIONE/MSTT[@etichetta="Title of exhibition"]</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E41_Appellation</type>
+							<instance_generator name="IdentifierURI">	
+								<arg name="subject_type" type="constant">exhibition</arg>
+								<arg name="subject_id" type="xpath">text()</arg>
+								<arg name="identifier_type" type="constant">appellation</arg>
+								<arg name="identifier_id" type="xpath">text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="EXHIBITIONS"]/RIPETIZIONE/MSTL[@etichetta="Place of exhibition"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P12i_was_present_at</relationship>
+						<entity>
+							<type>crm:E7_Activity</type>
+							<instance_generator name="ComplexEventUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+								<arg name="id" type="xpath">../MSTT[@etichetta="Title of exhibition"]/text()</arg>
+								<arg name="event_type" type="constant">exhibition</arg>
+							</instance_generator>
+						</entity>	
+						<relationship>crm:P7_took_place_at</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="EXHIBITIONS"]/RIPETIZIONE/MSTL[@etichetta="Place of exhibition"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">place</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="EXHIBITIONS"]/RIPETIZIONE/MSTD[@etichetta="Date of exhibition"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P12i_was_present_at</relationship>
+						<entity>
+							<type>crm:E7_Activity</type>
+							<instance_generator name="ComplexEventUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+								<arg name="id" type="xpath">../MSTT[@etichetta="Title of exhibition"]/text()</arg>
+								<arg name="event_type" type="constant">exhibition</arg>
+							</instance_generator>
+						</entity>	
+						<relationship>crm:P4_has_time-span</relationship>
+						<entity>
+							<type>crm:E52_Time-Span</type>
+							<instance_generator name="ComplexTimespanUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+								<arg name="eventType" type="constant">acquisition</arg>
+								<arg name="timespan" type="xpath">../MSTT[@etichetta="Title of exhibition"]/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P82_at_some_time_within</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="EXHIBITIONS"]/RIPETIZIONE/MSTD[@etichetta="Date of exhibition"]</source_node>
+					<target_node>
+						<entity>
+							<type>rdfs:Literal</type>
+							<instance_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>	
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="ICONCLASS"]/DESI[@etichetta="ICONCLASS code"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P65_shows_visual_item</relationship>
+						<entity>				
+							<type>crm:E36_Visual_Item</type>
+							<instance_generator name="VisualItemUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]</arg>
+							</instance_generator>
+						</entity>	
+						<relationship>crm:P138_represents</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="ICONCLASS"]/DESI[@etichetta="ICONCLASS code"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">type</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="ICONCLASS"]/DESS[@etichetta="Keywords"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P65_shows_visual_item</relationship>
+						<entity>				
+							<type>crm:E36_Visual_Item</type>
+							<instance_generator name="VisualItemUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]</arg>
+							</instance_generator>
+						</entity>	
+						<relationship>crm:P138_represents</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="ICONCLASS"]/DESS[@etichetta="Keywords"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">type</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="OBJECT"]/SGTI[@etichetta="Subject"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P65_shows_visual_item</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="OBJECT"]/SGTI[@etichetta="Subject"]</source_node>
+					<target_node>
+						<entity>				
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">subject</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="NOTES"]/OSS[@etichetta="Notes"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P67i_is_referred_to_by</relationship>
+						<entity>
+							<type>crm:E73_Information_Object</type>
+							<instance_generator name="InformationObjectUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]</arg>
+								<arg name="type" type="constant">curational_info</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">http://vocab.getty.edu/aat/300265639</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+						<relationship>crm:P190_has_symbolic_content</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="NOTES"]/OSS[@etichetta="Notes"]</source_node>
+					<target_node>
+						<entity>
+							<type>rdfs:Literal</type>
+							<instance_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="RELATED ENTRIES"]/RSEC[@etichetta="Related entries"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P67i_is_referred_to_by</relationship>
+						<entity>
+							<type>crm:E73_Information_Object</type>
+							<instance_generator name="InformationObjectUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]</arg>
+								<arg name="type" type="constant">related_entries_info</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">http://vocab.getty.edu/aat/300015640</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+						<relationship>crm:P190_has_symbolic_content</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="RELATED ENTRIES"]/RSEC[@etichetta="Related entries"]</source_node>
+					<target_node>
+						<entity>
+							<type>rdfs:Literal</type>
+							<instance_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="CODES"]/IDC[@etichetta="General description"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P67i_is_referred_to_by</relationship>
+						<entity>
+							<type>crm:E73_Information_Object</type>
+							<instance_generator name="InformationObjectUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]</arg>
+								<arg name="type" type="constant">description_info</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">http://vocab.getty.edu/aat/300435416</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>	
+						<relationship>crm:P190_has_symbolic_content</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="CODES"]/IDC[@etichetta="General description"]</source_node>
+					<target_node>
+						<entity>
+							<type>rdfs:Literal</type>
+							<instance_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="OBJECT"]/MISA[@etichetta="Height"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P43_has_dimension</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="OBJECT"]/MISA[@etichetta="Height"]</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E54_Dimension</type>
+							<instance_generator name="DimensionURI">
+								<arg name="subject_type" type="constant">work</arg>
+								<arg name="subject_id" type="xpath">../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]</arg>
+								<arg name="type" type="constant">height</arg>
+								<arg name="unit" type="xpath">../MISU[@etichetta="Unit of measurement"]/text()</arg>
+								<arg name="value" type="xpath">text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>rdfs:label</relationship>
+								<entity>
+									<type>rdfs:Literal</type>
+									<instance_generator name="DimensionConcatenated">
+										<arg name="length" type="xpath">../MISL[@etichetta="Length"]/text()</arg>
+										<arg name="height" type="xpath">text()</arg>
+										<arg name="unit" type="xpath">../MISU[@etichetta="Unit of measurement"]/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">http://vocab.getty.edu/aat/300055644</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+							<additional>
+								<relationship>crm:P90_has_value</relationship>
+								<entity>
+									<type>xsd:decimal</type>
+									<instance_generator name="TypedLiteralGen">
+										<arg name="text" type="xpath">text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+							<additional>
+								<relationship>crm:P91_has_unit</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIwithType">
+										<arg name="type" type="constant">measurement_unit</arg>
+										<arg name="id" type="xpath">../MISU[@etichetta="Unit of measurement"]/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="OBJECT"]/MISL[@etichetta="Length"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P43_has_dimension</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="OBJECT"]/MISL[@etichetta="Length"]</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E54_Dimension</type>
+							<instance_generator name="DimensionURI">
+								<arg name="subject_type" type="constant">work</arg>
+								<arg name="subject_id" type="xpath">../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]</arg>
+								<arg name="type" type="constant">length</arg>
+								<arg name="unit" type="xpath">../MISU[@etichetta="Unit of measurement"]/text()</arg>
+								<arg name="value" type="xpath">text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">http://vocab.getty.edu/aat/300055645</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+							<additional>
+								<relationship>crm:P90_has_value</relationship>
+								<entity>
+									<type>xsd:decimal</type>
+									<instance_generator name="TypedLiteralGen">
+										<arg name="text" type="xpath">text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+							<additional>
+								<relationship>crm:P91_has_unit</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIwithType">
+										<arg name="type" type="constant">measurement_unit</arg>
+										<arg name="id" type="xpath">../MISU[@etichetta="Unit of measurement"]/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="OBJECT"]/MISP[@etichetta="Depth"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P43_has_dimension</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="OBJECT"]/MISP[@etichetta="Depth"]</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E54_Dimension</type>
+							<instance_generator name="DimensionURI">
+								<arg name="subject_type" type="constant">work</arg>
+								<arg name="subject_id" type="xpath">../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]</arg>
+								<arg name="type" type="constant">depth</arg>
+								<arg name="unit" type="xpath">../MISU[@etichetta="Unit of measurement"]/text()</arg>
+								<arg name="value" type="xpath">text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">http://vocab.getty.edu/aat/300072633</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+							<additional>
+								<relationship>crm:P90_has_value</relationship>
+								<entity>
+									<type>xsd:decimal</type>
+									<instance_generator name="TypedLiteralGen">
+										<arg name="text" type="xpath">text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+							<additional>
+								<relationship>crm:P91_has_unit</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIwithType">
+										<arg name="type" type="constant">measurement_unit</arg>
+										<arg name="id" type="xpath">../MISU[@etichetta="Unit of measurement"]/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="OBJECT"]/MISD[@etichetta="Diameter"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P43_has_dimension</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="OBJECT"]/MISD[@etichetta="Diameter"]</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E54_Dimension</type>
+							<instance_generator name="DimensionURI">
+								<arg name="subject_type" type="constant">work</arg>
+								<arg name="subject_id" type="xpath">../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]</arg>
+								<arg name="type" type="constant">diameter</arg>
+								<arg name="unit" type="xpath">../MISU[@etichetta="Unit of measurement"]/text()</arg>
+								<arg name="value" type="xpath">text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">http://vocab.getty.edu/aat/300055624</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+							<additional>
+								<relationship>crm:P90_has_value</relationship>
+								<entity>
+									<type>xsd:decimal</type>
+									<instance_generator name="TypedLiteralGen">
+										<arg name="text" type="xpath">text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+							<additional>
+								<relationship>crm:P91_has_unit</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIwithType">
+										<arg name="type" type="constant">measurement_unit</arg>
+										<arg name="id" type="xpath">../MISU[@etichetta="Unit of measurement"]/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="OBJECT"]/MISV[@etichetta="Other dimentions"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P67i_is_referred_to_by</relationship>
+						<entity>
+							<type>crm:E73_Information_Object</type>
+							<instance_generator name="InformationObjectUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]</arg>
+								<arg name="type" type="constant">dimension_info</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIwithType">
+										<arg name="type" type="constant">type</arg>
+										<arg name="id" type="constant">Dimension Description</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>	
+						<relationship>crm:P190_has_symbolic_content</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="OBJECT"]/MISV[@etichetta="Other dimentions"]</source_node>
+					<target_node>
+						<entity>
+							<type>rdfs:Literal</type>
+							<instance_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="BIBLIOGRAPHY"]/RIPETIZIONE/BIBG[@etichetta="Title"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P67i_is_referred_to_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="BIBLIOGRAPHY"]/RIPETIZIONE/BIBG[@etichetta="Title"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">bibliography</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<!-- <link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="BIBLIOGRAPHY"]/RIPETIZIONE/BIBX[@etichetta="Type"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P67i_is_referred_to_by</relationship>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">bibliography</arg>
+								<arg name="id" type="xpath">../BIBG[@etichetta="Title"]/text()</arg>
+							</instance_generator>
+						</entity>	
+						<relationship>crm:P2_has_type</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="BIBLIOGRAPHY"]/RIPETIZIONE/BIBX[@etichetta="Type"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">type</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link> -->
+
+			<!-- <link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="BIBLIOGRAPHY"]/RIPETIZIONE/BIBA[@etichetta="Author"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P67i_is_referred_to_by</relationship>
+						<entity>
+							<type>crm:E73_Information_Object</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">bibliography</arg>
+								<arg name="id" type="xpath">../BIBG[@etichetta="Title"]/text()</arg>
+							</instance_generator>
+						</entity>	
+						<relationship>crm:P94i_was_created_by</relationship>
+						<entity>
+							<type>crm:E65_Creation</type>
+							<instance_generator name="EventUri">
+								<arg name="resourceType" type="constant">bibliography</arg>
+								<arg name="resourceId" type="xpath">../BIBG[@etichetta="Title"]/text()</arg>
+								<arg name="eventType" type="constant">creation</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P14_carried_out_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="BIBLIOGRAPHY"]/RIPETIZIONE/BIBA[@etichetta="Author"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link> -->
+			
+			<!-- <link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="BIBLIOGRAPHY"]/RIPETIZIONE/BIBD[@etichetta="Publication date"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P67i_is_referred_to_by</relationship>
+						<entity>
+							<type>crm:E73_Information_Object</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">bibliography</arg>
+								<arg name="id" type="xpath">../BIBG[@etichetta="Title"]/text()</arg>
+							</instance_generator>
+						</entity>	
+						<relationship>crm:P94i_was_created_by</relationship>
+						<entity>
+							<type>crm:E65_Creation</type>
+							<instance_generator name="EventUri">
+								<arg name="resourceType" type="constant">bibliography</arg>
+								<arg name="resourceId" type="xpath">../BIBG[@etichetta="Title"]/text()</arg>
+								<arg name="eventType" type="constant">creation</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P4_has_time-span</relationship>
+						<entity>
+							<type>crm:E52_Time-Span</type>
+							<instance_generator name="TimespanUri">
+								<arg name="resourceType" type="constant">bibliography</arg>
+								<arg name="resourceId" type="xpath">../BIBG[@etichetta="Title"]/text()</arg>
+								<arg name="eventType" type="constant">creation</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P82_at_some_time_within</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="DATING"]/RIPETIZIONE/BIBD[@etichetta="Publication date"]</source_node>
+					<target_node>
+						<entity>
+							<type>rdfs:Literal</type>
+							<instance_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link> -->
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="BIBLIOGRAPHY"]/RIPETIZIONE/BIBN[@etichetta="Page"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P67i_is_referred_to_by</relationship>
+						<entity>
+							<type>crm:E73_Information_Object</type>
+							<instance_generator name="PageUri">
+								<arg name="resourceType" type="constant">bibliography</arg>
+								<arg name="resourceId" type="xpath">../BIBG[@etichetta="Title"]/text()</arg>
+								<arg name="pageId" type="xpath">text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:nbType</type>
+									<instance_generator name="URIwithType">
+										<arg name="type" type="constant">type</arg>
+										<arg name="id" type="constant">Page</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+							<additional>
+								<relationship>crm:P106i_forms_part_of</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIwithType">
+										<arg name="type" type="constant">bibliography</arg>
+										<arg name="id" type="xpath">../BIBG[@etichetta="Title"]/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>	
+						</entity>
+						<relationship>crm:P1_is_identified_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="BIBLIOGRAPHY"]/RIPETIZIONE/BIBN[@etichetta="Page"]</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E42_Identifier</type>
+							<instance_generator name="IdentifierURI">
+								<arg name="subject_type" type="constant">page</arg>
+								<arg name="subject_id" type="xpath">text()</arg>
+								<arg name="identifier_type" type="constant">identifier</arg>
+								<arg name="identifier_id" type="xpath">text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>ALLEGATI[@etichetta="Attached documents"]/FOTO</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P138i_is_represented_by</relationship>
+						<entity>
+							<type>crm:E36_Visual_Item</type>
+							<instance_generator name="VisualItemUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]</arg>
+							</instance_generator>
+							<additional>
+								<relationship>crm:P165i_is_incorporated_in</relationship>
+								<entity>
+									<type>crm:D1_Digital_Object</type>
+									<instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">digital_object</arg>
+										<arg name="id" type="xpath">@fotoID</arg>
+									</instance_generator>
+									<additional>
+										<relationship>crm:P2_has_type</relationship>
+										<entity>
+											<type>custom:noType</type>
+											<instance_generator name="URIorUUID">
+												<arg name="text" type="constant">http://vocab.getty.edu/aat/300417379</arg>
+											</instance_generator>
+										</entity>
+									</additional>
+								</entity>
+							</additional>
+						</entity>
+						<relationship>crm:P128i_is_carried_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>ALLEGATI[@etichetta="Attached documents"]/FOTO</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">photo</arg>
+								<arg name="id" type="xpath">@fotoID</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>//RISULTATI/SCHEDA</source_node>
+				<target_node>
+					<if>
+						<not>
+							<if>
+								<exists>PARAGRAFO[@etichetta="OBJECT"]/SGTT[@etichetta="Traditional title"]</exists>
+							</if>
+						</not>
+					</if>
+                    <entity>
+                        <type>crm:E22_Man-Made_Object</type>
+						<instance_generator name="URIwithTypeAndId">
+						    <arg name="type" type="constant">work</arg>
+							<arg name="id" type="xpath">PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">PARAGRAFO[@etichetta="OBJECT"]/SGTI[@etichetta="Subject"]</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">Zeri</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIorUUID">
+									<arg name="text" type="constant">http://vocab.getty.edu/aat/300133025</arg>
+								</instance_generator>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>custom:noType</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">https://pharos.artresearch.net/resource/vocab/maintype</arg>
+										</instance_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>custom:has_original_record</relationship>
+							<entity>
+								<type>crm:E32_Identifier</type>
+								<instance_generator name="URIorUUID">
+									<arg name="text" type="xpath">ISSHOWNBY/text()</arg>
+								</instance_generator>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>custom:noType</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">http://vocab.getty.edu/aat/300404630</arg>
+										</instance_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="namedgraph">
+									<arg name="type" type="constant">work</arg>
+									<arg name="id" type="xpath">PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:noType</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">Zeri</arg>
+										</instance_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>@intestazione</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P1_is_identified_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>@intestazione</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E41_Appellation</type>
+							<instance_generator name="IdentifierURI">	
+								<arg name="subject_type" type="constant">work</arg>
+								<arg name="subject_id" type="xpath">../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+								<arg name="identifier_type" type="constant">appellation</arg>
+								<arg name="identifier_id" type="xpath">.</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">.</arg>
+							</label_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">http://vocab.getty.edu/aat/300417193</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+	
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P1_is_identified_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E42_Identifier</type>
+							<instance_generator name="IdentifierURI">	
+								<arg name="subject_type" type="constant">work</arg>
+								<arg name="subject_id" type="xpath">text()</arg>
+								<arg name="identifier_type" type="constant">identifier</arg>
+								<arg name="identifier_id" type="xpath">text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">http://vocab.getty.edu/aat/300435704</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>		
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="LOCATION"]/LDCS[@etichetta="Precise location"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P46i_forms_part_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="LOCATION"]/LDCS[@etichetta="Precise location"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">collection</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="OBJECT"]/OGTD[@etichetta="Object"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P2_has_type</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="OBJECT"]/OGTD[@etichetta="Object"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">type</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="OBJECT"]/OGTT[@etichetta="Object type"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P2_has_type</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="OBJECT"]/OGTT[@etichetta="Object type"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">type</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="OBJECT"]/OGTV[@etichetta="Identification"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P2_has_type</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="OBJECT"]/OGTV[@etichetta="Identification"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">type</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="DATING"]/RIPETIZIONE/DTZG[@etichetta="Century"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P108i_was_produced_by</relationship>
+						<entity>
+							<type>crm:E12_Production</type>
+							<instance_generator name="EventUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P4_has_time-span</relationship>
+						<entity>
+							<type>crm:E52_Time-Span</type>
+							<instance_generator name="TimespanUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P10_falls_within</relationship>
+						<entity>
+							<type>crm:E52_Time-Span</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">timespan</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIwithType">
+										<arg name="type" type="constant">type</arg>
+										<arg name="id" type="constant">Century</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+						<relationship>crm:P1_is_identified_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="DATING"]/RIPETIZIONE/DTZG[@etichetta="Century"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">identifier</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="DATING"]/RIPETIZIONE/DTZS[@etichetta="Part of century"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P108i_was_produced_by</relationship>
+						<entity>
+							<type>crm:E12_Production</type>
+							<instance_generator name="EventUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P4_has_time-span</relationship>
+						<entity>
+							<type>crm:E52_Time-Span</type>
+							<instance_generator name="TimespanUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P10_falls_within</relationship>
+						<entity>
+							<type>crm:E52_Time-Span</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">timespan</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIwithType">
+										<arg name="type" type="constant">type</arg>
+										<arg name="id" type="constant">Part of Century</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+						<relationship>crm:P1_is_identified_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="DATING"]/RIPETIZIONE/DTZS[@etichetta="Part of century"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">identifier</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="DATING"]/RIPETIZIONE/DTSV[@etichetta="Degree of approximation"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P108i_was_produced_by</relationship>
+						<entity>
+							<type>crm:E12_Production</type>
+							<instance_generator name="EventUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P4_has_time-span</relationship>
+						<entity>
+							<type>crm:E52_Time-Span</type>
+							<instance_generator name="TimespanUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P79_begin_is_qualified_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="DATING"]/RIPETIZIONE/DTSV[@etichetta="Degree of approximation"]</source_node>
+					<target_node>
+						<entity>
+							<type>rdfs:Literal</type>
+							<instance_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="DATING"]/RIPETIZIONE/DTSL[@etichetta="Degree of approximation"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P108i_was_produced_by</relationship>
+						<entity>
+							<type>crm:E12_Production</type>
+							<instance_generator name="EventUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P4_has_time-span</relationship>
+						<entity>
+							<type>crm:E52_Time-Span</type>
+							<instance_generator name="TimespanUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P80_end_is_qualified_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="DATING"]/RIPETIZIONE/DTSL[@etichetta="Degree of approximation"]</source_node>
+					<target_node>
+						<entity>
+							<type>rdfs:Literal</type>
+							<instance_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="DATING"]/RIPETIZIONE/DTSI[@etichetta="From"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P108i_was_produced_by</relationship>
+						<entity>
+							<type>crm:E12_Production</type>
+							<instance_generator name="EventUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P4_has_time-span</relationship>
+						<entity>
+							<type>crm:E52_Time-Span</type>
+							<instance_generator name="TimespanUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+							<additional>
+								<relationship>crm:P82_at_some_time_within</relationship>
+								<entity>
+									<type>rdfs:Literal</type>
+									<instance_generator name="DateConcatenated">
+										<arg name="Start" type="xpath">text()</arg>
+										<arg name="End" type="xpath">../DTSF[@etichetta="To"]/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+						<relationship>crm:P82a_begin_of_the_begin</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="DATING"]/RIPETIZIONE/DTSI[@etichetta="From"]</source_node>
+					<target_node>
+						<entity>
+							<type>xsd:date</type>
+							<instance_generator name="TypedLiteralGen">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+		    <link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="DATING"]/RIPETIZIONE/DTSF[@etichetta="To"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P108i_was_produced_by</relationship>
+						<entity>
+							<type>crm:E12_Production</type>
+							<instance_generator name="EventUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P4_has_time-span</relationship>
+						<entity>
+							<type>crm:E52_Time-Span</type>
+							<instance_generator name="TimespanUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P82b_end_of_the_end</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="DATING"]/RIPETIZIONE/DTSF[@etichetta="To"]</source_node>
+					<target_node>
+						<entity>
+							<type>xsd:date</type>
+							<instance_generator name="TypedLiteralGen">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			 <link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="DATING"]/RIPETIZIONE/ADT[@etichetta="Different dating"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P108i_was_produced_by</relationship>
+						<entity>
+							<type>crm:E12_Production</type>
+							<instance_generator name="EventUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P4_has_time-span</relationship>
+						<entity>
+							<type>crm:E52_Time-Span</type>
+							<instance_generator name="TimespanUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIwithType">
+										<arg name="type" type="constant">type</arg>
+										<arg name="id" type="constant">Alternative Date</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+						<relationship>crm:P82_at_some_time_within</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="DATING"]/RIPETIZIONE/ADT[@etichetta="Different dating"]</source_node>
+					<target_node>
+						<entity>
+							<type>rdfs:Literal</type>
+							<instance_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="OBJECT"]/MTC[@etichetta="Medium or materials"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P45_consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="OBJECT"]/MTC[@etichetta="Medium or materials"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithVocabType">
+								<arg name="type" type="constant">material</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="AUTHOR"]/RIPETIZIONE/AUTN[@etichetta="Artist's name"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P108i_was_produced_by</relationship>
+						<entity>
+							<type>crm:E12_Production</type>
+							<instance_generator name="EventUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P01i_is_domain_of</relationship>
+						<entity>
+							<type>crm:PC14_carried_out_by</type>
+							<instance_generator name="PropertyTypeUri">
+								<arg name="propertyType" type="constant">carried_out_by</arg>
+								<arg name="domain" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+								<arg name="range" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P02_has_range</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="AUTHOR"]/RIPETIZIONE/AUTN[@etichetta="Artist's name"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="AUTHOR"]/RIPETIZIONE/AUTM[@etichetta="Reason for attribution"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P108i_was_produced_by</relationship>
+						<entity>
+							<type>crm:E12_Production</type>
+							<instance_generator name="EventUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P140i_was_attributed_by</relationship>	
+						<entity>
+							<type>crm:E13_Attribute_Assignment</type>
+							<instance_generator name="ComplexEventUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+								<arg name="id" type="xpath">../AUTN[@etichetta="Artist's name"]/text()</arg>
+								<arg name="event_type" type="constant">attribute_assignment</arg>
+							</instance_generator>
+							<additional>
+								<relationship>crm:P141_assigned</relationship>
+								<entity>
+									<type>crm:PC14_carried_out_by</type>
+									<instance_generator name="PropertyTypeUri">
+										<arg name="propertyType" type="constant">carried_out_by</arg>
+										<arg name="domain" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+										<arg name="range" type="xpath">../AUTN[@etichetta="Artist's name"]/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+						<relationship>crm:P2_has_type</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="AUTHOR"]/RIPETIZIONE/AUTM[@etichetta="Reason for attribution"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">type</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="DIFFERENT ATTRIBUTIONS"]/RIPETIZIONE/AAT[@etichetta="Name"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P108i_was_produced_by</relationship>
+						<entity>
+							<type>crm:E12_Production</type>
+							<instance_generator name="EventUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P140i_was_attributed_by</relationship>	
+						<entity>
+							<type>crm:E13_Attribute_Assignment</type>
+							<instance_generator name="ComplexEventUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+								<arg name="id" type="xpath">text()</arg>
+								<arg name="event_type" type="constant">attribute_assignment</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P141_assigned</relationship>
+						<entity>
+							<type>crm:PC14_carried_out_by</type>
+							<instance_generator name="PropertyTypeUri">
+								<arg name="propertyType" type="constant">carried_out_by</arg>
+								<arg name="domain" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+								<arg name="range" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P02_has_range</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="DIFFERENT ATTRIBUTIONS"]/RIPETIZIONE/AAT[@etichetta="Name"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="LOCATION"]/LDCN[@etichetta="Repository"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P50_has_current_keeper</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="LOCATION"]/LDCN[@etichetta="Repository"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="LOCATION"]/PVCL[@etichetta="Village"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P55_has_current_location</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="LOCATION"]/PVCL[@etichetta="Village"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">place</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="LOCATION"]/PVCC[@etichetta="Town / Municipality"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P55_has_current_location</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="LOCATION"]/PVCC[@etichetta="Town / Municipality"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">place</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="LOCATION"]/PVCP[@etichetta="District"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P55_has_current_location</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="LOCATION"]/PVCP[@etichetta="District"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">place</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="LOCATION"]/PVCR[@etichetta="Region / Federal State"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P55_has_current_location</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="LOCATION"]/PVCR[@etichetta="Region / Federal State"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">place</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="LOCATION"]/PVCS[@etichetta="Country"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P55_has_current_location</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="LOCATION"]/PVCS[@etichetta="Country"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">place</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link>
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRCD[@etichetta="Repository"]</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<exists>../PRDU[@etichetta="Date OUT"]/text()</exists>
+						</if>
+						<relationship>crm:P24i_changed_ownership_through</relationship>
+						<entity>
+							<type>crm:E8_Acquisition</type>
+							<instance_generator name="AcquisitionUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+								<arg name="eventType" type="constant">acquisition</arg>
+								<arg name="from" type="xpath">text()</arg>
+								<arg name="to" type="constant">-</arg>
+								<arg name="timespan" type="xpath">../PRDU[@etichetta="Date OUT"]/text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">string-join(("Former Location:",text(),"- Acquisition:",../PRDU[@etichetta="Date OUT"]/text()),' ')</arg>
+							</label_generator>
+						</entity>
+						<relationship>crm:P23_transferred_title_from</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRCD[@etichetta="Repository"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRCD[@etichetta="Repository"]</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<not>
+								<if>
+									<exists>../PRDU[@etichetta="Date OUT"]/text()</exists>
+								</if>
+							</not>
+						</if>
+						<relationship>crm:P24i_changed_ownership_through</relationship>
+						<entity>
+							<type>crm:E8_Acquisition</type>
+							<instance_generator name="AcquisitionUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+								<arg name="eventType" type="constant">acquisition</arg>
+								<arg name="from" type="xpath">text()</arg>
+								<arg name="to" type="constant">-</arg>
+								<arg name="timespan" type="constant">-</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">string-join(("Former Location:",text()),' ')</arg>
+							</label_generator>
+						</entity>
+						<relationship>crm:P23_transferred_title_from</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRCD[@etichetta="Repository"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRCS[@etichetta="Precise location"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:formed_part_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRCS[@etichetta="Precise location"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">collection</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRDU[@etichetta="Date OUT"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P24i_changed_ownership_through</relationship>
+						<entity>
+							<type>crm:E8_Acquisition</type>
+							<instance_generator name="AcquisitionUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+								<arg name="eventType" type="constant">acquisition</arg>
+								<arg name="from" type="xpath">../PRCD[@etichetta="Repository"]/text()</arg>
+								<arg name="to" type="constant">-</arg>
+								<arg name="timespan" type="xpath">../PRDU[@etichetta="Date OUT"]/text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">string-join(("Former Location:",../PRCD[@etichetta="Repository"]/text(),"- Acquisition:",text()),' ')</arg>
+							</label_generator>
 						</entity>
 						<relationship>crm:P4_has_time-span</relationship>
 						<entity>
@@ -3071,16 +4727,16 @@
 
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="DIFFERENT ATTRIBUTIONS"]/RIPETIZIONE</source_node>
+				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="DIFFERENT ATTRIBUTIONS"]/RIPETIZIONE/AAT[@etichetta="Name"]</source_node>
 				<target_node>
 					<entity>
 						<type>crm:E21_Person</type>
 						<instance_generator name="URIwithType">
 							<arg name="type" type="constant">actor</arg>
-							<arg name="id" type="xpath">AAT[@etichetta="Name"]/text()</arg>
+							<arg name="id" type="xpath">text()</arg>
 						</instance_generator>
 						<label_generator name="Literal">
-							<arg name="text" type="xpath">AAT[@etichetta="Name"]/text()</arg>
+							<arg name="text" type="xpath">text()</arg>
 						</label_generator>
 						<additional>
 							<relationship>custom:has_provider</relationship>
@@ -3098,7 +4754,7 @@
 								<type>custom:Namedgraph</type>
 								<instance_generator name="MultiHashingGenerator">
 									<arg name="hierarchy" type="constant">actor</arg>
-									<arg name="object_HASHED_CONTENTS" type="xpath">AAT[@etichetta="Name"]/text()</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
 									<arg name="term_simple" type="constant">graph</arg>
 								</instance_generator>
 								<additional>
@@ -3113,19 +4769,18 @@
 								</additional>
 							</entity>
 						</additional>
-						
 						<additional>
 							<relationship>crm:P1_is_identified_by</relationship>
 							<entity>
 								<type>crm:E41_Appellation</type>
 								<instance_generator name="IdentifierURI">	
 									<arg name="subject_type" type="constant">actor</arg>
-									<arg name="subject_id" type="xpath">AAT[@etichetta="Name"]/text()</arg>
+									<arg name="subject_id" type="xpath">text()</arg>
 									<arg name="identifier_type" type="constant">appellation</arg>
-									<arg name="identifier_id" type="xpath">AAT[@etichetta="Name"]/text()</arg>
+									<arg name="identifier_id" type="xpath">text()</arg>
 								</instance_generator>
 								<label_generator name="Literal">
-									<arg name="text" type="xpath">AAT[@etichetta="Name"]/text()</arg>
+									<arg name="text" type="xpath">text()</arg>
 								</label_generator>
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
@@ -3138,61 +4793,21 @@
 								</additional>
 							</entity>
 						</additional>
-						
 					 </entity>
 				</target_node>
 			</domain>
 		
-		    <!--
 			<link> 
 				<path>
 					<source_relation>
-						<relation>AAT[@etichetta="Name"]</relation>
+						<relation>../AATP[@etichetta="Pseudonym"]</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P1_is_identified_by</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>AAT[@etichetta="Name"]</source_node>
-					<target_node>
-						<entity>
-							<type>crm:E41_Appellation</type>
-							<instance_generator name="IdentifierURI">	
-								<arg name="subject_type" type="constant">actor</arg>
-								<arg name="subject_id" type="xpath">text()</arg>
-								<arg name="identifier_type" type="constant">appellation</arg>
-								<arg name="identifier_id" type="xpath">text()</arg>
-							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>custom:noType</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300417193</arg>
-									</instance_generator>
-								</entity>
-							</additional>
-						</entity>
-					</target_node>
-				</range>
-			</link>
-			-->
-			
-			<link> 
-				<path>
-					<source_relation>
-						<relation>AATP[@etichetta="Pseudonym"]</relation>
-					</source_relation>
-					<target_relation>
-						<relationship>crm:P1_is_identified_by</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>AATP[@etichetta="Pseudonym"]</source_node>
+					<source_node>../AATP[@etichetta="Pseudonym"]</source_node>
 					<target_node>
 						<entity>
 							<type>crm:E41_Appellation</type>
@@ -4007,9 +5622,6 @@
 			<domain>
 				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRVL[@etichetta="Village"]</source_node>
 				<target_node>
-					<if>
-						<exists>../PRDU[@etichetta="Date OUT"]/text()</exists>
-					</if>
 					<entity>
 						<type>crm:E53_Place</type>
 						<instance_generator name="URIwithType">
@@ -4069,9 +5681,6 @@
 			<domain>
 				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRVC[@etichetta="Town / Municipality"]</source_node>
 				<target_node>
-					<if>
-						<exists>../PRDU[@etichetta="Date OUT"]/text()</exists>
-					</if>
 					<entity>
 						<type>crm:E53_Place</type>
 						<instance_generator name="URIwithType">
@@ -4130,9 +5739,6 @@
 			<domain>
 				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="PROVENANCE"]/PRVP[@etichetta="District"]</source_node>
 				<target_node>
-					<if>
-						<exists>../PRDU[@etichetta="Date OUT"]/text()</exists>
-					</if>
 					<entity>
 						<type>crm:E53_Place</type>
 						<instance_generator name="URIwithType">
@@ -4192,9 +5798,6 @@
 			<domain>
 				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="PROVENANCE"]/PRVR[@etichetta="Region / Federal State"]</source_node>
 				<target_node>
-					<if>
-						<exists>../PRDU[@etichetta="Date OUT"]/text()</exists>
-					</if>
 					<entity>
 						<type>crm:E53_Place</type>
 						<instance_generator name="URIwithType">
@@ -4253,9 +5856,6 @@
 			<domain>
 				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRVS[@etichetta="Country"]</source_node>
 				<target_node>
-					<if>
-						<exists>../PRDU[@etichetta="Date OUT"]/text()</exists>
-					</if>
 					<entity>
 						<type>crm:E53_Place</type>
 						<instance_generator name="URIwithType">
@@ -4314,9 +5914,6 @@
 			<domain>
 				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRCS[@etichetta="Precise location"]</source_node>
 				<target_node>
-					<if>
-						<exists>../PRDU[@etichetta="Date OUT"]/text()</exists>
-					</if>
 					<entity>
 						<type>crm:E78_Curated_Holding</type>
 						<instance_generator name="URIwithType">
@@ -4435,9 +6032,6 @@
 						<relation>../PRVL[@etichetta="Village"]</relation>
 					</source_relation>
 					<target_relation>
-						<if>
-							<exists>../PRDU[@etichetta="Date OUT"]/text()</exists>
-						</if>
 						<relationship>crm:P74_has_current_or_former_residence</relationship>
 					</target_relation>
 				</path>
@@ -4461,9 +6055,6 @@
 						<relation>../PRVC[@etichetta="Town / Municipality"]</relation>
 					</source_relation>
 					<target_relation>
-						<if>
-							<exists>../PRDU[@etichetta="Date OUT"]/text()</exists>
-						</if>
 						<relationship>crm:P74_has_current_or_former_residence</relationship>
 					</target_relation>
 				</path>
@@ -4487,9 +6078,6 @@
 						<relation>../PRVP[@etichetta="District"]</relation>
 					</source_relation>
 					<target_relation>
-						<if>
-							<exists>../PRDU[@etichetta="Date OUT"]/text()</exists>
-						</if>
 						<relationship>crm:P74_has_current_or_former_residence</relationship>
 					</target_relation>
 				</path>
@@ -4513,9 +6101,6 @@
 						<relation>../PRVR[@etichetta="Region / Federal State"]</relation>
 					</source_relation>
 					<target_relation>
-						<if>
-							<exists>../PRDU[@etichetta="Date OUT"]/text()</exists>
-						</if>
 						<relationship>crm:P74_has_current_or_former_residence</relationship>
 					</target_relation>
 				</path>
@@ -4539,9 +6124,6 @@
 						<relation>../PRVS[@etichetta="Country"]</relation>
 					</source_relation>
 					<target_relation>
-						<if>
-							<exists>../PRDU[@etichetta="Date OUT"]/text()</exists>
-						</if>
 						<relationship>crm:P74_has_current_or_former_residence</relationship>
 					</target_relation>
 				</path>

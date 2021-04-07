@@ -1370,10 +1370,6 @@
 					</target_node>
 				</range>
 			</link>
-
-
-
-
 			
 			<link> 
 				<path>
@@ -1979,6 +1975,11 @@
 								<arg name="to" type="xpath">../marc:subfield[@code="a"]/text()</arg>
 								<arg name="timespan" type="constant">-</arg>
 							</instance_generator>
+							<label_generator name="AcquisitionCurrentLocation">
+								<arg name="To" type="xpath">string-join((../marc:subfield[@code="a"]/text(),"-"),' ')</arg>
+								<arg name="Type" type="xpath">string-join((text(),"-"),' ')</arg>
+								<arg name="Date" type="xpath">string-join((../marc:subfield[@code="l"]/text(),"-"),' ')</arg>
+							</label_generator>
 						</entity>
 						<relationship>crm:P2_has_type</relationship>
 					</target_relation>
@@ -2918,6 +2919,11 @@
 								<arg name="to" type="constant">-</arg>
 								<arg name="timespan" type="constant">-</arg>
 							</instance_generator>
+							<label_generator name="AcquisitionFormerLocation">
+								<arg name="From" type="xpath">text()</arg>
+								<arg name="Type" type="xpath">string-join((../marc:subfield[@code="j"]/text(),"-"),' ')</arg>
+								<arg name="Date" type="xpath">string-join((../marc:subfield[@code="l"]/text(),"-"),' ')</arg>
+							</label_generator>
 						</entity>
 						<relationship>crm:P23_transferred_title_from</relationship>
 					</target_relation>
@@ -3322,6 +3328,11 @@
 								<arg name="to" type="constant">-</arg>
 								<arg name="timespan" type="constant">-</arg>
 							</instance_generator>
+							<label_generator name="AcquisitionFormerLocation">
+								<arg name="From" type="xpath">text()</arg>
+								<arg name="Type" type="xpath">string-join((../marc:subfield[@code="j"]/text(),"-"),' ')</arg>
+								<arg name="Date" type="xpath">string-join((../marc:subfield[@code="l"]/text(),"-"),' ')</arg>
+							</label_generator>
 						</entity>
 						<relationship>crm:P23_transferred_title_from</relationship>
 					</target_relation>
@@ -3338,7 +3349,8 @@
 						</entity>
 					</target_node>
 				</range>
-			</link>		
+			</link>
+			
 			
 			<link> 
 				<path>
@@ -3757,6 +3769,11 @@
 								<arg name="to" type="constant">-</arg>
 								<arg name="timespan" type="constant">-</arg>
 							</instance_generator>
+							<label_generator name="AcquisitionFormerLocation">
+								<arg name="From" type="xpath">text()</arg>
+								<arg name="Type" type="xpath">string-join((../marc:subfield[@code="j"]/text(),"-"),' ')</arg>
+								<arg name="Date" type="xpath">string-join((../marc:subfield[@code="l"]/text(),"-"),' ')</arg>
+							</label_generator>
 						</entity>
 						<relationship>crm:P23_transferred_title_from</relationship>
 					</target_relation>
@@ -3773,7 +3790,8 @@
 						</entity>
 					</target_node>
 				</range>
-			</link>	
+			</link>
+			
 			
 			<link> 
 				<path>
@@ -4189,6 +4207,11 @@
 								<arg name="to" type="constant">-</arg>
 								<arg name="timespan" type="constant">-</arg>
 							</instance_generator>
+							<label_generator name="AcquisitionFormerLocation">
+								<arg name="From" type="xpath">text()</arg>
+								<arg name="Type" type="xpath">string-join((../marc:subfield[@code="j"]/text(),"-"),' ')</arg>
+								<arg name="Date" type="xpath">string-join((../marc:subfield[@code="l"]/text(),"-"),' ')</arg>
+							</label_generator>
 						</entity>
 						<relationship>crm:P23_transferred_title_from</relationship>
 					</target_relation>
@@ -4205,7 +4228,8 @@
 						</entity>
 					</target_node>
 				</range>
-			</link>	
+			</link>
+			
 			
 			<link> 
 				<path>
@@ -5499,6 +5523,11 @@
 								<arg name="to" type="constant">-</arg>
 								<arg name="timespan" type="constant">-</arg>
 							</instance_generator>
+							<label_generator name="AcquisitionFormerLocation">
+								<arg name="From" type="xpath">text()</arg>
+								<arg name="Type" type="xpath">string-join((../marc:subfield[@code="j"]/text(),"-"),' ')</arg>
+								<arg name="Date" type="xpath">string-join((../marc:subfield[@code="l"]/text(),"-"),' ')</arg>
+							</label_generator>
 						</entity>
 						<relationship>crm:P23_transferred_title_from</relationship>
 					</target_relation>

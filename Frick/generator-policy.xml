@@ -57,7 +57,12 @@
 <generator name="EventConcatenated">
 	<pattern>Actor: {Actor}, Date: {Date}, Type: {Type}</pattern>
 </generator>
-
+<generator name="AcquisitionFormerLocation">
+	<pattern>Former Location: {From} Acquisition: {Type} {Date}</pattern>
+</generator>
+<generator name="AcquisitionCurrentLocation">
+	<pattern>Location: {To} Acquisition: {Type} {Date}</pattern>
+</generator>
 <generator name="IdentifierURI" prefix="prefix" shorten="yes">
 	<pattern>{subject_type}/{subject_id}/{identifier_type}/{identifier_id}</pattern>
 </generator>
