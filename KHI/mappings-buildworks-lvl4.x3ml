@@ -1848,6 +1848,10 @@
 								<arg name="id" type="xpath">../a3000/text()</arg>
 								<arg name="event_type" type="constant">attribute_assignment</arg>
 							</instance_generator>
+							<label_generator name="Attribution">
+								<arg name="Author" type="xpath">../a3100/text()</arg>
+								<arg name="Reason" type="xpath">text()</arg>
+							</label_generator>
 							<additional>
 								<relationship>crm:P141_assigned</relationship>
 								<entity>
@@ -1995,6 +1999,10 @@
 								<arg name="id" type="xpath">../a3600/text()</arg>
 								<arg name="event_type" type="constant">attribute_assignment</arg>
 							</instance_generator>
+							<label_generator name="Attribution">
+								<arg name="Author" type="xpath">../a3600/text()</arg>
+								<arg name="Reason" type="xpath">text()</arg>
+							</label_generator>
 							<additional>
 								<relationship>crm:P141_assigned</relationship>
 								<entity>
@@ -2136,8 +2144,12 @@
 							<instance_generator name="PropertyTypeUri">
 								<arg name="propertyType" type="constant">attribute_assignment</arg>
 								<arg name="domain" type="xpath">../a5003/text()</arg>
-								<arg name="range" type="xpath">a3000/text()</arg>
+								<arg name="range" type="xpath">a3090/text()</arg>
 							</instance_generator>
+							<label_generator name="Attribution">
+								<arg name="Author" type="xpath">a3090/text()</arg>
+								<arg name="Reason" type="xpath">text()</arg>
+							</label_generator>
 							<additional>
 								<relationship>crm:P141_assigned</relationship>
 								<entity>
@@ -2145,7 +2157,7 @@
 									<instance_generator name="PropertyTypeUri">
 										<arg name="propertyType" type="constant">was_influenced_by</arg>
 										<arg name="domain" type="xpath">../a5003/text()</arg>
-										<arg name="range" type="xpath">a3000/text()</arg>
+										<arg name="range" type="xpath">a3090/text()</arg>
 									</instance_generator>
 								</entity>
 							</additional>

@@ -65,6 +65,11 @@
 <generator name="AcquisitionFormerLocation">
 	<pattern>Former Location: {From} Acquisition: {Type} {Date}</pattern>
 </generator>
+
+<generator name="Attribution">
+	<pattern>{Author} | Reason: {Reason}</pattern>
+</generator>
+
 <generator name="AcquisitionCurrentLocation">
 	<pattern>Location: {To} Acquisition: {Type} {Date}</pattern>
 </generator>

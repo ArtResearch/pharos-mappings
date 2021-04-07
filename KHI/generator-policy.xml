@@ -67,6 +67,11 @@
 <generator name="AcquisitionCurrentLocation">
 	<pattern>Location: {To} Acquisition: {Type} {Date}</pattern>
 </generator>
+
+<generator name="Attribution">
+	<pattern>{Author} | Reason: {Reason}</pattern>
+</generator>
+
 <generator name="IdentifierURI" prefix="prefix" shorten="yes">
 	<pattern>{subject_type}/{subject_id}/{identifier_type}/{identifier_id}</pattern>
 </generator>

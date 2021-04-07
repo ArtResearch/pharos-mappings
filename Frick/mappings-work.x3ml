@@ -933,67 +933,6 @@
 					</target_node>
 				</range>
 			</link>
-			<!--
-			<link> 
-				<path>
-					<source_relation>
-						<relation>marc:datafield[@tag="590" and @ind1="5"]/marc:subfield[@code="a"]</relation>
-					</source_relation>
-					<target_relation>
-						<relationship>crm:P108i_was_produced_by</relationship>
-						<entity>
-							<type>crm:E12_Production</type>
-							<instance_generator name="EventUri">
-								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
-								<arg name="eventType" type="constant">production</arg>
-							</instance_generator>
-						</entity>
-						<relationship>crm:P140i_was_attributed_by</relationship>	
-						<entity>
-							<type>crm:E13_Attribute_Assignment</type>
-							<instance_generator name="ComplexEventUri">
-								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
-								<arg name="id" type="xpath">text()</arg>
-								<arg name="eventType" type="constant">attribute_assignment</arg>
-							</instance_generator>
-						</entity>
-						<relationship>crm:P16_used_specific_object</relationship>
-						<entity>
-							<type>crm:E73_Information_Object</type>
-							<instance_generator name="InformationObjectUri">
-								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
-								<arg name="type" type="constant">attribution_info</arg>
-								<arg name="id" type="xpath">text()</arg>
-							</instance_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>custom:noType</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300056109</arg>
-									</instance_generator>
-								</entity>
-							</additional>
-						</entity>	
-						<relationship>crm:P190_has_symbolic_content</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>marc:datafield[@tag="590" and @ind1="5"]/marc:subfield[@code="a"]</source_node>
-					<target_node>
-						<entity>
-							<type>rdfs:Literal</type>
-							<instance_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</instance_generator>
-						</entity>
-					</target_node>
-				</range>
-			</link>
-			-->
 			
 			<link> 
 				<path>

@@ -1387,6 +1387,10 @@
 								<arg name="id" type="xpath">../AUTN[@etichetta="Artist's name"]/text()</arg>
 								<arg name="event_type" type="constant">attribute_assignment</arg>
 							</instance_generator>
+							<label_generator name="Attribution">
+								<arg name="Author" type="xpath">../AUTN[@etichetta="Artist's name"]/text()</arg>
+								<arg name="Reason" type="xpath">text()</arg>
+							</label_generator>
 							<additional>
 								<relationship>crm:P141_assigned</relationship>
 								<entity>
@@ -1440,6 +1444,10 @@
 								<arg name="id" type="xpath">text()</arg>
 								<arg name="event_type" type="constant">attribute_assignment</arg>
 							</instance_generator>
+							<label_generator name="Attribution">
+								<arg name="Author" type="xpath">text()</arg>
+								<arg name="Reason" type="xpath">../AATM[@etichetta="Reason for attribution"]/text()</arg>
+							</label_generator>
 						</entity>
 						<relationship>crm:P141_assigned</relationship>
 						<entity>
@@ -3188,6 +3196,10 @@
 								<arg name="id" type="xpath">../AUTN[@etichetta="Artist's name"]/text()</arg>
 								<arg name="event_type" type="constant">attribute_assignment</arg>
 							</instance_generator>
+							<label_generator name="Attribution">
+								<arg name="Author" type="xpath">../AUTN[@etichetta="Artist's name"]/text()</arg>
+								<arg name="Reason" type="xpath">text()</arg>
+							</label_generator>
 							<additional>
 								<relationship>crm:P141_assigned</relationship>
 								<entity>
@@ -3241,6 +3253,10 @@
 								<arg name="id" type="xpath">text()</arg>
 								<arg name="event_type" type="constant">attribute_assignment</arg>
 							</instance_generator>
+							<label_generator name="Attribution">
+								<arg name="Author" type="xpath">text()</arg>
+								<arg name="Reason" type="xpath">../AATM[@etichetta="Reason for attribution"]/text()</arg>
+							</label_generator>
 						</entity>
 						<relationship>crm:P141_assigned</relationship>
 						<entity>

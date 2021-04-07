@@ -320,30 +320,6 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="OBJECT"]/SGTI[@etichetta="Subject"]</relation>
-					</source_relation>
-					<target_relation>
-						<relationship>fr:Work_shows_Subject</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>PARAGRAFO[@etichetta="OBJECT"]/SGTI[@etichetta="Subject"]</source_node>
-					<target_node>
-						<entity>
-							<type>fc:subject</type>
-							<instance_generator name="VisualItemUri">
-								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]</arg>
-							</instance_generator>
-						</entity>
-					</target_node>
-				</range>
-			</link>
-		
-			
-			<link>
-				<path>
-					<source_relation>
 						<relation>ALLEGATI[@etichetta="Attached documents"]/FOTO</relation>
 					</source_relation>
 					<target_relation>
