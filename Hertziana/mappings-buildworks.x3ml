@@ -1468,50 +1468,6 @@
 				</range>
 			</link>
 			
-			<!--
-			<link>
-				<path>
-					<source_relation>
-						<relation>a8150</relation>
-					</source_relation>
-					<target_relation>
-						<relationship>crm:P67i_is_referred_to_by</relationship>
-						<entity>
-							<type>crm:E73_Information_Object</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">bibliography</arg>
-								<arg name="id" type="xpath">text()</arg>
-							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>custom:noType</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300435419</arg>
-									</instance_generator>
-								</entity>
-							</additional>
-						</entity>
-						<relationship>crm:P190_has_symbolic_content</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>a8150</source_node>
-					<target_node>
-						<entity>
-							<type>rdfs:Literal</type>
-							<instance_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</instance_generator>
-						</entity>
-					</target_node>
-				</range>
-			</link>
-			-->
-			
 			<link>
 				<path>
 					<source_relation>
@@ -1637,9 +1593,6 @@
 										<arg name="type" type="constant">bibliography</arg>
 										<arg name="id" type="xpath">../text()</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="xpath">../text()</arg>
-									</label_generator>
 								</entity>
 							</additional>	
 						</entity>
