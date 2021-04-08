@@ -34,6 +34,7 @@
     <http://www.researchspace.org/resource/system/fields/selectPattern> _:t34906007;
     rdfs:label "Material Description"@en;
     prov:wasAttributedTo User:admin;
+    <http://www.researchspace.org/resource/system/fields/order> "760";
     <http://www.researchspace.org/resource/system/fields/insertPattern> _:t34906008;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object .
   

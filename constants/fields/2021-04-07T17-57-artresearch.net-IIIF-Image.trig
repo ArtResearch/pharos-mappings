@@ -42,6 +42,7 @@
     rdfs:label "IIIF Image"@en;
     prov:wasAttributedTo User:admin;
     prov:generatedAtTime "2021-03-02T12:01:25.631Z"^^xsd:dateTime;
+    <http://www.researchspace.org/resource/system/fields/order> "20000";
     <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/itatti>;
     <http://www.researchspace.org/resource/system/fields/selectPattern> _:t34905995;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;

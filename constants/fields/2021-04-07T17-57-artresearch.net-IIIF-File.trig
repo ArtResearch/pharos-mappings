@@ -29,6 +29,7 @@
     rdfs:label "IIIF File"@en;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     prov:generatedAtTime "2021-03-02T12:00:38.086Z"^^xsd:dateTime;
+    <http://www.researchspace.org/resource/system/fields/order> "20100";
     <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/itatti>;
     <http://www.researchspace.org/resource/system/fields/selectPattern> _:t34905990;
     <http://www.researchspace.org/resource/system/fields/insertPattern> _:t34905991;
