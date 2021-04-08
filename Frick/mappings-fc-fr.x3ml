@@ -88,7 +88,7 @@
 					<source_node>marc:datafield[@tag="260"]/marc:subfield[@code="c1"]</source_node>
 					<target_node>
 						<entity>
-							<type>rdfs:Literal</type>
+							<type>xsd:date</type>
 							<instance_generator name="Literal">
 								<arg name="text" type="xpath">text()</arg>
 							</instance_generator>
@@ -110,7 +110,7 @@
 					<source_node>marc:datafield[@tag="260"]/marc:subfield[@code="c2"]</source_node>
 					<target_node>
 						<entity>
-							<type>rdfs:Literal</type>
+							<type>xsd:date</type>
 							<instance_generator name="Literal">
 								<arg name="text" type="xpath">text()</arg>
 							</instance_generator>
@@ -132,7 +132,7 @@
 					<source_node>marc:datafield[@tag="260"]/marc:subfield[@code="c"]</source_node>
 					<target_node>
 						<entity>
-							<type>rdfs:Literal</type>
+							<type>xsd:date</type>
 							<instance_generator name="Literal">
 								<arg name="text" type="xpath">text()</arg>
 							</instance_generator>
@@ -612,7 +612,7 @@
 								<arg name="id" type="xpath">@person</arg>
 							</instance_generator>
 							<additional>
-								<relationship>fr:Photographer_photographed_Photo</relationship>
+								<relationship>fr:Photographer_created_Photo</relationship>
 								<entity>
 									<type>fc:photo</type>
 									<instance_generator name="FrickPhotowithTypeAndId">
@@ -683,7 +683,7 @@
 								<arg name="id" type="xpath">@person</arg>
 							</instance_generator>
 							<additional>
-								<relationship>fr:Photographer_photographed_Photo</relationship>
+								<relationship>fr:Photographer_created_Photo</relationship>
 								<entity>
 									<type>fc:photo</type>
 									<instance_generator name="FrickPhotowithTypeAndId">
@@ -758,7 +758,7 @@
 								<arg name="id" type="xpath">@person</arg>
 							</instance_generator>
 							<additional>
-								<relationship>fr:Photographer_photographed_Photo</relationship>
+								<relationship>fr:Photographer_created_Photo</relationship>
 								<entity>
 									<type>fc:photo</type>
 									<instance_generator name="FrickPhotowithTypeAndId">
@@ -829,7 +829,7 @@
 								<arg name="id" type="xpath">@person</arg>
 							</instance_generator>
 							<additional>
-								<relationship>fr:Photographer_photographed_Photo</relationship>
+								<relationship>fr:Photographer_created_Photo</relationship>
 								<entity>
 									<type>fc:photo</type>
 									<instance_generator name="FrickPhotowithTypeAndId">
@@ -903,7 +903,7 @@
 								<arg name="id" type="xpath">@person</arg>
 							</instance_generator>
 							<additional>
-								<relationship>fr:Photographer_photographed_Photo</relationship>
+								<relationship>fr:Photographer_created_Photo</relationship>
 								<entity>
 									<type>fc:photo</type>
 									<instance_generator name="FrickPhotowithTypeAndId">
@@ -940,16 +940,38 @@
 						<relation>marc:subfield[@code="d"]/@birth</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>fr:Person_has_Date_of_Birth</relationship>
+						<relationship>fr:Artist_has_Date_of_Birth</relationship>
 					</target_relation>
 				</path>
 				<range>
 					<source_node>marc:subfield[@code="d"]/@birth</source_node>
 					<target_node>
 						<entity>
-							<type>rdfs:Literal</type>
+							<type>xsd:date</type>
 							<instance_generator name="Literal">
 								<arg name="text" type="xpath">../@birth</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>marc:subfield[@code="d"]/@death</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>fr:Artist_has_Date_of_Death</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>marc:subfield[@code="d"]/@death</source_node>
+					<target_node>
+						<entity>
+							<type>xsd:date</type>
+							<instance_generator name="Literal">
+								<arg name="text" type="xpath">../@death</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -978,16 +1000,38 @@
 						<relation>marc:subfield[@code="d"]/@birth</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>fr:Person_has_Date_of_Birth</relationship>
+						<relationship>fr:Artist_has_Date_of_Birth</relationship>
 					</target_relation>
 				</path>
 				<range>
 					<source_node>marc:subfield[@code="d"]/@birth</source_node>
 					<target_node>
 						<entity>
-							<type>rdfs:Literal</type>
+							<type>xsd:date</type>
 							<instance_generator name="Literal">
 								<arg name="text" type="xpath">../@birth</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>marc:subfield[@code="d"]/@death</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>fr:Artist_has_Date_of_Death</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>marc:subfield[@code="d"]/@death</source_node>
+					<target_node>
+						<entity>
+							<type>xsd:date</type>
+							<instance_generator name="Literal">
+								<arg name="text" type="xpath">../@death</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -1016,14 +1060,14 @@
 						<relation>marc:subfield[@code="d"]/@birth</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>fr:Person_has_Date_of_Birth</relationship>
+						<relationship>fr:Artist_has_Date_of_Birth</relationship>
 					</target_relation>
 				</path>
 				<range>
 					<source_node>marc:subfield[@code="d"]/@birth</source_node>
 					<target_node>
 						<entity>
-							<type>rdfs:Literal</type>
+							<type>xsd:date</type>
 							<instance_generator name="Literal">
 								<arg name="text" type="xpath">../@birth</arg>
 							</instance_generator>
@@ -1038,14 +1082,14 @@
 						<relation>marc:subfield[@code="d"]/@death</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>fr:Person_has_Date_of_Death</relationship>
+						<relationship>fr:Artist_has_Date_of_Death</relationship>
 					</target_relation>
 				</path>
 				<range>
 					<source_node>marc:subfield[@code="d"]/@death</source_node>
 					<target_node>
 						<entity>
-							<type>rdfs:Literal</type>
+							<type>xsd:date</type>
 							<instance_generator name="Literal">
 								<arg name="text" type="xpath">../@death</arg>
 							</instance_generator>

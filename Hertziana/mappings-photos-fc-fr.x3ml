@@ -63,7 +63,7 @@
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
 							<additional>
-								<relationship>fr:Photographer_photographed_Photo</relationship>
+								<relationship>fr:Photographer_created_Photo</relationship>
 								<entity>
 									<type>fc:photo</type>
 									<instance_generator name="URIwithTypeAndId">
@@ -90,7 +90,7 @@
 					<source_node>a8494</source_node>
 					<target_node>
 						<entity>
-							<type>rdfs:Literal</type>
+							<type>xsd:date</type>
 							<instance_generator name="Literal">
 								<arg name="text" type="xpath">text()</arg>
 							</instance_generator>
@@ -170,7 +170,7 @@
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
 							<additional>
-								<relationship>fr:Photographer_photographed_Photo</relationship>
+								<relationship>fr:Photographer_created_Photo</relationship>
 								<entity>
 									<type>fc:photo</type>
 									<instance_generator name="URIwithTypeAndId">
@@ -197,7 +197,7 @@
 					<source_node>a8494</source_node>
 					<target_node>
 						<entity>
-							<type>rdfs:Literal</type>
+							<type>xsd:date</type>
 							<instance_generator name="Literal">
 								<arg name="text" type="xpath">text()</arg>
 							</instance_generator>
@@ -277,7 +277,7 @@
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
 							<additional>
-								<relationship>fr:Photographer_photographed_Photo</relationship>
+								<relationship>fr:Photographer_created_Photo</relationship>
 								<entity>
 									<type>fc:photo</type>
 									<instance_generator name="URIwithTypeAndId">
@@ -304,7 +304,7 @@
 					<source_node>a8494</source_node>
 					<target_node>
 						<entity>
-							<type>rdfs:Literal</type>
+							<type>xsd:date</type>
 							<instance_generator name="Literal">
 								<arg name="text" type="xpath">text()</arg>
 							</instance_generator>
@@ -384,7 +384,7 @@
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
 							<additional>
-								<relationship>fr:Photographer_photographed_Photo</relationship>
+								<relationship>fr:Photographer_created_Photo</relationship>
 								<entity>
 									<type>fc:photo</type>
 									<instance_generator name="URIwithTypeAndId">
@@ -411,7 +411,7 @@
 					<source_node>a8494</source_node>
 					<target_node>
 						<entity>
-							<type>rdfs:Literal</type>
+							<type>xsd:date</type>
 							<instance_generator name="Literal">
 								<arg name="text" type="xpath">text()</arg>
 							</instance_generator>

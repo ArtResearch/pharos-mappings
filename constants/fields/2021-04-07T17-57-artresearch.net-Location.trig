@@ -1,0 +1,66 @@
+@prefix : <http://www.researchspace.org/resource/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix frbroo: <http://iflastandards.info/ns/fr/frbr/frbroo/> .
+@prefix crminfluence: <http://www.cidoc-crm.org/cidoc-crm/influence/> .
+@prefix crmarchaeo: <http://www.cidoc-crm.org/cidoc-crm/CRMarchaeo/> .
+@prefix rshelp: <http://researchspace.org/help/> .
+@prefix ontodia: <http://ontodia.org/schema/v1#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rso: <http://www.researchspace.org/ontology/> .
+@prefix sp: <http://spinrdf.org/sp#> .
+@prefix Help: <http://help.researchspace.org/resource/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix Admin: <http://www.researchspace.org/resource/admin/> .
+@prefix crmgeo: <http://www.ics.forth.gr/isl/CRMgeo/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix crmba: <http://www.cidoc-crm.org/cidoc-crm/CRMba/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMdig/> .
+@prefix User: <http://www.researchspace.org/resource/user/> .
+@prefix bds: <http://www.bigdata.com/rdf/search#> .
+@prefix Platform: <http://www.researchspace.org/resource/system/> .
+
+<https://pharos.artresearch.net/fieldDefinition/93/context> {
+  <https://pharos.artresearch.net/fieldDefinition/93> a <http://www.w3.org/ns/ldp#Resource>,
+      <http://www.researchspace.org/resource/system/fields/Field>, prov:Entity;
+    <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
+    <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/frick>,
+      <https://pharos.artresearch.net/category/photo>, <https://pharos.artresearch.net/category/khi>,
+      <https://pharos.artresearch.net/category/collection>, <https://pharos.artresearch.net/category/institution>,
+      <https://pharos.artresearch.net/resource/fc/work>, <https://pharos.artresearch.net/category/itatti>,
+      <https://pharos.artresearch.net/category/hertziana>, <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>;
+    <http://www.researchspace.org/resource/system/fields/domain> crm:E78_Curated_Holding,
+      crm:E22_Man-Made_Object, crm:E40_Group;
+    rdfs:label "Location"@en;
+    <http://www.researchspace.org/resource/system/fields/order> "650";
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t36751843;
+    prov:generatedAtTime "2021-03-30T11:40:53.264Z"^^xsd:dateTime;
+    rdfs:comment "The current location of the documented object.";
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t36751844;
+    prov:wasAttributedTo User:admin;
+    <http://www.researchspace.org/resource/system/fields/range> crm:E53_Place .
+  
+  _:t36751844 a sp:Query;
+    sp:text """SELECT ?value ?provider ?providerLabel WHERE 
+{ 
+	graph ?graph 
+  	{
+  		$subject crm:P55_has_current_location ?value.
+  	}
+	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
+	?provider rdfs:label ?providerLabel.
+}""" .
+  
+  _:t36751843 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:node1f2jqhtfcx74 <http://www.w3.org/ns/ldp#contains> <https://pharos.artresearch.net/fieldDefinition/93> .
+}
+
+{
+  _:node1f2jqhtfcx74 a <http://www.w3.org/ns/ldp#Container>, <http://www.w3.org/ns/ldp#Resource>,
+      prov:Entity .
+}

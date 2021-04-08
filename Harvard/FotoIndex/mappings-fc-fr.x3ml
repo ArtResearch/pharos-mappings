@@ -121,7 +121,7 @@
 					<source_node>year_start</source_node>
 					<target_node>
 						<entity>
-							<type>rdfs:Literal</type>
+							<type>xsd:date</type>
 							<instance_generator name="Literal">
 								<arg name="text" type="xpath">text()</arg>
 							</instance_generator>
@@ -143,7 +143,7 @@
 					<source_node>year_end</source_node>
 					<target_node>
 						<entity>
-							<type>rdfs:Literal</type>
+							<type>xsd:date</type>
 							<instance_generator name="Literal">
 								<arg name="text" type="xpath">text()</arg>
 							</instance_generator>

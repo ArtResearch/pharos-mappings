@@ -1,0 +1,65 @@
+@prefix : <http://www.researchspace.org/resource/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix frbroo: <http://iflastandards.info/ns/fr/frbr/frbroo/> .
+@prefix crminfluence: <http://www.cidoc-crm.org/cidoc-crm/influence/> .
+@prefix crmarchaeo: <http://www.cidoc-crm.org/cidoc-crm/CRMarchaeo/> .
+@prefix rshelp: <http://researchspace.org/help/> .
+@prefix ontodia: <http://ontodia.org/schema/v1#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rso: <http://www.researchspace.org/ontology/> .
+@prefix sp: <http://spinrdf.org/sp#> .
+@prefix Help: <http://help.researchspace.org/resource/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix Admin: <http://www.researchspace.org/resource/admin/> .
+@prefix crmgeo: <http://www.ics.forth.gr/isl/CRMgeo/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix crmba: <http://www.cidoc-crm.org/cidoc-crm/CRMba/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMdig/> .
+@prefix User: <http://www.researchspace.org/resource/user/> .
+@prefix bds: <http://www.bigdata.com/rdf/search#> .
+@prefix Platform: <http://www.researchspace.org/resource/system/> .
+
+<https://pharos.artresearch.net/fieldDefinition/56/context> {
+  <https://pharos.artresearch.net/fieldDefinition/56> a <http://www.w3.org/ns/ldp#Resource>,
+      prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
+    rdfs:comment "This field is used to indicate the kind of transaction by which a period of ownership was established over the documented object.";
+    <http://www.researchspace.org/resource/system/fields/order> "820";
+    rdfs:label "Acquisition Type"@en;
+    <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/zeri>,
+      <https://pharos.artresearch.net/category/work>, <http://www.researchspace.org/ontologies/platform/FieldCategories/other_details>,
+      <https://pharos.artresearch.net/category/khi>, <https://pharos.artresearch.net/category/photo>,
+      <https://pharos.artresearch.net/category/frick>;
+    prov:wasAttributedTo User:admin;
+    <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
+    <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
+    <http://www.researchspace.org/resource/system/fields/range> crm:E55_Type;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t36751124;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t36751123;
+    prov:generatedAtTime "2021-03-18T13:48:54.085Z"^^xsd:dateTime .
+  
+  _:t36751123 a sp:Query;
+    sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
+{ 
+	graph ?graph 
+  	{
+		?subject crm:P24i_changed_ownership_through ?acquisition.
+		?acquisition crm:P2_has_type  ?value
+  	}
+	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
+	?provider rdfs:label ?providerLabel.
+}""" .
+  
+  _:t36751124 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:node1f2jqhtfcx34 <http://www.w3.org/ns/ldp#contains> <https://pharos.artresearch.net/fieldDefinition/56> .
+}
+
+{
+  _:node1f2jqhtfcx34 a <http://www.w3.org/ns/ldp#Container>, <http://www.w3.org/ns/ldp#Resource>,
+      prov:Entity .
+}

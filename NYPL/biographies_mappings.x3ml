@@ -14,7 +14,7 @@
 				<target_node>
                     <entity>
 						<type>crm:E40_Legal_Body</type>
-						<instance_generator name="URIwithType">
+						<instance_generator name="URIwithTypeAndId">
 							<arg name="type" type="constant">legal_body</arg>
 							<arg name="id" type="xpath">TermID/text()</arg>
 						</instance_generator>

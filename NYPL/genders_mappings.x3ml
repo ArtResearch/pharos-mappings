@@ -14,7 +14,7 @@
 				<target_node>
                     <entity>
 						<type>crm:E55_Type</type>
-						<instance_generator name="URIwithType">
+						<instance_generator name="URIwithTypeAndId">
 							<arg name="type" type="constant">type</arg>
 							<arg name="id" type="xpath">TermID/text()</arg>
 						</instance_generator>
@@ -24,11 +24,14 @@
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>custom:noType</type>
+								<type>crm:E55_Type</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">type</arg>
-									<arg name="id" type="constant">Gender</arg>
+									<arg name="id" type="constant">gender</arg>
 								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">Gender</arg>
+								</label_generator>
 							</entity>
 						</additional>
 					</entity>

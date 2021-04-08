@@ -15,7 +15,7 @@
 				<target_node>
                     <entity>
 						<type>crm:E39_Actor</type>
-						<instance_generator name="URIwithType">
+						<instance_generator name="URIwithTypeAndId">
 							<arg name="type" type="constant">actor</arg>
 							<arg name="id" type="xpath">ConstituentID/text()</arg>
 						</instance_generator>
@@ -50,7 +50,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E55_Type</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="constant">biography</arg>
 							</instance_generator>
@@ -85,7 +85,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E40_Legal_Body</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">legal_body</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>

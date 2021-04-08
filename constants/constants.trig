@@ -131,8 +131,8 @@
                     "inscriptions" .
 }
 
-<https://pharos.artresearch.net/resource/frick/type/S18DPYNR/graph> {
-    <https://pharos.artresearch.net/resource/frick/type/S18DPYNR>
+<https://pharos.artresearch.net/resource/frick/type/photo_card/graph> {
+    <https://pharos.artresearch.net/resource/frick/type/photo_card>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Photo Card" .
@@ -497,8 +497,8 @@
                     "Representation Id" .
 }
 
-<https://pharos.artresearch.net/resource/itatti/type/S18DPYNR/graph> {
-        <https://pharos.artresearch.net/resource/itatti/type/S18DPYNR>
+<https://pharos.artresearch.net/resource/itatti/type/photo_card/graph> {
+        <https://pharos.artresearch.net/resource/itatti/type/photo_card>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Photo Card" .
@@ -1316,4 +1316,25 @@
             a       <https://pharos.artresearch.net/custom/E39_Actor> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Fondazione Federico Zeri - Università di Bologna" .
+}
+
+<https://pharos.artresearch.net/resource/hertziana/type/photo_card/graph> {
+    <https://pharos.artresearch.net/resource/hertziana/type/photo_card>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Photo Card" .
+}
+
+<https://pharos.artresearch.net/resource/marburg/type/photo_card/graph> {
+    <https://pharos.artresearch.net/resource/marburg/type/photo_card>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Photo Card" .
+}
+
+<https://pharos.artresearch.net/resource/khi/type/photo_card/graph> {
+    <https://pharos.artresearch.net/resource/khi/type/photo_card>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Photo Card" .
 }

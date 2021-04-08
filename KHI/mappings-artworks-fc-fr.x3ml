@@ -405,7 +405,7 @@
 					<source_node>a5060/a5064</source_node>
 					<target_node>
 						<entity>
-							<type>rdfs:Literal</type>
+							<type>xsd:date</type>
 							<instance_generator name="Literal">
 								<arg name="text" type="xpath">text()</arg>
 							</instance_generator>
@@ -981,7 +981,7 @@
 					<source_node>a5060/a5064</source_node>
 					<target_node>
 						<entity>
-							<type>rdfs:Literal</type>
+							<type>xsd:date</type>
 							<instance_generator name="Literal">
 								<arg name="text" type="xpath">text()</arg>
 							</instance_generator>
@@ -1558,7 +1558,7 @@
 					<source_node>a5060/a5064</source_node>
 					<target_node>
 						<entity>
-							<type>rdfs:Literal</type>
+							<type>xsd:date</type>
 							<instance_generator name="Literal">
 								<arg name="text" type="xpath">text()</arg>
 							</instance_generator>
@@ -2134,7 +2134,7 @@
 					<source_node>a5060/a5064</source_node>
 					<target_node>
 						<entity>
-							<type>rdfs:Literal</type>
+							<type>xsd:date</type>
 							<instance_generator name="Literal">
 								<arg name="text" type="xpath">text()</arg>
 							</instance_generator>

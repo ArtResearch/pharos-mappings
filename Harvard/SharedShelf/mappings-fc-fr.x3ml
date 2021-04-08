@@ -156,7 +156,7 @@
 					<source_node>Dates/Date/@startDate</source_node>
 					<target_node>
 						<entity>
-							<type>rdfs:Literal</type>
+							<type>xsd:date</type>
 							<instance_generator name="Literal">
 								<arg name="text" type="xpath">../@startDate</arg>
 							</instance_generator>
@@ -178,7 +178,7 @@
 					<source_node>Dates/Date/@endDate</source_node>
 					<target_node>
 						<entity>
-							<type>rdfs:Literal</type>
+							<type>xsd:date</type>
 							<instance_generator name="Literal">
 								<arg name="text" type="xpath">../@endDate</arg>
 							</instance_generator>
@@ -200,7 +200,7 @@
 					<source_node>Dates/Display</source_node>
 					<target_node>
 						<entity>
-							<type>rdfs:Literal</type>
+							<type>xsd:date</type>
 							<instance_generator name="Literal">
 								<arg name="text" type="xpath">text()</arg>
 							</instance_generator>
@@ -493,7 +493,7 @@
 								<arg name="id" type="xpath">linkedField/@id</arg>
 							</instance_generator>
 							<additional>
-								<relationship>fr:Photographer_photographed_Photo</relationship>
+								<relationship>fr:Photographer_created_Photo</relationship>
 								<entity>
 									<type>fc:photo</type>
 									<instance_generator name="URIwithTypeAndId">
@@ -520,7 +520,7 @@
 					<source_node>../field_string[@label="Image Start Year"]</source_node>
 					<target_node>
 						<entity>
-							<type>rdfs:Literal</type>
+							<type>xsd:date</type>
 							<instance_generator name="Literal">
 								<arg name="text" type="xpath">@value</arg>
 							</instance_generator>
@@ -542,7 +542,7 @@
 					<source_node>../field_string[@label="Image End Year"]</source_node>
 					<target_node>
 						<entity>
-							<type>rdfs:Literal</type>
+							<type>xsd:date</type>
 							<instance_generator name="Literal">
 								<arg name="text" type="xpath">@value</arg>
 							</instance_generator>
@@ -648,7 +648,7 @@
 								<arg name="id" type="xpath">linkedField/@id</arg>
 							</instance_generator>
 							<additional>
-								<relationship>fr:Photographer_photographed_Photo</relationship>
+								<relationship>fr:Photographer_created_Photo</relationship>
 								<entity>
 									<type>fc:photo</type>
 									<instance_generator name="URIwithTypeAndId">
@@ -675,7 +675,7 @@
 					<source_node>../field_string[@label="Image Start Year"]</source_node>
 					<target_node>
 						<entity>
-							<type>rdfs:Literal</type>
+							<type>xsd:date</type>
 							<instance_generator name="Literal">
 								<arg name="text" type="xpath">@value</arg>
 							</instance_generator>
@@ -697,7 +697,7 @@
 					<source_node>../field_string[@label="Image End Year"]</source_node>
 					<target_node>
 						<entity>
-							<type>rdfs:Literal</type>
+							<type>xsd:date</type>
 							<instance_generator name="Literal">
 								<arg name="text" type="xpath">@value</arg>
 							</instance_generator>
@@ -790,14 +790,14 @@
 						<relation>Biographies/Biography/birthDate</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>fr:Person_has_Date_of_Birth</relationship>
+						<relationship>fr:Artist_has_Date_of_Birth</relationship>
 					</target_relation>
 				</path>
 				<range>
 					<source_node>Biographies/Biography/birthDate</source_node>
 					<target_node>
 						<entity>
-							<type>rdfs:Literal</type>
+							<type>xsd:date</type>
 							<instance_generator name="Literal">
 								<arg name="text" type="xpath">@year</arg>
 							</instance_generator>
@@ -812,14 +812,14 @@
 						<relation>Biographies/Biography/deathDate</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>fr:Person_has_Date_of_Death</relationship>
+						<relationship>fr:Artist_has_Date_of_Death</relationship>
 					</target_relation>
 				</path>
 				<range>
 					<source_node>Biographies/Biography/deathDate</source_node>
 					<target_node>
 						<entity>
-							<type>rdfs:Literal</type>
+							<type>xsd:date</type>
 							<instance_generator name="Literal">
 								<arg name="text" type="xpath">@year</arg>
 							</instance_generator>

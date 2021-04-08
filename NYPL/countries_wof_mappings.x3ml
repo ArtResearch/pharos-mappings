@@ -14,7 +14,7 @@
 				<target_node>
                     <entity>
 						<type>crm:E53_Place</type>
-						<instance_generator name="URIwithType">
+						<instance_generator name="URIwithTypeAndId">
 							<arg name="type" type="constant">place</arg>
 							<arg name="id" type="xpath">CountryID/text()</arg>
 						</instance_generator>
@@ -22,7 +22,7 @@
 							<relationship>crm:P1_is_identified_by</relationship>
 							<entity>
 								<type>crm:E42_Identifier</type>
-								<instance_generator name="URIwithType">
+								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">identifier</arg>
 									<arg name="id" type="xpath">WOFID/text()</arg>
 								</instance_generator>

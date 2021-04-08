@@ -14,7 +14,7 @@
 				<target_node>
                     <entity>
 						<type>crm:E39_Actor</type>
-						<instance_generator name="URIwithType">
+						<instance_generator name="URIwithTypeAndId">
 							<arg name="type" type="constant">actor</arg>
 							<arg name="id" type="xpath">ConstituentID/text()</arg>
 						</instance_generator>
@@ -31,7 +31,7 @@
 						<relationship>crm:P107i_is_current_or_former_member_of</relationship>
 						<entity>
 							<type>crm:E74_Group</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">group</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -44,7 +44,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E55_Type</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="constant">institution</arg>
 							</instance_generator>
@@ -64,7 +64,7 @@
 						<relationship>crm:P107i_is_current_or_former_member_of</relationship>
 						<entity>
 							<type>crm:E74_Group</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">group</arg>
 								<arg name="id" type="xpath">../TermID/text()</arg>
 							</instance_generator>

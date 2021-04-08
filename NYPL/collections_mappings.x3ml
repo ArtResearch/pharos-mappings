@@ -14,7 +14,7 @@
 				<target_node>
                     <entity>
 						<type>crm:E74_Group</type>
-						<instance_generator name="URIwithType">
+						<instance_generator name="URIwithTypeAndId">
 							<arg name="type" type="constant">group</arg>
 							<arg name="id" type="xpath">TermID/text()</arg>
 						</instance_generator>

@@ -1,0 +1,67 @@
+@prefix : <http://www.researchspace.org/resource/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix frbroo: <http://iflastandards.info/ns/fr/frbr/frbroo/> .
+@prefix crminfluence: <http://www.cidoc-crm.org/cidoc-crm/influence/> .
+@prefix crmarchaeo: <http://www.cidoc-crm.org/cidoc-crm/CRMarchaeo/> .
+@prefix rshelp: <http://researchspace.org/help/> .
+@prefix ontodia: <http://ontodia.org/schema/v1#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rso: <http://www.researchspace.org/ontology/> .
+@prefix sp: <http://spinrdf.org/sp#> .
+@prefix Help: <http://help.researchspace.org/resource/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix Admin: <http://www.researchspace.org/resource/admin/> .
+@prefix crmgeo: <http://www.ics.forth.gr/isl/CRMgeo/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix crmba: <http://www.cidoc-crm.org/cidoc-crm/CRMba/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMdig/> .
+@prefix User: <http://www.researchspace.org/resource/user/> .
+@prefix bds: <http://www.bigdata.com/rdf/search#> .
+@prefix Platform: <http://www.researchspace.org/resource/system/> .
+
+<https://pharos.artresearch.net/fieldDefinition/78/context> {
+  _:t36751010 a sp:Query;
+    sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE { 
+	graph ?graph 
+  	{
+		$subject <http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by> ?production .
+    	?production crm:P4_has_time-span ?tm.
+   	 	?tm crm:P10_falls_within $timespan .
+    	?timespan crm:P2_has_type ?type.
+    	?type rdfs:label \"Century\".
+    	?timespan crm:P1_is_identified_by ?value
+   }
+   ?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
+	?provider rdfs:label ?providerLabel.
+}""" .
+  
+  _:t36751009 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/78> a <http://www.researchspace.org/resource/system/fields/Field>,
+      prov:Entity, <http://www.w3.org/ns/ldp#Resource>;
+    <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
+    <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t36751010;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t36751009;
+    prov:wasAttributedTo User:admin;
+    <http://www.researchspace.org/resource/system/fields/range> crm:E41_Appellation;
+    <http://www.researchspace.org/resource/system/fields/order> "330";
+    rdfs:comment "This field is used to indicate the century in which the creation of the documented object took place.";
+    <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/photo>,
+      <https://pharos.artresearch.net/category/work>, <https://pharos.artresearch.net/category/zeri>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/production_info>;
+    rdfs:label "Production Date - Century"@en;
+    prov:generatedAtTime "2021-03-18T11:24:52.473Z"^^xsd:dateTime .
+  
+  _:node1f2jqhtfcx90 <http://www.w3.org/ns/ldp#contains> <https://pharos.artresearch.net/fieldDefinition/78> .
+}
+
+{
+  _:node1f2jqhtfcx90 a <http://www.w3.org/ns/ldp#Container>, <http://www.w3.org/ns/ldp#Resource>,
+      prov:Entity .
+}

@@ -1,0 +1,63 @@
+@prefix : <http://www.researchspace.org/resource/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix frbroo: <http://iflastandards.info/ns/fr/frbr/frbroo/> .
+@prefix crminfluence: <http://www.cidoc-crm.org/cidoc-crm/influence/> .
+@prefix crmarchaeo: <http://www.cidoc-crm.org/cidoc-crm/CRMarchaeo/> .
+@prefix rshelp: <http://researchspace.org/help/> .
+@prefix ontodia: <http://ontodia.org/schema/v1#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rso: <http://www.researchspace.org/ontology/> .
+@prefix sp: <http://spinrdf.org/sp#> .
+@prefix Help: <http://help.researchspace.org/resource/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix Admin: <http://www.researchspace.org/resource/admin/> .
+@prefix crmgeo: <http://www.ics.forth.gr/isl/CRMgeo/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix crmba: <http://www.cidoc-crm.org/cidoc-crm/CRMba/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMdig/> .
+@prefix User: <http://www.researchspace.org/resource/user/> .
+@prefix bds: <http://www.bigdata.com/rdf/search#> .
+@prefix Platform: <http://www.researchspace.org/resource/system/> .
+
+<https://pharos.artresearch.net/fieldDefinition/211/context> {
+  _:t34906073 a sp:Query;
+    sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE
+{ 
+	graph ?graph 
+  	{
+		$subject crm:P108i_was_produced_by ?production.
+  		?production a <https://pharos.artresearch.net/custom/Publication>.
+  		?production crm:P7_took_place_at ?value .
+  	}
+	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
+	?provider rdfs:label ?providerLabel.
+}""" .
+  
+  <https://pharos.artresearch.net/fieldDefinition/211> a <http://www.researchspace.org/resource/system/fields/Field>,
+      prov:Entity, <http://www.w3.org/ns/ldp#Resource>;
+    <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
+    <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/zeri>,
+      <https://pharos.artresearch.net/category/photo>;
+    <http://www.researchspace.org/resource/system/fields/order> "940";
+    rdfs:comment "Information on the Publication of the Photograph.";
+    <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
+    prov:generatedAtTime "2021-03-02T12:31:05.455Z"^^xsd:dateTime;
+    rdfs:label "Publication"@en;
+    prov:wasAttributedTo User:admin;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t34906072;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t34906073 .
+  
+  _:t34906072 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:node1f2jqhtfcx99 <http://www.w3.org/ns/ldp#contains> <https://pharos.artresearch.net/fieldDefinition/211> .
+}
+
+{
+  _:node1f2jqhtfcx99 a <http://www.w3.org/ns/ldp#Container>, <http://www.w3.org/ns/ldp#Resource>,
+      prov:Entity .
+}

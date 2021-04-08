@@ -1595,14 +1595,11 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
+									<type>custom:noType</type>
+									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="constant">Photo Card</arg>
+										<arg name="id" type="constant">photo_card</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">Photo Card</arg>
-									</label_generator>
 								</entity>
 							</additional>	
 						</entity>
@@ -2424,14 +2421,11 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
+									<type>custom:noType</type>
+									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="constant">Photo Card</arg>
+										<arg name="id" type="constant">photo_card</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">Photo Card</arg>
-									</label_generator>
 								</entity>
 							</additional>	
 						</entity>
@@ -3255,14 +3249,11 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
+									<type>custom:noType</type>
+									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="constant">Photo Card</arg>
+										<arg name="id" type="constant">photo_card</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">Photo Card</arg>
-									</label_generator>
 								</entity>
 							</additional>	
 						</entity>
@@ -4086,14 +4077,11 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
+									<type>custom:noType</type>
+									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="constant">Photo Card</arg>
+										<arg name="id" type="constant">photo_card</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">Photo Card</arg>
-									</label_generator>
 								</entity>
 							</additional>	
 						</entity>

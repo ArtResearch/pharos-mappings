@@ -14,7 +14,7 @@
 				<target_node>
                     <entity>
 						<type>crm:E39_Actor</type>
-						<instance_generator name="URIwithType">
+						<instance_generator name="URIwithTypeAndId">
 							<arg name="type" type="constant">actor</arg>
 							<arg name="id" type="xpath">ConstituentID/text()</arg>
 						</instance_generator>
@@ -35,7 +35,7 @@
 						<relationship>crm:P14i_performed</relationship>
 						<entity>
 							<type>crm:F51_Pursuit</type>
-							<instance_generator name="eventIdentifierUri">
+							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">actor</arg>
 								<arg name="resourceId" type="xpath">../ConstituentID/text()</arg>
 								<arg name="eventType" type="constant">pursuit</arg>
@@ -57,7 +57,7 @@
 					<source_node>BeginDate</source_node>
 					<target_node>
 						<entity>
-							<type>xsd:date</type>
+							<type>xsd:DateTime</type>
 							<instance_generator name="TypedLiteralGen">
 								<arg name="text" type="xpath">text()</arg>
 							</instance_generator>
@@ -78,7 +78,7 @@
 						<relationship>crm:P14i_performed</relationship>
 						<entity>
 							<type>crm:F51_Pursuit</type>
-							<instance_generator name="eventIdentifierUri">
+							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">actor</arg>
 								<arg name="resourceId" type="xpath">../ConstituentID/text()</arg>
 								<arg name="eventType" type="constant">pursuit</arg>
@@ -100,7 +100,7 @@
 					<source_node>EndDate</source_node>
 					<target_node>
 						<entity>
-							<type>xsd:date</type>
+							<type>xsd:DateTime</type>
 							<instance_generator name="TypedLiteralGen">
 								<arg name="text" type="xpath">text()</arg>
 							</instance_generator>
@@ -121,7 +121,7 @@
 						<relationship>crm:P14i_performed</relationship>
 						<entity>
 							<type>crm:F51_Pursuit</type>
-							<instance_generator name="eventIdentifierUri">
+							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">actor</arg>
 								<arg name="resourceId" type="xpath">../ConstituentID/text()</arg>
 								<arg name="eventType" type="constant">pursuit</arg>
@@ -135,7 +135,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E53_Place</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type"  type="constant">place</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -143,7 +143,7 @@
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
 									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
+									<instance_generator name="URIwithTypeAndId">
 										<arg name="type"  type="constant">type</arg>
 										<arg name="id" type="constant">active_in</arg>
 									</instance_generator>
@@ -170,7 +170,7 @@
 						<relationship>crm:P11i_participated_in</relationship>
 						<entity>
 							<type>crm:E5_Event</type>
-							<instance_generator name="eventIdentifierUri">
+							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">actor</arg>
 								<arg name="resourceId" type="xpath">../ConstituentID/text()</arg>
 								<arg name="eventType" type="constant">event</arg>
@@ -192,7 +192,7 @@
 					<source_node>BeginDate</source_node>
 					<target_node>
 						<entity>
-							<type>xsd:date</type>
+							<type>xsd:DateTime</type>
 							<instance_generator name="TypedLiteralGen">
 								<arg name="text" type="xpath">text()</arg>
 							</instance_generator>
@@ -213,7 +213,7 @@
 						<relationship>crm:P11i_participated_in</relationship>
 						<entity>
 							<type>crm:E5_Event</type>
-							<instance_generator name="eventIdentifierUri">
+							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">actor</arg>
 								<arg name="resourceId" type="xpath">../ConstituentID/text()</arg>
 								<arg name="eventType" type="constant">event</arg>
@@ -235,7 +235,7 @@
 					<source_node>EndDate</source_node>
 					<target_node>
 						<entity>
-							<type>xsd:date</type>
+							<type>xsd:DateTime</type>
 							<instance_generator name="TypedLiteralGen">
 								<arg name="text" type="xpath">text()</arg>
 							</instance_generator>
@@ -256,7 +256,7 @@
 						<relationship>crm:P11i_participated_in</relationship>
 						<entity>
 							<type>crm:E5_Event</type>
-							<instance_generator name="eventIdentifierUri">
+							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">actor</arg>
 								<arg name="resourceId" type="xpath">../ConstituentID/text()</arg>
 								<arg name="eventType" type="constant">event</arg>
@@ -270,7 +270,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E53_Place</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type"  type="constant">place</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>						
@@ -278,7 +278,7 @@
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
 									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
+									<instance_generator name="URIwithTypeAndId">
 										<arg name="type"  type="constant">type</arg>
 										<arg name="id" type="constant">studio_or_business</arg>
 									</instance_generator>
@@ -305,7 +305,7 @@
 						<relationship>crm:P98i_was_born</relationship>
 						<entity>
 							<type>crm:E67_Birth</type>
-							<instance_generator name="eventIdentifierUri">
+							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">actor</arg>
 								<arg name="resourceId" type="xpath">../ConstituentID/text()</arg>
 								<arg name="eventType" type="constant">birth</arg>
@@ -327,7 +327,7 @@
 					<source_node>BeginDate</source_node>
 					<target_node>
 						<entity>
-							<type>xsd:date</type>
+							<type>xsd:DateTime</type>
 							<instance_generator name="TypedLiteralGen">
 								<arg name="text" type="xpath">text()</arg>
 							</instance_generator>
@@ -347,7 +347,7 @@
 						<relationship>crm:P98i_was_born</relationship>
 						<entity>
 							<type>crm:E67_Birth</type>
-							<instance_generator name="eventIdentifierUri">
+							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">actor</arg>
 								<arg name="resourceId" type="xpath">../ConstituentID/text()</arg>
 								<arg name="eventType" type="constant">birth</arg>
@@ -369,7 +369,7 @@
 					<source_node>EndDate</source_node>
 					<target_node>
 						<entity>
-							<type>xsd:date</type>
+							<type>xsd:DateTime</type>
 							<instance_generator name="TypedLiteralGen">
 								<arg name="text" type="xpath">text()</arg>
 							</instance_generator>
@@ -390,7 +390,7 @@
 						<relationship>crm:P98i_was_born</relationship>
 						<entity>
 							<type>crm:E67_Birth</type>
-							<instance_generator name="eventIdentifierUri">
+							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">actor</arg>
 								<arg name="resourceId" type="xpath">../ConstituentID/text()</arg>
 								<arg name="eventType" type="constant">birth</arg>
@@ -404,7 +404,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E53_Place</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type"  type="constant">place</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>						
@@ -412,7 +412,7 @@
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
 									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
+									<instance_generator name="URIwithTypeAndId">
 										<arg name="type"  type="constant">type</arg>
 										<arg name="id" type="constant">birth</arg>
 									</instance_generator>
@@ -439,7 +439,7 @@
 						<relationship>crm:P100i_died_in</relationship>
 						<entity>
 							<type>crm:E69_Death</type>
-							<instance_generator name="eventIdentifierUri">
+							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">actor</arg>
 								<arg name="resourceId" type="xpath">../ConstituentID/text()</arg>
 								<arg name="eventType" type="constant">death</arg>
@@ -461,7 +461,7 @@
 					<source_node>BeginDate</source_node>
 					<target_node>
 						<entity>
-							<type>xsd:date</type>
+							<type>xsd:DateTime</type>
 							<instance_generator name="TypedLiteralGen">
 								<arg name="text" type="xpath">text()</arg>
 							</instance_generator>
@@ -481,7 +481,7 @@
 						<relationship>crm:P100i_died_in</relationship>
 						<entity>
 							<type>crm:E69_Death</type>
-							<instance_generator name="eventIdentifierUri">
+							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">actor</arg>
 								<arg name="resourceId" type="xpath">../ConstituentID/text()</arg>
 								<arg name="eventType" type="constant">death</arg>
@@ -503,7 +503,7 @@
 					<source_node>EndDate</source_node>
 					<target_node>
 						<entity>
-							<type>xsd:date</type>
+							<type>xsd:DateTime</type>
 							<instance_generator name="TypedLiteralGen">
 								<arg name="text" type="xpath">text()</arg>
 							</instance_generator>
@@ -524,7 +524,7 @@
 						<relationship>crm:P100i_died_in</relationship>
 						<entity>
 							<type>crm:E69_Death</type>
-							<instance_generator name="eventIdentifierUri">
+							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">actor</arg>
 								<arg name="resourceId" type="xpath">../ConstituentID/text()</arg>
 								<arg name="eventType" type="constant">death</arg>
@@ -538,7 +538,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E53_Place</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type"  type="constant">place</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -546,7 +546,7 @@
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
 									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
+									<instance_generator name="URIwithTypeAndId">
 										<arg name="type"  type="constant">type</arg>
 										<arg name="id" type="constant">death</arg>
 									</instance_generator>
@@ -568,7 +568,7 @@
 				<target_node>
                     <entity>
 						<type>crm:E53_Place</type>
-						<instance_generator name="URIwithType">
+						<instance_generator name="URIwithTypeAndId">
 							<arg name="type" type="constant">place</arg>
 							<arg name="id" type="xpath">text()</arg>
 						</instance_generator>
@@ -596,7 +596,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E41_Appellation</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type"  type="constant">appellation</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -628,7 +628,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E41_Appellation</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type"  type="constant">appellation</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -660,7 +660,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E41_Appellation</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type"  type="constant">appellation</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -740,7 +740,7 @@
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
 									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
+									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">type</arg>
 										<arg name="id" type="constant">display_name_2</arg>
 									</instance_generator>
@@ -774,7 +774,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E53_Place</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">place</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -785,7 +785,7 @@
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
 									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
+									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">type</arg>
 										<arg name="id" type="constant">city</arg>
 									</instance_generator>
@@ -819,7 +819,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E53_Place</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">place</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -830,7 +830,7 @@
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
 									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
+									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">type</arg>
 										<arg name="id" type="constant">state</arg>
 									</instance_generator>
@@ -865,7 +865,7 @@
 					<target_node>
 						<entity>
 							<type>crm:E53_Place</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">place</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -873,7 +873,7 @@
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
 									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
+									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">type</arg>
 										<arg name="id" type="constant">country</arg>
 									</instance_generator>
