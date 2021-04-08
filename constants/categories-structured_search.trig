@@ -117,7 +117,7 @@
   <https://pharos.artresearch.net/resource/fr/Work_created_by_student_of_Artist> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/work> .
   <https://pharos.artresearch.net/resource/fr/Work_created_by_student_of_Artist> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/artist> .
 
-  <https://pharos.artresearch.net/resource/fr/Work_kept_by_Institution> <http://www.w3.org/2000/01/rdf-schema#label> "kept by" .
+  <https://pharos.artresearch.net/resource/fr/Work_kept_by_Institution> <http://www.w3.org/2000/01/rdf-schema#label> "held by" .
   <https://pharos.artresearch.net/resource/fr/Work_kept_by_Institution> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/work> .
   <https://pharos.artresearch.net/resource/fr/Work_kept_by_Institution> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/institution> .
 
@@ -165,7 +165,7 @@
   <https://pharos.artresearch.net/resource/fr/Photo_created_by_Photographer> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/photo> .
   <https://pharos.artresearch.net/resource/fr/Photo_created_by_Photographer> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/photographer> .
 
-  <https://pharos.artresearch.net/resource/fr/Photo_kept_by_Institution> <http://www.w3.org/2000/01/rdf-schema#label> "kept by" .
+  <https://pharos.artresearch.net/resource/fr/Photo_kept_by_Institution> <http://www.w3.org/2000/01/rdf-schema#label> "held by" .
   <https://pharos.artresearch.net/resource/fr/Photo_kept_by_Institution> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/photo> .
   <https://pharos.artresearch.net/resource/fr/Photo_kept_by_Institution> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/institution> .
 

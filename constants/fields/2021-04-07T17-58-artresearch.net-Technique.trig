@@ -32,9 +32,9 @@
 { 
   graph ?graph 
   {
-    ?subject <https://pharos.artresearch.net/resource/fr/Work_produced_using_technique_Technique> ?value
-#    ?subject crm:P108i_was_produced_by ?production.
-#  	?production crm:P33_used_specific_technique ?value.
+    #?subject <https://pharos.artresearch.net/resource/fr/Work_produced_using_technique_Technique> ?value
+    ?subject crm:P108i_was_produced_by ?production.
+  	?production crm:P33_used_specific_technique ?value.
   }
   ?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
   ?provider rdfs:label ?providerLabel.
@@ -45,7 +45,7 @@
     <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/production_info>,
       <https://pharos.artresearch.net/category/frick>, <https://pharos.artresearch.net/category/photo>,
       <https://pharos.artresearch.net/category/itatti>, <https://pharos.artresearch.net/category/zeri>,
-      <https://pharos.artresearch.net/category/work>;
+      <https://pharos.artresearch.net/category/work>, <http://www.researchspace.org/ontologies/platform/FieldCategories/photograph_info>;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/selectPattern> _:t36751802;
     prov:generatedAtTime "2021-03-23T13:31:31.031Z"^^xsd:dateTime;

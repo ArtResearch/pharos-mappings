@@ -51,9 +51,9 @@
 { 
   graph ?graph 
   {
-    ?subject <https://pharos.artresearch.net/resource/fr/Work_consists_of_Material> ?value
-#	$subject crm:P45_consists_of ?value.
-#  	?value a crm:E57_Material.
+    #?subject <https://pharos.artresearch.net/resource/fr/Work_consists_of_Material> ?value
+    $subject crm:P45_consists_of ?value.
+  	  ?value a crm:E57_Material.
   }
   ?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
   ?provider rdfs:label ?providerLabel.
