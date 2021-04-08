@@ -24,7 +24,22 @@
 @prefix Platform: <http://www.researchspace.org/resource/system/> .
 
 <https://pharos.artresearch.net/fieldDefinition/67/context> {
-  _:t36765231 a sp:Query;
+  <https://pharos.artresearch.net/fieldDefinition/67> a <http://www.researchspace.org/resource/system/fields/Field>,
+      <http://www.w3.org/ns/ldp#Resource>, prov:Entity;
+    prov:wasAttributedTo User:admin;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/photograph_info>,
+      <https://pharos.artresearch.net/category/work>, <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>,
+      <https://pharos.artresearch.net/category/frick>, <https://pharos.artresearch.net/category/photo>;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t36792861;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t36792860;
+    prov:generatedAtTime "2021-04-08T07:33:19.015Z"^^xsd:dateTime;
+    <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
+    <http://www.researchspace.org/resource/system/fields/order> "710";
+    <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
+    rdfs:comment "This field is used to document a description of the colour of a documented object.";
+    rdfs:label "Color Information"@en .
+  
+  _:t36792860 a sp:Query;
     sp:text """SELECT ?value ?provider ?providerLabel WHERE 
 {
 	graph ?graph 
@@ -37,28 +52,13 @@
 	?provider rdfs:label ?providerLabel.
 }""" .
   
-  <https://pharos.artresearch.net/fieldDefinition/67> a <http://www.researchspace.org/resource/system/fields/Field>,
-      <http://www.w3.org/ns/ldp#Resource>, prov:Entity;
-    prov:wasAttributedTo User:admin;
-    prov:generatedAtTime "2021-04-01T15:07:27.656Z"^^xsd:dateTime;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t36765231;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t36765232;
-    <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/work>,
-      <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>, <https://pharos.artresearch.net/category/frick>,
-      <https://pharos.artresearch.net/category/photo>;
-    <http://www.researchspace.org/resource/system/fields/order> "710";
-    <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
-    rdfs:comment "This field is used to document a description of the colour of a documented object.";
-    rdfs:label "Color Information"@en .
-  
-  _:t36765232 a sp:Query;
+  _:t36792861 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:node1f2jqhtfcx42 <http://www.w3.org/ns/ldp#contains> <https://pharos.artresearch.net/fieldDefinition/67> .
+  _:node1f2o41cr0x24 <http://www.w3.org/ns/ldp#contains> <https://pharos.artresearch.net/fieldDefinition/67> .
 }
 
 {
-  _:node1f2jqhtfcx42 a <http://www.w3.org/ns/ldp#Container>, <http://www.w3.org/ns/ldp#Resource>,
+  _:node1f2o41cr0x24 a <http://www.w3.org/ns/ldp#Container>, <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity .
 }

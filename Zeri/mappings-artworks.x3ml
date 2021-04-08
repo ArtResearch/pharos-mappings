@@ -1793,7 +1793,7 @@
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
 									<type>custom:noType</type>
-									<instance_generator name="URIwithType">
+									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">type</arg>
 										<arg name="id" type="constant">Exhibition</arg>
 									</instance_generator>
@@ -2245,6 +2245,9 @@
 								<arg name="unit" type="xpath">../MISU[@etichetta="Unit of measurement"]/text()</arg>
 								<arg name="value" type="xpath">text()</arg>
 							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">string-join((text(),../MISU[@etichetta="Unit of measurement"]/text(),", depth"),' ')</arg>
+							</label_generator>
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
@@ -2299,6 +2302,9 @@
 								<arg name="unit" type="xpath">../MISU[@etichetta="Unit of measurement"]/text()</arg>
 								<arg name="value" type="xpath">text()</arg>
 							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">string-join((text(),../MISU[@etichetta="Unit of measurement"]/text(),", diameter"),' ')</arg>
+							</label_generator>
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
@@ -3602,7 +3608,7 @@
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
 									<type>custom:noType</type>
-									<instance_generator name="URIwithType">
+									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">type</arg>
 										<arg name="id" type="constant">Exhibition</arg>
 									</instance_generator>
@@ -4054,6 +4060,9 @@
 								<arg name="unit" type="xpath">../MISU[@etichetta="Unit of measurement"]/text()</arg>
 								<arg name="value" type="xpath">text()</arg>
 							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">string-join((text(),../MISU[@etichetta="Unit of measurement"]/text(),", depth"),' ')</arg>
+							</label_generator>
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
@@ -4108,6 +4117,9 @@
 								<arg name="unit" type="xpath">../MISU[@etichetta="Unit of measurement"]/text()</arg>
 								<arg name="value" type="xpath">text()</arg>
 							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">string-join((text(),../MISU[@etichetta="Unit of measurement"]/text(),", diameter"),' ')</arg>
+							</label_generator>
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>

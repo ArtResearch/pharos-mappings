@@ -1278,6 +1278,9 @@
 								<arg name="unit" type="xpath">../MISU[@etichetta="Unit of measurement"]/text()</arg>
 								<arg name="value" type="xpath">text()</arg>
 							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">string-join((text(),../MISU[@etichetta="Unit of measurement"]/text(),", height"),' ')</arg>
+							</label_generator>
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
@@ -1332,6 +1335,9 @@
 								<arg name="unit" type="xpath">../MISU[@etichetta="Unit of measurement"]/text()</arg>
 								<arg name="value" type="xpath">text()</arg>
 							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">string-join((text(),../MISU[@etichetta="Unit of measurement"]/text(),", length"),' ')</arg>
+							</label_generator>
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
@@ -1397,6 +1403,9 @@
 								<arg name="unit" type="xpath">../MISU[@etichetta="Unit of measurement"]/text()</arg>
 								<arg name="value" type="xpath">text()</arg>
 							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">string-join((text(),../MISU[@etichetta="Unit of measurement"]/text(),", thickness"),' ')</arg>
+							</label_generator>
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>

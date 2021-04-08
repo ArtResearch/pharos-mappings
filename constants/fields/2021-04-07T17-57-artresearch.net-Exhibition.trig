@@ -50,9 +50,7 @@
   		$subject crm:P12i_was_present_at ?activity.
   		?activity crm:P2_has_type ?type.
   		?type rdfs:label \"Exhibition\".
-  		?activity crm:P1_is_identified_by ?value.
-  		?activity crm:P7_took_place_at ?qualifier_uri.
-  		?qualifier_uri rdfs:label ?qualifier
+  		?activity rdfs:label ?value.
   	}
 	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.

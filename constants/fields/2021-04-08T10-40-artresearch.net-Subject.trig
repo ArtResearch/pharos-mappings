@@ -23,41 +23,44 @@
 @prefix bds: <http://www.bigdata.com/rdf/search#> .
 @prefix Platform: <http://www.researchspace.org/resource/system/> .
 
-<https://pharos.artresearch.net/fieldDefinition/550/context> {
-  <https://pharos.artresearch.net/fieldDefinition/550> a prov:Entity, <http://www.w3.org/ns/ldp#Resource>,
-      <http://www.researchspace.org/resource/system/fields/Field>;
-    <http://www.researchspace.org/resource/system/fields/order> "500";
-    <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/frick>,
-      <https://pharos.artresearch.net/category/itatti>, <https://pharos.artresearch.net/category/khi>,
-      <https://pharos.artresearch.net/category/marburg>, <https://pharos.artresearch.net/category/hertziana>,
-      <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>, <https://pharos.artresearch.net/category/zeri>;
-    prov:generatedAtTime "2021-03-18T10:46:00.083Z"^^xsd:dateTime;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t36750950;
-    rdfs:label "Types"@en;
+<https://pharos.artresearch.net/fieldDefinition/46/context> {
+  <https://pharos.artresearch.net/fieldDefinition/46> a prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>,
+      <http://www.w3.org/ns/ldp#Resource>;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t36792878;
+    rdfs:comment "This field is used to indicate the subject of representation of the documented artwork. ";
+    <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t36750949;
+    <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/hertziana>,
+      <https://pharos.artresearch.net/category/marburg>, <https://pharos.artresearch.net/category/itatti>,
+      <https://pharos.artresearch.net/category/work>, <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/photograph_info>,
+      <https://pharos.artresearch.net/category/khi>, <https://pharos.artresearch.net/category/frick>,
+      <https://pharos.artresearch.net/category/photo>;
     <http://www.researchspace.org/resource/system/fields/range> crm:E55_Type;
+    prov:generatedAtTime "2021-04-08T07:37:39.132Z"^^xsd:dateTime;
+    <http://www.researchspace.org/resource/system/fields/order> "560";
+    rdfs:label "Subject"@en;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI .
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t36792879 .
   
-  _:t36750949 a sp:Query;
+  _:t36792879 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:t36750950 a sp:Query;
-    sp:text """SELECT distinct $value ?provider ?providerLabel WHERE 
-{   
+  _:t36792878 a sp:Query;
+    sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
+{ 
 	graph ?graph
 	{
-		$subject <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?value .
+ 		$subject <https://pharos.artresearch.net/resource/fr/Work_shows_Subject> ?value.
 	}
 	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.
 }""" .
   
-  _:node1f2jqhtfcx116 <http://www.w3.org/ns/ldp#contains> <https://pharos.artresearch.net/fieldDefinition/550> .
+  _:node1f2o41cr0x19 <http://www.w3.org/ns/ldp#contains> <https://pharos.artresearch.net/fieldDefinition/46> .
 }
 
 {
-  _:node1f2jqhtfcx116 a <http://www.w3.org/ns/ldp#Container>, <http://www.w3.org/ns/ldp#Resource>,
+  _:node1f2o41cr0x19 a <http://www.w3.org/ns/ldp#Container>, <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity .
 }

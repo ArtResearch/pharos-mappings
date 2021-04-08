@@ -29,20 +29,21 @@
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/hertziana>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/photograph_info>,
       <https://pharos.artresearch.net/category/marburg>, <https://pharos.artresearch.net/category/itatti>,
       <https://pharos.artresearch.net/category/work>, <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>,
       <https://pharos.artresearch.net/category/khi>, <https://pharos.artresearch.net/category/frick>,
       <https://pharos.artresearch.net/category/photo>, <https://pharos.artresearch.net/category/zeri>;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t36750961;
+    prov:generatedAtTime "2021-04-08T07:37:05.986Z"^^xsd:dateTime;
     rdfs:label "Repository"@en;
-    prov:generatedAtTime "2021-03-18T10:48:58.421Z"^^xsd:dateTime;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t36792874;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
     <http://www.researchspace.org/resource/system/fields/order> "610";
     <http://www.researchspace.org/resource/system/fields/range> crm:E39_Actor;
     rdfs:comment "This field is used to indicate a present custodian of the documented object.";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t36750962 .
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t36792875 .
   
-  _:t36750962 a sp:Query;
+  _:t36792875 a sp:Query;
     sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
 {
 	graph ?graph
@@ -53,13 +54,13 @@
 	?provider rdfs:label ?providerLabel.
 }""" .
   
-  _:t36750961 a sp:Query;
+  _:t36792874 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:node1f2jqhtfcx103 <http://www.w3.org/ns/ldp#contains> <https://pharos.artresearch.net/fieldDefinition/Repository> .
+  _:node1f2o41cr0x17 <http://www.w3.org/ns/ldp#contains> <https://pharos.artresearch.net/fieldDefinition/Repository> .
 }
 
 {
-  _:node1f2jqhtfcx103 a <http://www.w3.org/ns/ldp#Container>, <http://www.w3.org/ns/ldp#Resource>,
+  _:node1f2o41cr0x17 a <http://www.w3.org/ns/ldp#Container>, <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity .
 }

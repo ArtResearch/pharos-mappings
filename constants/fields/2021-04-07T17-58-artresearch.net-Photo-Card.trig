@@ -29,7 +29,8 @@
     <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/itatti>,
       <https://pharos.artresearch.net/category/marburg>, <https://pharos.artresearch.net/category/hertziana>,
       <https://pharos.artresearch.net/category/frick>, <https://pharos.artresearch.net/category/zeri>,
-      <https://pharos.artresearch.net/category/khi>, <https://pharos.artresearch.net/category/photo>;
+      <https://pharos.artresearch.net/category/khi>, <http://www.researchspace.org/ontologies/platform/FieldCategories/photograph_info>,
+       <https://pharos.artresearch.net/category/photo>;
     <http://www.researchspace.org/resource/system/fields/order> "4100";
     <http://www.researchspace.org/resource/system/fields/insertPattern> _:t34906027;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;

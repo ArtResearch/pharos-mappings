@@ -575,8 +575,8 @@
                     "Alternative Date" .
 }
 
-<https://pharos.artresearch.net/resource/zeri/type/QE4DNBEX/graph> {
-        <https://pharos.artresearch.net/resource/zeri/type/QE4DNBEX>
+<https://pharos.artresearch.net/resource/zeri/type/Exhibition/graph> {
+        <https://pharos.artresearch.net/resource/zeri/type/Exhibition>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Exhibition" .

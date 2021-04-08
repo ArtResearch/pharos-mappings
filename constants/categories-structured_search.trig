@@ -1,26 +1,26 @@
 <http://www.researchspace.org/ontologies/platform/FieldCategories> {
-  <http://www.researchspace.org/ontologies/platform/FieldCategories/work> <http://www.w3.org/2000/01/rdf-schema#label> "Work".
-  <http://www.researchspace.org/ontologies/platform/FieldCategories/work> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>
-  <http://www.researchspace.org/ontologies/platform/FieldCategories/person> <http://www.w3.org/2000/01/rdf-schema#label>	"Person" .
-  <http://www.researchspace.org/ontologies/platform/FieldCategories/person> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>
-  <http://www.researchspace.org/ontologies/platform/FieldCategories/photo> <http://www.w3.org/2000/01/rdf-schema#label>	"Photo" .
-  <http://www.researchspace.org/ontologies/platform/FieldCategories/photo> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>
-  <http://www.researchspace.org/ontologies/platform/FieldCategories/institution> <http://www.w3.org/2000/01/rdf-schema#label> "Institution" .
-  <http://www.researchspace.org/ontologies/platform/FieldCategories/institution> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>
-  <http://www.researchspace.org/ontologies/platform/FieldCategories/place> <http://www.w3.org/2000/01/rdf-schema#label> "Place" .
-  <http://www.researchspace.org/ontologies/platform/FieldCategories/place> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>
-  <http://www.researchspace.org/ontologies/platform/FieldCategories/itatti> <http://www.w3.org/2000/01/rdf-schema#label>	"I Tatti" .
-  <http://www.researchspace.org/ontologies/platform/FieldCategories/itatti> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>
-  <http://www.researchspace.org/ontologies/platform/FieldCategories/zeri> <http://www.w3.org/2000/01/rdf-schema#label>	"Zeri" .
-  <http://www.researchspace.org/ontologies/platform/FieldCategories/zeri> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>
-  <http://www.researchspace.org/ontologies/platform/FieldCategories/frick> <http://www.w3.org/2000/01/rdf-schema#label>	"Frick" .
-  <http://www.researchspace.org/ontologies/platform/FieldCategories/frick> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>
-  <http://www.researchspace.org/ontologies/platform/FieldCategories/marburg> <http://www.w3.org/2000/01/rdf-schema#label>	"Marburg" .
-  <http://www.researchspace.org/ontologies/platform/FieldCategories/marburg> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>
-  <http://www.researchspace.org/ontologies/platform/FieldCategories/khi> <http://www.w3.org/2000/01/rdf-schema#label>	"KHI" .
-  <http://www.researchspace.org/ontologies/platform/FieldCategories/khi> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>
-  <http://www.researchspace.org/ontologies/platform/FieldCategories/hertziana> <http://www.w3.org/2000/01/rdf-schema#label>	"Hertziana" .
-  <http://www.researchspace.org/ontologies/platform/FieldCategories/hertziana> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>
+  <https://pharos.artresearch.net/category/work> <http://www.w3.org/2000/01/rdf-schema#label> "Work".
+  <https://pharos.artresearch.net/category/work> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>
+  <https://pharos.artresearch.net/category/person> <http://www.w3.org/2000/01/rdf-schema#label>	"Person" .
+  <https://pharos.artresearch.net/category/person> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>
+  <https://pharos.artresearch.net/category/photo> <http://www.w3.org/2000/01/rdf-schema#label>	"Photo" .
+  <https://pharos.artresearch.net/category/photo> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>
+  <https://pharos.artresearch.net/category/institution> <http://www.w3.org/2000/01/rdf-schema#label> "Institution" .
+  <https://pharos.artresearch.net/category/institution> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>
+  <https://pharos.artresearch.net/category/place> <http://www.w3.org/2000/01/rdf-schema#label> "Place" .
+  <https://pharos.artresearch.net/category/place> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>
+  <https://pharos.artresearch.net/category/itatti> <http://www.w3.org/2000/01/rdf-schema#label>	"I Tatti" .
+  <https://pharos.artresearch.net/category/itatti> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>
+  <https://pharos.artresearch.net/category/zeri> <http://www.w3.org/2000/01/rdf-schema#label>	"Zeri" .
+  <https://pharos.artresearch.net/category/zeri> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>
+  <https://pharos.artresearch.net/category/frick> <http://www.w3.org/2000/01/rdf-schema#label>	"Frick" .
+  <https://pharos.artresearch.net/category/frick> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>
+  <https://pharos.artresearch.net/category/marburg> <http://www.w3.org/2000/01/rdf-schema#label>	"Marburg" .
+  <https://pharos.artresearch.net/category/marburg> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>
+  <https://pharos.artresearch.net/category/khi> <http://www.w3.org/2000/01/rdf-schema#label>	"KHI" .
+  <https://pharos.artresearch.net/category/khi> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>
+  <https://pharos.artresearch.net/category/hertziana> <http://www.w3.org/2000/01/rdf-schema#label>	"Hertziana" .
+  <https://pharos.artresearch.net/category/hertziana> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>
   
   <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info> <http://www.w3.org/2000/01/rdf-schema#label> "Work info".
   <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories>.

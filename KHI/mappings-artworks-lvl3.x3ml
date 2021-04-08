@@ -3117,6 +3117,9 @@
 								<arg name="unit" type="constant">-</arg>
 								<arg name="value" type="xpath">text()</arg>
 							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">string-join((text(),"cm ,",../text()),' ')</arg>
+							</label_generator>
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>

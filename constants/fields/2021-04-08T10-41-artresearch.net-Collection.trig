@@ -24,7 +24,26 @@
 @prefix Platform: <http://www.researchspace.org/resource/system/> .
 
 <https://pharos.artresearch.net/fieldDefinition/4/context> {
-  _:t36765233 a sp:Query;
+  <https://pharos.artresearch.net/fieldDefinition/4> a prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>,
+      <http://www.w3.org/ns/ldp#Resource>;
+    prov:generatedAtTime "2021-04-08T07:33:49.069Z"^^xsd:dateTime;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t36792862;
+    <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/itatti>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/photograph_info>,
+      <https://pharos.artresearch.net/category/marburg>, <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>,
+      <https://pharos.artresearch.net/category/hertziana>, <https://pharos.artresearch.net/category/work>,
+      <https://pharos.artresearch.net/category/photo>, <https://pharos.artresearch.net/category/khi>,
+      <https://pharos.artresearch.net/category/zeri>, <https://pharos.artresearch.net/category/frick>;
+    <http://www.researchspace.org/resource/system/fields/order> "600";
+    rdfs:comment "This field is used to indicate a collection to which a document object presently belongs.";
+    prov:wasAttributedTo User:admin;
+    <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t36792863;
+    <http://www.researchspace.org/resource/system/fields/range> crm:E78_Curated_Holding;
+    <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
+    rdfs:label "Collection"@en .
+  
+  _:t36792863 a sp:Query;
     sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE {
 	graph ?graph 
   	{
@@ -35,31 +54,13 @@
 	?provider rdfs:label ?providerLabel.
 }""" .
   
-  <https://pharos.artresearch.net/fieldDefinition/4> a prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>,
-      <http://www.w3.org/ns/ldp#Resource>;
-    <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/itatti>,
-      <https://pharos.artresearch.net/category/marburg>, <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>,
-      <https://pharos.artresearch.net/category/hertziana>, <https://pharos.artresearch.net/category/work>,
-      <https://pharos.artresearch.net/category/photo>, <https://pharos.artresearch.net/category/khi>,
-      <https://pharos.artresearch.net/category/zeri>, <https://pharos.artresearch.net/category/frick>;
-    <http://www.researchspace.org/resource/system/fields/order> "600";
-    rdfs:comment "This field is used to indicate a collection to which a document object presently belongs.";
-    prov:wasAttributedTo User:admin;
-    prov:generatedAtTime "2021-04-01T15:14:39.117Z"^^xsd:dateTime;
-    <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
-    <http://www.researchspace.org/resource/system/fields/range> crm:E78_Curated_Holding;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t36765233;
-    <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    rdfs:label "Collection"@en;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t36765234 .
-  
-  _:t36765234 a sp:Query;
+  _:t36792862 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:node1f2jqhtfcx41 <http://www.w3.org/ns/ldp#contains> <https://pharos.artresearch.net/fieldDefinition/4> .
+  _:node1f2o41cr0x23 <http://www.w3.org/ns/ldp#contains> <https://pharos.artresearch.net/fieldDefinition/4> .
 }
 
 {
-  _:node1f2jqhtfcx41 a <http://www.w3.org/ns/ldp#Container>, <http://www.w3.org/ns/ldp#Resource>,
+  _:node1f2o41cr0x23 a <http://www.w3.org/ns/ldp#Container>, <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity .
 }

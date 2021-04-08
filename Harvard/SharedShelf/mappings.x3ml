@@ -3028,6 +3028,7 @@
 								<arg name="unit" type="xpath">../@unit</arg>
 								<arg name="value" type="xpath">../@dimension1</arg>
 							</instance_generator>
+							
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>

@@ -28,6 +28,7 @@
       <http://www.researchspace.org/resource/system/fields/Field>;
     <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/itatti>,
       <https://pharos.artresearch.net/category/work>, <https://pharos.artresearch.net/category/institution>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/photograph_info>,
       <https://pharos.artresearch.net/category/collection>, <https://pharos.artresearch.net/category/person>,
       <https://pharos.artresearch.net/category/photo>, <https://pharos.artresearch.net/category/frick>,
       <https://pharos.artresearch.net/category/place>, <https://pharos.artresearch.net/category/zeri>,
@@ -36,19 +37,16 @@
     <http://www.researchspace.org/resource/system/fields/domain> crm:E40_Group, crm:E22_Man-Made_Object,
       crm:E78_Curated_Holding, crm:E53_Place;
     <http://www.researchspace.org/resource/system/fields/order> "100";
+    prov:generatedAtTime "2021-04-08T07:38:57.602Z"^^xsd:dateTime;
     rdfs:comment "This field is used to indicate the preferred identifier attributed to the documented instance of the documented object.";
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t36792881;
     <http://www.researchspace.org/resource/system/fields/range> crm:E42_Identifier;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t36750947;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:label "Title"@en;
-    prov:generatedAtTime "2021-03-18T10:45:26.824Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t36750948 .
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t36792880 .
   
-  _:t36750947 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  _:t36750948 a sp:Query;
+  _:t36792880 a sp:Query;
     sp:text """SELECT distinct ?value ?label ?provider ?providerLabel WHERE 
 {
 	graph ?graph
@@ -61,10 +59,13 @@
 	?provider rdfs:label ?providerLabel.
 }""" .
   
-  _:node1f2jqhtfcx114 <http://www.w3.org/ns/ldp#contains> <https://pharos.artresearch.net/fieldDefinition/2> .
+  _:t36792881 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:node1f2o41cr0x20 <http://www.w3.org/ns/ldp#contains> <https://pharos.artresearch.net/fieldDefinition/2> .
 }
 
 {
-  _:node1f2jqhtfcx114 a <http://www.w3.org/ns/ldp#Container>, <http://www.w3.org/ns/ldp#Resource>,
+  _:node1f2o41cr0x20 a <http://www.w3.org/ns/ldp#Container>, <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity .
 }

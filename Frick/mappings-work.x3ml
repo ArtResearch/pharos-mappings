@@ -1664,6 +1664,9 @@
 								<arg name="unit" type="xpath">../@unit</arg>
 								<arg name="value" type="xpath">../@dimension1</arg>
 							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">string-join((../@dimension1,../@unit,",","height"),' ')</arg>
+							</label_generator>
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
@@ -1721,6 +1724,9 @@
 								<arg name="unit" type="xpath">../@unit</arg>
 								<arg name="value" type="xpath">../@dimension2</arg>
 							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">string-join((../@dimension2,../@unit,",","length"),' ')</arg>
+							</label_generator>
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
@@ -1763,15 +1769,6 @@
 						<relation>marc:datafield[@tag="340"]/marc:subfield[@code="b"]</relation>
 					</source_relation>
 					<target_relation>
-						<!--
-						<if>
-							<not>
-								<if>
-									<exists>@dimension1</exists>
-								</if>
-							</not>
-						</if>
-						-->
 						<relationship>crm:P43_has_dimension</relationship>
 					</target_relation>
 				</path>
