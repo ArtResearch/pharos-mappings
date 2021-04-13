@@ -845,13 +845,10 @@
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="constant">http://vocab.getty.edu/aat/300046300</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">photographs</arg>
-								</label_generator>
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
 									<entity>
@@ -866,13 +863,10 @@
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="constant">http://vocab.getty.edu/aat/300127104</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">photographic prints</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -1055,13 +1049,10 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
 										<arg name="text" type="constant">http://vocab.getty.edu/aat/300435418</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">credit line</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>
@@ -1637,13 +1628,10 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
 										<arg name="text" type="constant">http://vocab.getty.edu/aat/300127173</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">negatives (photographs)</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>
@@ -1672,13 +1660,10 @@
 							<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="constant">http://vocab.getty.edu/aat/300046300</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">photographs</arg>
-								</label_generator>
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
 									<entity>
@@ -1693,13 +1678,10 @@
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="constant">http://vocab.getty.edu/aat/300127104</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">photographic prints</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -1882,13 +1864,10 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
 										<arg name="text" type="constant">http://vocab.getty.edu/aat/300435418</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">credit line</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>
@@ -2463,13 +2442,10 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
 										<arg name="text" type="constant">http://vocab.getty.edu/aat/300127173</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">negatives (photographs)</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>
@@ -2500,13 +2476,10 @@
 							<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="constant">http://vocab.getty.edu/aat/300046300</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">photographs</arg>
-								</label_generator>
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
 									<entity>
@@ -2521,13 +2494,10 @@
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="constant">http://vocab.getty.edu/aat/300127104</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">photographic prints</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -2710,13 +2680,10 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
 										<arg name="text" type="constant">http://vocab.getty.edu/aat/300435418</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">credit line</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>
@@ -3291,13 +3258,10 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
 										<arg name="text" type="constant">http://vocab.getty.edu/aat/300127173</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">negatives (photographs)</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>
@@ -3327,13 +3291,10 @@
 							<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="constant">http://vocab.getty.edu/aat/300046300</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">photographs</arg>
-								</label_generator>
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
 									<entity>
@@ -3348,13 +3309,10 @@
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="constant">http://vocab.getty.edu/aat/300127104</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">photographic prints</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -3537,13 +3495,10 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
 										<arg name="text" type="constant">http://vocab.getty.edu/aat/300435418</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">credit line</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>
@@ -4119,13 +4074,10 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>crm:E55_Type</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
 										<arg name="text" type="constant">http://vocab.getty.edu/aat/300127173</arg>
 									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">negatives (photographs)</arg>
-									</label_generator>
 								</entity>
 							</additional>
 						</entity>
@@ -4184,13 +4136,10 @@
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="constant">http://vocab.getty.edu/aat/300127173</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">negatives (photographs)</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -4209,13 +4158,10 @@
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
 									<entity>
-										<type>crm:E55_Type</type>
+										<type>custom:noType</type>
 										<instance_generator name="URIorUUID">
 											<arg name="text" type="constant">http://vocab.getty.edu/aat/300417193</arg>
 										</instance_generator>
-										<label_generator name="Literal">
-											<arg name="text" type="constant">titles (general, names)</arg>
-										</label_generator>
 									</entity>
 								</additional>
 							</entity>
@@ -4349,13 +4295,10 @@
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="constant">http://vocab.getty.edu/aat/300127173</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">negatives (photographs)</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -4374,13 +4317,10 @@
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
 									<entity>
-										<type>crm:E55_Type</type>
+										<type>custom:noType</type>
 										<instance_generator name="URIorUUID">
 											<arg name="text" type="constant">http://vocab.getty.edu/aat/300417193</arg>
 										</instance_generator>
-										<label_generator name="Literal">
-											<arg name="text" type="constant">titles (general, names)</arg>
-										</label_generator>
 									</entity>
 								</additional>
 							</entity>
@@ -4514,13 +4454,10 @@
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="constant">http://vocab.getty.edu/aat/300127173</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">negatives (photographs)</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -4539,13 +4476,10 @@
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
 									<entity>
-										<type>crm:E55_Type</type>
+										<type>custom:noType</type>
 										<instance_generator name="URIorUUID">
 											<arg name="text" type="constant">http://vocab.getty.edu/aat/300417193</arg>
 										</instance_generator>
-										<label_generator name="Literal">
-											<arg name="text" type="constant">titles (general, names)</arg>
-										</label_generator>
 									</entity>
 								</additional>
 							</entity>
@@ -4680,13 +4614,10 @@
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="constant">http://vocab.getty.edu/aat/300127173</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">negatives (photographs)</arg>
-								</label_generator>
 							</entity>
 						</additional>
 						<additional>
@@ -4705,13 +4636,10 @@
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
 									<entity>
-										<type>crm:E55_Type</type>
+										<type>custom:noType</type>
 										<instance_generator name="URIorUUID">
 											<arg name="text" type="constant">http://vocab.getty.edu/aat/300417193</arg>
 										</instance_generator>
-										<label_generator name="Literal">
-											<arg name="text" type="constant">titles (general, names)</arg>
-										</label_generator>
 									</entity>
 								</additional>
 							</entity>
@@ -4844,13 +4772,10 @@
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="constant">http://vocab.getty.edu/aat/300264595</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">repositories (institutions)</arg>
-								</label_generator>
 							</entity>
 						</additional>
 					 </entity>
@@ -4906,13 +4831,10 @@
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="constant">http://vocab.getty.edu/aat/300264595</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">repositories (institutions)</arg>
-								</label_generator>
 							</entity>
 						</additional>
 					 </entity>
@@ -4968,13 +4890,10 @@
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="constant">http://vocab.getty.edu/aat/300264595</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">repositories (institutions)</arg>
-								</label_generator>
 							</entity>
 						</additional>
 					 </entity>
@@ -5030,13 +4949,10 @@
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:E55_Type</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="constant">http://vocab.getty.edu/aat/300264595</arg>
 								</instance_generator>
-								<label_generator name="Literal">
-									<arg name="text" type="constant">repositories (institutions)</arg>
-								</label_generator>
 							</entity>
 						</additional>
 					 </entity>

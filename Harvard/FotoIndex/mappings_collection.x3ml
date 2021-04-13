@@ -400,7 +400,7 @@
 								<type>custom:noType</type>
 								<instance_generator name="URIwithType">
 									<arg name="type" type="constant">type</arg>
-									<arg name="id" type="constant">VIT_Location</arg>
+									<arg name="id" type="constant">VIT Location</arg>
 								</instance_generator>
 							</entity>
 						</additional>

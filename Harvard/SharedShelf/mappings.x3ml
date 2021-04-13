@@ -2586,7 +2586,7 @@
 										<type>custom:noType</type>
 										<instance_generator name="URIwithType">
 											<arg name="type" type="constant">type</arg>
-											<arg name="id" type="constant">RepresentationId</arg>
+											<arg name="id" type="constant">Representation ID</arg>
 										</instance_generator>
 									</entity>
 								</additional>
@@ -3243,40 +3243,7 @@
 						</entity>
 					</target_node>
 				</range>
-			</link> 
-			
-			<!--
-			<link> 
-				<path>
-					<source_relation>
-						<relation>../../Assets/Asset</relation>
-					</source_relation>
-					<target_relation>
-						<relationship>crm:P1_is_identified_by</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>../../Assets/Asset</source_node>
-					<target_node>
-						<entity>
-							<type>crm:E42_Identifier</type>
-							<instance_generator name="URIorUUID">
-								<arg name="text" type="xpath">@uri</arg>
-							</instance_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-									<entity>
-									<type>custom:noType</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300417193</arg>
-									</instance_generator>
-								</entity>
-							</additional>
-						</entity>
-					</target_node>
-				</range>
 			</link>
-			-->
 
 			<link>
 				<path>
@@ -3351,7 +3318,7 @@
 									<type>custom:noType</type>
 									<instance_generator name="URIwithType">
 										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="constant">Image_Classification_Number</arg>
+										<arg name="id" type="constant">Image Classification Number</arg>
 									</instance_generator>
 								</entity>
 							</additional>
@@ -3867,7 +3834,7 @@
 										<type>custom:noType</type>
 										<instance_generator name="URIwithType">
 											<arg name="type" type="constant">type</arg>
-											<arg name="id" type="constant">RepresentationId</arg>
+											<arg name="id" type="constant">Representation ID</arg>
 										</instance_generator>
 									</entity>
 								</additional>
@@ -4445,7 +4412,7 @@
 									<type>custom:noType</type>
 									<instance_generator name="URIwithType">
 										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="constant">Image_Classification_Number</arg>
+										<arg name="id" type="constant">Image Classification Number</arg>
 									</instance_generator>
 								</entity>
 							</additional>
@@ -4753,7 +4720,7 @@
 										<type>custom:noType</type>
 										<instance_generator name="URIwithType">
 											<arg name="type" type="constant">type</arg>
-											<arg name="id" type="constant">RepresentationId</arg>
+											<arg name="id" type="constant">Representation ID</arg>
 										</instance_generator>
 									</entity>
 								</additional>
@@ -5234,40 +5201,7 @@
 						</entity>
 					</target_node>
 				</range>
-			</link> 
-			
-			<!--
-			<link> 
-				<path>
-					<source_relation>
-						<relation>../../Assets/Asset</relation>
-					</source_relation>
-					<target_relation>
-						<relationship>crm:P1_is_identified_by</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>../../Assets/Asset</source_node>
-					<target_node>
-						<entity>
-							<type>crm:E42_Identifier</type>
-							<instance_generator name="URIorUUID">
-								<arg name="text" type="xpath">@uri</arg>
-							</instance_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-									<entity>
-									<type>custom:noType</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300417193</arg>
-									</instance_generator>
-								</entity>
-							</additional>
-						</entity>
-					</target_node>
-				</range>
 			</link>
-			-->
 
 			<link>
 				<path>
@@ -5342,7 +5276,7 @@
 									<type>custom:noType</type>
 									<instance_generator name="URIwithType">
 										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="constant">Image_Classification_Number</arg>
+										<arg name="id" type="constant">Image Classification Number</arg>
 									</instance_generator>
 								</entity>
 							</additional>

@@ -2423,7 +2423,7 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>custom:nbType</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIwithType">
 										<arg name="type" type="constant">type</arg>
 										<arg name="id" type="constant">Page</arg>
@@ -4238,7 +4238,7 @@
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
-									<type>custom:nbType</type>
+									<type>custom:noType</type>
 									<instance_generator name="URIwithType">
 										<arg name="type" type="constant">type</arg>
 										<arg name="id" type="constant">Page</arg>
@@ -4675,7 +4675,7 @@
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
 								<type>custom:noType</type>
-								<instance_generator name="URIwithType">
+								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">type</arg>
 									<arg name="id" type="constant">LOT</arg>
 								</instance_generator>
@@ -5748,7 +5748,7 @@
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
 								<type>custom:noType</type>
-								<instance_generator name="URIwithType">
+								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">type</arg>
 									<arg name="id" type="constant">LOT</arg>
 								</instance_generator>

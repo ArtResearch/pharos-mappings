@@ -481,7 +481,7 @@
 								<type>custom:noType</type>
 								<instance_generator name="URIwithType">
 									<arg name="type" type="constant">type</arg>
-									<arg name="id" type="constant">AAT</arg>
+									<arg name="id" type="constant">AAT ID</arg>
 								</instance_generator>
 							</entity>
 						</additional>
@@ -675,7 +675,7 @@
 								<type>custom:noType</type>
 								<instance_generator name="URIwithType">
 									<arg name="type" type="constant">type</arg>
-									<arg name="id" type="constant">VIAF</arg>
+									<arg name="id" type="constant">VIAF ID</arg>
 								</instance_generator>
 							</entity>
 						</additional>
@@ -741,7 +741,7 @@
 								<type>custom:noType</type>
 								<instance_generator name="URIwithType">
 									<arg name="type" type="constant">type</arg>
-									<arg name="id" type="constant">VIAF</arg>
+									<arg name="id" type="constant">VIAF ID</arg>
 								</instance_generator>
 							</entity>
 						</additional>
@@ -807,7 +807,7 @@
 								<type>custom:noType</type>
 								<instance_generator name="URIwithType">
 									<arg name="type" type="constant">type</arg>
-									<arg name="id" type="constant">VIAF</arg>
+									<arg name="id" type="constant">VIAF ID</arg>
 								</instance_generator>
 							</entity>
 						</additional>
@@ -873,7 +873,7 @@
 								<type>custom:noType</type>
 								<instance_generator name="URIwithType">
 									<arg name="type" type="constant">type</arg>
-									<arg name="id" type="constant">Geonames_URI</arg>
+									<arg name="id" type="constant">Geonames URI</arg>
 								</instance_generator>
 							</entity>
 						</additional>
@@ -939,7 +939,7 @@
 								<type>custom:noType</type>
 								<instance_generator name="URIwithType">
 									<arg name="type" type="constant">type</arg>
-									<arg name="id" type="constant">Wikidata</arg>
+									<arg name="id" type="constant">Wikidata ID</arg>
 								</instance_generator>
 							</entity>
 						</additional>

@@ -1182,7 +1182,7 @@
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
 									<type>custom:noType</type>
-									<instance_generator name="URIwithType">
+									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">type</arg>
 										<arg name="id" type="constant">IAP</arg>
 									</instance_generator>
@@ -2295,225 +2295,6 @@
 					</target_node>
 				</range>
 			</link>
-			
-			<!--
-			<link> 
-				<path>
-					<source_relation>
-						<relation>marc:datafield[@tag="590" and @ind1="9"]/marc:subfield[@code="c"]</relation>
-					</source_relation>
-					<target_relation>
-						<if>
-							<and>
-								<if>
-									<equals value="Photograph">../marc:subfield[@code="a"]/text()</equals>
-								</if>
-								<if>
-									<exists>text()</exists>
-								</if>
-							</and>
-						</if>
-						<relationship>crm:P138i_is_represented_by</relationship>
-						<entity>
-							<type>crm:E36_Visual_Item</type>
-							<instance_generator name="VisualItemUri">
-								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
-							</instance_generator>
-						</entity>
-						<relationship>crm:P128i_is_carried_by</relationship>
-					</target_relation>
-				</path>				
-				<range>
-					<source_node>marc:datafield[@tag="590" and @ind1="9"]/marc:subfield[@code="c"]</source_node>
-					<target_node>
-						<entity>
-							<type>crm:E22_Man-Made_Object</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">negative</arg>
-								<arg name="id" type="xpath">text()</arg>
-							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300127173</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">negatives (photographs)</arg>
-									</label_generator>
-								</entity>
-							</additional>
-							<additional>
-								<relationship>crm:P1_is_identified_by</relationship>
-								<entity>
-									<type>crm:E42_Identifier</type>
-									<instance_generator name="IdentifierURI">	
-										<arg name="subject_type" type="constant">negative</arg>
-										<arg name="subject_id" type="xpath">text()</arg>
-										<arg name="identifier_type" type="constant">identifier</arg>
-										<arg name="identifier_id" type="xpath">text()</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="xpath">text()</arg>
-									</label_generator>
-									<additional>
-										<relationship>crm:P2_has_type</relationship>
-										<entity>
-											<type>custom:noType</type>
-											<instance_generator name="URIorUUID">
-												<arg name="text" type="constant">http://vocab.getty.edu/aat/300417193</arg>
-											</instance_generator>
-										</entity>
-									</additional>
-								</entity>
-							</additional>
-						</entity>
-					</target_node>
-				</range>
-			</link>
-			
-			<link> 
-				<path>
-					<source_relation>
-						<relation>marc:datafield[@tag="590" and @ind1="9"]/marc:subfield[@code="d"]</relation>
-					</source_relation>
-					<target_relation>
-						<if>
-							<and>
-								<if>
-									<equals value="Photograph">../marc:subfield[@code="a"]/text()</equals>
-								</if>
-								<if>
-									<exists>text()</exists>
-								</if>
-							</and>
-						</if>
-						<relationship>crm:P138i_is_represented_by</relationship>
-						<entity>
-							<type>crm:E36_Visual_Item</type>
-							<instance_generator name="VisualItemUri">
-								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
-							</instance_generator>
-						</entity>
-						<relationship>crm:P128i_is_carried_by</relationship>
-					</target_relation>
-				</path>				
-				<range>
-					<source_node>marc:datafield[@tag="590" and @ind1="9"]/marc:subfield[@code="d"]</source_node>
-					<target_node>
-						<entity>
-							<type>crm:E22_Man-Made_Object</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">negative</arg>
-								<arg name="id" type="xpath">text()</arg>
-							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300127173</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">negatives (photographs)</arg>
-									</label_generator>
-								</entity>
-							</additional>
-							<additional>
-								<relationship>crm:P1_is_identified_by</relationship>
-								<entity>
-									<type>crm:E42_Identifier</type>
-									<instance_generator name="IdentifierURI">	
-										<arg name="subject_type" type="constant">negative</arg>
-										<arg name="subject_id" type="xpath">text()</arg>
-										<arg name="identifier_type" type="constant">identifier</arg>
-										<arg name="identifier_id" type="xpath">text()</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="xpath">text()</arg>
-									</label_generator>
-									<additional>
-										<relationship>crm:P2_has_type</relationship>
-										<entity>
-											<type>custom:noType</type>
-											<instance_generator name="URIorUUID">
-												<arg name="text" type="constant">http://vocab.getty.edu/aat/300417193</arg>
-											</instance_generator>
-										</entity>
-									</additional>
-								</entity>
-							</additional>
-						</entity>
-					</target_node>
-				</range>
-			</link>
-			-->
-			<!--<link> 
-				<path>
-					<source_relation>
-						<relation>marc:datafield[@tag="590" and @ind1="9"]</relation>
-					</source_relation>
-					<target_relation>
-						<if>
-							<equals value="Digital image">marc:subfield[@code="a"]/text()</equals>
-						</if>
-						<relationship>crm:P138i_is_represented_by</relationship>
-						<entity>
-							<type>crm:E36_Visual_Item</type>
-							<instance_generator name="VisualItemUri">
-								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
-							</instance_generator>
-						</entity>
-						<relationship>crm:P165i_is_incorported_in</relationship>
-					</target_relation>
-				</path>				
-				<range>
-					<source_node>marc:datafield[@tag="590" and @ind1="9"]</source_node>
-					<target_node>
-						<entity>
-							<type>crmdig:D1_Digital_Object</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">digital_object</arg>
-								<arg name="id" type="xpath">marc:subfield[@code="g"]/text()</arg>
-							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">marc:subfield[@code="g"]/text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300417379</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">digital photographs</arg>
-									</label_generator>
-								</entity>
-							</additional>
-							<additional>
-								<relationship>crm:P138i_has_representation</relationship>
-								<entity>
-									<type>crm:E38_Image</type>
-									<instance_generator name="FrickImageURI">
-										<arg name="id" type="xpath">marc:subfield[@code="g"]</arg>
-									</instance_generator>
-								</entity>
-							</additional>
-						</entity>
-					</target_node>
-				</range>
-			</link> -->
 				
 			<link> 
 				<path>
@@ -5016,115 +4797,7 @@
 				</target_node>
 			</domain>
 		
-		</mapping>	
-		
-		<!--
-		<mapping namedgraph="http://graph">
-
-			<domain>
-				<source_node>//marc:datafield[@tag="790" and @ind1="0"]</source_node>
-				<target_node>
-                    <entity>
-						<type>crm:E78_Curated_Holding</type>
-						<instance_generator name="URIwithType">
-							<arg name="type" type="constant">collection</arg>
-							<arg name="id" type="xpath">marc:subfield[@code="a"]/text()</arg>
-						</instance_generator>
-						<label_generator name="Literal">
-							<arg name="text" type="xpath">marc:subfield[@code="a"]/text()</arg>
-						</label_generator>
-						<additional>
-							<relationship>custom:has_provider</relationship>
-							<entity>
-								<type>custom:noType</type>
-								<instance_generator name="URIwithType">
-									<arg name="type" type="constant">source</arg>
-									<arg name="id" type="constant">Frick</arg>
-								</instance_generator>
-							</entity>
-						</additional>
-					</entity>
-				</target_node>
-			</domain>
-			
-			<link> 
-				<path>
-					<source_relation>
-						<relation>marc:subfield[@code="a"]</relation>
-					</source_relation>
-					<target_relation>
-						<relationship>crm:P1_is_identified_by</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>marc:subfield[@code="a"]</source_node>
-					<target_node>
-						<entity>
-							<type>crm:E41_Appellation</type>
-							<instance_generator name="IdentifierURI">	
-								<arg name="subject_type" type="constant">collection</arg>
-								<arg name="subject_id" type="xpath">text()</arg>
-								<arg name="identifier_type" type="constant">appellation</arg>
-								<arg name="identifier_id" type="xpath">text()</arg>
-							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>custom:noType</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300417193</arg>
-									</instance_generator>
-								</entity>
-							</additional>
-						</entity>
-					</target_node>
-				</range>
-			</link>
-			
-			<link> 
-				<path>
-					<source_relation>
-						<relation>marc:subfield[@code="g"]</relation>
-					</source_relation>
-					<target_relation>
-						<relationship>crm:P2_has_type</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>marc:subfield[@code="g"]</source_node>
-					<target_node>
-						<entity>
-							<type>crm:E55_Type</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">type</arg>
-								<arg name="id" type="xpath">text()</arg>
-							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>crm:E55_Type</type>
-									<instance_generator name="URIwithType">
-										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="constant">Collection Type</arg>
-									</instance_generator>
-									<label_generator name="Literal">
-										<arg name="text" type="constant">Collection Type</arg>
-									</label_generator>
-								</entity>
-							</additional>
-						</entity>
-					</target_node>
-				</range>
-			</link>
-			
-		</mapping>	
-		-->
+		</mapping>
 		
 		<mapping namedgraph="graph">
 			<domain>
@@ -5223,7 +4896,7 @@
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="constant">Publication</arg>
 							</instance_generator>
@@ -5249,7 +4922,7 @@
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="constant">Postcard</arg>
 							</instance_generator>
@@ -5275,7 +4948,7 @@
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="constant">Photostat</arg>
 							</instance_generator>

@@ -435,7 +435,7 @@
 								<type>custom:noType</type>
 								<instance_generator name="URIwithType">
 									<arg name="type" type="constant">type</arg>
-									<arg name="id" type="constant">Unknown</arg>
+									<arg name="id" type="constant">Unknown Artist</arg>
 								</instance_generator>
 							</entity>
 						</additional>
@@ -677,7 +677,7 @@
 								<type>custom:noType</type>
 								<instance_generator name="URIwithType">
 									<arg name="type" type="constant">type</arg>
-									<arg name="id" type="constant">Geonames_URI</arg>
+									<arg name="id" type="constant">Geonames URI</arg>
 								</instance_generator>
 							</entity>
 						</additional>
@@ -743,7 +743,7 @@
 								<type>custom:noType</type>
 								<instance_generator name="URIwithType">
 									<arg name="type" type="constant">type</arg>
-									<arg name="id" type="constant">ULAN</arg>
+									<arg name="id" type="constant">ULAN ID</arg>
 								</instance_generator>
 							</entity>
 						</additional>
@@ -809,7 +809,7 @@
 								<type>custom:noType</type>
 								<instance_generator name="URIwithType">
 									<arg name="type" type="constant">type</arg>
-									<arg name="id" type="constant">Wikidata</arg>
+									<arg name="id" type="constant">Wikidata ID</arg>
 								</instance_generator>
 							</entity>
 						</additional>
@@ -875,7 +875,7 @@
 								<type>custom:noType</type>
 								<instance_generator name="URIwithType">
 									<arg name="type" type="constant">type</arg>
-									<arg name="id" type="constant">ULAN</arg>
+									<arg name="id" type="constant">ULAN ID</arg>
 								</instance_generator>
 							</entity>
 						</additional>

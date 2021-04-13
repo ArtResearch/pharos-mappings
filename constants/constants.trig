@@ -47,11 +47,11 @@
                 "repository numbers" .
 }
 
-<https://pharos.artresearch.net/resource/frick/type/QDYCHFM8/graph> {
-    <https://pharos.artresearch.net/resource/frick/type/QDYCHFM8>
+<https://pharos.artresearch.net/resource/frick/type/IAP/graph> {
+    <https://pharos.artresearch.net/resource/frick/type/IAP>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
-                    "IAP" .    
+                    "IAP" .
 }
 
 <http://vocab.getty.edu/aat/300055863/graph> {
@@ -82,8 +82,8 @@
                     "sources (general concept)" .
 }
 
-<https://pharos.artresearch.net/resource/frick/type/1H7FVNNV/graph> {
-    <https://pharos.artresearch.net/resource/frick/type/1H7FVNNV>
+<https://pharos.artresearch.net/resource/frick/type/A05C8ADE-5ADD-3EC0-8758-12AFFA57103D/graph> {
+    <https://pharos.artresearch.net/resource/frick/type/A05C8ADE-5ADD-3EC0-8758-12AFFA57103D>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Subject Description" .
@@ -103,8 +103,8 @@
                     "credit line" .
 }
 
-<https://pharos.artresearch.net/resource/frick/type/QXR2LP6A/graph> {
-    <https://pharos.artresearch.net/resource/frick/type/QXR2LP6A>
+<https://pharos.artresearch.net/resource/frick/type/14BDAE61-717F-32C8-B4A7-115F826F4913/graph> {
+    <https://pharos.artresearch.net/resource/frick/type/14BDAE61-717F-32C8-B4A7-115F826F4913>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Color Description" .
@@ -166,15 +166,15 @@
                     "photographic prints" .
 }
 
-<https://pharos.artresearch.net/resource/frick/type/VB6V45M7/graph> {
-    <https://pharos.artresearch.net/resource/frick/type/VB6V45M7>
+<https://pharos.artresearch.net/resource/frick/type/91FA9EE4-6D67-30D7-B6CC-719B692440F2/graph> {
+    <https://pharos.artresearch.net/resource/frick/type/91FA9EE4-6D67-30D7-B6CC-719B692440F2>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Mount Number" .
 }
 
-<https://pharos.artresearch.net/resource/frick/type/1HBAGDWS/graph> {
-    <https://pharos.artresearch.net/resource/frick/type/1HBAGDWS>
+<https://pharos.artresearch.net/resource/frick/type/AB5D61DB-BA0F-393D-8279-95BFC440B5AB/graph> {
+    <https://pharos.artresearch.net/resource/frick/type/AB5D61DB-BA0F-393D-8279-95BFC440B5AB>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Image Description" .
@@ -187,22 +187,22 @@
                     "repositories (institutions)" .
 }
 
-<https://pharos.artresearch.net/resource/frick/type/TRU4D8VM/graph> {
-        <https://pharos.artresearch.net/resource/frick/type/TRU4D8VM>
+<https://pharos.artresearch.net/resource/frick/type/Publication/graph> {
+        <https://pharos.artresearch.net/resource/frick/type/Publication>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Publication" .
 }
 
-<https://pharos.artresearch.net/resource/frick/type/1HR842YN/graph> {
-        <https://pharos.artresearch.net/resource/frick/type/1HR842YN>
+<https://pharos.artresearch.net/resource/frick/type/Postcard/graph> {
+        <https://pharos.artresearch.net/resource/frick/type/Postcard>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Postcard" .
 }
 
-<https://pharos.artresearch.net/resource/frick/type/T86V55W3/graph> {
-        <https://pharos.artresearch.net/resource/frick/type/T86V55W3>
+<https://pharos.artresearch.net/resource/frick/type/Photostat/graph> {
+        <https://pharos.artresearch.net/resource/frick/type/Photostat>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Photostat" .
@@ -250,8 +250,8 @@
                     "classification (information handling function)" .
 }
 
-<https://pharos.artresearch.net/resource/frick/type/QHNBSHMZ/graph> {
-        <https://pharos.artresearch.net/resource/frick/type/QHNBSHMZ>
+<https://pharos.artresearch.net/resource/frick/type/0C4C3FCE-41C5-32DF-B701-4CE8DA15A6BC/graph> {
+        <https://pharos.artresearch.net/resource/frick/type/0C4C3FCE-41C5-32DF-B701-4CE8DA15A6BC>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Institution Type" .
@@ -271,64 +271,64 @@
                     "FotoIndex" .
 }
 
-<https://pharos.artresearch.net/resource/itatti/type/1JYJBFKJ/graph> {
-        <https://pharos.artresearch.net/resource/itatti/type/1JYJBFKJ>
+<https://pharos.artresearch.net/resource/itatti/type/F7CBDA9E-2020-3744-B081-E05916F0285C/graph> {
+        <https://pharos.artresearch.net/resource/itatti/type/F7CBDA9E-2020-3744-B081-E05916F0285C>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Hollis Record" .
 }
 
-<https://pharos.artresearch.net/resource/itatti/type/US06J6XQ/graph> {
-        <https://pharos.artresearch.net/resource/itatti/type/US06J6XQ>
+<https://pharos.artresearch.net/resource/itatti/type/95043E34-ACD3-340F-906B-A038283FBA22/graph> {
+        <https://pharos.artresearch.net/resource/itatti/type/95043E34-ACD3-340F-906B-A038283FBA22>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Unknown Artist" .
 }
 
-<https://pharos.artresearch.net/resource/itatti/type/SKQ1TXPV/graph> {
-        <https://pharos.artresearch.net/resource/itatti/type/SKQ1TXPV>
+<https://pharos.artresearch.net/resource/itatti/type/24459EBB-6940-30AD-9633-A6C936E68E28/graph> {
+        <https://pharos.artresearch.net/resource/itatti/type/24459EBB-6940-30AD-9633-A6C936E68E28>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Geonames URI" .
 }
 
-<https://pharos.artresearch.net/resource/itatti/type/VF6GM283/graph> {
-        <https://pharos.artresearch.net/resource/itatti/type/VF6GM283>
+<https://pharos.artresearch.net/resource/itatti/type/CBF68B88-0D57-34AC-BF13-DF2C9EA8D240/graph> {
+        <https://pharos.artresearch.net/resource/itatti/type/CBF68B88-0D57-34AC-BF13-DF2C9EA8D240>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "ULAN ID" .
 }
 
-<https://pharos.artresearch.net/resource/itatti/type/TODDT1JB/graph> {
-        <https://pharos.artresearch.net/resource/itatti/type/TODDT1JB>
+<https://pharos.artresearch.net/resource/itatti/type/DB99A06A-5F3D-35F1-BA1C-FFD36F7A5073/graph> {
+        <https://pharos.artresearch.net/resource/itatti/type/DB99A06A-5F3D-35F1-BA1C-FFD36F7A5073>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Wikidata ID" .
 }
 
-<https://pharos.artresearch.net/resource/itatti/type/RL7VIRM4/graph> {
-        <https://pharos.artresearch.net/resource/itatti/type/RL7VIRM4>
+<https://pharos.artresearch.net/resource/itatti/type/7FEC94D9-88EE-310D-A679-EF7387680A67/graph> {
+        <https://pharos.artresearch.net/resource/itatti/type/7FEC94D9-88EE-310D-A679-EF7387680A67>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "AAT ID" .
 }
 
-<https://pharos.artresearch.net/resource/itatti/type/QY1MJ9D7/graph> {
-        <https://pharos.artresearch.net/resource/itatti/type/QY1MJ9D7>
+<https://pharos.artresearch.net/resource/itatti/type/BF8708CE-1EB5-37F0-8A40-67462F06E79D/graph> {
+        <https://pharos.artresearch.net/resource/itatti/type/BF8708CE-1EB5-37F0-8A40-67462F06E79D>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "VIAF ID" .
 }
 
-<https://pharos.artresearch.net/resource/itatti/type/RHGLZLF6/graph> {
-        <https://pharos.artresearch.net/resource/itatti/type/RHGLZLF6>
+<https://pharos.artresearch.net/resource/itatti/type/24E7A643-9832-3E9D-BBDB-0F89D3073364/graph> {
+        <https://pharos.artresearch.net/resource/itatti/type/24E7A643-9832-3E9D-BBDB-0F89D3073364>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Hist. Photo Col." .
 }
 
-<https://pharos.artresearch.net/resource/itatti/type/QXG0LQH6/graph> {
-        <https://pharos.artresearch.net/resource/itatti/type/QXG0LQH6>
+<https://pharos.artresearch.net/resource/itatti/type/2DA13E7C-7B4D-32EA-AFF6-3AF228E839E2/graph> {
+        <https://pharos.artresearch.net/resource/itatti/type/2DA13E7C-7B4D-32EA-AFF6-3AF228E839E2>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "VIT Location" .
@@ -356,15 +356,15 @@
                     "http://iiif.io/api/image" .
 }
 
-<https://pharos.artresearch.net/resource/itatti/type/SOPP167C/graph> {
-        <https://pharos.artresearch.net/resource/itatti/type/SOPP167C>
+<https://pharos.artresearch.net/resource/itatti/type/4F6A2899-2950-328C-B172-54AD813EE993/graph> {
+        <https://pharos.artresearch.net/resource/itatti/type/4F6A2899-2950-328C-B172-54AD813EE993>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "recto" .
 }
 
-<https://pharos.artresearch.net/resource/itatti/type/1IYNSVTU/graph> {
-        <https://pharos.artresearch.net/resource/itatti/type/1IYNSVTU>
+<https://pharos.artresearch.net/resource/itatti/type/DEDDF600-5882-37D4-B91C-7CCCD5556894/graph> {
+        <https://pharos.artresearch.net/resource/itatti/type/DEDDF600-5882-37D4-B91C-7CCCD5556894>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "verso" .
@@ -476,8 +476,8 @@
                     "formerly attributed to (attribution qualifier)" .
 }
 
-<https://pharos.artresearch.net/resource/itatti/type/1JY27MWT/graph> {
-        <https://pharos.artresearch.net/resource/itatti/type/1JY27MWT>
+<https://pharos.artresearch.net/resource/itatti/type/F17BBE75-6AE6-3818-9D68-0F5A74C7FCE0/graph> {
+        <https://pharos.artresearch.net/resource/itatti/type/F17BBE75-6AE6-3818-9D68-0F5A74C7FCE0>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "?" .
@@ -490,11 +490,11 @@
                     "materials/technique description" .
 }
 
-<https://pharos.artresearch.net/resource/itatti/type/QXFGC0W7/graph> {
-        <https://pharos.artresearch.net/resource/itatti/type/QXFGC0W7>
+<https://pharos.artresearch.net/resource/itatti/type/3AD8CD91-D5B0-3058-936D-88255728FE90/graph> {
+        <https://pharos.artresearch.net/resource/itatti/type/3AD8CD91-D5B0-3058-936D-88255728FE90>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
-                    "Representation Id" .
+                    "Representation ID" .
 }
 
 <https://pharos.artresearch.net/resource/itatti/type/photo_card/graph> {
@@ -511,13 +511,12 @@
                     "record identifiers" .
 }
 
-<https://pharos.artresearch.net/resource/itatti/type/1H7GDWR4/graph> {
-        <https://pharos.artresearch.net/resource/itatti/type/1H7GDWR4>
+<https://pharos.artresearch.net/resource/itatti/type/81BEE82E-03B4-3161-9505-BD97708DC7C7/graph> {
+        <https://pharos.artresearch.net/resource/itatti/type/81BEE82E-03B4-3161-9505-BD97708DC7C7>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Image Classification Number" .
 }
-
 
 <http://vocab.getty.edu/aat/300417379/graph> {
         <http://vocab.getty.edu/aat/300417379>
@@ -554,22 +553,22 @@
                     "Zeri" .
 }
 
-<https://pharos.artresearch.net/resource/zeri/type/1JECOI9N/graph> {
-        <https://pharos.artresearch.net/resource/zeri/type/1JECOI9N>
+<https://pharos.artresearch.net/resource/zeri/type/E1584640-6C21-39D3-A25F-EF26DAF637CA/graph> {
+        <https://pharos.artresearch.net/resource/zeri/type/E1584640-6C21-39D3-A25F-EF26DAF637CA>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Century" .
 }
 
-<https://pharos.artresearch.net/resource/zeri/type/QE73H5NI/graph> {
-        <https://pharos.artresearch.net/resource/zeri/type/QE73H5NI>
+<https://pharos.artresearch.net/resource/zeri/type/06AD5CF8-6101-3163-AA24-098D5FD8043D/graph> {
+        <https://pharos.artresearch.net/resource/zeri/type/06AD5CF8-6101-3163-AA24-098D5FD8043D>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Part of Century" .
 }
 
-<https://pharos.artresearch.net/resource/zeri/type/T86X3P9H/graph> {
-        <https://pharos.artresearch.net/resource/zeri/type/T86X3P9H>
+<https://pharos.artresearch.net/resource/zeri/type/5C99FF91-09F7-34B2-90C4-A4D5E07E32F2/graph> {
+        <https://pharos.artresearch.net/resource/zeri/type/5C99FF91-09F7-34B2-90C4-A4D5E07E32F2>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Alternative Date" .
@@ -610,71 +609,71 @@
                     "diameter" .
 }
 
-<https://pharos.artresearch.net/resource/zeri/type/RH7TIBC1/graph> {
-        <https://pharos.artresearch.net/resource/zeri/type/RH7TIBC1>
+<https://pharos.artresearch.net/resource/zeri/type/2192CF49-2BB9-332F-B3A8-D0364386D1DD/graph> {
+        <https://pharos.artresearch.net/resource/zeri/type/2192CF49-2BB9-332F-B3A8-D0364386D1DD>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Dimension Description" .
 }
 
-<https://pharos.artresearch.net/resource/zeri/type/QY4F5M87/graph> {
-        <https://pharos.artresearch.net/resource/zeri/type/QY4F5M87>
+<https://pharos.artresearch.net/resource/zeri/type/193CFC9B-E3B9-3583-9C6A-F2FEA6650E60/graph> {
+        <https://pharos.artresearch.net/resource/zeri/type/193CFC9B-E3B9-3583-9C6A-F2FEA6650E60>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Page" .
 }
 
-<https://pharos.artresearch.net/resource/zeri/type/1IB5XOTI/graph> {
-        <https://pharos.artresearch.net/resource/zeri/type/1IB5XOTI>
+<https://pharos.artresearch.net/resource/zeri/type/C41094D2-25DE-386B-9D93-296660428710/graph> {
+        <https://pharos.artresearch.net/resource/zeri/type/C41094D2-25DE-386B-9D93-296660428710>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Pseudonym" .
 }
 
-<https://pharos.artresearch.net/resource/zeri/type/VBSI570G/graph> {
-        <https://pharos.artresearch.net/resource/zeri/type/VBSI570G>
+<https://pharos.artresearch.net/resource/zeri/type/LOT/graph> {
+        <https://pharos.artresearch.net/resource/zeri/type/LOT>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "LOT" .
 }
 
-<https://pharos.artresearch.net/resource/zeri/type/R1IVXXII/graph> {
-        <https://pharos.artresearch.net/resource/zeri/type/R1IVXXII>
+<https://pharos.artresearch.net/resource/zeri/type/1ECBF0E5-CD6A-3B5E-95AD-0BA3870DD16D/graph> {
+        <https://pharos.artresearch.net/resource/zeri/type/1ECBF0E5-CD6A-3B5E-95AD-0BA3870DD16D>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Specific Object Type" .
 }
 
-<https://pharos.artresearch.net/resource/zeri/type/RLB7660V/graph> {
-        <https://pharos.artresearch.net/resource/zeri/type/RLB7660V>
+<https://pharos.artresearch.net/resource/zeri/type/2FFB98D7-1EE2-3F1F-A034-6031DA9AFC8D/graph> {
+        <https://pharos.artresearch.net/resource/zeri/type/2FFB98D7-1EE2-3F1F-A034-6031DA9AFC8D>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Parthood Status" .
 }
 
-<https://pharos.artresearch.net/resource/zeri/type/1HBAY8T0/graph> {
-        <https://pharos.artresearch.net/resource/zeri/type/1HBAY8T0>
+<https://pharos.artresearch.net/resource/zeri/type/ABC63490-C815-3F81-A76F-930216C8D92B/graph> {
+        <https://pharos.artresearch.net/resource/zeri/type/ABC63490-C815-3F81-A76F-930216C8D92B>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Village" .
 }
 
-<https://pharos.artresearch.net/resource/zeri/type/1IBC0CDO/graph> {
-        <https://pharos.artresearch.net/resource/zeri/type/1IBC0CDO>
+<https://pharos.artresearch.net/resource/zeri/type/C6B5D0BB-9A0C-3F07-B863-FDAEF9773F7C/graph> {
+        <https://pharos.artresearch.net/resource/zeri/type/C6B5D0BB-9A0C-3F07-B863-FDAEF9773F7C>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Province" .
 }
 
-<https://pharos.artresearch.net/resource/zeri/type/VB92JRF4/graph> {
-        <https://pharos.artresearch.net/resource/zeri/type/VB92JRF4>
+<https://pharos.artresearch.net/resource/zeri/type/9220BFE7-066C-3521-A053-795BAA0F74E2/graph> {
+        <https://pharos.artresearch.net/resource/zeri/type/9220BFE7-066C-3521-A053-795BAA0F74E2>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Primary Iconography" .
 }
 
-<https://pharos.artresearch.net/resource/zeri/type/RHAHUREM/graph> {
-        <https://pharos.artresearch.net/resource/zeri/type/RHAHUREM>
+<https://pharos.artresearch.net/resource/zeri/type/220F3D37-5058-3B9D-B485-68A0B5B9A5F1/graph> {
+        <https://pharos.artresearch.net/resource/zeri/type/220F3D37-5058-3B9D-B485-68A0B5B9A5F1>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Keyword" .
@@ -687,8 +686,8 @@
                     "bibliography (category)" .
 }
 
-<https://pharos.artresearch.net/resource/zeri/type/SOPP167C/graph> {
-        <https://pharos.artresearch.net/resource/zeri/type/SOPP167C>
+<https://pharos.artresearch.net/resource/zeri/type/4F6A2899-2950-328C-B172-54AD813EE993/graph> {
+        <https://pharos.artresearch.net/resource/zeri/type/4F6A2899-2950-328C-B172-54AD813EE993>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "recto" .
@@ -701,15 +700,15 @@
                     "shelf marks" .
 }
 
-<https://pharos.artresearch.net/resource/zeri/type/URGSHXQZ/graph> {
-        <https://pharos.artresearch.net/resource/zeri/type/URGSHXQZ>
+<https://pharos.artresearch.net/resource/zeri/type/8126E5BF-5691-3E5D-9778-6F1C7406CA7D/graph> {
+        <https://pharos.artresearch.net/resource/zeri/type/8126E5BF-5691-3E5D-9778-6F1C7406CA7D>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Specific Ownership" .
 }
 
-<https://pharos.artresearch.net/resource/zeri/type/1H7Z9MGN/graph> {
-        <https://pharos.artresearch.net/resource/zeri/type/1H7Z9MGN>
+<https://pharos.artresearch.net/resource/zeri/type/A748678F-E47B-3B1F-A0F4-FE847635F85D/graph> {
+        <https://pharos.artresearch.net/resource/zeri/type/A748678F-E47B-3B1F-A0F4-FE847635F85D>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "General Ownership" .
@@ -752,8 +751,8 @@
                     "items (cataloging focus)" .
 }
 
-<https://pharos.artresearch.net/resource/zeri/type/T4F0PGKK/graph> {
-        <https://pharos.artresearch.net/resource/zeri/type/T4F0PGKK>
+<https://pharos.artresearch.net/resource/zeri/type/520D0DB3-89F3-32BF-B9EF-56CA0AF3DCAB/graph> {
+        <https://pharos.artresearch.net/resource/zeri/type/520D0DB3-89F3-32BF-B9EF-56CA0AF3DCAB>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Format" .
@@ -781,8 +780,8 @@
                     "folders (containers)" .
 }
 
-<https://pharos.artresearch.net/resource/zeri/type/VBBWCNEK/graph> {
-        <https://pharos.artresearch.net/resource/zeri/type/VBBWCNEK>
+<https://pharos.artresearch.net/resource/zeri/type/937DE276-13A0-33AE-88F6-827B9E5169B5/graph> {
+        <https://pharos.artresearch.net/resource/zeri/type/937DE276-13A0-33AE-88F6-827B9E5169B5>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Village / Foreign placename" .
@@ -796,86 +795,86 @@
 }
 
 
-<https://pharos.artresearch.net/resource/marburg/type/UREK7LBZ/graph> {
-        <https://pharos.artresearch.net/resource/marburg/type/UREK7LBZ>
+<https://pharos.artresearch.net/resource/marburg/type/80D6A234-5466-34BC-8465-19DA816F65E2/graph> {
+        <https://pharos.artresearch.net/resource/marburg/type/80D6A234-5466-34BC-8465-19DA816F65E2>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Surname, Name" .
 }
 
-<https://pharos.artresearch.net/resource/khi/type/UREK7LBZ/graph> {
-        <https://pharos.artresearch.net/resource/khi/type/UREK7LBZ>
+<https://pharos.artresearch.net/resource/khi/type/80D6A234-5466-34BC-8465-19DA816F65E2/graph> {
+        <https://pharos.artresearch.net/resource/khi/type/80D6A234-5466-34BC-8465-19DA816F65E2>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Surname, Name" .
 }
 
-<https://pharos.artresearch.net/resource/hertziana/type/UREK7LBZ/graph> {
-        <https://pharos.artresearch.net/resource/hertziana/type/UREK7LBZ>
+<https://pharos.artresearch.net/resource/hertziana/type/80D6A234-5466-34BC-8465-19DA816F65E2/graph> {
+        <https://pharos.artresearch.net/resource/hertziana/type/80D6A234-5466-34BC-8465-19DA816F65E2>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Surname, Name" .
 }
 
 
-<https://pharos.artresearch.net/resource/marburg/type/S18UV9H6/graph> {
-        <https://pharos.artresearch.net/resource/marburg/type/S18UV9H6>
+<https://pharos.artresearch.net/resource/marburg/type/35B05DC6-568A-338C-ABE5-12FCAB434680/graph> {
+        <https://pharos.artresearch.net/resource/marburg/type/35B05DC6-568A-338C-ABE5-12FCAB434680>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Name, Surname" .
 }
 
-<https://pharos.artresearch.net/resource/khi/type/S18UV9H6/graph> {
-        <https://pharos.artresearch.net/resource/khi/type/S18UV9H6>
+<https://pharos.artresearch.net/resource/khi/type/35B05DC6-568A-338C-ABE5-12FCAB434680/graph> {
+        <https://pharos.artresearch.net/resource/khi/type/35B05DC6-568A-338C-ABE5-12FCAB434680>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Name, Surname" .
 }
 
-<https://pharos.artresearch.net/resource/hertziana/type/S18UV9H6/graph> {
-        <https://pharos.artresearch.net/resource/hertziana/type/S18UV9H6>
+<https://pharos.artresearch.net/resource/hertziana/type/35B05DC6-568A-338C-ABE5-12FCAB434680/graph> {
+        <https://pharos.artresearch.net/resource/hertziana/type/35B05DC6-568A-338C-ABE5-12FCAB434680>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Name, Surname" .
 }
 
-<https://pharos.artresearch.net/resource/marburg/type/RHG2W0TD/graph> {
-        <https://pharos.artresearch.net/resource/marburg/type/RHG2W0TD>
+<https://pharos.artresearch.net/resource/marburg/type/244698A7-A0D9-3376-BC80-3DFA0398904A/graph> {
+        <https://pharos.artresearch.net/resource/marburg/type/244698A7-A0D9-3376-BC80-3DFA0398904A>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "GND or ULAN" .
 }
 
-<https://pharos.artresearch.net/resource/khi/type/RHG2W0TD/graph> {
-        <https://pharos.artresearch.net/resource/khi/type/RHG2W0TD>
+<https://pharos.artresearch.net/resource/khi/type/244698A7-A0D9-3376-BC80-3DFA0398904A/graph> {
+        <https://pharos.artresearch.net/resource/khi/type/244698A7-A0D9-3376-BC80-3DFA0398904A>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "GND or ULAN" .
 }
 
-<https://pharos.artresearch.net/resource/hertziana/type/RHG2W0TD/graph> {
-        <https://pharos.artresearch.net/resource/hertziana/type/RHG2W0TD>
+<https://pharos.artresearch.net/resource/hertziana/type/244698A7-A0D9-3376-BC80-3DFA0398904A/graph> {
+        <https://pharos.artresearch.net/resource/hertziana/type/244698A7-A0D9-3376-BC80-3DFA0398904A>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "GND or ULAN" .
 }
 
-<https://pharos.artresearch.net/resource/hertziana/type/1JI28RVI/graph> {
-        <https://pharos.artresearch.net/resource/hertziana/type/1JI28RVI>
+<https://pharos.artresearch.net/resource/hertziana/type/EAF28925-7C18-3EF5-8147-E1502E56EB5C/graph> {
+        <https://pharos.artresearch.net/resource/hertziana/type/EAF28925-7C18-3EF5-8147-E1502E56EB5C>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Floruit" .
 }
 
-<https://pharos.artresearch.net/resource/khi/type/1JI28RVI/graph> {
-        <https://pharos.artresearch.net/resource/khi/type/1JI28RVI>
+<https://pharos.artresearch.net/resource/khi/type/EAF28925-7C18-3EF5-8147-E1502E56EB5C/graph> {
+        <https://pharos.artresearch.net/resource/khi/type/EAF28925-7C18-3EF5-8147-E1502E56EB5C>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Floruit" .
 }
 
-<https://pharos.artresearch.net/resource/marburg/type/1JI28RVI/graph> {
-        <https://pharos.artresearch.net/resource/marburg/type/1JI28RVI>
+<https://pharos.artresearch.net/resource/marburg/type/EAF28925-7C18-3EF5-8147-E1502E56EB5C/graph> {
+        <https://pharos.artresearch.net/resource/marburg/type/EAF28925-7C18-3EF5-8147-E1502E56EB5C>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Floruit" .
@@ -909,22 +908,22 @@
                     "Gender" .
 }
 
-<https://pharos.artresearch.net/resource/marburg/type/URPMIQ78/graph> {
-        <https://pharos.artresearch.net/resource/marburg/type/URPMIQ78>
+<https://pharos.artresearch.net/resource/marburg/type/84B03AD8-694C-325A-9010-13B234C00D8C/graph> {
+        <https://pharos.artresearch.net/resource/marburg/type/84B03AD8-694C-325A-9010-13B234C00D8C>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "National Group" .
 }
 
-<https://pharos.artresearch.net/resource/khi/type/URPMIQ78/graph> {
-        <https://pharos.artresearch.net/resource/khi/type/URPMIQ78>
+<https://pharos.artresearch.net/resource/khi/type/84B03AD8-694C-325A-9010-13B234C00D8C/graph> {
+        <https://pharos.artresearch.net/resource/khi/type/84B03AD8-694C-325A-9010-13B234C00D8C>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "National Group" .
 }
 
-<https://pharos.artresearch.net/resource/hertziana/type/URPMIQ78/graph> {
-        <https://pharos.artresearch.net/resource/hertziana/type/URPMIQ78>
+<https://pharos.artresearch.net/resource/hertziana/type/84B03AD8-694C-325A-9010-13B234C00D8C/graph> {
+        <https://pharos.artresearch.net/resource/hertziana/type/84B03AD8-694C-325A-9010-13B234C00D8C>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "National Group" .
@@ -952,48 +951,47 @@
                     "Alternate Inventory Number" .
 }
 
-<https://pharos.artresearch.net/resource/marburg/type/SKK0CWZ8/graph> {
-        <https://pharos.artresearch.net/resource/marburg/type/SKK0CWZ8>
+<https://pharos.artresearch.net/resource/marburg/type/40444B6B-073C-3698-91CC-5817DF66E4C1/graph> {
+        <https://pharos.artresearch.net/resource/marburg/type/40444B6B-073C-3698-91CC-5817DF66E4C1>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Catalogue Number" .
 }
 
-<https://pharos.artresearch.net/resource/khi/type/SKK0CWZ8/graph> {
-        <https://pharos.artresearch.net/resource/khi/type/SKK0CWZ8>
+<https://pharos.artresearch.net/resource/khi/type/40444B6B-073C-3698-91CC-5817DF66E4C1/graph> {
+        <https://pharos.artresearch.net/resource/khi/type/40444B6B-073C-3698-91CC-5817DF66E4C1>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Catalogue Number" .
 }
 
-<https://pharos.artresearch.net/resource/hertziana/type/SKK0CWZ8/graph> {
-        <https://pharos.artresearch.net/resource/hertziana/type/SKK0CWZ8>
+<https://pharos.artresearch.net/resource/hertziana/type/40444B6B-073C-3698-91CC-5817DF66E4C1/graph> {
+        <https://pharos.artresearch.net/resource/hertziana/type/40444B6B-073C-3698-91CC-5817DF66E4C1>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Catalogue Number" .
 }
 
-<https://pharos.artresearch.net/resource/khi/type/SL0NUQWC/graph> {
-        <https://pharos.artresearch.net/resource/khi/type/SL0NUQWC>
+<https://pharos.artresearch.net/resource/khi/type/466A47F2-3C2D-3851-8B30-033AA0BC0D4C/graph> {
+        <https://pharos.artresearch.net/resource/khi/type/466A47F2-3C2D-3851-8B30-033AA0BC0D4C>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Alternate Catalogue Number" .
 }
 
-<https://pharos.artresearch.net/resource/hertziana/type/SL0NUQWC/graph> {
-        <https://pharos.artresearch.net/resource/hertziana/type/SL0NUQWC>
+<https://pharos.artresearch.net/resource/hertziana/type/466A47F2-3C2D-3851-8B30-033AA0BC0D4C/graph> {
+        <https://pharos.artresearch.net/resource/hertziana/type/466A47F2-3C2D-3851-8B30-033AA0BC0D4C>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Alternate Catalogue Number" .
 }
 
-<https://pharos.artresearch.net/resource/marburg/type/SL0NUQWC/graph> {
-        <https://pharos.artresearch.net/resource/marburg/type/SL0NUQWC>
+<https://pharos.artresearch.net/resource/marburg/type/466A47F2-3C2D-3851-8B30-033AA0BC0D4C/graph> {
+        <https://pharos.artresearch.net/resource/marburg/type/466A47F2-3C2D-3851-8B30-033AA0BC0D4C>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Alternate Catalogue Number" .
 }
-
 
 <https://pharos.artresearch.net/resource/khi/type/GND/graph> {
         <https://pharos.artresearch.net/resource/khi/type/GND>
@@ -1016,233 +1014,233 @@
                     "GND" .
 }
 
-<https://pharos.artresearch.net/resource/hertziana/type/QY4F5M87/graph> {
-        <https://pharos.artresearch.net/resource/hertziana/type/QY4F5M87>
+<https://pharos.artresearch.net/resource/hertziana/type/193CFC9B-E3B9-3583-9C6A-F2FEA6650E60/graph> {
+        <https://pharos.artresearch.net/resource/hertziana/type/193CFC9B-E3B9-3583-9C6A-F2FEA6650E60>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Page" .
 }
 
-<https://pharos.artresearch.net/resource/khi/type/QY4F5M87/graph> {
-        <https://pharos.artresearch.net/resource/khi/type/QY4F5M87>
+<https://pharos.artresearch.net/resource/khi/type/193CFC9B-E3B9-3583-9C6A-F2FEA6650E60/graph> {
+        <https://pharos.artresearch.net/resource/khi/type/193CFC9B-E3B9-3583-9C6A-F2FEA6650E60>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Page" .
 }
 
 
-<https://pharos.artresearch.net/resource/marburg/type/QY4F5M87/graph> {
-        <https://pharos.artresearch.net/resource/marburg/type/QY4F5M87>
+<https://pharos.artresearch.net/resource/marburg/type/193CFC9B-E3B9-3583-9C6A-F2FEA6650E60/graph> {
+        <https://pharos.artresearch.net/resource/marburg/type/193CFC9B-E3B9-3583-9C6A-F2FEA6650E60>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Page" .
 }
 
-<https://pharos.artresearch.net/resource/hertziana/type/1HR5DVB8/graph> {
-        <https://pharos.artresearch.net/resource/hertziana/type/1HR5DVB8>
+<https://pharos.artresearch.net/resource/hertziana/type/B053FEA8-BD9F-3E23-9CB5-8BF30FD33214/graph> {
+        <https://pharos.artresearch.net/resource/hertziana/type/B053FEA8-BD9F-3E23-9CB5-8BF30FD33214>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Precise Location Description" .
 }
 
-<https://pharos.artresearch.net/resource/khi/type/1HR5DVB8/graph> {
-        <https://pharos.artresearch.net/resource/khi/type/1HR5DVB8>
+<https://pharos.artresearch.net/resource/khi/type/B053FEA8-BD9F-3E23-9CB5-8BF30FD33214/graph> {
+        <https://pharos.artresearch.net/resource/khi/type/B053FEA8-BD9F-3E23-9CB5-8BF30FD33214>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Precise Location Description" .
 }
 
-<https://pharos.artresearch.net/resource/marburg/type/1HR5DVB8/graph> {
-        <https://pharos.artresearch.net/resource/marburg/type/1HR5DVB8>
+<https://pharos.artresearch.net/resource/marburg/type/B053FEA8-BD9F-3E23-9CB5-8BF30FD33214/graph> {
+        <https://pharos.artresearch.net/resource/marburg/type/B053FEA8-BD9F-3E23-9CB5-8BF30FD33214>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Precise Location Description" .
 }
 
-<https://pharos.artresearch.net/resource/hertziana/measurement_unit/URJJKC29/graph> {
-        <https://pharos.artresearch.net/resource/hertziana/measurement_unit/URJJKC29>
+<https://pharos.artresearch.net/resource/hertziana/measurement_unit/820EB5B6-96EA-3A65-BC0D-B1E258DC7D81/graph> {
+        <https://pharos.artresearch.net/resource/hertziana/measurement_unit/820EB5B6-96EA-3A65-BC0D-B1E258DC7D81>
             a       <http://www.cidoc-crm.org/cidoc-crm/E58_Measurement_Unit> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "cm" .
 }
 
-<https://pharos.artresearch.net/resource/marburg/measurement_unit/URJJKC29/graph> {
-        <https://pharos.artresearch.net/resource/marburg/measurement_unit/URJJKC29>
+<https://pharos.artresearch.net/resource/marburg/measurement_unit/820EB5B6-96EA-3A65-BC0D-B1E258DC7D81/graph> {
+        <https://pharos.artresearch.net/resource/marburg/measurement_unit/820EB5B6-96EA-3A65-BC0D-B1E258DC7D81>
             a       <http://www.cidoc-crm.org/cidoc-crm/E58_Measurement_Unit> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "cm" .
 }
 
-<https://pharos.artresearch.net/resource/khi/measurement_unit/URJJKC29/graph> {
-        <https://pharos.artresearch.net/resource/khi/measurement_unit/URJJKC29>
+<https://pharos.artresearch.net/resource/khi/measurement_unit/820EB5B6-96EA-3A65-BC0D-B1E258DC7D81/graph> {
+        <https://pharos.artresearch.net/resource/khi/measurement_unit/820EB5B6-96EA-3A65-BC0D-B1E258DC7D81>
             a       <http://www.cidoc-crm.org/cidoc-crm/E58_Measurement_Unit> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "cm" .
 }
 
-<https://pharos.artresearch.net/resource/hertziana/type/1IB8RVMY/graph> {
-        <https://pharos.artresearch.net/resource/hertziana/type/1IB8RVMY>
+<https://pharos.artresearch.net/resource/hertziana/type/C57BB460-B736-3F52-8867-FFCF908C12B6/graph> {
+        <https://pharos.artresearch.net/resource/hertziana/type/C57BB460-B736-3F52-8867-FFCF908C12B6>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Shape Classification" .
 }
 
-<https://pharos.artresearch.net/resource/marburg/type/1IB8RVMY/graph> {
-        <https://pharos.artresearch.net/resource/marburg/type/1IB8RVMY>
+<https://pharos.artresearch.net/resource/marburg/type/C57BB460-B736-3F52-8867-FFCF908C12B6/graph> {
+        <https://pharos.artresearch.net/resource/marburg/type/C57BB460-B736-3F52-8867-FFCF908C12B6>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Shape Classification" .
 }
 
-<https://pharos.artresearch.net/resource/khi/type/1IB8RVMY/graph> {
-        <https://pharos.artresearch.net/resource/khi/type/1IB8RVMY>
+<https://pharos.artresearch.net/resource/khi/type/C57BB460-B736-3F52-8867-FFCF908C12B6/graph> {
+        <https://pharos.artresearch.net/resource/khi/type/C57BB460-B736-3F52-8867-FFCF908C12B6>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Shape Classification" .
 }
 
-<https://pharos.artresearch.net/resource/hertziana/type/1IUYAK3D/graph> {
-        <https://pharos.artresearch.net/resource/hertziana/type/1IUYAK3D>
+<https://pharos.artresearch.net/resource/hertziana/type/D58E7680-364A-3F1C-A8BF-3DFBACEC79F8/graph> {
+        <https://pharos.artresearch.net/resource/hertziana/type/D58E7680-364A-3F1C-A8BF-3DFBACEC79F8>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Precise Location" .
 }
 
-<https://pharos.artresearch.net/resource/marburg/type/1IUYAK3D/graph> {
-        <https://pharos.artresearch.net/resource/marburg/type/1IUYAK3D>
+<https://pharos.artresearch.net/resource/marburg/type/D58E7680-364A-3F1C-A8BF-3DFBACEC79F8/graph> {
+        <https://pharos.artresearch.net/resource/marburg/type/D58E7680-364A-3F1C-A8BF-3DFBACEC79F8>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Precise Location" .
 }
 
-<https://pharos.artresearch.net/resource/khi/type/1IUYAK3D/graph> {
-        <https://pharos.artresearch.net/resource/khi/type/1IUYAK3D>
+<https://pharos.artresearch.net/resource/khi/type/D58E7680-364A-3F1C-A8BF-3DFBACEC79F8/graph> {
+        <https://pharos.artresearch.net/resource/khi/type/D58E7680-364A-3F1C-A8BF-3DFBACEC79F8>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Precise Location" .
 }
 
-<https://pharos.artresearch.net/resource/hertziana/type/QEC5VEJU/graph> {
-        <https://pharos.artresearch.net/resource/hertziana/type/QEC5VEJU>
+<https://pharos.artresearch.net/resource/hertziana/type/085A06A6-F8DE-35D0-A625-386FEABD313D/graph> {
+        <https://pharos.artresearch.net/resource/hertziana/type/085A06A6-F8DE-35D0-A625-386FEABD313D>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Builtwork Part" .
 }
 
-<https://pharos.artresearch.net/resource/khi/type/QEC5VEJU/graph> {
-        <https://pharos.artresearch.net/resource/khi/type/QEC5VEJU>
+<https://pharos.artresearch.net/resource/khi/type/085A06A6-F8DE-35D0-A625-386FEABD313D/graph> {
+        <https://pharos.artresearch.net/resource/khi/type/085A06A6-F8DE-35D0-A625-386FEABD313D>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Builtwork Part" .
 }
 
-<https://pharos.artresearch.net/resource/marburg/type/QEC5VEJU/graph> {
-        <https://pharos.artresearch.net/resource/marburg/type/QEC5VEJU>
+<https://pharos.artresearch.net/resource/marburg/type/085A06A6-F8DE-35D0-A625-386FEABD313D/graph> {
+        <https://pharos.artresearch.net/resource/marburg/type/085A06A6-F8DE-35D0-A625-386FEABD313D>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Builtwork Part" .
 }
 
-<https://pharos.artresearch.net/resource/hertziana/type/1JEAEC2L/graph> {
-        <https://pharos.artresearch.net/resource/hertziana/type/1JEAEC2L>
+<https://pharos.artresearch.net/resource/hertziana/type/E0BB2F66-E5B6-3BE3-A35B-F8969979DE19/graph> {
+        <https://pharos.artresearch.net/resource/hertziana/type/E0BB2F66-E5B6-3BE3-A35B-F8969979DE19>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "District" .
 }
 
-<https://pharos.artresearch.net/resource/marburg/type/1JEAEC2L/graph> {
-        <https://pharos.artresearch.net/resource/marburg/type/1JEAEC2L>
+<https://pharos.artresearch.net/resource/marburg/type/E0BB2F66-E5B6-3BE3-A35B-F8969979DE19/graph> {
+        <https://pharos.artresearch.net/resource/marburg/type/E0BB2F66-E5B6-3BE3-A35B-F8969979DE19>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "District" .
 }
 
-<https://pharos.artresearch.net/resource/khi/type/1JEAEC2L/graph> {
-        <https://pharos.artresearch.net/resource/khi/type/1JEAEC2L>
+<https://pharos.artresearch.net/resource/khi/type/E0BB2F66-E5B6-3BE3-A35B-F8969979DE19/graph> {
+        <https://pharos.artresearch.net/resource/khi/type/E0BB2F66-E5B6-3BE3-A35B-F8969979DE19>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "District" .
 }
 
-<https://pharos.artresearch.net/resource/hertziana/type/1IV0ZLRR/graph> {
-        <https://pharos.artresearch.net/resource/hertziana/type/1IV0ZLRR>
+<https://pharos.artresearch.net/resource/hertziana/type/D61EBDD8-A0C0-3D57-8224-55E9F0918C65/graph> {
+        <https://pharos.artresearch.net/resource/hertziana/type/D61EBDD8-A0C0-3D57-8224-55E9F0918C65>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Street" .
 }
 
-<https://pharos.artresearch.net/resource/marburg/type/1IV0ZLRR/graph> {
-        <https://pharos.artresearch.net/resource/marburg/type/1IV0ZLRR>
+<https://pharos.artresearch.net/resource/marburg/type/D61EBDD8-A0C0-3D57-8224-55E9F0918C65/graph> {
+        <https://pharos.artresearch.net/resource/marburg/type/D61EBDD8-A0C0-3D57-8224-55E9F0918C65>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Street" .
 }
 
-<https://pharos.artresearch.net/resource/khi/type/1IV0ZLRR/graph> {
-        <https://pharos.artresearch.net/resource/khi/type/1IV0ZLRR>
+<https://pharos.artresearch.net/resource/khi/type/D61EBDD8-A0C0-3D57-8224-55E9F0918C65/graph> {
+        <https://pharos.artresearch.net/resource/khi/type/D61EBDD8-A0C0-3D57-8224-55E9F0918C65>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Street" .
 }
 
-<https://pharos.artresearch.net/resource/hertziana/type/1H7J64WY/graph> {
-        <https://pharos.artresearch.net/resource/hertziana/type/1H7J64WY>
+<https://pharos.artresearch.net/resource/hertziana/type/A1EA735B-92A7-3E41-8829-53A435149D64/graph> {
+        <https://pharos.artresearch.net/resource/hertziana/type/A1EA735B-92A7-3E41-8829-53A435149D64>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Street Number" .
 }
 
-<https://pharos.artresearch.net/resource/marburg/type/1H7J64WY/graph> {
-        <https://pharos.artresearch.net/resource/marburg/type/1H7J64WY>
+<https://pharos.artresearch.net/resource/marburg/type/A1EA735B-92A7-3E41-8829-53A435149D64/graph> {
+        <https://pharos.artresearch.net/resource/marburg/type/A1EA735B-92A7-3E41-8829-53A435149D64>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Street Number" .
 }
 
-<https://pharos.artresearch.net/resource/khi/type/1H7J64WY/graph> {
-        <https://pharos.artresearch.net/resource/khi/type/1H7J64WY>
+<https://pharos.artresearch.net/resource/khi/type/A1EA735B-92A7-3E41-8829-53A435149D64/graph> {
+        <https://pharos.artresearch.net/resource/khi/type/A1EA735B-92A7-3E41-8829-53A435149D64>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Street Number" .
 }
 
-<https://pharos.artresearch.net/resource/hertziana/type/VB92JRF4/graph> {
-        <https://pharos.artresearch.net/resource/hertziana/type/VB92JRF4>
+<https://pharos.artresearch.net/resource/hertziana/type/9220BFE7-066C-3521-A053-795BAA0F74E2/graph> {
+        <https://pharos.artresearch.net/resource/hertziana/type/9220BFE7-066C-3521-A053-795BAA0F74E2>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Primary Iconography" .
 }
 
-<https://pharos.artresearch.net/resource/marburg/type/VB92JRF4/graph> {
-        <https://pharos.artresearch.net/resource/marburg/type/VB92JRF4>
+<https://pharos.artresearch.net/resource/marburg/type/9220BFE7-066C-3521-A053-795BAA0F74E2/graph> {
+        <https://pharos.artresearch.net/resource/marburg/type/9220BFE7-066C-3521-A053-795BAA0F74E2>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Primary Iconography" .
 }
 
-<https://pharos.artresearch.net/resource/khi/type/VB92JRF4/graph> {
-        <https://pharos.artresearch.net/resource/khi/type/VB92JRF4>
+<https://pharos.artresearch.net/resource/khi/type/9220BFE7-066C-3521-A053-795BAA0F74E2/graph> {
+        <https://pharos.artresearch.net/resource/khi/type/9220BFE7-066C-3521-A053-795BAA0F74E2>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Primary Iconography" .
 }
 
-<https://pharos.artresearch.net/resource/hertziana/type/U82EXOKR> {
-        <https://pharos.artresearch.net/resource/hertziana/type/U82EXOKR>
+<https://pharos.artresearch.net/resource/hertziana/type/756AC47A-B10D-3E55-998F-18E7A2E1F3AB> {
+        <https://pharos.artresearch.net/resource/hertziana/type/756AC47A-B10D-3E55-998F-18E7A2E1F3AB>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Secondary Iconography" .
 }
 
-<https://pharos.artresearch.net/resource/marburg/type/U82EXOKR> {
-        <https://pharos.artresearch.net/resource/marburg/type/U82EXOKR>
+<https://pharos.artresearch.net/resource/marburg/type/756AC47A-B10D-3E55-998F-18E7A2E1F3AB> {
+        <https://pharos.artresearch.net/resource/marburg/type/756AC47A-B10D-3E55-998F-18E7A2E1F3AB>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Secondary Iconography" .
 }
 
-<https://pharos.artresearch.net/resource/khi/type/U82EXOKR> {
-        <https://pharos.artresearch.net/resource/khi/type/U82EXOKR>
+<https://pharos.artresearch.net/resource/khi/type/756AC47A-B10D-3E55-998F-18E7A2E1F3AB> {
+        <https://pharos.artresearch.net/resource/khi/type/756AC47A-B10D-3E55-998F-18E7A2E1F3AB>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Secondary Iconography" .
@@ -1283,36 +1281,36 @@
                     "Activities Facet" .
 }
 
-<https://pharos.artresearch.net/resource/marburg/type/SOPP167C/graph> {
-        <https://pharos.artresearch.net/resource/marburg/type/SOPP167C>
+<https://pharos.artresearch.net/resource/marburg/type/4F6A2899-2950-328C-B172-54AD813EE993/graph> {
+        <https://pharos.artresearch.net/resource/marburg/type/4F6A2899-2950-328C-B172-54AD813EE993>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "recto" .
 }
 
-<https://pharos.artresearch.net/resource/khi/type/SOPP167C/graph> {
-        <https://pharos.artresearch.net/resource/khi/type/SOPP167C>
+<https://pharos.artresearch.net/resource/khi/type/4F6A2899-2950-328C-B172-54AD813EE993/graph> {
+        <https://pharos.artresearch.net/resource/khi/type/4F6A2899-2950-328C-B172-54AD813EE993>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "recto" .
 }
 
-<https://pharos.artresearch.net/resource/hertziana/type/SOPP167C/graph> {
-        <https://pharos.artresearch.net/resource/hertziana/type/SOPP167C>
+<https://pharos.artresearch.net/resource/hertziana/type/4F6A2899-2950-328C-B172-54AD813EE993/graph> {
+        <https://pharos.artresearch.net/resource/hertziana/type/4F6A2899-2950-328C-B172-54AD813EE993>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "recto" .
 }
 
-<https://pharos.artresearch.net/resource/frick/type/SOPP167C/graph> {
-        <https://pharos.artresearch.net/resource/frick/type/SOPP167C>
+<https://pharos.artresearch.net/resource/frick/type/4F6A2899-2950-328C-B172-54AD813EE993/graph> {
+        <https://pharos.artresearch.net/resource/frick/type/4F6A2899-2950-328C-B172-54AD813EE993>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "recto" .
 }
 
-<https://pharos.artresearch.net/resource/zeri/actor/1JIDAS03/graph> {
-        <https://pharos.artresearch.net/resource/zeri/actor/1JIDAS03>
+<https://pharos.artresearch.net/resource/zeri/actor/EECC2458-22B0-3E3B-905A-31F8A43E8866/graph> {
+        <https://pharos.artresearch.net/resource/zeri/actor/EECC2458-22B0-3E3B-905A-31F8A43E8866>
             a       <https://pharos.artresearch.net/custom/E39_Actor> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Fondazione Federico Zeri - Università di Bologna" .
