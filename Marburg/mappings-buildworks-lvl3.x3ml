@@ -1929,7 +1929,18 @@
 					</source_relation>
 					<target_relation>
 						<if>
-							<exists>a8540/text()</exists>
+							<and>
+								<if>
+									<exists>a8540/text()</exists>
+								</if>
+								<if>
+									<not>
+										<if>
+											<equals value="gesperrt">a8541/text()</equals>
+										</if>
+									</not>
+								</if>
+							</and>
 						</if>
 						<relationship>crm:P138i_is_represented_by</relationship>
 						<entity>
@@ -1963,7 +1974,18 @@
 					</source_relation>
 					<target_relation>
 						<if>
-							<exists>a8555/text()</exists>
+							<and>
+								<if>
+									<exists>a8555/text()</exists>
+								</if>
+								<if>
+									<not>
+										<if>
+											<equals value="gesperrt">a8541/text()</equals>
+										</if>
+									</not>
+								</if>
+							</and>
 						</if>
 						<relationship>crm:P138i_is_represented_by</relationship>
 						<entity>

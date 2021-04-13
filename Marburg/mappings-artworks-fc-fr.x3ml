@@ -487,7 +487,18 @@
 					</source_relation>
 					<target_relation>
 						<if>
-							<exists>a8540/text()</exists>
+							<and>
+								<if>
+									<exists>a8540/text()</exists>
+								</if>
+								<if>
+									<not>
+										<if>
+											<equals value="gesperrt">a8541/text()</equals>
+										</if>
+									</not>
+								</if>
+							</and>
 						</if>
 						<relationship>fr:Work_depicted_by_Photo</relationship>
 					</target_relation>
@@ -515,7 +526,61 @@
 					</target_node>
 				</range>
 			</link>
-			
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>a8450</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<and>
+								<if>
+									<not>
+										<if>
+											<exists>a8540/text()</exists>
+										</if>
+									</not>
+								</if>
+								<if>
+									<exists>a8555/text()</exists>
+								</if>
+								<if>
+									<not>
+										<if>
+											<equals value="gesperrt">a8541/text()</equals>
+										</if>
+									</not>
+								</if>
+							</and>
+						</if>
+						<relationship>fr:Work_depicted_by_Photo</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a8450</source_node>
+					<target_node>
+						<entity>
+							<type>fc:photo</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">photo</arg>
+								<arg name="id" type="xpath">a8555/text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>fr:Photo_depicts_Work</relationship>
+								<entity>
+									<type>fc:work</type>
+									<instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">work</arg>
+										<arg name="id" type="xpath">../a5000/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
 			<!-- <link>
 				<path>
 					<source_relation>
@@ -1063,7 +1128,18 @@
 					</source_relation>
 					<target_relation>
 						<if>
-							<exists>a8540/text()</exists>
+							<and>
+								<if>
+									<exists>a8540/text()</exists>
+								</if>
+								<if>
+									<not>
+										<if>
+											<equals value="gesperrt">a8541/text()</equals>
+										</if>
+									</not>
+								</if>
+							</and>
 						</if>
 						<relationship>fr:Work_depicted_by_Photo</relationship>
 					</target_relation>
@@ -1092,31 +1168,59 @@
 				</range>
 			</link>
 			
-						<!-- <link>
+			<link>
 				<path>
 					<source_relation>
-						<relation>a5358</relation>
+						<relation>a8450</relation>
 					</source_relation>
 					<target_relation>
 						<if>
-							<equals value="Herstellung">../aob30/text()</equals>
+							<and>
+								<if>
+									<not>
+										<if>
+											<exists>a8540/text()</exists>
+										</if>
+									</not>
+								</if>
+								<if>
+									<exists>a8555/text()</exists>
+								</if>
+								<if>
+									<not>
+										<if>
+											<equals value="gesperrt">a8541/text()</equals>
+										</if>
+									</not>
+								</if>
+							</and>
 						</if>
-						<relationship>fr:Work_produced_using_technique_Technique</relationship>
+						<relationship>fr:Work_depicted_by_Photo</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>a5358</source_node>
+					<source_node>a8450</source_node>
 					<target_node>
 						<entity>
-							<type>fc:technique</type>
-							<instance_generator name="URIwithVocabType">
-								<arg name="type" type="constant">technique</arg>
-								<arg name="id" type="xpath">text()</arg>
+							<type>fc:photo</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">photo</arg>
+								<arg name="id" type="xpath">a8555/text()</arg>
 							</instance_generator>
+							<additional>
+								<relationship>fr:Photo_depicts_Work</relationship>
+								<entity>
+									<type>fc:work</type>
+									<instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">work</arg>
+										<arg name="id" type="xpath">../a5001/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
 						</entity>
 					</target_node>
 				</range>
-			</link> -->
+			</link>
 			
 			<link>
 				<path>
@@ -1639,7 +1743,18 @@
 					</source_relation>
 					<target_relation>
 						<if>
-							<exists>a8540/text()</exists>
+							<and>
+								<if>
+									<exists>a8540/text()</exists>
+								</if>
+								<if>
+									<not>
+										<if>
+											<equals value="gesperrt">a8541/text()</equals>
+										</if>
+									</not>
+								</if>
+							</and>
 						</if>
 						<relationship>fr:Work_depicted_by_Photo</relationship>
 					</target_relation>
@@ -1667,32 +1782,60 @@
 					</target_node>
 				</range>
 			</link>
-			
-						<!-- <link>
+
+			<link>
 				<path>
 					<source_relation>
-						<relation>a5358</relation>
+						<relation>a8450</relation>
 					</source_relation>
 					<target_relation>
 						<if>
-							<equals value="Herstellung">../aob30/text()</equals>
+							<and>
+								<if>
+									<not>
+										<if>
+											<exists>a8540/text()</exists>
+										</if>
+									</not>
+								</if>
+								<if>
+									<exists>a8555/text()</exists>
+								</if>
+								<if>
+									<not>
+										<if>
+											<equals value="gesperrt">a8541/text()</equals>
+										</if>
+									</not>
+								</if>
+							</and>
 						</if>
-						<relationship>fr:Work_produced_using_technique_Technique</relationship>
+						<relationship>fr:Work_depicted_by_Photo</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>a5358</source_node>
+					<source_node>a8450</source_node>
 					<target_node>
 						<entity>
-							<type>fc:technique</type>
-							<instance_generator name="URIwithVocabType">
-								<arg name="type" type="constant">technique</arg>
-								<arg name="id" type="xpath">text()</arg>
+							<type>fc:photo</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">photo</arg>
+								<arg name="id" type="xpath">a8555/text()</arg>
 							</instance_generator>
+							<additional>
+								<relationship>fr:Photo_depicts_Work</relationship>
+								<entity>
+									<type>fc:work</type>
+									<instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">work</arg>
+										<arg name="id" type="xpath">../a5002/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
 						</entity>
 					</target_node>
 				</range>
-			</link> -->
+			</link>
 			
 			<link>
 				<path>
@@ -2215,7 +2358,18 @@
 					</source_relation>
 					<target_relation>
 						<if>
-							<exists>a8540/text()</exists>
+							<and>
+								<if>
+									<exists>a8540/text()</exists>
+								</if>
+								<if>
+									<not>
+										<if>
+											<equals value="gesperrt">a8541/text()</equals>
+										</if>
+									</not>
+								</if>
+							</and>
 						</if>
 						<relationship>fr:Work_depicted_by_Photo</relationship>
 					</target_relation>
@@ -2244,31 +2398,59 @@
 				</range>
 			</link>
 			
-						<!-- <link>
+			<link>
 				<path>
 					<source_relation>
-						<relation>a5358</relation>
+						<relation>a8450</relation>
 					</source_relation>
 					<target_relation>
 						<if>
-							<equals value="Herstellung">../aob30/text()</equals>
+							<and>
+								<if>
+									<not>
+										<if>
+											<exists>a8540/text()</exists>
+										</if>
+									</not>
+								</if>
+								<if>
+									<exists>a8555/text()</exists>
+								</if>
+								<if>
+									<not>
+										<if>
+											<equals value="gesperrt">a8541/text()</equals>
+										</if>
+									</not>
+								</if>
+							</and>
 						</if>
-						<relationship>fr:Work_produced_using_technique_Technique</relationship>
+						<relationship>fr:Work_depicted_by_Photo</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>a5358</source_node>
+					<source_node>a8450</source_node>
 					<target_node>
 						<entity>
-							<type>fc:technique</type>
-							<instance_generator name="URIwithVocabType">
-								<arg name="type" type="constant">technique</arg>
-								<arg name="id" type="xpath">text()</arg>
+							<type>fc:photo</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">photo</arg>
+								<arg name="id" type="xpath">a8555/text()</arg>
 							</instance_generator>
+							<additional>
+								<relationship>fr:Photo_depicts_Work</relationship>
+								<entity>
+									<type>fc:work</type>
+									<instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">work</arg>
+										<arg name="id" type="xpath">../a5003/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
 						</entity>
 					</target_node>
 				</range>
-			</link> -->
+			</link>
 			
 			<link>
 				<path>
