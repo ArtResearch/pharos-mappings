@@ -583,7 +583,7 @@
 							<relationship>fr:Photo_has_provider_Institution</relationship>
 							<entity>
 								<type>fc:institution</type>
-								<instance_generator name="URIwithType">
+								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Frick</arg>
 								</instance_generator>
@@ -654,7 +654,7 @@
 							<relationship>fr:Photo_has_provider_Institution</relationship>
 							<entity>
 								<type>fc:institution</type>
-								<instance_generator name="URIwithType">
+								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Frick</arg>
 								</instance_generator>
@@ -729,7 +729,7 @@
 							<relationship>fr:Photo_has_provider_Institution</relationship>
 							<entity>
 								<type>fc:institution</type>
-								<instance_generator name="URIwithType">
+								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Frick</arg>
 								</instance_generator>
@@ -800,7 +800,7 @@
 							<relationship>fr:Photo_has_provider_Institution</relationship>
 							<entity>
 								<type>fc:institution</type>
-								<instance_generator name="URIwithType">
+								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Frick</arg>
 								</instance_generator>
@@ -874,7 +874,7 @@
 							<relationship>fr:Photo_has_provider_Institution</relationship>
 							<entity>
 								<type>fc:institution</type>
-								<instance_generator name="URIwithType">
+								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Frick</arg>
 								</instance_generator>
