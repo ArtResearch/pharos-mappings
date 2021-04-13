@@ -15,7 +15,7 @@
 				<source_node>//Entry</source_node>
 				<target_node>
                     <entity>
-						<type>fc:Photographer</type>
+						<type>fc:photographer</type>
 						<instance_generator name="URIwithTypeAndId">
 							<arg name="type" type="constant">actor</arg>
 							<arg name="id" type="xpath">ConstituentID/text()</arg>
@@ -23,7 +23,7 @@
 						<additional>
 							<relationship>fr:Person_has_Institution</relationship>
 							<entity>
-								<type>fc:Institution</type>
+								<type>fc:institution</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">group</arg>
 									<arg name="id" type="xpath">TermID/text()</arg>
