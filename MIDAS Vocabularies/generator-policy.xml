@@ -42,6 +42,10 @@
 	<pattern>{id}</pattern>
 </generator>
 
+<generator name="TGN_URI" prefix="tgn">
+	<pattern>{id}</pattern>
+</generator>
+
 <generator name="AAT_URI" prefix="aat">
 	<pattern>{id}</pattern>
 </generator>

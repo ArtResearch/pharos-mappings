@@ -2735,18 +2735,18 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>a5300</relation>
+						<relation>a5300/a533s</relation>
 					</source_relation>
 					<target_relation>
 						<if>
-							<equals value="Herstellung">../aob30/text()</equals>
+							<equals value="Herstellung">../../aob30/text()</equals>
 						</if>
 						<relationship>crm:P108i_was_produced_by</relationship>
 						<entity>
 							<type>crm:E12_Production</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../a5000/text()</arg>
+								<arg name="resourceId" type="xpath">../../a5000/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
@@ -2754,13 +2754,13 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>a5300</source_node>
+					<source_node>a5300/a533s</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
 							<instance_generator name="URIwithVocabTypeAndId">
 								<arg name="type" type="constant">technique</arg>
-								<arg name="id" type="xpath">a533s/text()</arg>
+								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
