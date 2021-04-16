@@ -53,7 +53,7 @@
   }
 	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.
-  BIND(REPLACE(?content,\"&quot;\",\"\\\"\") AS ?value)
+  BIND(REPLACE(?content,\"&quot;\",\"\\\"\") AS ?value )
 }""" .
   
   _:node1f2jqhtfcx32 <http://www.w3.org/ns/ldp#contains> <https://pharos.artresearch.net/fieldDefinition/17> .

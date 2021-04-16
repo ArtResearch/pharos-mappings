@@ -35,7 +35,7 @@
     ?event <https://pharos.artresearch.net/resource/fr/Event_at_Place> ?event_place.
     ?event_type <http://www.w3.org/2000/01/rdf-schema#label> ?event_type_label.
     ?event_place <http://www.w3.org/2000/01/rdf-schema#label> ?event_place_label.
-    BIND (CONCAT(?event_type_label, \" at \" ,?event_place_label) AS ?value)
+    BIND (CONCAT(?event_type_label, \" at \" ,?event_place_label) AS ?value )
   }
   ?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
   ?provider rdfs:label ?providerLabel.

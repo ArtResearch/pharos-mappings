@@ -54,7 +54,7 @@
                   ?val rdfs:label ?val_label.
                   ?val crm:P2_has_type ?type.
                   ?type rdfs:label ?type_label.
-        BIND(CONCAT(?val_label,\" (\",?type_label,\") \") AS ?value)
+        BIND(CONCAT(?val_label,\" (\",?type_label,\") \") AS ?value )
           }
         ?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
         ?provider rdfs:label ?providerLabel.

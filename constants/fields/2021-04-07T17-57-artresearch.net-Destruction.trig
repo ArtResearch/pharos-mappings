@@ -55,7 +55,7 @@
   		?actor_uri rdfs:label ?actor.
     	?event crm:P4_has_time-span ?tm_uri .
   		?tm_uri crm:P82_at_some_time_within ?timespan.
-    	BIND(CONCAT(?type,\" - actor:\",?actor,\" - date:\",?timespan) as ?value)
+    	BIND(CONCAT(?type,\" - actor:\",?actor,\" - date:\",?timespan) as ?value )
    }
    ?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.

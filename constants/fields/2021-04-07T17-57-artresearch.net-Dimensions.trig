@@ -51,7 +51,7 @@
   		?dimension crm:P90_has_value ?dvalue .
   		?dimension crm:P91_has_unit ?unit_uri .
   		?unit_uri rdfs:label ?unit.
-    	BIND(CONCAT(STR(?dvalue),\" \",?unit,\" \",\"(\",?qualifier,\")\") as ?value)
+    	BIND(CONCAT(STR(?dvalue),\" \",?unit,\" \",\"(\",?qualifier,\")\") as ?value )
   	}
 	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.
