@@ -33,7 +33,7 @@
    	 	?tm crm:P10_falls_within $timespan .
     	?timespan crm:P2_has_type ?type.
     	?type rdfs:label \"Century\".
-    	?timespan crm:P1_is_identified_by ?value
+    	?timespan crm:P1_is_identified_by ?value.
    }
    ?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.

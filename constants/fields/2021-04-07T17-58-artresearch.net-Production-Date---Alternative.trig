@@ -53,7 +53,7 @@
     	?production crm:P4_has_time-span ?tm.
     	?tm crm:P2_has_type ?type .
     	?type rdfs:label \"Alternative Date\".
-    	?tm crm:P82_at_some_time_within ?value
+    	?tm crm:P82_at_some_time_within ?value.
   	}
     ?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.

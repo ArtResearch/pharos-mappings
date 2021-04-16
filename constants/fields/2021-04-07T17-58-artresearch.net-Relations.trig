@@ -39,7 +39,7 @@
   _:t36751840 a sp:Query;
     sp:text """SELECT distinct ?value ?provider ?providerLabel WHERE {
   graph ?graph{
-    $subject <https://pharos.artresearch.net/resource/fr/Artist_related_to_Person> ?value
+    $subject <https://pharos.artresearch.net/resource/fr/Artist_related_to_Person> ?value.
   }
   ?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
   ?provider rdfs:label ?providerLabel.

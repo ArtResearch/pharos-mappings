@@ -50,7 +50,7 @@
 	graph ?graph 
     {
 		$subject crm:P108i_was_produced_by ?production.
-		?production crm:P11_had_participant ?value
+		?production crm:P11_had_participant ?value.
 	}
 	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.

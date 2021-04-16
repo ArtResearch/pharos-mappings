@@ -50,7 +50,7 @@
   		$subject crm:P128_carries ?visual_item.
   		?visual_item crm:P128_is_carried_by ?negative.
   		?negative crm:P108i_was_produced_by ?production.
-  		?production crm:P7_took_place_at ?value
+  		?production crm:P7_took_place_at ?value.
   	}
 	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.

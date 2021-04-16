@@ -48,7 +48,7 @@
   	{
     	$subject <http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by> ?production .
     	?production crm:P4_has_time-span ?tm.
-    	?tm crm:P79_begin_is_qualified_by ?value
+    	?tm crm:P79_begin_is_qualified_by ?value.
   	}
 	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.

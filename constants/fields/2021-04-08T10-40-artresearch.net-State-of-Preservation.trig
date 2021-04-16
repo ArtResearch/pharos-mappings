@@ -47,7 +47,7 @@
 	graph ?graph 
   	{
   		$subject crm:P34i_was_assessed_by ?condition_assessment.
-  		?condition_assessment crm:P35_has_assigned ?value
+  		?condition_assessment crm:P35_has_assigned ?value.
   	}
 	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.

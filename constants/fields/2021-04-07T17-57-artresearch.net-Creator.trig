@@ -49,7 +49,7 @@
     sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE {  
 	graph ?graph
 	{
-    	?subject <https://pharos.artresearch.net/resource/fr/Work_created_from_Artist> ?value
+    	?subject <https://pharos.artresearch.net/resource/fr/Work_created_from_Artist> ?value.
   	}
 	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.

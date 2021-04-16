@@ -51,7 +51,7 @@
   graph ?graph
   {
  	$subject crm:P56_bears_feature ?value.
-	?value crm:P2_has_type <http://vocab.getty.edu/aat/300010292>
+	?value crm:P2_has_type <http://vocab.getty.edu/aat/300010292>.
   }
   ?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
   ?provider rdfs:label ?providerLabel.

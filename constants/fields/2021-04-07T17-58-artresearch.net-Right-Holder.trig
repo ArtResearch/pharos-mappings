@@ -51,7 +51,7 @@
 	graph ?graph 
   	{
     	$subject crm:P104_is_subject_to ?right.
-        ?right crm:P105_right_held_by|crm:P75i_rights_held_by ?value
+        ?right crm:P105_right_held_by|crm:P75i_rights_held_by ?value.
     	
    }
    ?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .

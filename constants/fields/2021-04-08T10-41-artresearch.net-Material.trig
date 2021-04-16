@@ -51,7 +51,7 @@
 { 
   graph ?graph 
   {
-    #?subject <https://pharos.artresearch.net/resource/fr/Work_consists_of_Material> ?value
+    #?subject <https://pharos.artresearch.net/resource/fr/Work_consists_of_Material> ?value.
     $subject crm:P45_consists_of ?value.
   	  ?value a crm:E57_Material.
   }

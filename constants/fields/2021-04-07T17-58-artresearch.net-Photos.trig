@@ -49,11 +49,8 @@
 {
 	graph ?graph
 	{
-    	?subject <https://pharos.artresearch.net/resource/fr/Work_depicted_by_Photo> ?value
-#  		$subject crm:P138i_is_represented_by ?visual_item.
-#        ?visual_item crm:P128i_is_carried_by ?value.
-    }
-#  	?value crm:P2_has_type <http://vocab.getty.edu/aat/300046300>.
+    ?subject <https://pharos.artresearch.net/resource/fr/Work_depicted_by_Photo> ?value.
+  }
     ?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.
 }""" .

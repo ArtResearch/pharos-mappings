@@ -45,7 +45,7 @@
   		?visual_item crm:P128_is_carried_by ?negative.
   		?negative crm:P108i_was_produced_by ?production.
   		?production crm:P4_has_time-span ?tm.
-  		?tm crm:P82_at_some_time_within ?value
+  		?tm crm:P82_at_some_time_within ?value.
   	}
 	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.

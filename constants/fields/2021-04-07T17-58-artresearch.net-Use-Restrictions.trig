@@ -50,7 +50,7 @@
 	graph ?graph
   	{
   		$subject crm:P104_is_subject_to ?right.
-  		?right rdfs:label ?value
+  		?right rdfs:label ?value.
   	}
 	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.

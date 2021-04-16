@@ -50,7 +50,7 @@
   		$subject crm:P108i_was_produced_by ?production.
   		?production crm:P140i_was_attributed_by ?attribution .
  		?attribution crm:P141_assigned ?property.
- 		?property crm:P02_has_range ?value
+ 		?property crm:P02_has_range ?value.
   	}
 	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
   	?provider rdfs:label ?providerLabel.

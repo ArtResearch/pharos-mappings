@@ -51,7 +51,7 @@
   	{
     	?subject crm:P24i_changed_ownership_through ?acquisition.
 		?acquisition crm:P4_has_time-span ?timespan .
-		?timespan crm:P82_at_some_time_within ?value
+		?timespan crm:P82_at_some_time_within ?value.
   	}
 	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.

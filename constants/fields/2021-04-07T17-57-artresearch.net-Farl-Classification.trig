@@ -48,7 +48,7 @@
   	{
   		$subject crm:P65_shows_visual_item ?vi.
   		?vi crm:P2_has_type ?value.
-  		?value crm:P2_has_type <http://vocab.getty.edu/aat/300054631>
+  		?value crm:P2_has_type <http://vocab.getty.edu/aat/300054631>.
   	}
 	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.

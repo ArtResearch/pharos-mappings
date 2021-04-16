@@ -47,7 +47,7 @@
 {
   graph ?graph
   {
-    ?subject <https://pharos.artresearch.net/resource/fr/Work_influenced_by_Artist> ?value
+    ?subject <https://pharos.artresearch.net/resource/fr/Work_influenced_by_Artist> ?value.
   }
   ?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
   ?provider rdfs:label ?providerLabel.

@@ -50,10 +50,10 @@
   		$subject crm:P67i_is_referred_to_by ?information_object.
   		?information_object crm:P2_has_type <http://vocab.getty.edu/aat/300056109>.
   		?information_object crm:P190_has_symbolic_content ?content .
-  	}
-        BIND(REPLACE(?content,\"&quot;\",\"\\\"\") AS ?value)
+  }
 	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.
+  BIND(REPLACE(?content,\"&quot;\",\"\\\"\") AS ?value)
 }""" .
   
   _:node1f2jqhtfcx32 <http://www.w3.org/ns/ldp#contains> <https://pharos.artresearch.net/fieldDefinition/17> .

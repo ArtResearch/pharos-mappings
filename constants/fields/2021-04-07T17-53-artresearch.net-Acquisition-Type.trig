@@ -47,7 +47,7 @@
 	graph ?graph 
   	{
 		?subject crm:P24i_changed_ownership_through ?acquisition.
-		?acquisition crm:P2_has_type  ?value
+		?acquisition crm:P2_has_type ?value.
   	}
 	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.

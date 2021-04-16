@@ -52,7 +52,7 @@
 	graph ?graph 
   	{
 			?subject crm:P24i_changed_ownership_through ?acquisition.
-			?acquisition crm:P23_transferred_title_from|crm:P29_custody_received_by|crm:P22_transferred_title_from ?value
+			?acquisition crm:P23_transferred_title_from|crm:P29_custody_received_by|crm:P22_transferred_title_from ?value.
 	}
 	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.

@@ -44,7 +44,7 @@
     $subject crm:P45_consists_of ?material.
     ?material crm:P67i_is_referred_to_by ?information_object.
     ?information_object crm:P2_has_type <http://vocab.getty.edu/aat/300435429>.
-    ?information_object crm:P190_has_symbolic_content ?value
+    ?information_object crm:P190_has_symbolic_content ?value.
   }
   ?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
   ?provider rdfs:label ?providerLabel.

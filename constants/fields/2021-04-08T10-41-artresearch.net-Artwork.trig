@@ -46,9 +46,7 @@
 { 
   	graph ?graph
 	{
-    ?subject <https://pharos.artresearch.net/resource/fr/Photo_depicts_work> ?value
-#  		?visual_item crm:P128i_is_carried_by $subject .
-#		?value crm:P138i_is_represented_by ?visual_item.
+    ?subject <https://pharos.artresearch.net/resource/fr/Photo_depicts_work> ?value.
   	}
 	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.

@@ -32,7 +32,7 @@
 { 
   graph ?graph 
   {
-    #?subject <https://pharos.artresearch.net/resource/fr/Work_produced_using_technique_Technique> ?value
+    #?subject <https://pharos.artresearch.net/resource/fr/Work_produced_using_technique_Technique> ?value.
     ?subject crm:P108i_was_produced_by ?production.
   	?production crm:P33_used_specific_technique ?value.
   }

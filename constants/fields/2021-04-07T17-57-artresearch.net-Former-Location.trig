@@ -53,7 +53,7 @@
   	{
   		$subject crm:P24i_changed_ownership_through ?acq.
   		?acq crm:P23_transferred_title_from ?actor.
-  		?actor crm:P74_has_current_or_former_residence ?value
+  		?actor crm:P74_has_current_or_former_residence ?value.
   	}
 	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.

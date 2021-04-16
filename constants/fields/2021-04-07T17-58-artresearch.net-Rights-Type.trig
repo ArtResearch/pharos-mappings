@@ -49,7 +49,7 @@
   graph ?graph 
   {
   	$subject crm:P104_is_subject_to ?right.
-  	?right crm:P2_has_type ?value
+  	?right crm:P2_has_type ?value.
   }
   ?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
   ?provider rdfs:label ?providerLabel.

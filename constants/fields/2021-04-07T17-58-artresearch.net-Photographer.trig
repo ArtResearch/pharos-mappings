@@ -47,7 +47,7 @@
 {
   	graph ?graph
   	{
-		?subject <https://pharos.artresearch.net/resource/fr/Photo_created_by_Photographer> ?value
+		?subject <https://pharos.artresearch.net/resource/fr/Photo_created_by_Photographer> ?value.
   	}
 	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.
