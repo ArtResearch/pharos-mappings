@@ -33,7 +33,7 @@
     prov:wasAttributedTo User:admin;
     prov:generatedAtTime "2021-04-01T10:49:14.670Z"^^xsd:dateTime;
     <http://www.researchspace.org/resource/system/fields/selectPattern> _:t36764516;
-    <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
+    <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
     rdfs:label "Iconclass Information"@en;
     <http://www.researchspace.org/resource/system/fields/insertPattern> _:t36764517;
