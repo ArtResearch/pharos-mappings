@@ -52,34 +52,29 @@
     <https://pharos.artresearch.net/resource/pharos/source/Pharos> <http://www.w3.org/2000/01/rdf-schema#label> "Pharos".
 }
 
-
-  <https://pharos.artresearch.net/resource/itatti/fcrs> {
+<https://pharos.artresearch.net/resource/itatti/fcrs> {
     <https://pharos.artresearch.net/resource/itatti/fcrs> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/itatti/source/ITatti>.
 }
 
-  <https://pharos.artresearch.net/resource/zeri/fcrs> {
+<https://pharos.artresearch.net/resource/zeri/fcrs> {
     <https://pharos.artresearch.net/resource/zeri/fcrs> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/zeri/source/Zeri>.
 }
 
 
-insert{
-  GRAPH <https://pharos.artresearch.net/resource/frick/fcrs> {
+<https://pharos.artresearch.net/resource/frick/fcrs> {
     <https://pharos.artresearch.net/resource/frick/fcrs> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/frick/source/Frick>.
 }
 
-insert{
-  GRAPH <https://pharos.artresearch.net/resource/khi/fcrs> {
+<https://pharos.artresearch.net/resource/khi/fcrs> {
     <https://pharos.artresearch.net/resource/khi/fcrs> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/khi/source/KHI>.
 }
 
 
-insert{
-  GRAPH <https://pharos.artresearch.net/resource/marburg/fcrs> {
+<https://pharos.artresearch.net/resource/marburg/fcrs> {
     <https://pharos.artresearch.net/resource/marburg/fcrs> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/marburg/source/Marburg>.
 }
 
-insert{
-  GRAPH <https://pharos.artresearch.net/resource/hertziana/fcrs> {
+<https://pharos.artresearch.net/resource/hertziana/fcrs> {
     <https://pharos.artresearch.net/resource/hertziana/fcrs> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/hertziana/source/Hertziana>.
 }
 

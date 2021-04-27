@@ -608,7 +608,25 @@
 				<source_node>//ssw:Work/display:DR/DisplayRecord/field_string[@label="Image Accession Number"]</source_node>
 				<target_node>
 					<if>
-						<equals value="digital image">../field_lookup[@label="Image Type"]/linkedField/@preferredTerm</equals>
+						<and>
+							<if>
+								<not>
+									<if>
+										<equals value="9000369831">../field_lookup[@label="Image Repository"]/linkedField/@id</equals>
+									</if>
+								</not>
+							</if>
+							<if>
+								<not>
+									<if>
+										<equals value="9000369124">../field_lookup[@label="Image Repository"]/linkedField/@id</equals>
+									</if>
+								</not>
+							</if>
+							<if>
+								<equals value="digital image">../field_lookup[@label="Image Type"]/linkedField/@preferredTerm</equals>
+							</if>
+						</and>
 					</if>
                     <entity>
 						<type>fc:photo</type>

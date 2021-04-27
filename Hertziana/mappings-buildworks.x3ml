@@ -980,7 +980,7 @@
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
 							<entity>
-								<type>crm:noType</type>
+								<type>custom:noType</type>
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="constant">http://vocab.getty.edu/aat/300265418</arg>
 								</instance_generator>

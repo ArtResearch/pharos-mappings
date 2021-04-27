@@ -1,26 +1,26 @@
 <http://www.researchspace.org/ontologies/platform/FieldCategories> {
   <https://pharos.artresearch.net/category/work> <http://www.w3.org/2000/01/rdf-schema#label> "Work".
-  <https://pharos.artresearch.net/category/work> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>
+  <https://pharos.artresearch.net/category/work> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>.
   <https://pharos.artresearch.net/category/person> <http://www.w3.org/2000/01/rdf-schema#label>	"Person" .
-  <https://pharos.artresearch.net/category/person> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>
+  <https://pharos.artresearch.net/category/person> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>.
   <https://pharos.artresearch.net/category/photo> <http://www.w3.org/2000/01/rdf-schema#label>	"Photo" .
-  <https://pharos.artresearch.net/category/photo> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>
+  <https://pharos.artresearch.net/category/photo> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>.
   <https://pharos.artresearch.net/category/institution> <http://www.w3.org/2000/01/rdf-schema#label> "Institution" .
-  <https://pharos.artresearch.net/category/institution> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>
+  <https://pharos.artresearch.net/category/institution> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>.
   <https://pharos.artresearch.net/category/place> <http://www.w3.org/2000/01/rdf-schema#label> "Place" .
-  <https://pharos.artresearch.net/category/place> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>
+  <https://pharos.artresearch.net/category/place> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>.
   <https://pharos.artresearch.net/category/itatti> <http://www.w3.org/2000/01/rdf-schema#label>	"I Tatti" .
-  <https://pharos.artresearch.net/category/itatti> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>
+  <https://pharos.artresearch.net/category/itatti> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>.
   <https://pharos.artresearch.net/category/zeri> <http://www.w3.org/2000/01/rdf-schema#label>	"Zeri" .
-  <https://pharos.artresearch.net/category/zeri> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>
+  <https://pharos.artresearch.net/category/zeri> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>.
   <https://pharos.artresearch.net/category/frick> <http://www.w3.org/2000/01/rdf-schema#label>	"Frick" .
-  <https://pharos.artresearch.net/category/frick> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>
+  <https://pharos.artresearch.net/category/frick> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>.
   <https://pharos.artresearch.net/category/marburg> <http://www.w3.org/2000/01/rdf-schema#label>	"Marburg" .
-  <https://pharos.artresearch.net/category/marburg> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>
+  <https://pharos.artresearch.net/category/marburg> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>.
   <https://pharos.artresearch.net/category/khi> <http://www.w3.org/2000/01/rdf-schema#label>	"KHI" .
-  <https://pharos.artresearch.net/category/khi> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>
+  <https://pharos.artresearch.net/category/khi> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>.
   <https://pharos.artresearch.net/category/hertziana> <http://www.w3.org/2000/01/rdf-schema#label>	"Hertziana" .
-  <https://pharos.artresearch.net/category/hertziana> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>
+  <https://pharos.artresearch.net/category/hertziana> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>.
   
   <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info> <http://www.w3.org/2000/01/rdf-schema#label> "Work info".
   <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories>.
@@ -39,67 +39,67 @@
 <https://pharos.artresearch.net/resource/pharos/fundamental_categories/graph> {
   <https://pharos.artresearch.net/resource/fc/work>  <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
   <https://pharos.artresearch.net/resource/fc/work> a <http://www.researchspace.org/ontology/FundamentalCategory> .
-  <https://pharos.artresearch.net/resource/fc/work> <http://www.researchspace.org/ontology/hasOrder> 1.
+  <https://pharos.artresearch.net/resource/fc/work> <http://www.researchspace.org/ontology/hasOrder> "1"^^xsd:integer.
   <https://pharos.artresearch.net/resource/fc/work> <http://www.researchspace.org/ontology/hasThumbnail> "/assets/images/icons/work.svg" .
   <https://pharos.artresearch.net/resource/fc/work> <http://www.w3.org/2000/01/rdf-schema#label> "Work" .
 
   <https://pharos.artresearch.net/resource/fc/artist>  <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
   <https://pharos.artresearch.net/resource/fc/artist> a <http://www.researchspace.org/ontology/FundamentalCategory> .
-  <https://pharos.artresearch.net/resource/fc/artist> <http://www.researchspace.org/ontology/hasOrder> 2.
+  <https://pharos.artresearch.net/resource/fc/artist> <http://www.researchspace.org/ontology/hasOrder> "2"^^xsd:integer.
   <https://pharos.artresearch.net/resource/fc/artist> <http://www.researchspace.org/ontology/hasThumbnail> "/assets/images/icons/artist.svg" .
   <https://pharos.artresearch.net/resource/fc/artist> <http://www.w3.org/2000/01/rdf-schema#label>  "Artist"  .
 
   <https://pharos.artresearch.net/resource/fc/photo>  <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
   <https://pharos.artresearch.net/resource/fc/photo> a <http://www.researchspace.org/ontology/FundamentalCategory> .
-  <https://pharos.artresearch.net/resource/fc/photo> <http://www.researchspace.org/ontology/hasOrder> 3.
+  <https://pharos.artresearch.net/resource/fc/photo> <http://www.researchspace.org/ontology/hasOrder> "3"^^xsd:integer.
   <https://pharos.artresearch.net/resource/fc/photo> <http://www.researchspace.org/ontology/hasThumbnail> "/assets/images/icons/photo.svg" .
   <https://pharos.artresearch.net/resource/fc/photo> <http://www.w3.org/2000/01/rdf-schema#label>  "Photo" .
 
   <https://pharos.artresearch.net/resource/fc/photographer>  <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
   <https://pharos.artresearch.net/resource/fc/photographer> a <http://www.researchspace.org/ontology/FundamentalCategory> .
-  <https://pharos.artresearch.net/resource/fc/photographer> <http://www.researchspace.org/ontology/hasOrder> 4.
+  <https://pharos.artresearch.net/resource/fc/photographer> <http://www.researchspace.org/ontology/hasOrder> "4"^^xsd:integer.
   <https://pharos.artresearch.net/resource/fc/photographer> <http://www.researchspace.org/ontology/hasThumbnail>  "/assets/images/icons/photographer.svg" .
   <https://pharos.artresearch.net/resource/fc/photographer> <http://www.w3.org/2000/01/rdf-schema#label>  "Photographer" .
 
   <https://pharos.artresearch.net/resource/fc/institution>  <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
   <https://pharos.artresearch.net/resource/fc/institution> a <http://www.researchspace.org/ontology/FundamentalCategory> .
-  <https://pharos.artresearch.net/resource/fc/institution> <http://www.researchspace.org/ontology/hasOrder> 5.
+  <https://pharos.artresearch.net/resource/fc/institution> <http://www.researchspace.org/ontology/hasOrder> "5"^^xsd:integer.
   <https://pharos.artresearch.net/resource/fc/institution> <http://www.researchspace.org/ontology/hasThumbnail>  "/assets/images/icons/institution.svg" .
   <https://pharos.artresearch.net/resource/fc/institution> <http://www.w3.org/2000/01/rdf-schema#label>  "Institution" .
 
   <https://pharos.artresearch.net/resource/fc/place>  <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
   <https://pharos.artresearch.net/resource/fc/place> a <http://www.researchspace.org/ontology/FundamentalCategory> .
-  <https://pharos.artresearch.net/resource/fc/place> <http://www.researchspace.org/ontology/hasOrder> 6.
+  <https://pharos.artresearch.net/resource/fc/place> <http://www.researchspace.org/ontology/hasOrder> "6"^^xsd:integer.
   <https://pharos.artresearch.net/resource/fc/place> <http://www.researchspace.org/ontology/hasThumbnail>  "/assets/images/icons/place.svg" .
   <https://pharos.artresearch.net/resource/fc/place> <http://www.w3.org/2000/01/rdf-schema#label>  "Place" .
 
   <http://www.cidoc-crm.org/cidoc-crm/E55_Type>  <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
   <http://www.cidoc-crm.org/cidoc-crm/E55_Type> a <http://www.researchspace.org/ontology/FundamentalCategory> .
-  <http://www.cidoc-crm.org/cidoc-crm/E55_Type> <http://www.researchspace.org/ontology/hasOrder> 7.
+  <http://www.cidoc-crm.org/cidoc-crm/E55_Type> <http://www.researchspace.org/ontology/hasOrder> "7"^^xsd:integer.
   <http://www.cidoc-crm.org/cidoc-crm/E55_Type> <http://www.researchspace.org/ontology/hasThumbnail> "/assets/images/icons/concept.svg" .
   <http://www.cidoc-crm.org/cidoc-crm/E55_Type> <http://www.w3.org/2000/01/rdf-schema#label>  "Concept" .
 
   <https://pharos.artresearch.net/resource/fc/subject> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
   <https://pharos.artresearch.net/resource/fc/subject> a <http://www.researchspace.org/ontology/FundamentalCategory> .
-  <https://pharos.artresearch.net/resource/fc/subject> <http://www.researchspace.org/ontology/hasOrder> 8.
+  <https://pharos.artresearch.net/resource/fc/subject> <http://www.researchspace.org/ontology/hasOrder> "8"^^xsd:integer.
   <https://pharos.artresearch.net/resource/fc/subject> <http://www.researchspace.org/ontology/hasThumbnail> "/assets/images/icons/subject.svg" .
   <https://pharos.artresearch.net/resource/fc/subject> <http://www.w3.org/2000/01/rdf-schema#label>  "Subject" .
 
   <http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
   <http://www.w3.org/2001/XMLSchema#date> a <http://www.researchspace.org/ontology/FundamentalCategory> .
-  <http://www.w3.org/2001/XMLSchema#date> <http://www.researchspace.org/ontology/hasOrder> 9.
+  <http://www.w3.org/2001/XMLSchema#date> <http://www.researchspace.org/ontology/hasOrder> "9"^^xsd:integer.
   <http://www.w3.org/2001/XMLSchema#date> <http://www.researchspace.org/ontology/hasThumbnail> "/assets/images/icons/date.svg" .
   <http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/2000/01/rdf-schema#label>  "Date" .
 
   <https://pharos.artresearch.net/resource/fc/material> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
   <https://pharos.artresearch.net/resource/fc/material> a <http://www.researchspace.org/ontology/FundamentalCategory> .
-  <https://pharos.artresearch.net/resource/fc/material> <http://www.researchspace.org/ontology/hasOrder> 10.
+  <https://pharos.artresearch.net/resource/fc/material> <http://www.researchspace.org/ontology/hasOrder> "10"^^xsd:integer.
   <https://pharos.artresearch.net/resource/fc/material> <http://www.researchspace.org/ontology/hasThumbnail> "/assets/images/icons/material.svg" .
   <https://pharos.artresearch.net/resource/fc/material> <http://www.w3.org/2000/01/rdf-schema#label>  "Material" .
 
   <https://pharos.artresearch.net/resource/fc/technique> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
   <https://pharos.artresearch.net/resource/fc/technique> a <http://www.researchspace.org/ontology/FundamentalCategory> .
-  <https://pharos.artresearch.net/resource/fc/technique> <http://www.researchspace.org/ontology/hasOrder> 11.
+  <https://pharos.artresearch.net/resource/fc/technique> <http://www.researchspace.org/ontology/hasOrder> "11"^^xsd:integer.
   <https://pharos.artresearch.net/resource/fc/technique> <http://www.researchspace.org/ontology/hasThumbnail> "/assets/images/icons/technique.svg" .
   <https://pharos.artresearch.net/resource/fc/technique> <http://www.w3.org/2000/01/rdf-schema#label>  "Technique" .
 } 

@@ -6,7 +6,7 @@
 		<namespace prefix="crmdig" uri="http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/"/>
 		<namespace prefix="ssw" uri="http://catalog.sharedshelf.artstor.org/ssw"/>
 		<namespace prefix="display" uri="http://catalog.sharedshelf.artstor.org/display"/>
-		<namespace prefix="prefix" uri="https://pharos.artresearch.net/resource/midas/"/>
+		<namespace prefix="prefix" uri="https://pharos.artresearch.net/resource/khi/"/>
 		<namespace prefix="vocab" uri="https://pharos.artresearch.net/resource/midas/vocabulary/"/>
 		<namespace prefix="custom" uri="https://pharos.artresearch.net/custom/"/>
 		<namespace prefix="owl" uri="http://www.w3.org/2002/07/owl#"/>
@@ -71,7 +71,7 @@
 					</if>
 					<entity>
 						<type>crm:E53_Place</type>
-						<instance_generator name="URIwithType">
+						<instance_generator name="URIwithTypeAndId">
 							<arg name="type" type="constant">place</arg>
 							<arg name="id" type="xpath">text()</arg>
 						</instance_generator>
