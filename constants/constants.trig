@@ -1336,3 +1336,10 @@
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Photo Card" .
 }
+
+<https://pharos.artresearch.net/resource/midas/type/84B03AD8-694C-325A-9010-13B234C00D8C/graph> {
+        <https://pharos.artresearch.net/resource/midas/type/84B03AD8-694C-325A-9010-13B234C00D8C>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "National Group" .
+}

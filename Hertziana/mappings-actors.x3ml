@@ -899,12 +899,22 @@
                    <entity>
 						<type>crm:E39_Actor</type>
 						<instance_generator name="URIwithType">
-							<arg name="type" type="constant">actor</arg>
+							<arg name="type" type="constant">group</arg>
 							<arg name="id" type="xpath">text()</arg>
 						</instance_generator>
 						<label_generator name="Literal">
 							<arg name="text" type="xpath">text()</arg>
 						</label_generator>
+                        <additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIwithVocabType">
+									<arg name="type" type="constant">type</arg>
+									<arg name="id" type="constant">National Group</arg>
+								</instance_generator>
+							</entity>
+						</additional>
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>

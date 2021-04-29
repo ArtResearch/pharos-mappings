@@ -742,37 +742,7 @@
 					</target_node>
 				</range>
 			</link>
-			
-			<!-- <link> 
-				<path>
-					<source_relation>
-						<relation>../aob28/a2930</relation>
-					</source_relation>
-					<target_relation>
-						<if>
-							<not>
-								<if>
-									<equals value="x">text()</equals>
-								</if>
-							</not>
-						</if>
-						<relationship>crm:P107_is_current_or_former_member_of</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>../aob28/a2930</source_node>
-					<target_node>
-						<entity>
-							<type>custom:noType</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">text()</arg>
-							</instance_generator>
-						</entity>
-					</target_node>
-				</range>
-			</link> -->
-			
+
 			<link>
 				<path>
 					<source_relation>
@@ -897,12 +867,22 @@
                    <entity>
 						<type>crm:E39_Actor</type>
 						<instance_generator name="URIwithType">
-							<arg name="type" type="constant">actor</arg>
+							<arg name="type" type="constant">group</arg>
 							<arg name="id" type="xpath">text()</arg>
 						</instance_generator>
 						<label_generator name="Literal">
 							<arg name="text" type="xpath">text()</arg>
 						</label_generator>
+                        <additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIwithVocabType">
+									<arg name="type" type="constant">type</arg>
+									<arg name="id" type="constant">National Group</arg>
+								</instance_generator>
+							</entity>
+						</additional>
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
@@ -938,58 +918,7 @@
 				</target_node>
 			</domain>
 		</mapping>
-
-		<!--lvl1 group actor-->
-		<!-- <mapping namedgraph="graph">
-			<domain>
-				<source_node>/root/obj/aob28/a2930</source_node>
-				<target_node>
-                   <entity>
-						<type>crm:E39_Actor</type>
-						<instance_generator name="URIwithType">
-							<arg name="type" type="constant">actor</arg>
-							<arg name="id" type="xpath">text()</arg>
-						</instance_generator>
-						<label_generator name="Literal">
-							<arg name="text" type="xpath">text()</arg>
-						</label_generator>
-						<additional>
-							<relationship>custom:has_provider</relationship>
-							<entity>
-								<type>custom:noType</type>
-								<instance_generator name="URIwithTypeAndId">
-									<arg name="type" type="constant">source</arg>
-									<arg name="id" type="constant">Marburg</arg>
-								</instance_generator>
-							</entity>
-						</additional>
-						<additional>
-							<relationship>crm:P67i_is_referred_to_by</relationship>
-							<entity>
-								<type>custom:Namedgraph</type>
-								<instance_generator name="MultiHashingGenerator">
-									<arg name="hierarchy" type="constant">actor</arg>
-									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
-									<arg name="term_simple" type="constant">graph</arg>
-								</instance_generator>
-								<additional>
-									<relationship>custom:has_provider</relationship>
-									<entity>
-										<type>custom:noType</type>
-										<instance_generator name="URIwithTypeAndId">
-											<arg name="type" type="constant">source</arg>
-											<arg name="id" type="constant">Marburg</arg>
-										</instance_generator>
-									</entity>
-								</additional>
-							</entity>
-						</additional>
-					</entity>
-				</target_node>
-			</domain>
-		</mapping> -->
-
-
+		
 		<!--lvl2-->
 		<mapping namedgraph="graph">
 			<domain>
@@ -1271,36 +1200,6 @@
 					</target_node>
 				</range>
 			</link>
-			
-			<!-- <link> 
-				<path>
-					<source_relation>
-						<relation>../aob28/a2930</relation>
-					</source_relation>
-					<target_relation>
-						<if>
-							<not>
-								<if>
-									<equals value="x">text()</equals>
-								</if>
-							</not>
-						</if>
-						<relationship>crm:P107_is_current_or_former_member_of</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>../aob28/a2930</source_node>
-					<target_node>
-						<entity>
-							<type>custom:noType</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">text()</arg>
-							</instance_generator>
-						</entity>
-					</target_node>
-				</range>
-			</link> -->
 			
 			<link>
 				<path>
@@ -1804,36 +1703,6 @@
 				</range>
 			</link>
 			
-			<!-- <link> 
-				<path>
-					<source_relation>
-						<relation>../aob28/a2930</relation>
-					</source_relation>
-					<target_relation>
-						<if>
-							<not>
-								<if>
-									<equals value="x">text()</equals>
-								</if>
-							</not>
-						</if>
-						<relationship>crm:P107_is_current_or_former_member_of</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>../aob28/a2930</source_node>
-					<target_node>
-						<entity>
-							<type>custom:noType</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">text()</arg>
-							</instance_generator>
-						</entity>
-					</target_node>
-				</range>
-			</link> -->
-			
 			<link>
 				<path>
 					<source_relation>
@@ -2336,36 +2205,6 @@
 					</target_node>
 				</range>
 			</link>
-			
-			<!-- <link> 
-				<path>
-					<source_relation>
-						<relation>../aob28/a2930</relation>
-					</source_relation>
-					<target_relation>
-						<if>
-							<not>
-								<if>
-									<equals value="x">text()</equals>
-								</if>
-							</not>
-						</if>
-						<relationship>crm:P107_is_current_or_former_member_of</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>../aob28/a2930</source_node>
-					<target_node>
-						<entity>
-							<type>custom:noType</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">text()</arg>
-							</instance_generator>
-						</entity>
-					</target_node>
-				</range>
-			</link> -->
 			
 			<link>
 				<path>

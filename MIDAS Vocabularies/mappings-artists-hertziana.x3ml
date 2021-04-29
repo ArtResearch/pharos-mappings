@@ -43,7 +43,38 @@
 						<relation>a30gn</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<equals value="ulan">@source</equals>
+						</if>
 						<relationship>owl:sameAs</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a30gn</source_node>
+					<target_node>
+						<entity>
+							<type>fc:artist</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">../a3100/text()</arg>
+							</label_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>a30gn</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="gnd">@source</equals>
+						</if>
+						<relationship>skos:exactMatch</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -106,6 +137,16 @@
 								<arg name="type" type="constant">group</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIwithVocabType">
+										<arg name="type" type="constant">type</arg>
+										<arg name="id" type="constant">National Group</arg>
+									</instance_generator>
+								</entity>
+							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -138,7 +179,38 @@
 						<relation>../a30gn</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<equals value="ulan">@source</equals>
+						</if>
 						<relationship>owl:sameAs</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../a30gn</source_node>
+					<target_node>
+						<entity>
+							<type>fc:artist</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">../a3100/text()</arg>
+							</label_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>../a30gn</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="gnd">@source</equals>
+						</if>
+						<relationship>skos:exactMatch</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -202,6 +274,16 @@
 								<arg name="type" type="constant">group</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIwithVocabType">
+										<arg name="type" type="constant">type</arg>
+										<arg name="id" type="constant">National Group</arg>
+									</instance_generator>
+								</entity>
+							</additional>
 						</entity>
 					</target_node>
 				</range>
