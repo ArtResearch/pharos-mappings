@@ -28,8 +28,8 @@
   <http://www.researchspace.org/ontologies/platform/FieldCategories/photograph_info> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories>.
   <http://www.researchspace.org/ontologies/platform/FieldCategories/production_info> <http://www.w3.org/2000/01/rdf-schema#label> "Production info".
   <http://www.researchspace.org/ontologies/platform/FieldCategories/production_info> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories>.
-  <http://www.researchspace.org/ontologies/platform/FieldCategories/other_info> <http://www.w3.org/2000/01/rdf-schema#label> "Other info".
-  <http://www.researchspace.org/ontologies/platform/FieldCategories/other_info> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories>.
+  <http://www.researchspace.org/ontologies/platform/FieldCategories/other_details> <http://www.w3.org/2000/01/rdf-schema#label> "Other details".
+  <http://www.researchspace.org/ontologies/platform/FieldCategories/other_details> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories>.
   <http://www.researchspace.org/ontologies/platform/FieldCategories/person_info> <http://www.w3.org/2000/01/rdf-schema#label> "Person info".
   <http://www.researchspace.org/ontologies/platform/FieldCategories/person_info> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories>.
   <http://www.researchspace.org/ontologies/platform/FieldCategories/external_info> <http://www.w3.org/2000/01/rdf-schema#label> "External info".

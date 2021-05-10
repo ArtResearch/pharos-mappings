@@ -498,7 +498,7 @@
 								<entity>
 									<type>fc:photo</type>
 									<instance_generator name="URIwithTypeAndId">
-										<arg name="type" type="constant">work</arg>
+										<arg name="type" type="constant">photo</arg>
 										<arg name="id" type="xpath">../field_string[@label="Image Accession Number"]/substring(@value,1,string-length(@value)-2)</arg>
 									</instance_generator>
 								</entity>

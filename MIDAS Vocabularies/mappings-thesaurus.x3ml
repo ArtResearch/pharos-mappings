@@ -13,6 +13,7 @@
 		<namespace prefix="gnd" uri="http://d-nb.info/gnd/"/>
 		<namespace prefix="aat" uri="http://vocab.getty.edu/aat/"/>
 		<namespace prefix="skos" uri="http://www.w3.org/2004/02/skos/core#"/>
+		<namespace prefix="fc" uri="https://pharos.artresearch.net/resource/fc/"/>
 	</namespaces>
 	
 	<mappings>
@@ -100,7 +101,7 @@
 					<source_node>a010gn</source_node>
 					<target_node>
 						<entity>
-							<type>custom:noType</type>
+							<type>crm:E55_Type</type>
 							<instance_generator name="AAT_URI">
 								<arg name="id" type="xpath">@id</arg>
 							</instance_generator>
@@ -125,7 +126,7 @@
 								</if>
 							</and>
 						</if>
-						<relationship>owl:sameAs</relationship>
+						<relationship>skos:exactMatch</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -546,7 +547,7 @@
 					<source_node>../a010gn</source_node>
 					<target_node>
 						<entity>
-							<type>custom:noType</type>
+							<type>crm:E55_Type</type>
 							<instance_generator name="AAT_URI">
 								<arg name="id" type="xpath">@id</arg>
 							</instance_generator>
@@ -571,7 +572,7 @@
 								</if>
 							</and>
 						</if>
-						<relationship>owl:sameAs</relationship>
+						<relationship>skos:exactMatch</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -1243,7 +1244,7 @@
 					<source_node>a010gn</source_node>
 					<target_node>
 						<entity>
-							<type>custom:noType</type>
+							<type>fc:material</type>
 							<instance_generator name="AAT_URI">
 								<arg name="id" type="xpath">@id</arg>
 							</instance_generator>
@@ -1268,7 +1269,7 @@
 								</if>
 							</and>
 						</if>
-						<relationship>owl:sameAs</relationship>
+						<relationship>skos:exactMatch</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -1689,7 +1690,7 @@
 					<source_node>../a010gn</source_node>
 					<target_node>
 						<entity>
-							<type>custom:noType</type>
+							<type>fc:material</type>
 							<instance_generator name="AAT_URI">
 								<arg name="id" type="xpath">@id</arg>
 							</instance_generator>
@@ -1714,7 +1715,7 @@
 								</if>
 							</and>
 						</if>
-						<relationship>owl:sameAs</relationship>
+						<relationship>skos:exactMatch</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -2386,7 +2387,7 @@
 					<source_node>a010gn</source_node>
 					<target_node>
 						<entity>
-							<type>custom:noType</type>
+							<type>fc:technique</type>
 							<instance_generator name="AAT_URI">
 								<arg name="id" type="xpath">@id</arg>
 							</instance_generator>
@@ -2411,7 +2412,7 @@
 								</if>
 							</and>
 						</if>
-						<relationship>owl:sameAs</relationship>
+						<relationship>skos:exactMatch</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -2832,7 +2833,7 @@
 					<source_node>../a010gn</source_node>
 					<target_node>
 						<entity>
-							<type>custom:noType</type>
+							<type>fc:technique</type>
 							<instance_generator name="AAT_URI">
 								<arg name="id" type="xpath">@id</arg>
 							</instance_generator>
@@ -2857,7 +2858,7 @@
 								</if>
 							</and>
 						</if>
-						<relationship>owl:sameAs</relationship>
+						<relationship>skos:exactMatch</relationship>
 					</target_relation>
 				</path>
 				<range>

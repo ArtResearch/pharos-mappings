@@ -1670,7 +1670,7 @@
 								<arg name="Date" type="xpath">string-join((../a8496/text(),"-"),' ')</arg>
 							</label_generator>
 						</entity>
-						<relationship>crm:P22_transferred_title_from</relationship>
+						<relationship>crm:P23_transferred_title_from</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -2475,7 +2475,7 @@
 								<arg name="Date" type="xpath">string-join((../a8496/text(),"-"),' ')</arg>
 							</label_generator>
 						</entity>
-						<relationship>crm:P22_transferred_title_from</relationship>
+						<relationship>crm:P23_transferred_title_from</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -3299,7 +3299,7 @@
 								<arg name="Date" type="xpath">string-join((../a8496/text(),"-"),' ')</arg>
 							</label_generator>
 						</entity>
-						<relationship>crm:P22_transferred_title_from</relationship>
+						<relationship>crm:P23_transferred_title_from</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -4104,7 +4104,7 @@
 								<arg name="Date" type="xpath">string-join((../a8496/text(),"-"),' ')</arg>
 							</label_generator>
 						</entity>
-						<relationship>crm:P22_transferred_title_from</relationship>
+						<relationship>crm:P23_transferred_title_from</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -4928,7 +4928,7 @@
 								<arg name="Date" type="xpath">string-join((../a8496/text(),"-"),' ')</arg>
 							</label_generator>
 						</entity>
-						<relationship>crm:P22_transferred_title_from</relationship>
+						<relationship>crm:P23_transferred_title_from</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -5733,7 +5733,7 @@
 								<arg name="Date" type="xpath">string-join((../a8496/text(),"-"),' ')</arg>
 							</label_generator>
 						</entity>
-						<relationship>crm:P22_transferred_title_from</relationship>
+						<relationship>crm:P23_transferred_title_from</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -6558,7 +6558,7 @@
 								<arg name="Date" type="xpath">string-join((../a8496/text(),"-"),' ')</arg>
 							</label_generator>
 						</entity>
-						<relationship>crm:P22_transferred_title_from</relationship>
+						<relationship>crm:P23_transferred_title_from</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -7363,7 +7363,7 @@
 								<arg name="Date" type="xpath">string-join((../a8496/text(),"-"),' ')</arg>
 							</label_generator>
 						</entity>
-						<relationship>crm:P22_transferred_title_from</relationship>
+						<relationship>crm:P23_transferred_title_from</relationship>
 					</target_relation>
 				</path>
 				<range>
