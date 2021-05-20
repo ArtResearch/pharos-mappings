@@ -14,6 +14,7 @@
 		<namespace prefix="iiif_image" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
 		<namespace prefix="iiif_json" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
 		<namespace prefix="fc" uri="https://pharos.artresearch.net/resource/custom/fc/"/>
+		<namespace prefix="customfc" uri="https://pharos.artresearch.net/resource/custom/fc/"/>
 		<namespace prefix="fr" uri="https://pharos.artresearch.net/resource/fr/"/>
 		<namespace prefix="geo" uri="http://sws.geonames.org/"/>
 	</namespaces>
@@ -23,7 +24,7 @@
 				<source_node>//FINAL_EXPORT_Work</source_node>
 				<target_node>
                     <entity>
-                        <type>fc:work</type>
+                        <type>customfc:work</type>
 						<instance_generator name="URIwithTypeAndId">
 						    <arg name="type" type="constant">work</arg>
 							<arg name="id" type="xpath">Artwork_ID/text()</arg>
@@ -31,7 +32,7 @@
 						<additional>
 							<relationship>fr:Work_has_provider_Institution</relationship>
 							<entity>
-								<type>fc:institution</type>
+								<type>customfc:institution</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">ITatti</arg>
@@ -55,7 +56,7 @@
 					<source_node>E21_ID</source_node>
 					<target_node>
 						<entity>
-							<type>fc:artist</type>
+							<type>customfc:artist</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">text()</arg>
@@ -63,7 +64,7 @@
 							<additional>
 								<relationship>fr:Artist_created_Work</relationship>
 								<entity>
-									<type>fc:work</type>
+									<type>customfc:work</type>
 									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">work</arg>
 										<arg name="id" type="xpath">../Artwork_ID/text()</arg>
@@ -88,7 +89,7 @@
 					<source_node>E39_ID</source_node>
 					<target_node>
 						<entity>
-							<type>fc:artist</type>
+							<type>customfc:artist</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">text()</arg>
@@ -96,7 +97,7 @@
 							<additional>
 								<relationship>fr:Artist_created_Work</relationship>
 								<entity>
-									<type>fc:work</type>
+									<type>customfc:work</type>
 									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">work</arg>
 										<arg name="id" type="xpath">../Artwork_ID/text()</arg>
@@ -165,7 +166,7 @@
 					<source_node>P29</source_node>
 					<target_node>
 						<entity>
-							<type>fc:institution</type>
+							<type>customfc:institution</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">text()</arg>
@@ -173,7 +174,7 @@
 							<additional>
 								<relationship>fr:Institution_keeps_Work</relationship>
 								<entity>
-									<type>fc:work</type>
+									<type>customfc:work</type>
 									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">work</arg>
 										<arg name="id" type="xpath">../Artwork_ID/text()</arg>
@@ -193,7 +194,7 @@
 				<source_node>//FINAL_EXPORT_Photograph</source_node>
 				<target_node>
                     <entity>
-						<type>fc:photo</type>
+						<type>customfc:photo</type>
 						<instance_generator name="URIwithTypeAndId">
 							<arg name="type" type="constant">photo</arg>
 							<arg name="id" type="xpath">Photograph_ID/text()</arg>
@@ -201,7 +202,7 @@
 						<additional>
 							<relationship>fr:Photo_has_provider_Institution</relationship>
 							<entity>
-								<type>fc:institution</type>
+								<type>customfc:institution</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">ITatti</arg>
@@ -225,7 +226,7 @@
 					<source_node>Artwork_ID</source_node>
 					<target_node>
 						<entity>
-							<type>fc:work</type>
+							<type>customfc:work</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">work</arg>
 								<arg name="id" type="xpath">text()</arg>
@@ -233,7 +234,7 @@
 							<additional>
 								<relationship>fr:Work_depicted_by_Photo</relationship>
 								<entity>
-									<type>fc:photo</type>
+									<type>customfc:photo</type>
 									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">photo</arg>
 										<arg name="id" type="xpath">../Photograph_ID/text()</arg>
@@ -252,7 +253,7 @@
 				<source_node>//FINAL_EXPORT_Artist</source_node>
 				<target_node>
                    	<entity>
-						<type>fc:artist</type>
+						<type>customfc:artist</type>
 						<instance_generator name="URIwithTypeAndId">
 							<arg name="type" type="constant">actor</arg>
 							<arg name="id" type="xpath">Artist_ID/text()</arg>
@@ -282,7 +283,7 @@
 							<additional>
 								<relationship>fr:Place_of_Artist</relationship>
 								<entity>
-									<type>fc:artist</type>
+									<type>customfc:artist</type>
 									<instance_generator name="URIwithType">
 										<arg name="type" type="constant">actor</arg>
 										<arg name="id" type="xpath">../Artist_ID/text()</arg>
@@ -300,7 +301,7 @@
 				<source_node>//FINAL_EXPORT_Institution</source_node>
 				<target_node>
                    	<entity>
-						<type>fc:institution</type>
+						<type>customfc:institution</type>
 						<instance_generator name="URIwithTypeAndId">
 							<arg name="type" type="constant">actor</arg>
 							<arg name="id" type="xpath">Institution_ID/text()</arg>
@@ -322,7 +323,7 @@
 					<source_node>Intitution_city</source_node>
 					<target_node>
 						<entity>
-							<type>fc:place</type>
+							<type>customfc:place</type>
 							<instance_generator name="PlaceURIwithType">
 								<arg name="type" type="constant">place</arg>
 								<arg name="resourceId" type="xpath">../Institution_ID/text()</arg>

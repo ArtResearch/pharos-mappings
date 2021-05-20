@@ -42,12 +42,19 @@
 				</target_node>
 			</domain>
 			
-			<link> 
+			<link>
 				<path>
 					<source_relation>
 						<relation>marc:datafield[@tag="100"]/marc:subfield[@code="a"]</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<not>
+								<if>
+									<equals value="contributor">../marc:subfield[@code="e"]/text()</equals>
+								</if>
+							</not>
+						</if>
 						<relationship>fr:Work_created_from_Artist</relationship>
 					</target_relation>
 				</path>
@@ -58,7 +65,7 @@
 							<type>fc:artist</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">text()</arg>
+								<arg name="id" type="xpath">string-join(( text() , ../marc:subfield[@code="c"]/text() ), " " )</arg>
 							</instance_generator>
 							<additional>
 								<relationship>fr:Artist_created_Work</relationship>
@@ -190,7 +197,7 @@
 							<type>fc:place</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">place</arg>
-								<arg name="id" type="xpath">text()</arg>
+								<arg name="id" type="xpath">string-join((text(), ../marc:subfield[@code="d"]/text() ),'_')</arg>
 							</instance_generator>
 							<additional>
 								<relationship>fr:Place_of_Work</relationship>
@@ -289,7 +296,7 @@
 							<type>fc:institution</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">text()</arg>
+								<arg name="id" type="xpath">string-join((text(), ../marc:subfield[@code="b"]/text(), ../marc:subfield[@code="d"]/text() ),'_')</arg>
 							</instance_generator>
 							<additional>
 								<relationship>fr:Institution_keeps_Work</relationship>
@@ -305,95 +312,7 @@
 					</target_node>
 				</range>
 			</link>
-			
-			<link>
-				<path>
-					<source_relation>
-						<relation>marc:datafield[@tag="590" and @ind1="9"]</relation>
-					</source_relation>
-					<target_relation>
-						<if>
-							<and>
-								<if>
-									<equals value="Photograph">marc:subfield[@code="a"]/text()</equals>
-								</if>
-								<if>
-									<exists>marc:subfield[@code="c"]/text()</exists>
-								</if>
-							</and>
-						</if>
-						<relationship>fr:Work_depicted_by_Photo</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>marc:datafield[@tag="590" and @ind1="9"]</source_node>
-					<target_node>
-						<entity>
-							<type>fc:photo</type>
-							<instance_generator name="FrickPhotowithTypeAndId">
-								<arg name="type" type="constant">photo</arg>
-								<arg name="work_id" type="xpath">../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
-								<arg name="photo_id" type="xpath">marc:subfield[@code="c"]/text()</arg>
-							</instance_generator>
-							<additional>
-								<relationship>fr:Photo_depicts_Work</relationship>
-								<entity>
-									<type>fc:work</type>
-									<instance_generator name="URIwithTypeAndId">
-										<arg name="type" type="constant">work</arg>
-										<arg name="id" type="xpath">../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
-									</instance_generator>
-								</entity>
-							</additional>
-						</entity>
-					</target_node>
-				</range>
-			</link>
-			
-			<link>
-				<path>
-					<source_relation>
-						<relation>marc:datafield[@tag="590" and @ind1="9"]</relation>
-					</source_relation>
-					<target_relation>
-						<if>
-							<and>
-								<if>
-									<equals value="Photograph">marc:subfield[@code="a"]/text()</equals>
-								</if>
-								<if>
-									<exists>marc:subfield[@code="d"]/text()</exists>
-								</if>
-							</and>
-						</if>
-						<relationship>fr:Work_depicted_by_Photo</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>marc:datafield[@tag="590" and @ind1="9"]</source_node>
-					<target_node>
-						<entity>
-							<type>fc:photo</type>
-							<instance_generator name="FrickPhotowithTypeAndId">
-								<arg name="type" type="constant">photo</arg>
-								<arg name="work_id" type="xpath">../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
-								<arg name="photo_id" type="xpath">marc:subfield[@code="d"]/text()</arg>
-							</instance_generator>
-							<additional>
-								<relationship>fr:Photo_depicts_Work</relationship>
-								<entity>
-									<type>fc:work</type>
-									<instance_generator name="URIwithTypeAndId">
-										<arg name="type" type="constant">work</arg>
-										<arg name="id" type="xpath">../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
-									</instance_generator>
-								</entity>
-							</additional>
-						</entity>
-					</target_node>
-				</range>
-			</link>
-			
+
 			<link> 
 				<path>
 					<source_relation>
@@ -485,54 +404,7 @@
 					</target_node>
 				</range>
 			</link>
-			
-			<link> 
-				<path>
-					<source_relation>
-						<relation>marc:datafield[@tag="590" and @ind1="9"]</relation>
-					</source_relation>
-					<target_relation>
-						<if>
-							<or>
-								<if>
-									<equals value="Postcard">marc:subfield[@code="a"]/text()</equals>
-								</if>
-								<if>
-									<equals value="Photostat">marc:subfield[@code="a"]/text()</equals>
-								</if>
-								<if>
-									<equals value="Publication">marc:subfield[@code="a"]/text()</equals>
-								</if>
-							</or>
-						</if>
-						<relationship>fr:Work_depicted_by_Photo</relationship>
-					</target_relation>
-				</path>				
-				<range>
-					<source_node>marc:datafield[@tag="590" and @ind1="9"]</source_node>
-					<target_node>
-						<entity>
-							<type>fc:photo</type>
-							<instance_generator name="FrickPhotowithTypeAndId">
-								<arg name="type" type="constant">photo</arg>
-								<arg name="work_id" type="xpath">../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
-								<arg name="photo_id" type="xpath">marc:subfield[@code="k"]/text()</arg>
-							</instance_generator>
-							<additional>
-								<relationship>fr:Photo_depicts_Work</relationship>
-								<entity>
-									<type>fc:work</type>
-									<instance_generator name="URIwithTypeAndId">
-										<arg name="type" type="constant">work</arg>
-										<arg name="id" type="xpath">../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
-									</instance_generator>
-								</entity>
-							</additional>
-						</entity>
-					</target_node>
-				</range>
-			</link>
-						
+				
 			<link> 
 				<path>
 					<source_relation>
@@ -557,148 +429,6 @@
 			</link>
 			
 		</mapping>
-	
-		<mapping>
-			<domain>
-				<source_node>//marc:datafield[@tag="590" and @ind1="9"]</source_node>
-				<target_node>
-					<if>
-						<and>
-							<if>
-								<equals value="Photograph">marc:subfield[@code="a"]/text()</equals>
-							</if>
-							<if>
-								<exists>marc:subfield[@code="c"]/text()</exists>
-							</if>
-						</and>
-					</if>
-                    <entity>
-						<type>fc:photo</type>
-						<instance_generator name="FrickPhotowithTypeAndId">
-							<arg name="type" type="constant">photo</arg>
-							<arg name="work_id" type="xpath">../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
-							<arg name="photo_id" type="xpath">marc:subfield[@code="c"]/text()</arg>
-						</instance_generator>
-						<additional>
-							<relationship>fr:Photo_has_provider_Institution</relationship>
-							<entity>
-								<type>fc:institution</type>
-								<instance_generator name="URIwithTypeAndId">
-									<arg name="type" type="constant">source</arg>
-									<arg name="id" type="constant">Frick</arg>
-								</instance_generator>
-							</entity>
-						</additional>
-					</entity>
-				</target_node>
-			</domain>
-			
-			<link> 
-				<path>
-					<source_relation>
-						<relation>marc:subfield[@code="b"]</relation>
-					</source_relation>
-					<target_relation>
-						<relationship>fr:Photo_created_by_Photographer</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>marc:subfield[@code="b"]</source_node>
-					<target_node>
-						<entity>
-							<type>fc:photographer</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">@person</arg>
-							</instance_generator>
-							<additional>
-								<relationship>fr:Photographer_created_Photo</relationship>
-								<entity>
-									<type>fc:photo</type>
-									<instance_generator name="FrickPhotowithTypeAndId">
-										<arg name="type" type="constant">photo</arg>
-										<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
-										<arg name="photo_id" type="xpath">../marc:subfield[@code="c"]/text()</arg>
-									</instance_generator>
-								</entity>
-							</additional>
-						</entity>
-					</target_node>
-				</range>
-			</link>
-			
-		</mapping>	
-		
-		<mapping>
-			<domain>
-				<source_node>//marc:datafield[@tag="590" and @ind1="9"]</source_node>
-				<target_node>
-					<if>
-						<and>
-							<if>
-								<equals value="Photograph">marc:subfield[@code="a"]/text()</equals>
-							</if>
-							<if>
-								<exists>marc:subfield[@code="d"]/text()</exists>
-							</if>
-						</and>
-					</if>
-                    <entity>
-						<type>fc:photo</type>
-						<instance_generator name="FrickPhotowithTypeAndId">
-							<arg name="type" type="constant">photo</arg>
-							<arg name="work_id" type="xpath">../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
-							<arg name="photo_id" type="xpath">marc:subfield[@code="d"]/text()</arg>
-						</instance_generator>
-						<additional>
-							<relationship>fr:Photo_has_provider_Institution</relationship>
-							<entity>
-								<type>fc:institution</type>
-								<instance_generator name="URIwithTypeAndId">
-									<arg name="type" type="constant">source</arg>
-									<arg name="id" type="constant">Frick</arg>
-								</instance_generator>
-							</entity>
-						</additional>
-					</entity>
-				</target_node>
-			</domain>
-			
-			<link> 
-				<path>
-					<source_relation>
-						<relation>marc:subfield[@code="b"]</relation>
-					</source_relation>
-					<target_relation>
-						<relationship>fr:Photo_created_by_Photographer</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>marc:subfield[@code="b"]</source_node>
-					<target_node>
-						<entity>
-							<type>fc:photographer</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">@person</arg>
-							</instance_generator>
-							<additional>
-								<relationship>fr:Photographer_created_Photo</relationship>
-								<entity>
-									<type>fc:photo</type>
-									<instance_generator name="FrickPhotowithTypeAndId">
-										<arg name="type" type="constant">photo</arg>
-										<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
-										<arg name="photo_id" type="xpath">../marc:subfield[@code="d"]/text()</arg>
-									</instance_generator>
-								</entity>
-							</additional>
-						</entity>
-					</target_node>
-				</range>
-			</link>
-			
-		</mapping>	
 		
 		<mapping>
 			<domain>
@@ -848,87 +578,13 @@
 		
 		<mapping>
 			<domain>
-				<source_node>//marc:datafield[@tag="590" and @ind1="9"]</source_node>
-				<target_node>
-					<if>
-						<or>
-							<if>
-								<equals value="Photostat">marc:subfield[@code="a"]/text()</equals>
-							</if>
-							<if>
-								<equals value="Postcard">marc:subfield[@code="a"]/text()</equals>
-							</if>
-							<if>
-								<equals value="Publication">marc:subfield[@code="a"]/text()</equals>
-							</if>
-						</or>
-					</if>
-                    <entity>
-						<type>fc:photo</type>
-						<instance_generator name="FrickPhotowithTypeAndId">
-							<arg name="type" type="constant">photo</arg>
-							<arg name="work_id" type="xpath">../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
-							<arg name="photo_id" type="xpath">marc:subfield[@code="k"]/text()</arg>
-						</instance_generator>
-						<additional>
-							<relationship>fr:Photo_has_provider_Institution</relationship>
-							<entity>
-								<type>fc:institution</type>
-								<instance_generator name="URIwithTypeAndId">
-									<arg name="type" type="constant">source</arg>
-									<arg name="id" type="constant">Frick</arg>
-								</instance_generator>
-							</entity>
-						</additional>
-					</entity>
-				</target_node>
-			</domain>
-			
-			<link> 
-				<path>
-					<source_relation>
-						<relation>marc:subfield[@code="b"]</relation>
-					</source_relation>
-					<target_relation>
-						<relationship>fr:Photo_created_by_Photographer</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>marc:subfield[@code="b"]</source_node>
-					<target_node>
-						<entity>
-							<type>fc:photographer</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">@person</arg>
-							</instance_generator>
-							<additional>
-								<relationship>fr:Photographer_created_Photo</relationship>
-								<entity>
-									<type>fc:photo</type>
-									<instance_generator name="FrickPhotowithTypeAndId">
-										<arg name="type" type="constant">photo</arg>
-										<arg name="work_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
-										<arg name="photo_id" type="xpath">../marc:subfield[@code="k"]/text()</arg>
-									</instance_generator>
-								</entity>
-							</additional>
-						</entity>
-					</target_node>
-				</range>
-			</link>
-			
-		</mapping>
-		
-		<mapping>
-			<domain>
 				<source_node>//marc:datafield[@tag="100"]</source_node>
 				<target_node>
                     <entity>
 						<type>fc:artist</type>
 						<instance_generator name="URIwithType">
 							<arg name="type" type="constant">actor</arg>
-							<arg name="id" type="xpath">marc:subfield[@code="a"]/text()</arg>
+							<arg name="id" type="xpath">string-join(( marc:subfield[@code="a"]/text() , marc:subfield[@code="c"]/text() ), " " )</arg>
 						</instance_generator>
 					</entity>
 				</target_node>
@@ -978,67 +634,7 @@
 				</range>
 			</link>
 			
-		</mapping>	
-		
-		<mapping>
-			<domain>
-				<source_node>//marc:datafield[@tag="600"]</source_node>
-				<target_node>
-                    <entity>
-						<type>fc:artist</type>
-						<instance_generator name="URIwithType">
-							<arg name="type" type="constant">actor</arg>
-							<arg name="id" type="xpath">marc:subfield[@code="a"]/text()</arg>
-						</instance_generator>
-					</entity>
-				</target_node>
-			</domain>
-			
-			<link> 
-				<path>
-					<source_relation>
-						<relation>marc:subfield[@code="d"]/@birth</relation>
-					</source_relation>
-					<target_relation>
-						<relationship>fr:Artist_has_Date_of_Birth</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>marc:subfield[@code="d"]/@birth</source_node>
-					<target_node>
-						<entity>
-							<type>xsd:date</type>
-							<instance_generator name="Literal">
-								<arg name="text" type="xpath">../@birth</arg>
-							</instance_generator>
-						</entity>
-					</target_node>
-				</range>
-			</link>
-
-			<link> 
-				<path>
-					<source_relation>
-						<relation>marc:subfield[@code="d"]/@death</relation>
-					</source_relation>
-					<target_relation>
-						<relationship>fr:Artist_has_Date_of_Death</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>marc:subfield[@code="d"]/@death</source_node>
-					<target_node>
-						<entity>
-							<type>xsd:date</type>
-							<instance_generator name="Literal">
-								<arg name="text" type="xpath">../@death</arg>
-							</instance_generator>
-						</entity>
-					</target_node>
-				</range>
-			</link>
-			
-		</mapping>	
+		</mapping>
 		
 		<mapping>
 			<domain>
@@ -1127,7 +723,7 @@
 						<type>fc:institution</type>
 						<instance_generator name="URIwithType">
 							<arg name="type" type="constant">actor</arg>
-							<arg name="id" type="xpath">marc:subfield[@code="a"]/text()</arg>
+							<arg name="id" type="xpath">string-join((marc:subfield[@code="a"]/text(), marc:subfield[@code="b"]/text(), marc:subfield[@code="d"]/text() ),'_')</arg>
 						</instance_generator>
 					</entity>
 				</target_node>
@@ -1149,7 +745,7 @@
 							<type>fc:place</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">place</arg>
-								<arg name="id" type="xpath">text()</arg>
+								<arg name="id" type="xpath">string-join((text(), ../marc:subfield[@code="d"]/text() ),'_')</arg>
 							</instance_generator>
 						</entity>
 					</target_node>

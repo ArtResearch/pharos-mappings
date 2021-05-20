@@ -22,9 +22,6 @@
 			<domain>
 				<source_node>/root/geo</source_node>
 				<target_node>
-					<if>
-						<equals value="tgn">a20gn/@source</equals>
-					</if>
 					<entity>
 						<type>crm:E53_Place</type>
 						<instance_generator name="URIwithType">
@@ -44,7 +41,10 @@
 						<relation>a20gn</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>owl:sameAs</relationship>
+						<if>
+							<equals value="tgn">@source</equals>
+						</if>
+						<relationship>skos:exactMatch</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -60,15 +60,73 @@
 				</range>
 			</link>
 
+			<link>
+				<path>
+					<source_relation>
+						<relation>a20gn</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="gnd">@source</equals>
+						</if>
+						<relationship>skos:exactMatch</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a20gn</source_node>
+					<target_node>
+						<entity>
+							<type>fc:place</type>
+							<instance_generator name="GND_URI">
+								<arg name="id" type="xpath">@id</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>a2194</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P89_falls_within</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a2194</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E53_Place</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">place</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">http://vocab.getty.edu/aat/300387506</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
 		</mapping>
 
 		<mapping>
 			<domain>
 				<source_node>/root/geo/a2000</source_node>
 				<target_node>
-					<if>
-						<equals value="tgn">../a20gn/@source</equals>
-					</if>
 					<entity>
 						<type>crm:E53_Place</type>
 						<instance_generator name="URIwithTypeAndId">
@@ -88,7 +146,10 @@
 						<relation>../a20gn</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>owl:sameAs</relationship>
+						<if>
+							<equals value="tgn">@source</equals>
+						</if>
+						<relationship>skos:exactMatch</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -99,6 +160,66 @@
 							<instance_generator name="TGN_URI">
 								<arg name="id" type="xpath">@id</arg>
 							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../a20gn</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="gnd">@source</equals>
+						</if>
+						<relationship>skos:exactMatch</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../a20gn</source_node>
+					<target_node>
+						<entity>
+							<type>fc:place</type>
+							<instance_generator name="GND_URI">
+								<arg name="id" type="xpath">@id</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../a2194</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P89_falls_within</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../a2194</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E53_Place</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">place</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">http://vocab.getty.edu/aat/300387506</arg>
+									</instance_generator>
+								</entity>
+							</additional>
 						</entity>
 					</target_node>
 				</range>

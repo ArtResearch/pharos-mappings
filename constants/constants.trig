@@ -7,6 +7,7 @@
 
 <http://vocab.getty.edu/aat/300133025/graph> {
     <http://vocab.getty.edu/aat/300133025>
+            <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <https://pharos.artresearch.net/resource/vocab/maintype>;
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "works of art".
@@ -154,6 +155,7 @@
 
 <http://vocab.getty.edu/aat/300046300/graph> {
     <http://vocab.getty.edu/aat/300046300>
+            <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <https://pharos.artresearch.net/resource/vocab/maintype>;
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "photographs".
@@ -181,7 +183,8 @@
 }
 
 <http://vocab.getty.edu/aat/300264595/graph> {
-        <http://vocab.getty.edu/aat/300264595>
+        <http://vocab.getty.edu/aat/300264595> 
+        <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <https://pharos.artresearch.net/resource/vocab/maintype>;
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "repositories (institutions)" .
@@ -210,6 +213,7 @@
 
 <http://vocab.getty.edu/aat/300008389/graph> {
         <http://vocab.getty.edu/aat/300008389>
+            <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <https://pharos.artresearch.net/resource/vocab/maintype>;
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "cities" .
@@ -217,6 +221,7 @@
 
 <http://vocab.getty.edu/aat/300387079/graph> {
         <http://vocab.getty.edu/aat/300387079>
+            <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <https://pharos.artresearch.net/resource/vocab/maintype>;
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "local regions" .
@@ -224,6 +229,7 @@
 
 <http://vocab.getty.edu/aat/300387506/graph> {
         <http://vocab.getty.edu/aat/300387506>
+            <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <https://pharos.artresearch.net/resource/vocab/maintype>;
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "countries (sovereign states)" .

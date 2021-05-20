@@ -117,7 +117,7 @@
 								<type>custom:Namedgraph</type>
 								<instance_generator name="MultiHashingGenerator">
 									<arg name="hierarchy" type="constant">place</arg>
-									<arg name="object_HASHED_CONTENTS" type="xpath">SCHEDA/PARAGRAFO[@etichetta="LOCATION"]/PVCC[@etichetta="Town / Municipality"]/text()</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">string-join((SCHEDA/PARAGRAFO[@etichetta="LOCATION"]/PVCC[@etichetta="Town / Municipality"]/text() , SCHEDA/PARAGRAFO[@etichetta="LOCATION"]/PVCS[@etichetta="Country"]/text() ),'_')</arg>
 									<arg name="term_simple" type="constant">graph</arg>
 								</instance_generator>
 							</entity>
@@ -408,7 +408,7 @@
 							<type>custom:Namedgraph</type>
 							<instance_generator name="MultiHashingGenerator">
 								<arg name="hierarchy" type="constant">place</arg>
-								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">string-join(( ., ../../PRVS[@etichetta="Country"]/text() ),'_')</arg>
 								<arg name="term_simple" type="constant">graph</arg>
 							</instance_generator>
 						</entity>
@@ -1204,7 +1204,7 @@
 							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">place</arg>
-								<arg name="id" type="xpath">text()</arg>
+								<arg name="id" type="xpath">string-join((text() , ../PVCS[@etichetta="Country"]/text() ),'_')</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -2891,7 +2891,7 @@
 						<type>crm:E53_Place</type>
 						<instance_generator name="URIwithType">
 							<arg name="type" type="constant">place</arg>
-							<arg name="id" type="xpath">text()</arg>
+							<arg name="id" type="xpath">string-join((text() , ../PVCS[@etichetta="Country"]/text() ),'_')</arg>
 						</instance_generator>
 						<label_generator name="Literal">
 							<arg name="text" type="xpath">text()</arg>
@@ -2912,7 +2912,7 @@
 								<type>custom:Namedgraph</type>
 								<instance_generator name="MultiHashingGenerator">
 									<arg name="hierarchy" type="constant">place</arg>
-									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">string-join((text() , ../PVCS[@etichetta="Country"]/text() ),'_')</arg>
 									<arg name="term_simple" type="constant">graph</arg>
 								</instance_generator>
 								<additional>
@@ -3536,7 +3536,7 @@
 							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">place</arg>
-								<arg name="id" type="xpath">text()</arg>
+								<arg name="id" type="xpath">string-join(( text(), ../PRVS[@etichetta="Country"]/text() ),'_')</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -3660,7 +3660,7 @@
 						<type>crm:E53_Place</type>
 						<instance_generator name="URIwithType">
 							<arg name="type" type="constant">place</arg>
-							<arg name="id" type="xpath">text()</arg>
+							<arg name="id" type="xpath">string-join(( text(), ../PRVS[@etichetta="Country"]/text() ),'_')</arg>
 						</instance_generator>
 						<label_generator name="Literal">
 							<arg name="text" type="xpath">text()</arg>
@@ -3681,7 +3681,7 @@
 								<type>custom:Namedgraph</type>
 								<instance_generator name="MultiHashingGenerator">
 									<arg name="hierarchy" type="constant">place</arg>
-									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">string-join(( text(), ../PRVS[@etichetta="Country"]/text() ),'_')</arg>
 									<arg name="term_simple" type="constant">graph</arg>
 								</instance_generator>
 								<additional>

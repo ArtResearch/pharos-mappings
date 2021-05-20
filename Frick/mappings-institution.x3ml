@@ -51,7 +51,7 @@
 							<type>custom:Namedgraph</type>
 							<instance_generator name="MultiHashingGenerator">
 								<arg name="hierarchy" type="constant">actor</arg>
-								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">string-join((., ../../marc:subfield[@code="b"]/text(), ../../marc:subfield[@code="d"]/text() ),'_')</arg>
 								<arg name="term_simple" type="constant">graph</arg>
 							</instance_generator>
 						</entity>
@@ -75,7 +75,7 @@
 							<type>custom:Namedgraph</type>
 							<instance_generator name="MultiHashingGenerator">
 								<arg name="hierarchy" type="constant">place</arg>
-								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">string-join((., ../../marc:subfield[@code="d"]/text() ),'_')</arg>
 								<arg name="term_simple" type="constant">graph</arg>
 							</instance_generator>
 						</entity>
@@ -168,7 +168,7 @@
 						<type>crm:E39_Actor</type>
 						<instance_generator name="URIwithType">
 							<arg name="type" type="constant">actor</arg>
-							<arg name="id" type="xpath">marc:subfield[@code="a"]/text()</arg>
+							<arg name="id" type="xpath">string-join((marc:subfield[@code="a"]/text(), marc:subfield[@code="b"]/text(),  marc:subfield[@code="d"]/text() ),'_')</arg>
 						</instance_generator>
 						<label_generator name="Literal">
 							<arg name="text" type="xpath">marc:subfield[@code="a"]/text()</arg>
@@ -189,7 +189,7 @@
 								<type>custom:Namedgraph</type>
 								<instance_generator name="MultiHashingGenerator">
 									<arg name="hierarchy" type="constant">actor</arg>
-									<arg name="object_HASHED_CONTENTS" type="xpath">marc:subfield[@code="a"]/text()</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">string-join((marc:subfield[@code="a"]/text(), marc:subfield[@code="b"]/text(),  marc:subfield[@code="d"]/text() ),'_')</arg>
 									<arg name="term_simple" type="constant">graph</arg>
 								</instance_generator>
 								<additional>
@@ -211,15 +211,6 @@
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="constant">http://vocab.getty.edu/aat/300264595</arg>
 								</instance_generator>
-								<additional>
-									<relationship>crm:P2_has_type</relationship>
-									<entity>
-										<type>custom:noType</type>
-										<instance_generator name="URIorUUID">
-											<arg name="text" type="constant">https://pharos.artresearch.net/resource/vocab/maintype</arg>
-										</instance_generator>
-									</entity>
-								</additional>
 							</entity>
 						</additional>
 					</entity>
@@ -279,7 +270,7 @@
 							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">place</arg>
-								<arg name="id" type="xpath">text()</arg>
+								<arg name="id" type="xpath">string-join((text(),  ../marc:subfield[@code="d"]/text() ),'_')</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -365,7 +356,7 @@
 						<type>crm:E53_Place</type>
 						<instance_generator name="URIwithType">
 							<arg name="type" type="constant">place</arg>
-							<arg name="id" type="xpath">text()</arg>
+							<arg name="id" type="xpath">string-join((text(),  ../marc:subfield[@code="d"]/text() ),'_')</arg>
 						</instance_generator>
 						<label_generator name="Literal">
 							<arg name="text" type="xpath">text()</arg>
@@ -386,7 +377,7 @@
 								<type>custom:Namedgraph</type>
 								<instance_generator name="MultiHashingGenerator">
 									<arg name="hierarchy" type="constant">place</arg>
-									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">string-join((text(),  ../marc:subfield[@code="d"]/text() ),'_')</arg>
 									<arg name="term_simple" type="constant">graph</arg>
 								</instance_generator>
 								<additional>
@@ -408,15 +399,6 @@
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="constant">http://vocab.getty.edu/aat/300008389</arg>
 								</instance_generator>
-								<additional>
-									<relationship>crm:P2_has_type</relationship>
-									<entity>
-										<type>custom:noType</type>
-										<instance_generator name="URIorUUID">
-											<arg name="text" type="constant">https://pharos.artresearch.net/resource/vocab/maintype</arg>
-										</instance_generator>
-									</entity>
-								</additional>
 							</entity>
 						</additional>
 					</entity>
@@ -475,15 +457,6 @@
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="constant">http://vocab.getty.edu/aat/300387079</arg>
 								</instance_generator>
-								<additional>
-									<relationship>crm:P2_has_type</relationship>
-									<entity>
-										<type>custom:noType</type>
-										<instance_generator name="URIorUUID">
-											<arg name="text" type="constant">https://pharos.artresearch.net/resource/vocab/maintype</arg>
-										</instance_generator>
-									</entity>
-								</additional>
 							</entity>
 						</additional>
 					</entity>
@@ -542,15 +515,6 @@
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="constant">http://vocab.getty.edu/aat/300387506</arg>
 								</instance_generator>
-								<additional>
-									<relationship>crm:P2_has_type</relationship>
-									<entity>
-										<type>custom:noType</type>
-										<instance_generator name="URIorUUID">
-											<arg name="text" type="constant">https://pharos.artresearch.net/resource/vocab/maintype</arg>
-										</instance_generator>
-									</entity>
-								</additional>
 							</entity>
 						</additional>
 					</entity>
