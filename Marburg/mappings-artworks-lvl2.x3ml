@@ -557,10 +557,9 @@
 					<target_node>
 						<entity>
 							<type>custom:Namedgraph</type>
-							<instance_generator name="MultiHashingGenerator">
-								<arg name="hierarchy" type="constant">place</arg>
-								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
-								<arg name="term_simple" type="constant">graph</arg>
+							<instance_generator name="namedgraph">
+								<arg name="type" type="constant">place</arg>
+								<arg name="id" type="xpath">../../a54na/text()</arg>
 							</instance_generator>
 						</entity>	
 					</target_node>
@@ -589,8 +588,6 @@
 					</target_node>
 				</range>
 			</link>
-
-			
 
 			<link>
 				<path>
@@ -633,7 +630,7 @@
 							<type>custom:Namedgraph</type>
 							<instance_generator name="MultiHashingGenerator">
 								<arg name="hierarchy" type="constant">actor</arg>
-								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">string-join(( ., ../../a28na/text() ),"_")</arg>
 								<arg name="term_simple" type="constant">graph</arg>
 							</instance_generator>
 						</entity>	
@@ -705,7 +702,7 @@
 							<type>custom:Namedgraph</type>
 							<instance_generator name="MultiHashingGenerator">
 								<arg name="hierarchy" type="constant">actor</arg>
-								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">string-join((.,../../a28na/text()),"_")</arg>
 								<arg name="term_simple" type="constant">graph</arg>
 							</instance_generator>
 						</entity>	
@@ -848,10 +845,9 @@
 					<target_node>
 						<entity>
 							<type>custom:Namedgraph</type>
-							<instance_generator name="MultiHashingGenerator">
-								<arg name="hierarchy" type="constant">place</arg>
-								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
-								<arg name="term_simple" type="constant">graph</arg>
+							<instance_generator name="namedgraph">
+								<arg name="type" type="constant">place</arg>
+								<arg name="id" type="xpath">../../a26na/text()</arg>
 							</instance_generator>
 						</entity>	
 					</target_node>
@@ -944,10 +940,9 @@
 					<target_node>
 						<entity>
 							<type>custom:Namedgraph</type>
-							<instance_generator name="MultiHashingGenerator">
-								<arg name="hierarchy" type="constant">place</arg>
-								<arg name="object_HASHED_CONTENTS" type="xpath">../text()</arg>
-								<arg name="term_simple" type="constant">graph</arg>
+							<instance_generator name="namedgraph">
+								<arg name="type" type="constant">place</arg>
+								<arg name="id" type="xpath">../a51na/text()</arg>
 							</instance_generator>
 						</entity>	
 					</target_node>
@@ -1160,33 +1155,6 @@
 					 </entity>
 				</target_node>
 			</domain>
-			<!--
-			<link> 
-				<path>
-					<source_relation>
-						<relation>a8450/a8540</relation>
-					</source_relation>
-					<target_relation>
-						<if>
-							<exists>text()</exists>
-						</if>
-						<relationship>crm:P138i_has_representation</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>a8450/a8540</source_node>
-					<target_node>
-						<entity>
-							<type>crm:E38_Image</type>
-							<instance_generator name="Image_Generator">
-								<arg name="id" type="xpath">text()</arg>
-								<arg name="postfix" type="constant">.jpg</arg>
-							</instance_generator>
-						</entity>
-					</target_node>
-				</range>
-			</link>
--->
 			
 			<link> 
 				<path>
@@ -1299,7 +1267,6 @@
 				</range>
 			</link>
 
-			
 			<link> 
 				<path>
 					<source_relation>
@@ -2684,52 +2651,14 @@
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">place</arg>
-								<arg name="id" type="xpath">text()</arg>
+								<arg name="id" type="xpath">../a54na/text()</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
 				</range>
 			</link>
-			
-			<!-- <link>
-				<path>
-					<source_relation>
-						<relation>a5358</relation>
-					</source_relation>
-					<target_relation>
-						<if>
-							<equals value="Herstellung">../aob30/text()</equals>
-						</if>
-						<relationship>crm:P108i_was_produced_by</relationship>
-						<entity>
-							<type>crm:E12_Production</type>
-							<instance_generator name="EventUri">
-								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../a5001/text()</arg>
-								<arg name="eventType" type="constant">production</arg>
-							</instance_generator>
-						</entity>
-						<relationship>crm:P33_used_specific_technique</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>a5358</source_node>
-					<target_node>
-						<entity>
-							<type>crm:E29_Design_or_Procedure</type>
-							<instance_generator name="URIwithVocabType">
-								<arg name="type" type="constant">technique</arg>
-								<arg name="id" type="xpath">text()</arg>
-							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-						</entity>
-					</target_node>
-				</range>
-			</link> -->
 			
 			<link>
 				<path>
@@ -2818,55 +2747,6 @@
 					</target_node>
 				</range>
 			</link>
-			
-			<!--
-			<link>
-				<path>
-					<source_relation>
-						<relation>a5060</relation>
-					</source_relation>
-					<target_relation>
-						<if>
-							<equals value="Herstellung">../aob30/text()</equals>
-						</if>
-						<relationship>crm:P108i_was_produced_by</relationship>
-						<entity>
-							<type>crm:E12_Production</type>
-							<instance_generator name="EventUri">
-								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../a5001/text()</arg>
-								<arg name="eventType" type="constant">production</arg>
-							</instance_generator>
-						</entity>
-						<relationship>crm:P4_has_time-span</relationship>
-						<entity>
-							<type>crm:E52_Time-Span</type>
-							<instance_generator name="TimespanUri">
-								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../a5001/text()</arg>
-								<arg name="eventType" type="constant">production</arg>
-							</instance_generator>
-						</entity>
-						<relationship>crm:P2_has_type</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>a5060</source_node>
-					<target_node>
-						<entity>
-							<type>crm:E55_Type</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">type</arg>
-								<arg name="id" type="xpath">text()</arg>
-							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-						</entity>
-					</target_node>
-				</range>
-			</link>
-			-->
 			
 			<link>
 				<path>
@@ -3092,7 +2972,7 @@
 							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">text()</arg>
+								<arg name="id" type="xpath">string-join(( text(), ../a28na/text() ),"_")</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -3115,7 +2995,7 @@
 							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">text()</arg>
+								<arg name="id" type="xpath">string-join((text(),../a28na/text()),"_")</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -3362,7 +3242,7 @@
 							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">place</arg>
-								<arg name="id" type="xpath">text()</arg>
+								<arg name="id" type="xpath">../a26na/text()</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -3454,7 +3334,7 @@
 							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">place</arg>
-								<arg name="id" type="xpath">text()</arg>
+								<arg name="id" type="xpath">a51na/text()</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -4754,9 +4634,9 @@
 					</if>
                     <entity>
 						<type>crm:E53_Place</type>
-						<instance_generator name="URIwithType">
+						<instance_generator name="URIwithTypeAndId">
 							<arg name="type" type="constant">place</arg>
-							<arg name="id" type="xpath">text()</arg>
+							<arg name="id" type="xpath">../a54na/text()</arg>
 						</instance_generator>
 						<label_generator name="Literal">
 							<arg name="text" type="xpath">text()</arg>
@@ -4775,10 +4655,9 @@
 							<relationship>crm:P67i_is_referred_to_by</relationship>
 							<entity>
 								<type>custom:Namedgraph</type>
-								<instance_generator name="MultiHashingGenerator">
-									<arg name="hierarchy" type="constant">place</arg>
-									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
-									<arg name="term_simple" type="constant">graph</arg>
+								<instance_generator name="namedgraph">
+									<arg name="type" type="constant">place</arg>
+									<arg name="id" type="xpath">../a54na/text()</arg>
 								</instance_generator>
 								<additional>
 									<relationship>custom:has_provider</relationship>
@@ -4908,7 +4787,7 @@
 				</target_node>
 			</domain>
 		</mapping>
-
+		
 		<mapping namedgraph="graph">
 			<domain>
 				<source_node>/root/obj/obj/aob28/a2900</source_node>
@@ -4920,7 +4799,7 @@
 						<type>crm:E39_Actor</type>
 						<instance_generator name="URIwithType">
 							<arg name="type" type="constant">actor</arg>
-							<arg name="id" type="xpath">text()</arg>
+							<arg name="id" type="xpath">string-join(( text(), ../a28na/text() ),"_")</arg>
 						</instance_generator>
 						<label_generator name="Literal">
 							<arg name="text" type="xpath">text()</arg>
@@ -4941,7 +4820,7 @@
 								<type>custom:Namedgraph</type>
 								<instance_generator name="MultiHashingGenerator">
 									<arg name="hierarchy" type="constant">actor</arg>
-									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">string-join(( text(), ../a28na/text() ),"_")</arg>
 									<arg name="term_simple" type="constant">graph</arg>
 								</instance_generator>
 								<additional>
@@ -5123,7 +5002,7 @@
 						<type>crm:E39_Actor</type>
 						<instance_generator name="URIwithType">
 							<arg name="type" type="constant">actor</arg>
-							<arg name="id" type="xpath">text()</arg>
+							<arg name="id" type="xpath">string-join((text(),../a28na/text()),"_")</arg>
 						</instance_generator>
 						<label_generator name="Literal">
 							<arg name="text" type="xpath">text()</arg>
@@ -5144,7 +5023,7 @@
 								<type>custom:Namedgraph</type>
 								<instance_generator name="MultiHashingGenerator">
 									<arg name="hierarchy" type="constant">actor</arg>
-									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">string-join((text(),../a28na/text()),"_")</arg>
 									<arg name="term_simple" type="constant">graph</arg>
 								</instance_generator>
 								<additional>
@@ -5522,7 +5401,7 @@
 						<type>crm:E53_Place</type>
 						<instance_generator name="URIwithType">
 							<arg name="type" type="constant">place</arg>
-							<arg name="id" type="xpath">text()</arg>
+							<arg name="id" type="xpath">../a26na/text()</arg>
 						</instance_generator>
 						<label_generator name="Literal">
 							<arg name="text" type="xpath">text()</arg>
@@ -5541,10 +5420,9 @@
 							<relationship>crm:P67i_is_referred_to_by</relationship>
 							<entity>
 								<type>custom:Namedgraph</type>
-								<instance_generator name="MultiHashingGenerator">
-									<arg name="hierarchy" type="constant">place</arg>
-									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
-									<arg name="term_simple" type="constant">graph</arg>
+								<instance_generator name="namedgraph">
+									<arg name="type" type="constant">place</arg>
+									<arg name="id" type="xpath">../a26na/text()</arg>
 								</instance_generator>
 								<additional>
 									<relationship>custom:has_provider</relationship>
@@ -5770,7 +5648,7 @@
 						<type>crm:E53_Place</type>
 						<instance_generator name="URIwithType">
 							<arg name="type" type="constant">place</arg>
-							<arg name="id" type="xpath">text()</arg>
+							<arg name="id" type="xpath">a51na/text()</arg>
 						</instance_generator>
 						<label_generator name="Literal">
 							<arg name="text" type="xpath">text()</arg>
@@ -5789,10 +5667,9 @@
 							<relationship>crm:P67i_is_referred_to_by</relationship>
 							<entity>
 								<type>custom:Namedgraph</type>
-								<instance_generator name="MultiHashingGenerator">
-									<arg name="hierarchy" type="constant">place</arg>
-									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
-									<arg name="term_simple" type="constant">graph</arg>
+								<instance_generator name="namedgraph">
+									<arg name="type" type="constant">place</arg>
+									<arg name="id" type="xpath">a51na/text()</arg>
 								</instance_generator>
 								<additional>
 									<relationship>custom:has_provider</relationship>

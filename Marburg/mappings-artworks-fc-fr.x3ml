@@ -205,9 +205,9 @@
 					<target_node>
 						<entity>
 							<type>fc:place</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">place</arg>
-								<arg name="id" type="xpath">text()</arg>
+								<arg name="id" type="xpath">../a54na/text()</arg>
 							</instance_generator>
 							<additional>
 								<relationship>fr:Place_of_Work</relationship>
@@ -306,7 +306,7 @@
 							<type>fc:place</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">place</arg>
-								<arg name="id" type="xpath">text()</arg>
+								<arg name="id" type="xpath">../a26na/text()</arg>
 							</instance_generator>
 							<additional>
 								<relationship>fr:Place_of_Work</relationship>
@@ -326,14 +326,14 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>a5110</relation>
+						<relation>a5108/a5110</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>fr:Work_from_Place</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>a5110</source_node>
+					<source_node>a5108/a5110</source_node>
 					<target_node>
 						<entity>
 							<type>fc:place</type>
@@ -347,7 +347,7 @@
 									<type>fc:work</type>
 									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">work</arg>
-										<arg name="id" type="xpath">../a5000/text()</arg>
+										<arg name="id" type="xpath">../../a5000/text()</arg>
 									</instance_generator>
 								</entity>
 							</additional>
@@ -370,9 +370,9 @@
 					<target_node>
 						<entity>
 							<type>fc:place</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">place</arg>
-								<arg name="id" type="xpath">text()</arg>
+								<arg name="id" type="xpath">a51na/text()</arg>
 							</instance_generator>
 							<additional>
 								<relationship>fr:Place_of_Work</relationship>
@@ -430,7 +430,7 @@
 							<type>fc:institution</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">text()</arg>
+								<arg name="id" type="xpath">string-join(( text(), ../a28na/text() ),"_")</arg>
 							</instance_generator>
 							<additional>
 								<relationship>fr:Institution_keeps_Work</relationship>
@@ -463,7 +463,7 @@
 							<type>fc:institution</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">text()</arg>
+								<arg name="id" type="xpath">string-join(( text(), ../a28na/text() ),"_")</arg>
 							</instance_generator>
 							<additional>
 								<relationship>fr:Institution_keeps_Work</relationship>
@@ -846,9 +846,9 @@
 					<target_node>
 						<entity>
 							<type>fc:place</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">place</arg>
-								<arg name="id" type="xpath">text()</arg>
+								<arg name="id" type="xpath">../a54na/text()</arg>
 							</instance_generator>
 							<additional>
 								<relationship>fr:Place_of_Work</relationship>
@@ -947,7 +947,7 @@
 							<type>fc:place</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">place</arg>
-								<arg name="id" type="xpath">text()</arg>
+								<arg name="id" type="xpath">../a26na/text()</arg>
 							</instance_generator>
 							<additional>
 								<relationship>fr:Place_of_Work</relationship>
@@ -967,14 +967,14 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>a5110</relation>
+						<relation>a5108/a5110</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>fr:Work_from_Place</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>a5110</source_node>
+					<source_node>a5108/a5110</source_node>
 					<target_node>
 						<entity>
 							<type>fc:place</type>
@@ -988,7 +988,7 @@
 									<type>fc:work</type>
 									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">work</arg>
-										<arg name="id" type="xpath">../a5001/text()</arg>
+										<arg name="id" type="xpath">../../a5001/text()</arg>
 									</instance_generator>
 								</entity>
 							</additional>
@@ -1011,9 +1011,9 @@
 					<target_node>
 						<entity>
 							<type>fc:place</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">place</arg>
-								<arg name="id" type="xpath">text()</arg>
+								<arg name="id" type="xpath">a51na/text()</arg>
 							</instance_generator>
 							<additional>
 								<relationship>fr:Place_of_Work</relationship>
@@ -1071,7 +1071,7 @@
 							<type>fc:institution</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">text()</arg>
+								<arg name="id" type="xpath">string-join(( text(), ../a28na/text() ),"_")</arg>
 							</instance_generator>
 							<additional>
 								<relationship>fr:Institution_keeps_Work</relationship>
@@ -1104,7 +1104,7 @@
 							<type>fc:institution</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">text()</arg>
+								<arg name="id" type="xpath">string-join(( text(), ../a28na/text() ),"_")</arg>
 							</instance_generator>
 							<additional>
 								<relationship>fr:Institution_keeps_Work</relationship>
@@ -1461,9 +1461,9 @@
 					<target_node>
 						<entity>
 							<type>fc:place</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">place</arg>
-								<arg name="id" type="xpath">text()</arg>
+								<arg name="id" type="xpath">../a54na/text()</arg>
 							</instance_generator>
 							<additional>
 								<relationship>fr:Place_of_Work</relationship>
@@ -1562,7 +1562,7 @@
 							<type>fc:place</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">place</arg>
-								<arg name="id" type="xpath">text()</arg>
+								<arg name="id" type="xpath">../a26na/text()</arg>
 							</instance_generator>
 							<additional>
 								<relationship>fr:Place_of_Work</relationship>
@@ -1582,14 +1582,14 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>a5110</relation>
+						<relation>a5108/a5110</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>fr:Work_from_Place</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>a5110</source_node>
+					<source_node>a5108/a5110</source_node>
 					<target_node>
 						<entity>
 							<type>fc:place</type>
@@ -1603,7 +1603,7 @@
 									<type>fc:work</type>
 									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">work</arg>
-										<arg name="id" type="xpath">../a5002/text()</arg>
+										<arg name="id" type="xpath">../../a5002/text()</arg>
 									</instance_generator>
 								</entity>
 							</additional>
@@ -1626,9 +1626,9 @@
 					<target_node>
 						<entity>
 							<type>fc:place</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">place</arg>
-								<arg name="id" type="xpath">text()</arg>
+								<arg name="id" type="xpath">a51na/text()</arg>
 							</instance_generator>
 							<additional>
 								<relationship>fr:Place_of_Work</relationship>
@@ -1686,7 +1686,7 @@
 							<type>fc:institution</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">text()</arg>
+								<arg name="id" type="xpath">string-join(( text(), ../a28na/text() ),"_")</arg>
 							</instance_generator>
 							<additional>
 								<relationship>fr:Institution_keeps_Work</relationship>
@@ -1719,7 +1719,7 @@
 							<type>fc:institution</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">text()</arg>
+								<arg name="id" type="xpath">string-join(( text(), ../a28na/text() ),"_")</arg>
 							</instance_generator>
 							<additional>
 								<relationship>fr:Institution_keeps_Work</relationship>
@@ -2076,9 +2076,9 @@
 					<target_node>
 						<entity>
 							<type>fc:place</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">place</arg>
-								<arg name="id" type="xpath">text()</arg>
+								<arg name="id" type="xpath">../a54na/text()</arg>
 							</instance_generator>
 							<additional>
 								<relationship>fr:Place_of_Work</relationship>
@@ -2177,7 +2177,7 @@
 							<type>fc:place</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">place</arg>
-								<arg name="id" type="xpath">text()</arg>
+								<arg name="id" type="xpath">../a26na/text()</arg>
 							</instance_generator>
 							<additional>
 								<relationship>fr:Place_of_Work</relationship>
@@ -2197,14 +2197,14 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>a5110</relation>
+						<relation>a5108/a5110</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>fr:Work_from_Place</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>a5110</source_node>
+					<source_node>a5108/a5110</source_node>
 					<target_node>
 						<entity>
 							<type>fc:place</type>
@@ -2218,7 +2218,7 @@
 									<type>fc:work</type>
 									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">work</arg>
-										<arg name="id" type="xpath">../a5003/text()</arg>
+										<arg name="id" type="xpath">../../a5003/text()</arg>
 									</instance_generator>
 								</entity>
 							</additional>
@@ -2241,9 +2241,9 @@
 					<target_node>
 						<entity>
 							<type>fc:place</type>
-							<instance_generator name="URIwithType">
+							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">place</arg>
-								<arg name="id" type="xpath">text()</arg>
+								<arg name="id" type="xpath">a51na/text()</arg>
 							</instance_generator>
 							<additional>
 								<relationship>fr:Place_of_Work</relationship>
@@ -2301,7 +2301,7 @@
 							<type>fc:institution</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">text()</arg>
+								<arg name="id" type="xpath">string-join(( text(), ../a28na/text() ),"_")</arg>
 							</instance_generator>
 							<additional>
 								<relationship>fr:Institution_keeps_Work</relationship>
@@ -2334,7 +2334,7 @@
 							<type>fc:institution</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">text()</arg>
+								<arg name="id" type="xpath">string-join(( text(), ../a28na/text() ),"_")</arg>
 							</instance_generator>
 							<additional>
 								<relationship>fr:Institution_keeps_Work</relationship>

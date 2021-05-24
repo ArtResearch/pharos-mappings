@@ -232,17 +232,21 @@
 
   <https://pharos.artresearch.net/resource/fr/Artist_has_Date_of_Birth> <http://www.w3.org/2000/01/rdf-schema#label> "born in" .
   <https://pharos.artresearch.net/resource/fr/Artist_has_Date_of_Birth> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/artist> .
-  <https://pharos.artresearch.net/resource/fr/Artist_has_Date_of_Death> <http://www.researchspace.org/ontology/hasRange> <http://www.w3.org/2001/XMLSchema#date> .
+  <https://pharos.artresearch.net/resource/fr/Artist_has_Date_of_Birth> <http://www.researchspace.org/ontology/hasRange> <http://www.w3.org/2001/XMLSchema#date> .
   
   <https://pharos.artresearch.net/resource/fr/Artist_has_Date_of_Death> <http://www.w3.org/2000/01/rdf-schema#label> "died in" .
   <https://pharos.artresearch.net/resource/fr/Artist_has_Date_of_Death> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/artist> .
   <https://pharos.artresearch.net/resource/fr/Artist_has_Date_of_Death> <http://www.researchspace.org/ontology/hasRange> <http://www.w3.org/2001/XMLSchema#date> .
 
-  <https://pharos.artresearch.net/resource/fr/Person_has_Place_of_Birth> <http://www.w3.org/2000/01/rdf-schema#label> "from place" .
+  <https://pharos.artresearch.net/resource/fr/Artist_from_Place> <http://www.w3.org/2000/01/rdf-schema#label> "from place" .
+  <https://pharos.artresearch.net/resource/fr/Artist_from_Place> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/artist> .
+  <https://pharos.artresearch.net/resource/fr/Artist_from_Place> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/place> .
+
+  <https://pharos.artresearch.net/resource/fr/Person_has_Place_of_Birth> <http://www.w3.org/2000/01/rdf-schema#label> "born at place" .
   <https://pharos.artresearch.net/resource/fr/Person_has_Place_of_Birth> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/artist> .
   <https://pharos.artresearch.net/resource/fr/Person_has_Place_of_Birth> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/place> .
 
-  <https://pharos.artresearch.net/resource/fr/Person_has_Place_of_Death> <http://www.w3.org/2000/01/rdf-schema#label> "died in place" .
+  <https://pharos.artresearch.net/resource/fr/Person_has_Place_of_Death> <http://www.w3.org/2000/01/rdf-schema#label> "died at place" .
   <https://pharos.artresearch.net/resource/fr/Person_has_Place_of_Death> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/artist> .
   <https://pharos.artresearch.net/resource/fr/Person_has_Place_of_Death> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/place> .
 
