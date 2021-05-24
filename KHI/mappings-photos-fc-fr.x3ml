@@ -41,6 +41,16 @@
 								</instance_generator>
 							</entity>
 						</additional>
+						<additional>
+							<relationship>fr:Photo_kept_by_Institution</relationship>
+							<entity>
+								<type>fc:institution</type>
+								<instance_generator name="URIwithType">
+									<arg name="type" type="constant">actor</arg>
+									<arg name="id" type="constant">Kunsthistorisches Institut in Florenz – Max Planck Institut</arg>
+								</instance_generator>
+							</entity>
+						</additional>
 					</entity>
 				</target_node>
 			</domain>
@@ -51,6 +61,13 @@
 						<relation>a8490</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<not>
+								<if>
+									<exists>../a3000/text()</exists>
+								</if>
+							</not>
+						</if>
 						<relationship>fr:Photo_created_by_Photographer</relationship>
 					</target_relation>
 				</path>
@@ -62,6 +79,42 @@
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>fr:Photographer_created_Photo</relationship>
+								<entity>
+									<type>fc:photo</type>
+									<instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">photo</arg>
+										<arg name="id" type="xpath">../a8540/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>a8490</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<exists>../a3000/text()</exists>
+						</if>
+						<relationship>fr:Photo_created_by_Photographer</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a8490</source_node>
+					<target_node>
+						<entity>
+							<type>fc:photographer</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">../a3000/text()</arg>
 							</instance_generator>
 							<additional>
 								<relationship>fr:Photographer_created_Photo</relationship>
@@ -99,29 +152,6 @@
 					</target_node>
 				</range>
 			</link>
-			
-			<link>
-				<path>
-					<source_relation>
-						<relation>a8460</relation>
-					</source_relation>
-					<target_relation>
-						<relationship>fr:Photo_kept_by_Institution</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>a8460</source_node>
-					<target_node>
-						<entity>
-							<type>fc:institution</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">text()</arg>
-							</instance_generator>
-						</entity>
-					</target_node>
-				</range>
-			</link> 
 			
 		</mapping>	
 		
@@ -148,6 +178,16 @@
 								</instance_generator>
 							</entity>
 						</additional>
+						<additional>
+							<relationship>fr:Photo_kept_by_Institution</relationship>
+							<entity>
+								<type>fc:institution</type>
+								<instance_generator name="URIwithType">
+									<arg name="type" type="constant">actor</arg>
+									<arg name="id" type="constant">Kunsthistorisches Institut in Florenz – Max Planck Institut</arg>
+								</instance_generator>
+							</entity>
+						</additional>
 					</entity>
 				</target_node>
 			</domain>
@@ -158,6 +198,13 @@
 						<relation>a8490</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<not>
+								<if>
+									<exists>../a3000/text()</exists>
+								</if>
+							</not>
+						</if>
 						<relationship>fr:Photo_created_by_Photographer</relationship>
 					</target_relation>
 				</path>
@@ -169,6 +216,42 @@
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>fr:Photographer_created_Photo</relationship>
+								<entity>
+									<type>fc:photo</type>
+									<instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">photo</arg>
+										<arg name="id" type="xpath">../a8540/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>a8490</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<exists>../a3000/text()</exists>
+						</if>
+						<relationship>fr:Photo_created_by_Photographer</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a8490</source_node>
+					<target_node>
+						<entity>
+							<type>fc:photographer</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">../a3000/text()</arg>
 							</instance_generator>
 							<additional>
 								<relationship>fr:Photographer_created_Photo</relationship>
@@ -206,29 +289,6 @@
 					</target_node>
 				</range>
 			</link>
-			
-			<link>
-				<path>
-					<source_relation>
-						<relation>a8460</relation>
-					</source_relation>
-					<target_relation>
-						<relationship>fr:Photo_kept_by_Institution</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>a8460</source_node>
-					<target_node>
-						<entity>
-							<type>fc:institution</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">text()</arg>
-							</instance_generator>
-						</entity>
-					</target_node>
-				</range>
-			</link> 
 			
 		</mapping>	
 		
@@ -255,6 +315,16 @@
 								</instance_generator>
 							</entity>
 						</additional>
+						<additional>
+							<relationship>fr:Photo_kept_by_Institution</relationship>
+							<entity>
+								<type>fc:institution</type>
+								<instance_generator name="URIwithType">
+									<arg name="type" type="constant">actor</arg>
+									<arg name="id" type="constant">Kunsthistorisches Institut in Florenz – Max Planck Institut</arg>
+								</instance_generator>
+							</entity>
+						</additional>
 					</entity>
 				</target_node>
 			</domain>
@@ -265,6 +335,13 @@
 						<relation>a8490</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<not>
+								<if>
+									<exists>../a3000/text()</exists>
+								</if>
+							</not>
+						</if>
 						<relationship>fr:Photo_created_by_Photographer</relationship>
 					</target_relation>
 				</path>
@@ -276,6 +353,42 @@
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>fr:Photographer_created_Photo</relationship>
+								<entity>
+									<type>fc:photo</type>
+									<instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">photo</arg>
+										<arg name="id" type="xpath">../a8540/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>a8490</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<exists>../a3000/text()</exists>
+						</if>
+						<relationship>fr:Photo_created_by_Photographer</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a8490</source_node>
+					<target_node>
+						<entity>
+							<type>fc:photographer</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">../a3000/text()</arg>
 							</instance_generator>
 							<additional>
 								<relationship>fr:Photographer_created_Photo</relationship>
@@ -313,29 +426,6 @@
 					</target_node>
 				</range>
 			</link>
-			
-			<link>
-				<path>
-					<source_relation>
-						<relation>a8460</relation>
-					</source_relation>
-					<target_relation>
-						<relationship>fr:Photo_kept_by_Institution</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>a8460</source_node>
-					<target_node>
-						<entity>
-							<type>fc:institution</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">text()</arg>
-							</instance_generator>
-						</entity>
-					</target_node>
-				</range>
-			</link> 
 			
 		</mapping>	
 		
@@ -362,6 +452,16 @@
 								</instance_generator>
 							</entity>
 						</additional>
+						<additional>
+							<relationship>fr:Photo_kept_by_Institution</relationship>
+							<entity>
+								<type>fc:institution</type>
+								<instance_generator name="URIwithType">
+									<arg name="type" type="constant">actor</arg>
+									<arg name="id" type="constant">Kunsthistorisches Institut in Florenz – Max Planck Institut</arg>
+								</instance_generator>
+							</entity>
+						</additional>
 					</entity>
 				</target_node>
 			</domain>
@@ -372,6 +472,13 @@
 						<relation>a8490</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<not>
+								<if>
+									<exists>../a3000/text()</exists>
+								</if>
+							</not>
+						</if>
 						<relationship>fr:Photo_created_by_Photographer</relationship>
 					</target_relation>
 				</path>
@@ -383,6 +490,42 @@
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>fr:Photographer_created_Photo</relationship>
+								<entity>
+									<type>fc:photo</type>
+									<instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">photo</arg>
+										<arg name="id" type="xpath">../a8540/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>a8490</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<exists>../a3000/text()</exists>
+						</if>
+						<relationship>fr:Photo_created_by_Photographer</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a8490</source_node>
+					<target_node>
+						<entity>
+							<type>fc:photographer</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">../a3000/text()</arg>
 							</instance_generator>
 							<additional>
 								<relationship>fr:Photographer_created_Photo</relationship>
@@ -420,29 +563,6 @@
 					</target_node>
 				</range>
 			</link>
-			
-			<link>
-				<path>
-					<source_relation>
-						<relation>a8460</relation>
-					</source_relation>
-					<target_relation>
-						<relationship>fr:Photo_kept_by_Institution</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>a8460</source_node>
-					<target_node>
-						<entity>
-							<type>fc:institution</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">text()</arg>
-							</instance_generator>
-						</entity>
-					</target_node>
-				</range>
-			</link> 
 			
 		</mapping>	
 		

@@ -1316,10 +1316,11 @@
 }
 
 <https://pharos.artresearch.net/resource/zeri/actor/EECC2458-22B0-3E3B-905A-31F8A43E8866/graph> {
-        <https://pharos.artresearch.net/resource/zeri/actor/EECC2458-22B0-3E3B-905A-31F8A43E8866>
-            a       <https://pharos.artresearch.net/custom/E39_Actor> ;
-            <http://www.w3.org/2000/01/rdf-schema#label>
-                    "Fondazione Federico Zeri - Università di Bologna" .
+        <https://pharos.artresearch.net/resource/zeri/actor/EECC2458-22B0-3E3B-905A-31F8A43E8866> a <https://pharos.artresearch.net/custom/E39_Actor> ;
+            <http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by> <https://pharos.artresearch.net/resource/zeri/actor/EECC2458-22B0-3E3B-905A-31F8A43E8866/graph> ;
+            <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/zeri/source/Zeri>;
+            <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://vocab.getty.edu/aat/300264595>;
+            <http://www.w3.org/2000/01/rdf-schema#label> "Fondazione Federico Zeri - Università di Bologna" .
 }
 
 <https://pharos.artresearch.net/resource/hertziana/type/photo_card/graph> {
@@ -1348,4 +1349,12 @@
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "National Group" .
+}
+
+<https://pharos.artresearch.net/resource/khi/actor/C9D7D055-BF40-31AB-886E-EE35FD644C09/graph> {
+        <https://pharos.artresearch.net/resource/khi/actor/C9D7D055-BF40-31AB-886E-EE35FD644C09> a <http://www.cidoc-crm.org/cidoc-crm/E39_Actor> ;
+            <http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by> <https://pharos.artresearch.net/resource/khi/actor/C9D7D055-BF40-31AB-886E-EE35FD644C09/graph> ;
+            <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/khi/source/KHI>;
+            <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://vocab.getty.edu/aat/300264595>;
+            <http://www.w3.org/2000/01/rdf-schema#label> "Kunsthistorisches Institut in Florenz – Max Planck Institut" .
 }
