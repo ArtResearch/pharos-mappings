@@ -82,3 +82,9 @@
   <https://pharos.artresearch.net/resource/midas/vocabularies/enrichment/graph> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/midas/source/MIDAS>.
     <https://pharos.artresearch.net/resource/midas/source/MIDAS> <http://www.w3.org/2000/01/rdf-schema#label> "MIDAS".
 }
+
+
+<https://pharos.artresearch.net/resource/geonames/enrichment/graph> {
+  <https://pharos.artresearch.net/resource/geonames/enrichment/graph> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/geonames/source/Geonames>.
+    <https://pharos.artresearch.net/resource/geonames/source/Geonames> <http://www.w3.org/2000/01/rdf-schema#label> "Geonames".
+}

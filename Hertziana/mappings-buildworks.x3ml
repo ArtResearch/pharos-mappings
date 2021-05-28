@@ -2307,45 +2307,6 @@
 				</range>
 			</link>
 			
-			<!-- if it uncomments, it should be an info object not a technique
-				 <link>
-				<path>
-					<source_relation>
-						<relation>a5358</relation>
-					</source_relation>
-					<target_relation>
-						<if>
-							<equals value="Herstellung">../aob30/text()</equals>
-						</if>
-						<relationship>crm:P108i_was_produced_by</relationship>
-						<entity>
-							<type>crm:E12_Production</type>
-							<instance_generator name="EventUri">
-								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../a5000/text()</arg>
-								<arg name="eventType" type="constant">production</arg>
-							</instance_generator>
-						</entity>
-						<relationship>crm:P33_used_specific_technique</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>a5358</source_node>
-					<target_node>
-						<entity>
-							<type>crm:E29_Design_or_Procedure</type>
-							<instance_generator name="URIwithVocabType">
-								<arg name="type" type="constant">technique</arg>
-								<arg name="id" type="xpath">text()</arg>
-							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-						</entity>
-					</target_node>
-				</range>
-			</link> -->
-			
 			<link>
 				<path>
 					<source_relation>

@@ -8,6 +8,7 @@
 		<namespace prefix="display" uri="http://catalog.sharedshelf.artstor.org/display"/>
 		<namespace prefix="owl" uri="http://www.w3.org/2002/07/owl#"/>
 		<namespace prefix="prefix" uri="https://pharos.artresearch.net/resource/frick/"/>
+		<namespace prefix="gernsheim" uri="https://pharos.artresearch.net/resource/gernsheim/"/>
 		<namespace prefix="custom" uri="https://pharos.artresearch.net/custom/"/>
 		<namespace prefix="vocab" uri="https://pharos.artresearch.net/resource/frick/vocabulary/"/>
 		<namespace prefix="vit" uri="http://id.lib.harvard.edu/images/olvwork"/>
@@ -411,6 +412,13 @@
 						<relation>marc:datafield[@tag="340"]/marc:subfield[@code="c"]</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<not>
+								<if>
+									<equals value="gernsheim">@id</equals>
+								</if>
+							</not>
+						</if>
 						<relationship>fr:Work_produced_using_technique_Technique</relationship>
 					</target_relation>
 				</path>
@@ -427,6 +435,31 @@
 					</target_node>
 				</range>
 			</link>
+
+			<!-- <link> 
+				<path>
+					<source_relation>
+						<relation>marc:datafield[@tag="340"]/marc:subfield[@code="c"]</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="gernsheim">@id</equals>
+						</if>
+						<relationship>fr:Work_produced_using_technique_Technique</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>marc:datafield[@tag="340"]/marc:subfield[@code="c"]</source_node>
+					<target_node>
+						<entity>
+							<type>fc:technique</type>
+							<instance_generator name="URIwithGernsheimTypeAndId">
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link> -->
 			
 		</mapping>
 		

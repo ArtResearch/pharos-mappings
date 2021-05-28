@@ -4666,46 +4666,33 @@
 								</label_generator>
 							</entity>
 						</additional>
+						<additional>
+							<relationship>crm:P1_is_identified_by</relationship>
+							<entity>
+								<type>crm:E41_Appellation</type>
+								<instance_generator name="IdentifierURI">	
+									<arg name="subject_type" type="constant">actor</arg>
+									<arg name="subject_id" type="xpath">linkedField/@id</arg>
+									<arg name="identifier_type" type="constant">appellation</arg>
+									<arg name="identifier_id" type="xpath">linkedField/@preferredTerm</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="xpath">linkedField/@preferredTerm</arg>
+								</label_generator>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>custom:noType</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">http://vocab.getty.edu/aat/300417193</arg>
+										</instance_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
 					</entity>
 				</target_node>
 			</domain>
-
-			<link> 
-				<path>
-					<source_relation>
-						<relation>linkedField/@id</relation>
-					</source_relation>
-					<target_relation>
-						<relationship>crm:P1_is_identified_by</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>linkedField/@id</source_node>
-					<target_node>
-						<entity>
-							<type>crm:E41_Appellation</type>
-							<instance_generator name="IdentifierURI">	
-								<arg name="subject_type" type="constant">actor</arg>
-								<arg name="subject_id" type="xpath">../@id</arg>
-								<arg name="identifier_type" type="constant">appellation</arg>
-								<arg name="identifier_id" type="xpath">../@preferredTerm</arg>
-							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">../@preferredTerm</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>custom:noType</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300417193</arg>
-									</instance_generator>
-								</entity>
-							</additional>
-						</entity>
-					</target_node>
-				</range>
-			</link>
 	
 		</mapping>
 		

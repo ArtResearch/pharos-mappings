@@ -1092,7 +1092,7 @@
 				</range>
 			</link>
 			
-						<link>
+			<link>
 				<path>
 					<source_relation>
 						<relation>a5358</relation>
@@ -1669,7 +1669,7 @@
 				</range>
 			</link>
 			
-						<link>
+			<link>
 				<path>
 					<source_relation>
 						<relation>a5358</relation>
@@ -2244,8 +2244,8 @@
 					</target_node>
 				</range>
 			</link>
-			
-						<link>
+
+			<link>
 				<path>
 					<source_relation>
 						<relation>a5358</relation>

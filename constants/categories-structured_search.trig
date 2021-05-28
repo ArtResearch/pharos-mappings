@@ -34,6 +34,8 @@
   <http://www.researchspace.org/ontologies/platform/FieldCategories/person_info> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories>.
   <http://www.researchspace.org/ontologies/platform/FieldCategories/external_info> <http://www.w3.org/2000/01/rdf-schema#label> "External info".
   <http://www.researchspace.org/ontologies/platform/FieldCategories/external_info> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories>.
+  <http://www.researchspace.org/ontologies/platform/FieldCategories/place_info> <http://www.w3.org/2000/01/rdf-schema#label> "Place info".
+  <http://www.researchspace.org/ontologies/platform/FieldCategories/place_info> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories>.
 }
 
 <https://pharos.artresearch.net/resource/pharos/fundamental_categories/graph> {
@@ -174,11 +176,11 @@
   <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/work> .
   <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://www.researchspace.org/ontology/hasRange> <http://www.cidoc-crm.org/cidoc-crm/E55_Type> .
   
-  <https://pharos.artresearch.net/resource/fr/Work_from_Date> <http://www.w3.org/2000/01/rdf-schema#label> "from date" .
+  <https://pharos.artresearch.net/resource/fr/Work_from_Date> <http://www.w3.org/2000/01/rdf-schema#label> "from" .
   <https://pharos.artresearch.net/resource/fr/Work_from_Date> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/work> .
   <https://pharos.artresearch.net/resource/fr/Work_from_Date> <http://www.researchspace.org/ontology/hasRange> <http://www.w3.org/2001/XMLSchema#date> .
 
-  <https://pharos.artresearch.net/resource/fr/Work_to_Date> <http://www.w3.org/2000/01/rdf-schema#label> "to date" .
+  <https://pharos.artresearch.net/resource/fr/Work_to_Date> <http://www.w3.org/2000/01/rdf-schema#label> "to" .
   <https://pharos.artresearch.net/resource/fr/Work_to_Date> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/work> .
   <https://pharos.artresearch.net/resource/fr/Work_to_Date> <http://www.researchspace.org/ontology/hasRange> <http://www.w3.org/2001/XMLSchema#date> .
   
@@ -214,7 +216,7 @@
   <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/custom/fc/photo> .
   <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://www.researchspace.org/ontology/hasRange> <http://www.cidoc-crm.org/cidoc-crm/E55_Type> .
 
-  <https://pharos.artresearch.net/resource/fr/Photo_from_Date> <http://www.w3.org/2000/01/rdf-schema#label> "from date" .
+  <https://pharos.artresearch.net/resource/fr/Photo_from_Date> <http://www.w3.org/2000/01/rdf-schema#label> "from" .
   <https://pharos.artresearch.net/resource/fr/Photo_from_Date> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/custom/fc/photo> .
   <https://pharos.artresearch.net/resource/fr/Photo_from_Date> <http://www.researchspace.org/ontology/hasRange> <http://www.w3.org/2001/XMLSchema#date> .
 
@@ -258,7 +260,7 @@
   <https://pharos.artresearch.net/resource/fr/Photographer_created_Photo> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/custom/fc/photographer> .
   <https://pharos.artresearch.net/resource/fr/Photographer_created_Photo> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/custom/fc/photo> .
 
-  <https://pharos.artresearch.net/resource/fr/Photographer_from_Date> <http://www.w3.org/2000/01/rdf-schema#label> "from date" .
+  <https://pharos.artresearch.net/resource/fr/Photographer_from_Date> <http://www.w3.org/2000/01/rdf-schema#label> "from" .
   <https://pharos.artresearch.net/resource/fr/Photographer_from_Date> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/custom/fc/photographer> .
   <https://pharos.artresearch.net/resource/fr/Photographer_from_Date> <http://www.researchspace.org/ontology/hasRange> <http://www.w3.org/2001/XMLSchema#date> .
 
