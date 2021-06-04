@@ -23,7 +23,14 @@
 				<source_node>//ssn:Name/Terms</source_node>
 				<target_node>
 					<if>
-						<equals value="ULAN">Term/TermSource/@name</equals>
+						<or>
+							<if>
+								<equals value="ULAN">Term/TermSource/@name</equals>
+							</if>
+							<if>
+								<equals value="HOLLIS">Term/TermSource/@name</equals>
+							</if>
+						</or>
 					</if>
 					<entity>
 						<type>custom:SourceNamedgraph</type>
@@ -44,6 +51,29 @@
 					</entity>
 				</target_node>
 			</domain>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../Nationalities/Nationality/@id</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../Nationalities/Nationality/@id</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="namedgraph">
+								<arg name="type" type="constant">group</arg>
+								<arg name="id" type="xpath">.</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
 		</mapping>
 		
 		<mapping namedgraph="graph">
@@ -51,7 +81,14 @@
 				<source_node>//ssn:Name</source_node>
 				<target_node>
 					<if>
-						<equals value="ULAN">Terms/Term/TermSource/@name</equals>
+						<or>
+							<if>
+								<equals value="ULAN">Terms/Term/TermSource/@name</equals>
+							</if>
+							<if>
+								<equals value="HOLLIS">Terms/Term/TermSource/@name</equals>
+							</if>
+						</or>
 					</if>
                    <entity>
 						<type>crm:E21_Person</type>
@@ -185,6 +222,100 @@
 				</range>
 			</link>
 
+			<link> 
+				<path>
+					<source_relation>
+						<relation>Nationalities/Nationality</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P107i_is_current_or_former_member_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>Nationalities/Nationality</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">group</arg>
+								<arg name="id" type="xpath">@id</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>//ssn:Name/Nationalities/Nationality</source_node>
+				<target_node>
+					<if>
+						<or>
+							<if>
+								<equals value="ULAN">../../Terms/Term/TermSource/@name</equals>
+							</if>
+							<if>
+								<equals value="HOLLIS">../../Terms/Term/TermSource/@name</equals>
+							</if>
+						</or>
+					</if>
+                    <entity>
+						<type>crm:E74_Group</type>
+						<instance_generator name="URIwithTypeAndId">
+							<arg name="type" type="constant">group</arg>
+							<arg name="id" type="xpath">@id</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">@name</arg>
+						</label_generator>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="namedgraph">
+									<arg name="type" type="constant">group</arg>
+									<arg name="id" type="xpath">@id</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:noType</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">ITatti</arg>
+										</instance_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">SharedShelf</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>crm:E55_Type</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">type</arg>
+									<arg name="id" type="constant">nationality</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="constant">Nationality</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
 		</mapping>
 		
 	</mappings>

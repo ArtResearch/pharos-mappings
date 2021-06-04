@@ -16,6 +16,7 @@
 		<namespace prefix="iiif_image" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
 		<namespace prefix="image" uri="http://fotothek.biblhertz.it/bh/320px/"/>
 		<namespace prefix="iiif_json" uri="https://foto.biblhertz.it/exist/foto/"/>
+		<namespace prefix="gernsheim" uri="https://pharos.artresearch.net/resource/gernsheim/"/>
 	</namespaces>
 	
 	<mappings>
@@ -829,6 +830,110 @@
 				</range>
 			</link>
 
+			<!-- technique gern lvl1-->
+			<link> 
+				<path>
+					<source_relation>
+						<relation>a8450/a8515/text()</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="true">contains(../../a8540/text(),'gern')</equals>
+						</if>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a8450/a8515/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="URIwithGernsheimTypeAndId">
+								<arg name="id" type="xpath">string-join((.,"graph"),"/")</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+			<!-- technique gern lvl2-->
+			<link> 
+				<path>
+					<source_relation>
+						<relation>obj/a8450/a8515/text()</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="true">contains(../../a8540/text(),'gern')</equals>
+						</if>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>obj/a8450/a8515/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="URIwithGernsheimTypeAndId">
+								<arg name="id" type="xpath">string-join((.,"graph"),"/")</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+			<!-- technique gern lvl3-->
+			<link> 
+				<path>
+					<source_relation>
+						<relation>obj/obj/a8450/a8515/text()</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="true">contains(../../a8540/text(),'gern')</equals>
+						</if>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>obj/obj/a8450/a8515/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="URIwithGernsheimTypeAndId">
+								<arg name="id" type="xpath">string-join((.,"graph"),"/")</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+			<!-- technique gern lvl4-->
+			<link> 
+				<path>
+					<source_relation>
+						<relation>obj/obj/obj/a8450/a8515/text()</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="true">contains(../../a8540/text(),'gern')</equals>
+						</if>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>obj/obj/obj/a8450/a8515/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="URIwithGernsheimTypeAndId">
+								<arg name="id" type="xpath">string-join((.,"graph"),"/")</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
 		</mapping>
 		
 		<mapping namedgraph="graph">
@@ -1099,34 +1204,6 @@
 					</target_node>
 				</range>
 			</link>
-
-			<!--
-			<link> 
-				<path>
-					<source_relation>
-						<relation>a8476</relation>
-					</source_relation>
-					<target_relation>
-						<relationship>crm:P2_has_type</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>a8476</source_node>
-					<target_node>
-						<entity>
-							<type>crm:E55_Type</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">type</arg>
-								<arg name="id" type="xpath">text()</arg>
-							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
-						</entity>
-					</target_node>
-				</range>
-			</link>
-			-->
 			
 			<link> 
 				<path>
@@ -1319,6 +1396,40 @@
 							<type>rdfs:Literal</type>
 							<instance_generator name="Literal">
 								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>a8515</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="true">contains(../a8540/text(),'gern')</equals>
+						</if>
+						<relationship>crm:P108i_was_produced_by</relationship>
+						<entity>
+							<type>crm:E12_Production</type>
+							<instance_generator name="EventUri">
+								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="resourceId" type="xpath">../a8540/text()</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+						</entity>
+						<relationship>custom:used_gernsheim_technique</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a8515</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithGernsheimTypeAndId">
+								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -2075,6 +2186,40 @@
 					</target_node>
 				</range>
 			</link>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>a8515</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="true">contains(../a8540/text(),'gern')</equals>
+						</if>
+						<relationship>crm:P108i_was_produced_by</relationship>
+						<entity>
+							<type>crm:E12_Production</type>
+							<instance_generator name="EventUri">
+								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="resourceId" type="xpath">../a8540/text()</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+						</entity>
+						<relationship>custom:used_gernsheim_technique</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a8515</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithGernsheimTypeAndId">
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
 			
 			<link> 
 				<path>
@@ -2460,8 +2605,6 @@
 			
 		</mapping>	
 
-
-		
 		<mapping namedgraph="graph">
 			<domain>
 				<source_node>/root/obj/obj/obj/a8450</source_node>
@@ -2895,6 +3038,40 @@
 			<link> 
 				<path>
 					<source_relation>
+						<relation>a8515</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="true">contains(../a8540/text(),'gern')</equals>
+						</if>
+						<relationship>crm:P108i_was_produced_by</relationship>
+						<entity>
+							<type>crm:E12_Production</type>
+							<instance_generator name="EventUri">
+								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="resourceId" type="xpath">../a8540/text()</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+						</entity>
+						<relationship>custom:used_gernsheim_technique</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a8515</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithGernsheimTypeAndId">
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link> 
+				<path>
+					<source_relation>
 						<relation>a8487</relation>
 					</source_relation>
 					<target_relation>
@@ -3276,7 +3453,6 @@
 			
 		</mapping>	
 
-		
 		<mapping namedgraph="graph">
 			<domain>
 				<source_node>/root/obj/obj/obj/obj/a8450</source_node>
@@ -3701,6 +3877,40 @@
 							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>a8515</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="true">contains(../a8540/text(),'gern')</equals>
+						</if>
+						<relationship>crm:P108i_was_produced_by</relationship>
+						<entity>
+							<type>crm:E12_Production</type>
+							<instance_generator name="EventUri">
+								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="resourceId" type="xpath">../a8540/text()</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+						</entity>
+						<relationship>custom:used_gernsheim_technique</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a8515</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithGernsheimTypeAndId">
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
 						</entity>
@@ -4978,57 +5188,6 @@
 			</domain>
 		</mapping>
 
-
-		<!-- type lvl1 -->
-		<mapping namedgraph="graph">
-			<domain>
-				<source_node>/root/obj/a8450/a8478</source_node>
-				<target_node>
-                    <entity>
-						<type>crm:E55_Type</type>
-						<instance_generator name="URIwithVocabType">
-							<arg name="type" type="constant">type</arg>
-							<arg name="id" type="xpath">text()</arg>
-						</instance_generator>
-						<label_generator name="Literal">
-							<arg name="text" type="xpath">text()</arg>
-						</label_generator>
-						<additional>
-							<relationship>crm:P67i_is_referred_to_by</relationship>
-							<entity>
-								<type>custom:Namedgraph</type>
-								<instance_generator name="MultiHashingGeneratorVocab">
-									<arg name="hierarchy" type="constant">type</arg>
-									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
-									<arg name="term_simple" type="constant">graph</arg>
-								</instance_generator>
-								<additional>
-									<relationship>custom:has_provider</relationship>
-									<entity>
-										<type>custom:noType</type>
-										<instance_generator name="URIwithTypeAndId">
-											<arg name="type" type="constant">source</arg>
-											<arg name="id" type="constant">Hertziana</arg>
-										</instance_generator>
-									</entity>
-								</additional>
-							</entity>
-						</additional>
-						<additional>
-							<relationship>custom:has_provider</relationship>
-							<entity>
-								<type>custom:noType</type>
-								<instance_generator name="URIwithTypeAndId">
-									<arg name="type" type="constant">source</arg>
-									<arg name="id" type="constant">Hertziana</arg>
-								</instance_generator>
-							</entity>
-						</additional>
-					 </entity>
-				</target_node>
-			</domain>
-		</mapping>
-
 		<!-- type lvl2 -->
 		<mapping namedgraph="graph">
 			<domain>
@@ -5079,7 +5238,6 @@
 			</domain>
 		</mapping>
 
-
 		<!-- type lvl3 -->
 		<mapping namedgraph="graph">
 			<domain>
@@ -5129,7 +5287,6 @@
 				</target_node>
 			</domain>
 		</mapping>
-
 
 		<!-- type lvl4 -->
 		<mapping namedgraph="graph">
@@ -5381,7 +5538,6 @@
 			</domain>
 		</mapping>
 
-
 		<!-- material lvl1 -->
 		<mapping namedgraph="graph">
 			<domain>
@@ -5431,7 +5587,6 @@
 				</target_node>
 			</domain>
 		</mapping>
-
 
 		<!-- material lvl2 -->
 		<mapping namedgraph="graph">
@@ -5483,7 +5638,6 @@
 			</domain>
 		</mapping>
 
-
 		<!-- material lvl3-->
 		<mapping namedgraph="graph">
 			<domain>
@@ -5533,7 +5687,6 @@
 				</target_node>
 			</domain>
 		</mapping>
-
 
 		<!-- material lvl4 -->
 		<mapping namedgraph="graph">
@@ -5685,7 +5838,6 @@
 			</domain>
 		</mapping>
 
-
 		<!-- type lvl3 -->
 		<mapping namedgraph="graph">
 			<domain>
@@ -5736,7 +5888,6 @@
 			</domain>
 		</mapping>
 
-
 		<!-- type lvl4 -->
 		<mapping namedgraph="graph">
 			<domain>
@@ -5786,7 +5937,6 @@
 				</target_node>
 			</domain>
 		</mapping>
-
 
 		<!-- actor lvl1 -->
 		<mapping namedgraph="graph">
@@ -6186,6 +6336,206 @@
 							</entity>
 						</additional>
 					 </entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<!-- technique gern lvl1 -->
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/a8450/a8515</source_node>
+				<target_node>
+					<if>
+						<equals value="true">contains(../a8540/text(),'gern')</equals>
+					</if>
+                    <entity>
+						<type>crm:E29_Design_or_Procedure</type>
+						<instance_generator name="URIwithGernsheimTypeAndId">
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">Hertziana</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="URIwithGernsheimTypeAndId">
+									<arg name="id" type="xpath">string-join((text(),"graph"),"/")</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+										<entity>
+											<type>custom:noType</type>
+											<instance_generator name="URIwithTypeAndId">
+												<arg name="type" type="constant">source</arg>
+												<arg name="id" type="constant">Hertziana</arg>
+											</instance_generator>
+										</entity>
+								</additional>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<!-- technique gern lvl2 -->
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/obj/a8450/a8515</source_node>
+				<target_node>
+					<if>
+						<equals value="true">contains(../a8540/text(),'gern')</equals>
+					</if>
+                    <entity>
+						<type>crm:E29_Design_or_Procedure</type>
+						<instance_generator name="URIwithGernsheimTypeAndId">
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">Hertziana</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="URIwithGernsheimTypeAndId">
+									<arg name="id" type="xpath">string-join((text(),"graph"),"/")</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+										<entity>
+											<type>custom:noType</type>
+											<instance_generator name="URIwithTypeAndId">
+												<arg name="type" type="constant">source</arg>
+												<arg name="id" type="constant">Hertziana</arg>
+											</instance_generator>
+										</entity>
+								</additional>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<!-- technique gern lvl3 -->
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/obj/obj/a8450/a8515</source_node>
+				<target_node>
+					<if>
+						<equals value="true">contains(../a8540/text(),'gern')</equals>
+					</if>
+					<entity>
+						<type>crm:E29_Design_or_Procedure</type>
+						<instance_generator name="URIwithGernsheimTypeAndId">
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">Hertziana</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="URIwithGernsheimTypeAndId">
+									<arg name="id" type="xpath">string-join((text(),"graph"),"/")</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+										<entity>
+											<type>custom:noType</type>
+											<instance_generator name="URIwithTypeAndId">
+												<arg name="type" type="constant">source</arg>
+												<arg name="id" type="constant">Hertziana</arg>
+											</instance_generator>
+										</entity>
+								</additional>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<!-- technique gern lvl4 -->
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/obj/obj/obj/a8450/a8515</source_node>
+				<target_node>
+					<if>
+						<equals value="true">contains(../a8540/text(),'gern')</equals>
+					</if>
+                    <entity>
+						<type>crm:E29_Design_or_Procedure</type>
+						<instance_generator name="URIwithGernsheimTypeAndId">
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">Hertziana</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="URIwithGernsheimTypeAndId">
+									<arg name="id" type="xpath">string-join((text(),"graph"),"/")</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+										<entity>
+											<type>custom:noType</type>
+											<instance_generator name="URIwithTypeAndId">
+												<arg name="type" type="constant">source</arg>
+												<arg name="id" type="constant">Hertziana</arg>
+											</instance_generator>
+										</entity>
+								</additional>
+							</entity>
+						</additional>
+					</entity>
 				</target_node>
 			</domain>
 		</mapping>

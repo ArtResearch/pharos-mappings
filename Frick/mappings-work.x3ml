@@ -1628,7 +1628,6 @@
 				</range>
 			</link>
 			
-			
 			<link>
 				<path>
 					<source_relation>
@@ -1784,7 +1783,6 @@
 				</range>
 			</link> 
 
-			
 			<link> 
 				<path>
 					<source_relation>
@@ -3766,7 +3764,7 @@
 					</if>
                     <entity>
 						<type>crm:E29_Design_or_Procedure</type>
-						<instance_generator name="URIwithVocabType">
+						<instance_generator name="URIwithGernsheimTypeAndId">
 							<arg name="id" type="xpath">text()</arg>
 						</instance_generator>
 						<label_generator name="Literal">

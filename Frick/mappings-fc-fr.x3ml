@@ -436,7 +436,7 @@
 				</range>
 			</link>
 
-			<!-- <link> 
+			<link> 
 				<path>
 					<source_relation>
 						<relation>marc:datafield[@tag="340"]/marc:subfield[@code="c"]</relation>
@@ -445,7 +445,7 @@
 						<if>
 							<equals value="gernsheim">@id</equals>
 						</if>
-						<relationship>fr:Work_produced_using_technique_Technique</relationship>
+						<relationship>fr:Work_produced_using_gernsheim_Technique</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -459,7 +459,7 @@
 						</entity>
 					</target_node>
 				</range>
-			</link> -->
+			</link>
 			
 		</mapping>
 		

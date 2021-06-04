@@ -18,6 +18,10 @@
 	</custom>
 </generator>
 
+<generator name="URIwithGernsheimTypeAndId" prefix="gernsheim">
+	<pattern>{id}</pattern>
+</generator>
+
 <generator name="IIIF_Generator" prefix="iiif_image">
 	<pattern>{id}{postfix}</pattern>
 </generator>
