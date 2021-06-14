@@ -68,6 +68,18 @@
 	<pattern>Location: {To} Acquisition: {Type} {Date}</pattern>
 </generator>
 
+<generator name="AcquisitionCurrentLocationGeneric">
+	<pattern>Location: {To} Acquisition: {TypeGeneric}, {Type} {Date}</pattern>
+</generator>
+
+<generator name="AcquisitionCurrentLocationwithPlace">
+	<pattern>Location: {To} Acquisition: {Type} {Date} Place: {Place}</pattern>
+</generator>
+
+<generator name="AcquisitionCurrentLocationwithPlaceAndVerwalterart">
+	<pattern>Location: {To} Acquisition: {Type} {Date} Place: {Place} Type: {type_vervalter}</pattern>
+</generator>
+
 <generator name="Attribution">
 	<pattern>{Author} | Reason: {Reason}</pattern>
 </generator>

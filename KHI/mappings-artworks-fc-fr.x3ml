@@ -515,33 +515,7 @@
 					</target_node>
 				</range>
 			</link>
-			
-			<link>
-				<path>
-					<source_relation>
-						<relation>a5358</relation>
-					</source_relation>
-					<target_relation>
-						<if>
-							<equals value="Herstellung">../aob30/text()</equals>
-						</if>
-						<relationship>fr:Work_produced_using_technique_Technique</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>a5358</source_node>
-					<target_node>
-						<entity>
-							<type>fc:technique</type>
-							<instance_generator name="URIwithVocabType">
-								<arg name="type" type="constant">technique</arg>
-								<arg name="id" type="xpath">text()</arg>
-							</instance_generator>
-						</entity>
-					</target_node>
-				</range>
-			</link>
-			
+
 			<link>
 				<path>
 					<source_relation>
@@ -1087,32 +1061,6 @@
 									</instance_generator>
 								</entity>
 							</additional>
-						</entity>
-					</target_node>
-				</range>
-			</link>
-			
-						<link>
-				<path>
-					<source_relation>
-						<relation>a5358</relation>
-					</source_relation>
-					<target_relation>
-						<if>
-							<equals value="Herstellung">../aob30/text()</equals>
-						</if>
-						<relationship>fr:Work_produced_using_technique_Technique</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>a5358</source_node>
-					<target_node>
-						<entity>
-							<type>fc:technique</type>
-							<instance_generator name="URIwithVocabType">
-								<arg name="type" type="constant">technique</arg>
-								<arg name="id" type="xpath">text()</arg>
-							</instance_generator>
 						</entity>
 					</target_node>
 				</range>
@@ -1668,33 +1616,7 @@
 					</target_node>
 				</range>
 			</link>
-			
-						<link>
-				<path>
-					<source_relation>
-						<relation>a5358</relation>
-					</source_relation>
-					<target_relation>
-						<if>
-							<equals value="Herstellung">../aob30/text()</equals>
-						</if>
-						<relationship>fr:Work_produced_using_technique_Technique</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>a5358</source_node>
-					<target_node>
-						<entity>
-							<type>fc:technique</type>
-							<instance_generator name="URIwithVocabType">
-								<arg name="type" type="constant">technique</arg>
-								<arg name="id" type="xpath">text()</arg>
-							</instance_generator>
-						</entity>
-					</target_node>
-				</range>
-			</link>
-			
+
 			<link>
 				<path>
 					<source_relation>
@@ -2240,32 +2162,6 @@
 									</instance_generator>
 								</entity>
 							</additional>
-						</entity>
-					</target_node>
-				</range>
-			</link>
-			
-						<link>
-				<path>
-					<source_relation>
-						<relation>a5358</relation>
-					</source_relation>
-					<target_relation>
-						<if>
-							<equals value="Herstellung">../aob30/text()</equals>
-						</if>
-						<relationship>fr:Work_produced_using_technique_Technique</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>a5358</source_node>
-					<target_node>
-						<entity>
-							<type>fc:technique</type>
-							<instance_generator name="URIwithVocabType">
-								<arg name="type" type="constant">technique</arg>
-								<arg name="id" type="xpath">text()</arg>
-							</instance_generator>
 						</entity>
 					</target_node>
 				</range>

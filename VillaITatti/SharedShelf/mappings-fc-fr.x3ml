@@ -285,6 +285,13 @@
 						<relation>Subjects/Subject</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<not>
+								<if>
+									<equals value="11309059">@type_lkup_id</equals>
+								</if>
+							</not>
+						</if>
 						<relationship>customfr:Work_shows_Subject</relationship>
 					</target_relation>
 				</path>
@@ -295,6 +302,32 @@
 							<type>customfc:subject</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">subject</arg>
+								<arg name="id" type="xpath">@id</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>Subjects/Subject</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="11309059">@type_lkup_id</equals>
+						</if>
+						<relationship>customfr:Work_shows_Subject</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>Subjects/Subject</source_node>
+					<target_node>
+						<entity>
+							<type>customfc:subject</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">@id</arg>
 							</instance_generator>
 						</entity>

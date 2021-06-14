@@ -88,7 +88,7 @@
 						<if>
 							<equals value="true">contains(../a8540/text(),'gern')</equals>
 						</if>
-						<relationship>fr:Photo_produced_using_gernsheim_Technique</relationship>
+						<relationship>fr:Photo_produced_using_Technique</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -220,7 +220,7 @@
 						<if>
 							<equals value="true">contains(../a8540/text(),'gern')</equals>
 						</if>
-						<relationship>fr:Photo_produced_using_gernsheim_Technique</relationship>
+						<relationship>fr:Photo_produced_using_Technique</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -352,7 +352,7 @@
 						<if>
 							<equals value="true">contains(../a8540/text(),'gern')</equals>
 						</if>
-						<relationship>fr:Photo_produced_using_gernsheim_Technique</relationship>
+						<relationship>fr:Photo_produced_using_Technique</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -484,7 +484,7 @@
 						<if>
 							<equals value="true">contains(../a8540/text(),'gern')</equals>
 						</if>
-						<relationship>fr:Photo_produced_using_gernsheim_Technique</relationship>
+						<relationship>fr:Photo_produced_using_Technique</relationship>
 					</target_relation>
 				</path>
 				<range>

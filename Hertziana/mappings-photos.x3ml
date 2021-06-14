@@ -1420,7 +1420,7 @@
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
-						<relationship>custom:used_gernsheim_technique</relationship>
+						<relationship>crm:P33_used_specific_technique</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -2205,7 +2205,7 @@
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
-						<relationship>custom:used_gernsheim_technique</relationship>
+						<relationship>crm:P33_used_specific_technique</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -3053,7 +3053,7 @@
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
-						<relationship>custom:used_gernsheim_technique</relationship>
+						<relationship>crm:P33_used_specific_technique</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -3902,7 +3902,7 @@
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
-						<relationship>custom:used_gernsheim_technique</relationship>
+						<relationship>crm:P33_used_specific_technique</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -6385,6 +6385,15 @@
 								</additional>
 							</entity>
 						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIwithGernsheimTypeAndId">
+									<arg name="id" type="constant">technique</arg>
+								</instance_generator>
+							</entity>
+						</additional>
 					</entity>
 				</target_node>
 			</domain>
@@ -6433,6 +6442,15 @@
 											</instance_generator>
 										</entity>
 								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIwithGernsheimTypeAndId">
+									<arg name="id" type="constant">technique</arg>
+								</instance_generator>
 							</entity>
 						</additional>
 					</entity>
@@ -6485,6 +6503,15 @@
 								</additional>
 							</entity>
 						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIwithGernsheimTypeAndId">
+									<arg name="id" type="constant">technique</arg>
+								</instance_generator>
+							</entity>
+						</additional>
 					</entity>
 				</target_node>
 			</domain>
@@ -6533,6 +6560,15 @@
 											</instance_generator>
 										</entity>
 								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIwithGernsheimTypeAndId">
+									<arg name="id" type="constant">technique</arg>
+								</instance_generator>
 							</entity>
 						</additional>
 					</entity>

@@ -1358,3 +1358,17 @@
             <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://vocab.getty.edu/aat/300264595>;
             <http://www.w3.org/2000/01/rdf-schema#label> "Kunsthistorisches Institut in Florenz – Max Planck Institut" .
 }
+
+<https://pharos.artresearch.net/resource/khi/type/515FBB66-1F1F-3A94-B64D-8BB7CDA5E8D3/graph> {
+        <https://pharos.artresearch.net/resource/khi/type/515FBB66-1F1F-3A94-B64D-8BB7CDA5E8D3>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Technique Description" .
+}
+
+<https://pharos.artresearch.net/resource/gernsheim/technique/graph> {
+        <https://pharos.artresearch.net/resource/gernsheim/technique>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Gernsheim Technique" .
+}

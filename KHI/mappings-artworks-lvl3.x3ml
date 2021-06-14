@@ -2292,44 +2292,48 @@
 				</range>
 			</link>
 			
-			<!-- if it uncomments, it should be an info object not a technique
-				 <link>
+			<link>
 				<path>
 					<source_relation>
 						<relation>a5358</relation>
 					</source_relation>
 					<target_relation>
-						<if>
-							<equals value="Herstellung">../aob30/text()</equals>
-						</if>
-						<relationship>crm:P108i_was_produced_by</relationship>
+						<relationship>crm:P67i_is_referred_to_by</relationship>
 						<entity>
-							<type>crm:E12_Production</type>
-							<instance_generator name="EventUri">
-								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../a5002/text()</arg>
-								<arg name="eventType" type="constant">production</arg>
+							<type>crm:E73_Information_Object</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">technique_description</arg>
+								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIwithType">
+										<arg name="type" type="constant">type</arg>
+										<arg name="id" type="constant">technique_description</arg>
+									</instance_generator>
+								</entity>
+							</additional>
 						</entity>
-						<relationship>crm:P33_used_specific_technique</relationship>
+						<relationship>crm:P190_has_symbolic_content</relationship>
 					</target_relation>
 				</path>
 				<range>
 					<source_node>a5358</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E29_Design_or_Procedure</type>
-							<instance_generator name="URIwithVocabType">
-								<arg name="type" type="constant">technique</arg>
-								<arg name="id" type="xpath">text()</arg>
-							</instance_generator>
-							<label_generator name="Literal">
+							<type>rdfs:Literal</type>
+							<instance_generator name="Literal">
 								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
+							</instance_generator>
 						</entity>
 					</target_node>
 				</range>
-			</link> -->
+			</link>
 			
 			<link>
 				<path>
@@ -2725,11 +2729,96 @@
 			<link>
 				<path>
 					<source_relation>
+						<relation>aob28/a2864</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P55_has_current_location</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>aob28/a2864</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">place</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link>
+				<path>
+					<source_relation>
 						<relation>aob28</relation>
 					</source_relation>
 					<target_relation>
 						<if>
-							<exists>a2900/text()</exists>
+							<and>	
+								<if>
+									<exists>a2900/text()</exists>
+								</if>
+								<if>
+									<exists>a2890/text()</exists>
+								</if>
+							</and>
+						</if>
+						<relationship>crm:P24i_changed_ownership_through</relationship>
+						<entity>
+							<type>crm:E8_Acquisition</type>
+							<instance_generator name="AcquisitionUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../a5002/text()</arg>
+								<arg name="eventType" type="constant">acquisition</arg>
+								<arg name="from" type="constant">-</arg>
+								<arg name="to" type="xpath">a2900/text()</arg>
+								<arg name="timespan" type="constant">-</arg>
+							</instance_generator>
+							<label_generator name="AcquisitionCurrentLocationGeneric">
+								<arg name="To" type="xpath">string-join((a2900/text(),',',a2864/text()),' ')</arg>
+								<arg name="TypeGeneric" type="xpath">text()</arg>
+								<arg name="Type" type="xpath">a2890/text()</arg>
+								<arg name="Date" type="xpath">string-join((a2996/text(),'-'),' ')</arg>
+							</label_generator>
+						</entity>
+						<relationship>crm:P2_has_type</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>aob28</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithVocabType">
+								<arg name="type" type="constant">type</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>aob28</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<and>	
+								<if>
+									<exists>a2900/text()</exists>
+								</if>
+								<if>
+									<not>
+										<if>
+											<exists>a2890/text()</exists>
+										</if>
+									</not>
+								</if>
+							</and>
 						</if>
 						<relationship>crm:P24i_changed_ownership_through</relationship>
 						<entity>
@@ -2743,7 +2832,7 @@
 								<arg name="timespan" type="constant">-</arg>
 							</instance_generator>
 							<label_generator name="AcquisitionCurrentLocation">
-								<arg name="To" type="xpath">a2900/text()</arg>
+								<arg name="To" type="xpath">string-join((a2900/text(),',',a2864/text()),' ')</arg>
 								<arg name="Type" type="xpath">text()</arg>
 								<arg name="Date" type="xpath">string-join((a2996/text(),"-"),' ')</arg>
 							</label_generator>
