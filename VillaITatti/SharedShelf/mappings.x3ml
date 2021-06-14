@@ -404,6 +404,30 @@
 					</target_node>
 				</range>
 			</link>
+
+			<!--type graph-->
+			<link>
+				<path>
+					<source_relation>
+						<relation>../StylePeriods/StylePeriod/@uri</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../StylePeriods/StylePeriod/@uri</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text">string-join((.,"graph"),'/')</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
 			<!-- type graph -->
 			<link>
 				<path>
@@ -1783,6 +1807,37 @@
 				</path>
 				<range>
 					<source_node>Cultures/Culture</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text">@uri</arg>
+							</instance_generator>					
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>StylePeriods/StylePeriod</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P108i_was_produced_by</relationship>
+						<entity>
+							<type>crm:E12_Production</type>
+							<instance_generator name="EventUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../@id</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P137_exemplifies</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>StylePeriods/StylePeriod</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
@@ -5505,6 +5560,71 @@
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">SharedShelf</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>//ssw:Work/StylePeriods/StylePeriod</source_node>
+				<target_node>
+                   <entity>
+						<type>crm:E55_Type</type>
+						<instance_generator name="URIorUUID">
+							<arg name="text">@uri</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">@term</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">ITatti</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="URIorUUID">
+									<arg name="text">string-join((@uri,"graph"),'/')</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:noType</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">ITatti</arg>
+										</instance_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">SharedShelf</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIorUUID">
+									<arg name="constant">http://vocab.getty.edu/aat/300015646</arg>
 								</instance_generator>
 							</entity>
 						</additional>
