@@ -51,11 +51,18 @@
 					</source_relation>
 					<target_relation>
 						<if>
-							<not>
+							<and>
 								<if>
-									<exists>@attribution</exists>
+									<not>
+										<if>
+											<exists>@attribution</exists>
+										</if>
+									</not>
 								</if>
-							</not>
+								<if>
+									<equals value="creator">@qualifier_lkup</equals>
+								</if>
+							</and>
 						</if>
 						<relationship>customfr:Work_created_from_Artist</relationship>
 					</target_relation>

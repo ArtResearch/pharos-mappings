@@ -1020,11 +1020,18 @@
 					</source_relation>
 					<target_relation>
 						<if>
-							<not>
+							<and>
 								<if>
-									<exists>@attribution</exists>
+									<not>
+										<if>
+											<exists>@attribution</exists>
+										</if>
+									</not>
 								</if>
-							</not>
+								<if>
+									<equals value="creator">@qualifier_lkup</equals>
+								</if>
+							</and>
 						</if>
 						<relationship>crm:P108i_was_produced_by</relationship>
 						<entity>
@@ -1045,6 +1052,52 @@
 							</instance_generator>
 						</entity>
 						<relationship>crm:P02_has_range</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>Agents/Agent</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">@id</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>Agents/Agent</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<and>
+								<if>
+									<not>
+										<if>
+											<exists>@attribution</exists>
+										</if>
+									</not>
+								</if>
+								<if>
+									<equals value="associated names">@qualifier_lkup</equals>
+								</if>
+							</and>
+						</if>
+						<relationship>crm:P108i_was_produced_by</relationship>
+						<entity>
+							<type>crm:E12_Production</type>
+							<instance_generator name="EventUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../@id</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P11_had_participant</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -4626,6 +4679,9 @@
 			<domain>
 				<source_node>//ssw:Work/Agents/Agent</source_node>
 				<target_node>
+					<if>
+						<equals value="creator">@qualifier_lkup</equals>
+					</if>
                    <entity>
 						<type>crm:E21_Person</type>
 						<instance_generator name="URIwithTypeAndId">
@@ -4688,6 +4744,121 @@
 							<relationship>owl:sameAs</relationship>
 							<entity>
 								<type>crm:E21_Person</type>
+								<instance_generator name="URIorUUID">
+									<arg name="text" type="xpath">@uri</arg>
+								</instance_generator>
+								<label_generator name="Literal">
+									<arg name="text" type="xpath">@term</arg>
+								</label_generator>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>@term</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P1_is_identified_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>@term</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E41_Appellation</type>
+							<instance_generator name="IdentifierURI">	
+								<arg name="subject_type" type="constant">actor</arg>
+								<arg name="subject_id" type="xpath">../@id</arg>
+								<arg name="identifier_type" type="constant">appellation</arg>
+								<arg name="identifier_id" type="xpath">../@term</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">../@term</arg>
+							</label_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">http://vocab.getty.edu/aat/300417193</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+	
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>//ssw:Work/Agents/Agent</source_node>
+				<target_node>
+					<if>
+						<not>
+							<if>
+								<equals value="creator">@qualifier_lkup</equals>
+							</if>
+						</not>
+					</if>
+                   <entity>
+						<type>crm:E39_Actor</type>
+						<instance_generator name="URIwithTypeAndId">
+							<arg name="type" type="constant">actor</arg>
+							<arg name="id" type="xpath">@id</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">@term</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">ITatti</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="namedgraph">
+									<arg name="type" type="constant">actor</arg>
+									<arg name="id" type="xpath">@id</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:noType</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">ITatti</arg>
+										</instance_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">SharedShelf</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>owl:sameAs</relationship>
+							<entity>
+								<type>crm:E39_Actor</type>
 								<instance_generator name="URIorUUID">
 									<arg name="text" type="xpath">@uri</arg>
 								</instance_generator>

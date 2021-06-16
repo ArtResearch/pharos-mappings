@@ -173,8 +173,8 @@
 					<source_node>Biographies/Biography/birthDate</source_node>
 					<target_node>
 						<entity>
-							<type>rdfs:Literal</type>
-							<instance_generator name="Literal">
+							<type>xsd:date</type>
+							<instance_generator name="TypedLiteralGen">
 								<arg name="text" type="xpath">@year</arg>
 							</instance_generator>
 						</entity>
@@ -213,8 +213,8 @@
 					<source_node>Biographies/Biography/deathDate</source_node>
 					<target_node>
 						<entity>
-							<type>rdfs:Literal</type>
-							<instance_generator name="Literal">
+							<type>xsd:date</type>
+							<instance_generator name="TypedLiteralGen">
 								<arg name="text" type="xpath">@year</arg>
 							</instance_generator>
 						</entity>
