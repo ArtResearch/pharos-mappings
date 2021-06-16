@@ -13,7 +13,7 @@
 		<namespace prefix="iiif_image" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
 		<namespace prefix="iiif_json" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
 		<namespace prefix="fc" uri="https://pharos.artresearch.net/resource/custom/fc/"/>
-		<namespace prefix="fr" uri="https://pharos.artresearch.net/resource/fr/"/>
+		<namespace prefix="fr" uri="https://pharos.artresearch.net/resource/custom/fr/"/>
 		<namespace prefix="gernsheim" uri="https://pharos.artresearch.net/resource/gernsheim/"/>
 	</namespaces>
 	<mappings>

@@ -38,42 +38,81 @@
 								</instance_generator>
 							</entity>
 						</additional>
-						<!--actor graph-->
-						<additional>
-							<relationship>custom:consists_of</relationship>
-							<entity>
-								<type>custom:Namedgraph</type>
-								<instance_generator name="namedgraph">
-									<arg name="type" type="constant">actor</arg>
-									<arg name="id" type="xpath">../Agents/Agent/@id</arg>
-								</instance_generator>
-							</entity>
-						</additional>
-						<!--institution graph-->
-						<additional>
-							<relationship>custom:consists_of</relationship>
-							<entity>
-								<type>custom:Namedgraph</type>
-								<instance_generator name="namedgraph">
-									<arg name="type" type="constant">actor</arg>
-									<arg name="id" type="xpath">../Locations/Repository/@id</arg>
-								</instance_generator>
-							</entity>
-						</additional>
-						<!-- place -->
-						<additional>
-							<relationship>custom:consists_of</relationship>
-							<entity>
-								<type>custom:Namedgraph</type>
-								<instance_generator name="namedgraph">
-									<arg name="type" type="constant">place</arg>
-									<arg name="id" type="xpath">../Locations/Repository/location/@id</arg>
-								</instance_generator>
-							</entity>
-						</additional>
 					</entity>
 				</target_node>
 			</domain>
+			
+			<!--actor graph-->
+			<link>
+				<path>
+					<source_relation>
+						<relation>../Agents/Agent/@id</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../Agents/Agent/@id</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="namedgraph">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">.</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<!--place graph-->
+			<link>
+				<path>
+					<source_relation>
+						<relation>../Locations/Repository/location/@id</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../Locations/Repository/location/@id</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="namedgraph">
+								<arg name="type" type="constant">place</arg>
+								<arg name="id" type="xpath">.</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<!--institution graph-->
+			<link>
+				<path>
+					<source_relation>
+						<relation>../Locations/Repository/@id</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../Locations/Repository/@id</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="namedgraph">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">.</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
 
 			<!--type-->
 			<link>
@@ -5624,7 +5663,7 @@
 							<entity>
 								<type>custom:noType</type>
 								<instance_generator name="URIorUUID">
-									<arg name="constant">http://vocab.getty.edu/aat/300015646</arg>
+									<arg name="text"  type="constant" >http://vocab.getty.edu/aat/300015646</arg>
 								</instance_generator>
 							</entity>
 						</additional>

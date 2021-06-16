@@ -1372,3 +1372,10 @@
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Gernsheim Technique" .
 }
+
+<http://vocab.getty.edu/aat/300015646/graph> {
+        <http://vocab.getty.edu/aat/300015646>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Styles and Periods" .
+}
