@@ -914,6 +914,13 @@
                     "Gender" .
 }
 
+<https://pharos.artresearch.net/resource/midas/vocabulary/type/84B03AD8-694C-325A-9010-13B234C00D8C/graph> {
+        <https://pharos.artresearch.net/resource/midas/vocabulary/type/84B03AD8-694C-325A-9010-13B234C00D8C>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "National Group" .
+}
+
 <https://pharos.artresearch.net/resource/marburg/type/84B03AD8-694C-325A-9010-13B234C00D8C/graph> {
         <https://pharos.artresearch.net/resource/marburg/type/84B03AD8-694C-325A-9010-13B234C00D8C>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
@@ -1378,4 +1385,18 @@
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Styles and Periods" .
+}
+
+<https://pharos.artresearch.net/resource/hertziana/type/image_api_manifest/graph> {
+        <https://pharos.artresearch.net/resource/hertziana/type/image_api_manifest>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Image API Manifest" .
+}
+
+<https://pharos.artresearch.net/resource/hertziana/type/presentation_api_manifest/graph> {
+        <https://pharos.artresearch.net/resource/hertziana/type/presentation_api_manifest>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Presentation API manifest" .
 }

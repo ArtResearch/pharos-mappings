@@ -131,14 +131,6 @@
   <https://pharos.artresearch.net/resource/custom/fc/technique> <http://www.researchspace.org/ontology/hasThumbnail> "/assets/images/icons/technique.svg" .
   <https://pharos.artresearch.net/resource/custom/fc/technique> <http://www.w3.org/2000/01/rdf-schema#label>  "Technique" .
 
-
-  # to be deleted after reconciliation of techniques
-  <https://pharos.artresearch.net/resource/fc/technique> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
-  <https://pharos.artresearch.net/resource/fc/technique> a <http://www.researchspace.org/ontology/FundamentalCategory> .
-  <https://pharos.artresearch.net/resource/fc/technique> <http://www.researchspace.org/ontology/hasOrder> "17"^^xsd:integer.
-  <https://pharos.artresearch.net/resource/fc/technique> <http://www.researchspace.org/ontology/hasThumbnail> "/assets/images/icons/technique.svg" .
-  <https://pharos.artresearch.net/resource/fc/technique> <http://www.w3.org/2000/01/rdf-schema#label>  "Technique" .
-
     # to be deleted after reconciliation of techniques
   <https://pharos.artresearch.net/resource/fc/Technique> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
   <https://pharos.artresearch.net/resource/fc/Technique> a <http://www.researchspace.org/ontology/FundamentalCategory> .
@@ -181,7 +173,7 @@
   <https://pharos.artresearch.net/resource/fr/Work_has_provider_Institution> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/work> .
   <https://pharos.artresearch.net/resource/fr/Work_has_provider_Institution> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/custom/fc/institution> .
 
-  <https://pharos.artresearch.net/resource/fr/Work_from_Place> <http://www.w3.org/2000/01/rdf-schema#label> "from" .
+  <https://pharos.artresearch.net/resource/fr/Work_from_Place> <http://www.w3.org/2000/01/rdf-schema#label> "has location" .
   <https://pharos.artresearch.net/resource/fr/Work_from_Place> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/work> .
   <https://pharos.artresearch.net/resource/fr/Work_from_Place> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/place> .
 
@@ -227,7 +219,7 @@
   
   <https://pharos.artresearch.net/resource/fr/Work_produced_using_technique_Technique> <http://www.w3.org/2000/01/rdf-schema#label> "produced using" .
   <https://pharos.artresearch.net/resource/fr/Work_produced_using_technique_Technique> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/work> .
-  <https://pharos.artresearch.net/resource/fr/Work_produced_using_technique_Technique> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/custom/fc/technique> .
+  <https://pharos.artresearch.net/resource/fr/Work_produced_using_technique_Technique> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/technique> .
   
   <https://pharos.artresearch.net/resource/fr/Photo_created_by_Photographer> <http://www.w3.org/2000/01/rdf-schema#label> "created by" .
   <https://pharos.artresearch.net/resource/fr/Photo_created_by_Photographer> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/custom/fc/photo> .

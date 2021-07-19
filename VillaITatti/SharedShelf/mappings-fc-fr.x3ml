@@ -520,20 +520,20 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>../field_lookup[@label="Photographer"]</relation>
+						<relation>../field_lookup[@label="Photographer"]/linkedField</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>customfr:Photo_created_by_Photographer</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>../field_lookup[@label="Photographer"]</source_node>
+					<source_node>../field_lookup[@label="Photographer"]/linkedField</source_node>
 					<target_node>
 						<entity>
 							<type>customfc:photographer</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">linkedField/@id</arg>
+								<arg name="id" type="xpath">@id</arg>
 							</instance_generator>
 							<additional>
 								<relationship>customfr:Photographer_created_Photo</relationship>
@@ -541,7 +541,7 @@
 									<type>customfc:photo</type>
 									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">photo</arg>
-										<arg name="id" type="xpath">../field_string[@label="Image Accession Number"]/substring(@value,1,string-length(@value)-2)</arg>
+										<arg name="id" type="xpath">../../field_string[@label="Image Accession Number"]/substring(@value,1,string-length(@value)-2)</arg>
 									</instance_generator>
 								</entity>
 							</additional>
@@ -693,20 +693,20 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>../field_lookup[@label="Photographer"]</relation>
+						<relation>../field_lookup[@label="Photographer"]/linkedField</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>customfr:Photo_created_by_Photographer</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>../field_lookup[@label="Photographer"]</source_node>
+					<source_node>../field_lookup[@label="Photographer"]/linkedField</source_node>
 					<target_node>
 						<entity>
 							<type>customfc:photographer</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">linkedField/@id</arg>
+								<arg name="id" type="xpath">@id</arg>
 							</instance_generator>
 							<additional>
 								<relationship>customfr:Photographer_created_Photo</relationship>
@@ -714,7 +714,7 @@
 									<type>customfc:photo</type>
 									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">digital_object</arg>
-										<arg name="id" type="xpath">../field_string[@label="Image Accession Number"]/@value</arg>
+										<arg name="id" type="xpath">../../field_string[@label="Image Accession Number"]/@value</arg>
 									</instance_generator>
 								</entity>
 							</additional>

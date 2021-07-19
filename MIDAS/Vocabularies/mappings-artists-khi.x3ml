@@ -137,6 +137,9 @@
 								<arg name="type" type="constant">group</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
