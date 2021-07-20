@@ -2839,18 +2839,18 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>../field_lookup[@label="Image Technique"]</relation>
+						<relation>../field_lookup[@label="Image Technique"]/linkedField</relation>
 					</source_relation>
 					<target_relation>
 						<if>
-							<exists>linkedField/@uri</exists>
+							<exists>@uri</exists>
 						</if>
 						<relationship>crm:P108i_was_produced_by</relationship>
 						<entity>
 							<type>crm:E12_Production</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../field_string[@label="Image Accession Number"]/substring(@value,1,string-length(@value)-2)</arg>
+								<arg name="resourceId" type="xpath">../../field_string[@label="Image Accession Number"]/substring(@value,1,string-length(@value)-2)</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
@@ -2858,12 +2858,12 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>../field_lookup[@label="Image Technique"]</source_node>
+					<source_node>../field_lookup[@label="Image Technique"]/linkedField</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
 							<instance_generator name="URIorUUID">
-								<arg name="text" type="xpath">linkedField/@uri</arg>
+								<arg name="text" type="xpath">@uri</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -2873,18 +2873,29 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>../field_lookup[@label="Image Technique"]</relation>
+						<relation>../field_lookup[@label="Image Technique"]/linkedField</relation>
 					</source_relation>
 					<target_relation>
 						<if>
-							<exists>linkedField/@source_id</exists>
+							<and>
+								<if>
+									<not>
+										<if>
+											<exists>@uri</exists>
+										</if>
+									</not>
+								</if>
+								<if>
+									<exists>@source_id</exists>
+								</if>
+							</and>
 						</if>
 						<relationship>crm:P108i_was_produced_by</relationship>
 						<entity>
 							<type>crm:E12_Production</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../field_string[@label="Image Accession Number"]/substring(@value,1,string-length(@value)-2)</arg>
+								<arg name="resourceId" type="xpath">../../field_string[@label="Image Accession Number"]/substring(@value,1,string-length(@value)-2)</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
@@ -2892,13 +2903,13 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>../field_lookup[@label="Image Technique"]</source_node>
+					<source_node>../field_lookup[@label="Image Technique"]/linkedField</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
 							<instance_generator name="URIwithVocabTypeAndId">
 								<arg name="type" type="constant">technique</arg>
-								<arg name="id" type="xpath">linkedField/@source_id</arg>
+								<arg name="id" type="xpath">@source_id</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -2908,22 +2919,22 @@
 			<link>
 			    <path>
 					<source_relation>
-						<relation>../field_lookup[@label="Image Support"]</relation>
+						<relation>../field_lookup[@label="Image Support"]/linkedField</relation>
 					</source_relation>
 					<target_relation>
 						<if>
-							<exists>linkedField/@preferredTerm</exists>
+							<exists>@preferredTerm</exists>
 						</if>
 						<relationship>crm:P45_consists_of</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>../field_lookup[@label="Image Support"]</source_node>
+					<source_node>../field_lookup[@label="Image Support"]/linkedField</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
 							<instance_generator name="URIorUUID">
-								<arg name="text" type="xpath">linkedField/@uri</arg>
+								<arg name="text" type="xpath">@uri</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -3404,20 +3415,20 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>../field_lookup[@label="Image Repository"]</relation>
+						<relation>../field_lookup[@label="Image Repository"]/linkedField</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P50_has_current_keeper</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>../field_lookup[@label="Image Repository"]</source_node>
+					<source_node>../field_lookup[@label="Image Repository"]/linkedField</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">linkedField/@id</arg>
+								<arg name="id" type="xpath">@id</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -4042,18 +4053,18 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>../field_lookup[@label="Image Technique"]</relation>
+						<relation>../field_lookup[@label="Image Technique"]/linkedField</relation>
 					</source_relation>
 					<target_relation>
 						<if>
-							<exists>linkedField/@uri</exists>
+							<exists>@uri</exists>
 						</if>
 						<relationship>crmdig:L1i_was_digitized_by</relationship>
 						<entity>
 							<type>crmdig:D2_Digitization_Process</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../field_string[@label="Image Accession Number"]/@value</arg>
+								<arg name="resourceId" type="xpath">../../field_string[@label="Image Accession Number"]/@value</arg>
 								<arg name="eventType" type="constant">digitization</arg>
 							</instance_generator>
 						</entity>
@@ -4061,12 +4072,12 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>../field_lookup[@label="Image Technique"]</source_node>
+					<source_node>../field_lookup[@label="Image Technique"]/linkedField</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
 							<instance_generator name="URIorUUID">
-								<arg name="text" type="xpath">linkedField/@uri</arg>
+								<arg name="text" type="xpath">@uri</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -4076,18 +4087,29 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>../field_lookup[@label="Image Technique"]</relation>
+						<relation>../field_lookup[@label="Image Technique"]/linkedField</relation>
 					</source_relation>
 					<target_relation>
 						<if>
-							<exists>linkedField/@source_id</exists>
+							<and>
+								<if>
+									<not>
+										<if>
+											<exists>@uri</exists>
+										</if>
+									</not>
+								</if>
+								<if>
+									<exists>@source_id</exists>
+								</if>
+							</and>
 						</if>
 						<relationship>crmdig:L1i_was_digitized_by</relationship>
 						<entity>
 							<type>crmdig:D2_Digitization_Process</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../field_string[@label="Image Accession Number"]/@value</arg>
+								<arg name="resourceId" type="xpath">../../field_string[@label="Image Accession Number"]/@value</arg>
 								<arg name="eventType" type="constant">digitization</arg>
 							</instance_generator>
 						</entity>
@@ -4095,13 +4117,13 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>../field_lookup[@label="Image Technique"]</source_node>
+					<source_node>../field_lookup[@label="Image Technique"]/linkedField</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
 							<instance_generator name="URIwithVocabTypeAndId">
 								<arg name="type" type="constant">technique</arg>
-								<arg name="id" type="xpath">linkedField/@source_id</arg>
+								<arg name="id" type="xpath">@source_id</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -4459,20 +4481,20 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>../field_lookup[@label="Image Repository"]</relation>
+						<relation>../field_lookup[@label="Image Repository"]/linkedField</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P55_has_current_location</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>../field_lookup[@label="Image Repository"]</source_node>
+					<source_node>../field_lookup[@label="Image Repository"]/linkedField</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">linkedField/@id</arg>
+								<arg name="id" type="xpath">@id</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -4516,22 +4538,22 @@
 			<link>
 			    <path>
 					<source_relation>
-						<relation>../field_lookup[@label="Image Support"]</relation>
+						<relation>../field_lookup[@label="Image Support"]/linkedField</relation>
 					</source_relation>
 					<target_relation>
 						<if>
-							<exists>linkedField/@preferredTerm</exists>
+							<exists>@preferredTerm</exists>
 						</if>
 						<relationship>crm:P45_consists_of</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>../field_lookup[@label="Image Support"]</source_node>
+					<source_node>../field_lookup[@label="Image Support"]/linkedField</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
 							<instance_generator name="URIorUUID">
-								<arg name="text" type="xpath">linkedField/@uri</arg>
+								<arg name="text" type="xpath">@uri</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -5084,36 +5106,36 @@
 		
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>//ssw:Work/display:DR/DisplayRecord/field_lookup[@label="Image Technique"]</source_node>
+				<source_node>//ssw:Work/display:DR/DisplayRecord/field_lookup[@label="Image Technique"]/linkedField</source_node>
 				<target_node>
 					<if>
 						<and>
 							<if>
 								<not>
 									<if>
-										<equals value="9000369831">../field_lookup[@label="Image Repository"]/linkedField/@id</equals>
+										<equals value="9000369831">../../field_lookup[@label="Image Repository"]/linkedField/@id</equals>
 									</if>
 								</not>
 							</if>
 							<if>
 								<not>
 									<if>
-										<equals value="9000369124">../field_lookup[@label="Image Repository"]/linkedField/@id</equals>
+										<equals value="9000369124">../../field_lookup[@label="Image Repository"]/linkedField/@id</equals>
 									</if>
 								</not>
 							</if>
 							<if>
-								<exists>linkedField/@uri</exists>
+								<exists>@uri</exists>
 							</if>
 						</and>
 					</if>
                    <entity>
 						<type>crm:E29_Design_or_Procedure</type>
 						<instance_generator name="URIorUUID">
-							<arg name="text" type="xpath">linkedField/@uri</arg>
+							<arg name="text" type="xpath">@uri</arg>
 						</instance_generator>
 						<label_generator name="Literal">
-							<arg name="text" type="xpath">linkedField/@preferredTerm</arg>
+							<arg name="text" type="xpath">@preferredTerm</arg>
 						</label_generator>
 						<additional>
 							<relationship>custom:has_provider</relationship>
@@ -5130,7 +5152,7 @@
 							<entity>
 								<type>custom:Namedgraph</type>
 								<instance_generator name="URIorUUID">
-									<arg name="text">string-join((linkedField/@uri,"graph"),'/')</arg>
+									<arg name="text">string-join((@uri,"graph"),'/')</arg>
 								</instance_generator>
 								<additional>
 									<relationship>custom:has_provider</relationship>
@@ -5161,30 +5183,33 @@
 
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>//ssw:Work/display:DR/DisplayRecord/field_lookup[@label="Image Technique"]</source_node>
+				<source_node>//ssw:Work/display:DR/DisplayRecord/field_lookup[@label="Image Technique"]/linkedField</source_node>
 				<target_node>
 					<if>
 						<and>
 							<if>
 								<not>
 									<if>
-										<equals value="9000369831">../field_lookup[@label="Image Repository"]/linkedField/@id</equals>
+										<equals value="9000369831">../../field_lookup[@label="Image Repository"]/linkedField/@id</equals>
 									</if>
 								</not>
 							</if>
 							<if>
 								<not>
 									<if>
-										<equals value="9000369124">../field_lookup[@label="Image Repository"]/linkedField/@id</equals>
+										<equals value="9000369124">../../field_lookup[@label="Image Repository"]/linkedField/@id</equals>
 									</if>
 								</not>
 							</if>
 							<if>
 								<not>
 									<if>
-										<exists>linkedField/@uri</exists>
+										<exists>@uri</exists>
 									</if>
 								</not>
+							</if>
+							<if>
+								<exists>@source_id</exists>
 							</if>
 						</and>
 					</if>
@@ -5192,10 +5217,10 @@
 						<type>crm:E29_Design_or_Procedure</type>
 						<instance_generator name="URIwithVocabTypeAndId">
 							<arg name="type" type="constant">technique</arg>
-							<arg name="id" type="xpath">linkedField/@source_id</arg>
+							<arg name="id" type="xpath">@source_id</arg>
 						</instance_generator>
 						<label_generator name="Literal">
-							<arg name="text" type="xpath">linkedField/@preferredTerm</arg>
+							<arg name="text" type="xpath">@preferredTerm</arg>
 						</label_generator>
 						<additional>
 							<relationship>custom:has_provider</relationship>
@@ -5213,7 +5238,7 @@
 								<type>custom:Namedgraph</type>
 								<instance_generator name="URIwithVocabTypeAndId">
 									<arg name="type" type="constant">technique</arg>
-									<arg name="id" type="xpath">string-join((linkedField/@source_id,"graph"),'/')</arg>
+									<arg name="id" type="xpath">string-join((@source_id,"graph"),'/')</arg>
 								</instance_generator>
 								<additional>
 									<relationship>custom:has_provider</relationship>
@@ -5456,21 +5481,21 @@
 
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>//ssw:Work/display:DR/DisplayRecord/field_lookup[@label="Image Repository"]</source_node>
+				<source_node>//ssw:Work/display:DR/DisplayRecord/field_lookup[@label="Image Repository"]/linkedField</source_node>
 				<target_node>
 					<if>
 						<and>
 							<if>
 								<not>
 									<if>
-										<equals value="9000369831">linkedField/@id</equals>
+										<equals value="9000369831">@id</equals>
 									</if>
 								</not>
 							</if>
 							<if>
 								<not>
 									<if>
-										<equals value="9000369124">linkedField/@id</equals>
+										<equals value="9000369124">@id</equals>
 									</if>
 								</not>
 							</if>
@@ -5480,10 +5505,10 @@
 						<type>crm:E39_Actor</type>
 						<instance_generator name="URIwithTypeAndId">
 							<arg name="type" type="constant">actor</arg>
-							<arg name="id" type="xpath">linkedField/@id</arg>
+							<arg name="id" type="xpath">@id</arg>
 						</instance_generator>
 						<label_generator name="Literal">
-							<arg name="text" type="xpath">linkedField/@preferredTerm</arg>
+							<arg name="text" type="xpath">@preferredTerm</arg>
 						</label_generator>
 						<additional>
 							<relationship>custom:has_provider</relationship>
@@ -5501,7 +5526,7 @@
 								<type>custom:Namedgraph</type>
 								<instance_generator name="namedgraph">
 									<arg name="type" type="constant">actor</arg>
-									<arg name="id" type="xpath">linkedField/@id</arg>
+									<arg name="id" type="xpath">@id</arg>
 								</instance_generator>
 								<additional>
 									<relationship>custom:has_provider</relationship>
@@ -5541,14 +5566,14 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>linkedField/@uri</relation>
+						<relation>@uri</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>owl:sameAs</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>linkedField/@uri</source_node>
+					<source_node>@uri</source_node>
 					<target_node>
 						<entity>
 							<type>crm:E39_Actor</type>
@@ -5566,36 +5591,36 @@
 		
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>//ssw:Work/display:DR/DisplayRecord/field_lookup[@label="Image Support"]</source_node>
+				<source_node>//ssw:Work/display:DR/DisplayRecord/field_lookup[@label="Image Support"]/linkedField</source_node>
 				<target_node>
 					<if>
 						<and>
 							<if>
 								<not>
 									<if>
-										<equals value="9000369831">../field_lookup[@label="Image Repository"]/linkedField/@id</equals>
+										<equals value="9000369831">../../field_lookup[@label="Image Repository"]/linkedField/@id</equals>
 									</if>
 								</not>
 							</if>
 							<if>
 								<not>
 									<if>
-										<equals value="9000369124">../field_lookup[@label="Image Repository"]/linkedField/@id</equals>
+										<equals value="9000369124">../../field_lookup[@label="Image Repository"]/linkedField/@id</equals>
 									</if>
 								</not>
 							</if>
 							<if>
-								<exists>linkedField/@preferredTerm</exists>
+								<exists>@preferredTerm</exists>
 							</if>
 						</and>
 					</if>
                    <entity>
 						<type>crm:E57_Material</type>
 						<instance_generator name="URIorUUID">
-							<arg name="text" type="xpath">linkedField/@uri</arg>
+							<arg name="text" type="xpath">@uri</arg>
 						</instance_generator>
 						<label_generator name="Literal">
-							<arg name="text" type="xpath">linkedField/@preferredTerm</arg>
+							<arg name="text" type="xpath">@preferredTerm</arg>
 						</label_generator>
 						<additional>
 							<relationship>custom:has_provider</relationship>
@@ -5612,7 +5637,7 @@
 							<entity>
 								<type>custom:Namedgraph</type>
 								<instance_generator name="URIorUUID">
-									<arg name="text">string-join((linkedField/@uri,"graph"),'/')</arg>
+									<arg name="text">string-join((@uri,"graph"),'/')</arg>
 								</instance_generator>
 								<additional>
 									<relationship>custom:has_provider</relationship>
@@ -5643,14 +5668,14 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>linkedField/@uri</relation>
+						<relation>@uri</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>owl:sameAs</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>linkedField/@uri</source_node>
+					<source_node>@uri</source_node>
 					<target_node>
 						<entity>
 							<type>crm:E57_Material</type>

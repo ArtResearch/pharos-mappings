@@ -598,20 +598,20 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>../field_lookup[@label="Image Repository"]</relation>
+						<relation>../field_lookup[@label="Image Repository"]/linkedField</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>customfr:Photo_kept_by_Institution</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>../field_lookup[@label="Image Repository"]</source_node>
+					<source_node>../field_lookup[@label="Image Repository"]/linkedField</source_node>
 					<target_node>
 						<entity>
 							<type>customfc:institution</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">linkedField/@id</arg>
+								<arg name="id" type="xpath">@id</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -621,22 +621,22 @@
 			<link>
 			    <path>
 					<source_relation>
-						<relation>../field_lookup[@label="Image Support"]</relation>
+						<relation>../field_lookup[@label="Image Support"]/linkedField</relation>
 					</source_relation>
 					<target_relation>
 						<if>
-							<exists>linkedField/@preferredTerm</exists>
+							<exists>@preferredTerm</exists>
 						</if>
 						<relationship>customfr:Photo_consists_of_Material</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>../field_lookup[@label="Image Support"]</source_node>
+					<source_node>../field_lookup[@label="Image Support"]/linkedField</source_node>
 					<target_node>
 						<entity>
 							<type>customfc:material</type>
 							<instance_generator name="URIorUUID">
-								<arg name="text" type="xpath">linkedField/@uri</arg>
+								<arg name="text" type="xpath">@uri</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -770,20 +770,20 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>../field_lookup[@label="Image Repository"]</relation>
+						<relation>../field_lookup[@label="Image Repository"]/linkedField</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>customfr:Photo_kept_by_Institution</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>../field_lookup[@label="Image Repository"]</source_node>
+					<source_node>../field_lookup[@label="Image Repository"]/linkedField</source_node>
 					<target_node>
 						<entity>
 							<type>customfc:institution</type>
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">linkedField/@id</arg>
+								<arg name="id" type="xpath">@id</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -793,22 +793,22 @@
 			<link>
 			    <path>
 					<source_relation>
-						<relation>../field_lookup[@label="Image Support"]</relation>
+						<relation>../field_lookup[@label="Image Support"]/linkedField</relation>
 					</source_relation>
 					<target_relation>
 						<if>
-							<exists>linkedField/@preferredTerm</exists>
+							<exists>@preferredTerm</exists>
 						</if>
 						<relationship>customfr:Photo_consists_of_Material</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>../field_lookup[@label="Image Support"]</source_node>
+					<source_node>../field_lookup[@label="Image Support"]/linkedField</source_node>
 					<target_node>
 						<entity>
 							<type>customfc:material</type>
 							<instance_generator name="URIorUUID">
-								<arg name="text" type="xpath">linkedField/@uri</arg>
+								<arg name="text" type="xpath">@uri</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
