@@ -20,7 +20,6 @@
 			<domain>
 				<source_node>/root/obj</source_node>
 				<target_node>
-	
 					<entity>
 						<type>custom:SourceNamedgraph</type>
 						<instance_generator name="namedgraph">
@@ -663,14 +662,14 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>a8450/a8498/text()</relation>
+						<relation>a8450/a8450/a8498/text()</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>custom:consists_of</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>a8450/a8498/text()</source_node>
+					<source_node>a8450/a8450/a8498/text()</source_node>
 					<target_node>
 						<entity>
 							<type>custom:Namedgraph</type>
@@ -688,14 +687,14 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>obj/a8450/a8498/text()</relation>
+						<relation>obj/a8450/a8450/a8498/text()</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>custom:consists_of</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>obj/a8450/a8498/text()</source_node>
+					<source_node>obj/a8450/a8450/a8498/text()</source_node>
 					<target_node>
 						<entity>
 							<type>custom:Namedgraph</type>
@@ -713,14 +712,14 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>obj/obj/a8450/a8498/text()</relation>
+						<relation>obj/obj/a8450/a8450/a8498/text()</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>custom:consists_of</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>obj/obj/a8450/a8498/text()</source_node>
+					<source_node>obj/obj/a8450/a8450/a8498/text()</source_node>
 					<target_node>
 						<entity>
 							<type>custom:Namedgraph</type>
@@ -738,14 +737,14 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>obj/obj/obj/a8450/a8498/text()</relation>
+						<relation>obj/obj/obj/a8450/a8450/a8498/text()</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>custom:consists_of</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>obj/obj/obj/a8450/a8498/text()</source_node>
+					<source_node>obj/obj/obj/a8450/a8450/a8498/text()</source_node>
 					<target_node>
 						<entity>
 							<type>custom:Namedgraph</type>
@@ -764,14 +763,14 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>a8450/a8497/text()</relation>
+						<relation>a8450/a8450/a8497/text()</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>custom:consists_of</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>a8450/a8497/text()</source_node>
+					<source_node>a8450/a8450/a8497/text()</source_node>
 					<target_node>
 						<entity>
 							<type>custom:Namedgraph</type>
@@ -789,14 +788,14 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>obj/a8450/a8497/text()</relation>
+						<relation>obj/a8450/a8450/a8497/text()</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>custom:consists_of</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>obj/a8450/a8497/text()</source_node>
+					<source_node>obj/a8450/a8450/a8497/text()</source_node>
 					<target_node>
 						<entity>
 							<type>custom:Namedgraph</type>
@@ -814,14 +813,14 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>obj/obj/a8450/a8497/text()</relation>
+						<relation>obj/obj/a8450/a8450/a8497/text()</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>custom:consists_of</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>obj/obj/a8450/a8497/text()</source_node>
+					<source_node>obj/obj/a8450/a8450/a8497/text()</source_node>
 					<target_node>
 						<entity>
 							<type>custom:Namedgraph</type>
@@ -839,14 +838,14 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>obj/obj/obj/a8450/a8497/text()</relation>
+						<relation>obj/obj/obj/a8450/a8450/a8497/text()</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>custom:consists_of</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>obj/obj/obj/a8450/a8497/text()</source_node>
+					<source_node>obj/obj/obj/a8450/a8450/a8497/text()</source_node>
 					<target_node>
 						<entity>
 							<type>custom:Namedgraph</type>
@@ -999,7 +998,7 @@
 					 </entity>
 				</target_node>
 			</domain>
-			
+
 			<link> 
 				<path>
 					<source_relation>
@@ -1392,7 +1391,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>a8498</relation>
+						<relation>a8450/a8498</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P24i_changed_ownership_through</relationship>
@@ -1400,14 +1399,15 @@
 							<type>crm:E8_Acquisition</type>
 							<instance_generator name="AcquisitionUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../a8540/text()</arg>
+								<arg name="resourceId" type="xpath">../../a8540/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
-								<arg name="from" type="constant">-</arg>
-								<arg name="to" type="xpath">../a8460/text()</arg>
-								<arg name="timespan" type="xpath">../a8496/text()</arg>
+								<arg name="from" type="constant">text()</arg>
+								<arg name="to" type="xpath">string-join((../a8460/text(),"-"),' ')</arg>
+								<arg name="timespan" type="xpath">string-join((../a8496/text(),"-"),' ')</arg>
 							</instance_generator>
-							<label_generator name="AcquisitionFormerLocation">
+							<label_generator name="AcquisitionConcatenated">
 								<arg name="From" type="xpath">string-join((text(),"-"),' ')</arg>
+								<arg name="To" type="xpath">string-join((../a8460/text(),"-"),' ')</arg>
 								<arg name="Type" type="xpath">string-join((../a8497/text(),"-"),' ')</arg>
 								<arg name="Date" type="xpath">string-join((../a8496/text(),"-"),' ')</arg>
 							</label_generator>
@@ -1416,7 +1416,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>a8498</source_node>
+					<source_node>a8450/a8498</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
@@ -1432,7 +1432,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>a8496</relation>
+						<relation>a8450/a8496</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P24i_changed_ownership_through</relationship>
@@ -1440,10 +1440,10 @@
 							<type>crm:E8_Acquisition</type>
 							<instance_generator name="AcquisitionUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../a8540/text()</arg>
+								<arg name="resourceId" type="xpath">../../a8540/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
-								<arg name="from" type="constant">-</arg>
-								<arg name="to" type="xpath">../a8460/text()</arg>
+								<arg name="from" type="constant">../a8498/text()</arg>
+								<arg name="to" type="xpath">string-join((../a8460/text(),"-"),' ')</arg>
 								<arg name="timespan" type="xpath">text()</arg>
 							</instance_generator>
 						</entity>
@@ -1452,7 +1452,7 @@
 							<type>crm:E52_Time-Span</type>
 							<instance_generator name="ComplexTimespanUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../a8540/text()</arg>
+								<arg name="resourceId" type="xpath">../../a8540/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
 								<arg name="timespan" type="xpath">text()</arg>
 							</instance_generator>
@@ -1476,7 +1476,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>a8497</relation>
+						<relation>a8450/a8497</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P24i_changed_ownership_through</relationship>
@@ -1484,10 +1484,10 @@
 							<type>crm:E8_Acquisition</type>
 							<instance_generator name="AcquisitionUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../a8540/text()</arg>
+								<arg name="resourceId" type="xpath">../../a8540/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
-								<arg name="from" type="constant">-</arg>
-								<arg name="to" type="xpath">../a8460/text()</arg>
+								<arg name="from" type="constant">../a8498/text()</arg>
+								<arg name="to" type="xpath">string-join((../a8460/text(),"-"),' ')</arg>
 								<arg name="timespan" type="xpath">../a8496/text()</arg>
 							</instance_generator>
 						</entity>
@@ -1495,7 +1495,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>a8497</source_node>
+					<source_node>a8450/a8497</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
@@ -2208,7 +2208,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>a8498</relation>
+						<relation>a8450/a8498</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P24i_changed_ownership_through</relationship>
@@ -2216,14 +2216,15 @@
 							<type>crm:E8_Acquisition</type>
 							<instance_generator name="AcquisitionUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../a8540/text()</arg>
+								<arg name="resourceId" type="xpath">../../a8540/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
-								<arg name="from" type="constant">-</arg>
-								<arg name="to" type="xpath">../a8460/text()</arg>
-								<arg name="timespan" type="xpath">../a8496/text()</arg>
+								<arg name="from" type="constant">text()</arg>
+								<arg name="to" type="xpath">string-join((../a8460/text(),"-"),' ')</arg>
+								<arg name="timespan" type="xpath">string-join((../a8496/text(),"-"),' ')</arg>
 							</instance_generator>
-							<label_generator name="AcquisitionFormerLocation">
+							<label_generator name="AcquisitionConcatenated">
 								<arg name="From" type="xpath">string-join((text(),"-"),' ')</arg>
+								<arg name="To" type="xpath">string-join((../a8460/text(),"-"),' ')</arg>
 								<arg name="Type" type="xpath">string-join((../a8497/text(),"-"),' ')</arg>
 								<arg name="Date" type="xpath">string-join((../a8496/text(),"-"),' ')</arg>
 							</label_generator>
@@ -2232,7 +2233,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>a8498</source_node>
+					<source_node>a8450/a8498</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
@@ -2248,7 +2249,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>a8496</relation>
+						<relation>a8450/a8496</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P24i_changed_ownership_through</relationship>
@@ -2256,10 +2257,10 @@
 							<type>crm:E8_Acquisition</type>
 							<instance_generator name="AcquisitionUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../a8540/text()</arg>
+								<arg name="resourceId" type="xpath">../../a8540/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
-								<arg name="from" type="constant">-</arg>
-								<arg name="to" type="xpath">../a8460/text()</arg>
+								<arg name="from" type="constant">../a8498/text()</arg>
+								<arg name="to" type="xpath">string-join((../a8460/text(),"-"),' ')</arg>
 								<arg name="timespan" type="xpath">text()</arg>
 							</instance_generator>
 						</entity>
@@ -2268,7 +2269,7 @@
 							<type>crm:E52_Time-Span</type>
 							<instance_generator name="ComplexTimespanUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../a8540/text()</arg>
+								<arg name="resourceId" type="xpath">../../a8540/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
 								<arg name="timespan" type="xpath">text()</arg>
 							</instance_generator>
@@ -2292,7 +2293,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>a8497</relation>
+						<relation>a8450/a8497</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P24i_changed_ownership_through</relationship>
@@ -2300,10 +2301,10 @@
 							<type>crm:E8_Acquisition</type>
 							<instance_generator name="AcquisitionUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../a8540/text()</arg>
+								<arg name="resourceId" type="xpath">../../a8540/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
-								<arg name="from" type="constant">-</arg>
-								<arg name="to" type="xpath">../a8460/text()</arg>
+								<arg name="from" type="constant">../a8498/text()</arg>
+								<arg name="to" type="xpath">string-join((../a8460/text(),"-"),' ')</arg>
 								<arg name="timespan" type="xpath">../a8496/text()</arg>
 							</instance_generator>
 						</entity>
@@ -2311,7 +2312,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>a8497</source_node>
+					<source_node>a8450/a8497</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
@@ -2494,8 +2495,6 @@
 			
 		</mapping>	
 
-
-		
 		<mapping namedgraph="graph">
 			<domain>
 				<source_node>/root/obj/obj/obj/a8450</source_node>
@@ -3026,7 +3025,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>a8498</relation>
+						<relation>a8450/a8498</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P24i_changed_ownership_through</relationship>
@@ -3034,14 +3033,15 @@
 							<type>crm:E8_Acquisition</type>
 							<instance_generator name="AcquisitionUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../a8540/text()</arg>
+								<arg name="resourceId" type="xpath">../../a8540/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
-								<arg name="from" type="constant">-</arg>
-								<arg name="to" type="xpath">../a8460/text()</arg>
-								<arg name="timespan" type="xpath">../a8496/text()</arg>
+								<arg name="from" type="constant">text()</arg>
+								<arg name="to" type="xpath">string-join((../a8460/text(),"-"),' ')</arg>
+								<arg name="timespan" type="xpath">string-join((../a8496/text(),"-"),' ')</arg>
 							</instance_generator>
-							<label_generator name="AcquisitionFormerLocation">
+							<label_generator name="AcquisitionConcatenated">
 								<arg name="From" type="xpath">string-join((text(),"-"),' ')</arg>
+								<arg name="To" type="xpath">string-join((../a8460/text(),"-"),' ')</arg>
 								<arg name="Type" type="xpath">string-join((../a8497/text(),"-"),' ')</arg>
 								<arg name="Date" type="xpath">string-join((../a8496/text(),"-"),' ')</arg>
 							</label_generator>
@@ -3050,7 +3050,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>a8498</source_node>
+					<source_node>a8450/a8498</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
@@ -3066,7 +3066,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>a8496</relation>
+						<relation>a8450/a8496</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P24i_changed_ownership_through</relationship>
@@ -3074,10 +3074,10 @@
 							<type>crm:E8_Acquisition</type>
 							<instance_generator name="AcquisitionUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../a8540/text()</arg>
+								<arg name="resourceId" type="xpath">../../a8540/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
-								<arg name="from" type="constant">-</arg>
-								<arg name="to" type="xpath">../a8460/text()</arg>
+								<arg name="from" type="constant">../a8498/text()</arg>
+								<arg name="to" type="xpath">string-join((../a8460/text(),"-"),' ')</arg>
 								<arg name="timespan" type="xpath">text()</arg>
 							</instance_generator>
 						</entity>
@@ -3086,7 +3086,7 @@
 							<type>crm:E52_Time-Span</type>
 							<instance_generator name="ComplexTimespanUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../a8540/text()</arg>
+								<arg name="resourceId" type="xpath">../../a8540/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
 								<arg name="timespan" type="xpath">text()</arg>
 							</instance_generator>
@@ -3110,7 +3110,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>a8497</relation>
+						<relation>a8450/a8497</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P24i_changed_ownership_through</relationship>
@@ -3118,10 +3118,10 @@
 							<type>crm:E8_Acquisition</type>
 							<instance_generator name="AcquisitionUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../a8540/text()</arg>
+								<arg name="resourceId" type="xpath">../../a8540/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
-								<arg name="from" type="constant">-</arg>
-								<arg name="to" type="xpath">../a8460/text()</arg>
+								<arg name="from" type="constant">../a8498/text()</arg>
+								<arg name="to" type="xpath">string-join((../a8460/text(),"-"),' ')</arg>
 								<arg name="timespan" type="xpath">../a8496/text()</arg>
 							</instance_generator>
 						</entity>
@@ -3129,7 +3129,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>a8497</source_node>
+					<source_node>a8450/a8497</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
@@ -3312,7 +3312,6 @@
 			
 		</mapping>	
 
-		
 		<mapping namedgraph="graph">
 			<domain>
 				<source_node>/root/obj/obj/obj/obj/a8450</source_node>
@@ -3843,7 +3842,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>a8498</relation>
+						<relation>a8450/a8498</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P24i_changed_ownership_through</relationship>
@@ -3851,14 +3850,15 @@
 							<type>crm:E8_Acquisition</type>
 							<instance_generator name="AcquisitionUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../a8540/text()</arg>
+								<arg name="resourceId" type="xpath">../../a8540/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
-								<arg name="from" type="constant">-</arg>
-								<arg name="to" type="xpath">../a8460/text()</arg>
-								<arg name="timespan" type="xpath">../a8496/text()</arg>
+								<arg name="from" type="constant">text()</arg>
+								<arg name="to" type="xpath">string-join((../a8460/text(),"-"),' ')</arg>
+								<arg name="timespan" type="xpath">string-join((../a8496/text(),"-"),' ')</arg>
 							</instance_generator>
-							<label_generator name="AcquisitionFormerLocation">
+							<label_generator name="AcquisitionConcatenated">
 								<arg name="From" type="xpath">string-join((text(),"-"),' ')</arg>
+								<arg name="To" type="xpath">string-join((../a8460/text(),"-"),' ')</arg>
 								<arg name="Type" type="xpath">string-join((../a8497/text(),"-"),' ')</arg>
 								<arg name="Date" type="xpath">string-join((../a8496/text(),"-"),' ')</arg>
 							</label_generator>
@@ -3867,7 +3867,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>a8498</source_node>
+					<source_node>a8450/a8498</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
@@ -3883,7 +3883,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>a8496</relation>
+						<relation>a8450/a8496</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P24i_changed_ownership_through</relationship>
@@ -3891,10 +3891,10 @@
 							<type>crm:E8_Acquisition</type>
 							<instance_generator name="AcquisitionUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../a8540/text()</arg>
+								<arg name="resourceId" type="xpath">../../a8540/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
-								<arg name="from" type="constant">-</arg>
-								<arg name="to" type="xpath">../a8460/text()</arg>
+								<arg name="from" type="constant">../a8498/text()</arg>
+								<arg name="to" type="xpath">string-join((../a8460/text(),"-"),' ')</arg>
 								<arg name="timespan" type="xpath">text()</arg>
 							</instance_generator>
 						</entity>
@@ -3903,7 +3903,7 @@
 							<type>crm:E52_Time-Span</type>
 							<instance_generator name="ComplexTimespanUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../a8540/text()</arg>
+								<arg name="resourceId" type="xpath">../../a8540/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
 								<arg name="timespan" type="xpath">text()</arg>
 							</instance_generator>
@@ -3927,7 +3927,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>a8497</relation>
+						<relation>a8450/a8497</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P24i_changed_ownership_through</relationship>
@@ -3935,10 +3935,10 @@
 							<type>crm:E8_Acquisition</type>
 							<instance_generator name="AcquisitionUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../a8540/text()</arg>
+								<arg name="resourceId" type="xpath">../../a8540/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
-								<arg name="from" type="constant">-</arg>
-								<arg name="to" type="xpath">../a8460/text()</arg>
+								<arg name="from" type="constant">../a8498/text()</arg>
+								<arg name="to" type="xpath">string-join((../a8460/text(),"-"),' ')</arg>
 								<arg name="timespan" type="xpath">../a8496/text()</arg>
 							</instance_generator>
 						</entity>
@@ -3946,7 +3946,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>a8497</source_node>
+					<source_node>a8450/a8497</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
@@ -4742,7 +4742,6 @@
 			</domain>
 		</mapping>
 
-
 		<!-- type lvl1 -->
 		<mapping namedgraph="graph">
 			<domain>
@@ -4843,7 +4842,6 @@
 			</domain>
 		</mapping>
 
-
 		<!-- type lvl3 -->
 		<mapping namedgraph="graph">
 			<domain>
@@ -4893,7 +4891,6 @@
 				</target_node>
 			</domain>
 		</mapping>
-
 
 		<!-- type lvl4 -->
 		<mapping namedgraph="graph">
@@ -5431,7 +5428,6 @@
 			</domain>
 		</mapping>
 
-
 		<!-- material lvl2 -->
 		<mapping namedgraph="graph">
 			<domain>
@@ -5482,7 +5478,6 @@
 			</domain>
 		</mapping>
 
-
 		<!-- material lvl3-->
 		<mapping namedgraph="graph">
 			<domain>
@@ -5532,7 +5527,6 @@
 				</target_node>
 			</domain>
 		</mapping>
-
 
 		<!-- material lvl4 -->
 		<mapping namedgraph="graph">
@@ -5684,7 +5678,6 @@
 			</domain>
 		</mapping>
 
-
 		<!-- type lvl3 -->
 		<mapping namedgraph="graph">
 			<domain>
@@ -5734,7 +5727,6 @@
 				</target_node>
 			</domain>
 		</mapping>
-
 
 		<!-- type lvl4 -->
 		<mapping namedgraph="graph">
@@ -5786,11 +5778,10 @@
 			</domain>
 		</mapping>
 
-
 		<!-- actor lvl1 -->
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>/root/obj/a8450/a8498</source_node>
+				<source_node>/root/obj/a8450/a8450/a8498</source_node>
 				<target_node>
                     <entity>
                         <type>crm:E39_Actor</type>
@@ -5840,7 +5831,7 @@
 		<!-- actor lvl2 -->
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>/root/obj/obj/a8450/a8498</source_node>
+				<source_node>/root/obj/obj/a8450/a8450/a8498</source_node>
 				<target_node>
                     <entity>
                         <type>crm:E39_Actor</type>
@@ -5890,7 +5881,7 @@
 		<!-- actor lvl3 -->
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>/root/obj/obj/obj/a8450/a8498</source_node>
+				<source_node>/root/obj/obj/obj/a8450/a8450/a8498</source_node>
 				<target_node>
                     <entity>
                         <type>crm:E39_Actor</type>
@@ -5940,7 +5931,7 @@
 		<!-- actor lvl4 -->
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>/root/obj/obj/obj/obj/a8450/a8498</source_node>
+				<source_node>/root/obj/obj/obj/obj/a8450/a8450/a8498</source_node>
 				<target_node>
                     <entity>
                         <type>crm:E39_Actor</type>
@@ -5990,7 +5981,7 @@
 		<!-- type lvl1 -->
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>/root/obj/a8450/a8497</source_node>
+				<source_node>/root/obj/a8450/a8450/a8497</source_node>
 				<target_node>
                     <entity>
 						<type>crm:E55_Type</type>
@@ -6040,7 +6031,7 @@
 		<!-- type lvl2 -->
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>/root/obj/obj/a8450/a8497</source_node>
+				<source_node>/root/obj/obj/a8450/a8450/a8497</source_node>
 				<target_node>
                     <entity>
 						<type>crm:E55_Type</type>
@@ -6086,12 +6077,11 @@
 				</target_node>
 			</domain>
 		</mapping>
-
 
 		<!-- type lvl3 -->
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>/root/obj/obj/obj/a8450/a8497</source_node>
+				<source_node>/root/obj/obj/obj/a8450/a8450/a8497</source_node>
 				<target_node>
                     <entity>
 						<type>crm:E55_Type</type>
@@ -6138,11 +6128,10 @@
 			</domain>
 		</mapping>
 
-
 		<!-- type lvl4 -->
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>/root/obj/obj/obj/obj/a8450/a8497</source_node>
+				<source_node>/root/obj/obj/obj/obj/a8450/a8450/a8497</source_node>
 				<target_node>
                     <entity>
 						<type>crm:E55_Type</type>
