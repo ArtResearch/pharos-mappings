@@ -1400,3 +1400,8 @@
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Presentation API manifest" .
 }
+
+<http://vocab.getty.edu/aat/300041424/graph>{
+        <http://vocab.getty.edu/aat/300041424> a <http://www.cidoc-crm.org/cidoc-crm/E55_Type>;
+                <http://www.w3.org/2000/01/rdf-schema#label> "photomechanical prints".
+}
