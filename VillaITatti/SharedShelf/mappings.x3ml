@@ -2773,7 +2773,14 @@
 					</source_relation>
 					<target_relation>
 						<if>
-							<equals value="2">../DisplayRecord/field_string[@label="Image Accession Number"]/substring(@value,string-length(@value),string-length(@value))</equals>
+							<or>
+								<if>
+									<equals value="2">../DisplayRecord/field_string[@label="Image Accession Number"]/substring(@value,string-length(@value),string-length(@value))</equals>
+								</if>
+								<if>
+									<equals value="3">../DisplayRecord/field_string[@label="Image Accession Number"]/substring(@value,string-length(@value),string-length(@value))</equals>
+								</if>
+							</or>
 						</if>
 						<relationship>custom:verso_has_sequence</relationship>
 					</target_relation>
@@ -3116,7 +3123,14 @@
 					</source_relation>
 					<target_relation>
 						<if>
-							<equals value="2">../field_string[@label="Image Accession Number"]/substring(@value,string-length(@value),string-length(@value))</equals>
+							<or>
+								<if>
+									<equals value="2">../DisplayRecord/field_string[@label="Image Accession Number"]/substring(@value,string-length(@value),string-length(@value))</equals>
+								</if>
+								<if>
+									<equals value="3">../DisplayRecord/field_string[@label="Image Accession Number"]/substring(@value,string-length(@value),string-length(@value))</equals>
+								</if>
+							</or>
 						</if>
 						<relationship>crm:P56_bears_feature</relationship>
 					</target_relation>
@@ -3739,7 +3753,14 @@
 						<if>
 							<and>
 								<if>
-									<equals value="2">../../../DisplayRecord/field_string[@label="Image Accession Number"]/substring(@value,string-length(@value),string-length(@value))</equals>
+									<or>
+										<if>
+											<equals value="2">../../../DisplayRecord/field_string[@label="Image Accession Number"]/substring(@value,string-length(@value),string-length(@value))</equals>
+										</if>
+										<if>
+											<equals value="3">../../../DisplayRecord/field_string[@label="Image Accession Number"]/substring(@value,string-length(@value),string-length(@value))</equals>
+										</if>
+									</or>
 								</if>
 								<if>
 									<equals value="DRS_full">../@size</equals>
