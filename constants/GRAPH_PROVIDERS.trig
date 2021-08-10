@@ -88,3 +88,8 @@
   <https://pharos.artresearch.net/resource/geonames/enrichment/graph> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/geonames/source/Geonames>.
     <https://pharos.artresearch.net/resource/geonames/source/Geonames> <http://www.w3.org/2000/01/rdf-schema#label> "Geonames".
 }
+
+<https://pharos.artresearch.net/resource/wikidata/enrichment/graph> {
+  <https://pharos.artresearch.net/resource/wikidata/enrichment/graph> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/wikidata/source/Wikidata>.
+    <https://pharos.artresearch.net/resource/wikidata/source/Wikidata> <http://www.w3.org/2000/01/rdf-schema#label> "Wikidata".
+}
