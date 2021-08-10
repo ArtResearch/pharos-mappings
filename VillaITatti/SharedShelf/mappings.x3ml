@@ -2697,6 +2697,31 @@
 			<link> 
 				<path>
 					<source_relation>
+						<relation>../field_lookup[@label="Image Type"]/linkedField/@preferredTerm</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="photomechanical print">.</equals>
+						</if>
+						<relationship>custom:has_type</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../field_lookup[@label="Image Type"]/linkedField/@preferredTerm</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="constant">http://vocab.getty.edu/aat/300041424</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link> 
+				<path>
+					<source_relation>
 						<relation>../../../display:DR[@primary="true"]</relation>
 					</source_relation>
 					<target_relation>
