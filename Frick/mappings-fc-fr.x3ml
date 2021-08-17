@@ -50,11 +50,22 @@
 					</source_relation>
 					<target_relation>
 						<if>
-							<not>
+							<and>
 								<if>
-									<equals value="contributor">../marc:subfield[@code="e"]/text()</equals>
+									<not>
+										<if>
+											<equals value="Anonymous">text()</equals>
+										</if>
+									</not>
 								</if>
-							</not>
+								<if>
+									<not>
+										<if>
+											<equals value="contributor">../marc:subfield[@code="e"]/text()</equals>
+										</if>
+									</not>
+								</if>
+							</and>
 						</if>
 						<relationship>fr:Work_created_from_Artist</relationship>
 					</target_relation>
@@ -67,6 +78,53 @@
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">string-join(( text() , ../marc:subfield[@code="c"]/text() ), " " )</arg>
+							</instance_generator>
+							<additional>
+								<relationship>fr:Artist_created_Work</relationship>
+								<entity>
+									<type>fc:work</type>
+									<instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">work</arg>
+										<arg name="id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>marc:datafield[@tag="100"]/marc:subfield[@code="a"]</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<and>
+								<if>
+									<equals value="Anonymous">text()</equals>
+								</if>
+								<if>
+									<not>
+										<if>
+											<equals value="contributor">../marc:subfield[@code="e"]/text()</equals>
+										</if>
+									</not>
+								</if>
+							</and>
+						</if>
+						<relationship>fr:Work_created_from_Artist</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>marc:datafield[@tag="100"]/marc:subfield[@code="a"]</source_node>
+					<target_node>
+						<entity>
+							<type>fc:artist</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">string-join(( text() , ../marc:subfield[@code="b"]/text() , ../marc:subfield[@code="c"]/text(), ../marc:subfield[@code="d"]/text() ), " " )</arg>
 							</instance_generator>
 							<additional>
 								<relationship>fr:Artist_created_Work</relationship>
@@ -613,11 +671,81 @@
 			<domain>
 				<source_node>//marc:datafield[@tag="100"]</source_node>
 				<target_node>
+					<if>
+						<not>
+							<if>
+								<equals value="Anonymous">marc:subfield[@code="a"]/text()</equals>
+							</if>
+						</not>
+					</if>
                     <entity>
 						<type>fc:artist</type>
 						<instance_generator name="URIwithType">
 							<arg name="type" type="constant">actor</arg>
 							<arg name="id" type="xpath">string-join(( marc:subfield[@code="a"]/text() , marc:subfield[@code="c"]/text() ), " " )</arg>
+						</instance_generator>
+					</entity>
+				</target_node>
+			</domain>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>marc:subfield[@code="d"]/@birth</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>fr:Artist_has_Date_of_Birth</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>marc:subfield[@code="d"]/@birth</source_node>
+					<target_node>
+						<entity>
+							<type>xsd:date</type>
+							<instance_generator name="Literal">
+								<arg name="text" type="xpath">../@birth</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>marc:subfield[@code="d"]/@death</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>fr:Artist_has_Date_of_Death</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>marc:subfield[@code="d"]/@death</source_node>
+					<target_node>
+						<entity>
+							<type>xsd:date</type>
+							<instance_generator name="Literal">
+								<arg name="text" type="xpath">../@death</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+		</mapping>
+
+		<mapping>
+			<domain>
+				<source_node>//marc:datafield[@tag="100"]</source_node>
+				<target_node>
+					<if>
+						<equals value="Anonymous">marc:subfield[@code="a"]/text()</equals>
+					</if>
+                    <entity>
+						<type>fc:artist</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">actor</arg>
+							<arg name="id" type="xpath">string-join(( marc:subfield[@code="a"]/text() , marc:subfield[@code="b"]/text() , marc:subfield[@code="c"]/text(), marc:subfield[@code="d"]/text() ), " " )</arg>
 						</instance_generator>
 					</entity>
 				</target_node>

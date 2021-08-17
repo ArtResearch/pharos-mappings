@@ -165,6 +165,13 @@
 						<relation>../marc:datafield[@tag="100"]/marc:subfield[@code="a"]/text()</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<not>
+								<if>
+									<equals value="Anonymous">.</equals>
+								</if>
+							</not>
+						</if>
 						<relationship>custom:consists_of</relationship>
 					</target_relation>
 				</path>
@@ -176,6 +183,33 @@
 							<instance_generator name="MultiHashingGenerator">
 								<arg name="hierarchy" type="constant">actor</arg>
 								<arg name="object_HASHED_CONTENTS" type="xpath">string-join(( . , ../../marc:subfield[@code="c"]/text() ), " " )</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>	
+					</target_node>
+				</range>
+			</link>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>../marc:datafield[@tag="100"]/marc:subfield[@code="a"]/text()</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="Anonymous">.</equals>
+						</if>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../marc:datafield[@tag="100"]/marc:subfield[@code="a"]/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGenerator">
+								<arg name="hierarchy" type="constant">actor</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">string-join(( . , ../../marc:subfield[@code="b"]/text() , ../../marc:subfield[@code="c"]/text(), ../../marc:subfield[@code="d"]/text() ), " " )</arg>
 								<arg name="term_simple" type="constant">graph</arg>
 							</instance_generator>
 						</entity>	
@@ -722,6 +756,13 @@
 								<if>
 									<not>
 										<if>
+											<equals value="Anonymous">marc:subfield[@code="a"]/text()</equals>
+										</if>
+									</not>
+								</if>
+								<if>
+									<not>
+										<if>
 											<equals value="contributor">marc:subfield[@code="e"]/text()</equals>
 										</if>
 									</not>
@@ -743,7 +784,7 @@
 							<instance_generator name="PropertyTypeUri">
 								<arg name="propertyType" type="constant">carried_out_by</arg>
 								<arg name="domain" type="xpath">../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
-								<arg name="range" type="xpath">marc:subfield[@code="a"]/text()</arg>
+								<arg name="range" type="xpath">string-join(( marc:subfield[@code="a"]/text() , marc:subfield[@code="c"]/text() ), " " )</arg>
 							</instance_generator>
 						</entity>
 						<relationship>crm:P02_has_range</relationship>
@@ -757,6 +798,64 @@
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">string-join(( marc:subfield[@code="a"]/text() , marc:subfield[@code="c"]/text() ), " " )</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>marc:datafield[@tag="100"]</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<and>
+								<if>
+									<exists>marc:subfield[@code="a"]</exists>
+								</if>
+								<if>
+									<equals value="Anonymous">marc:subfield[@code="a"]/text()</equals>
+								</if>
+								<if>
+									<not>
+										<if>
+											<equals value="contributor">marc:subfield[@code="e"]/text()</equals>
+										</if>
+									</not>
+								</if>
+							</and>
+						</if>
+						<relationship>crm:P108i_was_produced_by</relationship>
+						<entity>
+							<type>crm:E12_Production</type>
+							<instance_generator name="EventUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P01i_is_domain_of</relationship>
+						<entity>
+							<type>crm:PC14_carried_out_by</type>
+							<instance_generator name="PropertyTypeUri">
+								<arg name="propertyType" type="constant">carried_out_by</arg>
+								<arg name="domain" type="xpath">../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
+								<arg name="range" type="xpath">string-join(( marc:subfield[@code="a"]/text() , marc:subfield[@code="b"]/text() , marc:subfield[@code="c"]/text(), marc:subfield[@code="d"]/text() ), " " )</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P02_has_range</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>marc:datafield[@tag="100"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">string-join(( marc:subfield[@code="a"]/text() , marc:subfield[@code="b"]/text() , marc:subfield[@code="c"]/text(), marc:subfield[@code="d"]/text() ), " " )</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -3133,6 +3232,13 @@
 			<domain>
 				<source_node>//marc:datafield[@tag="100"]</source_node>
 				<target_node>
+					<if>
+						<not>
+							<if>
+								<equals value="Anonymous">marc:subfield[@code="a"]/text()</equals>
+							</if>
+						</not>
+					</if>
                     <entity>
 						<type>crm:E21_Person</type>
 						<instance_generator name="URIwithType">
@@ -3339,7 +3445,221 @@
 			
 		
 		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>//marc:datafield[@tag="100"]</source_node>
+				<target_node>
+					<if>
+						<equals value="Anonymous">marc:subfield[@code="a"]/text()</equals>
+					</if>
+                    <entity>
+						<type>crm:E21_Person</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">actor</arg>
+							<arg name="id" type="xpath">string-join(( marc:subfield[@code="a"]/text() , marc:subfield[@code="b"]/text() , marc:subfield[@code="c"]/text(), marc:subfield[@code="d"]/text() ), " " )</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">string-join(( marc:subfield[@code="a"]/text() , marc:subfield[@code="b"]/text() , marc:subfield[@code="c"]/text(), marc:subfield[@code="d"]/text() ), ", " )</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">Frick</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">actor</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">string-join(( marc:subfield[@code="a"]/text() , marc:subfield[@code="b"]/text() , marc:subfield[@code="c"]/text(), marc:subfield[@code="d"]/text() ), " " )</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+										<entity>
+											<type>custom:noType</type>
+											<instance_generator name="URIwithTypeAndId">
+												<arg name="type" type="constant">source</arg>
+												<arg name="id" type="constant">Frick</arg>
+											</instance_generator>
+										</entity>
+								</additional>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>marc:subfield[@code="a"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P1_is_identified_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>marc:subfield[@code="a"]</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E41_Appellation</type>
+							<instance_generator name="IdentifierURI">	
+								<arg name="subject_type" type="constant">actor</arg>
+								<arg name="subject_id" type="xpath">string-join(( text() , ../marc:subfield[@code="b"]/text() , ../marc:subfield[@code="c"]/text(), ../marc:subfield[@code="d"]/text() ), " " )</arg>
+								<arg name="identifier_type" type="constant">appellation</arg>
+								<arg name="identifier_id" type="xpath">string-join(( text() , ../marc:subfield[@code="b"]/text() , ../marc:subfield[@code="c"]/text(), ../marc:subfield[@code="d"]/text() ), " " )</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">string-join(( text() , ../marc:subfield[@code="b"]/text() , ../marc:subfield[@code="c"]/text(), ../marc:subfield[@code="d"]/text() ), ", " )</arg>
+							</label_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">http://vocab.getty.edu/aat/300417193</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
 		
+			<link> 
+				<path>
+					<source_relation>
+						<relation>marc:subfield[@code="d"]/@birth</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P98i_was_born_by</relationship>
+						<entity>
+							<type>crm:E67_Birth</type>
+							<instance_generator name="EventUri">
+								<arg name="resourceType" type="constant">actor</arg>
+								<arg name="resourceId" type="xpath">string-join(( ../../marc:subfield[@code="a"]/text() , ../../marc:subfield[@code="b"]/text() , ../../marc:subfield[@code="c"]/text(), ../../marc:subfield[@code="d"]/text() ), " " )</arg>
+								<arg name="eventType" type="constant">birth</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P4_has_time-span</relationship>
+						<entity>
+							<type>crm:E52_Time-Span</type>
+							<instance_generator name="TimespanUri">
+								<arg name="resourceType" type="constant">actor</arg>
+								<arg name="resourceId" type="xpath">string-join(( ../../marc:subfield[@code="a"]/text() , ../../marc:subfield[@code="b"]/text() , ../../marc:subfield[@code="c"]/text(), ../../marc:subfield[@code="d"]/text() ), " " )</arg>
+								<arg name="eventType" type="constant">birth</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P82_at_some_time_within</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>marc:subfield[@code="d"]/@birth</source_node>
+					<target_node>
+						<entity>
+							<type>rdfs:Literal</type>
+							<instance_generator name="Literal">
+								<arg name="text" type="xpath">../@birth</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+						
+			<link> 
+				<path>
+					<source_relation>
+						<relation>marc:subfield[@code="d"]/@death</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P100i_died_in</relationship>
+						<entity>
+							<type>crm:E69_Death</type>
+							<instance_generator name="EventUri">
+								<arg name="resourceType" type="constant">actor</arg>
+								<arg name="resourceId" type="xpath">string-join(( ../../marc:subfield[@code="a"]/text() , ../../marc:subfield[@code="b"]/text() , ../../marc:subfield[@code="c"]/text(), ../../marc:subfield[@code="d"]/text() ), " " )</arg>
+								<arg name="eventType" type="constant">death</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P4_has_time-span</relationship>
+						<entity>
+							<type>crm:E52_Time-Span</type>
+							<instance_generator name="TimespanUri">
+								<arg name="resourceType" type="constant">actor</arg>
+								<arg name="resourceId" type="xpath">string-join(( ../../marc:subfield[@code="a"]/text() , ../../marc:subfield[@code="b"]/text() , ../../marc:subfield[@code="c"]/text(), ../../marc:subfield[@code="d"]/text() ), " " )</arg>
+								<arg name="eventType" type="constant">death</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P82_at_some_time_within</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>marc:subfield[@code="d"]/@death</source_node>
+					<target_node>
+						<entity>
+							<type>rdfs:Literal</type>
+							<instance_generator name="Literal">
+								<arg name="text" type="xpath">../@death</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+		
+			<link> 
+				<path>
+					<source_relation>
+						<relation>marc:subfield[@code="d"]</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="true">@active</equals>
+						</if>
+						<relationship>crm:P14i_Performed</relationship>
+						<entity>
+							<type>crm:F51_Pursuit</type>
+							<instance_generator name="EventUri">
+								<arg name="resourceType" type="constant">actor</arg>
+								<arg name="resourceId" type="xpath">string-join(( ../marc:subfield[@code="a"]/text() , ../marc:subfield[@code="b"]/text() , ../marc:subfield[@code="c"]/text(), text() ), " " )</arg>
+								<arg name="eventType" type="constant">floruit</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P4_has_time-span</relationship>
+						<entity>
+							<type>crm:E52_Time-Span</type>
+							<instance_generator name="TimespanUri">
+								<arg name="resourceType" type="constant">actor</arg>
+								<arg name="resourceId" type="xpath">string-join(( ../marc:subfield[@code="a"]/text() , ../marc:subfield[@code="b"]/text() , ../marc:subfield[@code="c"]/text(), text() ), " " )</arg>
+								<arg name="eventType" type="constant">floruit</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P82_at_some_time_within</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>marc:subfield[@code="d"]</source_node>
+					<target_node>
+						<entity>
+							<type>rdfs:Literal</type>
+							<instance_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+		
+		</mapping>
+
 		<mapping namedgraph="graph">
 			<domain>
 				<source_node>//marc:datafield[@tag="700"]</source_node>
