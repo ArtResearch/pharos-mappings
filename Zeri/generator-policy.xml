@@ -21,6 +21,10 @@
 	<pattern>{id}{postfix}</pattern>
 </generator>
 
+<generator name="IIIF_Generator_Thumbnail" prefix="iiif_image">
+	<pattern>{id}{postfix}/!350,350/0/default.jpg</pattern>
+</generator>
+
 <generator name="JSON_Generator" prefix="iiif_image">
 	<pattern>{id}{postfix}</pattern>
 </generator>

@@ -178,6 +178,10 @@
 	<pattern>{id}/{postfix}</pattern>
 </generator>
 
+<generator name="IIIF_Image_Generator_Thumbnail" prefix="iiif_image">
+	<pattern>{id}/{postfix}/!350,350/0/native.jpg</pattern>
+</generator>
+
 <generator name="IIIF_Json_Generator" prefix="iiif_json">
 	<pattern>{id}/info.json</pattern>
 </generator>
