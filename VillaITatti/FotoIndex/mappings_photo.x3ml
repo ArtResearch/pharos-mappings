@@ -273,6 +273,15 @@
 										</instance_generator>
 									</entity>
 								</additional>
+								<additional>
+									<relationship>crmdig:L58_has_thumbnail</relationship>
+									<entity>
+										<type>crmdig:D39_Thumbnail</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="xpath">../Recto_Image_URI_Thumbnail</arg>
+										</instance_generator>
+									</entity>
+								</additional>
 						</entity>
 						<relationship>crm:P129i_is_subject_of</relationship>
 					</target_relation>
@@ -322,14 +331,23 @@
 									</entity>
 								</additional>
 								<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>custom:noType</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300010292</arg>
-									</instance_generator>
-								</entity>
-							</additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>custom:noType</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">http://vocab.getty.edu/aat/300010292</arg>
+										</instance_generator>
+									</entity>
+								</additional>
+								<additional>
+									<relationship>crmdig:L58_has_thumbnail</relationship>
+									<entity>
+										<type>crmdig:D39_Thumbnail</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="xpath">../Verso_Image_URI_Thumbnail</arg>
+										</instance_generator>
+									</entity>
+								</additional>
 						</entity>
 						<relationship>crm:P129i_is_subject_of</relationship>
 					</target_relation>

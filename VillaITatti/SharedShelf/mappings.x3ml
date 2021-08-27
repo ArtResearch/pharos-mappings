@@ -3556,113 +3556,6 @@
 				</range>
 			</link>
 
-			<!--
-			<link>
-				<path>
-					<source_relation>
-						<relation>../../Assets/Asset/@id</relation>
-					</source_relation>
-					<target_relation>
-						<if>
-							<equals value="1">../../../DisplayRecord/field_string[@label="Image Accession Number"]/substring(@value,string-length(@value),string-length(@value))</equals>
-						</if>
-						<relationship>crm:P129i_is_subject_of</relationship>
-						<entity>
-							<type>crmdig:D1_Digital_Object</type>
-								<instance_generator name="IIIF_Image_Generator">
-                                    <arg name="id" type="xpath">.</arg>
-									<arg name="postfix" type="constant">full/200,/0/native.jpg</arg>
-							   </instance_generator>
-							   <additional>
-									<relationship>crm:P2_has_type</relationship>
-									<entity>
-										<type>crm:E55_Type</type>
-										<instance_generator name="URIorUUID">
-											<arg name="text" type="constant">http://iiif.io/api/image</arg>
-										</instance_generator>
-									</entity>
-								</additional>
-								<additional>
-									<relationship>crm:P2_has_type</relationship>
-									<entity>
-										<type>crm:E55_Type</type>
-										<instance_generator name="URIwithType">
-											<arg name="type" type="constant">type</arg>
-											<arg name="id" type="constant">recto</arg>
-										</instance_generator>
-									</entity>
-								</additional>
-						</entity>
-						<relationship>crm:P129i_is_subject_of</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>../../Assets/Asset/@id</source_node>
-					<target_node>
-						<entity>
-							<type>crm:E73_Information_Object</type>
-								<instance_generator name="IIIF_Json_Generator">
-                                    <arg name="id" type="xpath">.</arg>
-								</instance_generator>
-						</entity>
-					</target_node>
-				</range>
-			</link>	 
-			
-			
-			<link>
-				<path>
-					<source_relation>
-						<relation>../../Assets/Asset/@id</relation>
-					</source_relation>
-					<target_relation>
-						<if>
-							<equals value="2">../../../DisplayRecord/field_string[@label="Image Accession Number"]/substring(@value,string-length(@value),string-length(@value))</equals>
-						</if>
-						<relationship>crm:P129i_is_subject_of</relationship>
-						<entity>
-							<type>crmdig:D1_Digital_Object</type>
-								<instance_generator name="IIIF_Image_Generator">
-                                    <arg name="id" type="xpath">.</arg>
-									<arg name="postfix" type="constant">full/200,/0/native.jpg</arg>
-							   </instance_generator>
-							   <additional>
-									<relationship>crm:P2_has_type</relationship>
-									<entity>
-										<type>crm:E55_Type</type>
-										<instance_generator name="URIorUUID">
-											<arg name="text" type="constant">http://iiif.io/api/image</arg>
-										</instance_generator>
-									</entity>
-								</additional>
-								<additional>
-									<relationship>crm:P2_has_type</relationship>
-									<entity>
-										<type>crm:E55_Type</type>
-										<instance_generator name="URIwithType">
-											<arg name="type" type="constant">type</arg>
-											<arg name="id" type="constant">verso</arg>
-										</instance_generator>
-									</entity>
-								</additional>
-						</entity>
-						<relationship>crm:P129i_is_subject_of</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>../../Assets/Asset/@id</source_node>
-					<target_node>
-						<entity>
-							<type>crm:E73_Information_Object</type>
-								<instance_generator name="IIIF_Json_Generator">
-                                    <arg name="id" type="xpath">.</arg>
-								</instance_generator>
-						</entity>
-					</target_node>
-				</range>
-			</link>	 
-			-->
-		
 			<link>
 				<path>
 					<source_relation>
@@ -3723,7 +3616,7 @@
 									<type>crmdig:D39_Thumbnail</type>
 									<instance_generator name="IIIF_Image_Generator">
 										<arg name="id" type="xpath">../../Asset[@size="DRS_thumb"]/@id</arg>
-										<arg name="postfix" type="constant">full/200,/0/native.jpg</arg>
+										<arg name="postfix" type="constant">full/!350,350/0/native.jpg</arg>
 									</instance_generator>
 								</entity>
 							</additional>
@@ -3811,7 +3704,7 @@
 									<type>crmdig:D39_Thumbnail</type>
 									<instance_generator name="IIIF_Image_Generator">
 										<arg name="id" type="xpath">../../Asset[@size="DRS_thumb"]/@id</arg>
-										<arg name="postfix" type="constant">full/200,/0/native.jpg</arg>
+										<arg name="postfix" type="constant">full/!350,350/0/native.jpg</arg>
 									</instance_generator>
 								</entity>
 							</additional>
@@ -4720,7 +4613,7 @@
 									<type>crmdig:D39_Thumbnail</type>
 									<instance_generator name="IIIF_Image_Generator">
 										<arg name="id" type="xpath">../../Asset[@size="DRS_thumb"]/@id</arg>
-										<arg name="postfix" type="constant">full/200,/0/native.jpg</arg>
+										<arg name="postfix" type="constant">full/!350,350/0/native.jpg</arg>
 									</instance_generator>
 								</entity>
 							</additional>
