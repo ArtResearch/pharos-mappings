@@ -538,8 +538,6 @@
 					</target_node>
 				</range>
 			</link>
-
-
 		</mapping>
 	
 		<mapping namedgraph="graph">
@@ -668,6 +666,16 @@
 										<instance_generator name="JSON_Generator">
 											<arg name="id" type="xpath">ALLEGATI/FOTO/@fotoID</arg>
 											<arg name="postfix" type="constant">_g.jpg/info.json</arg>
+										</instance_generator>
+									</entity>
+								</additional>
+								<additional>
+									<relationship>crmdig:L58_has_thumbnail</relationship>
+									<entity>
+										<type>crmdig:D39_Thumbnail</type>
+										<instance_generator name="IIIF_Generator_Thumbnail">
+											<arg name="id" type="xpath">ALLEGATI/FOTO/@fotoID</arg>
+											<arg name="postfix" type="constant">_g.jpg/full</arg>
 										</instance_generator>
 									</entity>
 								</additional>

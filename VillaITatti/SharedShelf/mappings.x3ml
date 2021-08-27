@@ -3614,9 +3614,9 @@
 								<relationship>crmdig:L58_has_thumbnail</relationship>
 								<entity>
 									<type>crmdig:D39_Thumbnail</type>
-									<instance_generator name="IIIF_Image_Generator">
+									<instance_generator name="IIIF_Image_Generator_Thumbnail">
 										<arg name="id" type="xpath">../../Asset[@size="DRS_thumb"]/@id</arg>
-										<arg name="postfix" type="constant">full/!350,350/0/native.jpg</arg>
+										<arg name="postfix" type="constant">full</arg>
 									</instance_generator>
 								</entity>
 							</additional>
@@ -3702,9 +3702,9 @@
 								<relationship>crmdig:L58_has_thumbnail</relationship>
 								<entity>
 									<type>crmdig:D39_Thumbnail</type>
-									<instance_generator name="IIIF_Image_Generator">
+									<instance_generator name="IIIF_Image_Generator_Thumbnail">
 										<arg name="id" type="xpath">../../Asset[@size="DRS_thumb"]/@id</arg>
-										<arg name="postfix" type="constant">full/!350,350/0/native.jpg</arg>
+										<arg name="postfix" type="constant">full</arg>
 									</instance_generator>
 								</entity>
 							</additional>
@@ -4611,9 +4611,9 @@
 								<relationship>crmdig:L58_has_thumbnail</relationship>
 								<entity>
 									<type>crmdig:D39_Thumbnail</type>
-									<instance_generator name="IIIF_Image_Generator">
+									<instance_generator name="IIIF_Image_Generator_Thumbnail">
 										<arg name="id" type="xpath">../../Asset[@size="DRS_thumb"]/@id</arg>
-										<arg name="postfix" type="constant">full/!350,350/0/native.jpg</arg>
+										<arg name="postfix" type="constant">full</arg>
 									</instance_generator>
 								</entity>
 							</additional>
