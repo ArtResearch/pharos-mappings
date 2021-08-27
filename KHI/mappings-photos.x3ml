@@ -994,6 +994,16 @@
 										</instance_generator>
 									</entity>
 								</additional>
+								<additional>
+									<relationship>crmdig:L58_has_thumbnail</relationship>
+									<entity>
+										<type>crmdig:D39_Thumbnail</type>
+										<instance_generator name="IIIF_Generator_Thumbnail">
+											<arg name="id" type="xpath">a8540/text()</arg>
+											<arg name="postfix" type="constant">.tif/full</arg>
+										</instance_generator>
+									</entity>
+								</additional>
 							</entity>
 						</additional>
 						<additional>
@@ -1819,6 +1829,16 @@
 										<instance_generator name="JSON_Generator">
 											<arg name="id" type="xpath">a8540/text()</arg>
 											<arg name="postfix" type="constant">.tif/info.json</arg>
+										</instance_generator>
+									</entity>
+								</additional>
+								<additional>
+									<relationship>crmdig:L58_has_thumbnail</relationship>
+									<entity>
+										<type>crmdig:D39_Thumbnail</type>
+										<instance_generator name="IIIF_Generator_Thumbnail">
+											<arg name="id" type="xpath">a8540/text()</arg>
+											<arg name="postfix" type="constant">.tif/full</arg>
 										</instance_generator>
 									</entity>
 								</additional>
@@ -2662,6 +2682,16 @@
 								</instance_generator>
 							</entity>
 						</additional>
+						<additional>
+							<relationship>crmdig:L58_has_thumbnail</relationship>
+							<entity>
+								<type>crmdig:D39_Thumbnail</type>
+								<instance_generator name="IIIF_Generator_Thumbnail">
+									<arg name="id" type="xpath">a8540/text()</arg>
+									<arg name="postfix" type="constant">.tif/full</arg>
+								</instance_generator>
+							</entity>
+						</additional>
 					 </entity>
 				</target_node>
 			</domain>
@@ -3475,6 +3505,16 @@
 										<instance_generator name="JSON_Generator">
 											<arg name="id" type="xpath">a8540/text()</arg>
 											<arg name="postfix" type="constant">.tif/info.json</arg>
+										</instance_generator>
+									</entity>
+								</additional>
+								<additional>
+									<relationship>crmdig:L58_has_thumbnail</relationship>
+									<entity>
+										<type>crmdig:D39_Thumbnail</type>
+										<instance_generator name="IIIF_Generator_Thumbnail">
+											<arg name="id" type="xpath">a8540/text()</arg>
+											<arg name="postfix" type="constant">.tif/full</arg>
 										</instance_generator>
 									</entity>
 								</additional>

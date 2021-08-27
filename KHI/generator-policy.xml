@@ -4,24 +4,27 @@
 <generator name="IIIF_Generator" prefix="iiif_image">
 	<pattern>{id}{postfix}</pattern>
 </generator>
+<generator name="IIIF_Generator_Thumbnail" prefix="iiif_image">
+	<pattern>{id}{postfix}/!350,350/0/default.jpg</pattern>
+</generator>
 
 <generator name="JSON_Generator" prefix="iiif_image">
 	<pattern>{id}{postfix}</pattern>
 </generator>
 
 <generator name="MultiHashingGenerator" prefix="prefix">
-        <custom generatorClass="gr.forth.MultiHashingGenerator">
-            <set-arg name="hierarchy"/>
-			<set-arg name="object_HASHED_CONTENTS"/>
-			<set-arg name="term_simple"/>
-        </custom>
+	<custom generatorClass="gr.forth.MultiHashingGenerator">
+		<set-arg name="hierarchy" />
+		<set-arg name="object_HASHED_CONTENTS" />
+		<set-arg name="term_simple" />
+	</custom>
 </generator>
 
 <generator name="MultiHashingGeneratorVocab" prefix="vocab">
 	<custom generatorClass="gr.forth.MultiHashingGenerator">
-		<set-arg name="hierarchy"/>
-		<set-arg name="object_HASHED_CONTENTS"/>
-		<set-arg name="term_simple"/>
+		<set-arg name="hierarchy" />
+		<set-arg name="object_HASHED_CONTENTS" />
+		<set-arg name="term_simple" />
 	</custom>
 </generator>
 
@@ -208,21 +211,20 @@
 
 <generator name="TypedLiteralGen">
 	<custom generatorClass="gr.forth.TypedLiteralGenerator">
-		<set-arg name="text"/>
+		<set-arg name="text" />
 	</custom>
 </generator>
 
 
-
 <generator name="LocalTermURI" prefix="pref">
-    <pattern>{hierarchy}/{term}</pattern>
- </generator> 
- 
-<generator name="URI">
- <pattern>{text}</pattern>
+	<pattern>{hierarchy}/{term}</pattern>
 </generator>
- 
- 
+
+<generator name="URI">
+	<pattern>{text}</pattern>
+</generator>
+
+
 <generator name="URIorUUID">
 	<custom generatorClass="gr.forth.URIorUUID">
 		<set-arg name="text"></set-arg>
