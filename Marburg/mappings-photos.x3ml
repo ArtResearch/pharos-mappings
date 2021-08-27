@@ -32,7 +32,7 @@
 				</target_node>
 			</domain>
 			
-			<link> 
+			 <link> 
 				<path>
 					<source_relation>
 						<relation>a8450/a8540/text()</relation>
@@ -61,7 +61,7 @@
 					</target_node>
 				</range>
 			</link>
-				
+
 			<link> 
 				<path>
 					<source_relation>
@@ -1271,6 +1271,16 @@
 										</instance_generator>
 									</entity>
 								</additional>
+								<additional>
+									<relationship>crmdig:L58_has_thumbnail</relationship>
+									<entity>
+										<type>crmdig:D39_Thumbnail</type>
+										<instance_generator name="IIIF_Generator_Thumbnail">
+											<arg name="id" type="xpath">a8540/text()</arg>
+											<arg name="postfix" type="constant">.jpg/full</arg>
+										</instance_generator>
+									</entity>
+								</additional>
 							</entity>
 						</additional>
 					 </entity>
@@ -2076,6 +2086,16 @@
 										</instance_generator>
 									</entity>
 								</additional>
+								<additional>
+									<relationship>crmdig:L58_has_thumbnail</relationship>
+									<entity>
+										<type>crmdig:D39_Thumbnail</type>
+										<instance_generator name="IIIF_Generator_Thumbnail">
+											<arg name="id" type="xpath">a8540/text()</arg>
+											<arg name="postfix" type="constant">.jpg/full</arg>
+										</instance_generator>
+									</entity>
+								</additional>
 							</entity>
 						</additional>
 					 </entity>
@@ -2870,6 +2890,16 @@
 										<instance_generator name="JSON_Generator">
 											<arg name="id" type="xpath">a8540/text()</arg>
 											<arg name="postfix" type="constant">.jpg/info.json</arg>
+										</instance_generator>
+									</entity>
+								</additional>
+								<additional>
+									<relationship>crmdig:L58_has_thumbnail</relationship>
+									<entity>
+										<type>crmdig:D39_Thumbnail</type>
+										<instance_generator name="IIIF_Generator_Thumbnail">
+											<arg name="id" type="xpath">a8540/text()</arg>
+											<arg name="postfix" type="constant">.jpg/full</arg>
 										</instance_generator>
 									</entity>
 								</additional>
@@ -3705,6 +3735,16 @@
 										</instance_generator>
 									</entity>
 								</additional>
+								<additional>
+									<relationship>crmdig:L58_has_thumbnail</relationship>
+									<entity>
+										<type>crmdig:D39_Thumbnail</type>
+										<instance_generator name="IIIF_Generator_Thumbnail">
+											<arg name="id" type="xpath">a8540/text()</arg>
+											<arg name="postfix" type="constant">.jpg/full</arg>
+										</instance_generator>
+									</entity>
+								</additional>
 							</entity>
 						</additional>
 					 </entity>
@@ -4499,6 +4539,16 @@
 										<instance_generator name="JSON_Generator">
 											<arg name="id" type="xpath">a8540/text()</arg>
 											<arg name="postfix" type="constant">.jpg/info.json</arg>
+										</instance_generator>
+									</entity>
+								</additional>
+								<additional>
+									<relationship>crmdig:L58_has_thumbnail</relationship>
+									<entity>
+										<type>crmdig:D39_Thumbnail</type>
+										<instance_generator name="IIIF_Generator_Thumbnail">
+											<arg name="id" type="xpath">a8540/text()</arg>
+											<arg name="postfix" type="constant">.jpg/full</arg>
 										</instance_generator>
 									</entity>
 								</additional>
@@ -5331,6 +5381,16 @@
 										<instance_generator name="JSON_Generator">
 											<arg name="id" type="xpath">a8555/text()</arg>
 											<arg name="postfix" type="constant">.jpg/info.json</arg>
+										</instance_generator>
+									</entity>
+								</additional>
+								<additional>
+									<relationship>crmdig:L58_has_thumbnail</relationship>
+									<entity>
+										<type>crmdig:D39_Thumbnail</type>
+										<instance_generator name="IIIF_Generator_Thumbnail">
+											<arg name="id" type="xpath">a8540/text()</arg>
+											<arg name="postfix" type="constant">.jpg/full</arg>
 										</instance_generator>
 									</entity>
 								</additional>
@@ -6128,6 +6188,16 @@
 										<instance_generator name="JSON_Generator">
 											<arg name="id" type="xpath">a8540/text()</arg>
 											<arg name="postfix" type="constant">.jpg/info.json</arg>
+										</instance_generator>
+									</entity>
+								</additional>
+								<additional>
+									<relationship>crmdig:L58_has_thumbnail</relationship>
+									<entity>
+										<type>crmdig:D39_Thumbnail</type>
+										<instance_generator name="IIIF_Generator_Thumbnail">
+											<arg name="id" type="xpath">a8540/text()</arg>
+											<arg name="postfix" type="constant">.jpg/full</arg>
 										</instance_generator>
 									</entity>
 								</additional>
@@ -6961,6 +7031,16 @@
 										<instance_generator name="JSON_Generator">
 											<arg name="id" type="xpath">a8555/text()</arg>
 											<arg name="postfix" type="constant">.jpg/info.json</arg>
+										</instance_generator>
+									</entity>
+								</additional>
+								<additional>
+									<relationship>crmdig:L58_has_thumbnail</relationship>
+									<entity>
+										<type>crmdig:D39_Thumbnail</type>
+										<instance_generator name="IIIF_Generator_Thumbnail">
+											<arg name="id" type="xpath">a8540/text()</arg>
+											<arg name="postfix" type="constant">.jpg/full</arg>
 										</instance_generator>
 									</entity>
 								</additional>
