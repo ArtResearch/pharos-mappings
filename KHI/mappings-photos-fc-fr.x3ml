@@ -23,7 +23,18 @@
 				<source_node>/root/obj/a8450</source_node>
 				<target_node>
 					<if>
-						<exists>a8540/text()</exists>
+						<and>
+							<if>
+								<exists>a8540/text()</exists>
+							</if>
+							<if>
+								<not>
+									<if>
+										<equals value="gesperrt">a8541/text()</equals>
+									</if>
+								</not>
+							</if>
+						</and>
 					</if>
                     <entity>
 						<type>fc:photo</type>
@@ -160,7 +171,18 @@
 				<source_node>/root/obj/obj/a8450</source_node>
 				<target_node>
 					<if>
-						<exists>a8540/text()</exists>
+						<and>
+							<if>
+								<exists>a8540/text()</exists>
+							</if>
+							<if>
+								<not>
+									<if>
+										<equals value="gesperrt">a8541/text()</equals>
+									</if>
+								</not>
+							</if>
+						</and>
 					</if>
                     <entity>
 						<type>fc:photo</type>
@@ -297,7 +319,18 @@
 				<source_node>/root/obj/obj/obj/a8450</source_node>
 				<target_node>
 					<if>
-						<exists>a8540/text()</exists>
+						<and>
+							<if>
+								<exists>a8540/text()</exists>
+							</if>
+							<if>
+								<not>
+									<if>
+										<equals value="gesperrt">a8541/text()</equals>
+									</if>
+								</not>
+							</if>
+						</and>
 					</if>
                     <entity>
 						<type>fc:photo</type>
@@ -434,7 +467,18 @@
 				<source_node>/root/obj/obj/obj/obj/a8450</source_node>
 				<target_node>
 					<if>
-						<exists>a8540/text()</exists>
+						<and>
+							<if>
+								<exists>a8540/text()</exists>
+							</if>
+							<if>
+								<not>
+									<if>
+										<equals value="gesperrt">a8541/text()</equals>
+									</if>
+								</not>
+							</if>
+						</and>
 					</if>
                     <entity>
 						<type>fc:photo</type>

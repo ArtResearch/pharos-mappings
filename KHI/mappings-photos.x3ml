@@ -11,7 +11,7 @@
 		<namespace prefix="custom" uri="https://pharos.artresearch.net/custom/"/>
 		<namespace prefix="owl" uri="http://www.w3.org/2002/07/owl#"/>
 		<namespace prefix="original" uri="http://bildarchiv.foto.KHI.com/"/>
-		<namespace prefix="iiif_image" uri="https://iiif.khi.fi.it/iiif/2/thumbnails%2F"/>
+		<namespace prefix="iiif_image" uri="https://iiif.khi.fi.it/iiif/2/images%2F"/>
 	</namespaces>
 	
 	<mappings>
@@ -866,7 +866,18 @@
 				<source_node>/root/obj/a8450</source_node>
 				<target_node>
 					<if>
-						<exists>a8540/text()</exists>
+						<and>
+							<if>
+								<exists>a8540/text()</exists>
+							</if>
+							<if>
+								<not>
+									<if>
+										<equals value="gesperrt">a8541/text()</equals>
+									</if>
+								</not>
+							</if>
+						</and>
 					</if>
                     <entity>
                         <type>crm:E22_Man-Made_Object</type>
@@ -940,7 +951,7 @@
 								<type>crmdig:D1_Digital_Object</type>
 								<instance_generator name="IIIF_Generator">
 									<arg name="id" type="xpath">a8540/text()</arg>
-									<arg name="postfix" type="constant">.jpg/full/full/0/default.jpg</arg>
+									<arg name="postfix" type="constant">.tif/full/full/0/default.jpg</arg>
 								</instance_generator>
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
@@ -979,7 +990,7 @@
 										<type>crm:E73_Information_Object</type>
 										<instance_generator name="JSON_Generator">
 											<arg name="id" type="xpath">a8540/text()</arg>
-											<arg name="postfix" type="constant">.jpg/info.json</arg>
+											<arg name="postfix" type="constant">.tif/info.json</arg>
 										</instance_generator>
 									</entity>
 								</additional>
@@ -1683,7 +1694,18 @@
 				<source_node>/root/obj/obj/a8450</source_node>
 				<target_node>
 					<if>
-						<exists>a8540/text()</exists>
+						<and>
+							<if>
+								<exists>a8540/text()</exists>
+							</if>
+							<if>
+								<not>
+									<if>
+										<equals value="gesperrt">a8541/text()</equals>
+									</if>
+								</not>
+							</if>
+						</and>
 					</if>
                     <entity>
                         <type>crm:E22_Man-Made_Object</type>
@@ -1757,7 +1779,7 @@
 								<type>crmdig:D1_Digital_Object</type>
 								<instance_generator name="IIIF_Generator">
 									<arg name="id" type="xpath">a8540/text()</arg>
-									<arg name="postfix" type="constant">.jpg/full/full/0/default.jpg</arg>
+									<arg name="postfix" type="constant">.tif/full/full/0/default.jpg</arg>
 								</instance_generator>
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
@@ -1796,7 +1818,7 @@
 										<type>crm:E73_Information_Object</type>
 										<instance_generator name="JSON_Generator">
 											<arg name="id" type="xpath">a8540/text()</arg>
-											<arg name="postfix" type="constant">.jpg/info.json</arg>
+											<arg name="postfix" type="constant">.tif/info.json</arg>
 										</instance_generator>
 									</entity>
 								</additional>
@@ -2500,7 +2522,18 @@
 				<source_node>/root/obj/obj/obj/a8450</source_node>
 				<target_node>
 					<if>
-						<exists>a8540/text()</exists>
+						<and>
+							<if>
+								<exists>a8540/text()</exists>
+							</if>
+							<if>
+								<not>
+									<if>
+										<equals value="gesperrt">a8541/text()</equals>
+									</if>
+								</not>
+							</if>
+						</and>
 					</if>
                     <entity>
                         <type>crm:E22_Man-Made_Object</type>
@@ -2574,7 +2607,7 @@
 								<type>crmdig:D1_Digital_Object</type>
 								<instance_generator name="IIIF_Generator">
 									<arg name="id" type="xpath">a8540/text()</arg>
-									<arg name="postfix" type="constant">.jpg/full/full/0/default.jpg</arg>
+									<arg name="postfix" type="constant">.tif/full/full/0/default.jpg</arg>
 								</instance_generator>
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
@@ -2613,7 +2646,7 @@
 										<type>crm:E73_Information_Object</type>
 										<instance_generator name="JSON_Generator">
 											<arg name="id" type="xpath">a8540/text()</arg>
-											<arg name="postfix" type="constant">.jpg/info.json</arg>
+											<arg name="postfix" type="constant">.tif/info.json</arg>
 										</instance_generator>
 									</entity>
 								</additional>
@@ -3317,7 +3350,18 @@
 				<source_node>/root/obj/obj/obj/obj/a8450</source_node>
 				<target_node>
 					<if>
-						<exists>a8540/text()</exists>
+						<and>
+							<if>
+								<exists>a8540/text()</exists>
+							</if>
+							<if>
+								<not>
+									<if>
+										<equals value="gesperrt">a8541/text()</equals>
+									</if>
+								</not>
+							</if>
+						</and>
 					</if>
                     <entity>
                         <type>crm:E22_Man-Made_Object</type>
@@ -3391,7 +3435,7 @@
 								<type>crmdig:D1_Digital_Object</type>
 								<instance_generator name="IIIF_Generator">
 									<arg name="id" type="xpath">a8540/text()</arg>
-									<arg name="postfix" type="constant">.jpg/full/full/0/default.jpg</arg>
+									<arg name="postfix" type="constant">.tif/full/full/0/default.jpg</arg>
 								</instance_generator>
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
@@ -3430,7 +3474,7 @@
 										<type>crm:E73_Information_Object</type>
 										<instance_generator name="JSON_Generator">
 											<arg name="id" type="xpath">a8540/text()</arg>
-											<arg name="postfix" type="constant">.jpg/info.json</arg>
+											<arg name="postfix" type="constant">.tif/info.json</arg>
 										</instance_generator>
 									</entity>
 								</additional>
