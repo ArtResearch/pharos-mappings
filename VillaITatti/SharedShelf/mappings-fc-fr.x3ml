@@ -826,9 +826,6 @@
 							<if>
 								<equals value="ULAN">Terms/Term/TermSource/@name</equals>
 							</if>
-							<if>
-								<equals value="HOLLIS">Terms/Term/TermSource/@name</equals>
-							</if>
 						</or>
 					</if>
                    <entity>
