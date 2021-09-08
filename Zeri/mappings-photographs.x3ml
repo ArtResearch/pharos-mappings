@@ -1054,7 +1054,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="DATING"]/RIPETIZIONE/DTSI[@etichetta="From"]</relation>
+						<relation>PARAGRAFO[@etichetta="DATING"]/DTSI[@etichetta="From"]</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P108i_was_produced_by</relationship>
@@ -1062,7 +1062,7 @@
 							<type>crm:E12_Production</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
@@ -1071,25 +1071,15 @@
 							<type>crm:E52_Time-Span</type>
 							<instance_generator name="TimespanUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
-							<additional>
-								<relationship>crm:P82_at_some_time_within</relationship>
-								<entity>
-									<type>rdfs:Literal</type>
-									<instance_generator name="DateConcatenated">
-										<arg name="Start" type="xpath">text()</arg>
-										<arg name="End" type="xpath">../DTSF[@etichetta="To"]/text()</arg>
-									</instance_generator>
-								</entity>
-							</additional>
 						</entity>
 						<relationship>crm:P82a_begin_of_the_begin</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="DATING"]/RIPETIZIONE/DTSI[@etichetta="From"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="DATING"]/DTSI[@etichetta="From"]</source_node>
 					<target_node>
 						<entity>
 							<type>xsd:date</type>
@@ -1104,7 +1094,7 @@
 			 <link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="DATING"]/RIPETIZIONE/DTSF[@etichetta="To"]</relation>
+						<relation>PARAGRAFO[@etichetta="DATING"]/DTSF[@etichetta="To"]</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P108i_was_produced_by</relationship>
@@ -1112,7 +1102,7 @@
 							<type>crm:E12_Production</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
@@ -1121,7 +1111,7 @@
 							<type>crm:E52_Time-Span</type>
 							<instance_generator name="TimespanUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
@@ -1129,7 +1119,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="DATING"]/RIPETIZIONE/DTSF[@etichetta="To"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="DATING"]/DTSF[@etichetta="To"]</source_node>
 					<target_node>
 						<entity>
 							<type>xsd:date</type>
@@ -1581,29 +1571,6 @@
 					</target_node>
 				</range>
 			</link>
-		
-			<!-- <link> 
-				<path>
-					<source_relation>
-						<relation>PARAGRAFO[@etichetta="CLASSIFICATION"]/UBFP[@etichetta="Collection"]</relation>
-					</source_relation>
-					<target_relation>
-						<relationship>crm:P46i_forms_part_of</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>PARAGRAFO[@etichetta="CLASSIFICATION"]/UBFP[@etichetta="Collection"]</source_node>
-					<target_node>
-						<entity>
-							<type>custom:noType</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">collection</arg>
-								<arg name="id" type="xpath">text()</arg>
-							</instance_generator>
-						</entity>
-					</target_node>
-				</range>
-			</link> -->
 			
 			<link> 
 				<path>
@@ -1969,6 +1936,13 @@
 						<relation>PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI[@etichetta="Negative number"]</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<not>
+								<if>
+									<exists>text()</exists>
+								</if>
+							</not>
+						</if>
 						<relationship>crm:P128_carries</relationship>
 						<entity>
 							<type>crm:E36_Visual_Item</type>
@@ -2034,6 +2008,347 @@
 						<relation>PARAGRAFO[@etichetta="PLACE AND DATE OF THE SHOT"]/LRD[@etichetta="Shot date"]</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<not>
+								<if>
+									<exists>../../PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI[@etichetta="Negative number"]/text()</exists>
+								</if>
+							</not>
+						</if>
+						<relationship>crm:P128_carries</relationship>
+						<entity>
+							<type>crm:E36_Visual_Item</type>
+							<instance_generator name="VisualItemUri">
+								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P128i_is_carried_by</relationship>
+						<entity>
+							<type>crm:E22_Man-Made_Object</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">photo</arg>
+								<arg name="id" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P108i_was_produced_by</relationship>
+						<entity>
+							<type>crm:E12_Production</type>
+							<instance_generator name="EventUri">
+								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+							<label_generator name="ShotConcatenated">
+								<arg name="Place" type="xpath">../LRA[@etichetta="Village / Foreign placename"]/text()</arg>
+								<arg name="Date" type="xpath">text()</arg>
+							</label_generator>
+						</entity>
+						<relationship>crm:P4_has_time-span</relationship>
+						<entity>
+							<type>crm:E52_Time-Span</type>
+							<instance_generator name="TimespanUri">
+								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P82_at_some_time_within</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="PLACE AND DATE OF THE SHOT"]/LRD[@etichetta="Shot date"]</source_node>
+					<target_node>
+						<entity>
+							<type>rdfs:Literal</type>
+							<instance_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="PLACE AND DATE OF THE SHOT"]/LRA[@etichetta="Village / Foreign placename"]</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<not>
+								<if>
+									<exists>../../PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI[@etichetta="Negative number"]/text()</exists>
+								</if>
+							</not>
+						</if>
+						<relationship>crm:P128_carries</relationship>
+						<entity>
+							<type>crm:E36_Visual_Item</type>
+							<instance_generator name="VisualItemUri">
+								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P128i_is_carried_by</relationship>
+						<entity>
+							<type>crm:E22_Man-Made_Object</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">photo</arg>
+								<arg name="id" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P108i_was_produced_by</relationship>
+						<entity>
+							<type>crm:E12_Production</type>
+							<instance_generator name="EventUri">
+								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P7_took_place_at</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="PLACE AND DATE OF THE SHOT"]/LRA[@etichetta="Village / Foreign placename"]</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E53_Place</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">place</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIwithType">
+										<arg name="type" type="constant">type</arg>
+										<arg name="id" type="constant">Village</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="PLACE AND DATE OF THE SHOT"]/PVCL[@etichetta="Village"]</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<not>
+								<if>
+									<exists>../../PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI[@etichetta="Negative number"]/text()</exists>
+								</if>
+							</not>
+						</if>
+						<relationship>crm:P128_carries</relationship>
+						<entity>
+							<type>crm:E36_Visual_Item</type>
+							<instance_generator name="VisualItemUri">
+								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P128i_is_carried_by</relationship>
+						<entity>
+							<type>crm:E22_Man-Made_Object</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">photo</arg>
+								<arg name="id" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P108i_was_produced_by</relationship>
+						<entity>
+							<type>crm:E12_Production</type>
+							<instance_generator name="EventUri">
+								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P7_took_place_at</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="PLACE AND DATE OF THE SHOT"]/PVCL[@etichetta="Village"]</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E53_Place</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">place</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIwithType">
+										<arg name="type" type="constant">type</arg>
+										<arg name="id" type="constant">Village</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="PLACE AND DATE OF THE SHOT"]/LRCS[@etichetta="Country"]</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<not>
+								<if>
+									<exists>../../PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI[@etichetta="Negative number"]/text()</exists>
+								</if>
+							</not>
+						</if>
+						<relationship>crm:P128_carries</relationship>
+						<entity>
+							<type>crm:E36_Visual_Item</type>
+							<instance_generator name="VisualItemUri">
+								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P128i_is_carried_by</relationship>
+						<entity>
+							<type>crm:E22_Man-Made_Object</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">photo</arg>
+								<arg name="id" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P108i_was_produced_by</relationship>
+						<entity>
+							<type>crm:E12_Production</type>
+							<instance_generator name="EventUri">
+								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P7_took_place_at</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="PLACE AND DATE OF THE SHOT"]/LRCS[@etichetta="Country"]</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E53_Place</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">place</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">http://vocab.getty.edu/aat/300387506</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI[@etichetta="Negative number"]</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<exists>text()</exists>
+						</if>
+						<relationship>crm:P128_carries</relationship>
+						<entity>
+							<type>crm:E36_Visual_Item</type>
+							<instance_generator name="VisualItemUri">
+								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P128i_is_carried_by</relationship>
+						<entity>
+							<type>crm:E22_Man-Made_Object</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">negative</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">http://vocab.getty.edu/aat/300127173</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+						<relationship>crm:P1_is_identified_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI[@etichetta="Negative number"]</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E42_Identifier</type>
+							<instance_generator name="IdentifierURI">	
+								<arg name="subject_type" type="constant">negative</arg>
+								<arg name="subject_id" type="xpath">text()</arg>
+								<arg name="identifier_type" type="constant">identifier</arg>
+								<arg name="identifier_id" type="xpath">text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">http://vocab.getty.edu/aat/300417193</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="PLACE AND DATE OF THE SHOT"]/LRD[@etichetta="Shot date"]</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<exists>../../PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI[@etichetta="Negative number"]/text()</exists>
+						</if>
 						<relationship>crm:P128_carries</relationship>
 						<entity>
 							<type>crm:E36_Visual_Item</type>
@@ -2059,8 +2374,8 @@
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 							<label_generator name="ShotConcatenated">
-								<arg name="Place" type="xpath">text()</arg>
-								<arg name="Date" type="xpath">../LRA[@etichetta="Village / Foreign placename"]/text()</arg>
+								<arg name="Place" type="xpath">../LRA[@etichetta="Village / Foreign placename"]/text()</arg>
+								<arg name="Date" type="xpath">text()</arg>
 							</label_generator>
 						</entity>
 						<relationship>crm:P4_has_time-span</relationship>
@@ -2094,6 +2409,9 @@
 						<relation>PARAGRAFO[@etichetta="PLACE AND DATE OF THE SHOT"]/LRA[@etichetta="Village / Foreign placename"]</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<exists>../../PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI[@etichetta="Negative number"]/text()</exists>
+						</if>
 						<relationship>crm:P128_carries</relationship>
 						<entity>
 							<type>crm:E36_Visual_Item</type>
@@ -2155,6 +2473,9 @@
 						<relation>PARAGRAFO[@etichetta="PLACE AND DATE OF THE SHOT"]/PVCL[@etichetta="Village"]</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<exists>../../PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI[@etichetta="Negative number"]/text()</exists>
+						</if>
 						<relationship>crm:P128_carries</relationship>
 						<entity>
 							<type>crm:E36_Visual_Item</type>
@@ -2216,6 +2537,9 @@
 						<relation>PARAGRAFO[@etichetta="PLACE AND DATE OF THE SHOT"]/LRCS[@etichetta="Country"]</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<exists>../../PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI[@etichetta="Negative number"]/text()</exists>
+						</if>
 						<relationship>crm:P128_carries</relationship>
 						<entity>
 							<type>crm:E36_Visual_Item</type>
@@ -2269,7 +2593,7 @@
 					</target_node>
 				</range>
 			</link>
-			
+
 			<link> 
 				<path>
 					<source_relation>
