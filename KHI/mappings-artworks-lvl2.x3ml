@@ -852,10 +852,8 @@
 					<target_node>
 						<entity>
 							<type>custom:Namedgraph</type>
-							<instance_generator name="MultiHashingGenerator">
-								<arg name="hierarchy" type="constant">type</arg>
-								<arg name="object_HASHED_CONTENTS" type="xpath">../text()</arg>
-								<arg name="term_simple" type="constant">graph</arg>
+							<instance_generator name="URIwithIconclass">
+								<arg name="id" type="xpath">string-join((.,"graph"),'/')</arg>
 							</instance_generator>
 						</entity>	
 					</target_node>
@@ -876,10 +874,8 @@
 					<target_node>
 						<entity>
 							<type>custom:Namedgraph</type>
-							<instance_generator name="MultiHashingGenerator">
-								<arg name="hierarchy" type="constant">type</arg>
-								<arg name="object_HASHED_CONTENTS" type="xpath">../text()</arg>
-								<arg name="term_simple" type="constant">graph</arg>
+							<instance_generator name="URIwithIconclass">
+								<arg name="id" type="xpath">string-join((.,"graph"),'/')</arg>
 							</instance_generator>
 						</entity>	
 					</target_node>
@@ -5377,8 +5373,7 @@
 					</if>
                     <entity>
 						<type>crm:E55_Type</type>
-						<instance_generator name="URIwithType">
-							<arg name="type" type="constant">type</arg>
+						<instance_generator name="URIwithIconclass">
 							<arg name="id" type="xpath">text()</arg>
 						</instance_generator>
 						<label_generator name="Literal">
@@ -5398,10 +5393,8 @@
 							<relationship>crm:P67i_is_referred_to_by</relationship>
 							<entity>
 								<type>custom:Namedgraph</type>
-								<instance_generator name="MultiHashingGenerator">
-									<arg name="hierarchy" type="constant">type</arg>
-									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
-									<arg name="term_simple" type="constant">graph</arg>
+								<instance_generator name="URIwithIconclassNamedGraph">
+									<arg name="id" type="xpath">text()</arg>
 								</instance_generator>
 								<additional>
 									<relationship>custom:has_provider</relationship>
@@ -5439,8 +5432,7 @@
 					</if>
                     <entity>
 						<type>crm:E55_Type</type>
-						<instance_generator name="URIwithType">
-							<arg name="type" type="constant">type</arg>
+						<instance_generator name="URIwithIconclass">
 							<arg name="id" type="xpath">text()</arg>
 						</instance_generator>
 						<label_generator name="Literal">
@@ -5460,10 +5452,8 @@
 							<relationship>crm:P67i_is_referred_to_by</relationship>
 							<entity>
 								<type>custom:Namedgraph</type>
-								<instance_generator name="MultiHashingGenerator">
-									<arg name="hierarchy" type="constant">type</arg>
-									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
-									<arg name="term_simple" type="constant">graph</arg>
+								<instance_generator name="URIwithIconclassNamedGraph">
+									<arg name="id" type="xpath">text()</arg>
 								</instance_generator>
 								<additional>
 									<relationship>custom:has_provider</relationship>

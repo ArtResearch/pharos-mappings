@@ -53,6 +53,10 @@
 	<pattern>{id}</pattern>
 </generator>
 
+<generator name="URIwithIconclassNamedGraph" prefix="ico">
+	<pattern>{id}/graph</pattern>
+</generator>
+
 <generator name="ExhibitionConcatenated">
 	<pattern>Title: {Title}, Place: {Place}, Date: {Date}</pattern>
 </generator>
