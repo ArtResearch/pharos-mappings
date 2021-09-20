@@ -12,7 +12,8 @@
 		<namespace prefix="custom" uri="https://pharos.artresearch.net/custom/"/>
 		<namespace prefix="vit" uri="http://id.lib.harvard.edu/images/olvwork"/>
 		<namespace prefix="iiif_image" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
-		<namespace prefix="iiif_json" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
+		<namespace prefix="iiif_json" uri="https://foto.biblhertz.it/exist/foto/"/>
+		<namespace prefix="ico" uri="http://iconclass.org/"/>
 		<namespace prefix="fc" uri="https://pharos.artresearch.net/resource/custom/fc/"/>
 		<namespace prefix="fr" uri="https://pharos.artresearch.net/resource/custom/fr/"/>
 	</namespaces>

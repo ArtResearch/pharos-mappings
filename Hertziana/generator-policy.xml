@@ -208,6 +208,13 @@
 	<pattern>{id}/info.json</pattern>
 </generator>
 
+<generator name="URIwithIconclass" prefix="ico">
+	<pattern>{id}</pattern>
+</generator>
+
+<generator name="URIwithIconclassNamedGraph" prefix="ico">
+	<pattern>{id}/graph</pattern>
+</generator>
 
 <generator name="LocalTermURI" prefix="pref">
     <pattern>{hierarchy}/{term}</pattern>
