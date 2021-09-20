@@ -14,6 +14,7 @@
 		<namespace prefix="iiif_image" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
 		<namespace prefix="image" uri="http://fotothek.biblhertz.it/bh/320px/"/>
 		<namespace prefix="iiif_json" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
+		<namespace prefix="ico" uri="http://iconclass.org/"/>
 	</namespaces>
 	<mappings>
 		<mapping namedgraph="">
@@ -3359,8 +3360,7 @@
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">type</arg>
+							<instance_generator name="URIwithIconclass">
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
 						</entity>
@@ -3390,8 +3390,7 @@
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
-							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">type</arg>
+							<instance_generator name="URIwithIconclass">
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
 						</entity>

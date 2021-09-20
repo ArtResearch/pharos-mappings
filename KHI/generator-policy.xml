@@ -49,6 +49,10 @@
 	<pattern>{type}/{id}</pattern>
 </generator>
 
+<generator name="URIwithIconclass" prefix="ico">
+	<pattern>{id}</pattern>
+</generator>
+
 <generator name="ExhibitionConcatenated">
 	<pattern>Title: {Title}, Place: {Place}, Date: {Date}</pattern>
 </generator>
