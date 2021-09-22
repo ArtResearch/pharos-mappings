@@ -261,8 +261,8 @@
 					</target_node>
 				</range>
 			</link>
-			<!--
-			<link> 
+			
+<!-- 		<link> 
 				<path>
 					<source_relation>
 						<relation>../aob30/a3000</relation>
@@ -273,7 +273,7 @@
 								<if>
 									<not>
 										<if>
-											<exists>aob30/a3000</exists>
+											<exists>../../obj/aob30/a3000</exists>
 										</if>
 									</not>
 								</if>
@@ -300,7 +300,7 @@
 									<type>fc:work</type>
 									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">work</arg>
-										<arg name="id" type="xpath">../../a5003/text()</arg>
+										<arg name="id" type="xpath">../../obj/a5003/text()</arg>
 									</instance_generator>
 								</entity>
 							</additional>

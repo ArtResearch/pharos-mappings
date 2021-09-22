@@ -5,6 +5,7 @@
 		<namespace prefix="prefix" uri="https://pharos.artresearch.net/resource/khi/" />
 		<namespace prefix="crm" uri="http://www.cidoc-crm.org/cidoc-crm/"/>
 		<namespace prefix="custom" uri="https://pharos.artresearch.net/custom/"/>
+		<namespace prefix="original" uri="http://photothek.khi.fi.it/documents/"/>
 	</namespaces>
 
 	<mappings>
@@ -46,6 +47,24 @@
 										<instance_generator name="URIwithTypeAndId">
 											<arg name="type" type="constant">source</arg>
 											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>custom:has_original_record</relationship>
+							<entity>
+								<type>crm:E32_Identifier</type>
+								<instance_generator name="OriginalURI">
+									<arg name="id" type="xpath">a5000/text()</arg>
+								</instance_generator>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>custom:noType</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">http://vocab.getty.edu/aat/300404630</arg>
 										</instance_generator>
 									</entity>
 								</additional>
@@ -132,6 +151,24 @@
 								</additional>
 							</entity>
 						</additional>
+						<additional>
+							<relationship>custom:has_original_record</relationship>
+							<entity>
+								<type>crm:E32_Identifier</type>
+								<instance_generator name="OriginalURI">
+									<arg name="id" type="xpath">../a5000/text()</arg>
+								</instance_generator>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>custom:noType</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">http://vocab.getty.edu/aat/300404630</arg>
+										</instance_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
 					</entity>
 				</target_node>
 			</domain>
@@ -213,6 +250,24 @@
 								</additional>
 							</entity>
 						</additional>
+						<additional>
+							<relationship>custom:has_original_record</relationship>
+							<entity>
+								<type>crm:E32_Identifier</type>
+								<instance_generator name="OriginalURI">
+									<arg name="id" type="xpath">../../a5000/text()</arg>
+								</instance_generator>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>custom:noType</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">http://vocab.getty.edu/aat/300404630</arg>
+										</instance_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
 					</entity>
 				</target_node>
 			</domain>
@@ -286,6 +341,24 @@
 										<instance_generator name="URIwithTypeAndId">
 											<arg name="type" type="constant">source</arg>
 											<arg name="id" type="constant">KHI</arg>
+										</instance_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>custom:has_original_record</relationship>
+							<entity>
+								<type>crm:E32_Identifier</type>
+								<instance_generator name="OriginalURI">
+									<arg name="id" type="xpath">../../../a5000/text()</arg>
+								</instance_generator>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>custom:noType</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">http://vocab.getty.edu/aat/300404630</arg>
 										</instance_generator>
 									</entity>
 								</additional>
