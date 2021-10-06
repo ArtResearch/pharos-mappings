@@ -1057,6 +1057,13 @@
 						<relation>PARAGRAFO[@etichetta="DATING"]/DTSI[@etichetta="From"]</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<not>
+								<if>
+									<equals value="s.d.">text()</equals>
+								</if>
+							</not>
+						</if>
 						<relationship>crm:P108i_was_produced_by</relationship>
 						<entity>
 							<type>crm:E12_Production</type>
@@ -1097,6 +1104,13 @@
 						<relation>PARAGRAFO[@etichetta="DATING"]/DTSF[@etichetta="To"]</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<not>
+								<if>
+									<equals value="s.d.">text()</equals>
+								</if>
+							</not>
+						</if>
 						<relationship>crm:P108i_was_produced_by</relationship>
 						<entity>
 							<type>crm:E12_Production</type>

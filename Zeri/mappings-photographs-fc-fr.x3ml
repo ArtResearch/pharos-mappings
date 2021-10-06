@@ -99,18 +99,25 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="DATING"]/RIPETIZIONE/DTSI[@etichetta="From"]</relation>
+						<relation>PARAGRAFO[@etichetta="DATING"]/DTSI[@etichetta="From"]</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<not>
+								<if>
+									<equals value="s.d.">text()</equals>
+								</if>
+							</not>
+						</if>
 						<relationship>fr:Photo_from_Date</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="DATING"]/RIPETIZIONE/DTSI[@etichetta="From"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="DATING"]/DTSI[@etichetta="From"]</source_node>
 					<target_node>
 						<entity>
 							<type>xsd:date</type>
-							<instance_generator name="Literal">
+							<instance_generator name="TypedLiteralGen">
 								<arg name="text" type="xpath">text()</arg>
 							</instance_generator>
 						</entity>
