@@ -18,6 +18,7 @@
 	</namespaces>
 	<mappings>
 	
+		<!-- lvl1 -->
 		<mapping>
 			<domain>
 				<source_node>/root/obj/a8450</source_node>
@@ -136,6 +137,7 @@
 			
 		</mapping>	
 		
+		<!-- lvl2 -->
 		<mapping>
 			<domain>
 				<source_node>/root/obj/obj/a8450</source_node>
@@ -254,6 +256,7 @@
 			
 		</mapping>	
 		
+		<!-- lvl3 -->
 		<mapping>
 			<domain>
 				<source_node>/root/obj/obj/obj/a8450</source_node>
@@ -372,6 +375,7 @@
 			
 		</mapping>	
 		
+		<!-- lvl4 -->
 		<mapping>
 			<domain>
 				<source_node>/root/obj/obj/obj/obj/a8450</source_node>
@@ -489,7 +493,126 @@
 			</link> 
 			
 		</mapping>	
-		
+
+		<!-- lvl5 -->
+		<mapping>
+			<domain>
+				<source_node>/root/obj/obj/obj/obj/obj/a8450</source_node>
+				<target_node>
+					<if>
+						<and>
+							<if>
+								<exists>a8540/text()</exists>
+							</if>
+							<if>
+								<not>
+									<if>
+										<equals value="gesperrt">a8541/text()</equals>
+									</if>
+								</not>
+							</if>
+						</and>
+					</if>
+                    <entity>
+						<type>fc:photo</type>
+						<instance_generator name="URIwithTypeAndId">
+						    <arg name="type" type="constant">photo</arg>
+							<arg name="id" type="xpath">a8540/text()</arg>
+						</instance_generator>
+						<additional>
+							<relationship>fr:Photo_has_provider_Institution</relationship>
+							<entity>
+								<type>fc:institution</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">Marburg</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>a8490</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>fr:Photo_created_by_Photographer</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a8490</source_node>
+					<target_node>
+						<entity>
+							<type>fc:photographer</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>fr:Photographer_created_Photo</relationship>
+								<entity>
+									<type>fc:photo</type>
+									<instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">photo</arg>
+										<arg name="id" type="xpath">../a8540/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link>
+				<path>
+					<source_relation>
+						<relation>a8494</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>fr:Photo_from_Date</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a8494</source_node>
+					<target_node>
+						<entity>
+							<type>xsd:date</type>
+							<instance_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link>
+				<path>
+					<source_relation>
+						<relation>a8460</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>fr:Photo_kept_by_Institution</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a8460</source_node>
+					<target_node>
+						<entity>
+							<type>fc:institution</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link> 
+			
+		</mapping>
+		<!-- lvl1 -->
 		<mapping>
 			<domain>
 				<source_node>/root/obj/a8450</source_node>
@@ -615,6 +738,7 @@
 			
 		</mapping>	
 		
+		<!-- lvl2 -->
 		<mapping>
 			<domain>
 				<source_node>/root/obj/obj/a8450</source_node>
@@ -740,6 +864,7 @@
 			
 		</mapping>	
 		
+		<!-- lvl3 -->
 		<mapping>
 			<domain>
 				<source_node>/root/obj/obj/obj/a8450</source_node>
@@ -865,9 +990,136 @@
 			
 		</mapping>	
 		
+		<!-- lvl4 -->
 		<mapping>
 			<domain>
 				<source_node>/root/obj/obj/obj/obj/a8450</source_node>
+				<target_node>
+					<if>
+						<and>
+							<if>
+								<not>
+									<if>
+										<exists>a8540/text()</exists>
+									</if>
+								</not>
+							</if>
+							<if>
+								<exists>a8555/text()</exists>
+							</if>
+							<if>
+								<not>
+									<if>
+										<equals value="gesperrt">a8541/text()</equals>
+									</if>
+								</not>
+							</if>
+						</and>
+					</if>
+                    <entity>
+						<type>fc:photo</type>
+						<instance_generator name="URIwithTypeAndId">
+						    <arg name="type" type="constant">photo</arg>
+							<arg name="id" type="xpath">a8555/text()</arg>
+						</instance_generator>
+						<additional>
+							<relationship>fr:Photo_has_provider_Institution</relationship>
+							<entity>
+								<type>fc:institution</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">Marburg</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>a8490</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>fr:Photo_created_by_Photographer</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a8490</source_node>
+					<target_node>
+						<entity>
+							<type>fc:photographer</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>fr:Photographer_created_Photo</relationship>
+								<entity>
+									<type>fc:photo</type>
+									<instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">photo</arg>
+										<arg name="id" type="xpath">../a8555/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link>
+				<path>
+					<source_relation>
+						<relation>a8494</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>fr:Photo_from_Date</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a8494</source_node>
+					<target_node>
+						<entity>
+							<type>xsd:date</type>
+							<instance_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link>
+				<path>
+					<source_relation>
+						<relation>a8460</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>fr:Photo_kept_by_Institution</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a8460</source_node>
+					<target_node>
+						<entity>
+							<type>fc:institution</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link> 
+			
+		</mapping>
+
+		<!-- lvl5 -->
+		<mapping>
+			<domain>
+				<source_node>/root/obj/obj/obj/obj/obj/a8450</source_node>
 				<target_node>
 					<if>
 						<and>

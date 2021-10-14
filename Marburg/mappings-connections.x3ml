@@ -9,6 +9,7 @@
 	</namespaces>
 
 	<mappings>
+		<!-- lvl1 -->
 		<mapping namedgraph="graph">
 			<domain>
 				<source_node>/root/obj</source_node>
@@ -108,6 +109,7 @@
 			</link>
 		</mapping>
 
+		<!-- lvl2 -->
 		<mapping namedgraph="graph">
 			<domain>
 				<source_node>/root/obj/obj</source_node>
@@ -207,6 +209,7 @@
 			</link>
 		</mapping>
 
+		<!-- lvl3 -->
 		<mapping namedgraph="graph">
 			<domain>
 				<source_node>/root/obj/obj/obj</source_node>
@@ -306,6 +309,7 @@
 			</link>
 		</mapping>
 
+		<!-- lvl4 -->
 		<mapping namedgraph="graph">
 			<domain>
 				<source_node>/root/obj/obj/obj/obj</source_node>
@@ -352,6 +356,103 @@
 								<type>crm:E32_Identifier</type>
 								<instance_generator name="OriginalURI">
 									<arg name="id" type="xpath">../../../a5000/text()</arg>
+								</instance_generator>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>custom:noType</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">http://vocab.getty.edu/aat/300404630</arg>
+										</instance_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>obj</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P46_is_composed_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>obj</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">work</arg>
+								<arg name="id" type="xpath">a5004/text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>crm:P46i_forms_part_of</relationship>
+								<entity>
+									<type>crm:E22_Man-Made_Object</type>
+									<instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">work</arg>
+										<arg name="id" type="xpath">../a5003/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+		</mapping>
+
+		<!-- lvl5 -->
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>/root/obj/obj/obj/obj/obj</source_node>
+				<target_node>
+					<entity>
+						<type>crm:E22_Man-Made_Object</type>
+						<instance_generator name="URIwithTypeAndId">
+							<arg name="type" type="constant">work</arg>
+							<arg name="id" type="xpath">a5004/text()</arg>
+						</instance_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">Marburg</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="namedgraph">
+									<arg name="type" type="constant">work</arg>
+									<arg name="id" type="xpath">a5004/text()</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:noType</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">Marburg</arg>
+										</instance_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>custom:has_original_record</relationship>
+							<entity>
+								<type>crm:E32_Identifier</type>
+								<instance_generator name="OriginalURI">
+									<arg name="id" type="xpath">../../../../a5000/text()</arg>
 								</instance_generator>
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
