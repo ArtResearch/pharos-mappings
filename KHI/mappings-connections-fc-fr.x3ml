@@ -10,6 +10,7 @@
 	</namespaces>
 
 	<mappings>
+		<!-- lvl1 -->
 		<mapping>
 			<domain>
 				<source_node>/root/obj</source_node>
@@ -74,6 +75,7 @@
 			</link>
 		</mapping>
 
+		<!-- lvl2 -->
 		<mapping>
 			<domain>
 				<source_node>/root/obj/obj</source_node>
@@ -138,6 +140,7 @@
 			</link>
 		</mapping>
 
+		<!-- lvl3 -->
 		<mapping>
 			<domain>
 				<source_node>/root/obj/obj/obj</source_node>
@@ -202,6 +205,7 @@
 			</link>
 		</mapping>
 
+		<!-- lvl4 -->
 		<mapping>
 			<domain>
 				<source_node>/root/obj/obj/obj/obj</source_node>
@@ -254,6 +258,68 @@
 									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">work</arg>
 										<arg name="id" type="xpath">../../a5003/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+		</mapping>
+
+		<!-- lvl5 -->
+		<mapping>
+			<domain>
+				<source_node>/root/obj/obj/obj/obj/obj</source_node>
+				<target_node>
+					<entity>
+						<type>fc:work</type>
+						<instance_generator name="URIwithTypeAndId">
+						    <arg name="type" type="constant">work</arg>
+							<arg name="id" type="xpath">a5004/text()</arg>
+						</instance_generator>
+						<additional>
+							<relationship>fr:Work_has_provider_Institution</relationship>
+							<entity>
+								<type>fc:institution</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">KHI</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>aob30/a3000</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="Herstellung">../text()</equals>
+						</if>
+						<relationship>fr:Work_created_from_Artist</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>aob30/a3000</source_node>
+					<target_node>
+						<entity>
+							<type>fc:artist</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>fr:Artist_created_Work</relationship>
+								<entity>
+									<type>fc:work</type>
+									<instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">work</arg>
+										<arg name="id" type="xpath">../../a5004/text()</arg>
 									</instance_generator>
 								</entity>
 							</additional>
