@@ -974,7 +974,7 @@
 							<entity>
 								<type>crm:E32_Identifier</type>
 								<instance_generator name="OriginalURI">
-									<arg name="id" type="xpath">../../../a5000/text()</arg>
+									<arg name="id" type="xpath">../../../../a5000/text()</arg>
 								</instance_generator>
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
