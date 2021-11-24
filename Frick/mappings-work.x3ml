@@ -2309,41 +2309,37 @@
 						<relation>marc:datafield[@tag="852"]/marc:subfield[@code="h"]</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>crm:P67i_is_referred_to_by</relationship>
-						<entity>
-							<type>crm:E73_Information_Object</type>
-							<instance_generator name="InformationObjectUri">
-								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
-								<arg name="type" type="constant">notes_info</arg>
-								<arg name="id" type="xpath">text()</arg>
-							</instance_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>custom:noType</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300435416</arg>
-									</instance_generator>
-								</entity>
-							</additional>
-						</entity>
-						<relationship>crm:P190_has_symbolic_content</relationship>
+						<relationship>crm:P1_is_identified_by</relationship>
 					</target_relation>
 				</path>
 				<range>
 					<source_node>marc:datafield[@tag="852"]/marc:subfield[@code="h"]</source_node>
 					<target_node>
 						<entity>
-							<type>rdfs:Literal</type>
-							<instance_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
+							<type>crm:E42_Identifier</type>
+							<instance_generator name="IdentifierURI">	
+								<arg name="subject_type" type="constant">work</arg>
+								<arg name="subject_id" type="xpath">../../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
+								<arg name="identifier_type" type="constant">call_number</arg>
+								<arg name="identifier_id" type="xpath">text()</arg>
 							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">http://vocab.getty.edu/aat/300311706</arg>
+									</instance_generator>
+								</entity>
+							</additional>
 						</entity>
 					</target_node>
 				</range>
 			</link>
-			
+
 			<link> 
 				<path>
 					<source_relation>

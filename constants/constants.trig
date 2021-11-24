@@ -1411,3 +1411,8 @@
         <http://vocab.getty.edu/aat/300435412> a <http://www.cidoc-crm.org/cidoc-crm/E55_Type>;
                 <http://www.w3.org/2000/01/rdf-schema#label> "<information and information related concepts>".
 }
+
+<http://vocab.getty.edu/aat/300311706/graph>{
+        <http://vocab.getty.edu/aat/300311706> a <http://www.cidoc-crm.org/cidoc-crm/E55_Type>;
+                <http://www.w3.org/2000/01/rdf-schema#label> "call numbers".
+}
