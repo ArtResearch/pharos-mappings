@@ -1419,6 +1419,15 @@
 									</instance_generator>
 								</entity>
 							</additional>
+							<additional>
+								<relationship>custom:has_order</relationship>
+								<entity>
+									<type>xsd:integer</type>
+									<instance_generator name="TypedLiteralGen">
+										<arg name="text" type="xpath">@index</arg>
+									</instance_generator>
+								</entity>
+							</additional>
 						</entity>
 						<relationship>crm:P190_has_symbolic_content</relationship>
 					</target_relation>
