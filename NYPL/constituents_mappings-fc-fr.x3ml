@@ -5,9 +5,9 @@
 		<namespace prefix="crm" uri="http://www.cidoc-crm.org/cidoc-crm/"/>
 		<namespace prefix="crmdig" uri="http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/"/>
 		<namespace prefix="owl" uri="http://www.w3.org/2002/07/owl#"/>
-		<namespace prefix="prefix" uri="https://pharos.artresearch.net/resource/nypl/"/>
-		<namespace prefix="fc" uri="https://pharos.artresearch.net/resource/fc/"/>
-		<namespace prefix="fr" uri="https://pharos.artresearch.net/resource/fr/"/>
+		<namespace prefix="prefix" uri="https://artresearch.net/resource/nypl/"/>
+		<namespace prefix="fc" uri="https://artresearch.net/resource/fc/"/>
+		<namespace prefix="fr" uri="https://artresearch.net/resource/fr/"/>
 	</namespaces>
 	<mappings>
 		<mapping>

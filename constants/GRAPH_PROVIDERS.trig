@@ -1,95 +1,95 @@
-<https://pharos.artresearch.net/resource/pharos/matched/artists/graph> {
-  <https://pharos.artresearch.net/resource/pharos/matched/artists/graph> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/pharos/source/Pharos>.
-    <https://pharos.artresearch.net/resource/pharos/source/Pharos> <http://www.w3.org/2000/01/rdf-schema#label> "Pharos".
+<https://artresearch.net/resource/pharos/matched/artists/graph> {
+  <https://artresearch.net/resource/pharos/matched/artists/graph> <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/pharos/source/Pharos>.
+    <https://artresearch.net/resource/pharos/source/Pharos> <http://www.w3.org/2000/01/rdf-schema#label> "Pharos".
 }
 
 
-<https://pharos.artresearch.net/resource/pharos/matched/photographers/graph> {
-  <https://pharos.artresearch.net/resource/pharos/matched/photographers/graph> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/pharos/source/Pharos>.
-    <https://pharos.artresearch.net/resource/pharos/source/Pharos> <http://www.w3.org/2000/01/rdf-schema#label> "Pharos".
+<https://artresearch.net/resource/pharos/matched/photographers/graph> {
+  <https://artresearch.net/resource/pharos/matched/photographers/graph> <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/pharos/source/Pharos>.
+    <https://artresearch.net/resource/pharos/source/Pharos> <http://www.w3.org/2000/01/rdf-schema#label> "Pharos".
 }
 
 
-<https://pharos.artresearch.net/resource/pharos/matched/artworks/graph> {
-  <https://pharos.artresearch.net/resource/pharos/matched/artworks/graph> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/pharos/source/Pharos>.
-    <https://pharos.artresearch.net/resource/pharos/source/Pharos> <http://www.w3.org/2000/01/rdf-schema#label> "Pharos".
+<https://artresearch.net/resource/pharos/matched/artworks/graph> {
+  <https://artresearch.net/resource/pharos/matched/artworks/graph> <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/pharos/source/Pharos>.
+    <https://artresearch.net/resource/pharos/source/Pharos> <http://www.w3.org/2000/01/rdf-schema#label> "Pharos".
 }
 
 
-<https://pharos.artresearch.net/resource/pharos/matched/institutions/graph> {
-  <https://pharos.artresearch.net/resource/pharos/matched/institutions/graph> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/pharos/source/Pharos>.
-    <https://pharos.artresearch.net/resource/pharos/source/Pharos> <http://www.w3.org/2000/01/rdf-schema#label> "Pharos".
+<https://artresearch.net/resource/pharos/matched/institutions/graph> {
+  <https://artresearch.net/resource/pharos/matched/institutions/graph> <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/pharos/source/Pharos>.
+    <https://artresearch.net/resource/pharos/source/Pharos> <http://www.w3.org/2000/01/rdf-schema#label> "Pharos".
 }
 
-<https://pharos.artresearch.net/resource/pharos/matched/places/graph> {
-  <https://pharos.artresearch.net/resource/pharos/matched/places/graph> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/pharos/source/Pharos>.
-    <https://pharos.artresearch.net/resource/pharos/source/Pharos> <http://www.w3.org/2000/01/rdf-schema#label> "Pharos".
+<https://artresearch.net/resource/pharos/matched/places/graph> {
+  <https://artresearch.net/resource/pharos/matched/places/graph> <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/pharos/source/Pharos>.
+    <https://artresearch.net/resource/pharos/source/Pharos> <http://www.w3.org/2000/01/rdf-schema#label> "Pharos".
 }
 
-<https://pharos.artresearch.net/resource/nypl/enrichment/graph> {
-  <https://pharos.artresearch.net/resource/nypl/enrichment/graph> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/nypl/source/NYPL>.
-    <https://pharos.artresearch.net/resource/nypl/source/NYPL> <http://www.w3.org/2000/01/rdf-schema#label> "NYPL".
+<https://artresearch.net/resource/nypl/enrichment/graph> {
+  <https://artresearch.net/resource/nypl/enrichment/graph> <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/nypl/source/NYPL>.
+    <https://artresearch.net/resource/nypl/source/NYPL> <http://www.w3.org/2000/01/rdf-schema#label> "NYPL".
 }
 
-<https://pharos.artresearch.net/resource/ulan/enrichment/graph> {
-  <https://pharos.artresearch.net/resource/ulan/enrichment/graph> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/ulan/source/ULAN>.
-    <https://pharos.artresearch.net/resource/ulan/source/ULAN> <http://www.w3.org/2000/01/rdf-schema#label> "ULAN".
-}
-
-
-<https://pharos.artresearch.net/resource/pharos/hashed/arworks/graph> {
-  <https://pharos.artresearch.net/resource/pharos/hashed/arworks/graph> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/pharos/source/Pharos>.
-    <https://pharos.artresearch.net/resource/pharos/source/Pharos> <http://www.w3.org/2000/01/rdf-schema#label> "Pharos".
-}
-
-<https://pharos.artresearch.net/resource/pharos/matched/arworks/graph> {
-  <https://pharos.artresearch.net/resource/pharos/matched/arworks/graph> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/pharos/source/Pharos>.
-    <https://pharos.artresearch.net/resource/pharos/source/Pharos> <http://www.w3.org/2000/01/rdf-schema#label> "Pharos".
-}
-
-<https://pharos.artresearch.net/resource/pharos/structured/fcfr/graph> {
-  <https://pharos.artresearch.net/resource/pharos/structured/fcfr/graph> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/pharos/source/Pharos>.
-  <https://pharos.artresearch.net/resource/pharos/source/Pharos> <http://www.w3.org/2000/01/rdf-schema#label> "Pharos".
-}
-
-<https://pharos.artresearch.net/resource/itatti/fcrs> {
-  <https://pharos.artresearch.net/resource/itatti/fcrs> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/itatti/source/ITatti>.
-}
-
-<https://pharos.artresearch.net/resource/zeri/fcrs> {
-  <https://pharos.artresearch.net/resource/zeri/fcrs> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/zeri/source/Zeri>.
+<https://artresearch.net/resource/ulan/enrichment/graph> {
+  <https://artresearch.net/resource/ulan/enrichment/graph> <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/ulan/source/ULAN>.
+    <https://artresearch.net/resource/ulan/source/ULAN> <http://www.w3.org/2000/01/rdf-schema#label> "ULAN".
 }
 
 
-<https://pharos.artresearch.net/resource/frick/fcrs> {
-  <https://pharos.artresearch.net/resource/frick/fcrs> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/frick/source/Frick>.
+<https://artresearch.net/resource/pharos/hashed/arworks/graph> {
+  <https://artresearch.net/resource/pharos/hashed/arworks/graph> <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/pharos/source/Pharos>.
+    <https://artresearch.net/resource/pharos/source/Pharos> <http://www.w3.org/2000/01/rdf-schema#label> "Pharos".
 }
 
-<https://pharos.artresearch.net/resource/khi/fcrs> {
-  <https://pharos.artresearch.net/resource/khi/fcrs> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/khi/source/KHI>.
+<https://artresearch.net/resource/pharos/matched/arworks/graph> {
+  <https://artresearch.net/resource/pharos/matched/arworks/graph> <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/pharos/source/Pharos>.
+    <https://artresearch.net/resource/pharos/source/Pharos> <http://www.w3.org/2000/01/rdf-schema#label> "Pharos".
+}
+
+<https://artresearch.net/resource/pharos/structured/fcfr/graph> {
+  <https://artresearch.net/resource/pharos/structured/fcfr/graph> <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/pharos/source/Pharos>.
+  <https://artresearch.net/resource/pharos/source/Pharos> <http://www.w3.org/2000/01/rdf-schema#label> "Pharos".
+}
+
+<https://artresearch.net/resource/itatti/fcrs> {
+  <https://artresearch.net/resource/itatti/fcrs> <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/itatti/source/ITatti>.
+}
+
+<https://artresearch.net/resource/zeri/fcrs> {
+  <https://artresearch.net/resource/zeri/fcrs> <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/zeri/source/Zeri>.
 }
 
 
-<https://pharos.artresearch.net/resource/marburg/fcrs> {
-  <https://pharos.artresearch.net/resource/marburg/fcrs> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/marburg/source/Marburg>.
+<https://artresearch.net/resource/frick/fcrs> {
+  <https://artresearch.net/resource/frick/fcrs> <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/frick/source/Frick>.
 }
 
-<https://pharos.artresearch.net/resource/hertziana/fcrs> {
-  <https://pharos.artresearch.net/resource/hertziana/fcrs> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/hertziana/source/Hertziana>.
-}
-
-<https://pharos.artresearch.net/resource/midas/vocabularies/enrichment/graph> {
-  <https://pharos.artresearch.net/resource/midas/vocabularies/enrichment/graph> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/midas/source/MIDAS>.
-    <https://pharos.artresearch.net/resource/midas/source/MIDAS> <http://www.w3.org/2000/01/rdf-schema#label> "MIDAS".
+<https://artresearch.net/resource/khi/fcrs> {
+  <https://artresearch.net/resource/khi/fcrs> <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/khi/source/KHI>.
 }
 
 
-<https://pharos.artresearch.net/resource/geonames/enrichment/graph> {
-  <https://pharos.artresearch.net/resource/geonames/enrichment/graph> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/geonames/source/Geonames>.
-    <https://pharos.artresearch.net/resource/geonames/source/Geonames> <http://www.w3.org/2000/01/rdf-schema#label> "Geonames".
+<https://artresearch.net/resource/marburg/fcrs> {
+  <https://artresearch.net/resource/marburg/fcrs> <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/marburg/source/Marburg>.
 }
 
-<https://pharos.artresearch.net/resource/wikidata/enrichment/graph> {
-  <https://pharos.artresearch.net/resource/wikidata/enrichment/graph> <https://pharos.artresearch.net/custom/has_provider> <https://pharos.artresearch.net/resource/wikidata/source/Wikidata>.
-    <https://pharos.artresearch.net/resource/wikidata/source/Wikidata> <http://www.w3.org/2000/01/rdf-schema#label> "Wikidata".
+<https://artresearch.net/resource/hertziana/fcrs> {
+  <https://artresearch.net/resource/hertziana/fcrs> <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/hertziana/source/Hertziana>.
+}
+
+<https://artresearch.net/resource/midas/vocabularies/enrichment/graph> {
+  <https://artresearch.net/resource/midas/vocabularies/enrichment/graph> <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/midas/source/MIDAS>.
+    <https://artresearch.net/resource/midas/source/MIDAS> <http://www.w3.org/2000/01/rdf-schema#label> "MIDAS".
+}
+
+
+<https://artresearch.net/resource/geonames/enrichment/graph> {
+  <https://artresearch.net/resource/geonames/enrichment/graph> <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/geonames/source/Geonames>.
+    <https://artresearch.net/resource/geonames/source/Geonames> <http://www.w3.org/2000/01/rdf-schema#label> "Geonames".
+}
+
+<https://artresearch.net/resource/wikidata/enrichment/graph> {
+  <https://artresearch.net/resource/wikidata/enrichment/graph> <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/wikidata/source/Wikidata>.
+    <https://artresearch.net/resource/wikidata/source/Wikidata> <http://www.w3.org/2000/01/rdf-schema#label> "Wikidata".
 }

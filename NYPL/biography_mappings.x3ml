@@ -5,8 +5,8 @@
 		<namespace prefix="crm" uri="http://www.cidoc-crm.org/cidoc-crm/"/>
 		<namespace prefix="crmdig" uri="http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/"/>
 		<namespace prefix="owl" uri="http://www.w3.org/2002/07/owl#"/>
-		<namespace prefix="prefix" uri="https://pharos.artresearch.net/resource/nypl/"/>
-		<namespace prefix="custom" uri="https://pharos.artresearch.net/custom/"/>
+		<namespace prefix="prefix" uri="https://artresearch.net/resource/nypl/"/>
+		<namespace prefix="custom" uri="https://artresearch.net/custom/"/>
 	</namespaces>
 	<mappings>
 		<mapping>

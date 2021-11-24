@@ -1,26 +1,26 @@
 <http://www.researchspace.org/ontologies/platform/FieldCategories> {
-  <https://pharos.artresearch.net/category/work> <http://www.w3.org/2000/01/rdf-schema#label> "Work".
-  <https://pharos.artresearch.net/category/work> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>.
-  <https://pharos.artresearch.net/category/person> <http://www.w3.org/2000/01/rdf-schema#label>	"Person" .
-  <https://pharos.artresearch.net/category/person> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>.
-  <https://pharos.artresearch.net/category/photo> <http://www.w3.org/2000/01/rdf-schema#label>	"Photo" .
-  <https://pharos.artresearch.net/category/photo> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>.
-  <https://pharos.artresearch.net/category/institution> <http://www.w3.org/2000/01/rdf-schema#label> "Institution" .
-  <https://pharos.artresearch.net/category/institution> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>.
-  <https://pharos.artresearch.net/category/place> <http://www.w3.org/2000/01/rdf-schema#label> "Place" .
-  <https://pharos.artresearch.net/category/place> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>.
-  <https://pharos.artresearch.net/category/itatti> <http://www.w3.org/2000/01/rdf-schema#label>	"I Tatti" .
-  <https://pharos.artresearch.net/category/itatti> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>.
-  <https://pharos.artresearch.net/category/zeri> <http://www.w3.org/2000/01/rdf-schema#label>	"Zeri" .
-  <https://pharos.artresearch.net/category/zeri> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>.
-  <https://pharos.artresearch.net/category/frick> <http://www.w3.org/2000/01/rdf-schema#label>	"Frick" .
-  <https://pharos.artresearch.net/category/frick> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>.
-  <https://pharos.artresearch.net/category/marburg> <http://www.w3.org/2000/01/rdf-schema#label>	"Marburg" .
-  <https://pharos.artresearch.net/category/marburg> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>.
-  <https://pharos.artresearch.net/category/khi> <http://www.w3.org/2000/01/rdf-schema#label>	"KHI" .
-  <https://pharos.artresearch.net/category/khi> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>.
-  <https://pharos.artresearch.net/category/hertziana> <http://www.w3.org/2000/01/rdf-schema#label>	"Hertziana" .
-  <https://pharos.artresearch.net/category/hertziana> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>.
+  <https://artresearch.net/category/work> <http://www.w3.org/2000/01/rdf-schema#label> "Work".
+  <https://artresearch.net/category/work> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>.
+  <https://artresearch.net/category/person> <http://www.w3.org/2000/01/rdf-schema#label>	"Person" .
+  <https://artresearch.net/category/person> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>.
+  <https://artresearch.net/category/photo> <http://www.w3.org/2000/01/rdf-schema#label>	"Photo" .
+  <https://artresearch.net/category/photo> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>.
+  <https://artresearch.net/category/institution> <http://www.w3.org/2000/01/rdf-schema#label> "Institution" .
+  <https://artresearch.net/category/institution> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>.
+  <https://artresearch.net/category/place> <http://www.w3.org/2000/01/rdf-schema#label> "Place" .
+  <https://artresearch.net/category/place> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>.
+  <https://artresearch.net/category/itatti> <http://www.w3.org/2000/01/rdf-schema#label>	"I Tatti" .
+  <https://artresearch.net/category/itatti> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>.
+  <https://artresearch.net/category/zeri> <http://www.w3.org/2000/01/rdf-schema#label>	"Zeri" .
+  <https://artresearch.net/category/zeri> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>.
+  <https://artresearch.net/category/frick> <http://www.w3.org/2000/01/rdf-schema#label>	"Frick" .
+  <https://artresearch.net/category/frick> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>.
+  <https://artresearch.net/category/marburg> <http://www.w3.org/2000/01/rdf-schema#label>	"Marburg" .
+  <https://artresearch.net/category/marburg> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>.
+  <https://artresearch.net/category/khi> <http://www.w3.org/2000/01/rdf-schema#label>	"KHI" .
+  <https://artresearch.net/category/khi> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>.
+  <https://artresearch.net/category/hertziana> <http://www.w3.org/2000/01/rdf-schema#label>	"Hertziana" .
+  <https://artresearch.net/category/hertziana> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/ontologies/platform/FieldCategories>.
   
   <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info> <http://www.w3.org/2000/01/rdf-schema#label> "Work info".
   <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories>.
@@ -55,42 +55,42 @@
   <http://www.researchspace.org/ontologies/platform/FieldCategories/references> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories>.
 }
 
-<https://pharos.artresearch.net/resource/pharos/fundamental_categories/graph> {
-  <https://pharos.artresearch.net/resource/fc/work>  <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
-  <https://pharos.artresearch.net/resource/fc/work> a <http://www.researchspace.org/ontology/FundamentalCategory> .
-  <https://pharos.artresearch.net/resource/fc/work> <http://www.researchspace.org/ontology/hasOrder> "1"^^xsd:integer.
-  <https://pharos.artresearch.net/resource/fc/work> <http://www.researchspace.org/ontology/hasThumbnail> "/assets/images/icons/work.svg" .
-  <https://pharos.artresearch.net/resource/fc/work> <http://www.w3.org/2000/01/rdf-schema#label> "Work" .
+<https://artresearch.net/resource/pharos/fundamental_categories/graph> {
+  <https://artresearch.net/resource/fc/work>  <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
+  <https://artresearch.net/resource/fc/work> a <http://www.researchspace.org/ontology/FundamentalCategory> .
+  <https://artresearch.net/resource/fc/work> <http://www.researchspace.org/ontology/hasOrder> "1"^^xsd:integer.
+  <https://artresearch.net/resource/fc/work> <http://www.researchspace.org/ontology/hasThumbnail> "/assets/images/icons/work.svg" .
+  <https://artresearch.net/resource/fc/work> <http://www.w3.org/2000/01/rdf-schema#label> "Work" .
 
-  <https://pharos.artresearch.net/resource/fc/artist>  <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
-  <https://pharos.artresearch.net/resource/fc/artist> a <http://www.researchspace.org/ontology/FundamentalCategory> .
-  <https://pharos.artresearch.net/resource/fc/artist> <http://www.researchspace.org/ontology/hasOrder> "2"^^xsd:integer.
-  <https://pharos.artresearch.net/resource/fc/artist> <http://www.researchspace.org/ontology/hasThumbnail> "/assets/images/icons/artist.svg" .
-  <https://pharos.artresearch.net/resource/fc/artist> <http://www.w3.org/2000/01/rdf-schema#label>  "Artist"  .
+  <https://artresearch.net/resource/fc/artist>  <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
+  <https://artresearch.net/resource/fc/artist> a <http://www.researchspace.org/ontology/FundamentalCategory> .
+  <https://artresearch.net/resource/fc/artist> <http://www.researchspace.org/ontology/hasOrder> "2"^^xsd:integer.
+  <https://artresearch.net/resource/fc/artist> <http://www.researchspace.org/ontology/hasThumbnail> "/assets/images/icons/artist.svg" .
+  <https://artresearch.net/resource/fc/artist> <http://www.w3.org/2000/01/rdf-schema#label>  "Artist"  .
 
-  <https://pharos.artresearch.net/resource/custom/fc/photo>  <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
-  <https://pharos.artresearch.net/resource/custom/fc/photo> a <http://www.researchspace.org/ontology/FundamentalCategory> .
-  <https://pharos.artresearch.net/resource/custom/fc/photo> <http://www.researchspace.org/ontology/hasOrder> "3"^^xsd:integer.
-  <https://pharos.artresearch.net/resource/custom/fc/photo> <http://www.researchspace.org/ontology/hasThumbnail> "/assets/images/icons/photo.svg" .
-  <https://pharos.artresearch.net/resource/custom/fc/photo> <http://www.w3.org/2000/01/rdf-schema#label>  "Photo" .
+  <https://artresearch.net/resource/custom/fc/photo>  <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
+  <https://artresearch.net/resource/custom/fc/photo> a <http://www.researchspace.org/ontology/FundamentalCategory> .
+  <https://artresearch.net/resource/custom/fc/photo> <http://www.researchspace.org/ontology/hasOrder> "3"^^xsd:integer.
+  <https://artresearch.net/resource/custom/fc/photo> <http://www.researchspace.org/ontology/hasThumbnail> "/assets/images/icons/photo.svg" .
+  <https://artresearch.net/resource/custom/fc/photo> <http://www.w3.org/2000/01/rdf-schema#label>  "Photo" .
 
-  <https://pharos.artresearch.net/resource/fc/photographer>  <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
-  <https://pharos.artresearch.net/resource/fc/photographer> a <http://www.researchspace.org/ontology/FundamentalCategory> .
-  <https://pharos.artresearch.net/resource/fc/photographer> <http://www.researchspace.org/ontology/hasOrder> "4"^^xsd:integer.
-  <https://pharos.artresearch.net/resource/fc/photographer> <http://www.researchspace.org/ontology/hasThumbnail>  "/assets/images/icons/photographer.svg" .
-  <https://pharos.artresearch.net/resource/fc/photographer> <http://www.w3.org/2000/01/rdf-schema#label>  "Photographer" .
+  <https://artresearch.net/resource/fc/photographer>  <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
+  <https://artresearch.net/resource/fc/photographer> a <http://www.researchspace.org/ontology/FundamentalCategory> .
+  <https://artresearch.net/resource/fc/photographer> <http://www.researchspace.org/ontology/hasOrder> "4"^^xsd:integer.
+  <https://artresearch.net/resource/fc/photographer> <http://www.researchspace.org/ontology/hasThumbnail>  "/assets/images/icons/photographer.svg" .
+  <https://artresearch.net/resource/fc/photographer> <http://www.w3.org/2000/01/rdf-schema#label>  "Photographer" .
 
-  <https://pharos.artresearch.net/resource/fc/institution>  <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
-  <https://pharos.artresearch.net/resource/fc/institution> a <http://www.researchspace.org/ontology/FundamentalCategory> .
-  <https://pharos.artresearch.net/resource/fc/institution> <http://www.researchspace.org/ontology/hasOrder> "5"^^xsd:integer.
-  <https://pharos.artresearch.net/resource/fc/institution> <http://www.researchspace.org/ontology/hasThumbnail>  "/assets/images/icons/repository.svg" .
-  <https://pharos.artresearch.net/resource/fc/institution> <http://www.w3.org/2000/01/rdf-schema#label>  "Repository" .
+  <https://artresearch.net/resource/fc/institution>  <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
+  <https://artresearch.net/resource/fc/institution> a <http://www.researchspace.org/ontology/FundamentalCategory> .
+  <https://artresearch.net/resource/fc/institution> <http://www.researchspace.org/ontology/hasOrder> "5"^^xsd:integer.
+  <https://artresearch.net/resource/fc/institution> <http://www.researchspace.org/ontology/hasThumbnail>  "/assets/images/icons/repository.svg" .
+  <https://artresearch.net/resource/fc/institution> <http://www.w3.org/2000/01/rdf-schema#label>  "Repository" .
 
-  <https://pharos.artresearch.net/resource/fc/place>  <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
-  <https://pharos.artresearch.net/resource/fc/place> a <http://www.researchspace.org/ontology/FundamentalCategory> .
-  <https://pharos.artresearch.net/resource/fc/place> <http://www.researchspace.org/ontology/hasOrder> "6"^^xsd:integer.
-  <https://pharos.artresearch.net/resource/fc/place> <http://www.researchspace.org/ontology/hasThumbnail>  "/assets/images/icons/place.svg" .
-  <https://pharos.artresearch.net/resource/fc/place> <http://www.w3.org/2000/01/rdf-schema#label>  "Place" .
+  <https://artresearch.net/resource/fc/place>  <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
+  <https://artresearch.net/resource/fc/place> a <http://www.researchspace.org/ontology/FundamentalCategory> .
+  <https://artresearch.net/resource/fc/place> <http://www.researchspace.org/ontology/hasOrder> "6"^^xsd:integer.
+  <https://artresearch.net/resource/fc/place> <http://www.researchspace.org/ontology/hasThumbnail>  "/assets/images/icons/place.svg" .
+  <https://artresearch.net/resource/fc/place> <http://www.w3.org/2000/01/rdf-schema#label>  "Place" .
 
   <http://www.cidoc-crm.org/cidoc-crm/E55_Type>  <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
   <http://www.cidoc-crm.org/cidoc-crm/E55_Type> a <http://www.researchspace.org/ontology/FundamentalCategory> .
@@ -98,11 +98,11 @@
   <http://www.cidoc-crm.org/cidoc-crm/E55_Type> <http://www.researchspace.org/ontology/hasThumbnail> "/assets/images/icons/concept.svg" .
   <http://www.cidoc-crm.org/cidoc-crm/E55_Type> <http://www.w3.org/2000/01/rdf-schema#label>  "Type" .
 
-  <https://pharos.artresearch.net/resource/custom/fc/subject> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
-  <https://pharos.artresearch.net/resource/custom/fc/subject> a <http://www.researchspace.org/ontology/FundamentalCategory> .
-  <https://pharos.artresearch.net/resource/custom/fc/subject> <http://www.researchspace.org/ontology/hasOrder> "8"^^xsd:integer.
-  <https://pharos.artresearch.net/resource/custom/fc/subject> <http://www.researchspace.org/ontology/hasThumbnail> "/assets/images/icons/subject.svg" .
-  <https://pharos.artresearch.net/resource/custom/fc/subject> <http://www.w3.org/2000/01/rdf-schema#label>  "Subject" .
+  <https://artresearch.net/resource/custom/fc/subject> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
+  <https://artresearch.net/resource/custom/fc/subject> a <http://www.researchspace.org/ontology/FundamentalCategory> .
+  <https://artresearch.net/resource/custom/fc/subject> <http://www.researchspace.org/ontology/hasOrder> "8"^^xsd:integer.
+  <https://artresearch.net/resource/custom/fc/subject> <http://www.researchspace.org/ontology/hasThumbnail> "/assets/images/icons/subject.svg" .
+  <https://artresearch.net/resource/custom/fc/subject> <http://www.w3.org/2000/01/rdf-schema#label>  "Subject" .
 
   <http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
   <http://www.w3.org/2001/XMLSchema#date> a <http://www.researchspace.org/ontology/FundamentalCategory> .
@@ -110,354 +110,354 @@
   <http://www.w3.org/2001/XMLSchema#date> <http://www.researchspace.org/ontology/hasThumbnail> "/assets/images/icons/date.svg" .
   <http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/2000/01/rdf-schema#label>  "Date" .
 
-  <https://pharos.artresearch.net/resource/fc/material> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
-  <https://pharos.artresearch.net/resource/fc/material> a <http://www.researchspace.org/ontology/FundamentalCategory> .
-  <https://pharos.artresearch.net/resource/fc/material> <http://www.researchspace.org/ontology/hasOrder> "10"^^xsd:integer.
-  <https://pharos.artresearch.net/resource/fc/material> <http://www.researchspace.org/ontology/hasThumbnail> "/assets/images/icons/material.svg" .
-  <https://pharos.artresearch.net/resource/fc/material> <http://www.w3.org/2000/01/rdf-schema#label>  "Material" .
+  <https://artresearch.net/resource/fc/material> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
+  <https://artresearch.net/resource/fc/material> a <http://www.researchspace.org/ontology/FundamentalCategory> .
+  <https://artresearch.net/resource/fc/material> <http://www.researchspace.org/ontology/hasOrder> "10"^^xsd:integer.
+  <https://artresearch.net/resource/fc/material> <http://www.researchspace.org/ontology/hasThumbnail> "/assets/images/icons/material.svg" .
+  <https://artresearch.net/resource/fc/material> <http://www.w3.org/2000/01/rdf-schema#label>  "Material" .
 
-  <https://pharos.artresearch.net/resource/fc/technique> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
-  <https://pharos.artresearch.net/resource/fc/technique> a <http://www.researchspace.org/ontology/FundamentalCategory> .
-  <https://pharos.artresearch.net/resource/fc/technique> <http://www.researchspace.org/ontology/hasOrder> "11"^^xsd:integer.
-  <https://pharos.artresearch.net/resource/fc/technique> <http://www.researchspace.org/ontology/hasThumbnail> "/assets/images/icons/technique.svg" .
-  <https://pharos.artresearch.net/resource/fc/technique> <http://www.w3.org/2000/01/rdf-schema#label>  "Technique" .
+  <https://artresearch.net/resource/fc/technique> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
+  <https://artresearch.net/resource/fc/technique> a <http://www.researchspace.org/ontology/FundamentalCategory> .
+  <https://artresearch.net/resource/fc/technique> <http://www.researchspace.org/ontology/hasOrder> "11"^^xsd:integer.
+  <https://artresearch.net/resource/fc/technique> <http://www.researchspace.org/ontology/hasThumbnail> "/assets/images/icons/technique.svg" .
+  <https://artresearch.net/resource/fc/technique> <http://www.w3.org/2000/01/rdf-schema#label>  "Technique" .
 
-  <https://pharos.artresearch.net/resource/fc/gender> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
-  <https://pharos.artresearch.net/resource/fc/gender> a <http://www.researchspace.org/ontology/FundamentalCategory> .
-  <https://pharos.artresearch.net/resource/fc/gender> <http://www.researchspace.org/ontology/hasOrder> "12"^^xsd:integer.
-  <https://pharos.artresearch.net/resource/fc/gender> <http://www.researchspace.org/ontology/hasThumbnail> "/assets/images/icons/gender.svg" .
-  <https://pharos.artresearch.net/resource/fc/gender> <http://www.w3.org/2000/01/rdf-schema#label>  "Gender".
+  <https://artresearch.net/resource/fc/gender> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
+  <https://artresearch.net/resource/fc/gender> a <http://www.researchspace.org/ontology/FundamentalCategory> .
+  <https://artresearch.net/resource/fc/gender> <http://www.researchspace.org/ontology/hasOrder> "12"^^xsd:integer.
+  <https://artresearch.net/resource/fc/gender> <http://www.researchspace.org/ontology/hasThumbnail> "/assets/images/icons/gender.svg" .
+  <https://artresearch.net/resource/fc/gender> <http://www.w3.org/2000/01/rdf-schema#label>  "Gender".
 
-  <https://pharos.artresearch.net/resource/fc/nationality> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
-  <https://pharos.artresearch.net/resource/fc/nationality> a <http://www.researchspace.org/ontology/FundamentalCategory> .
-  <https://pharos.artresearch.net/resource/fc/nationality> <http://www.researchspace.org/ontology/hasOrder> "13"^^xsd:integer.
-  <https://pharos.artresearch.net/resource/fc/nationality> <http://www.researchspace.org/ontology/hasThumbnail> "/assets/images/icons/nationality.svg" .
-  <https://pharos.artresearch.net/resource/fc/nationality> <http://www.w3.org/2000/01/rdf-schema#label>  "Nationality".
+  <https://artresearch.net/resource/fc/nationality> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
+  <https://artresearch.net/resource/fc/nationality> a <http://www.researchspace.org/ontology/FundamentalCategory> .
+  <https://artresearch.net/resource/fc/nationality> <http://www.researchspace.org/ontology/hasOrder> "13"^^xsd:integer.
+  <https://artresearch.net/resource/fc/nationality> <http://www.researchspace.org/ontology/hasThumbnail> "/assets/images/icons/nationality.svg" .
+  <https://artresearch.net/resource/fc/nationality> <http://www.w3.org/2000/01/rdf-schema#label>  "Nationality".
 
   # to be deleted after reconciliation of institutions
-  <https://pharos.artresearch.net/resource/custom/fc/institution>  <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
-  <https://pharos.artresearch.net/resource/custom/fc/institution> a <http://www.researchspace.org/ontology/FundamentalCategory> .
-  <https://pharos.artresearch.net/resource/custom/fc/institution> <http://www.researchspace.org/ontology/hasOrder> "14"^^xsd:integer.
-  <https://pharos.artresearch.net/resource/custom/fc/institution> <http://www.researchspace.org/ontology/hasThumbnail>  "/assets/images/icons/institution.svg" .
-  <https://pharos.artresearch.net/resource/custom/fc/institution> <http://www.w3.org/2000/01/rdf-schema#label>  "Photo Archive" .
+  <https://artresearch.net/resource/custom/fc/institution>  <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
+  <https://artresearch.net/resource/custom/fc/institution> a <http://www.researchspace.org/ontology/FundamentalCategory> .
+  <https://artresearch.net/resource/custom/fc/institution> <http://www.researchspace.org/ontology/hasOrder> "14"^^xsd:integer.
+  <https://artresearch.net/resource/custom/fc/institution> <http://www.researchspace.org/ontology/hasThumbnail>  "/assets/images/icons/institution.svg" .
+  <https://artresearch.net/resource/custom/fc/institution> <http://www.w3.org/2000/01/rdf-schema#label>  "Photo Archive" .
 
   # to be deleted after reconciliation of techniques
-  <https://pharos.artresearch.net/resource/custom/fc/technique> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
-  <https://pharos.artresearch.net/resource/custom/fc/technique> a <http://www.researchspace.org/ontology/FundamentalCategory> .
-  <https://pharos.artresearch.net/resource/custom/fc/technique> <http://www.researchspace.org/ontology/hasOrder> "15"^^xsd:integer.
-  <https://pharos.artresearch.net/resource/custom/fc/technique> <http://www.researchspace.org/ontology/hasThumbnail> "/assets/images/icons/technique.svg" .
-  <https://pharos.artresearch.net/resource/custom/fc/technique> <http://www.w3.org/2000/01/rdf-schema#label>  "Technique" .
+  <https://artresearch.net/resource/custom/fc/technique> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
+  <https://artresearch.net/resource/custom/fc/technique> a <http://www.researchspace.org/ontology/FundamentalCategory> .
+  <https://artresearch.net/resource/custom/fc/technique> <http://www.researchspace.org/ontology/hasOrder> "15"^^xsd:integer.
+  <https://artresearch.net/resource/custom/fc/technique> <http://www.researchspace.org/ontology/hasThumbnail> "/assets/images/icons/technique.svg" .
+  <https://artresearch.net/resource/custom/fc/technique> <http://www.w3.org/2000/01/rdf-schema#label>  "Technique" .
 
     # to be deleted after reconciliation of techniques
-  <https://pharos.artresearch.net/resource/fc/Technique> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
-  <https://pharos.artresearch.net/resource/fc/Technique> a <http://www.researchspace.org/ontology/FundamentalCategory> .
-  <https://pharos.artresearch.net/resource/fc/Technique> <http://www.researchspace.org/ontology/hasOrder> "19"^^xsd:integer.
-  <https://pharos.artresearch.net/resource/fc/Technique> <http://www.researchspace.org/ontology/hasThumbnail> "/assets/images/icons/technique.svg" .
-  <https://pharos.artresearch.net/resource/fc/Technique> <http://www.w3.org/2000/01/rdf-schema#label>  "Process" .
+  <https://artresearch.net/resource/fc/Technique> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
+  <https://artresearch.net/resource/fc/Technique> a <http://www.researchspace.org/ontology/FundamentalCategory> .
+  <https://artresearch.net/resource/fc/Technique> <http://www.researchspace.org/ontology/hasOrder> "19"^^xsd:integer.
+  <https://artresearch.net/resource/fc/Technique> <http://www.researchspace.org/ontology/hasThumbnail> "/assets/images/icons/technique.svg" .
+  <https://artresearch.net/resource/fc/Technique> <http://www.w3.org/2000/01/rdf-schema#label>  "Process" .
 
-  <https://pharos.artresearch.net/resource/fc/person>  <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
-  <https://pharos.artresearch.net/resource/fc/person> a <http://www.researchspace.org/ontology/FundamentalCategory> .
-  <https://pharos.artresearch.net/resource/fc/person> <http://www.researchspace.org/ontology/hasOrder> "16"^^xsd:integer.
-  <https://pharos.artresearch.net/resource/fc/person> <http://www.researchspace.org/ontology/hasThumbnail> "/assets/images/icons/person.svg" .
-  <https://pharos.artresearch.net/resource/fc/person> <http://www.w3.org/2000/01/rdf-schema#label>  "Person"  .
+  <https://artresearch.net/resource/fc/person>  <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
+  <https://artresearch.net/resource/fc/person> a <http://www.researchspace.org/ontology/FundamentalCategory> .
+  <https://artresearch.net/resource/fc/person> <http://www.researchspace.org/ontology/hasOrder> "16"^^xsd:integer.
+  <https://artresearch.net/resource/fc/person> <http://www.researchspace.org/ontology/hasThumbnail> "/assets/images/icons/person.svg" .
+  <https://artresearch.net/resource/fc/person> <http://www.w3.org/2000/01/rdf-schema#label>  "Person"  .
 
-  <https://pharos.artresearch.net/resource/fc/copyright_status>  <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
-  <https://pharos.artresearch.net/resource/fc/copyright_status> a <http://www.researchspace.org/ontology/FundamentalCategory> .
-  <https://pharos.artresearch.net/resource/fc/copyright_status> <http://www.researchspace.org/ontology/hasOrder> "18"^^xsd:integer.
-  <https://pharos.artresearch.net/resource/fc/copyright_status> <http://www.researchspace.org/ontology/hasThumbnail> "/assets/images/icons/copyright.svg" .
-  <https://pharos.artresearch.net/resource/fc/copyright_status> <http://www.w3.org/2000/01/rdf-schema#label>  "Copyright Status"  .
+  <https://artresearch.net/resource/fc/copyright_status>  <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories> .
+  <https://artresearch.net/resource/fc/copyright_status> a <http://www.researchspace.org/ontology/FundamentalCategory> .
+  <https://artresearch.net/resource/fc/copyright_status> <http://www.researchspace.org/ontology/hasOrder> "18"^^xsd:integer.
+  <https://artresearch.net/resource/fc/copyright_status> <http://www.researchspace.org/ontology/hasThumbnail> "/assets/images/icons/copyright.svg" .
+  <https://artresearch.net/resource/fc/copyright_status> <http://www.w3.org/2000/01/rdf-schema#label>  "Copyright Status"  .
 
 } 
 
-<https://pharos.artresearch.net/resource/pharos/fundamental_relationships/graph> {
-  <https://pharos.artresearch.net/resource/fr/Work_created_from_Artist> <http://www.w3.org/2000/01/rdf-schema#label> "created by" .
-  <https://pharos.artresearch.net/resource/fr/Work_created_from_Artist> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/work> .
-  <https://pharos.artresearch.net/resource/fr/Work_created_from_Artist> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/artist> .
+<https://artresearch.net/resource/pharos/fundamental_relationships/graph> {
+  <https://artresearch.net/resource/fr/Work_created_from_Artist> <http://www.w3.org/2000/01/rdf-schema#label> "created by" .
+  <https://artresearch.net/resource/fr/Work_created_from_Artist> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/work> .
+  <https://artresearch.net/resource/fr/Work_created_from_Artist> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/artist> .
 
-  <https://pharos.artresearch.net/resource/fr/Work_influenced_by_Artist> <http://www.w3.org/2000/01/rdf-schema#label> "influenced by" .
-  <https://pharos.artresearch.net/resource/fr/Work_influenced_by_Artist> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/work> .
-  <https://pharos.artresearch.net/resource/fr/Work_influenced_by_Artist> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/artist> .
+  <https://artresearch.net/resource/fr/Work_influenced_by_Artist> <http://www.w3.org/2000/01/rdf-schema#label> "influenced by" .
+  <https://artresearch.net/resource/fr/Work_influenced_by_Artist> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/work> .
+  <https://artresearch.net/resource/fr/Work_influenced_by_Artist> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/artist> .
 
-  <https://pharos.artresearch.net/resource/fr/Work_created_by_student_of_Artist> <http://www.w3.org/2000/01/rdf-schema#label> "created by student of" .
-  <https://pharos.artresearch.net/resource/fr/Work_created_by_student_of_Artist> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/work> .
-  <https://pharos.artresearch.net/resource/fr/Work_created_by_student_of_Artist> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/artist> .
+  <https://artresearch.net/resource/fr/Work_created_by_student_of_Artist> <http://www.w3.org/2000/01/rdf-schema#label> "created by student of" .
+  <https://artresearch.net/resource/fr/Work_created_by_student_of_Artist> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/work> .
+  <https://artresearch.net/resource/fr/Work_created_by_student_of_Artist> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/artist> .
 
-  <https://pharos.artresearch.net/resource/fr/Work_kept_by_Institution> <http://www.w3.org/2000/01/rdf-schema#label> "held by" .
-  <https://pharos.artresearch.net/resource/fr/Work_kept_by_Institution> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/work> .
-  <https://pharos.artresearch.net/resource/fr/Work_kept_by_Institution> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/institution> .
+  <https://artresearch.net/resource/fr/Work_kept_by_Institution> <http://www.w3.org/2000/01/rdf-schema#label> "held by" .
+  <https://artresearch.net/resource/fr/Work_kept_by_Institution> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/work> .
+  <https://artresearch.net/resource/fr/Work_kept_by_Institution> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/institution> .
 
-  <https://pharos.artresearch.net/resource/fr/Work_has_provider_Institution> <http://www.w3.org/2000/01/rdf-schema#label> "is documented by" .
-  <https://pharos.artresearch.net/resource/fr/Work_has_provider_Institution> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/work> .
-  <https://pharos.artresearch.net/resource/fr/Work_has_provider_Institution> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/custom/fc/institution> .
+  <https://artresearch.net/resource/fr/Work_has_provider_Institution> <http://www.w3.org/2000/01/rdf-schema#label> "is documented by" .
+  <https://artresearch.net/resource/fr/Work_has_provider_Institution> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/work> .
+  <https://artresearch.net/resource/fr/Work_has_provider_Institution> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/custom/fc/institution> .
 
-  <https://pharos.artresearch.net/resource/fr/Work_from_Place> <http://www.w3.org/2000/01/rdf-schema#label> "has location" .
-  <https://pharos.artresearch.net/resource/fr/Work_from_Place> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/work> .
-  <https://pharos.artresearch.net/resource/fr/Work_from_Place> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/place> .
+  <https://artresearch.net/resource/fr/Work_from_Place> <http://www.w3.org/2000/01/rdf-schema#label> "has location" .
+  <https://artresearch.net/resource/fr/Work_from_Place> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/work> .
+  <https://artresearch.net/resource/fr/Work_from_Place> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/place> .
 
-  <https://pharos.artresearch.net/resource/fr/Work_shows_Subject> <http://www.w3.org/2000/01/rdf-schema#label> "depicts" .
-  <https://pharos.artresearch.net/resource/fr/Work_shows_Subject> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/work> .
-  <https://pharos.artresearch.net/resource/fr/Work_shows_Subject> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/custom/fc/subject> .
+  <https://artresearch.net/resource/fr/Work_shows_Subject> <http://www.w3.org/2000/01/rdf-schema#label> "depicts" .
+  <https://artresearch.net/resource/fr/Work_shows_Subject> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/work> .
+  <https://artresearch.net/resource/fr/Work_shows_Subject> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/custom/fc/subject> .
 
-  <https://pharos.artresearch.net/resource/fr/Work_depicted_by_Photo> <http://www.w3.org/2000/01/rdf-schema#label> "depicted by" .
-  <https://pharos.artresearch.net/resource/fr/Work_depicted_by_Photo> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/work> .
-  <https://pharos.artresearch.net/resource/fr/Work_depicted_by_Photo> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/custom/fc/photo> .
+  <https://artresearch.net/resource/fr/Work_depicted_by_Photo> <http://www.w3.org/2000/01/rdf-schema#label> "depicted by" .
+  <https://artresearch.net/resource/fr/Work_depicted_by_Photo> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/work> .
+  <https://artresearch.net/resource/fr/Work_depicted_by_Photo> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/custom/fc/photo> .
 
   <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://www.w3.org/2000/01/rdf-schema#label> "has type" .
-  <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/work> .
+  <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/work> .
   <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://www.researchspace.org/ontology/hasRange> <http://www.cidoc-crm.org/cidoc-crm/E55_Type> .
   
-  <https://pharos.artresearch.net/resource/fr/Work_from_Date> <http://www.w3.org/2000/01/rdf-schema#label> "has production" .
-  <https://pharos.artresearch.net/resource/fr/Work_from_Date> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/work> .
-  <https://pharos.artresearch.net/resource/fr/Work_from_Date> <http://www.researchspace.org/ontology/hasRange> <http://www.w3.org/2001/XMLSchema#date> .
+  <https://artresearch.net/resource/fr/Work_from_Date> <http://www.w3.org/2000/01/rdf-schema#label> "has production" .
+  <https://artresearch.net/resource/fr/Work_from_Date> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/work> .
+  <https://artresearch.net/resource/fr/Work_from_Date> <http://www.researchspace.org/ontology/hasRange> <http://www.w3.org/2001/XMLSchema#date> .
 
-  <https://pharos.artresearch.net/resource/fr/Work_to_Date> <http://www.w3.org/2000/01/rdf-schema#label> "to" .
-  <https://pharos.artresearch.net/resource/fr/Work_to_Date> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/work> .
-  <https://pharos.artresearch.net/resource/fr/Work_to_Date> <http://www.researchspace.org/ontology/hasRange> <http://www.w3.org/2001/XMLSchema#date> .
+  <https://artresearch.net/resource/fr/Work_to_Date> <http://www.w3.org/2000/01/rdf-schema#label> "to" .
+  <https://artresearch.net/resource/fr/Work_to_Date> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/work> .
+  <https://artresearch.net/resource/fr/Work_to_Date> <http://www.researchspace.org/ontology/hasRange> <http://www.w3.org/2001/XMLSchema#date> .
 
-  <https://pharos.artresearch.net/resource/fr/Work_has_modification_Date> <http://www.w3.org/2000/01/rdf-schema#label> "has modification" .
-  <https://pharos.artresearch.net/resource/fr/Work_has_modification_Date> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/work> .
-  <https://pharos.artresearch.net/resource/fr/Work_has_modification_Date> <http://www.researchspace.org/ontology/hasRange> <http://www.w3.org/2001/XMLSchema#date> .
+  <https://artresearch.net/resource/fr/Work_has_modification_Date> <http://www.w3.org/2000/01/rdf-schema#label> "has modification" .
+  <https://artresearch.net/resource/fr/Work_has_modification_Date> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/work> .
+  <https://artresearch.net/resource/fr/Work_has_modification_Date> <http://www.researchspace.org/ontology/hasRange> <http://www.w3.org/2001/XMLSchema#date> .
 
-  <https://pharos.artresearch.net/resource/fr/Work_has_destruction_Date> <http://www.w3.org/2000/01/rdf-schema#label> "has destruction" .
-  <https://pharos.artresearch.net/resource/fr/Work_has_destruction_Date> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/work> .
-  <https://pharos.artresearch.net/resource/fr/Work_has_destruction_Date> <http://www.researchspace.org/ontology/hasRange> <http://www.w3.org/2001/XMLSchema#date> .
+  <https://artresearch.net/resource/fr/Work_has_destruction_Date> <http://www.w3.org/2000/01/rdf-schema#label> "has destruction" .
+  <https://artresearch.net/resource/fr/Work_has_destruction_Date> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/work> .
+  <https://artresearch.net/resource/fr/Work_has_destruction_Date> <http://www.researchspace.org/ontology/hasRange> <http://www.w3.org/2001/XMLSchema#date> .
 
-  <https://pharos.artresearch.net/resource/fr/Work_has_acquisition_Date> <http://www.w3.org/2000/01/rdf-schema#label> "has acquisition" .
-  <https://pharos.artresearch.net/resource/fr/Work_has_acquisition_Date> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/work> .
-  <https://pharos.artresearch.net/resource/fr/Work_has_acquisition_Date> <http://www.researchspace.org/ontology/hasRange> <http://www.w3.org/2001/XMLSchema#date> .
+  <https://artresearch.net/resource/fr/Work_has_acquisition_Date> <http://www.w3.org/2000/01/rdf-schema#label> "has acquisition" .
+  <https://artresearch.net/resource/fr/Work_has_acquisition_Date> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/work> .
+  <https://artresearch.net/resource/fr/Work_has_acquisition_Date> <http://www.researchspace.org/ontology/hasRange> <http://www.w3.org/2001/XMLSchema#date> .
   
-  <https://pharos.artresearch.net/resource/fr/Work_consists_of_Material> <http://www.w3.org/2000/01/rdf-schema#label> "consists of" .
-  <https://pharos.artresearch.net/resource/fr/Work_consists_of_Material> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/work> .
-  <https://pharos.artresearch.net/resource/fr/Work_consists_of_Material> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/material> .
+  <https://artresearch.net/resource/fr/Work_consists_of_Material> <http://www.w3.org/2000/01/rdf-schema#label> "consists of" .
+  <https://artresearch.net/resource/fr/Work_consists_of_Material> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/work> .
+  <https://artresearch.net/resource/fr/Work_consists_of_Material> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/material> .
   
-  <https://pharos.artresearch.net/resource/fr/Photo_consists_of_Material> <http://www.w3.org/2000/01/rdf-schema#label> "consists of" .
-  <https://pharos.artresearch.net/resource/fr/Photo_consists_of_Material> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/custom/fc/photo> .
-  <https://pharos.artresearch.net/resource/fr/Photo_consists_of_Material> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/material> .
+  <https://artresearch.net/resource/fr/Photo_consists_of_Material> <http://www.w3.org/2000/01/rdf-schema#label> "consists of" .
+  <https://artresearch.net/resource/fr/Photo_consists_of_Material> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/custom/fc/photo> .
+  <https://artresearch.net/resource/fr/Photo_consists_of_Material> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/material> .
   
-  <https://pharos.artresearch.net/resource/fr/Work_produced_using_technique_Technique> <http://www.w3.org/2000/01/rdf-schema#label> "produced using" .
-  <https://pharos.artresearch.net/resource/fr/Work_produced_using_technique_Technique> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/work> .
-  <https://pharos.artresearch.net/resource/fr/Work_produced_using_technique_Technique> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/technique> .
+  <https://artresearch.net/resource/fr/Work_produced_using_technique_Technique> <http://www.w3.org/2000/01/rdf-schema#label> "produced using" .
+  <https://artresearch.net/resource/fr/Work_produced_using_technique_Technique> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/work> .
+  <https://artresearch.net/resource/fr/Work_produced_using_technique_Technique> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/technique> .
   
-  <https://pharos.artresearch.net/resource/fr/Photo_created_by_Photographer> <http://www.w3.org/2000/01/rdf-schema#label> "created by" .
-  <https://pharos.artresearch.net/resource/fr/Photo_created_by_Photographer> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/custom/fc/photo> .
-  <https://pharos.artresearch.net/resource/fr/Photo_created_by_Photographer> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/photographer> .
+  <https://artresearch.net/resource/fr/Photo_created_by_Photographer> <http://www.w3.org/2000/01/rdf-schema#label> "created by" .
+  <https://artresearch.net/resource/fr/Photo_created_by_Photographer> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/custom/fc/photo> .
+  <https://artresearch.net/resource/fr/Photo_created_by_Photographer> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/photographer> .
 
-  <https://pharos.artresearch.net/resource/fr/Photo_has_provider_Institution> <http://www.w3.org/2000/01/rdf-schema#label> "is held by" .
-  <https://pharos.artresearch.net/resource/fr/Photo_has_provider_Institution> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/custom/fc/photo> .
-  <https://pharos.artresearch.net/resource/fr/Photo_has_provider_Institution> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/custom/fc/institution> .
+  <https://artresearch.net/resource/fr/Photo_has_provider_Institution> <http://www.w3.org/2000/01/rdf-schema#label> "is held by" .
+  <https://artresearch.net/resource/fr/Photo_has_provider_Institution> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/custom/fc/photo> .
+  <https://artresearch.net/resource/fr/Photo_has_provider_Institution> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/custom/fc/institution> .
 
-  <https://pharos.artresearch.net/resource/fr/Photo_depicts_work> <http://www.w3.org/2000/01/rdf-schema#label> "depicts" .
-  <https://pharos.artresearch.net/resource/fr/Photo_depicts_work> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/custom/fc/photo> .
-  <https://pharos.artresearch.net/resource/fr/Photo_depicts_work> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/work> .
+  <https://artresearch.net/resource/fr/Photo_depicts_work> <http://www.w3.org/2000/01/rdf-schema#label> "depicts" .
+  <https://artresearch.net/resource/fr/Photo_depicts_work> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/custom/fc/photo> .
+  <https://artresearch.net/resource/fr/Photo_depicts_work> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/work> .
   
   <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://www.w3.org/2000/01/rdf-schema#label> "has type".
-  <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/custom/fc/photo> .
+  <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/custom/fc/photo> .
   <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://www.researchspace.org/ontology/hasRange> <http://www.cidoc-crm.org/cidoc-crm/E55_Type> .
 
-  <https://pharos.artresearch.net/resource/fr/Photo_from_Date> <http://www.w3.org/2000/01/rdf-schema#label> "has production" .
-  <https://pharos.artresearch.net/resource/fr/Photo_from_Date> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/custom/fc/photo> .
-  <https://pharos.artresearch.net/resource/fr/Photo_from_Date> <http://www.researchspace.org/ontology/hasRange> <http://www.w3.org/2001/XMLSchema#date> .
+  <https://artresearch.net/resource/fr/Photo_from_Date> <http://www.w3.org/2000/01/rdf-schema#label> "has production" .
+  <https://artresearch.net/resource/fr/Photo_from_Date> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/custom/fc/photo> .
+  <https://artresearch.net/resource/fr/Photo_from_Date> <http://www.researchspace.org/ontology/hasRange> <http://www.w3.org/2001/XMLSchema#date> .
 
-  <https://pharos.artresearch.net/resource/fr/Photo_produced_using_Technique> <http://www.w3.org/2000/01/rdf-schema#label> "produced using" .
-  <https://pharos.artresearch.net/resource/fr/Photo_produced_using_Technique> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/custom/fc/photo> .
-  <https://pharos.artresearch.net/resource/fr/Photo_produced_using_Technique> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/technique> .
+  <https://artresearch.net/resource/fr/Photo_produced_using_Technique> <http://www.w3.org/2000/01/rdf-schema#label> "produced using" .
+  <https://artresearch.net/resource/fr/Photo_produced_using_Technique> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/custom/fc/photo> .
+  <https://artresearch.net/resource/fr/Photo_produced_using_Technique> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/technique> .
 
-  <https://pharos.artresearch.net/resource/fr/Artist_created_Work> <http://www.w3.org/2000/01/rdf-schema#label> "created" .
-  <https://pharos.artresearch.net/resource/fr/Artist_created_Work> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/artist> .
-  <https://pharos.artresearch.net/resource/fr/Artist_created_Work> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/work> .
+  <https://artresearch.net/resource/fr/Artist_created_Work> <http://www.w3.org/2000/01/rdf-schema#label> "created" .
+  <https://artresearch.net/resource/fr/Artist_created_Work> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/artist> .
+  <https://artresearch.net/resource/fr/Artist_created_Work> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/work> .
 
-  <https://pharos.artresearch.net/resource/fr/Artist_archives_at_Repository> <http://www.w3.org/2000/01/rdf-schema#label> "archives at" .
-  <https://pharos.artresearch.net/resource/fr/Artist_archives_at_Repository> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/artist> .
-  <https://pharos.artresearch.net/resource/fr/Artist_archives_at_Repository> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/institution> .
+  <https://artresearch.net/resource/fr/Artist_archives_at_Repository> <http://www.w3.org/2000/01/rdf-schema#label> "archives at" .
+  <https://artresearch.net/resource/fr/Artist_archives_at_Repository> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/artist> .
+  <https://artresearch.net/resource/fr/Artist_archives_at_Repository> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/institution> .
   
-  <https://pharos.artresearch.net/resource/fr/Artist_has_Copyright_Status> <http://www.w3.org/2000/01/rdf-schema#label> "has status" .
-  <https://pharos.artresearch.net/resource/fr/Artist_has_Copyright_Status> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/artist> .
-  <https://pharos.artresearch.net/resource/fr/Artist_has_Copyright_Status> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/copyright_status> .
+  <https://artresearch.net/resource/fr/Artist_has_Copyright_Status> <http://www.w3.org/2000/01/rdf-schema#label> "has status" .
+  <https://artresearch.net/resource/fr/Artist_has_Copyright_Status> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/artist> .
+  <https://artresearch.net/resource/fr/Artist_has_Copyright_Status> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/copyright_status> .
 
-  <https://pharos.artresearch.net/resource/fr/Artist_influenced_creation_of_Work> <http://www.w3.org/2000/01/rdf-schema#label> "influenced creation of" .
-  <https://pharos.artresearch.net/resource/fr/Artist_influenced_creation_of_Work> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/artist> .
-  <https://pharos.artresearch.net/resource/fr/Artist_influenced_creation_of_Work> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/work> .
+  <https://artresearch.net/resource/fr/Artist_influenced_creation_of_Work> <http://www.w3.org/2000/01/rdf-schema#label> "influenced creation of" .
+  <https://artresearch.net/resource/fr/Artist_influenced_creation_of_Work> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/artist> .
+  <https://artresearch.net/resource/fr/Artist_influenced_creation_of_Work> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/work> .
 
-  <https://pharos.artresearch.net/resource/fr/Artist_influenced_Artist> <http://www.w3.org/2000/01/rdf-schema#label> "influenced" .
-  <https://pharos.artresearch.net/resource/fr/Artist_influenced_Artist> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/artist> .
-  <https://pharos.artresearch.net/resource/fr/Artist_influenced_Artist> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/artist> .
-  <https://pharos.artresearch.net/resource/fr/Artist_influenced_Artist> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/person> .
+  <https://artresearch.net/resource/fr/Artist_influenced_Artist> <http://www.w3.org/2000/01/rdf-schema#label> "influenced" .
+  <https://artresearch.net/resource/fr/Artist_influenced_Artist> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/artist> .
+  <https://artresearch.net/resource/fr/Artist_influenced_Artist> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/artist> .
+  <https://artresearch.net/resource/fr/Artist_influenced_Artist> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/person> .
 
-  <https://pharos.artresearch.net/resource/fr/Person_related_to_Person> <http://www.w3.org/2000/01/rdf-schema#label> "is related to" .
-  <https://pharos.artresearch.net/resource/fr/Person_related_to_Person> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/artist> .
-  <https://pharos.artresearch.net/resource/fr/Person_related_to_Person> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/artist> .
-  <https://pharos.artresearch.net/resource/fr/Person_related_to_Person> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/person> .
+  <https://artresearch.net/resource/fr/Person_related_to_Person> <http://www.w3.org/2000/01/rdf-schema#label> "is related to" .
+  <https://artresearch.net/resource/fr/Person_related_to_Person> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/artist> .
+  <https://artresearch.net/resource/fr/Person_related_to_Person> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/artist> .
+  <https://artresearch.net/resource/fr/Person_related_to_Person> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/person> .
 
-  <https://pharos.artresearch.net/resource/fr/Person_has_Date_of_Birth> <http://www.w3.org/2000/01/rdf-schema#label> "born in" .
-  <https://pharos.artresearch.net/resource/fr/Person_has_Date_of_Birth> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/artist> .
-  <https://pharos.artresearch.net/resource/fr/Person_has_Date_of_Birth> <http://www.researchspace.org/ontology/hasRange> <http://www.w3.org/2001/XMLSchema#date> .
+  <https://artresearch.net/resource/fr/Person_has_Date_of_Birth> <http://www.w3.org/2000/01/rdf-schema#label> "born in" .
+  <https://artresearch.net/resource/fr/Person_has_Date_of_Birth> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/artist> .
+  <https://artresearch.net/resource/fr/Person_has_Date_of_Birth> <http://www.researchspace.org/ontology/hasRange> <http://www.w3.org/2001/XMLSchema#date> .
   
-  <https://pharos.artresearch.net/resource/fr/Photographer_has_Date_of_Birth> <http://www.w3.org/2000/01/rdf-schema#label> "born in" .
-  <https://pharos.artresearch.net/resource/fr/Photographer_has_Date_of_Birth> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/photographer> .
-  <https://pharos.artresearch.net/resource/fr/Photographer_has_Date_of_Birth> <http://www.researchspace.org/ontology/hasRange> <http://www.w3.org/2001/XMLSchema#date> .
+  <https://artresearch.net/resource/fr/Photographer_has_Date_of_Birth> <http://www.w3.org/2000/01/rdf-schema#label> "born in" .
+  <https://artresearch.net/resource/fr/Photographer_has_Date_of_Birth> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/photographer> .
+  <https://artresearch.net/resource/fr/Photographer_has_Date_of_Birth> <http://www.researchspace.org/ontology/hasRange> <http://www.w3.org/2001/XMLSchema#date> .
   
-  <https://pharos.artresearch.net/resource/fr/Person_has_Date_of_Death> <http://www.w3.org/2000/01/rdf-schema#label> "died in" .
-  <https://pharos.artresearch.net/resource/fr/Person_has_Date_of_Death> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/artist> .
-  <https://pharos.artresearch.net/resource/fr/Person_has_Date_of_Death> <http://www.researchspace.org/ontology/hasRange> <http://www.w3.org/2001/XMLSchema#date> .
+  <https://artresearch.net/resource/fr/Person_has_Date_of_Death> <http://www.w3.org/2000/01/rdf-schema#label> "died in" .
+  <https://artresearch.net/resource/fr/Person_has_Date_of_Death> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/artist> .
+  <https://artresearch.net/resource/fr/Person_has_Date_of_Death> <http://www.researchspace.org/ontology/hasRange> <http://www.w3.org/2001/XMLSchema#date> .
 
-  <https://pharos.artresearch.net/resource/fr/Photographer_has_Date_of_Death> <http://www.w3.org/2000/01/rdf-schema#label> "died in" .
-  <https://pharos.artresearch.net/resource/fr/Photographer_has_Date_of_Death> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/photographer> .
-  <https://pharos.artresearch.net/resource/fr/Photographer_has_Date_of_Death> <http://www.researchspace.org/ontology/hasRange> <http://www.w3.org/2001/XMLSchema#date> .
+  <https://artresearch.net/resource/fr/Photographer_has_Date_of_Death> <http://www.w3.org/2000/01/rdf-schema#label> "died in" .
+  <https://artresearch.net/resource/fr/Photographer_has_Date_of_Death> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/photographer> .
+  <https://artresearch.net/resource/fr/Photographer_has_Date_of_Death> <http://www.researchspace.org/ontology/hasRange> <http://www.w3.org/2001/XMLSchema#date> .
 
-  <https://pharos.artresearch.net/resource/fr/Artist_from_Place> <http://www.w3.org/2000/01/rdf-schema#label> "from place" .
-  <https://pharos.artresearch.net/resource/fr/Artist_from_Place> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/artist> .
-  <https://pharos.artresearch.net/resource/fr/Artist_from_Place> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/place> .
+  <https://artresearch.net/resource/fr/Artist_from_Place> <http://www.w3.org/2000/01/rdf-schema#label> "from place" .
+  <https://artresearch.net/resource/fr/Artist_from_Place> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/artist> .
+  <https://artresearch.net/resource/fr/Artist_from_Place> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/place> .
 
-  <https://pharos.artresearch.net/resource/fr/Person_has_Place_of_Birth> <http://www.w3.org/2000/01/rdf-schema#label> "born at place" .
-  <https://pharos.artresearch.net/resource/fr/Person_has_Place_of_Birth> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/artist> .
-  <https://pharos.artresearch.net/resource/fr/Person_has_Place_of_Birth> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/place> .
+  <https://artresearch.net/resource/fr/Person_has_Place_of_Birth> <http://www.w3.org/2000/01/rdf-schema#label> "born at place" .
+  <https://artresearch.net/resource/fr/Person_has_Place_of_Birth> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/artist> .
+  <https://artresearch.net/resource/fr/Person_has_Place_of_Birth> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/place> .
 
-  <https://pharos.artresearch.net/resource/fr/Photographer_has_Place_of_Birth> <http://www.w3.org/2000/01/rdf-schema#label> "born at place" .
-  <https://pharos.artresearch.net/resource/fr/Photographer_has_Place_of_Birth> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/photographer> .
-  <https://pharos.artresearch.net/resource/fr/Photographer_has_Place_of_Birth> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/place> .
+  <https://artresearch.net/resource/fr/Photographer_has_Place_of_Birth> <http://www.w3.org/2000/01/rdf-schema#label> "born at place" .
+  <https://artresearch.net/resource/fr/Photographer_has_Place_of_Birth> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/photographer> .
+  <https://artresearch.net/resource/fr/Photographer_has_Place_of_Birth> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/place> .
 
-  <https://pharos.artresearch.net/resource/fr/Person_has_Place_of_Death> <http://www.w3.org/2000/01/rdf-schema#label> "died at place" .
-  <https://pharos.artresearch.net/resource/fr/Person_has_Place_of_Death> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/artist> .
-  <https://pharos.artresearch.net/resource/fr/Person_has_Place_of_Death> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/place> .
+  <https://artresearch.net/resource/fr/Person_has_Place_of_Death> <http://www.w3.org/2000/01/rdf-schema#label> "died at place" .
+  <https://artresearch.net/resource/fr/Person_has_Place_of_Death> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/artist> .
+  <https://artresearch.net/resource/fr/Person_has_Place_of_Death> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/place> .
 
-  <https://pharos.artresearch.net/resource/fr/Photographer_has_Place_of_Death> <http://www.w3.org/2000/01/rdf-schema#label> "died at place" .
-  <https://pharos.artresearch.net/resource/fr/Photographer_has_Place_of_Death> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/photographer> .
-  <https://pharos.artresearch.net/resource/fr/Photographer_has_Place_of_Death> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/place> .
+  <https://artresearch.net/resource/fr/Photographer_has_Place_of_Death> <http://www.w3.org/2000/01/rdf-schema#label> "died at place" .
+  <https://artresearch.net/resource/fr/Photographer_has_Place_of_Death> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/photographer> .
+  <https://artresearch.net/resource/fr/Photographer_has_Place_of_Death> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/place> .
 
-  <https://pharos.artresearch.net/resource/fr/Photographer_photographed_Work> <http://www.w3.org/2000/01/rdf-schema#label> "photographed" .
-  <https://pharos.artresearch.net/resource/fr/Photographer_photographed_Work> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/photographer> .
-  <https://pharos.artresearch.net/resource/fr/Photographer_photographed_Work> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/work> .
+  <https://artresearch.net/resource/fr/Photographer_photographed_Work> <http://www.w3.org/2000/01/rdf-schema#label> "photographed" .
+  <https://artresearch.net/resource/fr/Photographer_photographed_Work> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/photographer> .
+  <https://artresearch.net/resource/fr/Photographer_photographed_Work> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/work> .
 
-  <https://pharos.artresearch.net/resource/fr/Work_photographed_by_Photographer> <http://www.w3.org/2000/01/rdf-schema#label> "photographed by" .
-  <https://pharos.artresearch.net/resource/fr/Work_photographed_by_Photographer> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/work> .
-  <https://pharos.artresearch.net/resource/fr/Work_photographed_by_Photographer> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/photographer> .
+  <https://artresearch.net/resource/fr/Work_photographed_by_Photographer> <http://www.w3.org/2000/01/rdf-schema#label> "photographed by" .
+  <https://artresearch.net/resource/fr/Work_photographed_by_Photographer> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/work> .
+  <https://artresearch.net/resource/fr/Work_photographed_by_Photographer> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/photographer> .
 
-  <https://pharos.artresearch.net/resource/fr/Photographer_created_Photo> <http://www.w3.org/2000/01/rdf-schema#label> "created" .
-  <https://pharos.artresearch.net/resource/fr/Photographer_created_Photo> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/photographer> .
-  <https://pharos.artresearch.net/resource/fr/Photographer_created_Photo> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/custom/fc/photo> .
+  <https://artresearch.net/resource/fr/Photographer_created_Photo> <http://www.w3.org/2000/01/rdf-schema#label> "created" .
+  <https://artresearch.net/resource/fr/Photographer_created_Photo> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/photographer> .
+  <https://artresearch.net/resource/fr/Photographer_created_Photo> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/custom/fc/photo> .
 
-  <https://pharos.artresearch.net/resource/fr/Photographer_used_Technique> <http://www.w3.org/2000/01/rdf-schema#label> "used" .
-  <https://pharos.artresearch.net/resource/fr/Photographer_used_Technique> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/photographer> .
-  <https://pharos.artresearch.net/resource/fr/Photographer_used_Technique> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/Technique> .
+  <https://artresearch.net/resource/fr/Photographer_used_Technique> <http://www.w3.org/2000/01/rdf-schema#label> "used" .
+  <https://artresearch.net/resource/fr/Photographer_used_Technique> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/photographer> .
+  <https://artresearch.net/resource/fr/Photographer_used_Technique> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/Technique> .
 
-  <https://pharos.artresearch.net/resource/fr/Institution_keeps_Work> <http://www.w3.org/2000/01/rdf-schema#label> "is current or former keeper of" .
-  <https://pharos.artresearch.net/resource/fr/Institution_keeps_Work> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/institution> .
-  <https://pharos.artresearch.net/resource/fr/Institution_keeps_Work> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/work> .
+  <https://artresearch.net/resource/fr/Institution_keeps_Work> <http://www.w3.org/2000/01/rdf-schema#label> "is current or former keeper of" .
+  <https://artresearch.net/resource/fr/Institution_keeps_Work> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/institution> .
+  <https://artresearch.net/resource/fr/Institution_keeps_Work> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/work> .
   
-  <https://pharos.artresearch.net/resource/fr/Institution_from_Place> <http://www.w3.org/2000/01/rdf-schema#label> "from" .
-  <https://pharos.artresearch.net/resource/fr/Institution_from_Place> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/institution> .
-  <https://pharos.artresearch.net/resource/fr/Institution_from_Place> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/place> .
+  <https://artresearch.net/resource/fr/Institution_from_Place> <http://www.w3.org/2000/01/rdf-schema#label> "from" .
+  <https://artresearch.net/resource/fr/Institution_from_Place> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/institution> .
+  <https://artresearch.net/resource/fr/Institution_from_Place> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/place> .
 
-  <https://pharos.artresearch.net/resource/fr/Place_of_Artist> <http://www.w3.org/2000/01/rdf-schema#label> "of artist" .
-  <https://pharos.artresearch.net/resource/fr/Place_of_Artist> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/place> .
-  <https://pharos.artresearch.net/resource/fr/Place_of_Artist> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/artist> .
+  <https://artresearch.net/resource/fr/Place_of_Artist> <http://www.w3.org/2000/01/rdf-schema#label> "of artist" .
+  <https://artresearch.net/resource/fr/Place_of_Artist> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/place> .
+  <https://artresearch.net/resource/fr/Place_of_Artist> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/artist> .
 
-  <https://pharos.artresearch.net/resource/fr/Place_was_birthplace_of_Artist> <http://www.w3.org/2000/01/rdf-schema#label> "was birth place of" .
-  <https://pharos.artresearch.net/resource/fr/Place_was_birthplace_of_Artist> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/place> .
-  <https://pharos.artresearch.net/resource/fr/Place_was_birthplace_of_Artist> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/artist> .
+  <https://artresearch.net/resource/fr/Place_was_birthplace_of_Artist> <http://www.w3.org/2000/01/rdf-schema#label> "was birth place of" .
+  <https://artresearch.net/resource/fr/Place_was_birthplace_of_Artist> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/place> .
+  <https://artresearch.net/resource/fr/Place_was_birthplace_of_Artist> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/artist> .
 
-  <https://pharos.artresearch.net/resource/fr/Place_was_deathplace_of_Artist> <http://www.w3.org/2000/01/rdf-schema#label> "was death place of" .
-  <https://pharos.artresearch.net/resource/fr/Place_was_deathplace_of_Artist> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/place> .
-  <https://pharos.artresearch.net/resource/fr/Place_was_deathplace_of_Artist> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/artist> .
-
-
-  <https://pharos.artresearch.net/resource/fr/Place_was_birthplace_of_Photographer> <http://www.w3.org/2000/01/rdf-schema#label> "was birth place of" .
-  <https://pharos.artresearch.net/resource/fr/Place_was_birthplace_of_Photographer> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/place> .
-  <https://pharos.artresearch.net/resource/fr/Place_was_birthplace_of_Photographer> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/photographer> .
-
-  <https://pharos.artresearch.net/resource/fr/Place_was_deathplace_of_Photographer> <http://www.w3.org/2000/01/rdf-schema#label> "was death place of" .
-  <https://pharos.artresearch.net/resource/fr/Place_was_deathplace_of_Photographer> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/place> .
-  <https://pharos.artresearch.net/resource/fr/Place_was_deathplace_of_Photographer> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/photographer> .
+  <https://artresearch.net/resource/fr/Place_was_deathplace_of_Artist> <http://www.w3.org/2000/01/rdf-schema#label> "was death place of" .
+  <https://artresearch.net/resource/fr/Place_was_deathplace_of_Artist> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/place> .
+  <https://artresearch.net/resource/fr/Place_was_deathplace_of_Artist> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/artist> .
 
 
-  <https://pharos.artresearch.net/resource/fr/Place_was_worklocation_of_Artist> <http://www.w3.org/2000/01/rdf-schema#label> "was work location of" .
-  <https://pharos.artresearch.net/resource/fr/Place_was_worklocation_of_Artist> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/place> .
-  <https://pharos.artresearch.net/resource/fr/Place_was_worklocation_of_Artist> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/artist> .
+  <https://artresearch.net/resource/fr/Place_was_birthplace_of_Photographer> <http://www.w3.org/2000/01/rdf-schema#label> "was birth place of" .
+  <https://artresearch.net/resource/fr/Place_was_birthplace_of_Photographer> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/place> .
+  <https://artresearch.net/resource/fr/Place_was_birthplace_of_Photographer> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/photographer> .
 
-  <https://pharos.artresearch.net/resource/fr/Place_of_Work> <http://www.w3.org/2000/01/rdf-schema#label> "is current or former location of" .
-  <https://pharos.artresearch.net/resource/fr/Place_of_Work> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/place> .
-  <https://pharos.artresearch.net/resource/fr/Place_of_Work> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/work> .
+  <https://artresearch.net/resource/fr/Place_was_deathplace_of_Photographer> <http://www.w3.org/2000/01/rdf-schema#label> "was death place of" .
+  <https://artresearch.net/resource/fr/Place_was_deathplace_of_Photographer> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/place> .
+  <https://artresearch.net/resource/fr/Place_was_deathplace_of_Photographer> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/photographer> .
 
-  <https://pharos.artresearch.net/resource/fr/Person_has_Gender> <http://www.w3.org/2000/01/rdf-schema#label> "has gender" .
-  <https://pharos.artresearch.net/resource/fr/Person_has_Gender> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/artist> .
-  <https://pharos.artresearch.net/resource/fr/Person_has_Gender> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/gender>.
 
-  <https://pharos.artresearch.net/resource/fr/Photographer_has_Gender> <http://www.w3.org/2000/01/rdf-schema#label> "has gender" .
-  <https://pharos.artresearch.net/resource/fr/Photographer_has_Gender> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/photographer> .
-  <https://pharos.artresearch.net/resource/fr/Photographer_has_Gender> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/gender>.
+  <https://artresearch.net/resource/fr/Place_was_worklocation_of_Artist> <http://www.w3.org/2000/01/rdf-schema#label> "was work location of" .
+  <https://artresearch.net/resource/fr/Place_was_worklocation_of_Artist> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/place> .
+  <https://artresearch.net/resource/fr/Place_was_worklocation_of_Artist> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/artist> .
 
-  <https://pharos.artresearch.net/resource/fr/Person_has_Nationality> <http://www.w3.org/2000/01/rdf-schema#label> "has nationality" .
-  <https://pharos.artresearch.net/resource/fr/Person_has_Nationality> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/artist> .
-  <https://pharos.artresearch.net/resource/fr/Person_has_Nationality> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/nationality>.
+  <https://artresearch.net/resource/fr/Place_of_Work> <http://www.w3.org/2000/01/rdf-schema#label> "is current or former location of" .
+  <https://artresearch.net/resource/fr/Place_of_Work> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/place> .
+  <https://artresearch.net/resource/fr/Place_of_Work> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/work> .
 
-  <https://pharos.artresearch.net/resource/fr/Photographer_has_Nationality> <http://www.w3.org/2000/01/rdf-schema#label> "has nationality" .
-  <https://pharos.artresearch.net/resource/fr/Photographer_has_Nationality> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/photographer> .
-  <https://pharos.artresearch.net/resource/fr/Photographer_has_Nationality> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/nationality>.
+  <https://artresearch.net/resource/fr/Person_has_Gender> <http://www.w3.org/2000/01/rdf-schema#label> "has gender" .
+  <https://artresearch.net/resource/fr/Person_has_Gender> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/artist> .
+  <https://artresearch.net/resource/fr/Person_has_Gender> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/gender>.
+
+  <https://artresearch.net/resource/fr/Photographer_has_Gender> <http://www.w3.org/2000/01/rdf-schema#label> "has gender" .
+  <https://artresearch.net/resource/fr/Photographer_has_Gender> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/photographer> .
+  <https://artresearch.net/resource/fr/Photographer_has_Gender> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/gender>.
+
+  <https://artresearch.net/resource/fr/Person_has_Nationality> <http://www.w3.org/2000/01/rdf-schema#label> "has nationality" .
+  <https://artresearch.net/resource/fr/Person_has_Nationality> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/artist> .
+  <https://artresearch.net/resource/fr/Person_has_Nationality> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/nationality>.
+
+  <https://artresearch.net/resource/fr/Photographer_has_Nationality> <http://www.w3.org/2000/01/rdf-schema#label> "has nationality" .
+  <https://artresearch.net/resource/fr/Photographer_has_Nationality> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/photographer> .
+  <https://artresearch.net/resource/fr/Photographer_has_Nationality> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/nationality>.
   
-  <https://pharos.artresearch.net/resource/fr/Person_student_of_Person> <http://www.w3.org/2000/01/rdf-schema#label> "student of" .
-  <https://pharos.artresearch.net/resource/fr/Person_student_of_Person> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/artist> .
-  <https://pharos.artresearch.net/resource/fr/Person_student_of_Person> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/person>.
-  <https://pharos.artresearch.net/resource/fr/Person_student_of_Person> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/artist>.
+  <https://artresearch.net/resource/fr/Person_student_of_Person> <http://www.w3.org/2000/01/rdf-schema#label> "student of" .
+  <https://artresearch.net/resource/fr/Person_student_of_Person> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/artist> .
+  <https://artresearch.net/resource/fr/Person_student_of_Person> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/person>.
+  <https://artresearch.net/resource/fr/Person_student_of_Person> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/artist>.
 
-  <https://pharos.artresearch.net/resource/fr/Person_child_of_Person> <http://www.w3.org/2000/01/rdf-schema#label> "child of" .
-  <https://pharos.artresearch.net/resource/fr/Person_child_of_Person> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/artist> .
-  <https://pharos.artresearch.net/resource/fr/Person_child_of_Person> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/person>.
-  <https://pharos.artresearch.net/resource/fr/Person_child_of_Person> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/artist>.
+  <https://artresearch.net/resource/fr/Person_child_of_Person> <http://www.w3.org/2000/01/rdf-schema#label> "child of" .
+  <https://artresearch.net/resource/fr/Person_child_of_Person> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/artist> .
+  <https://artresearch.net/resource/fr/Person_child_of_Person> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/person>.
+  <https://artresearch.net/resource/fr/Person_child_of_Person> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/artist>.
 
-  <https://pharos.artresearch.net/resource/fr/Person_parent_of_Person> <http://www.w3.org/2000/01/rdf-schema#label> "parent of" .
-  <https://pharos.artresearch.net/resource/fr/Person_parent_of_Person> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/artist> .
-  <https://pharos.artresearch.net/resource/fr/Person_parent_of_Person> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/person>.
-  <https://pharos.artresearch.net/resource/fr/Person_parent_of_Person> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/artist>.
+  <https://artresearch.net/resource/fr/Person_parent_of_Person> <http://www.w3.org/2000/01/rdf-schema#label> "parent of" .
+  <https://artresearch.net/resource/fr/Person_parent_of_Person> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/artist> .
+  <https://artresearch.net/resource/fr/Person_parent_of_Person> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/person>.
+  <https://artresearch.net/resource/fr/Person_parent_of_Person> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/artist>.
 
-  <https://pharos.artresearch.net/resource/fr/Person_sibling_of_Person> <http://www.w3.org/2000/01/rdf-schema#label> "sibling of" .
-  <https://pharos.artresearch.net/resource/fr/Person_sibling_of_Person> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/artist> .
-  <https://pharos.artresearch.net/resource/fr/Person_sibling_of_Person> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/person>.
-  <https://pharos.artresearch.net/resource/fr/Person_sibling_of_Person> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/artist>.
+  <https://artresearch.net/resource/fr/Person_sibling_of_Person> <http://www.w3.org/2000/01/rdf-schema#label> "sibling of" .
+  <https://artresearch.net/resource/fr/Person_sibling_of_Person> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/artist> .
+  <https://artresearch.net/resource/fr/Person_sibling_of_Person> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/person>.
+  <https://artresearch.net/resource/fr/Person_sibling_of_Person> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/artist>.
 
-  <https://pharos.artresearch.net/resource/fr/Person_assisted_by_Person> <http://www.w3.org/2000/01/rdf-schema#label> "assisted by" .
-  <https://pharos.artresearch.net/resource/fr/Person_assisted_by_Person> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/artist> .
-  <https://pharos.artresearch.net/resource/fr/Person_assisted_by_Person> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/person>.
-  <https://pharos.artresearch.net/resource/fr/Person_assisted_by_Person> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/artist>.
+  <https://artresearch.net/resource/fr/Person_assisted_by_Person> <http://www.w3.org/2000/01/rdf-schema#label> "assisted by" .
+  <https://artresearch.net/resource/fr/Person_assisted_by_Person> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/artist> .
+  <https://artresearch.net/resource/fr/Person_assisted_by_Person> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/person>.
+  <https://artresearch.net/resource/fr/Person_assisted_by_Person> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/artist>.
 
-  <https://pharos.artresearch.net/resource/fr/Person_partner_of_Person> <http://www.w3.org/2000/01/rdf-schema#label> "partner of" .
-  <https://pharos.artresearch.net/resource/fr/Person_partner_of_Person> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/artist> .
-  <https://pharos.artresearch.net/resource/fr/Person_partner_of_Person> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/person>.
-  <https://pharos.artresearch.net/resource/fr/Person_partner_of_Person> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/artist>.
+  <https://artresearch.net/resource/fr/Person_partner_of_Person> <http://www.w3.org/2000/01/rdf-schema#label> "partner of" .
+  <https://artresearch.net/resource/fr/Person_partner_of_Person> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/artist> .
+  <https://artresearch.net/resource/fr/Person_partner_of_Person> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/person>.
+  <https://artresearch.net/resource/fr/Person_partner_of_Person> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/artist>.
 
-  <https://pharos.artresearch.net/resource/fr/Person_spouse_of_Person> <http://www.w3.org/2000/01/rdf-schema#label> "spouse of" .
-  <https://pharos.artresearch.net/resource/fr/Person_spouse_of_Person> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/artist> .
-  <https://pharos.artresearch.net/resource/fr/Person_spouse_of_Person> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/person>.
-  <https://pharos.artresearch.net/resource/fr/Person_spouse_of_Person> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/artist>.
+  <https://artresearch.net/resource/fr/Person_spouse_of_Person> <http://www.w3.org/2000/01/rdf-schema#label> "spouse of" .
+  <https://artresearch.net/resource/fr/Person_spouse_of_Person> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/artist> .
+  <https://artresearch.net/resource/fr/Person_spouse_of_Person> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/person>.
+  <https://artresearch.net/resource/fr/Person_spouse_of_Person> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/artist>.
 
-  <https://pharos.artresearch.net/resource/fr/Person_teacher_of_Person> <http://www.w3.org/2000/01/rdf-schema#label> "teacher of" .
-  <https://pharos.artresearch.net/resource/fr/Person_teacher_of_Person> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/artist> .
-  <https://pharos.artresearch.net/resource/fr/Person_teacher_of_Person> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/person>.
-  <https://pharos.artresearch.net/resource/fr/Person_teacher_of_Person> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/artist>.
+  <https://artresearch.net/resource/fr/Person_teacher_of_Person> <http://www.w3.org/2000/01/rdf-schema#label> "teacher of" .
+  <https://artresearch.net/resource/fr/Person_teacher_of_Person> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/artist> .
+  <https://artresearch.net/resource/fr/Person_teacher_of_Person> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/person>.
+  <https://artresearch.net/resource/fr/Person_teacher_of_Person> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/artist>.
 
-  <https://pharos.artresearch.net/resource/fr/Person_apprentice_of_Person> <http://www.w3.org/2000/01/rdf-schema#label> "apprentice of" .
-  <https://pharos.artresearch.net/resource/fr/Person_apprentice_of_Person> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/artist> .
-  <https://pharos.artresearch.net/resource/fr/Person_apprentice_of_Person> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/artist>.
-  <https://pharos.artresearch.net/resource/fr/Person_apprentice_of_Person> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/person>.
+  <https://artresearch.net/resource/fr/Person_apprentice_of_Person> <http://www.w3.org/2000/01/rdf-schema#label> "apprentice of" .
+  <https://artresearch.net/resource/fr/Person_apprentice_of_Person> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/artist> .
+  <https://artresearch.net/resource/fr/Person_apprentice_of_Person> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/artist>.
+  <https://artresearch.net/resource/fr/Person_apprentice_of_Person> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/person>.
 
-  <https://pharos.artresearch.net/resource/fr/Person_collaborated_with_Person> <http://www.w3.org/2000/01/rdf-schema#label> "collaborated with" .
-  <https://pharos.artresearch.net/resource/fr/Person_collaborated_with_Person> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/artist> .
-  <https://pharos.artresearch.net/resource/fr/Person_collaborated_with_Person> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/artist>.
-  <https://pharos.artresearch.net/resource/fr/Person_collaborated_with_Person> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/person>.
+  <https://artresearch.net/resource/fr/Person_collaborated_with_Person> <http://www.w3.org/2000/01/rdf-schema#label> "collaborated with" .
+  <https://artresearch.net/resource/fr/Person_collaborated_with_Person> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/artist> .
+  <https://artresearch.net/resource/fr/Person_collaborated_with_Person> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/artist>.
+  <https://artresearch.net/resource/fr/Person_collaborated_with_Person> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/person>.
 
-  <https://pharos.artresearch.net/resource/fr/Person_was_apprentice_of_Person> <http://www.w3.org/2000/01/rdf-schema#label> "was apprentice of" .
-  <https://pharos.artresearch.net/resource/fr/Person_was_apprentice_of_Person> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/artist> .
-  <https://pharos.artresearch.net/resource/fr/Person_was_apprentice_of_Person> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/artist>.
+  <https://artresearch.net/resource/fr/Person_was_apprentice_of_Person> <http://www.w3.org/2000/01/rdf-schema#label> "was apprentice of" .
+  <https://artresearch.net/resource/fr/Person_was_apprentice_of_Person> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/artist> .
+  <https://artresearch.net/resource/fr/Person_was_apprentice_of_Person> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/artist>.
 
-  <https://pharos.artresearch.net/resource/fr/Person_active_at_Place> <http://www.w3.org/2000/01/rdf-schema#label> "active at place" .
-  <https://pharos.artresearch.net/resource/fr/Person_active_at_Place> <http://www.researchspace.org/ontology/hasDomain> <https://pharos.artresearch.net/resource/fc/artist> .
-  <https://pharos.artresearch.net/resource/fr/Person_active_at_Place> <http://www.researchspace.org/ontology/hasRange> <https://pharos.artresearch.net/resource/fc/place>.
+  <https://artresearch.net/resource/fr/Person_active_at_Place> <http://www.w3.org/2000/01/rdf-schema#label> "active at place" .
+  <https://artresearch.net/resource/fr/Person_active_at_Place> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/fc/artist> .
+  <https://artresearch.net/resource/fr/Person_active_at_Place> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/place>.
 
 }
 
-<https://pharos.artresearch.net/resource/pharos/iiif_servers/graph> {
-  <https://pharos.artresearch.net/resource/itatti/source/SharedShelf> <https://pharos.artresearch.net/custom/has_iiif_server> "https://ids.lib.harvard.edu/ids/iiif".
-  <https://pharos.artresearch.net/resource/itatti/source/FotoIndex> <https://pharos.artresearch.net/custom/has_iiif_server> "https://iiif.itatti.harvard.edu/iiif/2".
-  <https://pharos.artresearch.net/resource/zeri/source/Zeri> <https://pharos.artresearch.net/custom/has_iiif_server> "https://iiif.artresearch.net/iiif/2".
-  <https://pharos.artresearch.net/resource/marburg/source/Marburg> <https://pharos.artresearch.net/custom/has_iiif_server> "https://iiif.artresearch.net/iiif/2".
-  <https://pharos.artresearch.net/resource/khi/source/KHI> <https://pharos.artresearch.net/custom/has_iiif_server> "https://iiif.khi.fi.it/iiif/2".
+<https://artresearch.net/resource/pharos/iiif_servers/graph> {
+  <https://artresearch.net/resource/itatti/source/SharedShelf> <https://artresearch.net/custom/has_iiif_server> "https://ids.lib.harvard.edu/ids/iiif".
+  <https://artresearch.net/resource/itatti/source/FotoIndex> <https://artresearch.net/custom/has_iiif_server> "https://iiif.itatti.harvard.edu/iiif/2".
+  <https://artresearch.net/resource/zeri/source/Zeri> <https://artresearch.net/custom/has_iiif_server> "https://iiif.artresearch.net/iiif/2".
+  <https://artresearch.net/resource/marburg/source/Marburg> <https://artresearch.net/custom/has_iiif_server> "https://iiif.artresearch.net/iiif/2".
+  <https://artresearch.net/resource/khi/source/KHI> <https://artresearch.net/custom/has_iiif_server> "https://iiif.khi.fi.it/iiif/2".
 }

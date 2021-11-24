@@ -7,14 +7,14 @@
 		<namespace prefix="ssw" uri="http://catalog.sharedshelf.artstor.org/ssw"/>
 		<namespace prefix="display" uri="http://catalog.sharedshelf.artstor.org/display"/>
 		<namespace prefix="owl" uri="http://www.w3.org/2002/07/owl#"/>
-		<namespace prefix="prefix" uri="https://pharos.artresearch.net/resource/khi/"/>
-		<namespace prefix="vocab" uri="https://pharos.artresearch.net/resource/midas/vocabulary/"/>
-		<namespace prefix="custom" uri="https://pharos.artresearch.net/custom/"/>
+		<namespace prefix="prefix" uri="https://artresearch.net/resource/khi/"/>
+		<namespace prefix="vocab" uri="https://artresearch.net/resource/midas/vocabulary/"/>
+		<namespace prefix="custom" uri="https://artresearch.net/custom/"/>
 		<namespace prefix="vit" uri="http://id.lib.harvard.edu/images/olvwork"/>
 		<namespace prefix="iiif_image" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
 		<namespace prefix="iiif_json" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
-		<namespace prefix="fc" uri="https://pharos.artresearch.net/resource/custom/fc/"/>
-		<namespace prefix="fr" uri="https://pharos.artresearch.net/resource/custom/fr/"/>
+		<namespace prefix="fc" uri="https://artresearch.net/resource/custom/fc/"/>
+		<namespace prefix="fr" uri="https://artresearch.net/resource/custom/fr/"/>
 	</namespaces>
 	<mappings>
 		<mapping>
