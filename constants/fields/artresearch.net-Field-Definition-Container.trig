@@ -6,6 +6,7 @@
 @prefix bds: <http://www.bigdata.com/rdf/search#> .
 @prefix crmba: <http://www.cidoc-crm.org/cidoc-crm/CRMba/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix cfr: <https://pharos.artresearch.net/resource/custom/fr/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix fc: <https://pharos.artresearch.net/resource/fc/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -13,6 +14,7 @@
 @prefix pharos: <https://pharos.artresearch.net/resource/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix User: <http://www.researchspace.org/resource/user/> .
+@prefix custom: <https://pharos.artresearch.net/custom/> .
 @prefix forms: <http://www.researchspace.org/resource/system/forms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rshelp: <http://researchspace.org/help/> .
@@ -138,6 +140,108 @@
   Platform:fieldDefinitionContainer <http://www.w3.org/ns/ldp#contains> <http://www.researchspace.org/fieldDefinition/Photo_Archive> .
 }
 
+<http://www.researchspace.org/fieldDefinition/Photo_echnique/context> {
+  Platform:fieldDefinitionContainer <http://www.w3.org/ns/ldp#contains> <http://www.researchspace.org/fieldDefinition/Photo_echnique> .
+  
+  <http://www.researchspace.org/fieldDefinition/Photo_echnique> a <http://www.w3.org/ns/ldp#Resource>,
+      prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
+    prov:generatedAtTime "2021-09-20T15:24:33.907Z"^^xsd:dateTime;
+    prov:wasAttributedTo User:admin;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/photograph_info>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/physical_properties>;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780674;
+    <http://www.researchspace.org/resource/system/fields/order> "750";
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780673;
+    <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
+    rdfs:label "Technique"@en .
+}
+
+<http://www.researchspace.org/fieldDefinition/Creator_Assertion/context> {
+  Platform:fieldDefinitionContainer <http://www.w3.org/ns/ldp#contains> <http://www.researchspace.org/fieldDefinition/Creator_Assertion> .
+  
+  <http://www.researchspace.org/fieldDefinition/Creator_Assertion> a <http://www.w3.org/ns/ldp#Resource>,
+      prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
+    prov:generatedAtTime "2021-08-11T12:23:56.167Z"^^xsd:dateTime;
+    prov:wasAttributedTo User:admin;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t58501127;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t58501126;
+    <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
+    <http://www.researchspace.org/resource/system/fields/deletePattern> _:t58501128;
+    <http://www.researchspace.org/resource/system/fields/autosuggestionPattern> _:t58501129;
+    rdfs:label "Creator - Assertion"@en .
+}
+
+<http://www.researchspace.org/fieldDefinition/Annotation_URI/context> {
+  Platform:fieldDefinitionContainer <http://www.w3.org/ns/ldp#contains> <http://www.researchspace.org/fieldDefinition/Annotation_URI> .
+}
+
+<http://www.researchspace.org/fieldDefinition/Sexual_Orientation/context> {
+  Platform:fieldDefinitionContainer <http://www.w3.org/ns/ldp#contains> <http://www.researchspace.org/fieldDefinition/Sexual_Orientation> .
+}
+
+<http://www.researchspace.org/fieldDefinition/Related_Documents/context> {
+  Platform:fieldDefinitionContainer <http://www.w3.org/ns/ldp#contains> <http://www.researchspace.org/fieldDefinition/Related_Documents> .
+  
+  <http://www.researchspace.org/fieldDefinition/Related_Documents> a <http://www.w3.org/ns/ldp#Resource>,
+      prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
+    prov:generatedAtTime "2021-09-20T15:16:53.018Z"^^xsd:dateTime;
+    prov:wasAttributedTo User:admin;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/other_details>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/artwork_monument>;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780637;
+    <http://www.researchspace.org/resource/system/fields/order> "14000";
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780638;
+    <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
+    rdfs:label "Related Objects"@en .
+}
+
+<http://www.researchspace.org/fieldDefinition/National_Group/context> {
+  Platform:fieldDefinitionContainer <http://www.w3.org/ns/ldp#contains> <http://www.researchspace.org/fieldDefinition/National_Group> .
+}
+
+<http://www.researchspace.org/fieldDefinition/Apprentice/context> {
+  Platform:fieldDefinitionContainer <http://www.w3.org/ns/ldp#contains> <http://www.researchspace.org/fieldDefinition/Apprentice> .
+  
+  <http://www.researchspace.org/fieldDefinition/Apprentice> a <http://www.w3.org/ns/ldp#Resource>,
+      prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
+    prov:generatedAtTime "2021-09-17T09:44:21.249Z"^^xsd:dateTime;
+    prov:wasAttributedTo User:admin;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/external_info>;
+    <http://www.researchspace.org/resource/system/fields/domain> crm:E21_Person, crm:E39_Actor;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68766870;
+    <http://www.researchspace.org/resource/system/fields/order> "31760";
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68766869;
+    <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
+    rdfs:label "Apprentice"@en .
+}
+
+<http://www.researchspace.org/fieldDefinition/Last_Known_Location/context> {
+  Platform:fieldDefinitionContainer <http://www.w3.org/ns/ldp#contains> <http://www.researchspace.org/fieldDefinition/Last_Known_Location> .
+  
+  <http://www.researchspace.org/fieldDefinition/Last_Known_Location> a <http://www.w3.org/ns/ldp#Resource>,
+      prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
+    prov:generatedAtTime "2021-10-13T11:26:17.896Z"^^xsd:dateTime;
+    prov:wasAttributedTo User:admin;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/artwork_monument>;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68851285;
+    <http://www.researchspace.org/resource/system/fields/order> "6000";
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68851286;
+    <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
+    rdfs:label "Last Known Location"@en .
+}
+
+<http://www.researchspace.org/fieldDefinition/Last_Known_Location_1/context> {
+  Platform:fieldDefinitionContainer <http://www.w3.org/ns/ldp#contains> <http://www.researchspace.org/fieldDefinition/Last_Known_Location_1> .
+}
+
+<http://www.researchspace.org/fieldDefinition/Last_Known_Location_2/context> {
+  Platform:fieldDefinitionContainer <http://www.w3.org/ns/ldp#contains> <http://www.researchspace.org/fieldDefinition/Last_Known_Location_2> .
+}
+
+<http://www.researchspace.org/fieldDefinition/Last_Known_Location_3/context> {
+  Platform:fieldDefinitionContainer <http://www.w3.org/ns/ldp#contains> <http://www.researchspace.org/fieldDefinition/Last_Known_Location_3> .
+}
+
 <https://pharos.artresearch.net/fieldDefinition/44/context> {
   Platform:fieldDefinitionContainer <http://www.w3.org/ns/ldp#contains> <https://pharos.artresearch.net/fieldDefinition/44> .
 }
@@ -171,16 +275,16 @@
   
   <https://pharos.artresearch.net/fieldDefinition/68> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-04-22T14:10:22.847Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-09-20T15:24:07.343Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/photograph_info>,
       <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>, <https://pharos.artresearch.net/category/frick>,
       <https://pharos.artresearch.net/category/photo>, <https://pharos.artresearch.net/category/work>,
-      <https://pharos.artresearch.net/category/zeri>;
+      <https://pharos.artresearch.net/category/zeri>, <http://www.researchspace.org/ontologies/platform/FieldCategories/physical_properties>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t32315697;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780670;
     <http://www.researchspace.org/resource/system/fields/order> "1300";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t32315696;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780669;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     rdfs:comment "This field is used to provide a free text description of the conservation status of the documented object.";
     rdfs:label "Condition Assessment Description"@en .
@@ -191,15 +295,16 @@
   
   <https://pharos.artresearch.net/fieldDefinition/67> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-04-22T14:10:22.936Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-09-20T15:22:39.555Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/photograph_info>,
       <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>, <https://pharos.artresearch.net/category/frick>,
-      <https://pharos.artresearch.net/category/photo>, <https://pharos.artresearch.net/category/work>;
+      <https://pharos.artresearch.net/category/photo>, <https://pharos.artresearch.net/category/work>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/physical_properties>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t32315703;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780662;
     <http://www.researchspace.org/resource/system/fields/order> "710";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t32315702;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780661;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     rdfs:comment "This field is used to document a description of the colour of a documented object.";
     rdfs:label "Color Information"@en .
@@ -235,18 +340,19 @@
   
   <https://pharos.artresearch.net/fieldDefinition/550> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-04-22T14:10:23.306Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-09-20T15:12:53.739Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/photograph_info>,
       <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>, <https://pharos.artresearch.net/category/frick>,
       <https://pharos.artresearch.net/category/hertziana>, <https://pharos.artresearch.net/category/itatti>,
       <https://pharos.artresearch.net/category/khi>, <https://pharos.artresearch.net/category/marburg>,
-      <https://pharos.artresearch.net/category/zeri>;
+      <https://pharos.artresearch.net/category/zeri>, <http://www.researchspace.org/ontologies/platform/FieldCategories/repository_info>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/artwork_monument>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t32315718;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780615;
     <http://www.researchspace.org/resource/system/fields/order> "500";
     <http://www.researchspace.org/resource/system/fields/range> crm:E55_Type;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t32315719;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780616;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:label "Types"@en .
 }
@@ -318,15 +424,16 @@
   
   <https://pharos.artresearch.net/fieldDefinition/15> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-05-10T11:07:46.093Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-09-20T15:31:18.617Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/hertziana>,
       <https://pharos.artresearch.net/category/khi>, <https://pharos.artresearch.net/category/marburg>,
-      <https://pharos.artresearch.net/category/work>, <http://www.researchspace.org/ontologies/platform/FieldCategories/other_details>;
+      <https://pharos.artresearch.net/category/work>, <http://www.researchspace.org/ontologies/platform/FieldCategories/other_details>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/dating>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t50329455;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780709;
     <http://www.researchspace.org/resource/system/fields/order> "930";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t50329454;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780708;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     rdfs:comment "This field is used to provide information on the Transformations of the documented object.";
     rdfs:label "Transformation"@en .
@@ -341,15 +448,15 @@
   
   <https://pharos.artresearch.net/fieldDefinition/62> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-07-16T10:49:46.532Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-09-20T15:29:07.475Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>,
       <https://pharos.artresearch.net/category/frick>, <https://pharos.artresearch.net/category/work>,
-      <https://pharos.artresearch.net/category/zeri>;
+      <https://pharos.artresearch.net/category/zeri>, <http://www.researchspace.org/ontologies/platform/FieldCategories/subjects>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t58330300;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780695;
     <http://www.researchspace.org/resource/system/fields/order> "570";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t58330301;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780694;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     rdfs:comment "This field is used to document a description of the subject of a documented object.";
     rdfs:label "Subject Description"@en .
@@ -358,19 +465,13 @@
 <https://pharos.artresearch.net/fieldDefinition/70/context> {
   Platform:fieldDefinitionContainer <http://www.w3.org/ns/ldp#contains> <https://pharos.artresearch.net/fieldDefinition/70> .
   
-  <https://pharos.artresearch.net/fieldDefinition/70> a <http://www.w3.org/ns/ldp#Resource>,
-      prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-04-22T14:10:24.372Z"^^xsd:dateTime;
+  <https://pharos.artresearch.net/fieldDefinition/70> prov:generatedAtTime "2021-09-20T15:32:09.217Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/frick>,
-      <https://pharos.artresearch.net/category/work>, <http://www.researchspace.org/ontologies/platform/FieldCategories/other_details>;
+      <https://pharos.artresearch.net/category/work>, <http://www.researchspace.org/ontologies/platform/FieldCategories/other_details>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/references>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t32315794;
-    <http://www.researchspace.org/resource/system/fields/order> "1450";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t32315795;
-    <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
-    rdfs:comment "This is a long form description of the documented object. This description is grounded on documentation sources indicated in bracket notation.";
-    rdfs:label "Sourced Documentation Description"@en .
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780712 .
 }
 
 <https://pharos.artresearch.net/fieldDefinition/212/context> {
@@ -390,21 +491,22 @@
   
   <https://pharos.artresearch.net/fieldDefinition/140> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-04-22T14:10:24.705Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-09-20T15:15:38.836Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/frick>,
       <https://pharos.artresearch.net/category/hertziana>, <https://pharos.artresearch.net/category/itatti>,
       <https://pharos.artresearch.net/category/khi>, <https://pharos.artresearch.net/category/marburg>,
       <https://pharos.artresearch.net/category/photo>, <https://pharos.artresearch.net/category/work>,
-      <https://pharos.artresearch.net/category/zeri>, <http://www.researchspace.org/ontologies/platform/FieldCategories/other_details>;
+      <https://pharos.artresearch.net/category/zeri>, <http://www.researchspace.org/ontologies/platform/FieldCategories/other_details>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/artwork_monument>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t32315818;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780629;
     <http://www.researchspace.org/resource/system/fields/order> "1110";
     <http://www.researchspace.org/resource/system/fields/range> crm:E39_Actor;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t32315817;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780630;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "This field is used to indicate the right holder for the documented object.";
-    rdfs:label "Right Holder"@en .
+    rdfs:label "Object Rights Holder"@en .
 }
 
 <https://pharos.artresearch.net/fieldDefinition/285/context> {
@@ -429,19 +531,6 @@
 
 <https://pharos.artresearch.net/fieldDefinition/74/context> {
   Platform:fieldDefinitionContainer <http://www.w3.org/ns/ldp#contains> <https://pharos.artresearch.net/fieldDefinition/74> .
-  
-  <https://pharos.artresearch.net/fieldDefinition/74> a <http://www.w3.org/ns/ldp#Resource>,
-      prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-04-22T14:10:24.951Z"^^xsd:dateTime;
-    prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/other_details>;
-    <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t32315837;
-    <http://www.researchspace.org/resource/system/fields/order> "2300";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t32315836;
-    <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
-    rdfs:comment "This field is used to document a description of the related works that can be considered or interest relative to the documented object.";
-    rdfs:label "Related Works Description"@en .
 }
 
 <https://pharos.artresearch.net/fieldDefinition/119/context> {
@@ -513,23 +602,6 @@
 
 <https://pharos.artresearch.net/fieldDefinition/73/context> {
   Platform:fieldDefinitionContainer <http://www.w3.org/ns/ldp#contains> <https://pharos.artresearch.net/fieldDefinition/73> .
-  
-  <https://pharos.artresearch.net/fieldDefinition/73> a <http://www.w3.org/ns/ldp#Resource>,
-      prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-04-22T14:10:25.394Z"^^xsd:dateTime;
-    prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/frick>,
-      <https://pharos.artresearch.net/category/itatti>, <https://pharos.artresearch.net/category/photo>,
-      <https://pharos.artresearch.net/category/work>, <https://pharos.artresearch.net/category/zeri>,
-      <http://www.researchspace.org/ontologies/platform/FieldCategories/production_info>;
-    <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t32315866;
-    <http://www.researchspace.org/resource/system/fields/order> "230";
-    <http://www.researchspace.org/resource/system/fields/range> crm:E39_Actor;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t32315865;
-    <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
-    rdfs:comment "This field is used to indicate a participant in the creation of the documented object.";
-    rdfs:label "Production Participant"@en .
 }
 
 <https://pharos.artresearch.net/fieldDefinition/8/context> {
@@ -588,11 +660,6 @@
 
 <https://pharos.artresearch.net/fieldDefinition/78/context> {
   Platform:fieldDefinitionContainer <http://www.w3.org/ns/ldp#contains> <https://pharos.artresearch.net/fieldDefinition/78> .
-  
-  <https://pharos.artresearch.net/fieldDefinition/78> prov:generatedAtTime "2021-07-16T09:53:45.433Z"^^xsd:dateTime;
-    prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/photo>,
-      <https://pharos.artresearch.net/category/work> .
 }
 
 <https://pharos.artresearch.net/fieldDefinition/146/context> {
@@ -600,17 +667,18 @@
   
   <https://pharos.artresearch.net/fieldDefinition/146> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-07-16T09:53:58.096Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-09-20T15:30:56.213Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/frick>,
       <https://pharos.artresearch.net/category/hertziana>, <https://pharos.artresearch.net/category/khi>,
       <https://pharos.artresearch.net/category/marburg>, <https://pharos.artresearch.net/category/photo>,
       <https://pharos.artresearch.net/category/work>, <https://pharos.artresearch.net/category/zeri>,
-      <http://www.researchspace.org/ontologies/platform/FieldCategories/production_info>;
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/production_info>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/dating>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t58330298;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780703;
     <http://www.researchspace.org/resource/system/fields/order> "340";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t58330299;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780702;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     rdfs:comment "This field is used to indicate an alternative timespan for the creation of the documented object. ";
     rdfs:label "Production Date - Alternative"@en .
@@ -621,13 +689,13 @@
   
   <https://pharos.artresearch.net/fieldDefinition/ulan_place_of_death> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-07-16T13:53:04.606Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-08-24T13:35:04.017Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/external_info>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E21_Person;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t58330354;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t58703800;
     <http://www.researchspace.org/resource/system/fields/order> "31300";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t58330355;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t58703801;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "The place of death of the documented person, retrieved from ULAN.";
     rdfs:label "Place of Death"@en .
@@ -663,7 +731,7 @@
   
   <https://pharos.artresearch.net/fieldDefinition/123> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-04-22T14:10:26.368Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-08-11T06:44:06.800Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/frick>,
       <https://pharos.artresearch.net/category/hertziana>, <https://pharos.artresearch.net/category/itatti>,
@@ -671,10 +739,10 @@
       <https://pharos.artresearch.net/category/photo>, <https://pharos.artresearch.net/category/zeri>,
       <http://www.researchspace.org/ontologies/platform/FieldCategories/production_info>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t32315936;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t58490960;
     <http://www.researchspace.org/resource/system/fields/order> "220";
     <http://www.researchspace.org/resource/system/fields/range> crm:E39_Actor;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t32315935;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t58490959;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "The Person or Institution that carried out the creation of the photograph";
     rdfs:label "Photographer"@en .
@@ -732,15 +800,15 @@
   
   <https://pharos.artresearch.net/fieldDefinition/150> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-07-16T10:58:40.376Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-09-20T15:14:13.805Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/photograph_info>,
       <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>, <https://pharos.artresearch.net/category/frick>,
-      <https://pharos.artresearch.net/category/work>;
+      <https://pharos.artresearch.net/category/work>, <http://www.researchspace.org/ontologies/platform/FieldCategories/artwork_monument>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t58330307;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780619;
     <http://www.researchspace.org/resource/system/fields/order> "660";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t58330306;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780620;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     rdfs:comment "This field is used to document the credit line that should be used in relation to the documented object.";
     rdfs:label "Museum Credit Line"@en .
@@ -751,16 +819,17 @@
   
   <https://pharos.artresearch.net/fieldDefinition/90> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-05-10T11:11:07.076Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-09-20T15:31:02.901Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/hertziana>,
       <https://pharos.artresearch.net/category/khi>, <https://pharos.artresearch.net/category/marburg>,
       <https://pharos.artresearch.net/category/photo>, <https://pharos.artresearch.net/category/work>,
-      <http://www.researchspace.org/ontologies/platform/FieldCategories/other_details>;
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/other_details>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/dating>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t50438086;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780704;
     <http://www.researchspace.org/resource/system/fields/order> "910";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t50438087;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780705;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     rdfs:comment "This field is used to provide information on the Modifications of the documented object.";
     rdfs:label "Modification"@en .
@@ -775,17 +844,18 @@
   
   <https://pharos.artresearch.net/fieldDefinition/94> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-07-16T13:11:53.790Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-09-20T15:16:42.468Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/hertziana>,
       <https://pharos.artresearch.net/category/khi>, <https://pharos.artresearch.net/category/marburg>,
       <https://pharos.artresearch.net/category/photo>, <https://pharos.artresearch.net/category/work>,
-      <https://pharos.artresearch.net/category/zeri>, <http://www.researchspace.org/ontologies/platform/FieldCategories/other_details>;
+      <https://pharos.artresearch.net/category/zeri>, <http://www.researchspace.org/ontologies/platform/FieldCategories/other_details>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/artwork_monument>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t58330334;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780636;
     <http://www.researchspace.org/resource/system/fields/order> "2800";
     <http://www.researchspace.org/resource/system/fields/range> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t58330335;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780635;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "This field is used to indicate whether an object is part of another or not.";
     rdfs:label "Is Part Of"@en .
@@ -864,17 +934,17 @@
   
   <https://pharos.artresearch.net/fieldDefinition/92> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-07-16T12:36:24.284Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-09-20T15:29:15.322Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>,
       <https://pharos.artresearch.net/category/hertziana>, <https://pharos.artresearch.net/category/khi>,
       <https://pharos.artresearch.net/category/marburg>, <https://pharos.artresearch.net/category/work>,
-      <https://pharos.artresearch.net/category/zeri>;
+      <https://pharos.artresearch.net/category/zeri>, <http://www.researchspace.org/ontologies/platform/FieldCategories/subjects>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t58330330;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780697;
     <http://www.researchspace.org/resource/system/fields/order> "1600";
     <http://www.researchspace.org/resource/system/fields/range> crm:E55_Type;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t58330331;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780696;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     rdfs:comment "This field is used to include information on Iconclass, such as primary iconography, secondary iconography and keywords..";
     rdfs:label "Iconclass Information"@en .
@@ -889,17 +959,19 @@
   
   <https://pharos.artresearch.net/fieldDefinition/91> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-07-16T13:09:00.942Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-09-22T10:23:12.681Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/frick>,
-      <https://pharos.artresearch.net/category/hertziana>, <https://pharos.artresearch.net/category/khi>,
-      <https://pharos.artresearch.net/category/marburg>, <https://pharos.artresearch.net/category/work>,
-      <https://pharos.artresearch.net/category/zeri>, <http://www.researchspace.org/ontologies/platform/FieldCategories/other_details>;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>,
+      <https://pharos.artresearch.net/category/frick>, <https://pharos.artresearch.net/category/hertziana>,
+      <https://pharos.artresearch.net/category/khi>, <https://pharos.artresearch.net/category/marburg>,
+      <https://pharos.artresearch.net/category/work>, <https://pharos.artresearch.net/category/zeri>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/other_details>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/artwork_monument>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t58330332;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68783533;
     <http://www.researchspace.org/resource/system/fields/order> "2600";
     <http://www.researchspace.org/resource/system/fields/range> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t58330333;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68783534;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "This field is used to indicate parts of the documented object.";
     rdfs:label "Has Part"@en .
@@ -955,7 +1027,7 @@
   
   <https://pharos.artresearch.net/fieldDefinition/66> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-05-10T10:33:37.475Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-10-06T09:01:09.962Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/frick>,
       <https://pharos.artresearch.net/category/hertziana>, <https://pharos.artresearch.net/category/itatti>,
@@ -963,9 +1035,9 @@
       <https://pharos.artresearch.net/category/photo>, <https://pharos.artresearch.net/category/work>,
       <https://pharos.artresearch.net/category/zeri>, <http://www.researchspace.org/ontologies/platform/FieldCategories/production_info>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t49667701;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68829379;
     <http://www.researchspace.org/resource/system/fields/order> "700";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t49667700;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68829378;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     rdfs:comment "This field is used to indicate the dimensions of the object (type,unit,value). ";
     rdfs:label "Dimension"@en .
@@ -980,16 +1052,16 @@
   
   <https://pharos.artresearch.net/fieldDefinition/14> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-05-10T10:32:47.171Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-09-20T15:31:09.787Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/hertziana>,
       <https://pharos.artresearch.net/category/khi>, <https://pharos.artresearch.net/category/marburg>,
       <https://pharos.artresearch.net/category/work>, <http://www.researchspace.org/ontologies/platform/FieldCategories/other_details>,
-      <http://www.researchspace.org/ontologies/platform/FieldCategories/other_info>;
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/other_info>, <http://www.researchspace.org/ontologies/platform/FieldCategories/dating>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t49667699;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780706;
     <http://www.researchspace.org/resource/system/fields/order> "920";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t49667698;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780707;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     rdfs:comment "This field is used to provide information on the Destruction of the documented object.";
     rdfs:label "Destruction"@en .
@@ -1016,13 +1088,13 @@
   
   <https://pharos.artresearch.net/fieldDefinition/ulan_date_of_birth> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-04-29T07:39:03.395Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-08-17T12:54:26.637Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/external_info>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E21_Person;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t49480305;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t58521377;
     <http://www.researchspace.org/resource/system/fields/order> "31000";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t49480306;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t58521378;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     <http://www.researchspace.org/resource/system/fields/treePatterns> """{
   \"type\": \"simple\"
@@ -1059,21 +1131,6 @@
 
 <https://pharos.artresearch.net/fieldDefinition/75/context> {
   Platform:fieldDefinitionContainer <http://www.w3.org/ns/ldp#contains> <https://pharos.artresearch.net/fieldDefinition/75> .
-  
-  <https://pharos.artresearch.net/fieldDefinition/75> a <http://www.w3.org/ns/ldp#Resource>,
-      prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-04-22T14:10:29.313Z"^^xsd:dateTime;
-    prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/frick>,
-      <https://pharos.artresearch.net/category/photo>, <https://pharos.artresearch.net/category/work>,
-      <https://pharos.artresearch.net/category/zeri>, <http://www.researchspace.org/ontologies/platform/FieldCategories/other_details>;
-    <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t32316151;
-    <http://www.researchspace.org/resource/system/fields/order> "1400";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t32316152;
-    <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
-    rdfs:comment "This field is used to indicate a bibliographic item which acts as a reference document for the documented object.";
-    rdfs:label "Bibliography"@en .
 }
 
 <https://pharos.artresearch.net/fieldDefinition/277/context> {
@@ -1081,18 +1138,19 @@
   
   <https://pharos.artresearch.net/fieldDefinition/277> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-07-16T09:26:02.728Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-09-20T15:21:21.032Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/frick>,
       <https://pharos.artresearch.net/category/hertziana>, <https://pharos.artresearch.net/category/itatti>,
       <https://pharos.artresearch.net/category/khi>, <https://pharos.artresearch.net/category/marburg>,
       <https://pharos.artresearch.net/category/work>, <https://pharos.artresearch.net/category/zeri>,
-      <http://www.researchspace.org/ontologies/platform/FieldCategories/production_info>;
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/production_info>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/creator_attribution>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t58330283;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780655;
     <http://www.researchspace.org/resource/system/fields/order> "253";
     <http://www.researchspace.org/resource/system/fields/range> crm:E21_Person;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t58330282;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780656;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     rdfs:comment "This field contains information on the attribution of the work to diferrent artists";
     rdfs:label "Attributions"@en .
@@ -1136,15 +1194,16 @@
   
   <https://pharos.artresearch.net/fieldDefinition/17> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-04-22T14:10:29.800Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-09-20T15:20:57.180Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/frick>,
       <https://pharos.artresearch.net/category/itatti>, <https://pharos.artresearch.net/category/work>,
-      <http://www.researchspace.org/ontologies/platform/FieldCategories/production_info>;
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/production_info>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/creator_attribution>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t32316187;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780652;
     <http://www.researchspace.org/resource/system/fields/order> "252";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t32316186;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780651;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     rdfs:comment "This field is used to document a description of an attribution of documented artwork.";
     rdfs:label " Attribution Notes"@en .
@@ -1152,19 +1211,6 @@
 
 <http://www.researchspace.org/fieldDefinition/Current/context> {
   Platform:fieldDefinitionContainer <http://www.w3.org/ns/ldp#contains> <http://www.researchspace.org/fieldDefinition/Current> .
-  
-  <http://www.researchspace.org/fieldDefinition/Current> a <http://www.w3.org/ns/ldp#Resource>,
-      prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-07-16T13:22:30.887Z"^^xsd:dateTime;
-    prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>;
-    <http://www.researchspace.org/resource/system/fields/domain> crm:E21_Person, crm:E39_Actor;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t58330338;
-    <http://www.researchspace.org/resource/system/fields/order> "6000";
-    <http://www.researchspace.org/resource/system/fields/range> crm:E53_Place;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t58330339;
-    <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
-    rdfs:label "Current or Former Location"@en .
 }
 
 <https://dev.artresearch.net/container/fieldDefinitionContainer/Birth_Date/context> {
@@ -1224,13 +1270,13 @@
   
   <http://www.researchspace.org/fieldDefinition/Tutor> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-07-16T14:12:40.471Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-09-17T09:37:30.078Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/external_info>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E21_Person, crm:E39_Actor;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t58330369;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68766865;
     <http://www.researchspace.org/resource/system/fields/order> "31760";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t58330370;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68766866;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "Tutors od the documented person, retrieved from ULAN";
     rdfs:label "Tutors"@en .
@@ -1254,7 +1300,39 @@
 
 <http://www.researchspace.org/fieldDefinition/Spouse/context> {
   Platform:fieldDefinitionContainer <http://www.w3.org/ns/ldp#contains> <http://www.researchspace.org/fieldDefinition/Spouse> .
-  
+}
+
+<https://pharos.artresearch.net/fieldDefinition/70/context> {
+  <https://pharos.artresearch.net/fieldDefinition/70> a <http://www.w3.org/ns/ldp#Resource>,
+      prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
+    <http://www.researchspace.org/resource/system/fields/order> "1450";
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780713;
+    <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
+    rdfs:comment "This is a long form description of the documented object. This description is grounded on documentation sources indicated in bracket notation.";
+    rdfs:label "Sourced Documentation Description"@en .
+}
+
+<https://pharos.artresearch.net/fieldDefinition/73/context> {
+  <https://pharos.artresearch.net/fieldDefinition/73> a <http://www.w3.org/ns/ldp#Resource>,
+      prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
+    prov:generatedAtTime "2021-09-20T15:20:02.804Z"^^xsd:dateTime;
+    prov:wasAttributedTo User:admin;
+    <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/frick>,
+      <https://pharos.artresearch.net/category/itatti>, <https://pharos.artresearch.net/category/photo>,
+      <https://pharos.artresearch.net/category/work>, <https://pharos.artresearch.net/category/zeri>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/production_info>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/creator_attribution>;
+    <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780646;
+    <http://www.researchspace.org/resource/system/fields/order> "230";
+    <http://www.researchspace.org/resource/system/fields/range> crm:E39_Actor;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780645;
+    <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
+    rdfs:comment "This field is used to indicate a participant in the creation of the documented object.";
+    rdfs:label "Production Participant"@en .
+}
+
+<http://www.researchspace.org/fieldDefinition/Spouse/context> {
   <http://www.researchspace.org/fieldDefinition/Spouse> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
     prov:generatedAtTime "2021-05-10T12:39:12.155Z"^^xsd:dateTime;
@@ -1268,19 +1346,87 @@
     rdfs:label "Spouse"@en .
 }
 
+<https://pharos.artresearch.net/fieldDefinition/74/context> {
+  <https://pharos.artresearch.net/fieldDefinition/74> a <http://www.w3.org/ns/ldp#Resource>,
+      prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
+    prov:generatedAtTime "2021-09-20T15:17:04.151Z"^^xsd:dateTime;
+    prov:wasAttributedTo User:admin;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/other_details>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/artwork_monument>;
+    <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780640;
+    <http://www.researchspace.org/resource/system/fields/order> "2300";
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780639;
+    <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
+    rdfs:comment "This field is used to document a description of the related works that can be considered or interest relative to the documented object.";
+    rdfs:label "Related Works Description"@en .
+}
+
+<https://pharos.artresearch.net/fieldDefinition/75/context> {
+  <https://pharos.artresearch.net/fieldDefinition/75> a <http://www.w3.org/ns/ldp#Resource>,
+      prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
+    prov:generatedAtTime "2021-09-20T15:32:01.024Z"^^xsd:dateTime;
+    prov:wasAttributedTo User:admin;
+    <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/frick>,
+      <https://pharos.artresearch.net/category/photo>, <https://pharos.artresearch.net/category/work>,
+      <https://pharos.artresearch.net/category/zeri>, <http://www.researchspace.org/ontologies/platform/FieldCategories/other_details>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/references>;
+    <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780710;
+    <http://www.researchspace.org/resource/system/fields/order> "1400";
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780711;
+    <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
+    rdfs:comment "This field is used to indicate a bibliographic item which acts as a reference document for the documented object.";
+    rdfs:label "Bibliography"@en .
+}
+
+<http://www.researchspace.org/fieldDefinition/Current/context> {
+  <http://www.researchspace.org/fieldDefinition/Current> a <http://www.w3.org/ns/ldp#Resource>,
+      prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
+    prov:generatedAtTime "2021-10-12T13:39:45.349Z"^^xsd:dateTime;
+    prov:wasAttributedTo User:admin;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/artwork_monument>;
+    <http://www.researchspace.org/resource/system/fields/domain> crm:E21_Person, crm:E39_Actor;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68849827;
+    <http://www.researchspace.org/resource/system/fields/order> "6000";
+    <http://www.researchspace.org/resource/system/fields/range> crm:E53_Place;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68849828;
+    <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
+    rdfs:label "Current Location"@en .
+}
+
 <https://pharos.artresearch.net/fieldDefinition/78/context> {
   <https://pharos.artresearch.net/fieldDefinition/78> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/zeri>,
-      <http://www.researchspace.org/ontologies/platform/FieldCategories/production_info>;
+    prov:generatedAtTime "2021-09-20T15:30:45.127Z"^^xsd:dateTime;
+    prov:wasAttributedTo User:admin;
+    <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/photo>,
+      <https://pharos.artresearch.net/category/work>, <https://pharos.artresearch.net/category/zeri>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/production_info>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/dating>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t58330297;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780701;
     <http://www.researchspace.org/resource/system/fields/order> "330";
     <http://www.researchspace.org/resource/system/fields/range> crm:E41_Appellation;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t58330296;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780700;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "This field is used to indicate the century in which the creation of the documented object took place.";
     rdfs:label "Production Date - Century"@en .
+}
+
+<http://www.researchspace.org/fieldDefinition/National_Group/context> {
+  <http://www.researchspace.org/fieldDefinition/National_Group> a <http://www.w3.org/ns/ldp#Resource>,
+      prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
+    prov:generatedAtTime "2021-09-08T07:50:56.908Z"^^xsd:dateTime;
+    prov:wasAttributedTo User:admin;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/person_info>;
+    <http://www.researchspace.org/resource/system/fields/domain> crm:E21_Person;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t59672259;
+    <http://www.researchspace.org/resource/system/fields/order> "3400";
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t59672260;
+    <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
+    rdfs:label "National Group"@en .
 }
 
 <https://pharos.artresearch.net/fieldDefinition/79/context> {
@@ -1364,13 +1510,13 @@
 <https://pharos.artresearch.net/fieldDefinition/ulan_date_of_death/context> {
   <https://pharos.artresearch.net/fieldDefinition/ulan_date_of_death> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-04-29T07:38:57.784Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-08-17T12:54:20.665Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/external_info>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E21_Person;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t49480301;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t58521375;
     <http://www.researchspace.org/resource/system/fields/order> "31100";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t49480300;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t58521376;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     rdfs:label "Date of Death"@en .
 }
@@ -1414,15 +1560,16 @@
 <https://pharos.artresearch.net/fieldDefinition/5/context> {
   <https://pharos.artresearch.net/fieldDefinition/5> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-06-14T08:09:47.506Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-09-20T15:13:11.400Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>,
-      <https://pharos.artresearch.net/category/itatti>, <https://pharos.artresearch.net/category/work>;
+      <https://pharos.artresearch.net/category/itatti>, <https://pharos.artresearch.net/category/work>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/artwork_monument>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t53336559;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780618;
     <http://www.researchspace.org/resource/system/fields/order> "550";
     <http://www.researchspace.org/resource/system/fields/range> crm:E55_Type;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t53336560;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780617;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "This field is used to indicate a cultural type for which the documented object is considered an example.";
     rdfs:label "Culture"@en .
@@ -1431,7 +1578,7 @@
 <https://pharos.artresearch.net/fieldDefinition/2/context> {
   <https://pharos.artresearch.net/fieldDefinition/2> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-04-22T14:10:23.369Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-09-20T15:10:05.167Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/photograph_info>,
       <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>, <https://pharos.artresearch.net/category/frick>,
@@ -1439,16 +1586,30 @@
       <https://pharos.artresearch.net/category/marburg>, <https://pharos.artresearch.net/category/photo>,
       <https://pharos.artresearch.net/category/work>, <https://pharos.artresearch.net/category/zeri>,
       <https://pharos.artresearch.net/category/collection>, <https://pharos.artresearch.net/category/institution>,
-      <https://pharos.artresearch.net/category/person>, <https://pharos.artresearch.net/category/place>;
+      <https://pharos.artresearch.net/category/person>, <https://pharos.artresearch.net/category/place>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/artwork_monument>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E78_Curated_Holding,
       crm:E40_Group, crm:E22_Man-Made_Object, crm:E53_Place;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t32315727;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780614;
     <http://www.researchspace.org/resource/system/fields/order> "100";
     <http://www.researchspace.org/resource/system/fields/range> crm:E42_Identifier;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t32315726;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780613;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "This field is used to indicate the preferred identifier attributed to the documented instance of the documented object.";
     rdfs:label "Title"@en .
+}
+
+<http://www.researchspace.org/fieldDefinition/Sexual_Orientation/context> {
+  <http://www.researchspace.org/fieldDefinition/Sexual_Orientation> a <http://www.w3.org/ns/ldp#Resource>,
+      prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
+    prov:generatedAtTime "2021-08-17T12:26:33.562Z"^^xsd:dateTime;
+    prov:wasAttributedTo User:admin;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/external_info>;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t58521370;
+    <http://www.researchspace.org/resource/system/fields/order> "315000";
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t58521369;
+    <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
+    rdfs:label "Sexual Orientation"@en .
 }
 
 <https://pharos.artresearch.net/fieldDefinition/3/context> {
@@ -1488,18 +1649,18 @@
 <https://pharos.artresearch.net/fieldDefinition/1/context> {
   <https://pharos.artresearch.net/fieldDefinition/1> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-04-22T14:10:29.231Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-09-20T15:19:48.232Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/frick>,
-      <https://pharos.artresearch.net/category/hertziana>, <https://pharos.artresearch.net/category/itatti>,
-      <https://pharos.artresearch.net/category/khi>, <https://pharos.artresearch.net/category/marburg>,
-      <https://pharos.artresearch.net/category/work>, <https://pharos.artresearch.net/category/zeri>,
-      <http://www.researchspace.org/ontologies/platform/FieldCategories/production_info>;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>,
+      <https://pharos.artresearch.net/category/frick>, <https://pharos.artresearch.net/category/hertziana>,
+      <https://pharos.artresearch.net/category/itatti>, <https://pharos.artresearch.net/category/khi>,
+      <https://pharos.artresearch.net/category/marburg>, <https://pharos.artresearch.net/category/work>,
+      <https://pharos.artresearch.net/category/zeri>, <http://www.researchspace.org/ontologies/platform/FieldCategories/creator_attribution>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t32316146;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780644;
     <http://www.researchspace.org/resource/system/fields/order> "200";
     <http://www.researchspace.org/resource/system/fields/range> crm:E21_Person;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t32316145;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780643;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "This field is used to indicate the artist or creator of the documented object.";
     rdfs:label "Creator"@en .
@@ -1521,15 +1682,15 @@
 <https://pharos.artresearch.net/fieldDefinition/40/context> {
   <https://pharos.artresearch.net/fieldDefinition/40> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-07-16T11:12:06.605Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-09-20T15:23:21.410Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/photograph_info>,
       <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>, <https://pharos.artresearch.net/category/itatti>,
-      <https://pharos.artresearch.net/category/work>;
+      <https://pharos.artresearch.net/category/work>, <http://www.researchspace.org/ontologies/platform/FieldCategories/physical_properties>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t58330318;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780666;
     <http://www.researchspace.org/resource/system/fields/order> "760";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t58330319;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780665;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     rdfs:comment "This field is used to allow a free text description of the material of which the documented object is composed.";
     rdfs:label "Material Description"@en .
@@ -1538,17 +1699,18 @@
 <https://pharos.artresearch.net/fieldDefinition/42/context> {
   <https://pharos.artresearch.net/fieldDefinition/42> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-06-23T12:02:02.046Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-09-20T15:24:16.632Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/photograph_info>,
       <https://pharos.artresearch.net/category/frick>, <https://pharos.artresearch.net/category/itatti>,
       <https://pharos.artresearch.net/category/photo>, <https://pharos.artresearch.net/category/work>,
-      <https://pharos.artresearch.net/category/zeri>, <http://www.researchspace.org/ontologies/platform/FieldCategories/production_info>;
+      <https://pharos.artresearch.net/category/zeri>, <http://www.researchspace.org/ontologies/platform/FieldCategories/production_info>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/physical_properties>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t53571471;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780671;
     <http://www.researchspace.org/resource/system/fields/order> "750";
     <http://www.researchspace.org/resource/system/fields/range> crm:E29_Design_or_Procedure;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t53571472;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780672;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "This field is used to indicate the specific material / technique used in the production of the documented object. ";
     rdfs:label "Technique"@en .
@@ -1589,19 +1751,19 @@
 <https://pharos.artresearch.net/fieldDefinition/44/context> {
   <https://pharos.artresearch.net/fieldDefinition/44> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-05-12T09:17:38.071Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-09-20T15:23:06.179Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/photograph_info>,
       <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>, <https://pharos.artresearch.net/category/frick>,
       <https://pharos.artresearch.net/category/hertziana>, <https://pharos.artresearch.net/category/itatti>,
       <https://pharos.artresearch.net/category/khi>, <https://pharos.artresearch.net/category/marburg>,
       <https://pharos.artresearch.net/category/photo>, <https://pharos.artresearch.net/category/work>,
-      <https://pharos.artresearch.net/category/zeri>;
+      <https://pharos.artresearch.net/category/zeri>, <http://www.researchspace.org/ontologies/platform/FieldCategories/physical_properties>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t51011189;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780663;
     <http://www.researchspace.org/resource/system/fields/order> "755";
     <http://www.researchspace.org/resource/system/fields/range> crm:E57_Material;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t51011190;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780664;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "This fields is used to indicate the material that the object consists of";
     rdfs:label "Material"@en .
@@ -1610,36 +1772,50 @@
 <https://pharos.artresearch.net/fieldDefinition/45/context> {
   <https://pharos.artresearch.net/fieldDefinition/45> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-04-22T14:10:24.621Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-09-20T15:15:05.917Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/itatti>,
       <https://pharos.artresearch.net/category/photo>, <https://pharos.artresearch.net/category/place>,
-      <http://www.researchspace.org/ontologies/platform/FieldCategories/other_details>;
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/other_details>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/artwork_monument>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t32315812;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780625;
     <http://www.researchspace.org/resource/system/fields/order> "1120";
     <http://www.researchspace.org/resource/system/fields/range> crm:E55_Type;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t32315811;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780624;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "This field is used to indicate the kind of right that is held over an object by an actor.";
-    rdfs:label "Rights Type"@en .
+    rdfs:label "Object Rights Type"@en .
+}
+
+<http://www.researchspace.org/fieldDefinition/Annotation_URI/context> {
+  <http://www.researchspace.org/fieldDefinition/Annotation_URI> a <http://www.w3.org/ns/ldp#Resource>,
+      prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
+    prov:generatedAtTime "2021-08-12T10:42:36.434Z"^^xsd:dateTime;
+    prov:wasAttributedTo User:admin;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t58501254;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t58501256;
+    <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
+    <http://www.researchspace.org/resource/system/fields/deletePattern> _:t58501255;
+    rdfs:label "Annotation with URI exposed"@en .
 }
 
 <https://pharos.artresearch.net/fieldDefinition/46/context> {
   <https://pharos.artresearch.net/fieldDefinition/46> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-06-10T06:39:18.255Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-09-20T15:29:00.337Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/photograph_info>,
       <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>, <https://pharos.artresearch.net/category/frick>,
       <https://pharos.artresearch.net/category/hertziana>, <https://pharos.artresearch.net/category/itatti>,
       <https://pharos.artresearch.net/category/khi>, <https://pharos.artresearch.net/category/marburg>,
-      <https://pharos.artresearch.net/category/photo>, <https://pharos.artresearch.net/category/work>;
+      <https://pharos.artresearch.net/category/photo>, <https://pharos.artresearch.net/category/work>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/subjects>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t53316559;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780692;
     <http://www.researchspace.org/resource/system/fields/order> "560";
     <http://www.researchspace.org/resource/system/fields/range> crm:E55_Type;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t53316558;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780693;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "This field is used to indicate the subject of representation of the documented artwork. ";
     rdfs:label "Subject"@en .
@@ -1677,17 +1853,18 @@
 <https://pharos.artresearch.net/fieldDefinition/8/context> {
   <https://pharos.artresearch.net/fieldDefinition/8> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-06-10T09:14:27.474Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-10-11T12:04:29.136Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/frick>,
       <https://pharos.artresearch.net/category/hertziana>, <https://pharos.artresearch.net/category/itatti>,
       <https://pharos.artresearch.net/category/khi>, <https://pharos.artresearch.net/category/marburg>,
       <https://pharos.artresearch.net/category/photo>, <https://pharos.artresearch.net/category/work>,
-      <https://pharos.artresearch.net/category/zeri>, <http://www.researchspace.org/ontologies/platform/FieldCategories/production_info>;
+      <https://pharos.artresearch.net/category/zeri>, <http://www.researchspace.org/ontologies/platform/FieldCategories/production_info>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/dating>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t53316565;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68830544;
     <http://www.researchspace.org/resource/system/fields/order> "320";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t53316566;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68830543;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     rdfs:comment "This field is used to indicate the timespan for the creation of the documented object. ";
     rdfs:label "Production Date"@en .
@@ -1714,16 +1891,17 @@
 <https://pharos.artresearch.net/fieldDefinition/6/context> {
   <https://pharos.artresearch.net/fieldDefinition/6> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-07-16T11:05:48.489Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-09-20T15:22:12.114Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/frick>,
       <https://pharos.artresearch.net/category/hertziana>, <https://pharos.artresearch.net/category/itatti>,
       <https://pharos.artresearch.net/category/khi>, <https://pharos.artresearch.net/category/marburg>,
-      <https://pharos.artresearch.net/category/zeri>, <http://www.researchspace.org/ontologies/platform/FieldCategories/production_info>;
+      <https://pharos.artresearch.net/category/zeri>, <http://www.researchspace.org/ontologies/platform/FieldCategories/production_info>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/physical_properties>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t58330315;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780660;
     <http://www.researchspace.org/resource/system/fields/order> "700";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t58330314;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780659;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     rdfs:comment "This field is used to indicate a dimension of an object.";
     rdfs:label "Dimensions"@en .
@@ -1784,13 +1962,13 @@
 <https://pharos.artresearch.net/fieldDefinition/ulan_place_of_birth/context> {
   <https://pharos.artresearch.net/fieldDefinition/ulan_place_of_birth> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-04-29T07:38:45.056Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-08-24T13:34:57.546Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/external_info>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E21_Person;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t49480290;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t58703089;
     <http://www.researchspace.org/resource/system/fields/order> "31200";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t49480289;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t58703090;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:label "Place of Birth"@en .
 }
@@ -1833,17 +2011,17 @@
 <https://pharos.artresearch.net/fieldDefinition/203/context> {
   <https://pharos.artresearch.net/fieldDefinition/203> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-04-22T14:10:23.544Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-09-20T15:24:00.506Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/photograph_info>,
       <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>, <https://pharos.artresearch.net/category/frick>,
       <https://pharos.artresearch.net/category/photo>, <https://pharos.artresearch.net/category/work>,
-      <https://pharos.artresearch.net/category/zeri>;
+      <https://pharos.artresearch.net/category/zeri>, <http://www.researchspace.org/ontologies/platform/FieldCategories/physical_properties>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t32315739;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780667;
     <http://www.researchspace.org/resource/system/fields/order> "1200";
     <http://www.researchspace.org/resource/system/fields/range> crm:E3_Condition_State;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t32315738;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780668;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "This field is used to indicate the assessed state of preservation - using a specified typology of states - of the documented object.";
     rdfs:label "State of Preservation"@en .
@@ -1852,7 +2030,7 @@
 <https://pharos.artresearch.net/fieldDefinition/285/context> {
   <https://pharos.artresearch.net/fieldDefinition/285> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-07-16T13:24:16.425Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-08-25T08:39:50.127Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/frick>,
       <https://pharos.artresearch.net/category/hertziana>, <https://pharos.artresearch.net/category/itatti>,
@@ -1860,9 +2038,9 @@
       <https://pharos.artresearch.net/category/zeri>, <https://pharos.artresearch.net/category/person>,
       <http://www.researchspace.org/ontologies/platform/FieldCategories/person_info>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E21_Person, crm:E39_Actor;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t58330341;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t58707475;
     <http://www.researchspace.org/resource/system/fields/order> "3300";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t58330342;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t58707476;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "This field is used to indicate the residence of or the location of the documented actor ";
     rdfs:label "Residence  / Location"@en .
@@ -1889,7 +2067,7 @@
 <https://pharos.artresearch.net/fieldDefinition/286/context> {
   <https://pharos.artresearch.net/fieldDefinition/286> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-07-16T13:33:10.475Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-09-08T07:50:32.425Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/frick>,
       <https://pharos.artresearch.net/category/hertziana>, <https://pharos.artresearch.net/category/itatti>,
@@ -1897,10 +2075,10 @@
       <https://pharos.artresearch.net/category/zeri>, <https://pharos.artresearch.net/category/collection>,
       <https://pharos.artresearch.net/category/person>, <http://www.researchspace.org/ontologies/platform/FieldCategories/person_info>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E21_Person, crm:E39_Actor;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t58330344;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t59672257;
     <http://www.researchspace.org/resource/system/fields/order> "3400";
     <http://www.researchspace.org/resource/system/fields/range> crm:E39_Actor;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t58330343;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t59672258;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "The affiliation of the documented person";
     rdfs:label "Institution"@en .
@@ -1929,7 +2107,7 @@
 <https://pharos.artresearch.net/fieldDefinition/280/context> {
   <https://pharos.artresearch.net/fieldDefinition/280> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-04-22T14:10:28.284Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-11-09T13:36:26.633Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/frick>,
       <https://pharos.artresearch.net/category/hertziana>, <https://pharos.artresearch.net/category/itatti>,
@@ -1937,10 +2115,10 @@
       <https://pharos.artresearch.net/category/photo>, <https://pharos.artresearch.net/category/work>,
       <https://pharos.artresearch.net/category/zeri>, <http://www.researchspace.org/ontologies/platform/FieldCategories/production_info>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t32316076;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69007842;
     <http://www.researchspace.org/resource/system/fields/order> "4000";
     <http://www.researchspace.org/resource/system/fields/range> crm:E55_Type;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t32316077;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69007843;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "Equipment used for the production of the documented object";
     rdfs:label "Equipment"@en .
@@ -2017,13 +2195,14 @@
 <http://www.researchspace.org/fieldDefinition/Technique_Description/context> {
   <http://www.researchspace.org/fieldDefinition/Technique_Description> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-06-07T08:13:33.929Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-09-20T15:24:43.585Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/production_info>;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/production_info>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/physical_properties>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t53117782;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780675;
     <http://www.researchspace.org/resource/system/fields/order> "755";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t53117781;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780676;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     rdfs:label "Technique Description"@en .
 }
@@ -2031,35 +2210,77 @@
 <https://pharos.artresearch.net/fieldDefinition/20/context> {
   <https://pharos.artresearch.net/fieldDefinition/20> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-04-22T14:10:27.272Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-09-20T15:20:31.247Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/frick>,
       <https://pharos.artresearch.net/category/hertziana>, <https://pharos.artresearch.net/category/itatti>,
       <https://pharos.artresearch.net/category/khi>, <https://pharos.artresearch.net/category/marburg>,
       <https://pharos.artresearch.net/category/work>, <https://pharos.artresearch.net/category/zeri>,
-      <http://www.researchspace.org/ontologies/platform/FieldCategories/production_info>;
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/production_info>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/creator_attribution>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t32316003;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780650;
     <http://www.researchspace.org/resource/system/fields/order> "250";
     <http://www.researchspace.org/resource/system/fields/range> crm:E21_Person;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t32316002;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780649;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "This field is used to indicate a form of influence of an actor on the documented object. This form of influence may be direct or indirect. The kind of influence should also be documented in order to specify the exact kind of influence exerted.";
     rdfs:label "Influenced By"@en .
 }
 
+<http://www.researchspace.org/fieldDefinition/Last_Known_Location_2/context> {
+  <http://www.researchspace.org/fieldDefinition/Last_Known_Location_2> a <http://www.w3.org/ns/ldp#Resource>,
+      prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
+    prov:generatedAtTime "2021-10-13T11:27:02.721Z"^^xsd:dateTime;
+    prov:wasAttributedTo User:admin;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/artwork_monument>;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68851290;
+    <http://www.researchspace.org/resource/system/fields/order> "6000";
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68851289;
+    <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
+    rdfs:label "Last Known Location"@en .
+}
+
+<http://www.researchspace.org/fieldDefinition/Last_Known_Location_3/context> {
+  <http://www.researchspace.org/fieldDefinition/Last_Known_Location_3> a <http://www.w3.org/ns/ldp#Resource>,
+      prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
+    prov:generatedAtTime "2021-10-13T11:38:04.699Z"^^xsd:dateTime;
+    prov:wasAttributedTo User:admin;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/artwork_monument>;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68851293;
+    <http://www.researchspace.org/resource/system/fields/order> "6000";
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68851294;
+    <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
+    rdfs:label "Last Known Location"@en .
+}
+
 <http://www.researchspace.org/fieldDefinition/Production_Date_Photo/context> {
   <http://www.researchspace.org/fieldDefinition/Production_Date_Photo> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-06-10T09:17:00.271Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-09-20T15:30:38.440Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/production_info>;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/production_info>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/dating>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t53316570;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780698;
     <http://www.researchspace.org/resource/system/fields/order> "320";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t53316569;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780699;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
+    <http://www.researchspace.org/resource/system/fields/minOccurs> "1";
     rdfs:label "Production Date"@en .
+}
+
+<http://www.researchspace.org/fieldDefinition/Last_Known_Location_1/context> {
+  <http://www.researchspace.org/fieldDefinition/Last_Known_Location_1> a <http://www.w3.org/ns/ldp#Resource>,
+      prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
+    prov:generatedAtTime "2021-10-13T11:26:39.910Z"^^xsd:dateTime;
+    prov:wasAttributedTo User:admin;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/artwork_monument>;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68851288;
+    <http://www.researchspace.org/resource/system/fields/order> "6000";
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68851287;
+    <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
+    rdfs:label "Last Known Location"@en .
 }
 
 <https://pharos.artresearch.net/fieldDefinition/212/context> {
@@ -2108,6 +2329,23 @@
     <http://www.researchspace.org/resource/system/fields/selectPattern> _:t32315806;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     rdfs:label "Shot Date"@en .
+  
+  _:t32315806 a sp:Query;
+    sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
+{ 
+	graph ?graph {
+  		$subject crm:P128_carries ?visual_item.
+  		?visual_item crm:P128_is_carried_by ?negative.
+  		?negative crm:P108i_was_produced_by ?production.
+  		?production crm:P4_has_time-span ?tm.
+  		?tm crm:P82_at_some_time_within ?value.
+  	}
+	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
+	?provider rdfs:label ?providerLabel.
+}""" .
+  
+  _:t32315805 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <http://www.researchspace.org/fieldDefinition/Population/context> {
@@ -2121,130 +2359,266 @@
     <http://www.researchspace.org/resource/system/fields/selectPattern> _:t51962938;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     rdfs:label "Population"@en .
+  
+  _:t51962938 a sp:Query;
+    sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE {
+  graph ?graph {
+  $subject <http://www.geonames.org/ontology#population> ?value.
+  }
+  ?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
+  ?provider rdfs:label ?providerLabel.
+}""" .
+  
+  _:t51962939 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <http://www.researchspace.org/fieldDefinition/Influence/context> {
   <http://www.researchspace.org/fieldDefinition/Influence> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-05-10T12:31:27.267Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-09-20T15:20:22.435Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/external_info>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E21_Person, crm:E39_Actor;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t51011107;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780648;
     <http://www.researchspace.org/resource/system/fields/order> "31780";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t51011106;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780647;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:label "Influenced by"@en .
+  
+  _:t68780648 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:t68780647 a sp:Query;
+    sp:text """SELECT distinct ?value ?provider ?providerLabel WHERE {
+  graph ?graph {
+    $subject <https://pharos.artresearch.net/resource/fr/Person_influenced_by_Person> ?value.
+  }
+  ?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
+  ?provider rdfs:label ?providerLabel.
+}""" .
 }
 
 <https://pharos.artresearch.net/fieldDefinition/Repository/context> {
   <https://pharos.artresearch.net/fieldDefinition/Repository> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-04-22T14:10:23.616Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-10-12T13:26:56.194Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/photograph_info>,
       <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>, <https://pharos.artresearch.net/category/frick>,
       <https://pharos.artresearch.net/category/hertziana>, <https://pharos.artresearch.net/category/itatti>,
       <https://pharos.artresearch.net/category/khi>, <https://pharos.artresearch.net/category/marburg>,
       <https://pharos.artresearch.net/category/photo>, <https://pharos.artresearch.net/category/work>,
-      <https://pharos.artresearch.net/category/zeri>;
+      <https://pharos.artresearch.net/category/zeri>, <http://www.researchspace.org/ontologies/platform/FieldCategories/artwork_monument>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t32315745;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68849814;
     <http://www.researchspace.org/resource/system/fields/order> "610";
     <http://www.researchspace.org/resource/system/fields/range> crm:E39_Actor;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t32315746;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68849813;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "This field is used to indicate a present custodian of the documented object.";
     rdfs:label "Repository"@en .
+  
+  _:t68849814 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:t68849813 a sp:Query;
+    sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
+{
+	{
+      graph ?graph {
+          ?subject <https://pharos.artresearch.net/resource/fr/Work_kept_by_Institution> ?value.
+      }
+      FILTER CONTAINS(STR(?value),\"wikidata\")
+      BIND(<https://pharos.artresearch.net/resource/wikidata/source/Wikidata> AS ?provider)
+      BIND(\"Wikidata\" AS ?providerLabel)
+  	} UNION {
+      graph ?graph {
+          ?subject crm:P50_has_current_keeper ?value.
+      }
+      ?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
+      ?provider rdfs:label ?providerLabel.
+  	}
+}""" .
 }
 
 <https://pharos.artresearch.net/fieldDefinition/33/context> {
   <https://pharos.artresearch.net/fieldDefinition/33> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-04-22T14:10:27.189Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-09-20T15:14:36.518Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>,
       <https://pharos.artresearch.net/category/frick>, <https://pharos.artresearch.net/category/itatti>,
-      <https://pharos.artresearch.net/category/work>;
+      <https://pharos.artresearch.net/category/work>, <http://www.researchspace.org/ontologies/platform/FieldCategories/artwork_monument>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t32315997;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780622;
     <http://www.researchspace.org/resource/system/fields/order> "1000";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t32315996;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780621;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     rdfs:comment "This field is used to document the textual content of an inscription found on a document object.";
     rdfs:label "Inscription"@en .
+  
+  _:t68780622 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:t68780621 a sp:Query;
+    sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
+{  
+	graph ?graph
+  	{
+ 		$subject <http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by>  ?information_object.
+  		?information_object crm:P2_has_type <http://vocab.getty.edu/aat/300028702>.
+  		?information_object crm:P190_has_symbolic_content ?value.
+	}
+	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
+	?provider rdfs:label ?providerLabel.
+}""" .
 }
 
 <https://pharos.artresearch.net/fieldDefinition/34/context> {
   <https://pharos.artresearch.net/fieldDefinition/34> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-04-22T14:10:28.131Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-09-20T15:27:53.649Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/frick>,
       <https://pharos.artresearch.net/category/work>, <https://pharos.artresearch.net/category/zeri>,
-      <http://www.researchspace.org/ontologies/platform/FieldCategories/other_details>;
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/other_details>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/provenance>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t32316066;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780686;
     <http://www.researchspace.org/resource/system/fields/order> "905";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t32316065;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780685;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     rdfs:comment "This field is used to provide a free text description of an exhibition.";
     rdfs:label "Exhibition Description"@en .
+  
+  _:t68780686 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:t68780685 a sp:Query;
+    sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
+{ 
+	graph ?graph
+  	{
+  		$subject crm:P67i_is_referred_to_by ?information_object.
+  		?information_object crm:P2_has_type <http://vocab.getty.edu/aat/300435424>.
+  		?information_object crm:P190_has_symbolic_content ?value .
+  	}
+	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
+	?provider rdfs:label ?providerLabel.
+}""" .
 }
 
 <https://pharos.artresearch.net/fieldDefinition/37/context> {
   <https://pharos.artresearch.net/fieldDefinition/37> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-07-16T11:20:59.656Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-09-20T15:28:14.422Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/work>,
-      <https://pharos.artresearch.net/category/zeri>, <http://www.researchspace.org/ontologies/platform/FieldCategories/other_details>;
+      <https://pharos.artresearch.net/category/zeri>, <http://www.researchspace.org/ontologies/platform/FieldCategories/other_details>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/provenance>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t58330326;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780690;
     <http://www.researchspace.org/resource/system/fields/order> "900";
     <http://www.researchspace.org/resource/system/fields/range> crm:E41_Appellation;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t58330327;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780691;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     rdfs:comment "Exhibition of the document object.";
     rdfs:label "Exhibition"@en .
+  
+  _:t68780690 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:t68780691 a sp:Query;
+    sp:text """SELECT ?value ?qualifier ?provider ?providerLabel WHERE 
+{ 
+	graph ?graph 
+  	{
+  		$subject crm:P12i_was_present_at ?activity.
+  		?activity crm:P2_has_type ?type.
+  		?activity rdfs:label ?value.
+  	}
+    ?type rdfs:label \"Exhibition\".
+	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
+	?provider rdfs:label ?providerLabel.
+}""" .
 }
 
 <https://pharos.artresearch.net/fieldDefinition/39/context> {
   <https://pharos.artresearch.net/fieldDefinition/39> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-06-29T12:09:40.429Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-09-21T07:13:21.729Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/frick>,
       <https://pharos.artresearch.net/category/itatti>, <https://pharos.artresearch.net/category/photo>,
-      <https://pharos.artresearch.net/category/work>, <http://www.researchspace.org/ontologies/platform/FieldCategories/other_details>;
+      <https://pharos.artresearch.net/category/work>, <http://www.researchspace.org/ontologies/platform/FieldCategories/other_details>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/provenance>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t58246126;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780725;
     <http://www.researchspace.org/resource/system/fields/order> "800";
     <http://www.researchspace.org/resource/system/fields/range> crm:E39_Actor;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t58246125;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780726;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     rdfs:comment "This field is used to provide a free text description of a provenance history.";
     rdfs:label "History of Ownership"@en .
+  
+  _:t68780725 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:t68780726 a sp:Query;
+    sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE { 
+  {
+    graph ?graph {
+      $subject crm:P67i_is_referred_to_by ?information_object.
+      ?information_object crm:P2_has_type <http://vocab.getty.edu/aat/300055863>.
+      ?information_object crm:P190_has_symbolic_content ?value.
+    }
+  } UNION {
+    graph ?graph {
+  		?subject crm:P24i_changed_ownership_through ?acquisition.
+    	?acquisition crm:P22_transferred_title_from|crm:P23_transferred_title_from ?value_uri.
+    }
+    ?value_uri rdfs:label ?value.
+  }
+	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
+	?provider rdfs:label ?providerLabel.
+}""" .
 }
 
 <https://pharos.artresearch.net/fieldDefinition/205/context> {
   <https://pharos.artresearch.net/fieldDefinition/205> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-07-16T11:19:27.669Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-09-20T15:25:35.810Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/frick>,
       <https://pharos.artresearch.net/category/hertziana>, <https://pharos.artresearch.net/category/itatti>,
       <https://pharos.artresearch.net/category/khi>, <https://pharos.artresearch.net/category/marburg>,
       <https://pharos.artresearch.net/category/photo>, <https://pharos.artresearch.net/category/work>,
-      <https://pharos.artresearch.net/category/zeri>, <http://www.researchspace.org/ontologies/platform/FieldCategories/other_details>;
+      <https://pharos.artresearch.net/category/zeri>, <http://www.researchspace.org/ontologies/platform/FieldCategories/provenance>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t58330323;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780678;
     <http://www.researchspace.org/resource/system/fields/order> "840";
     <http://www.researchspace.org/resource/system/fields/range> crm:E53_Place;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t58330322;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780677;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "Former location of the documented Object";
     rdfs:label "Former Location"@en .
+  
+  _:t68780678 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:t68780677 a sp:Query;
+    sp:text """SELECT distinct ?value ?provider ?providerLabel WHERE 
+{ 
+	graph ?graph 
+  	{
+  		$subject crm:P24i_changed_ownership_through ?acq.
+  		?acq crm:P23_transferred_title_from ?actor.
+  	}
+  	?actor crm:P74_has_current_or_former_residence ?value.
+	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
+	?provider rdfs:label ?providerLabel.
+}""" .
 }
 
 <https://dev.artresearch.net/container/fieldDefinitionContainer/Birth_Date/context> {
@@ -2264,27 +2638,42 @@
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     rdfs:comment "This field is used to indicate the date for the birth of the documented person.";
     rdfs:label "Date of Birth" .
+  
+  _:t51011214 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:t51011213 a sp:Query;
+    sp:text """SELECT ?value ?provider ?providerLabel WHERE 
+{ 
+	graph ?graph 
+  	{
+      ?subject crm:P98i_was_born_by ?birth.
+      ?birth crm:P4_has_time-span ?birth_t.
+      ?birth_t crm:P82_at_some_time_within ?value.
+	}
+	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
+	?provider rdfs:label ?providerLabel.
+  }""" .
 }
 
 <https://pharos.artresearch.net/fieldDefinition/204/context> {
-  <https://pharos.artresearch.net/fieldDefinition/204> prov:generatedAtTime "2021-07-16T09:25:55.654Z"^^xsd:dateTime;
+  <https://pharos.artresearch.net/fieldDefinition/204> a <http://www.w3.org/ns/ldp#Resource>,
+      prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
+    prov:generatedAtTime "2021-09-20T15:21:04.485Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <https://pharos.artresearch.net/category/work>,
-      <https://pharos.artresearch.net/category/zeri>, <http://www.researchspace.org/ontologies/platform/FieldCategories/production_info>;
+      <https://pharos.artresearch.net/category/zeri>, <http://www.researchspace.org/ontologies/platform/FieldCategories/production_info>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/creator_attribution>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    a <http://www.w3.org/ns/ldp#Resource>, prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t58330280;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780653;
     <http://www.researchspace.org/resource/system/fields/order> "251";
     <http://www.researchspace.org/resource/system/fields/range> crm:E55_Type;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t58330281;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780654;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "This is a note field describing a reason for the attribution of an artist / group as creator of some work.";
     rdfs:label "Attribution Reason"@en .
   
-  _:t58330280 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  _:t58330281 a sp:Query;
+  _:t68780654 a sp:Query;
     sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE { 
 	graph ?graph {
     	$subject <http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by> ?production .
@@ -2295,13 +2684,13 @@
     ?provider rdfs:label ?providerLabel.
 }
 """ .
+  
+  _:t68780653 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <https://pharos.artresearch.net/fieldDefinition/146/context> {
-  _:t58330298 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  _:t58330299 a sp:Query;
+  _:t68780702 a sp:Query;
     sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE
 { 
 	graph ?graph 
@@ -2315,6 +2704,9 @@
     ?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.
 }""" .
+  
+  _:t68780703 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <https://pharos.artresearch.net/fieldDefinition/145/context> {
@@ -2335,13 +2727,65 @@
 }
 
 <https://pharos.artresearch.net/fieldDefinition/ulan_place_of_death/context> {
-  _:t58330354 a sp:Query;
+  _:t58703800 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:t58330355 a sp:Query;
+  _:t58703801 a sp:Query;
     sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE {
   graph ?graph{
     $subject <https://pharos.artresearch.net/resource/fr/Person_has_Place_of_Death> ?value.
+  }
+  ?graph <https://pharos.artresearch.net/custom/has_provider> ?prov .
+  ?prov rdfs:label ?provLabel.
+  BIND(IF( CONTAINS(STR(?value),\"geonames\"), \"Geonames\", ?provLabel) AS ?providerLabel)
+  BIND(IF( CONTAINS(STR(?value),\"geonames\"), IRI(\"https://pharos.artresearch.net/resource/geonames/source/Geonames\"), ?prov) AS ?provider)
+}""" .
+}
+
+<http://www.researchspace.org/fieldDefinition/Creator_Assertion/context> {
+  _:t58501129 a sp:Query;
+    sp:text """PREFIX fts: <http://www.bigdata.com/rdf/fts#>
+SELECT DISTINCT ?value ?label  WHERE {
+  ?value fts:search ?__token__ .
+  ?value fts:endpoint \"http://213.171.209.34:8983/solr/artists_weighted/select\".
+      ?value fts:endpointType \"SOLR\" .
+      ?value fts:params \"rows=10\" .
+      ?value fts:searchField \"uri\" .
+      ?value fts:fieldToSearch \"*\" .
+      ?value fts:snippetField \"*\" .
+      ?value fts:searchResultType \"URI\" ;
+      <http://www.bigdata.com/rdf/fts#scoreField>    \"field_score\";
+      <http://www.bigdata.com/rdf/fts#score>   ?score;
+      rdfs:label ?label.
+      FILTER EXISTS{ ?sub fr:Work_created_from_Artist ?value}
+}""" .
+  
+  _:t58501127 a sp:Query;
+    sp:text """INSERT { 
+ ?subject <https://pharos.artresearch.net/resource/fr/Work_created_from_Artist> ?value.
+} WHERE {}""" .
+  
+  _:t58501126 a sp:Query;
+    sp:text """SELECT DISTINCT ?value WHERE {  
+  ?subject <https://pharos.artresearch.net/resource/fr/Work_created_from_Artist> ?value.
+}""" .
+  
+  _:t58501128 a sp:Query;
+    sp:text """DELETE { 
+	?subject <https://pharos.artresearch.net/resource/fr/Work_created_from_Artist> ?value.
+} WHERE {
+	?subject <https://pharos.artresearch.net/resource/fr/Work_created_from_Artist> ?value.
+}""" .
+}
+
+<http://www.researchspace.org/fieldDefinition/Apprentice/context> {
+  _:t68766870 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:t68766869 a sp:Query;
+    sp:text """SELECT distinct ?value ?provider ?providerLabel WHERE {
+  graph ?graph {
+  	?subject <https://pharos.artresearch.net/resource/fr/Person_was_apprentice_of_Person> ?value.
   }
   ?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
   ?provider rdfs:label ?providerLabel.
@@ -2364,11 +2808,30 @@
 }""" .
 }
 
-<https://pharos.artresearch.net/fieldDefinition/140/context> {
-  _:t32315818 a sp:Query;
+<http://www.researchspace.org/fieldDefinition/Photo_echnique/context> {
+  _:t68780674 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:t32315817 a sp:Query;
+  _:t68780673 a sp:Query;
+    sp:text """SELECT DISTINCT ?value ?label ?provider ?providerLabel WHERE 
+{ 
+    graph ?graph 
+    {
+      ?subject <https://pharos.artresearch.net/resource/fr/Photo_produced_using_Technique> ?value.
+    }
+  	FILTER EXISTS {?value rdfs:label ?label}
+  	?graph <https://pharos.artresearch.net/custom/has_provider> ?prov .
+    ?prov rdfs:label ?provLabel.
+  	BIND(IF( CONTAINS(STR(?value),\"aat\"), \"AAT\", ?provLabel) AS ?providerLabel)
+    BIND(IF( CONTAINS(STR(?value),\"aat\"), IRI(\"https://pharos.artresearch.net/resource/getty/source/Getty\"), ?prov) AS ?provider)
+}""" .
+}
+
+<https://pharos.artresearch.net/fieldDefinition/140/context> {
+  _:t68780629 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:t68780630 a sp:Query;
     sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
 { 
 	graph ?graph 
@@ -2428,6 +2891,22 @@
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
+<http://www.researchspace.org/fieldDefinition/Related_Documents/context> {
+  _:t68780638 a sp:Query;
+    sp:text """SELECT DISTINCT ?value ?provider ?providerLabel WHERE {
+  GRAPH ?graph {
+    $subject crm:P67i_is_referred_to_by ?related_document.
+	?related_document crm:P2_has_type <http://vocab.getty.edu/aat/300435412>.
+    ?related_document crm:P70i_is_documented_in ?value.
+  }
+  ?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
+  ?provider rdfs:label ?providerLabel.
+}""" .
+  
+  _:t68780637 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+}
+
 <http://www.researchspace.org/fieldDefinition/wiki_gender/context> {
   _:t51011177 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
@@ -2477,10 +2956,7 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://pharos.artresearch.net/fieldDefinition/277/context> {
-  _:t58330283 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  _:t58330282 a sp:Query;
+  _:t68780656 a sp:Query;
     sp:text """SELECT ?value ?provider ?providerLabel WHERE 
 {   
 	graph ?graph
@@ -2494,6 +2970,9 @@ SELECT ?value ?provider ?providerLabel WHERE {
 	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
   	?provider rdfs:label ?providerLabel.
   }""" .
+  
+  _:t68780655 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <http://www.researchspace.org/fieldDefinition/wiki_nationality/context> {
@@ -2514,37 +2993,43 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://pharos.artresearch.net/fieldDefinition/550/context> {
-  _:t32315718 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  _:t32315719 a sp:Query;
+  _:t68780616 a sp:Query;
     sp:text """SELECT distinct $value ?provider ?providerLabel WHERE 
 {   
 	graph ?graph
 	{
 		$subject <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?value .
 	}
-	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
-	?provider rdfs:label ?providerLabel.
+    FILTER EXISTS {?value rdfs:label ?label}
+	?graph <https://pharos.artresearch.net/custom/has_provider> ?prov .
+	?prov rdfs:label ?provLabel.
+  	BIND(IF( CONTAINS(STR(?value),\"aat\"), \"AAT\", ?provLabel) AS ?providerLabel)
+    BIND(IF( CONTAINS(STR(?value),\"aat\"), IRI(\"https://pharos.artresearch.net/resource/getty/source/Getty\"), ?prov) AS ?provider)
 }""" .
+  
+  _:t68780615 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <http://www.researchspace.org/fieldDefinition/Tutor/context> {
-  _:t58330369 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  _:t58330370 a sp:Query;
+  _:t68766866 a sp:Query;
     sp:text """SELECT distinct ?value ?provider ?providerLabel WHERE {
   graph ?graph {
-    $subject <https://pharos.artresearch.net/resource/fr/Person_was_apprentice_of_Person>|<https://pharos.artresearch.net/resource/fr/Person_apprentice_of_Person> ?value.
+    $subject <https://pharos.artresearch.net/resource/fr/Person_apprentice_of_Person> ?value.
   }
   ?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
   ?provider rdfs:label ?providerLabel.
 }""" .
+  
+  _:t68766865 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <https://pharos.artresearch.net/fieldDefinition/150/context> {
-  _:t58330306 a sp:Query;
+  _:t68780619 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:t68780620 a sp:Query;
     sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
 { 
 	graph ?graph
@@ -2556,16 +3041,10 @@ SELECT ?value ?provider ?providerLabel WHERE {
 	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.
 }""" .
-  
-  _:t58330307 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <https://pharos.artresearch.net/fieldDefinition/90/context> {
-  _:t50438086 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  _:t50438087 a sp:Query;
+  _:t68780705 a sp:Query;
     sp:text """SELECT ?value ?provider ?providerLabel WHERE 
 { 
 	graph ?graph 
@@ -2576,37 +3055,28 @@ SELECT ?value ?provider ?providerLabel WHERE {
 	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.	
   }""" .
+  
+  _:t68780704 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <https://pharos.artresearch.net/fieldDefinition/91/context> {
-  _:t58330332 a sp:Query;
+  _:t68783533 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:t58330333 a sp:Query;
+  _:t68783534 a sp:Query;
     sp:text """SELECT DISTINCT ?value ?label ?provider ?providerLabel WHERE 
 { 
-	graph ?graph 
-	{
-		
-			{
- 				$subject crm:P46_has_component ?value.
-			} 
-			UNION 
-			{
-  	 			?value crm:P46i_forms_part_of $subject.
-			}
-     	
-   }
-   ?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
-   ?provider rdfs:label ?providerLabel.
+  graph ?graph {
+    $subject crm:P46_is_composed_of ?value.
+  }
+  ?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
+  ?provider rdfs:label ?providerLabel.
 }""" .
 }
 
 <https://pharos.artresearch.net/fieldDefinition/92/context> {
-  _:t58330330 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  _:t58330331 a sp:Query;
+  _:t68780696 a sp:Query;
     sp:text """SELECT ?value ?qualifier ?provider ?providerLabel WHERE 
 { 
     graph ?graph {
@@ -2620,6 +3090,9 @@ SELECT ?value ?provider ?providerLabel WHERE {
     ?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
     ?provider rdfs:label ?providerLabel.
 }""" .
+  
+  _:t68780697 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <https://pharos.artresearch.net/fieldDefinition/93/context> {
@@ -2639,7 +3112,10 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://pharos.artresearch.net/fieldDefinition/94/context> {
-  _:t58330335 a sp:Query;
+  _:t68780636 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:t68780635 a sp:Query;
     sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
 { 
 	graph ?graph 
@@ -2650,9 +3126,6 @@ SELECT ?value ?provider ?providerLabel WHERE {
 	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.
 }""" .
-  
-  _:t58330334 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <https://pharos.artresearch.net/fieldDefinition/ulan_nationality/context> {
@@ -2706,10 +3179,7 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://pharos.artresearch.net/fieldDefinition/14/context> {
-  _:t49667699 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  _:t49667698 a sp:Query;
+  _:t68780707 a sp:Query;
     sp:text """SELECT  ?value ?label ?provider ?providerLabel WHERE 
 { 
 	graph ?graph 
@@ -2720,10 +3190,16 @@ SELECT ?value ?provider ?providerLabel WHERE {
    ?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.
 }""" .
+  
+  _:t68780706 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <https://pharos.artresearch.net/fieldDefinition/15/context> {
-  _:t50329454 a sp:Query;
+  _:t68780709 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:t68780708 a sp:Query;
     sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
 { 
 	graph ?graph 
@@ -2734,9 +3210,6 @@ SELECT ?value ?provider ?providerLabel WHERE {
 	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.
 }""" .
-  
-  _:t50329455 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <https://pharos.artresearch.net/fieldDefinition/16/context> {
@@ -2758,7 +3231,7 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://pharos.artresearch.net/fieldDefinition/17/context> {
-  _:t32316186 a sp:Query;
+  _:t68780651 a sp:Query;
     sp:text """SELECT ?value ?provider ?providerLabel WHERE 
 {   
 	graph ?graph
@@ -2772,7 +3245,7 @@ SELECT ?value ?provider ?providerLabel WHERE {
   BIND(REPLACE(?content,\"&quot;\",\"\\\"\") AS ?value )
 }""" .
   
-  _:t32316187 a sp:Query;
+  _:t68780652 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
@@ -2811,18 +3284,20 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://pharos.artresearch.net/fieldDefinition/123/context> {
-  _:t32315935 a sp:Query;
+  _:t58490959 a sp:Query;
     sp:text """SELECT ?value ?provider ?providerLabel WHERE 
 {
   	graph ?graph
   	{
 		?subject <https://pharos.artresearch.net/resource/fr/Photo_created_by_Photographer> ?value.
   	}
-	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
-	?provider rdfs:label ?providerLabel.
+	?graph <https://pharos.artresearch.net/custom/has_provider> ?prov .
+	?prov rdfs:label ?provLabel.
+  	BIND(IF( CONTAINS(STR(?value),\"wiki\"), \"Wikidata\", ?provLabel) AS ?providerLabel)
+    BIND(IF( CONTAINS(STR(?value),\"wiki\"), IRI(\"https://pharos.artresearch.net/resource/wikidata/source/Wikidata\"), ?prov) AS ?provider)
 }""" .
   
-  _:t32315936 a sp:Query;
+  _:t58490960 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
@@ -2858,10 +3333,7 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://pharos.artresearch.net/fieldDefinition/62/context> {
-  _:t58330300 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  _:t58330301 a sp:Query;
+  _:t68780694 a sp:Query;
     sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
 { 
 	graph ?graph 
@@ -2874,6 +3346,9 @@ SELECT ?value ?provider ?providerLabel WHERE {
 	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.
 }""" .
+  
+  _:t68780695 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <http://www.researchspace.org/fieldDefinition/Style_Periods/context> {
@@ -2912,10 +3387,10 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://pharos.artresearch.net/fieldDefinition/66/context> {
-  _:t49667701 a sp:Query;
+  _:t68829379 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:t49667700 a sp:Query;
+  _:t68829378 a sp:Query;
     sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
 {
 	graph ?graph
@@ -2929,7 +3404,10 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://pharos.artresearch.net/fieldDefinition/67/context> {
-  _:t32315702 a sp:Query;
+  _:t68780662 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:t68780661 a sp:Query;
     sp:text """SELECT ?value ?provider ?providerLabel WHERE 
 {
 	graph ?graph 
@@ -2941,16 +3419,13 @@ SELECT ?value ?provider ?providerLabel WHERE {
 	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.
 }""" .
-  
-  _:t32315703 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <https://pharos.artresearch.net/fieldDefinition/68/context> {
-  _:t32315697 a sp:Query;
+  _:t68780670 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:t32315696 a sp:Query;
+  _:t68780669 a sp:Query;
     sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
 {
   	graph ?graph 
@@ -3043,17 +3518,34 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }""" .
 }
 
-<https://pharos.artresearch.net/fieldDefinition/ulan_date_of_birth/context> {
-  _:t49480305 a sp:Query;
+<http://www.researchspace.org/fieldDefinition/Last_Known_Location/context> {
+  _:t68851285 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:t49480306 a sp:Query;
-    sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE {
+  _:t68851286 a sp:Query;
+    sp:text """SELECT DISTINCT (GROUP_CONCAT(DISTINCT ?place_l;SEPARATOR=\",\") AS ?value) ?provider ?providerLabel WHERE {
+  BIND(?subject as ?s)
+  ?s a cfc:work.
+  ?s crm:P74_has_current_or_former_residence|crm:P55_has_current_location ?place.
+  ?place rdfs:label ?place_l.
+  BIND(<https://pharos.artresearch.net/resource/pharos/source/Pharos> AS ?provider)
+  BIND(\"Pharos\" AS ?providerLabel)
+  FILTER NOT EXISTS { ?s <https://pharos.artresearch.net/resource/fr/Work_kept_by_Institution>|crm:P50_has_current_keeper ?repo. }
+} group by ?s ?provider ?providerLabel""" .
+}
+
+<https://pharos.artresearch.net/fieldDefinition/ulan_date_of_birth/context> {
+  _:t58521377 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:t58521378 a sp:Query;
+    sp:text """SELECT DISTINCT ?value ?label ?provider ?providerLabel WHERE {
   graph ?graph{
-  	?subject <https://pharos.artresearch.net/resource/fr/Person_has_Date_of_Birth> ?value.
+  	?subject <https://pharos.artresearch.net/resource/fr/Person_has_Date_of_Birth> ?date.
   }
   ?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
   ?provider rdfs:label ?providerLabel.
+  BIND(IF(datatype(?date)=xsd:date,STR(YEAR(?date)),STR(?date)) AS ?value)
 }""" .
 }
 
@@ -3073,10 +3565,10 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://pharos.artresearch.net/fieldDefinition/70/context> {
-  _:t32315794 a sp:Query;
+  _:t68780712 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:t32315795 a sp:Query;
+  _:t68780713 a sp:Query;
     sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
 { 
   	graph ?graph 
@@ -3091,7 +3583,7 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://pharos.artresearch.net/fieldDefinition/73/context> {
-  _:t32315865 a sp:Query;
+  _:t68780645 a sp:Query;
     sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
 { 
 	graph ?graph 
@@ -3103,7 +3595,7 @@ SELECT ?value ?provider ?providerLabel WHERE {
 	?provider rdfs:label ?providerLabel.
 }""" .
   
-  _:t32315866 a sp:Query;
+  _:t68780646 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
@@ -3122,7 +3614,7 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://pharos.artresearch.net/fieldDefinition/74/context> {
-  _:t32315836 a sp:Query;
+  _:t68780639 a sp:Query;
     sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
 { 
   graph ?graph 
@@ -3135,15 +3627,15 @@ SELECT ?value ?provider ?providerLabel WHERE {
 	?provider rdfs:label ?providerLabel.
 }""" .
   
-  _:t32315837 a sp:Query;
+  _:t68780640 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <https://pharos.artresearch.net/fieldDefinition/75/context> {
-  _:t32316151 a sp:Query;
+  _:t68780710 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:t32316152 a sp:Query;
+  _:t68780711 a sp:Query;
     sp:text """SELECT ?value ?provider ?providerLabel WHERE 
 { 
   graph ?graph 
@@ -3158,26 +3650,26 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <http://www.researchspace.org/fieldDefinition/Current/context> {
-  _:t58330339 a sp:Query;
+  _:t68849828 a sp:Query;
     sp:text """SELECT distinct ?value ?provider ?providerLabel WHERE 
 {
 	graph ?graph
 	{
-    	?subject crm:P74_has_current_or_former_residence ?value.
+    	?subject crm:P74_has_current_or_former_residence|crm:P55_has_current_location ?value.
   	}
 	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.
 }""" .
   
-  _:t58330338 a sp:Query;
+  _:t68849827 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <https://pharos.artresearch.net/fieldDefinition/78/context> {
-  _:t58330297 a sp:Query;
+  _:t68780701 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:t58330296 a sp:Query;
+  _:t68780700 a sp:Query;
     sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE { 
 	graph ?graph 
   	{
@@ -3190,6 +3682,25 @@ SELECT ?value ?provider ?providerLabel WHERE {
    ?type rdfs:label \"Century\".
    ?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.
+}""" .
+}
+
+<http://www.researchspace.org/fieldDefinition/National_Group/context> {
+  _:t59672259 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:t59672260 a sp:Query;
+    sp:text """SELECT DISTINCT ?value ?provider ?providerLabel WHERE 
+{
+	graph ?graph 
+  	{
+  		$subject crm:P107_is_current_or_former_member_of ?group.
+  	}
+    ?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
+	?provider rdfs:label ?providerLabel.
+    ?group crm:P2_has_type ?type.
+    ?type rdfs:label \"National Group\".
+    ?group rdfs:label ?value.
 }""" .
 }
 
@@ -3280,17 +3791,18 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://pharos.artresearch.net/fieldDefinition/ulan_date_of_death/context> {
-  _:t49480300 a sp:Query;
-    sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE {
+  _:t58521375 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:t58521376 a sp:Query;
+    sp:text """SELECT DISTINCT ?value ?label ?provider ?providerLabel WHERE {
     graph ?graph{
-  		?subject <https://pharos.artresearch.net/resource/fr/Person_has_Date_of_Death> ?value.
+  		?subject <https://pharos.artresearch.net/resource/fr/Person_has_Date_of_Death> ?date.
   	}
 	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.
+    BIND(IF(datatype(?date)=xsd:date,STR(YEAR(?date)),STR(?date)) AS ?value)
 }""" .
-  
-  _:t49480301 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <https://pharos.artresearch.net/fieldDefinition/ulan_description/context> {
@@ -3324,7 +3836,7 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://pharos.artresearch.net/fieldDefinition/5/context> {
-  _:t53336560 a sp:Query;
+  _:t68780617 a sp:Query;
     sp:text """SELECT $value ?label ?provider ?providerLabel WHERE
 {   
 	graph ?graph
@@ -3337,12 +3849,12 @@ SELECT ?value ?provider ?providerLabel WHERE {
     FILTER NOT EXISTS {?value crm:P2_has_type <http://vocab.getty.edu/aat/300015646>}
 }""" .
   
-  _:t53336559 a sp:Query;
+  _:t68780618 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <https://pharos.artresearch.net/fieldDefinition/2/context> {
-  _:t32315726 a sp:Query;
+  _:t68780613 a sp:Query;
     sp:text """SELECT distinct ?value ?label ?provider ?providerLabel WHERE 
 {
 	graph ?graph
@@ -3355,8 +3867,22 @@ SELECT ?value ?provider ?providerLabel WHERE {
 	?provider rdfs:label ?providerLabel.
 }""" .
   
-  _:t32315727 a sp:Query;
+  _:t68780614 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+}
+
+<http://www.researchspace.org/fieldDefinition/Sexual_Orientation/context> {
+  _:t58521370 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:t58521369 a sp:Query;
+    sp:text """SELECT ?value ?provider ?providerLabel WHERE {
+  graph ?graph{
+    $subject <https://pharos.artresearch.net/resource/fr/Person_has_Sexual_Orientation>  ?value.
+  }
+  ?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
+  ?provider rdfs:label ?providerLabel.
+}""" .
 }
 
 <https://pharos.artresearch.net/fieldDefinition/3/context> {
@@ -3390,17 +3916,19 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://pharos.artresearch.net/fieldDefinition/1/context> {
-  _:t32316146 a sp:Query;
+  _:t68780644 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:t32316145 a sp:Query;
-    sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE {  
+  _:t68780643 a sp:Query;
+    sp:text """SELECT DISTINCT ?value ?provider ?providerLabel WHERE {  
 	graph ?graph
 	{
     	?subject <https://pharos.artresearch.net/resource/fr/Work_created_from_Artist> ?value.
   	}
-	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
-	?provider rdfs:label ?providerLabel.
+	?graph <https://pharos.artresearch.net/custom/has_provider> ?prov .
+	?prov rdfs:label ?provLabel.
+  	BIND(IF( CONTAINS(STR(?value),\"ulan\"), \"ULAN\", ?provLabel) AS ?providerLabel)
+    BIND(IF( CONTAINS(STR(?value),\"ulan\"), IRI(\"https://pharos.artresearch.net/resource/getty/source/Getty\"), ?prov) AS ?provider)
 }""" .
 }
 
@@ -3419,10 +3947,10 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://pharos.artresearch.net/fieldDefinition/40/context> {
-  _:t58330318 a sp:Query;
+  _:t68780666 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:t58330319 a sp:Query;
+  _:t68780665 a sp:Query;
     sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE { 
   graph ?graph {
     ?subject crm:P67i_is_referred_to_by ?information_object.
@@ -3435,8 +3963,11 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://pharos.artresearch.net/fieldDefinition/42/context> {
-  _:t53571472 a sp:Query;
-    sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
+  _:t68780671 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:t68780672 a sp:Query;
+    sp:text """SELECT DISTINCT ?value ?label ?provider ?providerLabel WHERE 
 { 
   graph ?graph 
   {
@@ -3444,12 +3975,12 @@ SELECT ?value ?provider ?providerLabel WHERE {
 #    ?subject crm:P108i_was_produced_by ?production.
 #  	?production crm:P33_used_specific_technique ?value.
   }
-  ?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
-  ?provider rdfs:label ?providerLabel.
+  FILTER EXISTS {?value rdfs:label ?label}
+	?graph <https://pharos.artresearch.net/custom/has_provider> ?prov .
+	?prov rdfs:label ?provLabel.
+  	BIND(IF( CONTAINS(STR(?value),\"aat\"), \"AAT\", ?provLabel) AS ?providerLabel)
+    BIND(IF( CONTAINS(STR(?value),\"aat\"), IRI(\"https://pharos.artresearch.net/resource/getty/source/Getty\"), ?prov) AS ?provider)
 }""" .
-  
-  _:t53571471 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <http://www.researchspace.org/fieldDefinition/Photo_Archive/context> {
@@ -3485,7 +4016,10 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://pharos.artresearch.net/fieldDefinition/44/context> {
-  _:t51011190 a sp:Query;
+  _:t68780663 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:t68780664 a sp:Query;
     sp:text """SELECT DISTINCT ?value ?provider ?providerLabel WHERE 
 {
   graph ?graph 
@@ -3496,20 +4030,17 @@ SELECT ?value ?provider ?providerLabel WHERE {
     	?subject <https://pharos.artresearch.net/resource/fr/Work_consists_of_Material>|<https://pharos.artresearch.net/resource/fr/Photo_consists_of_Material> ?value.
     }
   }
-  ?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
-  ?provider rdfs:label ?providerLabel.
+  FILTER EXISTS {?value rdfs:label ?label}
+	?graph <https://pharos.artresearch.net/custom/has_provider> ?prov .
+	?prov rdfs:label ?provLabel.
+  	BIND(IF( CONTAINS(STR(?value),\"aat\"), \"AAT\", ?provLabel) AS ?providerLabel)
+    BIND(IF( CONTAINS(STR(?value),\"aat\"), IRI(\"https://pharos.artresearch.net/resource/getty/source/Getty\"), ?prov) AS ?provider)
 }
      """ .
-  
-  _:t51011189 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <https://pharos.artresearch.net/fieldDefinition/45/context> {
-  _:t32315812 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  _:t32315811 a sp:Query;
+  _:t68780624 a sp:Query;
     sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
 { 
   graph ?graph 
@@ -3520,10 +4051,53 @@ SELECT ?value ?provider ?providerLabel WHERE {
   ?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
   ?provider rdfs:label ?providerLabel.
 }""" .
+  
+  _:t68780625 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+}
+
+<http://www.researchspace.org/fieldDefinition/Annotation_URI/context> {
+  _:t58501256 a sp:Query;
+    sp:text """SELECT ?value ?label WHERE {
+  $subject crm:P67i_is_referred_to_by ?information_object.
+  ?information_object a crm:E73_Information_Object.
+  ?information_object crm:P2_has_type <https://pharos.artresearch.net/resource/type/annotation>.
+  ?information_object crm:P190_has_symbolic_content ?value .
+}""" .
+  
+  _:t58501255 a sp:Query;
+    sp:text """DELETE {
+  $subject crm:P67i_is_referred_to_by ?information_object.
+} WHERE {
+  $subject crm:P67i_is_referred_to_by ?information_object.
+  ?information_object a crm:E73_Information_Object.
+  ?information_object crm:P2_has_type <https://pharos.artresearch.net/resource/type/annotation>.
+  ?information_object crm:P190_has_symbolic_content ?value .
+}""" .
+  
+  _:t58501254 a sp:Query;
+    sp:text """INSERT {
+  rso:Annotations.Container <http://www.w3.org/ns/ldp#contains>  ?annotation .
+  GRAPH ?graph {
+  ?annotation a <http://www.researchspace.org/ontology/Annotation> ;
+                 prov:wasAttributedTo ?__useruri__;
+    			<http://www.researchspace.org/ontology/targetsField> $subject;
+               <http://www.ics.forth.gr/isl/CRMdig/L43_annotates> ?information_object .
+  ?information_object a crm:E73_Information_Object.
+  ?information_object crm:P190_has_symbolic_content $value .
+}
+} WHERE {
+  BIND(IRI(CONCAT(str(rso:Annotations.Container),\"/\",UUID(),\"/context\")) as ?graph)
+  BIND(IRI(CONCAT(str($subject), \"/annotation/\",MD5($value))) as ?annotation)
+  BIND(IRI(CONCAT(STR($subject), \"/info_object/\",MD5($value))) as ?information_object)
+}""" .
 }
 
 <https://pharos.artresearch.net/fieldDefinition/46/context> {
-  _:t53316558 a sp:Query;
+  _:t68780692 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:t68780693 a sp:Query;
     sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
 {
   	?subject a <https://pharos.artresearch.net/resource/fc/work>.
@@ -3534,9 +4108,6 @@ SELECT ?value ?provider ?providerLabel WHERE {
 	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.
 }""" .
-  
-  _:t53316559 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <http://www.researchspace.org/fieldDefinition/Children/context> {
@@ -3568,11 +4139,11 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://pharos.artresearch.net/fieldDefinition/8/context> {
-  _:t53316565 a sp:Query;
+  _:t68830544 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:t53316566 a sp:Query;
-    sp:text """SELECT ?value ?label ?qualifier ?provider ?providerLabel WHERE 
+  _:t68830543 a sp:Query;
+    sp:text """SELECT DISTINCT ?value ?label ?provider ?providerLabel WHERE 
 {   
   	?subject a <https://pharos.artresearch.net/resource/fc/work>
 	graph ?graph {
@@ -3580,6 +4151,8 @@ SELECT ?value ?provider ?providerLabel WHERE {
   	}
 	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.
+    
+    FILTER(datatype(?value)=xsd:date)
 }""" .
 }
 
@@ -3602,10 +4175,10 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://pharos.artresearch.net/fieldDefinition/6/context> {
-  _:t58330315 a sp:Query;
+  _:t68780660 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:t58330314 a sp:Query;
+  _:t68780659 a sp:Query;
     sp:text """SELECT ?value ?provider ?providerLabel WHERE 
 { 
 	graph ?graph
@@ -3675,16 +4248,18 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://pharos.artresearch.net/fieldDefinition/ulan_place_of_birth/context> {
-  _:t49480289 a sp:Query;
+  _:t58703090 a sp:Query;
     sp:text """SELECT distinct ?value ?label ?provider ?providerLabel WHERE {
    graph ?graph{
 	 $subject <https://pharos.artresearch.net/resource/fr/Person_has_Place_of_Birth> ?value.
   }
-  ?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
-  ?provider rdfs:label ?providerLabel.
+  ?graph <https://pharos.artresearch.net/custom/has_provider> ?prov .
+  ?prov rdfs:label ?provLabel.
+  BIND(IF( CONTAINS(STR(?value),\"geonames\"), \"Geonames\", ?provLabel) AS ?providerLabel)
+  BIND(IF( CONTAINS(STR(?value),\"geonames\"), IRI(\"https://pharos.artresearch.net/resource/geonames/source/Geonames\"), ?prov) AS ?provider)
 }""" .
   
-  _:t49480290 a sp:Query;
+  _:t58703089 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
@@ -3724,7 +4299,7 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://pharos.artresearch.net/fieldDefinition/203/context> {
-  _:t32315738 a sp:Query;
+  _:t68780668 a sp:Query;
     sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
 { 
 	graph ?graph 
@@ -3736,27 +4311,26 @@ SELECT ?value ?provider ?providerLabel WHERE {
 	?provider rdfs:label ?providerLabel.
 }""" .
   
-  _:t32315739 a sp:Query;
+  _:t68780667 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <https://pharos.artresearch.net/fieldDefinition/285/context> {
-  _:t58330342 a sp:Query;
+  _:t58707475 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:t58707476 a sp:Query;
     sp:text """SELECT distinct ?value ?label ?provider ?providerLabel WHERE 
 { 
 	graph ?graph 
   	{
-#    ?subject <https://pharos.artresearch.net/resource/fr/Institution_from_Place> ?value.
+#  ?subject <https://pharos.artresearch.net/resource/fr/Institution_from_Place> ?value.
   		$subject crm:P74_has_current_or_former_residence ?value.
-  		
   	}
-    ?value rdfs:label ?label.
 	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.
+    ?value rdfs:label ?label.
 }""" .
-  
-  _:t58330341 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <https://pharos.artresearch.net/fieldDefinition/284/context> {
@@ -3778,20 +4352,20 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://pharos.artresearch.net/fieldDefinition/286/context> {
-  _:t58330344 a sp:Query;
+  _:t59672257 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:t58330343 a sp:Query;
-    sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
-{ 
-#  	$subject a <http://www.cidoc-crm.org/cidoc-crm/E22_Man-Made_Object>.
-	graph ?graph 
-  	{
-  		$subject crm:P107_is_current_or_former_member_of ?value.
-  	}
-	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
-	?provider rdfs:label ?providerLabel.
-#    ?value a <https://pharos.artresearch.net/resource/custom/fc/institution>.
+  _:t59672258 a sp:Query;
+    sp:text """SELECT DISTINCT ?value ?provider ?providerLabel WHERE {
+  graph ?graph {
+    $subject crm:P107_is_current_or_former_member_of ?value.
+  }
+  ?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
+  ?provider rdfs:label ?providerLabel.
+  FILTER NOT EXISTS {
+    ?group crm:P2_has_type ?type.
+    ?type rdfs:label \"National Group\".
+  }
 }""" .
 }
 
@@ -3815,10 +4389,10 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://pharos.artresearch.net/fieldDefinition/280/context> {
-  _:t32316076 a sp:Query;
+  _:t69007842 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:t32316077 a sp:Query;
+  _:t69007843 a sp:Query;
     sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
 { 
 	graph ?graph 
@@ -3897,10 +4471,10 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <http://www.researchspace.org/fieldDefinition/Technique_Description/context> {
-  _:t53117782 a sp:Query;
+  _:t68780675 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:t53117781 a sp:Query;
+  _:t68780676 a sp:Query;
     sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
 { 
   graph ?graph 
@@ -3915,10 +4489,10 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://pharos.artresearch.net/fieldDefinition/20/context> {
-  _:t32316003 a sp:Query;
+  _:t68780650 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:t32316002 a sp:Query;
+  _:t68780649 a sp:Query;
     sp:text """SELECT ?value ?provider ?providerLabel WHERE 
 {
   graph ?graph
@@ -3930,19 +4504,69 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }""" .
 }
 
-<http://www.researchspace.org/fieldDefinition/Production_Date_Photo/context> {
-  _:t53316570 a sp:Query;
+<http://www.researchspace.org/fieldDefinition/Last_Known_Location_2/context> {
+  _:t68851289 a sp:Query;
+    sp:text """SELECT DISTINCT (CONCAT(?repo_label,\", \",GROUP_CONCAT(DISTINCT ?place_l;SEPARATOR=\",\")) as ?value) ?provider ?providerLabel WHERE {
+  ?subject a cfc:work.
+  ?subject <https://pharos.artresearch.net/resource/fr/Work_kept_by_Institution>|crm:P50_has_current_keeper ?repo.
+  ?repo rdfs:label ?repo_label.
+  ?repo crm:P74_has_current_or_former_residence ?place.
+  ?place rdfs:label ?place_l.
+  BIND(<https://pharos.artresearch.net/resource/pharos/source/Pharos> AS ?provider)
+  BIND(\"Pharos\" AS ?providerLabel)
+}GROUP BY ?repo_label ?provider ?providerLabel""" .
+  
+  _:t68851290 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+}
+
+<http://www.researchspace.org/fieldDefinition/Last_Known_Location_3/context> {
+  _:t68851293 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:t53316569 a sp:Query;
-    sp:text """SELECT ?value ?label ?qualifier ?provider ?providerLabel WHERE 
+  _:t68851294 a sp:Query;
+    sp:text """SELECT DISTINCT ?value ?provider ?providerLabel WHERE {
+  ?subject a cfc:work.
+  ?subject <https://pharos.artresearch.net/resource/fr/Work_kept_by_Institution>|crm:P50_has_current_keeper ?repo.
+  ?repo rdfs:label ?value.
+  FILTER NOT EXISTS {?subject crm:P74_has_current_or_former_residence|crm:P55_has_current_location ?place.}
+  FILTER NOT EXISTS {?repo crm:P74_has_current_or_former_residence ?place.}
+  BIND(<https://pharos.artresearch.net/resource/pharos/source/Pharos> AS ?provider)
+  BIND(\"Pharos\" AS ?providerLabel)
+}""" .
+}
+
+<http://www.researchspace.org/fieldDefinition/Production_Date_Photo/context> {
+  _:t68780698 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:t68780699 a sp:Query;
+    sp:text """SELECT DISTINCT ?value ?provider ?providerLabel WHERE 
 {   
 	graph ?graph {
     	?subject <https://pharos.artresearch.net/resource/fr/Photo_from_Date> ?value.
   	}
 	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider.
 	?provider rdfs:label ?providerLabel.
+    FILTER(datatype(?value)=xsd:date)
 }""" .
+}
+
+<http://www.researchspace.org/fieldDefinition/Last_Known_Location_1/context> {
+  _:t68851288 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:t68851287 a sp:Query;
+    sp:text """SELECT DISTINCT (concat(?repo_label,\", \",(GROUP_CONCAT(DISTINCT ?place_l;SEPARATOR=\",\")))as ?value)  ?provider ?providerLabel WHERE {
+  ?subject a cfc:work.
+  ?subject <https://pharos.artresearch.net/resource/fr/Work_kept_by_Institution>|crm:P50_has_current_keeper ?repo.
+  ?repo rdfs:label ?repo_label.
+  ?subject crm:P74_has_current_or_former_residence|crm:P55_has_current_location ?place.
+  ?place rdfs:label ?place_l.
+  BIND(<https://pharos.artresearch.net/resource/pharos/source/Pharos> AS ?provider)
+  BIND(\"Pharos\" AS ?providerLabel)
+  FILTER NOT EXISTS { ?repo crm:P74_has_current_or_former_residence ?x}
+}group by ?repo_label ?provider ?providerLabel""" .
 }
 
 <https://pharos.artresearch.net/fieldDefinition/212/context> {
@@ -3982,184 +4606,6 @@ SELECT ?value ?provider ?providerLabel WHERE {
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
-<https://pharos.artresearch.net/fieldDefinition/213/context> {
-  _:t32315806 a sp:Query;
-    sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
-{ 
-	graph ?graph {
-  		$subject crm:P128_carries ?visual_item.
-  		?visual_item crm:P128_is_carried_by ?negative.
-  		?negative crm:P108i_was_produced_by ?production.
-  		?production crm:P4_has_time-span ?tm.
-  		?tm crm:P82_at_some_time_within ?value.
-  	}
-	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
-	?provider rdfs:label ?providerLabel.
-}""" .
-  
-  _:t32315805 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
-}
-
-<http://www.researchspace.org/fieldDefinition/Population/context> {
-  _:t51962938 a sp:Query;
-    sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE {
-  graph ?graph {
-  $subject <http://www.geonames.org/ontology#population> ?value.
-  }
-  ?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
-  ?provider rdfs:label ?providerLabel.
-}""" .
-  
-  _:t51962939 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
-}
-
-<http://www.researchspace.org/fieldDefinition/Influence/context> {
-  _:t51011107 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  _:t51011106 a sp:Query;
-    sp:text """SELECT distinct ?value ?provider ?providerLabel WHERE {
-  graph ?graph {
-    $subject <https://pharos.artresearch.net/resource/fr/Person_influenced_by_Person> ?value.
-  }
-  ?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
-  ?provider rdfs:label ?providerLabel.
-}""" .
-}
-
-<https://pharos.artresearch.net/fieldDefinition/Repository/context> {
-  _:t32315746 a sp:Query;
-    sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
-{
-	graph ?graph
-	{
-  		$subject crm:P50_has_current_keeper ?value.
-  	}
-	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
-	?provider rdfs:label ?providerLabel.
-}""" .
-  
-  _:t32315745 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
-}
-
-<https://pharos.artresearch.net/fieldDefinition/33/context> {
-  _:t32315996 a sp:Query;
-    sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
-{  
-	graph ?graph
-  	{
- 		$subject <http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by>  ?information_object.
-  		?information_object crm:P2_has_type <http://vocab.getty.edu/aat/300028702>.
-  		?information_object crm:P190_has_symbolic_content ?value.
-	}
-	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
-	?provider rdfs:label ?providerLabel.
-}""" .
-  
-  _:t32315997 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
-}
-
-<https://pharos.artresearch.net/fieldDefinition/34/context> {
-  _:t32316066 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  _:t32316065 a sp:Query;
-    sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
-{ 
-	graph ?graph
-  	{
-  		$subject crm:P67i_is_referred_to_by ?information_object.
-  		?information_object crm:P2_has_type <http://vocab.getty.edu/aat/300435424>.
-  		?information_object crm:P190_has_symbolic_content ?value .
-  	}
-	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
-	?provider rdfs:label ?providerLabel.
-}""" .
-}
-
-<https://pharos.artresearch.net/fieldDefinition/37/context> {
-  _:t58330326 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  _:t58330327 a sp:Query;
-    sp:text """SELECT ?value ?qualifier ?provider ?providerLabel WHERE 
-{ 
-	graph ?graph 
-  	{
-  		$subject crm:P12i_was_present_at ?activity.
-  		?activity crm:P2_has_type ?type.
-  		?activity rdfs:label ?value.
-  	}
-    ?type rdfs:label \"Exhibition\".
-	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
-	?provider rdfs:label ?providerLabel.
-}""" .
-}
-
-<https://pharos.artresearch.net/fieldDefinition/39/context> {
-  _:t58246125 a sp:Query;
-    sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE { 
-  {
-    graph ?graph {
-      $subject crm:P67i_is_referred_to_by ?information_object.
-      ?information_object crm:P2_has_type <http://vocab.getty.edu/aat/300055863>.
-      ?information_object crm:P190_has_symbolic_content ?value.
-    }
-  } UNION {
-    graph ?graph {
-  		?subject crm:P24i_changed_ownership_through ?acquisition.
-    	?acquisition crm:P22_transferred_title_from|crm:P23_transferred_title_from ?value_uri.
-    }
-    ?value_uri rdfs:label ?value.
-  }
-	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
-	?provider rdfs:label ?providerLabel.
-}""" .
-  
-  _:t58246126 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
-}
-
-<https://pharos.artresearch.net/fieldDefinition/205/context> {
-  _:t58330323 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  _:t58330322 a sp:Query;
-    sp:text """SELECT distinct ?value ?provider ?providerLabel WHERE 
-{ 
-	graph ?graph 
-  	{
-  		$subject crm:P24i_changed_ownership_through ?acq.
-  		?acq crm:P23_transferred_title_from ?actor.
-  	}
-  	?actor crm:P74_has_current_or_former_residence ?value.
-	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
-	?provider rdfs:label ?providerLabel.
-}""" .
-}
-
-<https://dev.artresearch.net/container/fieldDefinitionContainer/Birth_Date/context> {
-  _:t51011214 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  _:t51011213 a sp:Query;
-    sp:text """SELECT ?value ?provider ?providerLabel WHERE 
-{ 
-	graph ?graph 
-  	{
-      ?subject crm:P98i_was_born_by ?birth.
-      ?birth crm:P4_has_time-span ?birth_t.
-      ?birth_t crm:P82_at_some_time_within ?value.
-	}
-	?graph <https://pharos.artresearch.net/custom/has_provider> ?provider .
-	?provider rdfs:label ?providerLabel.
-  }""" .
-}
-
 <http://www.researchspace.org/resource/system/fieldDefinitionContainer/context> {
-  _:node1fal6f5bax311 <http://www.w3.org/ns/ldp#contains> Platform:fieldDefinitionContainer .
+  _:node1fl5u7m68x882 <http://www.w3.org/ns/ldp#contains> Platform:fieldDefinitionContainer .
 }
