@@ -33,7 +33,7 @@
 								<type>custom:Namedgraph</type>
 								<instance_generator name="namedgraph">
 									<arg name="type" type="constant">photo</arg>
-									<arg name="id" type="xpath">SCHEDA/PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+									<arg name="id" type="xpath">SCHEDA/PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								</instance_generator>
 							</entity>
 						</additional>
@@ -548,7 +548,7 @@
                         <type>crm:E22_Man-Made_Object</type>
 						<instance_generator name="URIwithTypeAndId">
 						    <arg name="type" type="constant">photo</arg>
-							<arg name="id" type="xpath">PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+							<arg name="id" type="xpath">PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 						</instance_generator>
 						<label_generator name="Literal">
 							<arg name="text" type="xpath">PARAGRAFO[@etichetta="SUBJECT"]/SGLT[@etichetta="Proper title"]/text()</arg>
@@ -587,7 +587,7 @@
 								<type>custom:Namedgraph</type>
 								<instance_generator name="namedgraph">
 									<arg name="type" type="constant">photo</arg>
-									<arg name="id" type="xpath">PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+									<arg name="id" type="xpath">PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								</instance_generator>
 								<additional>
 									<relationship>custom:has_provider</relationship>
@@ -607,10 +607,10 @@
 								<type>crm:E42_Identifier</type>
 								<instance_generator name="URIwithType">
 									<arg name="type" type="constant">identifier</arg>
-									<arg name="id" type="xpath">PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+									<arg name="id" type="xpath">PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								</instance_generator>
 								<label_generator name="Literal">
-									<arg name="text" type="xpath">PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+									<arg name="text" type="xpath">PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								</label_generator>
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
@@ -729,7 +729,7 @@
 							<type>crm:E41_Appellation</type>
 							<instance_generator name="IdentifierURI">	
 								<arg name="subject_type" type="constant">photo</arg>
-								<arg name="subject_id" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="subject_id" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								<arg name="identifier_type" type="constant">appellation</arg>
 								<arg name="identifier_id" type="xpath">text()</arg>
 							</instance_generator>
@@ -789,7 +789,7 @@
 							<type>crm:E42_Identifier</type>
 							<instance_generator name="IdentifierURI">	
 								<arg name="subject_type" type="constant">photo</arg>
-								<arg name="subject_id" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="subject_id" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								<arg name="identifier_type" type="constant">identifier</arg>
 								<arg name="identifier_id" type="xpath">text()</arg>
 							</instance_generator>
@@ -821,7 +821,7 @@
 							<type>crm:E41_Appellation</type>
 							<instance_generator name="IdentifierURI">	
 								<arg name="subject_type" type="constant">photo</arg>
-								<arg name="subject_id" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="subject_id" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								<arg name="identifier_type" type="constant">identifier</arg>
 								<arg name="identifier_id" type="xpath">../SGLT[@etichetta="Proper title"]/text()</arg>
 							</instance_generator>
@@ -836,7 +836,7 @@
 							<type>crm:E41_Appellation</type>
 							<instance_generator name="IdentifierURI">	
 								<arg name="subject_type" type="constant">photo</arg>
-								<arg name="subject_id" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="subject_id" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								<arg name="identifier_type" type="constant">identifier</arg>
 								<arg name="identifier_id" type="xpath">text()</arg>
 							</instance_generator>
@@ -937,7 +937,7 @@
 							<type>crm:E30_Rights</type>
 							<instance_generator name="RightsUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								<arg name="rights_id" type="constant">-</arg>
 							</instance_generator>
 							<additional>
@@ -979,7 +979,7 @@
 							<type>crm:E30_Rights</type>
 							<instance_generator name="RightsUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								<arg name="rights_id" type="constant">-</arg>
 							</instance_generator>
 							<additional>
@@ -1021,7 +1021,7 @@
 							<type>crm:E73_Information_Object</type>
 							<instance_generator name="InformationObjectUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								<arg name="type" type="constant">curational_info</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -1069,7 +1069,7 @@
 							<type>crm:E12_Production</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
@@ -1078,7 +1078,7 @@
 							<type>crm:E52_Time-Span</type>
 							<instance_generator name="TimespanUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
@@ -1116,7 +1116,7 @@
 							<type>crm:E12_Production</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
@@ -1125,7 +1125,7 @@
 							<type>crm:E52_Time-Span</type>
 							<instance_generator name="TimespanUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
@@ -1156,7 +1156,7 @@
 							<type>crm:E12_Production</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
@@ -1285,7 +1285,7 @@
 							<type>crm:E54_Dimension</type>
 							<instance_generator name="DimensionURI">
 								<arg name="subject_type" type="constant">photo</arg>
-								<arg name="subject_id" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="subject_id" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								<arg name="type" type="constant">height</arg>
 								<arg name="unit" type="xpath">../MISU[@etichetta="Unit of measurement"]/text()</arg>
 								<arg name="value" type="xpath">text()</arg>
@@ -1342,7 +1342,7 @@
 							<type>crm:E54_Dimension</type>
 							<instance_generator name="DimensionURI">
 								<arg name="subject_type" type="constant">photo</arg>
-								<arg name="subject_id" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="subject_id" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								<arg name="type" type="constant">length</arg>
 								<arg name="unit" type="xpath">../MISU[@etichetta="Unit of measurement"]/text()</arg>
 								<arg name="value" type="xpath">text()</arg>
@@ -1410,7 +1410,7 @@
 							<type>crm:E54_Dimension</type>
 							<instance_generator name="DimensionURI">
 								<arg name="subject_type" type="constant">photo</arg>
-								<arg name="subject_id" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="subject_id" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								<arg name="type" type="constant">thickness</arg>
 								<arg name="unit" type="xpath">../MISU[@etichetta="Unit of measurement"]/text()</arg>
 								<arg name="value" type="xpath">text()</arg>
@@ -1467,7 +1467,7 @@
 							<type>crm:E54_Dimension</type>
 							<instance_generator name="DimensionURI">
 								<arg name="subject_type" type="constant">photo</arg>
-								<arg name="subject_id" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="subject_id" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								<arg name="type" type="constant">colour</arg>
 								<arg name="unit" type="constant">-</arg>
 								<arg name="value" type="xpath">text()</arg>
@@ -1600,7 +1600,7 @@
 							<type>crm:E8_Acquisition</type>
 							<instance_generator name="AcquisitionUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
 								<arg name="from" type="constant">text()</arg>
 								<arg name="to" type="constant">-</arg>
@@ -1654,7 +1654,7 @@
 							<type>crm:E8_Acquisition</type>
 							<instance_generator name="AcquisitionUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
 								<arg name="from" type="constant">text()</arg>
 								<arg name="to" type="constant">-</arg>
@@ -1701,7 +1701,7 @@
 							<type>crm:E8_Acquisition</type>
 							<instance_generator name="AcquisitionUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
 								<arg name="from" type="xpath">../PRCM[@etichetta="Archive/ Collection"]/text()</arg>
 								<arg name="to" type="constant">-</arg>
@@ -1725,7 +1725,7 @@
 							<type>crm:E52_Time-Span</type>
 							<instance_generator name="ComplexTimespanUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
 								<arg name="timespan" type="xpath">text()</arg>
 							</instance_generator>
@@ -1757,7 +1757,7 @@
 							<type>crm:E14_Condition_Assessment</type>
 								<instance_generator name="ComplexEventUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								<arg name="id" type="xpath">text()</arg>
 								<arg name="event_type" type="constant">condition_assessment</arg>
 							</instance_generator>
@@ -1772,7 +1772,7 @@
 							<type>crm:E3_Condition_State</type>
 							<instance_generator name="ConditionURI">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
 							<label_generator name="Literal">
@@ -1794,7 +1794,7 @@
 							<type>crm:E73_Information_Object</type>
 							<instance_generator name="InformationObjectUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								<arg name="type" type="constant">condition_history_info</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
@@ -1835,7 +1835,7 @@
 							<type>custom:Publication</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								<arg name="eventType" type="constant">publication</arg>
 							</instance_generator>
 							<label_generator name="PublicationConcatenated">
@@ -1849,7 +1849,7 @@
 							<type>crm:E52_Time-Span</type>
 							<instance_generator name="TimespanUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								<arg name="eventType" type="constant">publication</arg>
 							</instance_generator>
 						</entity>
@@ -1880,7 +1880,7 @@
 							<type>custom:Publication</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								<arg name="eventType" type="constant">publication</arg>
 							</instance_generator>
 						</entity>
@@ -1912,7 +1912,7 @@
 							<type>custom:Publication</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								<arg name="eventType" type="constant">publication</arg>
 							</instance_generator>
 						</entity>
@@ -1947,7 +1947,7 @@
 							<type>custom:Publication</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								<arg name="eventType" type="constant">publication</arg>
 							</instance_generator>
 						</entity>
@@ -1989,7 +1989,7 @@
 							<type>crm:E36_Visual_Item</type>
 							<instance_generator name="VisualItemUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 							</instance_generator>
 						</entity>
 						<relationship>crm:P128i_is_carried_by</relationship>
@@ -2061,7 +2061,7 @@
 							<type>crm:E36_Visual_Item</type>
 							<instance_generator name="VisualItemUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 							</instance_generator>
 						</entity>
 						<relationship>crm:P128i_is_carried_by</relationship>
@@ -2069,7 +2069,7 @@
 							<type>crm:E22_Man-Made_Object</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">photo</arg>
-								<arg name="id" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="id" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 							</instance_generator>
 						</entity>
 						<relationship>crm:P108i_was_produced_by</relationship>
@@ -2077,7 +2077,7 @@
 							<type>crm:E12_Production</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 							<label_generator name="ShotConcatenated">
@@ -2090,7 +2090,7 @@
 							<type>crm:E52_Time-Span</type>
 							<instance_generator name="TimespanUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
@@ -2128,7 +2128,7 @@
 							<type>crm:E36_Visual_Item</type>
 							<instance_generator name="VisualItemUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 							</instance_generator>
 						</entity>
 						<relationship>crm:P128i_is_carried_by</relationship>
@@ -2136,7 +2136,7 @@
 							<type>crm:E22_Man-Made_Object</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">photo</arg>
-								<arg name="id" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="id" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 							</instance_generator>
 						</entity>
 						<relationship>crm:P108i_was_produced_by</relationship>
@@ -2144,7 +2144,7 @@
 							<type>crm:E12_Production</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
@@ -2196,7 +2196,7 @@
 							<type>crm:E36_Visual_Item</type>
 							<instance_generator name="VisualItemUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 							</instance_generator>
 						</entity>
 						<relationship>crm:P128i_is_carried_by</relationship>
@@ -2204,7 +2204,7 @@
 							<type>crm:E22_Man-Made_Object</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">photo</arg>
-								<arg name="id" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="id" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 							</instance_generator>
 						</entity>
 						<relationship>crm:P108i_was_produced_by</relationship>
@@ -2212,7 +2212,7 @@
 							<type>crm:E12_Production</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
@@ -2264,7 +2264,7 @@
 							<type>crm:E36_Visual_Item</type>
 							<instance_generator name="VisualItemUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 							</instance_generator>
 						</entity>
 						<relationship>crm:P128i_is_carried_by</relationship>
@@ -2272,7 +2272,7 @@
 							<type>crm:E22_Man-Made_Object</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">photo</arg>
-								<arg name="id" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="id" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 							</instance_generator>
 						</entity>
 						<relationship>crm:P108i_was_produced_by</relationship>
@@ -2280,7 +2280,7 @@
 							<type>crm:E12_Production</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
@@ -2327,7 +2327,7 @@
 							<type>crm:E36_Visual_Item</type>
 							<instance_generator name="VisualItemUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 							</instance_generator>
 						</entity>
 						<relationship>crm:P128i_is_carried_by</relationship>
@@ -2395,7 +2395,7 @@
 							<type>crm:E36_Visual_Item</type>
 							<instance_generator name="VisualItemUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 							</instance_generator>
 						</entity>
 						<relationship>crm:P128i_is_carried_by</relationship>
@@ -2458,7 +2458,7 @@
 							<type>crm:E36_Visual_Item</type>
 							<instance_generator name="VisualItemUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 							</instance_generator>
 						</entity>
 						<relationship>crm:P128i_is_carried_by</relationship>
@@ -2522,7 +2522,7 @@
 							<type>crm:E36_Visual_Item</type>
 							<instance_generator name="VisualItemUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 							</instance_generator>
 						</entity>
 						<relationship>crm:P128i_is_carried_by</relationship>
@@ -2586,7 +2586,7 @@
 							<type>crm:E36_Visual_Item</type>
 							<instance_generator name="VisualItemUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 							</instance_generator>
 						</entity>
 						<relationship>crm:P128i_is_carried_by</relationship>
@@ -2646,7 +2646,7 @@
 							<type>crm:E36_Visual_Item</type>
 							<instance_generator name="VisualItemUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 							</instance_generator>
 						</entity>
 						<relationship>crm:P165i_is_incorporated_in</relationship>
@@ -2702,7 +2702,7 @@
 							<type>crm:E36_Visual_Item</type>
 							<instance_generator name="VisualItemUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 							</instance_generator>
 						</entity>
 						<relationship>crm:P165i_is_incorporated_in</relationship>
@@ -2741,7 +2741,7 @@
 							<type>crm:E36_Visual_Item</type>
 							<instance_generator name="VisualItemUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 							</instance_generator>
 						</entity>
 						<relationship>crm:P165i_is_incorporated_in</relationship>
@@ -2780,7 +2780,7 @@
 							<type>crm:E36_Visual_Item</type>
 							<instance_generator name="VisualItemUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 							</instance_generator>
 						</entity>
 						<relationship>crm:P165i_is_incorporated_in</relationship>

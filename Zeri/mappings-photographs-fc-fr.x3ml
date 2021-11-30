@@ -26,7 +26,7 @@
                         <type>fc:photo</type>
 						<instance_generator name="URIwithTypeAndId">
 						    <arg name="type" type="constant">photo</arg>
-							<arg name="id" type="xpath">PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+							<arg name="id" type="xpath">PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 						</instance_generator>
 						<additional>
 							<relationship>fr:Photo_has_provider_Institution</relationship>
@@ -52,7 +52,7 @@
 										<type>fc:photo</type>
 										<instance_generator name="URIwithTypeAndId">
 											 <arg name="type" type="constant">photo</arg>
-											<arg name="id" type="xpath">PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+											<arg name="id" type="xpath">PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 										</instance_generator>
 									</entity>
 								</additional>
@@ -86,7 +86,7 @@
 									<type>fc:photo</type>
 									<instance_generator name="URIwithTypeAndId">
 											<arg name="type" type="constant">photo</arg>
-										<arg name="id" type="xpath">PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN[@etichetta="Inventory number"]/text()</arg>
+										<arg name="id" type="xpath">PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 									</instance_generator>
 									
 								</entity>
