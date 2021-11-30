@@ -156,7 +156,7 @@
 							</entity>
 						</additional> -->
 						
-						<additional>
+						<!-- <additional>
 							<relationship>custom:consists_of</relationship>
 							<entity>
 								<type>custom:Namedgraph</type>
@@ -166,7 +166,7 @@
 									<arg name="term_simple" type="constant">graph</arg>
 								</instance_generator>
 							</entity>
-						</additional>
+						</additional> -->
 
 						
 					</entity>
@@ -3489,7 +3489,7 @@
 			</domain>
 		</mapping> -->
 
-		<mapping namedgraph="graph">
+		<!-- <mapping namedgraph="graph">
 			<domain>
 				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="LOCATION"]/LDCM[@etichetta="Collection"]</source_node>
 				<target_node>
@@ -3536,7 +3536,7 @@
 					 </entity>
 				</target_node>
 			</domain>
-		</mapping>
+		</mapping> -->
 
 		<mapping namedgraph="graph">
 			<domain>
