@@ -251,14 +251,14 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>SCHEDA/PARAGRAFO[@etichetta="CLASSIFICATION"]/UBFS[@etichetta="Archive series"]/text()</relation>
+						<relation>SCHEDA/PARAGRAFO[@etichetta="CLASSIFICATION"]/UBFS/text()</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>custom:consists_of</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>SCHEDA/PARAGRAFO[@etichetta="CLASSIFICATION"]/UBFS[@etichetta="Archive series"]/text()</source_node>
+					<source_node>SCHEDA/PARAGRAFO[@etichetta="CLASSIFICATION"]/UBFS/text()</source_node>
 					<target_node>
 						<entity>
 							<type>custom:Namedgraph</type>
@@ -1566,14 +1566,14 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="CLASSIFICATION"]/UBFS[@etichetta="Archive series"]</relation>
+						<relation>PARAGRAFO[@etichetta="CLASSIFICATION"]/UBFS</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P46i_forms_part_of</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="CLASSIFICATION"]/UBFS[@etichetta="Archive series"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="CLASSIFICATION"]/UBFS</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
@@ -3590,7 +3590,7 @@
 
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="CLASSIFICATION"]/UBFS[@etichetta="Archive series"]</source_node>
+				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="CLASSIFICATION"]/UBFS</source_node>
 				<target_node>
 					<entity>
 						<type>crm:E78_Curated_Holding</type>
