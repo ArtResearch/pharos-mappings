@@ -34,6 +34,8 @@
   <http://www.researchspace.org/ontologies/platform/FieldCategories/person_info> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories>.
   <http://www.researchspace.org/ontologies/platform/FieldCategories/external_info> <http://www.w3.org/2000/01/rdf-schema#label> "External info".
   <http://www.researchspace.org/ontologies/platform/FieldCategories/external_info> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories>.
+  <http://www.researchspace.org/ontologies/platform/FieldCategories/person_relationships> <http://www.w3.org/2000/01/rdf-schema#label> "Relationships".
+  <http://www.researchspace.org/ontologies/platform/FieldCategories/person_relationships> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories>.
   <http://www.researchspace.org/ontologies/platform/FieldCategories/place_info> <http://www.w3.org/2000/01/rdf-schema#label> "Place info".
   <http://www.researchspace.org/ontologies/platform/FieldCategories/place_info> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories>.
   <http://www.researchspace.org/ontologies/platform/FieldCategories/repository_info> <http://www.w3.org/2000/01/rdf-schema#label> "Repository info".

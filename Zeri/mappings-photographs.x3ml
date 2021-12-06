@@ -44,7 +44,7 @@
 								<type>custom:Namedgraph</type>
 								<instance_generator name="MultiHashingGenerator">
 									<arg name="hierarchy" type="constant">subject</arg>
-									<arg name="object_HASHED_CONTENTS" type="xpath">SCHEDA/PARAGRAFO[@etichetta="SUBJECT"]/SGTI[@etichetta="Subject"]/text()</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">SCHEDA/PARAGRAFO[@etichetta="SUBJECT"]/RIPETIZIONE/SGTI/text()</arg>
 									<arg name="term_simple" type="constant">graph</arg>
 								</instance_generator>
 							</entity>
@@ -56,7 +56,7 @@
 								<type>custom:Namedgraph</type>
 								<instance_generator name="MultiHashingGenerator">
 									<arg name="hierarchy" type="constant">type</arg>
-									<arg name="object_HASHED_CONTENTS" type="xpath">SCHEDA/PARAGRAFO[@etichetta="OBJECT"]/OGTD[@etichetta="Object"]/text()</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">SCHEDA/PARAGRAFO[@etichetta="OBJECT"]/OGTD/text()</arg>
 									<arg name="term_simple" type="constant">graph</arg>
 								</instance_generator>
 							</entity>
@@ -69,7 +69,7 @@
 								<type>custom:Namedgraph</type>
 								<instance_generator name="MultiHashingGenerator">
 									<arg name="hierarchy" type="constant">type</arg>
-									<arg name="object_HASHED_CONTENTS" type="xpath">SCHEDA/PARAGRAFO[@etichetta="OBJECT"]/OGTB[@etichetta="Type"]/text()</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">SCHEDA/PARAGRAFO[@etichetta="OBJECT"]/OGTB/text()</arg>
 									<arg name="term_simple" type="constant">graph</arg>
 								</instance_generator>
 							</entity>
@@ -81,7 +81,7 @@
 								<type>custom:Namedgraph</type>
 								<instance_generator name="MultiHashingGenerator">
 									<arg name="hierarchy" type="constant">type</arg>
-									<arg name="object_HASHED_CONTENTS" type="xpath">SCHEDA/PARAGRAFO[@etichetta="OBJECT"]/OGTS[@etichetta="Format"]/text()</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">SCHEDA/PARAGRAFO[@etichetta="OBJECT"]/OGTS/text()</arg>
 									<arg name="term_simple" type="constant">graph</arg>
 								</instance_generator>
 							</entity>
@@ -93,7 +93,7 @@
 								<type>custom:Namedgraph</type>
 								<instance_generator name="MultiHashingGenerator">
 									<arg name="hierarchy" type="constant">actor</arg>
-									<arg name="object_HASHED_CONTENTS" type="xpath">SCHEDA/PARAGRAFO[@etichetta="OWNERSHIP"]/CDGS[@etichetta="Specific owner"]/text()</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">SCHEDA/PARAGRAFO[@etichetta="OWNERSHIP"]/CDGS/text()</arg>
 									<arg name="term_simple" type="constant">graph</arg>
 								</instance_generator>
 							</entity>
@@ -105,7 +105,7 @@
 								<type>custom:Namedgraph</type>
 								<instance_generator name="MultiHashingGenerator">
 									<arg name="hierarchy" type="constant">actor</arg>
-									<arg name="object_HASHED_CONTENTS" type="xpath">SCHEDA/PARAGRAFO[@etichetta="OWNERSHIP"]/CDGG[@etichetta="General ownership"]/text()</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">SCHEDA/PARAGRAFO[@etichetta="OWNERSHIP"]/CDGG/text()</arg>
 									<arg name="term_simple" type="constant">graph</arg>
 								</instance_generator>
 							</entity>
@@ -117,7 +117,7 @@
 								<type>custom:Namedgraph</type>
 								<instance_generator name="MultiHashingGenerator">
 									<arg name="hierarchy" type="constant">place</arg>
-									<arg name="object_HASHED_CONTENTS" type="xpath">string-join((SCHEDA/PARAGRAFO[@etichetta="LOCATION"]/PVCC[@etichetta="Town / Municipality"]/text() , SCHEDA/PARAGRAFO[@etichetta="LOCATION"]/PVCS[@etichetta="Country"]/text() ),'_')</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">string-join((SCHEDA/PARAGRAFO[@etichetta="LOCATION"]/PVCC/text() , SCHEDA/PARAGRAFO[@etichetta="LOCATION"]/PVCS[@etichetta="Country"]/text() ),'_')</arg>
 									<arg name="term_simple" type="constant">graph</arg>
 								</instance_generator>
 							</entity>
@@ -128,7 +128,7 @@
 								<type>custom:Namedgraph</type>
 								<instance_generator name="MultiHashingGenerator">
 									<arg name="hierarchy" type="constant">place</arg>
-									<arg name="object_HASHED_CONTENTS" type="xpath">SCHEDA/PARAGRAFO[@etichetta="LOCATION"]/PVCP[@etichetta="District"]/text()</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">SCHEDA/PARAGRAFO[@etichetta="LOCATION"]/PVCP/text()</arg>
 									<arg name="term_simple" type="constant">graph</arg>
 								</instance_generator>
 							</entity>
@@ -139,7 +139,7 @@
 								<type>custom:Namedgraph</type>
 								<instance_generator name="MultiHashingGenerator">
 									<arg name="hierarchy" type="constant">place</arg>
-									<arg name="object_HASHED_CONTENTS" type="xpath">SCHEDA/PARAGRAFO[@etichetta="LOCATION"]/PVCR[@etichetta="Region / Federal State"]/text()</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">SCHEDA/PARAGRAFO[@etichetta="LOCATION"]/PVCR/text()</arg>
 									<arg name="term_simple" type="constant">graph</arg>
 								</instance_generator>
 							</entity>
@@ -177,14 +177,14 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>SCHEDA/PARAGRAFO[@etichetta="PHOTOGRAPHER"]/RIPETIZIONE/AUFN[@etichetta="Photographer"]/text()</relation>
+						<relation>SCHEDA/PARAGRAFO[@etichetta="PHOTOGRAPHERS"]/RIPETIZIONE/AUFN/text()</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>custom:consists_of</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>SCHEDA/PARAGRAFO[@etichetta="PHOTOGRAPHER"]/RIPETIZIONE/AUFN[@etichetta="Photographer"]/text()</source_node>
+					<source_node>SCHEDA/PARAGRAFO[@etichetta="PHOTOGRAPHERS"]/RIPETIZIONE/AUFN/text()</source_node>
 					<target_node>
 						<entity>
 							<type>custom:Namedgraph</type>
@@ -203,14 +203,14 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>SCHEDA/PARAGRAFO[@etichetta="OBJECT"]/MTC[@etichetta="Medium or materials"]/text()</relation>
+						<relation>SCHEDA/PARAGRAFO[@etichetta="OBJECT"]/MTC/text()</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>custom:consists_of</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>SCHEDA/PARAGRAFO[@etichetta="OBJECT"]/MTC[@etichetta="Medium or materials"]/text()</source_node>
+					<source_node>SCHEDA/PARAGRAFO[@etichetta="OBJECT"]/MTC/text()</source_node>
 					<target_node>
 						<entity>
 							<type>custom:Namedgraph</type>
@@ -227,14 +227,14 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>SCHEDA/PARAGRAFO[@etichetta="OBJECT"]/MISU[@etichetta="Unit of measurement"]/text()</relation>
+						<relation>SCHEDA/PARAGRAFO[@etichetta="OBJECT"]/MISU/text()</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>custom:consists_of</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>SCHEDA/PARAGRAFO[@etichetta="OBJECT"]/MISU[@etichetta="Unit of measurement"]/text()</source_node>
+					<source_node>SCHEDA/PARAGRAFO[@etichetta="OBJECT"]/MISU/text()</source_node>
 					<target_node>
 						<entity>
 							<type>custom:Namedgraph</type>
@@ -347,14 +347,14 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>SCHEDA/PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRCM[@etichetta="Archive/ Collection"]/text()</relation>
+						<relation>SCHEDA/PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRCM/text()</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>custom:consists_of</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>SCHEDA/PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRCM[@etichetta="Archive/ Collection"]/text()</source_node>
+					<source_node>SCHEDA/PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRCM/text()</source_node>
 					<target_node>
 						<entity>
 							<type>custom:Namedgraph</type>
@@ -371,14 +371,14 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>SCHEDA/PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRL[@etichetta="Village / Foreign placename"]/text()</relation>
+						<relation>SCHEDA/PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRL/text()</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>custom:consists_of</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>SCHEDA/PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRL[@etichetta="Village / Foreign placename"]/text()</source_node>
+					<source_node>SCHEDA/PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRL/text()</source_node>
 					<target_node>
 						<entity>
 							<type>custom:Namedgraph</type>
@@ -395,20 +395,20 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>SCHEDA/PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRVC[@etichetta="Town / Municipality"]/text()</relation>
+						<relation>SCHEDA/PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRVC/text()</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>custom:consists_of</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>SCHEDA/PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRVC[@etichetta="Town / Municipality"]/text()</source_node>
+					<source_node>SCHEDA/PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRVC/text()</source_node>
 					<target_node>
 						<entity>
 							<type>custom:Namedgraph</type>
 							<instance_generator name="MultiHashingGenerator">
 								<arg name="hierarchy" type="constant">place</arg>
-								<arg name="object_HASHED_CONTENTS" type="xpath">string-join(( ., ../../PRVS[@etichetta="Country"]/text() ),'_')</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">string-join(( ., ../../PRVS/text() ),'_')</arg>
 								<arg name="term_simple" type="constant">graph</arg>
 							</instance_generator>
 						</entity>
@@ -420,39 +420,14 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>SCHEDA/PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRVS[@etichetta="Country"]/text()</relation>
+						<relation>SCHEDA/PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRVS/text()</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>custom:consists_of</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>SCHEDA/PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRVS[@etichetta="Country"]/text()</source_node>
-					<target_node>
-						<entity>
-							<type>custom:Namedgraph</type>
-							<instance_generator name="MultiHashingGenerator">
-								<arg name="hierarchy" type="constant">place</arg>
-								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
-								<arg name="term_simple" type="constant">graph</arg>
-							</instance_generator>
-						</entity>
-					</target_node>
-				</range>
-			</link>
-
-
-			<link>
-				<path>
-					<source_relation>
-						<relation>SCHEDA/PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRVP[@etichetta="District"]/text()</relation>
-					</source_relation>
-					<target_relation>
-						<relationship>custom:consists_of</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>SCHEDA/PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRVP[@etichetta="District"]/text()</source_node>
+					<source_node>SCHEDA/PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRVS/text()</source_node>
 					<target_node>
 						<entity>
 							<type>custom:Namedgraph</type>
@@ -466,17 +441,42 @@
 				</range>
 			</link>
 
+
 			<link>
 				<path>
 					<source_relation>
-						<relation>SCHEDA/PARAGRAFO[@etichetta="EDITING AND PUBLISHING"]/PDFN[@etichetta="Publisher (personal name)"]/text()</relation>
+						<relation>SCHEDA/PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRVP/text()</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>custom:consists_of</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>SCHEDA/PARAGRAFO[@etichetta="EDITING AND PUBLISHING"]/PDFN[@etichetta="Publisher (personal name)"]/text()</source_node>
+					<source_node>SCHEDA/PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRVP/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGenerator">
+								<arg name="hierarchy" type="constant">place</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>SCHEDA/PARAGRAFO[@etichetta="PRODUCTION AND PUBLISHING"]/RIPETIZIONE/PDFN/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>SCHEDA/PARAGRAFO[@etichetta="PRODUCTION AND PUBLISHING"]/RIPETIZIONE/PDFN/text()</source_node>
 					<target_node>
 						<entity>
 							<type>custom:Namedgraph</type>
@@ -494,14 +494,14 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>SCHEDA/PARAGRAFO[@etichetta="DIGITAL IMAGE"]/RIPETIZIONE/FTAP[@etichetta="Type"]/text()</relation>
+						<relation>SCHEDA/PARAGRAFO[@etichetta="DIGITAL IMAGE"]/FTAP/text()</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>custom:consists_of</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>SCHEDA/PARAGRAFO[@etichetta="DIGITAL IMAGE"]/RIPETIZIONE/FTAP[@etichetta="Type"]/text()</source_node>
+					<source_node>SCHEDA/PARAGRAFO[@etichetta="DIGITAL IMAGE"]/FTAP/text()</source_node>
 					<target_node>
 						<entity>
 							<type>custom:Namedgraph</type>
@@ -518,14 +518,14 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>SCHEDA/PARAGRAFO[@etichetta="DIGITAL IMAGE"]/RIPETIZIONE/FTAT[@etichetta="Detail / Whole"]/text()</relation>
+						<relation>SCHEDA/PARAGRAFO[@etichetta="DIGITAL IMAGE"]/FTAT/text()</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>custom:consists_of</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>SCHEDA/PARAGRAFO[@etichetta="DIGITAL IMAGE"]/RIPETIZIONE/FTAT[@etichetta="Detail / Whole"]/text()</source_node>
+					<source_node>SCHEDA/PARAGRAFO[@etichetta="DIGITAL IMAGE"]/FTAT/text()</source_node>
 					<target_node>
 						<entity>
 							<type>custom:Namedgraph</type>
@@ -551,7 +551,7 @@
 							<arg name="id" type="xpath">PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 						</instance_generator>
 						<label_generator name="Literal">
-							<arg name="text" type="xpath">PARAGRAFO[@etichetta="SUBJECT"]/SGLT[@etichetta="Proper title"]/text()</arg>
+							<arg name="text" type="xpath">PARAGRAFO[@etichetta="SOURCE OF TITLE"]/RIPETIZIONE/SGLT/text()</arg>
 						</label_generator>
 						<additional>
 							<relationship>crm:P2_has_type</relationship>
@@ -628,7 +628,7 @@
 							<entity>
 								<type>crmdig:D1_Digital_Object</type>
 								<instance_generator name="IIIF_Generator">
-									<arg name="id" type="xpath">ALLEGATI/FOTO/@fotoID</arg>
+									<arg name="id" type="xpath">ELENCO_FOTO/FOTO/@fotoID</arg>
 									<arg name="postfix" type="constant">_g.jpg/full/full/0/default.jpg</arg>
 								</instance_generator>
 								<additional>
@@ -664,7 +664,7 @@
 									<entity>
 										<type>crm:E73_Information_Object</type>
 										<instance_generator name="JSON_Generator">
-											<arg name="id" type="xpath">ALLEGATI/FOTO/@fotoID</arg>
+											<arg name="id" type="xpath">ELENCO_FOTO/FOTO/@fotoID</arg>
 											<arg name="postfix" type="constant">_g.jpg/info.json</arg>
 										</instance_generator>
 									</entity>
@@ -674,7 +674,7 @@
 									<entity>
 										<type>crmdig:D39_Thumbnail</type>
 										<instance_generator name="IIIF_Generator_Thumbnail">
-											<arg name="id" type="xpath">ALLEGATI/FOTO/@fotoID</arg>
+											<arg name="id" type="xpath">ELENCO_FOTO/FOTO/@fotoID</arg>
 											<arg name="postfix" type="constant">_g.jpg/full</arg>
 										</instance_generator>
 									</entity>
@@ -716,20 +716,20 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="SUBJECT"]/SGLT[@etichetta="Proper title"]</relation>
+						<relation>PARAGRAFO[@etichetta="SOURCE OF TITLE"]/RIPETIZIONE/SGLT</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P1_is_identified_by</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="SUBJECT"]/SGLT[@etichetta="Proper title"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="SOURCE OF TITLE"]/RIPETIZIONE/SGLT</source_node>
 					<target_node>
 						<entity>
 							<type>crm:E41_Appellation</type>
 							<instance_generator name="IdentifierURI">	
 								<arg name="subject_type" type="constant">photo</arg>
-								<arg name="subject_id" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
+								<arg name="subject_id" type="xpath">../../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								<arg name="identifier_type" type="constant">appellation</arg>
 								<arg name="identifier_id" type="xpath">text()</arg>
 							</instance_generator>
@@ -753,14 +753,14 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="SUBJECT"]/SGTI[@etichetta="Subject"]</relation>
+						<relation>PARAGRAFO[@etichetta="SUBJECT"]/RIPETIZIONE/SGTI</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P128_carries</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="SUBJECT"]/SGTI[@etichetta="Subject"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="SUBJECT"]/RIPETIZIONE/SGTI</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
@@ -776,14 +776,14 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="CLASSIFICATION"]/UBFC[@etichetta="Shelfmark"]</relation>
+						<relation>PARAGRAFO[@etichetta="CLASSIFICATION"]/UBFC</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P1_is_identified_by</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="CLASSIFICATION"]/UBFC[@etichetta="Shelfmark"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="CLASSIFICATION"]/UBFC</source_node>
 					<target_node>
 						<entity>
 							<type>crm:E42_Identifier</type>
@@ -860,14 +860,14 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="OBJECT"]/OGTD[@etichetta="Object"]</relation>
+						<relation>PARAGRAFO[@etichetta="OBJECT"]/OGTD</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P2_has_type</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="OBJECT"]/OGTD[@etichetta="Object"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="OBJECT"]/OGTD</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
@@ -883,14 +883,14 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="OBJECT"]/OGTB[@etichetta="Type"]</relation>
+						<relation>PARAGRAFO[@etichetta="OBJECT"]/OGTB</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P2_has_type</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="OBJECT"]/OGTB[@etichetta="Type"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="OBJECT"]/OGTB</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
@@ -906,14 +906,14 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="OBJECT"]/OGTS[@etichetta="Format"]</relation>
+						<relation>PARAGRAFO[@etichetta="OBJECT"]/OGTS</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P2_has_type</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="OBJECT"]/OGTS[@etichetta="Format"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="OBJECT"]/OGTS</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
@@ -929,7 +929,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="OWNERSHIP"]/CDGS[@etichetta="Specific owner"]</relation>
+						<relation>PARAGRAFO[@etichetta="OWNERSHIP"]/CDGS</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P104_is_subject_to</relationship>
@@ -955,7 +955,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="OWNERSHIP"]/CDGS[@etichetta="Specific owner"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="OWNERSHIP"]/CDGS</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
@@ -971,7 +971,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="OWNERSHIP"]/CDGG[@etichetta="General ownership"]</relation>
+						<relation>PARAGRAFO[@etichetta="OWNERSHIP"]/CDGG</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P104_is_subject_to</relationship>
@@ -997,7 +997,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="OWNERSHIP"]/CDGG[@etichetta="General ownership"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="OWNERSHIP"]/CDGG</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
@@ -1013,7 +1013,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="NOTES"]/OSS[@etichetta="Notes"]</relation>
+						<relation>PARAGRAFO[@etichetta="NOTES"]/OSS</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P67i_is_referred_to_by</relationship>
@@ -1039,7 +1039,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="NOTES"]/OSS[@etichetta="Notes"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="NOTES"]/OSS</source_node>
 					<target_node>
 						<entity>
 							<type>rdfs:Literal</type>
@@ -1054,7 +1054,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="DATING"]/DTSI[@etichetta="From"]</relation>
+						<relation>PARAGRAFO[@etichetta="DATING"]/DTSI</relation>
 					</source_relation>
 					<target_relation>
 						<if>
@@ -1086,7 +1086,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="DATING"]/DTSI[@etichetta="From"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="DATING"]/DTSI</source_node>
 					<target_node>
 						<entity>
 							<type>xsd:date</type>
@@ -1101,7 +1101,7 @@
 			 <link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="DATING"]/DTSF[@etichetta="To"]</relation>
+						<relation>PARAGRAFO[@etichetta="DATING"]/DTSF</relation>
 					</source_relation>
 					<target_relation>
 						<if>
@@ -1133,7 +1133,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="DATING"]/DTSF[@etichetta="To"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="DATING"]/DTSF</source_node>
 					<target_node>
 						<entity>
 							<type>xsd:date</type>
@@ -1148,7 +1148,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="PHOTOGRAPHER"]/RIPETIZIONE/AUFN[@etichetta="Photographer"]</relation>
+						<relation>PARAGRAFO[@etichetta="PHOTOGRAPHERS"]/RIPETIZIONE/AUFN</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P108i_was_produced_by</relationship>
@@ -1164,7 +1164,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="PHOTOGRAPHER"]/RIPETIZIONE/AUFN[@etichetta="Photographer"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="PHOTOGRAPHERS"]/RIPETIZIONE/AUFN</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
@@ -1180,14 +1180,14 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="OBJECT"]/MTC[@etichetta="Medium or materials"]</relation>
+						<relation>PARAGRAFO[@etichetta="OBJECT"]/MTC</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P45_consists_of</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="OBJECT"]/MTC[@etichetta="Medium or materials"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="OBJECT"]/MTC</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
@@ -1203,14 +1203,14 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="LOCATION"]/PVCC[@etichetta="Town / Municipality"]</relation>
+						<relation>PARAGRAFO[@etichetta="LOCATION"]/PVCC</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P55_has_current_location</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="LOCATION"]/PVCC[@etichetta="Town / Municipality"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="LOCATION"]/PVCC</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
@@ -1226,14 +1226,14 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="LOCATION"]/PVCP[@etichetta="District"]</relation>
+						<relation>PARAGRAFO[@etichetta="LOCATION"]/PVCP</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P55_has_current_location</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="LOCATION"]/PVCP[@etichetta="District"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="LOCATION"]/PVCP</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
@@ -1249,14 +1249,14 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="LOCATION"]/PVCR[@etichetta="Region / Federal State"]</relation>
+						<relation>PARAGRAFO[@etichetta="LOCATION"]/PVCR</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P55_has_current_location</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="LOCATION"]/PVCR[@etichetta="Region / Federal State"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="LOCATION"]/PVCR</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
@@ -1272,14 +1272,14 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="OBJECT"]/MISA[@etichetta="Height"]</relation>
+						<relation>PARAGRAFO[@etichetta="OBJECT"]/MISA</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P43_has_dimension</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="OBJECT"]/MISA[@etichetta="Height"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="OBJECT"]/MISA</source_node>
 					<target_node>
 						<entity>
 							<type>crm:E54_Dimension</type>
@@ -1287,11 +1287,11 @@
 								<arg name="subject_type" type="constant">photo</arg>
 								<arg name="subject_id" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								<arg name="type" type="constant">height</arg>
-								<arg name="unit" type="xpath">../MISU[@etichetta="Unit of measurement"]/text()</arg>
+								<arg name="unit" type="xpath">../MISU/text()</arg>
 								<arg name="value" type="xpath">text()</arg>
 							</instance_generator>
 							<label_generator name="Literal">
-								<arg name="text" type="xpath">string-join((text(),../MISU[@etichetta="Unit of measurement"]/text(),", height"),' ')</arg>
+								<arg name="text" type="xpath">string-join((text(),../MISU/text(),", height"),' ')</arg>
 							</label_generator>
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
@@ -1317,7 +1317,7 @@
 									<type>custom:noType</type>
 									<instance_generator name="URIwithType">
 										<arg name="type" type="constant">measurement_unit</arg>
-										<arg name="id" type="xpath">../MISU[@etichetta="Unit of measurement"]/text()</arg>
+										<arg name="id" type="xpath">../MISU/text()</arg>
 									</instance_generator>
 								</entity>
 							</additional>
@@ -1329,14 +1329,14 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="OBJECT"]/MISL[@etichetta="Length"]</relation>
+						<relation>PARAGRAFO[@etichetta="OBJECT"]/MISL</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P43_has_dimension</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="OBJECT"]/MISL[@etichetta="Length"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="OBJECT"]/MISL</source_node>
 					<target_node>
 						<entity>
 							<type>crm:E54_Dimension</type>
@@ -1344,11 +1344,11 @@
 								<arg name="subject_type" type="constant">photo</arg>
 								<arg name="subject_id" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								<arg name="type" type="constant">length</arg>
-								<arg name="unit" type="xpath">../MISU[@etichetta="Unit of measurement"]/text()</arg>
+								<arg name="unit" type="xpath">../MISU/text()</arg>
 								<arg name="value" type="xpath">text()</arg>
 							</instance_generator>
 							<label_generator name="Literal">
-								<arg name="text" type="xpath">string-join((text(),../MISU[@etichetta="Unit of measurement"]/text(),", length"),' ')</arg>
+								<arg name="text" type="xpath">string-join((text(),../MISU/text(),", length"),' ')</arg>
 							</label_generator>
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
@@ -1364,9 +1364,9 @@
 								<entity>
 									<type>rdfs:Literal</type>
 									<instance_generator name="DimensionConcatenated">
-										<arg name="length" type="xpath">../MISA[@etichetta="Height"]/text()</arg>
+										<arg name="length" type="xpath">../MISA/text()</arg>
 										<arg name="height" type="xpath">text()</arg>
-										<arg name="unit" type="xpath">../MISU[@etichetta="Unit of measurement"]/text()</arg>
+										<arg name="unit" type="xpath">../MISU/text()</arg>
 									</instance_generator>
 								</entity>
 							</additional>
@@ -1385,7 +1385,7 @@
 									<type>custom:noType</type>
 									<instance_generator name="URIwithType">
 										<arg name="type" type="constant">measurement_unit</arg>
-										<arg name="id" type="xpath">../MISU[@etichetta="Unit of measurement"]/text()</arg>
+										<arg name="id" type="xpath">../MISU/text()</arg>
 									</instance_generator>
 								</entity>
 							</additional>
@@ -1397,14 +1397,14 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="OBJECT"]/MISS[@etichetta="Thickness"]</relation>
+						<relation>PARAGRAFO[@etichetta="OBJECT"]/MISS</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P43_has_dimension</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="OBJECT"]/MISS[@etichetta="Thickness"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="OBJECT"]/MISS</source_node>
 					<target_node>
 						<entity>
 							<type>crm:E54_Dimension</type>
@@ -1412,11 +1412,11 @@
 								<arg name="subject_type" type="constant">photo</arg>
 								<arg name="subject_id" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								<arg name="type" type="constant">thickness</arg>
-								<arg name="unit" type="xpath">../MISU[@etichetta="Unit of measurement"]/text()</arg>
+								<arg name="unit" type="xpath">../MISU/text()</arg>
 								<arg name="value" type="xpath">text()</arg>
 							</instance_generator>
 							<label_generator name="Literal">
-								<arg name="text" type="xpath">string-join((text(),../MISU[@etichetta="Unit of measurement"]/text(),", thickness"),' ')</arg>
+								<arg name="text" type="xpath">string-join((text(),../MISU/text(),", thickness"),' ')</arg>
 							</label_generator>
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
@@ -1442,7 +1442,7 @@
 									<type>custom:noType</type>
 									<instance_generator name="URIwithType">
 										<arg name="type" type="constant">measurement_unit</arg>
-										<arg name="id" type="xpath">../MISU[@etichetta="Unit of measurement"]/text()</arg>
+										<arg name="id" type="xpath">../MISU/text()</arg>
 									</instance_generator>
 								</entity>
 							</additional>
@@ -1454,14 +1454,14 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="OBJECT"]/MTX[@etichetta="BW/C"]</relation>
+						<relation>PARAGRAFO[@etichetta="OBJECT"]/MTX</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P43_has_dimension</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="OBJECT"]/MTX[@etichetta="BW/C"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="OBJECT"]/MTX</source_node>
 					<target_node>
 						<entity>
 							<type>crm:E54_Dimension</type>
@@ -1498,14 +1498,14 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="OBJECT"]/QNTN[@etichetta="Number of objects"]</relation>
+						<relation>PARAGRAFO[@etichetta="OBJECT"]/QNTN</relation>
 					</source_relation>
 					<target_relation>	
 						<relationship>crm:P57_has_number_of_part</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="OBJECT"]/QNTN[@etichetta="Number of objects"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="OBJECT"]/QNTN</source_node>
 					<target_node>
 						<entity>
 							<type>rdfs:Literal</type>
@@ -1589,11 +1589,11 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRCM[@etichetta="Archive/ Collection"]</relation>
+						<relation>PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRCM</relation>
 					</source_relation>
 					<target_relation>
 						<if>
-							<exists>../PRDU[@etichetta="Date OUT"]/text()</exists>
+							<exists>../PRDU/text()</exists>
 						</if>
 						<relationship>crm:P24i_changed_ownership_through</relationship>
 						<entity>
@@ -1604,10 +1604,10 @@
 								<arg name="eventType" type="constant">acquisition</arg>
 								<arg name="from" type="constant">text()</arg>
 								<arg name="to" type="constant">-</arg>
-								<arg name="timespan" type="xpath">../PRDU[@etichetta="Date OUT"]/text()</arg>
+								<arg name="timespan" type="xpath">../PRDU/text()</arg>
 							</instance_generator>
 							<label_generator name="Literal">
-								<arg name="text" type="xpath">string-join(("Former Location:",text(),"- Acquisition:",../PRDU[@etichetta="Date OUT"]/text()),' ')</arg>
+								<arg name="text" type="xpath">string-join(("Former Location:",text(),"- Acquisition:",../PRDU/text()),' ')</arg>
 							</label_generator>
 							<additional>
 								<relationship>custom:has_order</relationship>
@@ -1623,7 +1623,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRCM[@etichetta="Archive/ Collection"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRCM</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
@@ -1639,13 +1639,13 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRCM[@etichetta="Archive/ Collection"]</relation>
+						<relation>PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRCM</relation>
 					</source_relation>
 					<target_relation>
 						<if>
 							<not>
 								<if>
-									<exists>../PRDU[@etichetta="Date OUT"]/text()</exists>
+									<exists>../PRDU/text()</exists>
 								</if>
 							</not>
 						</if>
@@ -1677,7 +1677,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRCM[@etichetta="Archive/ Collection"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRCM</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
@@ -1693,7 +1693,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRDU[@etichetta="Date OUT"]</relation>
+						<relation>PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRDU</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P24i_changed_ownership_through</relationship>
@@ -1703,12 +1703,12 @@
 								<arg name="resourceType" type="constant">photo</arg>
 								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								<arg name="eventType" type="constant">acquisition</arg>
-								<arg name="from" type="xpath">../PRCM[@etichetta="Archive/ Collection"]/text()</arg>
+								<arg name="from" type="xpath">../PRCM/text()</arg>
 								<arg name="to" type="constant">-</arg>
-								<arg name="timespan" type="xpath">../PRDU[@etichetta="Date OUT"]/text()</arg>
+								<arg name="timespan" type="xpath">../PRDU/text()</arg>
 							</instance_generator>
 							<label_generator name="Literal">
-								<arg name="text" type="xpath">string-join(("Former Location:",../PRCM[@etichetta="Archive/ Collection"]/text(),"- Acquisition:",text()),' ')</arg>
+								<arg name="text" type="xpath">string-join(("Former Location:",../PRCM/text(),"- Acquisition:",text()),' ')</arg>
 							</label_generator>
 							<additional>
 								<relationship>custom:has_order</relationship>
@@ -1734,7 +1734,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRDU[@etichetta="Date OUT"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRDU</source_node>
 					<target_node>
 						<entity>
 							<type>rdfs:Literal</type>
@@ -1749,7 +1749,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="STATE OF PRESERVATION"]/STCC[@etichetta="State of preservation"]</relation>
+						<relation>PARAGRAFO[@etichetta="STATE OF PRESERVATION"]/STCC</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P34i_was_assessed_by</relationship>
@@ -1766,7 +1766,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="STATE OF PRESERVATION"]/STCC[@etichetta="State of preservation"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="STATE OF PRESERVATION"]/STCC</source_node>
 					<target_node>
 						<entity>
 							<type>crm:E3_Condition_State</type>
@@ -1786,7 +1786,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="STATE OF PRESERVATION"]/STCS[@etichetta="Specific information"]</relation>
+						<relation>PARAGRAFO[@etichetta="STATE OF PRESERVATION"]/STCS</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P67i_is_referred_to_by</relationship>
@@ -1812,7 +1812,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="STATE OF PRESERVATION"]/STCS[@etichetta="Specific information"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="STATE OF PRESERVATION"]/STCS</source_node>
 					<target_node>
 						<entity>
 							<type>rdfs:Literal</type>
@@ -1827,7 +1827,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="EDITING AND PUBLISHING"]/RDFD[@etichetta="Publication date"]</relation>
+						<relation>PARAGRAFO[@etichetta="PRODUCTION AND PUBLISHING"]/RIPETIZIONE/RDFD[@etichetta="Publication date"]</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P108i_was_produced_by</relationship>
@@ -1835,13 +1835,13 @@
 							<type>custom:Publication</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								<arg name="eventType" type="constant">publication</arg>
 							</instance_generator>
 							<label_generator name="PublicationConcatenated">
-								<arg name="Publisher" type="xpath">../PDFN[@etichetta="Publisher (personal name)"]/text()</arg>
+								<arg name="Publisher" type="xpath">../PDFN/text()</arg>
 								<arg name="Place" type="xpath">../MSTL[@etichetta="Place of exhibition"]/text()</arg>
-								<arg name="Date" type="xpath">../PDFL[@etichetta="Publication place"]/text()</arg>
+								<arg name="Date" type="xpath">../PDFL/text()</arg>
 							</label_generator>
 						</entity>
 						<relationship>crm:P4_has_time-span</relationship>
@@ -1849,7 +1849,7 @@
 							<type>crm:E52_Time-Span</type>
 							<instance_generator name="TimespanUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								<arg name="eventType" type="constant">publication</arg>
 							</instance_generator>
 						</entity>
@@ -1857,7 +1857,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="EDITING AND PUBLISHING"]/RDFD[@etichetta="Publication date"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="PRODUCTION AND PUBLISHING"]/RIPETIZIONE/RDFD[@etichetta="Publication date"]</source_node>
 					<target_node>
 						<entity>
 							<type>rdfs:Literal</type>
@@ -1872,7 +1872,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="EDITING AND PUBLISHING"]/PDFN[@etichetta="Publisher (personal name)"]</relation>
+						<relation>PARAGRAFO[@etichetta="PRODUCTION AND PUBLISHING"]/RIPETIZIONE/PDFN</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P108i_was_produced_by</relationship>
@@ -1880,7 +1880,7 @@
 							<type>custom:Publication</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								<arg name="eventType" type="constant">publication</arg>
 							</instance_generator>
 						</entity>
@@ -1888,7 +1888,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="EDITING AND PUBLISHING"]/PDFN[@etichetta="Publisher (personal name)"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="PRODUCTION AND PUBLISHING"]/RIPETIZIONE/PDFN</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
@@ -1904,7 +1904,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="EDITING AND PUBLISHING"]/PDFB[@etichetta="Publisher (corporate name)"]</relation>
+						<relation>PARAGRAFO[@etichetta="PRODUCTION AND PUBLISHING"]/RIPETIZIONE/PDFB</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P108i_was_produced_by</relationship>
@@ -1912,7 +1912,7 @@
 							<type>custom:Publication</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								<arg name="eventType" type="constant">publication</arg>
 							</instance_generator>
 						</entity>
@@ -1920,7 +1920,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="EDITING AND PUBLISHING"]/PDFB[@etichetta="Publisher (corporate name)"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="PRODUCTION AND PUBLISHING"]/RIPETIZIONE/PDFB</source_node>
 					<target_node>
 						<entity>
 							<type>crm:E39_Actor</type>
@@ -1939,7 +1939,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="EDITING AND PUBLISHING"]/PDFL[@etichetta="Publication place"]</relation>
+						<relation>PARAGRAFO[@etichetta="PRODUCTION AND PUBLISHING"]/RIPETIZIONE/PDFL</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P108i_was_produced_by</relationship>
@@ -1947,7 +1947,7 @@
 							<type>custom:Publication</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 								<arg name="eventType" type="constant">publication</arg>
 							</instance_generator>
 						</entity>
@@ -1955,7 +1955,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="EDITING AND PUBLISHING"]/PDFL[@etichetta="Publication place"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="PRODUCTION AND PUBLISHING"]/RIPETIZIONE/PDFL</source_node>
 					<target_node>
 						<entity>
 							<type>crm:E53_Place</type>
@@ -1974,7 +1974,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI[@etichetta="Negative number"]</relation>
+						<relation>PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI</relation>
 					</source_relation>
 					<target_relation>
 						<if>
@@ -2016,7 +2016,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI[@etichetta="Negative number"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI</source_node>
 					<target_node>
 						<entity>
 							<type>crm:E42_Identifier</type>
@@ -2046,13 +2046,13 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="PLACE AND DATE OF THE SHOT"]/LRD[@etichetta="Shot date"]</relation>
+						<relation>PARAGRAFO[@etichetta="PLACE AND DATE OF THE SHOT"]/LRD</relation>
 					</source_relation>
 					<target_relation>
 						<if>
 							<not>
 								<if>
-									<exists>../../PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI[@etichetta="Negative number"]/text()</exists>
+									<exists>../../PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI/text()</exists>
 								</if>
 							</not>
 						</if>
@@ -2081,7 +2081,7 @@
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 							<label_generator name="ShotConcatenated">
-								<arg name="Place" type="xpath">../LRA[@etichetta="Village / Foreign placename"]/text()</arg>
+								<arg name="Place" type="xpath">../LRA/text()</arg>
 								<arg name="Date" type="xpath">text()</arg>
 							</label_generator>
 						</entity>
@@ -2098,7 +2098,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="PLACE AND DATE OF THE SHOT"]/LRD[@etichetta="Shot date"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="PLACE AND DATE OF THE SHOT"]/LRD</source_node>
 					<target_node>
 						<entity>
 							<type>rdfs:Literal</type>
@@ -2113,13 +2113,13 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="PLACE AND DATE OF THE SHOT"]/LRA[@etichetta="Village / Foreign placename"]</relation>
+						<relation>PARAGRAFO[@etichetta="PLACE AND DATE OF THE SHOT"]/LRA</relation>
 					</source_relation>
 					<target_relation>
 						<if>
 							<not>
 								<if>
-									<exists>../../PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI[@etichetta="Negative number"]/text()</exists>
+									<exists>../../PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI/text()</exists>
 								</if>
 							</not>
 						</if>
@@ -2152,7 +2152,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="PLACE AND DATE OF THE SHOT"]/LRA[@etichetta="Village / Foreign placename"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="PLACE AND DATE OF THE SHOT"]/LRA</source_node>
 					<target_node>
 						<entity>
 							<type>crm:E53_Place</type>
@@ -2187,7 +2187,7 @@
 						<if>
 							<not>
 								<if>
-									<exists>../../PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI[@etichetta="Negative number"]/text()</exists>
+									<exists>../../PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI/text()</exists>
 								</if>
 							</not>
 						</if>
@@ -2249,13 +2249,13 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="PLACE AND DATE OF THE SHOT"]/LRCS[@etichetta="Country"]</relation>
+						<relation>PARAGRAFO[@etichetta="PLACE AND DATE OF THE SHOT"]/LRCS</relation>
 					</source_relation>
 					<target_relation>
 						<if>
 							<not>
 								<if>
-									<exists>../../PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI[@etichetta="Negative number"]/text()</exists>
+									<exists>../../PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI/text()</exists>
 								</if>
 							</not>
 						</if>
@@ -2288,7 +2288,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="PLACE AND DATE OF THE SHOT"]/LRCS[@etichetta="Country"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="PLACE AND DATE OF THE SHOT"]/LRCS</source_node>
 					<target_node>
 						<entity>
 							<type>crm:E53_Place</type>
@@ -2316,7 +2316,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI[@etichetta="Negative number"]</relation>
+						<relation>PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI</relation>
 					</source_relation>
 					<target_relation>
 						<if>
@@ -2354,7 +2354,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI[@etichetta="Negative number"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI</source_node>
 					<target_node>
 						<entity>
 							<type>crm:E42_Identifier</type>
@@ -2384,11 +2384,11 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="PLACE AND DATE OF THE SHOT"]/LRD[@etichetta="Shot date"]</relation>
+						<relation>PARAGRAFO[@etichetta="PLACE AND DATE OF THE SHOT"]/LRD</relation>
 					</source_relation>
 					<target_relation>
 						<if>
-							<exists>../../PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI[@etichetta="Negative number"]/text()</exists>
+							<exists>../../PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI/text()</exists>
 						</if>
 						<relationship>crm:P128_carries</relationship>
 						<entity>
@@ -2403,7 +2403,7 @@
 							<type>crm:E22_Man-Made_Object</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">negative</arg>
-								<arg name="id" type="xpath">../../PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI[@etichetta="Negative number"]/text()</arg>
+								<arg name="id" type="xpath">../../PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI/text()</arg>
 							</instance_generator>
 						</entity>
 						<relationship>crm:P108i_was_produced_by</relationship>
@@ -2411,11 +2411,11 @@
 							<type>crm:E12_Production</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">negative</arg>
-								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI[@etichetta="Negative number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 							<label_generator name="ShotConcatenated">
-								<arg name="Place" type="xpath">../LRA[@etichetta="Village / Foreign placename"]/text()</arg>
+								<arg name="Place" type="xpath">../LRA/text()</arg>
 								<arg name="Date" type="xpath">text()</arg>
 							</label_generator>
 						</entity>
@@ -2424,7 +2424,7 @@
 							<type>crm:E52_Time-Span</type>
 							<instance_generator name="TimespanUri">
 								<arg name="resourceType" type="constant">negative</arg>
-								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI[@etichetta="Negative number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
@@ -2432,7 +2432,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="PLACE AND DATE OF THE SHOT"]/LRD[@etichetta="Shot date"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="PLACE AND DATE OF THE SHOT"]/LRD</source_node>
 					<target_node>
 						<entity>
 							<type>rdfs:Literal</type>
@@ -2447,11 +2447,11 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="PLACE AND DATE OF THE SHOT"]/LRA[@etichetta="Village / Foreign placename"]</relation>
+						<relation>PARAGRAFO[@etichetta="PLACE AND DATE OF THE SHOT"]/LRA</relation>
 					</source_relation>
 					<target_relation>
 						<if>
-							<exists>../../PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI[@etichetta="Negative number"]/text()</exists>
+							<exists>../../PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI/text()</exists>
 						</if>
 						<relationship>crm:P128_carries</relationship>
 						<entity>
@@ -2466,7 +2466,7 @@
 							<type>crm:E22_Man-Made_Object</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">negative</arg>
-								<arg name="id" type="xpath">../../PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI[@etichetta="Negative number"]/text()</arg>
+								<arg name="id" type="xpath">../../PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI/text()</arg>
 							</instance_generator>
 						</entity>
 						<relationship>crm:P108i_was_produced_by</relationship>
@@ -2474,7 +2474,7 @@
 							<type>crm:E12_Production</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">negative</arg>
-								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI[@etichetta="Negative number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
@@ -2482,7 +2482,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="PLACE AND DATE OF THE SHOT"]/LRA[@etichetta="Village / Foreign placename"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="PLACE AND DATE OF THE SHOT"]/LRA</source_node>
 					<target_node>
 						<entity>
 							<type>crm:E53_Place</type>
@@ -2515,7 +2515,7 @@
 					</source_relation>
 					<target_relation>
 						<if>
-							<exists>../../PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI[@etichetta="Negative number"]/text()</exists>
+							<exists>../../PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI/text()</exists>
 						</if>
 						<relationship>crm:P128_carries</relationship>
 						<entity>
@@ -2530,7 +2530,7 @@
 							<type>crm:E22_Man-Made_Object</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">negative</arg>
-								<arg name="id" type="xpath">../../PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI[@etichetta="Negative number"]/text()</arg>
+								<arg name="id" type="xpath">../../PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI/text()</arg>
 							</instance_generator>
 						</entity>
 						<relationship>crm:P108i_was_produced_by</relationship>
@@ -2538,7 +2538,7 @@
 							<type>crm:E12_Production</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">negative</arg>
-								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI[@etichetta="Negative number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
@@ -2575,11 +2575,11 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="PLACE AND DATE OF THE SHOT"]/LRCS[@etichetta="Country"]</relation>
+						<relation>PARAGRAFO[@etichetta="PLACE AND DATE OF THE SHOT"]/LRCS</relation>
 					</source_relation>
 					<target_relation>
 						<if>
-							<exists>../../PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI[@etichetta="Negative number"]/text()</exists>
+							<exists>../../PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI/text()</exists>
 						</if>
 						<relationship>crm:P128_carries</relationship>
 						<entity>
@@ -2594,7 +2594,7 @@
 							<type>crm:E22_Man-Made_Object</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">negative</arg>
-								<arg name="id" type="xpath">../../PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI[@etichetta="Negative number"]/text()</arg>
+								<arg name="id" type="xpath">../../PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI/text()</arg>
 							</instance_generator>
 						</entity>
 						<relationship>crm:P108i_was_produced_by</relationship>
@@ -2602,7 +2602,7 @@
 							<type>crm:E12_Production</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">negative</arg>
-								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI[@etichetta="Negative number"]/text()</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="RELATIONS WITH OTHER PHOTOGRAPHIC OBJECTS (NEGATIVE)"]/ROFI/text()</arg>
 								<arg name="eventType" type="constant">production</arg>
 							</instance_generator>
 						</entity>
@@ -2610,7 +2610,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="PLACE AND DATE OF THE SHOT"]/LRCS[@etichetta="Country"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="PLACE AND DATE OF THE SHOT"]/LRCS</source_node>
 					<target_node>
 						<entity>
 							<type>crm:E53_Place</type>
@@ -2638,7 +2638,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="DIGITAL IMAGE"]/RIPETIZIONE/FTAN[@etichetta="File name"]</relation>
+						<relation>PARAGRAFO[@etichetta="DIGITAL IMAGE"]/FTAN</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P128_carries</relationship>
@@ -2646,7 +2646,7 @@
 							<type>crm:E36_Visual_Item</type>
 							<instance_generator name="VisualItemUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 							</instance_generator>
 						</entity>
 						<relationship>crm:P165i_is_incorporated_in</relationship>
@@ -2673,7 +2673,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="DIGITAL IMAGE"]/RIPETIZIONE/FTAN[@etichetta="File name"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="DIGITAL IMAGE"]/FTAN</source_node>
 					<target_node>
 						<entity>
 							<type>crm:E41_Appellation</type>
@@ -2694,7 +2694,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="DIGITAL IMAGE"]/RIPETIZIONE/FTAP[@etichetta="Type"]</relation>
+						<relation>PARAGRAFO[@etichetta="DIGITAL IMAGE"]/FTAP</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P128_carries</relationship>
@@ -2702,7 +2702,7 @@
 							<type>crm:E36_Visual_Item</type>
 							<instance_generator name="VisualItemUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 							</instance_generator>
 						</entity>
 						<relationship>crm:P165i_is_incorporated_in</relationship>
@@ -2710,14 +2710,14 @@
 							<type>crm:D1_Digital_Object</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">digital_object</arg>
-								<arg name="id" type="xpath">../FTAN[@etichetta="File name"]/text()</arg>
+								<arg name="id" type="xpath">../FTAN/text()</arg>
 							</instance_generator>
 						</entity>
 						<relationship>crm:P2_has_type</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="DIGITAL IMAGE"]/RIPETIZIONE/FTAP[@etichetta="Type"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="DIGITAL IMAGE"]/FTAP</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
@@ -2733,7 +2733,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="DIGITAL IMAGE"]/RIPETIZIONE/FTAT[@etichetta="Detail / Whole"]</relation>
+						<relation>PARAGRAFO[@etichetta="DIGITAL IMAGE"]/FTAT</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P128_carries</relationship>
@@ -2741,7 +2741,7 @@
 							<type>crm:E36_Visual_Item</type>
 							<instance_generator name="VisualItemUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 							</instance_generator>
 						</entity>
 						<relationship>crm:P165i_is_incorporated_in</relationship>
@@ -2749,14 +2749,14 @@
 							<type>crm:D1_Digital_Object</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">digital_object</arg>
-								<arg name="id" type="xpath">../FTAN[@etichetta="File name"]/text()</arg>
+								<arg name="id" type="xpath">../FTAN/text()</arg>
 							</instance_generator>
 						</entity>
 						<relationship>crm:P138_represents</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="DIGITAL IMAGE"]/RIPETIZIONE/FTAT[@etichetta="Detail / Whole"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="DIGITAL IMAGE"]/FTAT</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
@@ -2772,7 +2772,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="DIGITAL IMAGE"]/RIPETIZIONE/FTAD[@etichetta="Date of creation"]</relation>
+						<relation>PARAGRAFO[@etichetta="DIGITAL IMAGE"]/FTAD</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P128_carries</relationship>
@@ -2780,7 +2780,7 @@
 							<type>crm:E36_Visual_Item</type>
 							<instance_generator name="VisualItemUri">
 								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
+								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
 							</instance_generator>
 						</entity>
 						<relationship>crm:P165i_is_incorporated_in</relationship>
@@ -2788,7 +2788,7 @@
 							<type>crm:D1_Digital_Object</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">digital_object</arg>
-								<arg name="id" type="xpath">../FTAN[@etichetta="File name"]/text()</arg>
+								<arg name="id" type="xpath">../FTAN/text()</arg>
 							</instance_generator>
 						</entity>
 						<relationship>crm:L1i_was_output_of</relationship>
@@ -2796,7 +2796,7 @@
 							<type>crm:D2_Digitization</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">digital_object</arg>
-								<arg name="resourceId" type="xpath">../FTAN[@etichetta="File name"]/text()</arg>
+								<arg name="resourceId" type="xpath">../FTAN/text()</arg>
 								<arg name="eventType" type="constant">digitization</arg>
 							</instance_generator>
 						</entity>
@@ -2805,7 +2805,7 @@
 							<type>crm:E52_Time-Span</type>
 							<instance_generator name="TimespanUri">
 								<arg name="resourceType" type="constant">digital_object</arg>
-								<arg name="resourceId" type="xpath">../FTAN[@etichetta="File name"]/text()</arg>
+								<arg name="resourceId" type="xpath">../FTAN/text()</arg>
 								<arg name="eventType" type="constant">digitization</arg>
 							</instance_generator>
 						</entity>
@@ -2813,7 +2813,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="DIGITAL IMAGE"]/RIPETIZIONE/FTAD[@etichetta="Date of creation"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="DIGITAL IMAGE"]/FTAD</source_node>
 					<target_node>
 						<entity>
 							<type>rdfs:Literal</type>
@@ -2829,7 +2829,7 @@
 	
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="SUBJECT"]/SGTI[@etichetta="Subject"]</source_node>
+				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="SUBJECT"]/RIPETIZIONE/SGTI</source_node>
 				<target_node>
 					<entity>
 						<type>crm:E36_Visual_Item</type>
@@ -2887,7 +2887,7 @@
 		
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="OBJECT"]/OGTB[@etichetta="Type"]</source_node>
+				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="OBJECT"]/OGTB</source_node>
 				<target_node>
 					<entity>
 						<type>crm:E55_Type</type>
@@ -2945,7 +2945,7 @@
 
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="OBJECT"]/OGTD[@etichetta="Object"]</source_node>
+				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="OBJECT"]/OGTD</source_node>
 				<target_node>
 					<entity>
 						<type>crm:E55_Type</type>
@@ -3003,7 +3003,7 @@
 
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="OBJECT"]/OGTS[@etichetta="Format"]</source_node>
+				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="OBJECT"]/OGTS</source_node>
 				<target_node>
 					<entity>
 						<type>crm:E55_Type</type>
@@ -3062,7 +3062,7 @@
 
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="OWNERSHIP"]/CDGS[@etichetta="Specific owner"]</source_node>
+				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="OWNERSHIP"]/CDGS</source_node>
 				<target_node>
 					<entity>
 						<type>crm:E39_Actor</type>
@@ -3111,7 +3111,7 @@
 
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="OWNERSHIP"]/CDGG[@etichetta="General ownership"]</source_node>
+				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="OWNERSHIP"]/CDGG</source_node>
 				<target_node>
 					<entity>
 						<type>crm:E39_Actor</type>
@@ -3160,7 +3160,7 @@
 
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="PHOTOGRAPHER"]/RIPETIZIONE/AUFN[@etichetta="Photographer"]</source_node>
+				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="PHOTOGRAPHERS"]/RIPETIZIONE/AUFN</source_node>
 				<target_node>
 					<entity>
 						<type>crm:E39_Actor</type>
@@ -3209,7 +3209,7 @@
 
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="OBJECT"]/MTC[@etichetta="Medium or materials"]</source_node>
+				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="OBJECT"]/MTC</source_node>
 				<target_node>
 					<entity>
 						<type>crm:E57_Material</type>
@@ -3258,7 +3258,7 @@
 
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="LOCATION"]/PVCC[@etichetta="Town / Municipality"]</source_node>
+				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="LOCATION"]/PVCC</source_node>
 				<target_node>
 					<entity>
 						<type>crm:E53_Place</type>
@@ -3316,7 +3316,7 @@
 
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="LOCATION"]/PVCP[@etichetta="District"]</source_node>
+				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="LOCATION"]/PVCP</source_node>
 				<target_node>
 					<entity>
 						<type>crm:E53_Place</type>
@@ -3375,7 +3375,7 @@
 
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="LOCATION"]/PVCR[@etichetta="Region / Federal State"]</source_node>
+				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="LOCATION"]/PVCR</source_node>
 				<target_node>
 					<entity>
 						<type>crm:E53_Place</type>
@@ -3540,7 +3540,7 @@
 
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="OBJECT"]/MISU[@etichetta="Unit of measurement"]</source_node>
+				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="OBJECT"]/MISU</source_node>
 				<target_node>
 					<entity>
 						<type>crm:E58_Measurement_Unit</type>
@@ -3834,7 +3834,7 @@
 
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRCM[@etichetta="Archive/ Collection"]</source_node>
+				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRCM</source_node>
 				<target_node>
 					<entity>
 						<type>crm:E39_Actor</type>
@@ -3873,14 +3873,14 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>../PRL[@etichetta="Village / Foreign placename"]</relation>
+						<relation>../PRL</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P74_has_current_or_former_residence</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>../PRL[@etichetta="Village / Foreign placename"]</source_node>
+					<source_node>../PRL</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
@@ -3896,20 +3896,20 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>../PRVC[@etichetta="Town / Municipality"]</relation>
+						<relation>../PRVC</relation>
 					</source_relation>
 					<target_relation>	
 						<relationship>crm:P74_has_current_or_former_residence</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>../PRVC[@etichetta="Town / Municipality"]</source_node>
+					<source_node>../PRVC</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">place</arg>
-								<arg name="id" type="xpath">string-join(( text(), ../PRVS[@etichetta="Country"]/text() ),'_')</arg>
+								<arg name="id" type="xpath">string-join(( text(), ../PRVS/text() ),'_')</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -3920,14 +3920,14 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>../PRVP[@etichetta="District"]</relation>
+						<relation>../PRVP</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P74_has_current_or_former_residence</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>../PRVP[@etichetta="District"]</source_node>
+					<source_node>../PRVP</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
@@ -3943,14 +3943,14 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>../PRVS[@etichetta="Country"]</relation>
+						<relation>../PRVS</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P74_has_current_or_former_residence</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>../PRVS[@etichetta="Country"]</source_node>
+					<source_node>../PRVS</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
@@ -3967,7 +3967,7 @@
 
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRL[@etichetta="Village / Foreign placename"]</source_node>
+				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRL</source_node>
 				<target_node>
 					<entity>
 						<type>crm:E53_Place</type>
@@ -4027,13 +4027,13 @@
 
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRVC[@etichetta="Town / Municipality"]</source_node>
+				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRVC</source_node>
 				<target_node>
 					<entity>
 						<type>crm:E53_Place</type>
 						<instance_generator name="URIwithType">
 							<arg name="type" type="constant">place</arg>
-							<arg name="id" type="xpath">string-join(( text(), ../PRVS[@etichetta="Country"]/text() ),'_')</arg>
+							<arg name="id" type="xpath">string-join(( text(), ../PRVS/text() ),'_')</arg>
 						</instance_generator>
 						<label_generator name="Literal">
 							<arg name="text" type="xpath">text()</arg>
@@ -4054,7 +4054,7 @@
 								<type>custom:Namedgraph</type>
 								<instance_generator name="MultiHashingGenerator">
 									<arg name="hierarchy" type="constant">place</arg>
-									<arg name="object_HASHED_CONTENTS" type="xpath">string-join(( text(), ../PRVS[@etichetta="Country"]/text() ),'_')</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">string-join(( text(), ../PRVS/text() ),'_')</arg>
 									<arg name="term_simple" type="constant">graph</arg>
 								</instance_generator>
 								<additional>
@@ -4085,7 +4085,7 @@
 
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRVP[@etichetta="District"]</source_node>
+				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRVP</source_node>
 				<target_node>
 					<entity>
 						<type>crm:E53_Place</type>
@@ -4144,7 +4144,7 @@
 
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRVS[@etichetta="Country"]</source_node>
+				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="PROVENANCE"]/RIPETIZIONE/PRVS</source_node>
 				<target_node>
 					<entity>
 						<type>crm:E53_Place</type>
@@ -4202,7 +4202,7 @@
 
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="EDITING AND PUBLISHING"]/PDFN[@etichetta="Publisher (personal name)"]</source_node>
+				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="PRODUCTION AND PUBLISHING"]/RIPETIZIONE/PDFN</source_node>
 				<target_node>
 					<entity>
 						<type>crm:E21_Person</type>
@@ -4252,7 +4252,7 @@
 
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="DIGITAL IMAGE"]/RIPETIZIONE/FTAP[@etichetta="Type"]</source_node>
+				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="DIGITAL IMAGE"]/FTAP</source_node>
 				<target_node>
 					<entity>
 						<type>crm:E55_Type</type>
@@ -4302,7 +4302,7 @@
 
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="DIGITAL IMAGE"]/RIPETIZIONE/FTAT[@etichetta="Detail / Whole"]</source_node>
+				<source_node>//RISULTATI/SCHEDA/PARAGRAFO[@etichetta="DIGITAL IMAGE"]/FTAT</source_node>
 				<target_node>
 					<entity>
 						<type>crm:E55_Type</type>

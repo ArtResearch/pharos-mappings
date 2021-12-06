@@ -65,14 +65,14 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="PHOTOGRAPHER"]/RIPETIZIONE/AUFN[@etichetta="Photographer"]</relation>
+						<relation>PARAGRAFO[@etichetta="PHOTOGRAPHERS"]/RIPETIZIONE/AUFN</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>fr:Photo_created_by_Photographer</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="PHOTOGRAPHER"]/RIPETIZIONE/AUFN[@etichetta="Photographer"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="PHOTOGRAPHERS"]/RIPETIZIONE/AUFN</source_node>
 					<target_node>
 						<entity>
 							<type>fc:photographer</type>
@@ -99,7 +99,7 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>PARAGRAFO[@etichetta="DATING"]/DTSI[@etichetta="From"]</relation>
+						<relation>PARAGRAFO[@etichetta="DATING"]/DTSI</relation>
 					</source_relation>
 					<target_relation>
 						<if>
@@ -113,7 +113,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>PARAGRAFO[@etichetta="DATING"]/DTSI[@etichetta="From"]</source_node>
+					<source_node>PARAGRAFO[@etichetta="DATING"]/DTSI</source_node>
 					<target_node>
 						<entity>
 							<type>xsd:date</type>
