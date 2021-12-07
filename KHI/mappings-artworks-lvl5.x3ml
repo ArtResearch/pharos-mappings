@@ -661,8 +661,8 @@
 						<entity>
 							<type>custom:Namedgraph</type>
 							<instance_generator name="MultiHashingGenerator">
-								<arg name="hierarchy" type="constant">place</arg>
-								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="hierarchy" type="constant">actor</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">string-join((.,../../a2730/text(),../../a2664/text()),"_")</arg>
 								<arg name="term_simple" type="constant">graph</arg>
 							</instance_generator>
 						</entity>	
@@ -3072,8 +3072,8 @@
 						<entity>
 							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">place</arg>
-								<arg name="id" type="xpath">text()</arg>
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">string-join((text(),../a2730/text(),../a2664/text()),"_")</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -4886,10 +4886,10 @@
 						<exists>../../a5200/text()</exists>
 					</if>
                     <entity>
-						<type>crm:E53_Place</type>
+						<type>crm:E39_Actor</type>
 						<instance_generator name="URIwithType">
-							<arg name="type" type="constant">place</arg>
-							<arg name="id" type="xpath">text()</arg>
+							<arg name="type" type="constant">actor</arg>
+							<arg name="id" type="xpath">string-join((text(),../a2730/text(),../a2664/text()),"_")</arg>
 						</instance_generator>
 						<label_generator name="Literal">
 							<arg name="text" type="xpath">text()</arg>
@@ -4909,8 +4909,8 @@
 							<entity>
 								<type>custom:Namedgraph</type>
 								<instance_generator name="MultiHashingGenerator">
-									<arg name="hierarchy" type="constant">place</arg>
-									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="hierarchy" type="constant">actor</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">string-join((text(),../a2730/text(),../a2664/text()),"_")</arg>
 									<arg name="term_simple" type="constant">graph</arg>
 								</instance_generator>
 								<additional>
