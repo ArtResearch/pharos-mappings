@@ -210,6 +210,9 @@
 			<domain>
 				<source_node>/root/obj/obj/obj/obj</source_node>
 				<target_node>
+					<if>
+						<exists>aob30/a3000</exists>
+					</if>
 					<entity>
 						<type>fc:work</type>
 						<instance_generator name="URIwithTypeAndId">

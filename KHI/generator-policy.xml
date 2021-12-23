@@ -112,6 +112,10 @@
 	<pattern>{resourceType}/{resourceId}/{eventType}</pattern>
 </generator>
 
+<generator name="ComplexActivityUri" prefix="prefix">
+	<pattern>{resourceType}/{resourceId}/{eventType}/{activityType}</pattern>
+</generator>
+
 <generator name="Image_Generator" prefix="image">
 	<pattern>{id}{postfix}</pattern>
 </generator>

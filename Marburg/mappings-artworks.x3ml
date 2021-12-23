@@ -2814,54 +2814,222 @@
 				</range>
 			</link>
 			
-			<!--
 			<link>
 				<path>
 					<source_relation>
-						<relation>a5060</relation>
+						<relation>aob30</relation>
 					</source_relation>
 					<target_relation>
 						<if>
-							<equals value="Herstellung">../aob30/text()</equals>
+							<not>
+								<if>
+									<equals value="Herstellung">text()</equals>	
+								</if>
+							</not>
 						</if>
-						<relationship>crm:P108i_was_produced_by</relationship>
-						<entity>
-							<type>crm:E12_Production</type>
-							<instance_generator name="EventUri">
+						<relationship>crm:P19i_motivated</relationship>
+							<entity>
+							<type>crm:E7_Activity</type>
+							<instance_generator name="ComplexActivityUri">
 								<arg name="resourceType" type="constant">work</arg>
 								<arg name="resourceId" type="xpath">../a5000/text()</arg>
-								<arg name="eventType" type="constant">production</arg>
-							</instance_generator>
-						</entity>
-						<relationship>crm:P4_has_time-span</relationship>
-						<entity>
-							<type>crm:E52_Time-Span</type>
-							<instance_generator name="TimespanUri">
-								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../a5000/text()</arg>
-								<arg name="eventType" type="constant">production</arg>
+								<arg name="eventType" type="constant">activity</arg>
+								<arg name="activityType" type="xpath">text()</arg>
 							</instance_generator>
 						</entity>
 						<relationship>crm:P2_has_type</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>a5060</source_node>
+					<source_node>aob30</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E55_Type</type>
-							<instance_generator name="URIwithType">
+							<type>custom:noType</type>
+							<instance_generator name="URIwithVocabType">
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
-							</label_generator>
 						</entity>
 					</target_node>
 				</range>
 			</link>
-			-->
+			
+			<link>
+				<path>
+					<source_relation>
+						<relation>aob30/a3000</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<not>
+								<if>
+									<equals value="Herstellung">../text()</equals>	
+								</if>
+							</not>
+						</if>
+						<relationship>crm:P19i_motivated</relationship>
+							<entity>
+							<type>crm:E7_Activity</type>
+							<instance_generator name="ComplexActivityUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../a5000/text()</arg>
+								<arg name="eventType" type="constant">activity</arg>
+								<arg name="activityType" type="xpath">../text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P01i_is_domain_of</relationship>
+						<entity>
+							<type>crm:PC14_carried_out_by</type>
+							<instance_generator name="PropertyTypeUri">
+								<arg name="propertyType" type="constant">carried_out_by</arg>
+								<arg name="domain" type="xpath">../../a5000/text()</arg>
+								<arg name="range" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P02_has_range</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>aob30/a3000</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link>
+				<path>
+					<source_relation>
+						<relation>aob30/a3475</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<and>
+								<if>
+									<not>
+										<if>
+											<equals value="Herstellung">../text()</equals>	
+										</if>
+									</not>
+								</if>
+								<if>
+									<exists>../a3000/text()</exists>
+								</if>
+							</and>
+						</if>
+						<relationship>crm:P19i_motivated</relationship>
+							<entity>
+							<type>crm:E7_Activity</type>
+							<instance_generator name="ComplexActivityUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../a5000/text()</arg>
+								<arg name="eventType" type="constant">activity</arg>
+								<arg name="activityType" type="xpath">../text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P01i_is_domain_of</relationship>
+						<entity>
+							<type>crm:PC14_carried_out_by</type>
+							<instance_generator name="PropertyTypeUri">
+								<arg name="propertyType" type="constant">carried_out_by</arg>
+								<arg name="domain" type="xpath">../../a5000/text()</arg>
+								<arg name="range" type="xpath">../a3000/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P14.1_in_the_role_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>aob30/a3475</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithVocabType">
+								<arg name="type" type="constant">type</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link>
+				<path>
+					<source_relation>
+						<relation>aob30/a3470</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<and>
+								<if>
+									<not>
+										<if>
+											<equals value="Herstellung">../text()</equals>	
+										</if>
+									</not>
+								</if>
+								<if>
+									<exists>../a3000/text()</exists>
+								</if>
+							</and>
+						</if>
+						<relationship>crm:P19i_motivated</relationship>
+							<entity>
+							<type>crm:E7_Activity</type>
+							<instance_generator name="ComplexActivityUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../a5000/text()</arg>
+								<arg name="eventType" type="constant">activity</arg>
+								<arg name="activityType" type="xpath">../text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P140i_was_attributed_by</relationship>
+						<entity>
+							<type>crm:E13_Attribute_Assignment</type>
+							<instance_generator name="ComplexEventUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../a5000/text()</arg>
+								<arg name="id" type="xpath">../a3000/text()</arg>
+								<arg name="event_type" type="constant">attribute_assignment</arg>
+							</instance_generator>
+							<label_generator name="Attribution">
+								<arg name="Author" type="xpath">../a3100/text()</arg>
+								<arg name="Reason" type="xpath">text()</arg>
+							</label_generator>
+							<additional>
+								<relationship>crm:P141_assigned</relationship>
+								<entity>
+									<type>crm:PC14_carried_out_by</type>
+									<instance_generator name="PropertyTypeUri">
+										<arg name="propertyType" type="constant">carried_out_by</arg>
+										<arg name="domain" type="xpath">../../a5000/text()</arg>
+										<arg name="range" type="xpath">../a3000/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+						<relationship>crm:P2_has_type</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>aob30/a3470</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithVocabType">
+								<arg name="type" type="constant">type</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
 			
 			<link>
 				<path>
