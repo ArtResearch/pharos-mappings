@@ -2807,6 +2807,90 @@
 					</target_node>
 				</range>
 			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>a5060</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<and>
+								<if>
+									<not>
+										<if>
+											<equals value="Datierung">text()</equals>
+										</if>
+									</not>
+								</if>
+								<if>
+									<not>
+										<if>
+											<equals value="Zerstörung">text()</equals>
+										</if>
+									</not>
+								</if>
+								<if>
+									<not>
+										<if>
+											<equals value="Umgestaltung (innen)">text()</equals>
+										</if>
+									</not>
+								</if>
+								<if>
+									<not>
+										<if>
+											<equals value="Restaurierung">text()</equals>
+										</if>
+									</not>
+								</if>
+							</and>
+						</if>
+						<relationship>crm:P19i_motivated</relationship>
+						<entity>
+							<type>crm:E7_Activity</type>
+							<instance_generator name="ComplexActivityUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../a5001/text()</arg>
+								<arg name="eventType" type="constant">activity</arg>
+								<arg name="activityType" type="xpath">text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIwithType">
+										<arg name="type" type="constant">type</arg>
+										<arg name="id" type="xpath">text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+						<relationship>crm:P4_has_time-span</relationship>
+						<entity>
+							<type>crm:E52_Time-Span</type>
+							<instance_generator name="ComplexTimespanUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../a5001/text()</arg>
+								<arg name="eventType" type="constant">activity</arg>
+								<arg name="timespan" type="xpath">a5064/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P82_at_some_time_within</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a5060</source_node>
+					<target_node>
+						<entity>
+							<type>rdfs:Literal</type>
+							<instance_generator name="Literal">
+								<arg name="text" type="xpath">a5064/text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
 			
 			<link>
 				<path>
