@@ -1040,34 +1040,7 @@
 					 </entity>
 				</target_node>
 			</domain>
-			<!--
-			<link> 
-				<path>
-					<source_relation>
-						<relation>a8450/a8540</relation>
-					</source_relation>
-					<target_relation>
-						<if>
-							<exists>text()</exists>
-						</if>
-						<relationship>crm:P138i_has_representation</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>a8450/a8540</source_node>
-					<target_node>
-						<entity>
-							<type>crm:E38_Image</type>
-							<instance_generator name="Image_Generator">
-								<arg name="id" type="xpath">text()</arg>
-								<arg name="postfix" type="constant">.jpg</arg>
-							</instance_generator>
-						</entity>
-					</target_node>
-				</range>
-			</link>
--->
-			
+
 			<link> 
 				<path>
 					<source_relation>
