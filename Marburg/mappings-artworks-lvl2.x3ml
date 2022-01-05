@@ -1127,7 +1127,7 @@
 							<arg name="id" type="xpath">a5001/text()</arg>
 						</instance_generator>
 						<label_generator name="Literal">
-							<arg name="text" type="xpath">a5200/text()</arg>
+							<arg name="text" type="xpath">string-join((../a5200/text(),../a5202/text(),a5200/text()),", ")</arg>
 						</label_generator>
 						<additional>
 							<relationship>custom:has_provider</relationship>
