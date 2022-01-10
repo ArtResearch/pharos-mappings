@@ -44,13 +44,13 @@
   
   <http://www.researchspace.org/fieldDefinition/Member_Of> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-05-10T12:41:46.001Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-06T08:14:02.205Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/external_info>;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/person_relationships>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E21_Person, crm:E39_Actor;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t51011127;
-    <http://www.researchspace.org/resource/system/fields/order> "31820";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t51011126;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69330786;
+    <http://www.researchspace.org/resource/system/fields/order> "900006";
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69330785;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:label "Member Of"@en .
 }
@@ -145,13 +145,12 @@
   
   <http://www.researchspace.org/fieldDefinition/Photo_echnique> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-09-20T15:24:33.907Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-13T15:12:33.582Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/photograph_info>,
-      <http://www.researchspace.org/ontologies/platform/FieldCategories/physical_properties>;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780674;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/physical_properties>;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69330871;
     <http://www.researchspace.org/resource/system/fields/order> "750";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780673;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69330872;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:label "Technique"@en .
 }
@@ -218,16 +217,11 @@
 <http://www.researchspace.org/fieldDefinition/Last_Known_Location/context> {
   Platform:fieldDefinitionContainer <http://www.w3.org/ns/ldp#contains> <http://www.researchspace.org/fieldDefinition/Last_Known_Location> .
   
-  <http://www.researchspace.org/fieldDefinition/Last_Known_Location> a <http://www.w3.org/ns/ldp#Resource>,
-      prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-10-13T11:26:17.896Z"^^xsd:dateTime;
+  <http://www.researchspace.org/fieldDefinition/Last_Known_Location> prov:generatedAtTime
+      "2021-10-13T11:26:17.896Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/artwork_monument>;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68851285;
-    <http://www.researchspace.org/resource/system/fields/order> "6000";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68851286;
-    <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
-    rdfs:label "Last Known Location"@en .
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68851285 .
 }
 
 <http://www.researchspace.org/fieldDefinition/Last_Known_Location_1/context> {
@@ -242,6 +236,67 @@
   Platform:fieldDefinitionContainer <http://www.w3.org/ns/ldp#contains> <http://www.researchspace.org/fieldDefinition/Last_Known_Location_3> .
 }
 
+<http://www.researchspace.org/fieldDefinition/Roles/context> {
+  Platform:fieldDefinitionContainer <http://www.w3.org/ns/ldp#contains> <http://www.researchspace.org/fieldDefinition/Roles> .
+  
+  <http://www.researchspace.org/fieldDefinition/Roles> a <http://www.w3.org/ns/ldp#Resource>,
+      prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
+    prov:generatedAtTime "2021-12-03T11:10:55.038Z"^^xsd:dateTime;
+    prov:wasAttributedTo User:admin;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/person_info>;
+    <http://www.researchspace.org/resource/system/fields/domain> crm:E21_Person;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69312077;
+    <http://www.researchspace.org/resource/system/fields/order> "80005";
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69312076;
+    <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
+    rdfs:label "Roles"@en .
+}
+
+<http://www.researchspace.org/fieldDefinition/Active%20in/context> {
+  Platform:fieldDefinitionContainer <http://www.w3.org/ns/ldp#contains> <http://www.researchspace.org/fieldDefinition/Active%20in> .
+}
+
+<http://www.researchspace.org/fieldDefinition/Name/context> {
+  Platform:fieldDefinitionContainer <http://www.w3.org/ns/ldp#contains> <http://www.researchspace.org/fieldDefinition/Name> .
+  
+  <http://www.researchspace.org/fieldDefinition/Name> a <http://www.w3.org/ns/ldp#Resource>,
+      prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
+    prov:generatedAtTime "2021-12-13T15:10:08.057Z"^^xsd:dateTime;
+    prov:wasAttributedTo User:admin;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/person_info>;
+    <http://www.researchspace.org/resource/system/fields/domain> crm:E21_Person, crm:E39_Actor;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69330868;
+    <http://www.researchspace.org/resource/system/fields/order> "1";
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69330867;
+    <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
+    <http://www.researchspace.org/resource/system/fields/testSubject> <http://www.researchspace.org/fieldDefinition/80000>;
+    rdfs:comment "The name of the referenced actor that is described";
+    rdfs:label "Name"@en .
+}
+
+<http://www.researchspace.org/fieldDefinition/Variant_Attributions/context> {
+  Platform:fieldDefinitionContainer <http://www.w3.org/ns/ldp#contains> <http://www.researchspace.org/fieldDefinition/Variant_Attributions> .
+}
+
+<http://www.researchspace.org/fieldDefinition/Dating_Attributions/context> {
+  Platform:fieldDefinitionContainer <http://www.w3.org/ns/ldp#contains> <http://www.researchspace.org/fieldDefinition/Dating_Attributions> .
+}
+
+<http://www.researchspace.org/fieldDefinition/Call_Numbers/context> {
+  Platform:fieldDefinitionContainer <http://www.w3.org/ns/ldp#contains> <http://www.researchspace.org/fieldDefinition/Call_Numbers> .
+  
+  <http://www.researchspace.org/fieldDefinition/Call_Numbers> a <http://www.w3.org/ns/ldp#Resource>,
+      prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
+    prov:generatedAtTime "2022-01-04T10:26:55.156Z"^^xsd:dateTime;
+    prov:wasAttributedTo User:admin;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/photograph_info>;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69343407;
+    <http://www.researchspace.org/resource/system/fields/order> "5000";
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69343408;
+    <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
+    rdfs:label "Call Numbers"@en .
+}
+
 <https://artresearch.net/fieldDefinition/44/context> {
   Platform:fieldDefinitionContainer <http://www.w3.org/ns/ldp#contains> <https://artresearch.net/fieldDefinition/44> .
 }
@@ -251,20 +306,19 @@
   
   <https://artresearch.net/fieldDefinition/93> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-04-22T14:10:22.758Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-13T15:27:36.674Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/photograph_info>,
-      <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>, <https://artresearch.net/category/frick>,
-      <https://artresearch.net/category/hertziana>, <https://artresearch.net/category/itatti>,
-      <https://artresearch.net/category/khi>, <https://artresearch.net/category/photo>,
-      <https://artresearch.net/category/collection>, <https://artresearch.net/category/institution>,
-      fc:work;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>,
+      <https://artresearch.net/category/frick>, <https://artresearch.net/category/hertziana>,
+      <https://artresearch.net/category/itatti>, <https://artresearch.net/category/khi>,
+      <https://artresearch.net/category/photo>, <https://artresearch.net/category/collection>,
+      <https://artresearch.net/category/institution>, fc:work;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E78_Curated_Holding,
       crm:E40_Group, crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t32315691;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69330902;
     <http://www.researchspace.org/resource/system/fields/order> "650";
     <http://www.researchspace.org/resource/system/fields/range> crm:E53_Place;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t32315690;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69330903;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "The current location of the documented object.";
     rdfs:label "Location"@en .
@@ -275,16 +329,15 @@
   
   <https://artresearch.net/fieldDefinition/68> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-09-20T15:24:07.343Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-13T15:21:11.075Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/photograph_info>,
-      <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>, <https://artresearch.net/category/frick>,
-      <https://artresearch.net/category/photo>, <https://artresearch.net/category/work>,
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>,
+      <https://artresearch.net/category/frick>, <https://artresearch.net/category/work>,
       <https://artresearch.net/category/zeri>, <http://www.researchspace.org/ontologies/platform/FieldCategories/physical_properties>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780670;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69330888;
     <http://www.researchspace.org/resource/system/fields/order> "1300";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780669;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69330887;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     rdfs:comment "This field is used to provide a free text description of the conservation status of the documented object.";
     rdfs:label "Condition Assessment Description"@en .
@@ -295,16 +348,15 @@
   
   <https://artresearch.net/fieldDefinition/67> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-09-20T15:22:39.555Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-13T15:30:53.532Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/photograph_info>,
-      <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>, <https://artresearch.net/category/frick>,
-      <https://artresearch.net/category/photo>, <https://artresearch.net/category/work>,
-      <http://www.researchspace.org/ontologies/platform/FieldCategories/physical_properties>;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>,
+      <https://artresearch.net/category/frick>, <https://artresearch.net/category/photo>,
+      <https://artresearch.net/category/work>, <http://www.researchspace.org/ontologies/platform/FieldCategories/physical_properties>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780662;
-    <http://www.researchspace.org/resource/system/fields/order> "710";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780661;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69330915;
+    <http://www.researchspace.org/resource/system/fields/order> "699";
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69330914;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     rdfs:comment "This field is used to document a description of the colour of a documented object.";
     rdfs:label "Color Information"@en .
@@ -319,20 +371,19 @@
   
   <https://artresearch.net/fieldDefinition/301> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-04-22T14:10:23.229Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-13T15:23:24.950Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/photograph_info>,
-      <https://artresearch.net/category/frick>, <https://artresearch.net/category/hertziana>,
-      <https://artresearch.net/category/itatti>, <https://artresearch.net/category/khi>,
-      <https://artresearch.net/category/marburg>, <https://artresearch.net/category/photo>,
-      <https://artresearch.net/category/zeri>;
+    <http://www.researchspace.org/resource/system/fields/category> <https://artresearch.net/category/frick>,
+      <https://artresearch.net/category/hertziana>, <https://artresearch.net/category/itatti>,
+      <https://artresearch.net/category/khi>, <https://artresearch.net/category/marburg>,
+      <https://artresearch.net/category/zeri>, <http://www.researchspace.org/ontologies/platform/FieldCategories/subjects>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t32315713;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69330897;
     <http://www.researchspace.org/resource/system/fields/order> "3700";
     <http://www.researchspace.org/resource/system/fields/range> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t32315714;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69330896;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
-    rdfs:label "Artwork"@en .
+    rdfs:label "Related Artwork"@en .
 }
 
 <https://artresearch.net/fieldDefinition/550/context> {
@@ -379,18 +430,6 @@
 
 <https://artresearch.net/fieldDefinition/geonames_name/context> {
   Platform:fieldDefinitionContainer <http://www.w3.org/ns/ldp#contains> <https://artresearch.net/fieldDefinition/geonames_name> .
-  
-  <https://artresearch.net/fieldDefinition/geonames_name> a <http://www.w3.org/ns/ldp#Resource>,
-      prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-04-22T14:10:23.787Z"^^xsd:dateTime;
-    prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/other_details>;
-    <http://www.researchspace.org/resource/system/fields/domain> crm:E53_Place;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t32315758;
-    <http://www.researchspace.org/resource/system/fields/order> "32000";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t32315757;
-    <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
-    rdfs:label "Work Location"@en .
 }
 
 <https://artresearch.net/fieldDefinition/120/context> {
@@ -464,14 +503,6 @@
 
 <https://artresearch.net/fieldDefinition/70/context> {
   Platform:fieldDefinitionContainer <http://www.w3.org/ns/ldp#contains> <https://artresearch.net/fieldDefinition/70> .
-  
-  <https://artresearch.net/fieldDefinition/70> prov:generatedAtTime "2021-09-20T15:32:09.217Z"^^xsd:dateTime;
-    prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <https://artresearch.net/category/frick>,
-      <https://artresearch.net/category/work>, <http://www.researchspace.org/ontologies/platform/FieldCategories/other_details>,
-      <http://www.researchspace.org/ontologies/platform/FieldCategories/references>;
-    <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780712 .
 }
 
 <https://artresearch.net/fieldDefinition/212/context> {
@@ -689,13 +720,13 @@
   
   <https://artresearch.net/fieldDefinition/ulan_place_of_death> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-08-24T13:35:04.017Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-03T11:07:57.730Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/external_info>;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/person_info>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E21_Person;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t58703800;
-    <http://www.researchspace.org/resource/system/fields/order> "31300";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t58703801;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69312071;
+    <http://www.researchspace.org/resource/system/fields/order> "80004";
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69312072;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "The place of death of the documented person, retrieved from ULAN.";
     rdfs:label "Place of Death"@en .
@@ -731,18 +762,18 @@
   
   <https://artresearch.net/fieldDefinition/123> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-08-11T06:44:06.800Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-13T15:19:26.457Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <https://artresearch.net/category/frick>,
       <https://artresearch.net/category/hertziana>, <https://artresearch.net/category/itatti>,
       <https://artresearch.net/category/khi>, <https://artresearch.net/category/marburg>,
-      <https://artresearch.net/category/photo>, <https://artresearch.net/category/zeri>,
-      <http://www.researchspace.org/ontologies/platform/FieldCategories/production_info>;
+      <https://artresearch.net/category/zeri>, <http://www.researchspace.org/ontologies/platform/FieldCategories/production_info>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/photographer>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t58490960;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69330883;
     <http://www.researchspace.org/resource/system/fields/order> "220";
     <http://www.researchspace.org/resource/system/fields/range> crm:E39_Actor;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t58490959;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69330884;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "The Person or Institution that carried out the creation of the photograph";
     rdfs:label "Photographer"@en .
@@ -779,13 +810,14 @@
   
   <https://artresearch.net/fieldDefinition/ulan_nationality> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-07-16T13:54:23.814Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-03T11:34:00.343Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/external_info>;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/person_info>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/external_info>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E21_Person, crm:E39_Actor;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t58330364;
-    <http://www.researchspace.org/resource/system/fields/order> "31400";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t58330363;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69312094;
+    <http://www.researchspace.org/resource/system/fields/order> "80009";
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69312093;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "Nationality of the documented person, retrieved from ULAN.";
     rdfs:label "Nationality"@en .
@@ -800,15 +832,15 @@
   
   <https://artresearch.net/fieldDefinition/150> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-09-20T15:14:13.805Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-13T15:28:46.229Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/photograph_info>,
-      <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>, <https://artresearch.net/category/frick>,
-      <https://artresearch.net/category/work>, <http://www.researchspace.org/ontologies/platform/FieldCategories/artwork_monument>;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>,
+      <https://artresearch.net/category/frick>, <https://artresearch.net/category/work>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/artwork_monument>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780619;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69330906;
     <http://www.researchspace.org/resource/system/fields/order> "660";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780620;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69330907;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     rdfs:comment "This field is used to document the credit line that should be used in relation to the documented object.";
     rdfs:label "Museum Credit Line"@en .
@@ -908,22 +940,22 @@
   
   <https://artresearch.net/fieldDefinition/19> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-04-22T14:10:27.516Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-13T15:17:35.467Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <https://artresearch.net/category/frick>,
-      <https://artresearch.net/category/hertziana>, <https://artresearch.net/category/itatti>,
-      <https://artresearch.net/category/khi>, <https://artresearch.net/category/marburg>,
-      <https://artresearch.net/category/photo>, <https://artresearch.net/category/work>,
-      <https://artresearch.net/category/zeri>, <https://artresearch.net/category/collection>,
-      <https://artresearch.net/category/institution>, <https://artresearch.net/category/person>,
-      <https://artresearch.net/category/place>, <http://www.researchspace.org/ontologies/platform/FieldCategories/other_details>,
-      <http://www.researchspace.org/ontologies/platform/FieldCategories/person_info>;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/photograph_info>,
+      <https://artresearch.net/category/frick>, <https://artresearch.net/category/hertziana>,
+      <https://artresearch.net/category/itatti>, <https://artresearch.net/category/khi>,
+      <https://artresearch.net/category/marburg>, <https://artresearch.net/category/photo>,
+      <https://artresearch.net/category/work>, <https://artresearch.net/category/zeri>,
+      <https://artresearch.net/category/collection>, <https://artresearch.net/category/institution>,
+      <https://artresearch.net/category/person>, <https://artresearch.net/category/place>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/other_details>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E78_Curated_Holding,
       crm:E40_Group, crm:E21_Person, crm:E22_Man-Made_Object, crm:E39_Actor, crm:E53_Place;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t32316020;
-    <http://www.researchspace.org/resource/system/fields/order> "110";
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69330881;
+    <http://www.researchspace.org/resource/system/fields/order> "99";
     <http://www.researchspace.org/resource/system/fields/range> crm:E42_Identifier;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t32316019;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69330882;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "This field is used to indicate an identifier attributed to the documented instance of the documented object.";
     rdfs:label "Identifiers"@en .
@@ -982,13 +1014,14 @@
   
   <https://artresearch.net/fieldDefinition/ulan_gender> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-07-16T13:53:30.768Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-03T11:34:54.367Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/external_info>;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/person_info>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/external_info>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E21_Person;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t58330357;
-    <http://www.researchspace.org/resource/system/fields/order> "31500";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t58330358;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69312096;
+    <http://www.researchspace.org/resource/system/fields/order> "80010";
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69312095;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "The gender of the documented person, retrieved from ULAN.";
     rdfs:label "Gender"@en .
@@ -1027,17 +1060,18 @@
   
   <https://artresearch.net/fieldDefinition/66> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-10-06T09:01:09.962Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-13T15:11:41.965Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <https://artresearch.net/category/frick>,
       <https://artresearch.net/category/hertziana>, <https://artresearch.net/category/itatti>,
       <https://artresearch.net/category/khi>, <https://artresearch.net/category/marburg>,
       <https://artresearch.net/category/photo>, <https://artresearch.net/category/work>,
-      <https://artresearch.net/category/zeri>, <http://www.researchspace.org/ontologies/platform/FieldCategories/production_info>;
+      <https://artresearch.net/category/zeri>, <http://www.researchspace.org/ontologies/platform/FieldCategories/production_info>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/physical_properties>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68829379;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69330869;
     <http://www.researchspace.org/resource/system/fields/order> "700";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68829378;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69330870;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     rdfs:comment "This field is used to indicate the dimensions of the object (type,unit,value). ";
     rdfs:label "Dimension"@en .
@@ -1052,16 +1086,16 @@
   
   <https://artresearch.net/fieldDefinition/14> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-09-20T15:31:09.787Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-23T12:38:32.594Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <https://artresearch.net/category/hertziana>,
       <https://artresearch.net/category/khi>, <https://artresearch.net/category/marburg>,
       <https://artresearch.net/category/work>, <http://www.researchspace.org/ontologies/platform/FieldCategories/other_details>,
       <http://www.researchspace.org/ontologies/platform/FieldCategories/other_info>, <http://www.researchspace.org/ontologies/platform/FieldCategories/dating>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780706;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69342162;
     <http://www.researchspace.org/resource/system/fields/order> "920";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780707;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69342163;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     rdfs:comment "This field is used to provide information on the Destruction of the documented object.";
     rdfs:label "Destruction"@en .
@@ -1085,21 +1119,6 @@
 
 <https://artresearch.net/fieldDefinition/ulan_date_of_birth/context> {
   Platform:fieldDefinitionContainer <http://www.w3.org/ns/ldp#contains> <https://artresearch.net/fieldDefinition/ulan_date_of_birth> .
-  
-  <https://artresearch.net/fieldDefinition/ulan_date_of_birth> a <http://www.w3.org/ns/ldp#Resource>,
-      prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-08-17T12:54:26.637Z"^^xsd:dateTime;
-    prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/external_info>;
-    <http://www.researchspace.org/resource/system/fields/domain> crm:E21_Person;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t58521377;
-    <http://www.researchspace.org/resource/system/fields/order> "31000";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t58521378;
-    <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
-    <http://www.researchspace.org/resource/system/fields/treePatterns> """{
-  \"type\": \"simple\"
-}"""^^Platform:syntheticJson;
-    rdfs:label "Date of Birth"@en .
 }
 
 <https://artresearch.net/fieldDefinition/81/context> {
@@ -1138,7 +1157,7 @@
   
   <https://artresearch.net/fieldDefinition/277> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-09-20T15:21:21.032Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-23T10:59:13.346Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <https://artresearch.net/category/frick>,
       <https://artresearch.net/category/hertziana>, <https://artresearch.net/category/itatti>,
@@ -1147,10 +1166,10 @@
       <http://www.researchspace.org/ontologies/platform/FieldCategories/production_info>,
       <http://www.researchspace.org/ontologies/platform/FieldCategories/creator_attribution>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780655;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69342149;
     <http://www.researchspace.org/resource/system/fields/order> "253";
     <http://www.researchspace.org/resource/system/fields/range> crm:E21_Person;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780656;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69342148;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     rdfs:comment "This field contains information on the attribution of the work to diferrent artists";
     rdfs:label "Attributions"@en .
@@ -1173,17 +1192,16 @@
   
   <https://artresearch.net/fieldDefinition/16> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-04-22T14:10:29.717Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-07T11:19:06.972Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <https://artresearch.net/category/frick>,
       <https://artresearch.net/category/hertziana>, <https://artresearch.net/category/khi>,
       <https://artresearch.net/category/marburg>, <https://artresearch.net/category/photo>,
-      <https://artresearch.net/category/work>, <https://artresearch.net/category/zeri>,
-      <http://www.researchspace.org/ontologies/platform/FieldCategories/other_details>;
+      <https://artresearch.net/category/work>, <https://artresearch.net/category/zeri>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t32316180;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69330813;
     <http://www.researchspace.org/resource/system/fields/order> "810";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t32316181;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69330814;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     rdfs:comment "This field is used to indicate the timespan for an ownership period of the documented object. ";
     rdfs:label "Acquisition Timespan"@en .
@@ -1226,13 +1244,13 @@
   
   <http://www.researchspace.org/fieldDefinition/Teacher> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-07-16T13:51:08.843Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-06T08:11:22.251Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/external_info>;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/person_relationships>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E21_Person, crm:E39_Actor;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t58330351;
-    <http://www.researchspace.org/resource/system/fields/order> "31710";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t58330352;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69330776;
+    <http://www.researchspace.org/resource/system/fields/order> "900000";
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69330775;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:label "Teachers"@en .
 }
@@ -1254,13 +1272,14 @@
   
   <http://www.researchspace.org/fieldDefinition/Partner> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-05-10T12:21:27.924Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-03T11:32:51.213Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/external_info>;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/person_info>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/person_relationships>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E21_Person, crm:E39_Actor;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t51011079;
-    <http://www.researchspace.org/resource/system/fields/order> "31750";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t51011078;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69312091;
+    <http://www.researchspace.org/resource/system/fields/order> "900009";
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69312092;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:label "Partner"@en .
 }
@@ -1302,9 +1321,56 @@
   Platform:fieldDefinitionContainer <http://www.w3.org/ns/ldp#contains> <http://www.researchspace.org/fieldDefinition/Spouse> .
 }
 
+<http://www.researchspace.org/fieldDefinition/Last_Known_Location/context> {
+  <http://www.researchspace.org/fieldDefinition/Last_Known_Location> a <http://www.w3.org/ns/ldp#Resource>,
+      prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
+    <http://www.researchspace.org/resource/system/fields/order> "6000";
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68851286;
+    <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
+    rdfs:label "Last Known Location"@en .
+}
+
+<https://artresearch.net/fieldDefinition/ulan_date_of_birth/context> {
+  <https://artresearch.net/fieldDefinition/ulan_date_of_birth> a <http://www.w3.org/ns/ldp#Resource>,
+      prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
+    prov:generatedAtTime "2021-12-14T09:59:56.067Z"^^xsd:dateTime;
+    prov:wasAttributedTo User:admin;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/person_info>;
+    <http://www.researchspace.org/resource/system/fields/domain> crm:E21_Person;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69330949;
+    <http://www.researchspace.org/resource/system/fields/order> "800011";
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69330948;
+    <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
+    <http://www.researchspace.org/resource/system/fields/treePatterns> """{
+  \"type\": \"simple\"
+}"""^^Platform:syntheticJson;
+    rdfs:label "Date of Birth"@en .
+}
+
+<https://artresearch.net/fieldDefinition/geonames_name/context> {
+  <https://artresearch.net/fieldDefinition/geonames_name> a <http://www.w3.org/ns/ldp#Resource>,
+      prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
+    prov:generatedAtTime "2021-04-22T14:10:23.787Z"^^xsd:dateTime;
+    prov:wasAttributedTo User:admin;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/other_details>;
+    <http://www.researchspace.org/resource/system/fields/domain> crm:E53_Place;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t32315758;
+    <http://www.researchspace.org/resource/system/fields/order> "32000";
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t32315757;
+    <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
+    rdfs:label "Work Location"@en .
+}
+
 <https://artresearch.net/fieldDefinition/70/context> {
   <https://artresearch.net/fieldDefinition/70> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
+    prov:generatedAtTime "2021-09-20T15:32:09.217Z"^^xsd:dateTime;
+    prov:wasAttributedTo User:admin;
+    <http://www.researchspace.org/resource/system/fields/category> <https://artresearch.net/category/frick>,
+      <https://artresearch.net/category/work>, <http://www.researchspace.org/ontologies/platform/FieldCategories/other_details>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/references>;
+    <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780712;
     <http://www.researchspace.org/resource/system/fields/order> "1450";
     <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780713;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
@@ -1335,13 +1401,13 @@
 <http://www.researchspace.org/fieldDefinition/Spouse/context> {
   <http://www.researchspace.org/fieldDefinition/Spouse> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-05-10T12:39:12.155Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-02T13:44:50.576Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/external_info>;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/person_relationships>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E21_Person, crm:E39_Actor;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t51011122;
-    <http://www.researchspace.org/resource/system/fields/order> "31810";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t51011121;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69307017;
+    <http://www.researchspace.org/resource/system/fields/order> "900010";
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69307018;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:label "Spouse"@en .
 }
@@ -1418,13 +1484,12 @@
 <http://www.researchspace.org/fieldDefinition/National_Group/context> {
   <http://www.researchspace.org/fieldDefinition/National_Group> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-09-08T07:50:56.908Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-06T09:03:12.208Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/person_info>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E21_Person;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t59672259;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69330795;
     <http://www.researchspace.org/resource/system/fields/order> "3400";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t59672260;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69330796;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     rdfs:label "National Group"@en .
 }
@@ -1464,16 +1529,17 @@
 <https://artresearch.net/fieldDefinition/128/context> {
   <https://artresearch.net/fieldDefinition/128> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-04-22T14:10:28.664Z"^^xsd:dateTime;
+    prov:generatedAtTime "2022-01-04T10:24:02.550Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <https://artresearch.net/category/frick>,
       <https://artresearch.net/category/itatti>, <https://artresearch.net/category/photo>,
       <https://artresearch.net/category/work>, <https://artresearch.net/category/zeri>,
-      <http://www.researchspace.org/ontologies/platform/FieldCategories/other_details>;
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/other_details>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/notes>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t32316106;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69343403;
     <http://www.researchspace.org/resource/system/fields/order> "2400";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t32316107;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69343402;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     rdfs:comment "This field is used to document, in free text form, general notes regarding the documented object.";
     rdfs:label "Descriptive Notes"@en .
@@ -1496,13 +1562,13 @@
 <http://www.researchspace.org/fieldDefinition/School_Of/context> {
   <http://www.researchspace.org/fieldDefinition/School_Of> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-05-10T12:46:21.476Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-02T13:35:16.849Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/external_info>;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/person_relationships>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E21_Person, crm:E39_Actor;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t51011136;
-    <http://www.researchspace.org/resource/system/fields/order> "31830";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t51011137;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69306985;
+    <http://www.researchspace.org/resource/system/fields/order> "900001";
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69306986;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:label "School Of"@en .
 }
@@ -1510,13 +1576,14 @@
 <https://artresearch.net/fieldDefinition/ulan_date_of_death/context> {
   <https://artresearch.net/fieldDefinition/ulan_date_of_death> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-08-17T12:54:20.665Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-14T09:59:53.536Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/external_info>;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/person_info>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/external_info>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E21_Person;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t58521375;
-    <http://www.researchspace.org/resource/system/fields/order> "31100";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t58521376;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69330946;
+    <http://www.researchspace.org/resource/system/fields/order> "800031";
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69330947;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     rdfs:label "Date of Death"@en .
 }
@@ -1539,19 +1606,18 @@
 <https://artresearch.net/fieldDefinition/4/context> {
   <https://artresearch.net/fieldDefinition/4> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-07-16T10:52:53.120Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-13T15:31:44.749Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/photograph_info>,
-      <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>, <https://artresearch.net/category/frick>,
-      <https://artresearch.net/category/hertziana>, <https://artresearch.net/category/itatti>,
-      <https://artresearch.net/category/khi>, <https://artresearch.net/category/marburg>,
-      <https://artresearch.net/category/photo>, <https://artresearch.net/category/work>,
-      <https://artresearch.net/category/zeri>;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>,
+      <https://artresearch.net/category/frick>, <https://artresearch.net/category/hertziana>,
+      <https://artresearch.net/category/itatti>, <https://artresearch.net/category/khi>,
+      <https://artresearch.net/category/marburg>, <https://artresearch.net/category/photo>,
+      <https://artresearch.net/category/work>, <https://artresearch.net/category/zeri>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t58330303;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69330918;
     <http://www.researchspace.org/resource/system/fields/order> "600";
     <http://www.researchspace.org/resource/system/fields/range> crm:E78_Curated_Holding;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t58330302;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69330919;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "This field is used to indicate a collection to which a document object presently belongs.";
     rdfs:label "Collection"@en .
@@ -1615,18 +1681,14 @@
 <https://artresearch.net/fieldDefinition/3/context> {
   <https://artresearch.net/fieldDefinition/3> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-06-10T10:28:09.748Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-14T09:20:22.707Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <https://artresearch.net/category/frick>,
-      <https://artresearch.net/category/hertziana>, <https://artresearch.net/category/itatti>,
-      <https://artresearch.net/category/khi>, <https://artresearch.net/category/marburg>,
-      <https://artresearch.net/category/zeri>, <https://artresearch.net/category/person>,
-      <http://www.researchspace.org/ontologies/platform/FieldCategories/person_info>, <http://www.researchspace.org/ontologies/platform/FieldCategories/place_info>;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/place_info>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E21_Person, crm:E39_Actor;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t53316577;
-    <http://www.researchspace.org/resource/system/fields/order> "100";
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69330923;
+    <http://www.researchspace.org/resource/system/fields/order> "80000";
     <http://www.researchspace.org/resource/system/fields/range> crm:E42_Identifier;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t53316578;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69330922;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     rdfs:comment "The name of the referenced actor that is described";
     rdfs:label "Name"@en .
@@ -1635,13 +1697,13 @@
 <http://www.researchspace.org/fieldDefinition/Student/context> {
   <http://www.researchspace.org/fieldDefinition/Student> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-05-10T12:19:05.301Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-02T13:40:26.552Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/external_info>;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/person_relationships>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E21_Person, crm:E39_Actor;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t51011071;
-    <http://www.researchspace.org/resource/system/fields/order> "31720";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t51011072;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69307000;
+    <http://www.researchspace.org/resource/system/fields/order> "900004";
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69307001;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:label "Students"@en .
 }
@@ -1649,7 +1711,7 @@
 <https://artresearch.net/fieldDefinition/1/context> {
   <https://artresearch.net/fieldDefinition/1> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-09-20T15:19:48.232Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-14T11:40:09.393Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>,
       <https://artresearch.net/category/frick>, <https://artresearch.net/category/hertziana>,
@@ -1657,10 +1719,10 @@
       <https://artresearch.net/category/marburg>, <https://artresearch.net/category/work>,
       <https://artresearch.net/category/zeri>, <http://www.researchspace.org/ontologies/platform/FieldCategories/creator_attribution>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780644;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69330952;
     <http://www.researchspace.org/resource/system/fields/order> "200";
     <http://www.researchspace.org/resource/system/fields/range> crm:E21_Person;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780643;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69330953;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "This field is used to indicate the artist or creator of the documented object.";
     rdfs:label "Creator"@en .
@@ -1669,28 +1731,28 @@
 <http://www.researchspace.org/fieldDefinition/Parents/context> {
   <http://www.researchspace.org/fieldDefinition/Parents> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-05-10T12:37:06.505Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-02T13:42:47.541Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/external_info>;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/person_relationships>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E21_Person, crm:E39_Actor;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t51011116;
-    <http://www.researchspace.org/resource/system/fields/order> "31800";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t51011117;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69307008;
+    <http://www.researchspace.org/resource/system/fields/order> "900007";
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69307009;
     rdfs:label "Parents"@en .
 }
 
 <https://artresearch.net/fieldDefinition/40/context> {
   <https://artresearch.net/fieldDefinition/40> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-09-20T15:23:21.410Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-13T15:29:03.764Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/photograph_info>,
-      <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>, <https://artresearch.net/category/itatti>,
-      <https://artresearch.net/category/work>, <http://www.researchspace.org/ontologies/platform/FieldCategories/physical_properties>;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>,
+      <https://artresearch.net/category/itatti>, <https://artresearch.net/category/work>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/physical_properties>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780666;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69330910;
     <http://www.researchspace.org/resource/system/fields/order> "760";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780665;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69330911;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     rdfs:comment "This field is used to allow a free text description of the material of which the documented object is composed.";
     rdfs:label "Material Description"@en .
@@ -1699,18 +1761,18 @@
 <https://artresearch.net/fieldDefinition/42/context> {
   <https://artresearch.net/fieldDefinition/42> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-09-20T15:24:16.632Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-13T15:12:40.003Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/photograph_info>,
-      <https://artresearch.net/category/frick>, <https://artresearch.net/category/itatti>,
-      <https://artresearch.net/category/photo>, <https://artresearch.net/category/work>,
-      <https://artresearch.net/category/zeri>, <http://www.researchspace.org/ontologies/platform/FieldCategories/production_info>,
+    <http://www.researchspace.org/resource/system/fields/category> <https://artresearch.net/category/frick>,
+      <https://artresearch.net/category/itatti>, <https://artresearch.net/category/photo>,
+      <https://artresearch.net/category/work>, <https://artresearch.net/category/zeri>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/production_info>,
       <http://www.researchspace.org/ontologies/platform/FieldCategories/physical_properties>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780671;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69330873;
     <http://www.researchspace.org/resource/system/fields/order> "750";
     <http://www.researchspace.org/resource/system/fields/range> crm:E29_Design_or_Procedure;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780672;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69330874;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "This field is used to indicate the specific material / technique used in the production of the documented object. ";
     rdfs:label "Technique"@en .
@@ -1751,19 +1813,19 @@
 <https://artresearch.net/fieldDefinition/44/context> {
   <https://artresearch.net/fieldDefinition/44> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-09-20T15:23:06.179Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-13T15:28:54.611Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/photograph_info>,
-      <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>, <https://artresearch.net/category/frick>,
-      <https://artresearch.net/category/hertziana>, <https://artresearch.net/category/itatti>,
-      <https://artresearch.net/category/khi>, <https://artresearch.net/category/marburg>,
-      <https://artresearch.net/category/photo>, <https://artresearch.net/category/work>,
-      <https://artresearch.net/category/zeri>, <http://www.researchspace.org/ontologies/platform/FieldCategories/physical_properties>;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>,
+      <https://artresearch.net/category/frick>, <https://artresearch.net/category/hertziana>,
+      <https://artresearch.net/category/itatti>, <https://artresearch.net/category/khi>,
+      <https://artresearch.net/category/marburg>, <https://artresearch.net/category/photo>,
+      <https://artresearch.net/category/work>, <https://artresearch.net/category/zeri>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/physical_properties>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780663;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69330908;
     <http://www.researchspace.org/resource/system/fields/order> "755";
     <http://www.researchspace.org/resource/system/fields/range> crm:E57_Material;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780664;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69330909;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "This fields is used to indicate the material that the object consists of";
     rdfs:label "Material"@en .
@@ -1803,34 +1865,47 @@
 <https://artresearch.net/fieldDefinition/46/context> {
   <https://artresearch.net/fieldDefinition/46> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-09-20T15:29:00.337Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-13T15:22:49.950Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/photograph_info>,
-      <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>, <https://artresearch.net/category/frick>,
-      <https://artresearch.net/category/hertziana>, <https://artresearch.net/category/itatti>,
-      <https://artresearch.net/category/khi>, <https://artresearch.net/category/marburg>,
-      <https://artresearch.net/category/photo>, <https://artresearch.net/category/work>,
-      <http://www.researchspace.org/ontologies/platform/FieldCategories/subjects>;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>,
+      <https://artresearch.net/category/frick>, <https://artresearch.net/category/hertziana>,
+      <https://artresearch.net/category/itatti>, <https://artresearch.net/category/khi>,
+      <https://artresearch.net/category/marburg>, <https://artresearch.net/category/photo>,
+      <https://artresearch.net/category/work>, <http://www.researchspace.org/ontologies/platform/FieldCategories/subjects>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780692;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69330893;
     <http://www.researchspace.org/resource/system/fields/order> "560";
     <http://www.researchspace.org/resource/system/fields/range> crm:E55_Type;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780693;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69330894;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "This field is used to indicate the subject of representation of the documented artwork. ";
     rdfs:label "Subject"@en .
 }
 
+<http://www.researchspace.org/fieldDefinition/Dating_Attributions/context> {
+  <http://www.researchspace.org/fieldDefinition/Dating_Attributions> a <http://www.w3.org/ns/ldp#Resource>,
+      prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
+    prov:generatedAtTime "2021-12-23T13:28:08.882Z"^^xsd:dateTime;
+    prov:wasAttributedTo User:admin;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/dating>;
+    <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69342175;
+    <http://www.researchspace.org/resource/system/fields/order> "2701";
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69342174;
+    <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
+    rdfs:label "Dating"@en .
+}
+
 <http://www.researchspace.org/fieldDefinition/Children/context> {
   <http://www.researchspace.org/fieldDefinition/Children> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-07-16T14:17:08.303Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-02T13:45:18.398Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/external_info>;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/person_relationships>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E21_Person, crm:E39_Actor;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t58330376;
-    <http://www.researchspace.org/resource/system/fields/order> "31740";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t58330375;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69307021;
+    <http://www.researchspace.org/resource/system/fields/order> "900011";
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69307020;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "Children of the documented person, retrieved from ULAN.";
     rdfs:label "Children"@en .
@@ -1839,15 +1914,30 @@
 <http://www.researchspace.org/fieldDefinition/Siblings/context> {
   <http://www.researchspace.org/fieldDefinition/Siblings> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-05-10T12:32:53.618Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-02T13:43:35.786Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/external_info>;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/person_relationships>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E21_Person, crm:E39_Actor;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t51011112;
-    <http://www.researchspace.org/resource/system/fields/order> "31790";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t51011111;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69307012;
+    <http://www.researchspace.org/resource/system/fields/order> "900008";
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69307011;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:label "Siblings"@en .
+}
+
+<http://www.researchspace.org/fieldDefinition/Variant_Attributions/context> {
+  <http://www.researchspace.org/fieldDefinition/Variant_Attributions> a <http://www.w3.org/ns/ldp#Resource>,
+      prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
+    prov:generatedAtTime "2021-12-23T13:29:28.771Z"^^xsd:dateTime;
+    prov:wasAttributedTo User:admin;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/creator_attribution>;
+    <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69342176;
+    <http://www.researchspace.org/resource/system/fields/order> "2530";
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69342177;
+    <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
+    rdfs:comment "This field contains information on the variant attributions of the work to diferrent artists";
+    rdfs:label "Variant Attributions"@en .
 }
 
 <https://artresearch.net/fieldDefinition/8/context> {
@@ -1928,17 +2018,16 @@
 <https://artresearch.net/fieldDefinition/56/context> {
   <https://artresearch.net/fieldDefinition/56> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-04-22T14:10:29.634Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-07T11:19:10.483Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <https://artresearch.net/category/frick>,
       <https://artresearch.net/category/khi>, <https://artresearch.net/category/photo>,
-      <https://artresearch.net/category/work>, <https://artresearch.net/category/zeri>,
-      <http://www.researchspace.org/ontologies/platform/FieldCategories/other_details>;
+      <https://artresearch.net/category/work>, <https://artresearch.net/category/zeri>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t32316175;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69330815;
     <http://www.researchspace.org/resource/system/fields/order> "820";
     <http://www.researchspace.org/resource/system/fields/range> crm:E55_Type;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t32316174;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69330816;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "This field is used to indicate the kind of transaction by which a period of ownership was established over the documented object.";
     rdfs:label "Acquisition Type"@en .
@@ -1947,13 +2036,13 @@
 <http://www.researchspace.org/fieldDefinition/Collaborator/context> {
   <http://www.researchspace.org/fieldDefinition/Collaborator> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-07-16T14:15:45.570Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-06T08:12:47.895Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/external_info>;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/person_relationships>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E21_Person, crm:E39_Actor;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t58330373;
-    <http://www.researchspace.org/resource/system/fields/order> "31730";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t58330372;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69330783;
+    <http://www.researchspace.org/resource/system/fields/order> "900003";
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69330784;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "Collaborators of the documented person, retrieved from ULAN.";
     rdfs:label "Collaborators"@en .
@@ -1962,13 +2051,13 @@
 <https://artresearch.net/fieldDefinition/ulan_place_of_birth/context> {
   <https://artresearch.net/fieldDefinition/ulan_place_of_birth> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-08-24T13:34:57.546Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-03T11:03:04.939Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/external_info>;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/person_info>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E21_Person;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t58703089;
-    <http://www.researchspace.org/resource/system/fields/order> "31200";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t58703090;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69312064;
+    <http://www.researchspace.org/resource/system/fields/order> "80002";
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69312065;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:label "Place of Birth"@en .
 }
@@ -2011,20 +2100,33 @@
 <https://artresearch.net/fieldDefinition/203/context> {
   <https://artresearch.net/fieldDefinition/203> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-09-20T15:24:00.506Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-13T15:29:21.693Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/photograph_info>,
-      <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>, <https://artresearch.net/category/frick>,
-      <https://artresearch.net/category/photo>, <https://artresearch.net/category/work>,
-      <https://artresearch.net/category/zeri>, <http://www.researchspace.org/ontologies/platform/FieldCategories/physical_properties>;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>,
+      <https://artresearch.net/category/frick>, <https://artresearch.net/category/photo>,
+      <https://artresearch.net/category/work>, <https://artresearch.net/category/zeri>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/physical_properties>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780667;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69330913;
     <http://www.researchspace.org/resource/system/fields/order> "1200";
     <http://www.researchspace.org/resource/system/fields/range> crm:E3_Condition_State;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780668;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69330912;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "This field is used to indicate the assessed state of preservation - using a specified typology of states - of the documented object.";
     rdfs:label "State of Preservation"@en .
+}
+
+<http://www.researchspace.org/fieldDefinition/Active%20in/context> {
+  <http://www.researchspace.org/fieldDefinition/Active%20in> a <http://www.w3.org/ns/ldp#Resource>,
+      prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
+    prov:generatedAtTime "2021-12-06T08:58:06.004Z"^^xsd:dateTime;
+    prov:wasAttributedTo User:admin;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/person_info>;
+    <http://www.researchspace.org/resource/system/fields/domain> crm:E21_Person;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69330787;
+    <http://www.researchspace.org/resource/system/fields/order> "80007";
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69330788;
+    rdfs:label "Active in"@en .
 }
 
 <https://artresearch.net/fieldDefinition/285/context> {
@@ -2049,7 +2151,7 @@
 <https://artresearch.net/fieldDefinition/284/context> {
   <https://artresearch.net/fieldDefinition/284> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-04-22T14:10:29.553Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-03T11:13:47.440Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <https://artresearch.net/category/frick>,
       <https://artresearch.net/category/hertziana>, <https://artresearch.net/category/itatti>,
@@ -2057,9 +2159,9 @@
       <https://artresearch.net/category/zeri>, <https://artresearch.net/category/person>,
       <http://www.researchspace.org/ontologies/platform/FieldCategories/person_info>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E21_Person;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t32316169;
-    <http://www.researchspace.org/resource/system/fields/order> "3200";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t32316168;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69312079;
+    <http://www.researchspace.org/resource/system/fields/order> "80006";
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69312078;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     rdfs:label "Active"@en .
 }
@@ -2067,7 +2169,7 @@
 <https://artresearch.net/fieldDefinition/286/context> {
   <https://artresearch.net/fieldDefinition/286> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-09-08T07:50:32.425Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-03T11:31:09.310Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <https://artresearch.net/category/frick>,
       <https://artresearch.net/category/hertziana>, <https://artresearch.net/category/itatti>,
@@ -2075,10 +2177,10 @@
       <https://artresearch.net/category/zeri>, <https://artresearch.net/category/collection>,
       <https://artresearch.net/category/person>, <http://www.researchspace.org/ontologies/platform/FieldCategories/person_info>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E21_Person, crm:E39_Actor;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t59672257;
-    <http://www.researchspace.org/resource/system/fields/order> "3400";
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69312088;
+    <http://www.researchspace.org/resource/system/fields/order> "80008";
     <http://www.researchspace.org/resource/system/fields/range> crm:E39_Actor;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t59672258;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69312087;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "The affiliation of the documented person";
     rdfs:label "Institution"@en .
@@ -2087,18 +2189,17 @@
 <https://artresearch.net/fieldDefinition/281/context> {
   <https://artresearch.net/fieldDefinition/281> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-07-16T13:41:16.714Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-13T15:31:24.646Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/photograph_info>,
-      <https://artresearch.net/category/frick>, <https://artresearch.net/category/hertziana>,
-      <https://artresearch.net/category/itatti>, <https://artresearch.net/category/khi>,
-      <https://artresearch.net/category/marburg>, <https://artresearch.net/category/photo>,
-      <https://artresearch.net/category/zeri>;
+    <http://www.researchspace.org/resource/system/fields/category> <https://artresearch.net/category/frick>,
+      <https://artresearch.net/category/hertziana>, <https://artresearch.net/category/itatti>,
+      <https://artresearch.net/category/khi>, <https://artresearch.net/category/marburg>,
+      <https://artresearch.net/category/photo>, <https://artresearch.net/category/zeri>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t58330346;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69330917;
     <http://www.researchspace.org/resource/system/fields/order> "4100";
     <http://www.researchspace.org/resource/system/fields/range> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t58330345;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69330916;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "The Photo card that incorporated the Photograph";
     rdfs:label "Photo Card"@en .
@@ -2107,18 +2208,19 @@
 <https://artresearch.net/fieldDefinition/280/context> {
   <https://artresearch.net/fieldDefinition/280> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-11-09T13:36:26.633Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-13T15:21:48.664Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <https://artresearch.net/category/frick>,
       <https://artresearch.net/category/hertziana>, <https://artresearch.net/category/itatti>,
       <https://artresearch.net/category/khi>, <https://artresearch.net/category/marburg>,
-      <https://artresearch.net/category/photo>, <https://artresearch.net/category/work>,
-      <https://artresearch.net/category/zeri>, <http://www.researchspace.org/ontologies/platform/FieldCategories/production_info>;
+      <https://artresearch.net/category/work>, <https://artresearch.net/category/zeri>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/production_info>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/physical_properties>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69007842;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69330889;
     <http://www.researchspace.org/resource/system/fields/order> "4000";
     <http://www.researchspace.org/resource/system/fields/range> crm:E55_Type;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69007843;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69330890;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "Equipment used for the production of the documented object";
     rdfs:label "Equipment"@en .
@@ -2127,13 +2229,14 @@
 <http://www.researchspace.org/fieldDefinition/Acquisition/context> {
   <http://www.researchspace.org/fieldDefinition/Acquisition> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-05-10T09:55:57.664Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-13T15:22:33.013Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/other_details>;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/other_details>,
+      <http://www.researchspace.org/ontologies/platform/FieldCategories/provenance>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t49667690;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69330892;
     <http://www.researchspace.org/resource/system/fields/order> "830";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t49667691;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69330891;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     rdfs:label "Acquisition"@en .
 }
@@ -2141,17 +2244,16 @@
 <https://artresearch.net/fieldDefinition/283/context> {
   <https://artresearch.net/fieldDefinition/283> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-05-12T11:59:23.510Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-14T09:57:36.461Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <https://artresearch.net/category/frick>,
       <https://artresearch.net/category/hertziana>, <https://artresearch.net/category/itatti>,
       <https://artresearch.net/category/khi>, <https://artresearch.net/category/marburg>,
-      <https://artresearch.net/category/zeri>, <https://artresearch.net/category/person>,
-      <http://www.researchspace.org/ontologies/platform/FieldCategories/person_info>;
+      <https://artresearch.net/category/zeri>, <https://artresearch.net/category/person>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E21_Person;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t51011202;
-    <http://www.researchspace.org/resource/system/fields/order> "3100";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t51011201;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69330943;
+    <http://www.researchspace.org/resource/system/fields/order> "80003";
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69330942;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     rdfs:comment "This field is used to indicate the date for the death of the documented person.";
     rdfs:label "Date of Death"@en .
@@ -2160,18 +2262,17 @@
 <https://artresearch.net/fieldDefinition/282/context> {
   <https://artresearch.net/fieldDefinition/282> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-04-22T14:10:23.702Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-13T15:28:20.481Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/photograph_info>,
-      <https://artresearch.net/category/frick>, <https://artresearch.net/category/hertziana>,
-      <https://artresearch.net/category/itatti>, <https://artresearch.net/category/khi>,
-      <https://artresearch.net/category/marburg>, <https://artresearch.net/category/photo>,
-      <https://artresearch.net/category/zeri>;
+    <http://www.researchspace.org/resource/system/fields/category> <https://artresearch.net/category/frick>,
+      <https://artresearch.net/category/hertziana>, <https://artresearch.net/category/itatti>,
+      <https://artresearch.net/category/khi>, <https://artresearch.net/category/marburg>,
+      <https://artresearch.net/category/photo>, <https://artresearch.net/category/zeri>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t32315752;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69330904;
     <http://www.researchspace.org/resource/system/fields/order> "4200";
     <http://www.researchspace.org/resource/system/fields/range> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t32315751;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69330905;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "The negative that was used to produce the Photo";
     rdfs:label "Negative"@en .
@@ -2180,13 +2281,13 @@
 <http://www.researchspace.org/fieldDefinition/Influenced/context> {
   <http://www.researchspace.org/fieldDefinition/Influenced> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-07-16T14:03:36.730Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-02T13:40:56.891Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/external_info>;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/person_relationships>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E21_Person, crm:E39_Actor;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t58330367;
-    <http://www.researchspace.org/resource/system/fields/order> "31830";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t58330366;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69307003;
+    <http://www.researchspace.org/resource/system/fields/order> "900005";
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69307004;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "The documented person is influenced by a person, retrieved from ULAN.";
     rdfs:label "Influenced"@en .
@@ -2242,16 +2343,30 @@
 }
 
 <http://www.researchspace.org/fieldDefinition/Last_Known_Location_3/context> {
-  <http://www.researchspace.org/fieldDefinition/Last_Known_Location_3> a <http://www.w3.org/ns/ldp#Resource>,
-      prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-10-13T11:38:04.699Z"^^xsd:dateTime;
+  <http://www.researchspace.org/fieldDefinition/Last_Known_Location_3> prov:generatedAtTime
+      "2021-10-13T11:38:04.699Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/artwork_monument>;
     <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68851293;
     <http://www.researchspace.org/resource/system/fields/order> "6000";
+    a <http://www.w3.org/ns/ldp#Resource>, prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
     <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68851294;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     rdfs:label "Last Known Location"@en .
+  
+  _:t68851293 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:t68851294 a sp:Query;
+    sp:text """SELECT DISTINCT ?value ?provider ?providerLabel WHERE {
+  ?subject a cfc:work.
+  ?subject <https://artresearch.net/resource/fr/Work_kept_by_Institution>|crm:P50_has_current_keeper ?repo.
+  ?repo rdfs:label ?value.
+  FILTER NOT EXISTS {?subject crm:P74_has_current_or_former_residence|crm:P55_has_current_location ?place.}
+  FILTER NOT EXISTS {?repo crm:P74_has_current_or_former_residence ?place.}
+  BIND(<https://artresearch.net/resource/pharos/source/Pharos> AS ?provider)
+  BIND(\"Pharos\" AS ?providerLabel)
+}""" .
 }
 
 <http://www.researchspace.org/fieldDefinition/Production_Date_Photo/context> {
@@ -2268,6 +2383,20 @@
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     <http://www.researchspace.org/resource/system/fields/minOccurs> "1";
     rdfs:label "Production Date"@en .
+  
+  _:t68780698 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:t68780699 a sp:Query;
+    sp:text """SELECT DISTINCT ?value ?provider ?providerLabel WHERE 
+{   
+	graph ?graph {
+    	?subject <https://artresearch.net/resource/fr/Photo_from_Date> ?value.
+  	}
+	?graph <https://artresearch.net/custom/has_provider> ?provider.
+	?provider rdfs:label ?providerLabel.
+    FILTER(datatype(?value)=xsd:date)
+}""" .
 }
 
 <http://www.researchspace.org/fieldDefinition/Last_Known_Location_1/context> {
@@ -2281,23 +2410,55 @@
     <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68851287;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     rdfs:label "Last Known Location"@en .
+  
+  _:t68851288 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:t68851287 a sp:Query;
+    sp:text """SELECT DISTINCT (concat(?repo_label,\", \",(GROUP_CONCAT(DISTINCT ?place_l;SEPARATOR=\",\")))as ?value)  ?provider ?providerLabel WHERE {
+  ?subject a cfc:work.
+  ?subject <https://artresearch.net/resource/fr/Work_kept_by_Institution>|crm:P50_has_current_keeper ?repo.
+  ?repo rdfs:label ?repo_label.
+  ?subject crm:P74_has_current_or_former_residence|crm:P55_has_current_location ?place.
+  ?place rdfs:label ?place_l.
+  BIND(<https://artresearch.net/resource/pharos/source/Pharos> AS ?provider)
+  BIND(\"Pharos\" AS ?providerLabel)
+  FILTER NOT EXISTS { ?repo crm:P74_has_current_or_former_residence ?x}
+}group by ?repo_label ?provider ?providerLabel""" .
 }
 
 <https://artresearch.net/fieldDefinition/212/context> {
   <https://artresearch.net/fieldDefinition/212> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-07-16T11:39:50.196Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-13T15:24:10.341Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <https://artresearch.net/category/photo>,
-      <https://artresearch.net/category/zeri>;
+      <https://artresearch.net/category/zeri>, <http://www.researchspace.org/ontologies/platform/FieldCategories/dating>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t58330329;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69330899;
     <http://www.researchspace.org/resource/system/fields/order> "960";
     <http://www.researchspace.org/resource/system/fields/range> crm:E53_Place;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t58330328;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69330898;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "The place of the shot of the photograph.";
     rdfs:label "Shot Place"@en .
+  
+  _:t69330899 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:t69330898 a sp:Query;
+    sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
+{ 
+	graph ?graph 
+  	{
+  		$subject crm:P128_carries ?visual_item.
+  		?visual_item crm:P128i_is_carried_by ?negative.
+  		?negative crm:P108i_was_produced_by ?production.
+  		?production crm:P7_took_place_at ?value.
+  	}
+	?graph <https://artresearch.net/custom/has_provider> ?provider .
+	?provider rdfs:label ?providerLabel.
+}""" .
 }
 
 <https://artresearch.net/fieldDefinition/211/context> {
@@ -2314,23 +2475,42 @@
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     rdfs:comment "Information on the Publication of the Photograph.";
     rdfs:label "Publication"@en .
+  
+  _:t32315848 a sp:Query;
+    sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE
+{ 
+	graph ?graph 
+  	{
+		$subject crm:P108i_was_produced_by ?production.
+  		?production a <https://artresearch.net/custom/Publication>.
+  		?production crm:P7_took_place_at ?value .
+  	}
+	?graph <https://artresearch.net/custom/has_provider> ?provider .
+	?provider rdfs:label ?providerLabel.
+}""" .
+  
+  _:t32315849 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <https://artresearch.net/fieldDefinition/213/context> {
   <https://artresearch.net/fieldDefinition/213> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-04-22T14:10:24.539Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-13T15:24:22.044Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <https://artresearch.net/category/photo>,
-      <https://artresearch.net/category/zeri>;
+      <https://artresearch.net/category/zeri>, <http://www.researchspace.org/ontologies/platform/FieldCategories/dating>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t32315805;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69330900;
     <http://www.researchspace.org/resource/system/fields/order> "2700";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t32315806;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69330901;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     rdfs:label "Shot Date"@en .
   
-  _:t32315806 a sp:Query;
+  _:t69330900 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:t69330901 a sp:Query;
     sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
 { 
 	graph ?graph {
@@ -2343,9 +2523,6 @@
 	?graph <https://artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.
 }""" .
-  
-  _:t32315805 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <http://www.researchspace.org/fieldDefinition/Population/context> {
@@ -2376,20 +2553,17 @@
 <http://www.researchspace.org/fieldDefinition/Influence/context> {
   <http://www.researchspace.org/fieldDefinition/Influence> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-09-20T15:20:22.435Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-02T13:36:20.891Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/external_info>;
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/person_relationships>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E21_Person, crm:E39_Actor;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780648;
-    <http://www.researchspace.org/resource/system/fields/order> "31780";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780647;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69306992;
+    <http://www.researchspace.org/resource/system/fields/order> "900002";
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69306991;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:label "Influenced by"@en .
   
-  _:t68780648 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  _:t68780647 a sp:Query;
+  _:t69306991 a sp:Query;
     sp:text """SELECT distinct ?value ?provider ?providerLabel WHERE {
   graph ?graph {
     $subject <https://artresearch.net/resource/fr/Person_influenced_by_Person> ?value.
@@ -2397,32 +2571,31 @@
   ?graph <https://artresearch.net/custom/has_provider> ?provider .
   ?provider rdfs:label ?providerLabel.
 }""" .
+  
+  _:t69306992 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <https://artresearch.net/fieldDefinition/Repository/context> {
   <https://artresearch.net/fieldDefinition/Repository> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-10-12T13:26:56.194Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-13T15:16:21.372Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
-    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/photograph_info>,
-      <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>, <https://artresearch.net/category/frick>,
-      <https://artresearch.net/category/hertziana>, <https://artresearch.net/category/itatti>,
-      <https://artresearch.net/category/khi>, <https://artresearch.net/category/marburg>,
-      <https://artresearch.net/category/photo>, <https://artresearch.net/category/work>,
+    <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>,
+      <https://artresearch.net/category/frick>, <https://artresearch.net/category/hertziana>,
+      <https://artresearch.net/category/itatti>, <https://artresearch.net/category/khi>,
+      <https://artresearch.net/category/marburg>, <https://artresearch.net/category/work>,
       <https://artresearch.net/category/zeri>, <http://www.researchspace.org/ontologies/platform/FieldCategories/artwork_monument>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68849814;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69330878;
     <http://www.researchspace.org/resource/system/fields/order> "610";
     <http://www.researchspace.org/resource/system/fields/range> crm:E39_Actor;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68849813;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69330877;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "This field is used to indicate a present custodian of the documented object.";
     rdfs:label "Repository"@en .
   
-  _:t68849814 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  _:t68849813 a sp:Query;
+  _:t69330877 a sp:Query;
     sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
 {
 	{
@@ -2440,6 +2613,9 @@
       ?provider rdfs:label ?providerLabel.
   	}
 }""" .
+  
+  _:t69330878 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <https://artresearch.net/fieldDefinition/33/context> {
@@ -2624,25 +2800,21 @@
 <https://dev.artresearch.net/container/fieldDefinitionContainer/Birth_Date/context> {
   <https://dev.artresearch.net/container/fieldDefinitionContainer/Birth_Date> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-05-12T12:32:55.459Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-14T09:57:39.300Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <https://artresearch.net/category/frick>,
       <https://artresearch.net/category/hertziana>, <https://artresearch.net/category/itatti>,
       <https://artresearch.net/category/khi>, <https://artresearch.net/category/marburg>,
-      <https://artresearch.net/category/zeri>, <https://artresearch.net/category/person>,
-      <http://www.researchspace.org/ontologies/platform/FieldCategories/person_info>;
+      <https://artresearch.net/category/zeri>, <https://artresearch.net/category/person>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E21_Person;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t51011214;
-    <http://www.researchspace.org/resource/system/fields/order> "3050";
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t51011213;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69330945;
+    <http://www.researchspace.org/resource/system/fields/order> "80001";
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69330944;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:string;
     rdfs:comment "This field is used to indicate the date for the birth of the documented person.";
     rdfs:label "Date of Birth" .
   
-  _:t51011214 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  _:t51011213 a sp:Query;
+  _:t69330944 a sp:Query;
     sp:text """SELECT ?value ?provider ?providerLabel WHERE 
 { 
 	graph ?graph 
@@ -2654,26 +2826,31 @@
 	?graph <https://artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.
   }""" .
+  
+  _:t69330945 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <https://artresearch.net/fieldDefinition/204/context> {
   <https://artresearch.net/fieldDefinition/204> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-09-20T15:21:04.485Z"^^xsd:dateTime;
+    prov:generatedAtTime "2021-12-23T10:55:20.958Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <https://artresearch.net/category/work>,
-      <https://artresearch.net/category/zeri>, <http://www.researchspace.org/ontologies/platform/FieldCategories/production_info>,
-      <http://www.researchspace.org/ontologies/platform/FieldCategories/creator_attribution>;
+      <https://artresearch.net/category/zeri>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E22_Man-Made_Object;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780653;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69342144;
     <http://www.researchspace.org/resource/system/fields/order> "251";
     <http://www.researchspace.org/resource/system/fields/range> crm:E55_Type;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780654;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69342145;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "This is a note field describing a reason for the attribution of an artist / group as creator of some work.";
     rdfs:label "Attribution Reason"@en .
   
-  _:t68780654 a sp:Query;
+  _:t69342144 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:t69342145 a sp:Query;
     sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE { 
 	graph ?graph {
     	$subject <http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by> ?production .
@@ -2684,9 +2861,6 @@
     ?provider rdfs:label ?providerLabel.
 }
 """ .
-  
-  _:t68780653 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <https://artresearch.net/fieldDefinition/146/context> {
@@ -2727,10 +2901,10 @@
 }
 
 <https://artresearch.net/fieldDefinition/ulan_place_of_death/context> {
-  _:t58703800 a sp:Query;
+  _:t69312071 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:t58703801 a sp:Query;
+  _:t69312072 a sp:Query;
     sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE {
   graph ?graph{
     $subject <https://artresearch.net/resource/fr/Person_has_Place_of_Death> ?value.
@@ -2793,10 +2967,10 @@ SELECT DISTINCT ?value ?label  WHERE {
 }
 
 <https://artresearch.net/fieldDefinition/301/context> {
-  _:t32315713 a sp:Query;
+  _:t69330897 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:t32315714 a sp:Query;
+  _:t69330896 a sp:Query;
     sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
 { 
   	graph ?graph
@@ -2809,10 +2983,7 @@ SELECT DISTINCT ?value ?label  WHERE {
 }
 
 <http://www.researchspace.org/fieldDefinition/Photo_echnique/context> {
-  _:t68780674 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  _:t68780673 a sp:Query;
+  _:t69330872 a sp:Query;
     sp:text """SELECT DISTINCT ?value ?label ?provider ?providerLabel WHERE 
 { 
     graph ?graph 
@@ -2825,6 +2996,9 @@ SELECT DISTINCT ?value ?label  WHERE {
   	BIND(IF( CONTAINS(STR(?value),\"aat\"), \"AAT\", ?provLabel) AS ?providerLabel)
     BIND(IF( CONTAINS(STR(?value),\"aat\"), IRI(\"https://artresearch.net/resource/getty/source/Getty\"), ?prov) AS ?provider)
 }""" .
+  
+  _:t69330871 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <https://artresearch.net/fieldDefinition/140/context> {
@@ -2878,16 +3052,17 @@ SELECT DISTINCT ?value ?label  WHERE {
 }
 
 <http://www.researchspace.org/fieldDefinition/Teacher/context> {
-  _:t58330352 a sp:Query;
-    sp:text """SELECT distinct ?value ?provider ?providerLabel WHERE {
+  _:t69330775 a sp:Query;
+    sp:text """SELECT distinct ?value ?providerLabel ?provider WHERE {
   graph ?graph {
-    $subject <https://artresearch.net/resource/fr/Person_student_of_Person> ?value.
+      $subject <https://artresearch.net/resource/fr/Person_student_of_Person>|<https://artresearch.net/resource/fr/Person_apprentice_of_Person> ?value.
   }
   ?graph <https://artresearch.net/custom/has_provider> ?provider .
   ?provider rdfs:label ?providerLabel.
+
 }""" .
   
-  _:t58330351 a sp:Query;
+  _:t69330776 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
@@ -2942,7 +3117,7 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://artresearch.net/fieldDefinition/ulan_gender/context> {
-  _:t58330358 a sp:Query;
+  _:t69312095 a sp:Query;
     sp:text """SELECT ?value ?provider ?providerLabel WHERE {
   graph ?graph{
     $subject <https://artresearch.net/resource/fr/Person_has_Gender>  ?value.
@@ -2951,28 +3126,25 @@ SELECT ?value ?provider ?providerLabel WHERE {
   ?provider rdfs:label ?providerLabel.
 }""" .
   
-  _:t58330357 a sp:Query;
+  _:t69312096 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <https://artresearch.net/fieldDefinition/277/context> {
-  _:t68780656 a sp:Query;
-    sp:text """SELECT ?value ?provider ?providerLabel WHERE 
-{   
-	graph ?graph
-	{
-  		$subject crm:P108i_was_produced_by ?production.
-  		?production crm:P140i_was_attributed_by ?attribution .
-# 		?attribution crm:P141_assigned ?property.
-# 		?property crm:P02_has_range ?value.
-        ?attribution rdfs:label ?value.
-  	}
-	?graph <https://artresearch.net/custom/has_provider> ?provider .
-  	?provider rdfs:label ?providerLabel.
-  }""" .
-  
-  _:t68780655 a sp:Query;
+  _:t69342149 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:t69342148 a sp:Query;
+    sp:text """SELECT DISTINCT ?value ?provider ?providerLabel WHERE 
+{   
+  graph ?graph {
+    $subject crm:P108i_was_produced_by|crm:P19i_motivated ?production.
+        ?production crm:P140i_was_attributed_by ?attribution .
+        ?attribution rdfs:label ?value.
+  }
+  ?graph <https://artresearch.net/custom/has_provider> ?provider .
+  ?provider rdfs:label ?providerLabel.
+}""" .
 }
 
 <http://www.researchspace.org/fieldDefinition/wiki_nationality/context> {
@@ -3026,10 +3198,7 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://artresearch.net/fieldDefinition/150/context> {
-  _:t68780619 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  _:t68780620 a sp:Query;
+  _:t69330907 a sp:Query;
     sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
 { 
 	graph ?graph
@@ -3041,6 +3210,9 @@ SELECT ?value ?provider ?providerLabel WHERE {
 	?graph <https://artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.
 }""" .
+  
+  _:t69330906 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <https://artresearch.net/fieldDefinition/90/context> {
@@ -3096,7 +3268,10 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://artresearch.net/fieldDefinition/93/context> {
-  _:t32315690 a sp:Query;
+  _:t69330902 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:t69330903 a sp:Query;
     sp:text """SELECT ?value ?provider ?providerLabel WHERE 
 { 
 	graph ?graph 
@@ -3106,9 +3281,6 @@ SELECT ?value ?provider ?providerLabel WHERE {
 	?graph <https://artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.
 }""" .
-  
-  _:t32315691 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <https://artresearch.net/fieldDefinition/94/context> {
@@ -3128,8 +3300,22 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }""" .
 }
 
+<http://www.researchspace.org/fieldDefinition/Roles/context> {
+  _:t69312076 a sp:Query;
+    sp:text """SELECT distinct ?value ?provider ?providerLabel WHERE {
+  graph ?graph {
+    $subject <https://artresearch.net/resource/fr/Person_has_Role> ?value.
+  }
+  ?graph <https://artresearch.net/custom/has_provider> ?provider .
+  ?provider rdfs:label ?providerLabel.
+}""" .
+  
+  _:t69312077 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+}
+
 <https://artresearch.net/fieldDefinition/ulan_nationality/context> {
-  _:t58330363 a sp:Query;
+  _:t69312093 a sp:Query;
     sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE {
   graph ?graph{
     $subject <https://artresearch.net/resource/fr/Person_has_Nationality> ?value.
@@ -3138,7 +3324,7 @@ SELECT ?value ?provider ?providerLabel WHERE {
   ?provider rdfs:label ?providerLabel.
 }""" .
   
-  _:t58330364 a sp:Query;
+  _:t69312094 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
@@ -3179,8 +3365,11 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://artresearch.net/fieldDefinition/14/context> {
-  _:t68780707 a sp:Query;
-    sp:text """SELECT  ?value ?label ?provider ?providerLabel WHERE 
+  _:t69342162 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:t69342163 a sp:Query;
+    sp:text """SELECT  DISTINCT ?value ?label ?provider ?providerLabel WHERE 
 { 
 	graph ?graph 
   	{
@@ -3190,9 +3379,6 @@ SELECT ?value ?provider ?providerLabel WHERE {
    ?graph <https://artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.
 }""" .
-  
-  _:t68780706 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <https://artresearch.net/fieldDefinition/15/context> {
@@ -3213,7 +3399,7 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://artresearch.net/fieldDefinition/16/context> {
-  _:t32316181 a sp:Query;
+  _:t69330814 a sp:Query;
     sp:text """SELECT ?value ?provider ?providerLabel WHERE 
 { 
 	graph ?graph 
@@ -3226,7 +3412,24 @@ SELECT ?value ?provider ?providerLabel WHERE {
 	?provider rdfs:label ?providerLabel.
 }""" .
   
-  _:t32316180 a sp:Query;
+  _:t69330813 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+}
+
+<http://www.researchspace.org/fieldDefinition/Call_Numbers/context> {
+  _:t69343408 a sp:Query;
+    sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
+{ 
+	graph ?graph {
+      ?subject crm:P1_is_identified_by ?id.
+      ?id crm:P2_has_type <http://vocab.getty.edu/aat/300311706>.
+      ?id rdfs:label ?value.
+  	}
+	?graph <https://artresearch.net/custom/has_provider> ?provider .
+	?provider rdfs:label ?providerLabel.
+}""" .
+  
+  _:t69343407 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
@@ -3267,10 +3470,10 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://artresearch.net/fieldDefinition/19/context> {
-  _:t32316020 a sp:Query;
+  _:t69330881 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:t32316019 a sp:Query;
+  _:t69330882 a sp:Query;
     sp:text """SELECT distinct ?value ?label ?provider ?providerLabel WHERE 
 {
 	graph ?graph
@@ -3284,7 +3487,10 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://artresearch.net/fieldDefinition/123/context> {
-  _:t58490959 a sp:Query;
+  _:t69330883 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:t69330884 a sp:Query;
     sp:text """SELECT ?value ?provider ?providerLabel WHERE 
 {
   	graph ?graph
@@ -3296,8 +3502,23 @@ SELECT ?value ?provider ?providerLabel WHERE {
   	BIND(IF( CONTAINS(STR(?value),\"wiki\"), \"Wikidata\", ?provLabel) AS ?providerLabel)
     BIND(IF( CONTAINS(STR(?value),\"wiki\"), IRI(\"https://artresearch.net/resource/wikidata/source/Wikidata\"), ?prov) AS ?provider)
 }""" .
+}
+
+<http://www.researchspace.org/fieldDefinition/Name/context> {
+  _:t69330867 a sp:Query;
+    sp:text """PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+SELECT distinct ?value (GROUP_CONCAT(DISTINCT ?provider; SEPARATOR=\", \") AS ?provider) (GROUP_CONCAT(DISTINCT ?providerLabel; SEPARATOR=\", \") AS ?providerLabel) (count(distinct ?provider) as ?countProviders) WHERE 
+{
+  graph ?graph 
+  {
+    ?subject rdfs:label ?value.
+  }
+  ?graph <https://artresearch.net/custom/has_provider> ?provider .
+  ?provider rdfs:label ?providerLabel.
+} GROUP BY ?value order by desc(COUNT(distinct ?provider))""" .
   
-  _:t58490960 a sp:Query;
+  _:t69330868 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
@@ -3319,7 +3540,7 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <http://www.researchspace.org/fieldDefinition/Partner/context> {
-  _:t51011078 a sp:Query;
+  _:t69312092 a sp:Query;
     sp:text """SELECT distinct ?value ?provider ?providerLabel WHERE {
   graph ?graph {
     $subject <https://artresearch.net/resource/fr/Person_partner_of_Person> ?value.
@@ -3328,7 +3549,7 @@ SELECT ?value ?provider ?providerLabel WHERE {
   ?provider rdfs:label ?providerLabel.
 }""" .
   
-  _:t51011079 a sp:Query;
+  _:t69312091 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
@@ -3387,10 +3608,10 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://artresearch.net/fieldDefinition/66/context> {
-  _:t68829379 a sp:Query;
+  _:t69330869 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:t68829378 a sp:Query;
+  _:t69330870 a sp:Query;
     sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
 {
 	graph ?graph
@@ -3404,10 +3625,10 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://artresearch.net/fieldDefinition/67/context> {
-  _:t68780662 a sp:Query;
+  _:t69330915 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:t68780661 a sp:Query;
+  _:t69330914 a sp:Query;
     sp:text """SELECT ?value ?provider ?providerLabel WHERE 
 {
 	graph ?graph 
@@ -3422,10 +3643,10 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://artresearch.net/fieldDefinition/68/context> {
-  _:t68780670 a sp:Query;
+  _:t69330888 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:t68780669 a sp:Query;
+  _:t69330887 a sp:Query;
     sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
 {
   	graph ?graph 
@@ -3440,17 +3661,17 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <http://www.researchspace.org/fieldDefinition/Member_Of/context> {
-  _:t51011126 a sp:Query;
+  _:t69330786 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:t69330785 a sp:Query;
     sp:text """SELECT distinct ?value ?provider ?providerLabel WHERE {
   graph ?graph {
-    $subject <https://artresearch.net/resource/fr/Person_member_of_Person> ?value.
+    $subject <https://artresearch.net/resource/fr/Person_member_of_Group>|<https://artresearch.net/resource/fr/Person_member_of_Person> ?value.
   }
   ?graph <https://artresearch.net/custom/has_provider> ?provider .
   ?provider rdfs:label ?providerLabel.
 }""" .
-  
-  _:t51011127 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <https://artresearch.net/fieldDefinition/117/context> {
@@ -3535,18 +3756,25 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://artresearch.net/fieldDefinition/ulan_date_of_birth/context> {
-  _:t58521377 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  _:t58521378 a sp:Query;
-    sp:text """SELECT DISTINCT ?value ?label ?provider ?providerLabel WHERE {
-  graph ?graph{
-  	?subject <https://artresearch.net/resource/fr/Person_has_Date_of_Birth> ?date.
-  }
+  _:t69330948 a sp:Query;
+    sp:text """SELECT  distinct ?value (GROUP_CONCAT(DISTINCT ?provider; SEPARATOR=\", \") AS ?provider) (GROUP_CONCAT(DISTINCT ?providerLabel; SEPARATOR=\", \") AS ?providerLabel) (count(distinct ?provider) as ?countProviders) WHERE {
+    {
+      graph ?graph {
+        ?subject <https://artresearch.net/resource/fr/Person_has_Date_of_Birth> ?date.
+      }
+    } UNION {
+      graph ?graph 
+      {
+      	$subject <https://artresearch.net/resource/fr/Artist_has_Date_of_Birth> ?date .
+      }
+    }
   ?graph <https://artresearch.net/custom/has_provider> ?provider .
   ?provider rdfs:label ?providerLabel.
   BIND(IF(datatype(?date)=xsd:date,STR(YEAR(?date)),STR(?date)) AS ?value)
-}""" .
+}GROUP BY ?value order by desc(COUNT(distinct ?provider))""" .
+  
+  _:t69330949 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <https://artresearch.net/fieldDefinition/geonames_name/context> {
@@ -3600,7 +3828,7 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <http://www.researchspace.org/fieldDefinition/Spouse/context> {
-  _:t51011121 a sp:Query;
+  _:t69307018 a sp:Query;
     sp:text """SELECT distinct ?value ?provider ?providerLabel WHERE {
   graph ?graph {
     $subject <https://artresearch.net/resource/fr/Person_spouse_of_Person> ?value.
@@ -3609,7 +3837,7 @@ SELECT ?value ?provider ?providerLabel WHERE {
   ?provider rdfs:label ?providerLabel.
 }""" .
   
-  _:t51011122 a sp:Query;
+  _:t69307017 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
@@ -3686,10 +3914,7 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <http://www.researchspace.org/fieldDefinition/National_Group/context> {
-  _:t59672259 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  _:t59672260 a sp:Query;
+  _:t69330796 a sp:Query;
     sp:text """SELECT DISTINCT ?value ?provider ?providerLabel WHERE 
 {
 	graph ?graph 
@@ -3702,6 +3927,9 @@ SELECT ?value ?provider ?providerLabel WHERE {
     ?type rdfs:label \"National Group\".
     ?group rdfs:label ?value.
 }""" .
+  
+  _:t69330795 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <https://artresearch.net/fieldDefinition/79/context> {
@@ -3745,10 +3973,7 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://artresearch.net/fieldDefinition/128/context> {
-  _:t32316106 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  _:t32316107 a sp:Query;
+  _:t69343402 a sp:Query;
     sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
 { 
 	graph ?graph 
@@ -3760,6 +3985,9 @@ SELECT ?value ?provider ?providerLabel WHERE {
 	?graph <https://artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.
 }""" .
+  
+  _:t69343403 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <http://www.researchspace.org/fieldDefinition/Assistants/context> {
@@ -3777,7 +4005,10 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <http://www.researchspace.org/fieldDefinition/School_Of/context> {
-  _:t51011137 a sp:Query;
+  _:t69306985 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:t69306986 a sp:Query;
     sp:text """SELECT distinct ?value ?provider ?providerLabel WHERE {
   graph ?graph {
     $subject <https://artresearch.net/resource/fr/Person_school_of_Person> ?value.
@@ -3785,24 +4016,28 @@ SELECT ?value ?provider ?providerLabel WHERE {
   ?graph <https://artresearch.net/custom/has_provider> ?provider .
   ?provider rdfs:label ?providerLabel.
 }""" .
-  
-  _:t51011136 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <https://artresearch.net/fieldDefinition/ulan_date_of_death/context> {
-  _:t58521375 a sp:Query;
+  _:t69330946 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:t58521376 a sp:Query;
-    sp:text """SELECT DISTINCT ?value ?label ?provider ?providerLabel WHERE {
-    graph ?graph{
-  		?subject <https://artresearch.net/resource/fr/Person_has_Date_of_Death> ?date.
-  	}
+  _:t69330947 a sp:Query;
+    sp:text """SELECT  distinct ?value (GROUP_CONCAT(DISTINCT ?provider; SEPARATOR=\", \") AS ?provider) (GROUP_CONCAT(DISTINCT ?providerLabel; SEPARATOR=\", \") AS ?providerLabel) (count(distinct ?provider) as ?countProviders) WHERE {
+    {
+        graph ?graph{
+            ?subject <https://artresearch.net/resource/fr/Person_has_Date_of_Death> ?date.
+        }
+    } UNION { 
+        graph ?graph 
+        {
+            $subject <https://artresearch.net/resource/fr/Artist_has_Date_of_Death> ?date .
+        }
+    }
 	?graph <https://artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.
     BIND(IF(datatype(?date)=xsd:date,STR(YEAR(?date)),STR(?date)) AS ?value)
-}""" .
+}GROUP BY ?value order by desc(COUNT(distinct ?provider))""" .
 }
 
 <https://artresearch.net/fieldDefinition/ulan_description/context> {
@@ -3820,7 +4055,10 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://artresearch.net/fieldDefinition/4/context> {
-  _:t58330302 a sp:Query;
+  _:t69330918 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:t69330919 a sp:Query;
     sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE {
 	graph ?graph 
   	{
@@ -3830,9 +4068,6 @@ SELECT ?value ?provider ?providerLabel WHERE {
 	?graph <https://artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.
 }""" .
-  
-  _:t58330303 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <https://artresearch.net/fieldDefinition/5/context> {
@@ -3886,7 +4121,7 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://artresearch.net/fieldDefinition/3/context> {
-  _:t53316578 a sp:Query;
+  _:t69330922 a sp:Query;
     sp:text """SELECT distinct ?value ?provider ?providerLabel WHERE 
 {
   graph ?graph 
@@ -3897,15 +4132,15 @@ SELECT ?value ?provider ?providerLabel WHERE {
   ?provider rdfs:label ?providerLabel.
 }""" .
   
-  _:t53316577 a sp:Query;
+  _:t69330923 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <http://www.researchspace.org/fieldDefinition/Student/context> {
-  _:t51011071 a sp:Query;
+  _:t69307000 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:t51011072 a sp:Query;
+  _:t69307001 a sp:Query;
     sp:text """SELECT distinct ?value ?provider ?providerLabel WHERE {
   graph ?graph {
     $subject <https://artresearch.net/resource/fr/Person_teacher_of_Person> ?value.
@@ -3916,11 +4151,10 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://artresearch.net/fieldDefinition/1/context> {
-  _:t68780644 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  _:t68780643 a sp:Query;
-    sp:text """SELECT DISTINCT ?value ?provider ?providerLabel WHERE {  
+  _:t69330953 a sp:Query;
+    sp:text """PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT distinct ?value (GROUP_CONCAT(DISTINCT ?provider; SEPARATOR=\", \") AS ?provider) (GROUP_CONCAT(DISTINCT ?providerLabel; SEPARATOR=\", \") AS ?providerLabel) (count(distinct ?provider) as ?countProviders) WHERE  {  
+
 	graph ?graph
 	{
     	?subject <https://artresearch.net/resource/fr/Work_created_from_Artist> ?value.
@@ -3929,14 +4163,14 @@ SELECT ?value ?provider ?providerLabel WHERE {
 	?prov rdfs:label ?provLabel.
   	BIND(IF( CONTAINS(STR(?value),\"ulan\"), \"ULAN\", ?provLabel) AS ?providerLabel)
     BIND(IF( CONTAINS(STR(?value),\"ulan\"), IRI(\"https://artresearch.net/resource/getty/source/Getty\"), ?prov) AS ?provider)
-}""" .
+} GROUP BY ?value order by desc(COUNT(distinct ?provider))""" .
+  
+  _:t69330952 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <http://www.researchspace.org/fieldDefinition/Parents/context> {
-  _:t51011116 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  _:t51011117 a sp:Query;
+  _:t69307009 a sp:Query;
     sp:text """SELECT distinct ?value ?provider ?providerLabel WHERE {
   graph ?graph {
     $subject <https://artresearch.net/resource/fr/Person_child_of_Person> ?value.
@@ -3944,13 +4178,13 @@ SELECT ?value ?provider ?providerLabel WHERE {
   ?graph <https://artresearch.net/custom/has_provider> ?provider .
   ?provider rdfs:label ?providerLabel.
 }""" .
+  
+  _:t69307008 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <https://artresearch.net/fieldDefinition/40/context> {
-  _:t68780666 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  _:t68780665 a sp:Query;
+  _:t69330911 a sp:Query;
     sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE { 
   graph ?graph {
     ?subject crm:P67i_is_referred_to_by ?information_object.
@@ -3960,13 +4194,13 @@ SELECT ?value ?provider ?providerLabel WHERE {
   ?graph <https://artresearch.net/custom/has_provider> ?provider .
   ?provider rdfs:label ?providerLabel.
 }""" .
+  
+  _:t69330910 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <https://artresearch.net/fieldDefinition/42/context> {
-  _:t68780671 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  _:t68780672 a sp:Query;
+  _:t69330874 a sp:Query;
     sp:text """SELECT DISTINCT ?value ?label ?provider ?providerLabel WHERE 
 { 
   graph ?graph 
@@ -3981,6 +4215,9 @@ SELECT ?value ?provider ?providerLabel WHERE {
   	BIND(IF( CONTAINS(STR(?value),\"aat\"), \"AAT\", ?provLabel) AS ?providerLabel)
     BIND(IF( CONTAINS(STR(?value),\"aat\"), IRI(\"https://artresearch.net/resource/getty/source/Getty\"), ?prov) AS ?provider)
 }""" .
+  
+  _:t69330873 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <http://www.researchspace.org/fieldDefinition/Photo_Archive/context> {
@@ -4016,10 +4253,10 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://artresearch.net/fieldDefinition/44/context> {
-  _:t68780663 a sp:Query;
+  _:t69330908 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:t68780664 a sp:Query;
+  _:t69330909 a sp:Query;
     sp:text """SELECT DISTINCT ?value ?provider ?providerLabel WHERE 
 {
   graph ?graph 
@@ -4094,10 +4331,10 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://artresearch.net/fieldDefinition/46/context> {
-  _:t68780692 a sp:Query;
+  _:t69330893 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:t68780693 a sp:Query;
+  _:t69330894 a sp:Query;
     sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
 {
   	?subject a <https://artresearch.net/resource/fc/work>.
@@ -4110,8 +4347,27 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }""" .
 }
 
+<http://www.researchspace.org/fieldDefinition/Dating_Attributions/context> {
+  _:t69342174 a sp:Query;
+    sp:text """SELECT DISTINCT ?value ?provider ?providerLabel WHERE { 
+  graph ?graph {
+    $subject crm:P19i_motivated ?activity.
+    ?activity crm:P4_has_time-span ?ts;
+              crm:P2_has_type ?type.
+    ?ts crm:P82_at_some_time_within ?date.
+  }
+  ?type rdfs:label ?type_label.
+  ?graph <https://artresearch.net/custom/has_provider> ?provider .
+  ?provider rdfs:label ?providerLabel.
+  BIND(CONCAT(?date,\" (\",?type_label,\") \") as ?value)
+}""" .
+  
+  _:t69342175 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+}
+
 <http://www.researchspace.org/fieldDefinition/Children/context> {
-  _:t58330375 a sp:Query;
+  _:t69307020 a sp:Query;
     sp:text """SELECT distinct ?value ?provider ?providerLabel WHERE {
   graph ?graph {
     $subject <https://artresearch.net/resource/fr/Person_parent_of_Person> ?value.
@@ -4120,15 +4376,12 @@ SELECT ?value ?provider ?providerLabel WHERE {
   ?provider rdfs:label ?providerLabel.
 }""" .
   
-  _:t58330376 a sp:Query;
+  _:t69307021 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <http://www.researchspace.org/fieldDefinition/Siblings/context> {
-  _:t51011112 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  _:t51011111 a sp:Query;
+  _:t69307011 a sp:Query;
     sp:text """SELECT distinct ?value ?provider ?providerLabel WHERE {
   graph ?graph {
     $subject <https://artresearch.net/resource/fr/Person_sibling_of_Person> ?value.
@@ -4136,6 +4389,31 @@ SELECT ?value ?provider ?providerLabel WHERE {
   ?graph <https://artresearch.net/custom/has_provider> ?provider .
   ?provider rdfs:label ?providerLabel.
 }""" .
+  
+  _:t69307012 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+}
+
+<http://www.researchspace.org/fieldDefinition/Variant_Attributions/context> {
+  _:t69342177 a sp:Query;
+    sp:text """SELECT DISTINCT ?value ?provider ?providerLabel WHERE {
+  graph ?graph {
+    $subject crm:P19i_motivated ?activity.
+        ?activity <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ?type.
+        ?type rdfs:label ?type_label.
+        ?activity <http://www.cidoc-crm.org/cidoc-crm/P01i_is_domain_of> ?domain.
+        ?domain <http://www.cidoc-crm.org/cidoc-crm/P02_has_range> ?range.
+        ?range rdfs:label ?range_label.
+        ?domain <http://www.cidoc-crm.org/cidoc-crm/P14.1_in_the_role_of> ?role.
+        ?role rdfs:label ?role_label.
+        BIND(CONCAT(?range_label,\" | Type: \",?type_label,\" | Role: \", ?role_label) AS ?value)
+  }
+  ?graph <https://artresearch.net/custom/has_provider> ?provider .
+  ?provider rdfs:label ?providerLabel.      
+}""" .
+  
+  _:t69342176 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <https://artresearch.net/fieldDefinition/8/context> {
@@ -4217,10 +4495,10 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://artresearch.net/fieldDefinition/56/context> {
-  _:t32316175 a sp:Query;
+  _:t69330815 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:t32316174 a sp:Query;
+  _:t69330816 a sp:Query;
     sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
 { 
 	graph ?graph 
@@ -4234,21 +4512,25 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <http://www.researchspace.org/fieldDefinition/Collaborator/context> {
-  _:t58330373 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  _:t58330372 a sp:Query;
-    sp:text """SELECT distinct ?value ?provider ?providerLabel WHERE {
+  _:t69330784 a sp:Query;
+    sp:text """SELECT ?value ?label ?providerLabel ?provider WHERE {
+     
   graph ?graph {
-    $subject <https://artresearch.net/resource/fr/Person_collaborated_with_Person> ?value.
+    $subject <https://artresearch.net/resource/fr/Person_collaborated_with_Person>|<https://artresearch.net/resource/fr/Person_assisted_by_Person> ?value.
   }
   ?graph <https://artresearch.net/custom/has_provider> ?provider .
   ?provider rdfs:label ?providerLabel.
 }""" .
+  
+  _:t69330783 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <https://artresearch.net/fieldDefinition/ulan_place_of_birth/context> {
-  _:t58703090 a sp:Query;
+  _:t69312064 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:t69312065 a sp:Query;
     sp:text """SELECT distinct ?value ?label ?provider ?providerLabel WHERE {
    graph ?graph{
 	 $subject <https://artresearch.net/resource/fr/Person_has_Place_of_Birth> ?value.
@@ -4258,9 +4540,6 @@ SELECT ?value ?provider ?providerLabel WHERE {
   BIND(IF( CONTAINS(STR(?value),\"geonames\"), \"Geonames\", ?provLabel) AS ?providerLabel)
   BIND(IF( CONTAINS(STR(?value),\"geonames\"), IRI(\"https://artresearch.net/resource/geonames/source/Geonames\"), ?prov) AS ?provider)
 }""" .
-  
-  _:t58703089 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <https://artresearch.net/fieldDefinition/59/context> {
@@ -4299,7 +4578,10 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://artresearch.net/fieldDefinition/203/context> {
-  _:t68780668 a sp:Query;
+  _:t69330913 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:t69330912 a sp:Query;
     sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
 { 
 	graph ?graph 
@@ -4310,8 +4592,21 @@ SELECT ?value ?provider ?providerLabel WHERE {
 	?graph <https://artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.
 }""" .
+}
+
+<http://www.researchspace.org/fieldDefinition/Active%20in/context> {
+  _:t69330788 a sp:Query;
+    sp:text """SELECT ?value ?label  ?provider ?providerLabel WHERE {
+    graph ?graph
+	{
+    	?subject crm:P74_has_current_or_former_residence|crm:P55_has_current_location ?value.
+  	}
+    ?graph <https://artresearch.net/custom/has_provider> ?provider .
+	?provider rdfs:label ?providerLabel.
+    ?value rdfs:label ?label. 
+}""" .
   
-  _:t68780667 a sp:Query;
+  _:t69330787 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
@@ -4334,7 +4629,7 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://artresearch.net/fieldDefinition/284/context> {
-  _:t32316168 a sp:Query;
+  _:t69312078 a sp:Query;
     sp:text """SELECT ?value ?provider ?providerLabel WHERE 
 { 
   graph ?graph 
@@ -4347,15 +4642,15 @@ SELECT ?value ?provider ?providerLabel WHERE {
 	?provider rdfs:label ?providerLabel.
 }""" .
   
-  _:t32316169 a sp:Query;
+  _:t69312079 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <https://artresearch.net/fieldDefinition/286/context> {
-  _:t59672257 a sp:Query;
+  _:t69312088 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:t59672258 a sp:Query;
+  _:t69312087 a sp:Query;
     sp:text """SELECT DISTINCT ?value ?provider ?providerLabel WHERE {
   graph ?graph {
     $subject crm:P107_is_current_or_former_member_of ?value.
@@ -4370,10 +4665,7 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://artresearch.net/fieldDefinition/281/context> {
-  _:t58330346 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  _:t58330345 a sp:Query;
+  _:t69330916 a sp:Query;
     sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
 { 
 	graph ?graph 
@@ -4386,13 +4678,16 @@ SELECT ?value ?provider ?providerLabel WHERE {
 	?graph <https://artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.
 }""" .
+  
+  _:t69330917 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <https://artresearch.net/fieldDefinition/280/context> {
-  _:t69007842 a sp:Query;
+  _:t69330889 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:t69007843 a sp:Query;
+  _:t69330890 a sp:Query;
     sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
 { 
 	graph ?graph 
@@ -4406,10 +4701,7 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <http://www.researchspace.org/fieldDefinition/Acquisition/context> {
-  _:t49667690 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  _:t49667691 a sp:Query;
+  _:t69330891 a sp:Query;
     sp:text """SELECT ?value ?provider ?providerLabel WHERE 
 { 
 	graph ?graph 
@@ -4420,14 +4712,17 @@ SELECT ?value ?provider ?providerLabel WHERE {
 	?graph <https://artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.
 }""" .
+  
+  _:t69330892 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <https://artresearch.net/fieldDefinition/283/context> {
-  _:t51011202 a sp:Query;
+  _:t69330943 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:t51011201 a sp:Query;
-    sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
+  _:t69330942 a sp:Query;
+    sp:text """SELECT distinct ?value ?provider ?providerLabel WHERE 
 { 
 	graph ?graph 
   	{
@@ -4435,11 +4730,14 @@ SELECT ?value ?provider ?providerLabel WHERE {
 	}
 	?graph <https://artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.
-}""" .
+} """ .
 }
 
 <https://artresearch.net/fieldDefinition/282/context> {
-  _:t32315751 a sp:Query;
+  _:t69330904 a sp:Query;
+    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
+  
+  _:t69330905 a sp:Query;
     sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
 { 
 	graph ?graph 
@@ -4451,16 +4749,13 @@ SELECT ?value ?provider ?providerLabel WHERE {
 	?graph <https://artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.
   }""" .
-  
-  _:t32315752 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
 <http://www.researchspace.org/fieldDefinition/Influenced/context> {
-  _:t58330367 a sp:Query;
+  _:t69307003 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
   
-  _:t58330366 a sp:Query;
+  _:t69307004 a sp:Query;
     sp:text """SELECT distinct ?value ?provider ?providerLabel WHERE {
   graph ?graph {
     $subject <https://artresearch.net/resource/fr/Person_influenced_Person> ?value.
@@ -4520,92 +4815,6 @@ SELECT ?value ?provider ?providerLabel WHERE {
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
-<http://www.researchspace.org/fieldDefinition/Last_Known_Location_3/context> {
-  _:t68851293 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  _:t68851294 a sp:Query;
-    sp:text """SELECT DISTINCT ?value ?provider ?providerLabel WHERE {
-  ?subject a cfc:work.
-  ?subject <https://artresearch.net/resource/fr/Work_kept_by_Institution>|crm:P50_has_current_keeper ?repo.
-  ?repo rdfs:label ?value.
-  FILTER NOT EXISTS {?subject crm:P74_has_current_or_former_residence|crm:P55_has_current_location ?place.}
-  FILTER NOT EXISTS {?repo crm:P74_has_current_or_former_residence ?place.}
-  BIND(<https://artresearch.net/resource/pharos/source/Pharos> AS ?provider)
-  BIND(\"Pharos\" AS ?providerLabel)
-}""" .
-}
-
-<http://www.researchspace.org/fieldDefinition/Production_Date_Photo/context> {
-  _:t68780698 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  _:t68780699 a sp:Query;
-    sp:text """SELECT DISTINCT ?value ?provider ?providerLabel WHERE 
-{   
-	graph ?graph {
-    	?subject <https://artresearch.net/resource/fr/Photo_from_Date> ?value.
-  	}
-	?graph <https://artresearch.net/custom/has_provider> ?provider.
-	?provider rdfs:label ?providerLabel.
-    FILTER(datatype(?value)=xsd:date)
-}""" .
-}
-
-<http://www.researchspace.org/fieldDefinition/Last_Known_Location_1/context> {
-  _:t68851288 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
-  
-  _:t68851287 a sp:Query;
-    sp:text """SELECT DISTINCT (concat(?repo_label,\", \",(GROUP_CONCAT(DISTINCT ?place_l;SEPARATOR=\",\")))as ?value)  ?provider ?providerLabel WHERE {
-  ?subject a cfc:work.
-  ?subject <https://artresearch.net/resource/fr/Work_kept_by_Institution>|crm:P50_has_current_keeper ?repo.
-  ?repo rdfs:label ?repo_label.
-  ?subject crm:P74_has_current_or_former_residence|crm:P55_has_current_location ?place.
-  ?place rdfs:label ?place_l.
-  BIND(<https://artresearch.net/resource/pharos/source/Pharos> AS ?provider)
-  BIND(\"Pharos\" AS ?providerLabel)
-  FILTER NOT EXISTS { ?repo crm:P74_has_current_or_former_residence ?x}
-}group by ?repo_label ?provider ?providerLabel""" .
-}
-
-<https://artresearch.net/fieldDefinition/212/context> {
-  _:t58330328 a sp:Query;
-    sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE 
-{ 
-	graph ?graph 
-  	{
-  		$subject crm:P128_carries ?visual_item.
-  		?visual_item crm:P128i_is_carried_by ?negative.
-  		?negative crm:P108i_was_produced_by ?production.
-  		?production crm:P7_took_place_at ?value.
-  	}
-	?graph <https://artresearch.net/custom/has_provider> ?provider .
-	?provider rdfs:label ?providerLabel.
-}""" .
-  
-  _:t58330329 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
-}
-
-<https://artresearch.net/fieldDefinition/211/context> {
-  _:t32315848 a sp:Query;
-    sp:text """SELECT ?value ?label ?provider ?providerLabel WHERE
-{ 
-	graph ?graph 
-  	{
-		$subject crm:P108i_was_produced_by ?production.
-  		?production a <https://artresearch.net/custom/Publication>.
-  		?production crm:P7_took_place_at ?value .
-  	}
-	?graph <https://artresearch.net/custom/has_provider> ?provider .
-	?provider rdfs:label ?providerLabel.
-}""" .
-  
-  _:t32315849 a sp:Query;
-    sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
-}
-
 <http://www.researchspace.org/resource/system/fieldDefinitionContainer/context> {
-  _:node1fl5u7m68x882 <http://www.w3.org/ns/ldp#contains> Platform:fieldDefinitionContainer .
+  _:node1fn46kl0ix4208 <http://www.w3.org/ns/ldp#contains> Platform:fieldDefinitionContainer .
 }
