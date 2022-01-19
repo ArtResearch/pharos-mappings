@@ -46,7 +46,7 @@
 								<type>custom:Namedgraph</type>
 								<instance_generator name="MultiHashingGenerator">
 									<arg name="hierarchy" type="constant">actor</arg>
-									<arg name="object_HASHED_CONTENTS" type="xpath">../marc:datafield[@tag="700"]/marc:subfield[@code="a"]/text()</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">string-join(( ../marc:datafield[@tag="700"]/marc:subfield[@code="a"]/text() , ../marc:datafield[@tag="700"]/marc:subfield[@code="b"]/text() , ../marc:datafield[@tag="700"]/marc:subfield[@code="c"]/text(), ../marc:datafield[@tag="700"]/marc:subfield[@code="d"]/text() ), " " )</arg>
 									<arg name="term_simple" type="constant">graph</arg>
 								</instance_generator>
 							</entity>
@@ -182,7 +182,7 @@
 							<type>custom:Namedgraph</type>
 							<instance_generator name="MultiHashingGenerator">
 								<arg name="hierarchy" type="constant">actor</arg>
-								<arg name="object_HASHED_CONTENTS" type="xpath">string-join(( . , ../../marc:subfield[@code="c"]/text() ), " " )</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">string-join(( . , ../../marc:subfield[@code="b"]/text() , ../../marc:subfield[@code="c"]/text(), ../../marc:subfield[@code="d"]/text() ), " " )</arg>
 								<arg name="term_simple" type="constant">graph</arg>
 							</instance_generator>
 						</entity>	
@@ -797,7 +797,7 @@
 							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">string-join(( marc:subfield[@code="a"]/text() , marc:subfield[@code="c"]/text() ), " " )</arg>
+								<arg name="id" type="xpath">string-join(( marc:subfield[@code="a"]/text() , marc:subfield[@code="b"]/text() , marc:subfield[@code="c"]/text(), marc:subfield[@code="d"]/text() ), " " )</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -882,7 +882,7 @@
 							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">../marc:subfield[@code="a"]/text()</arg>
+								<arg name="id" type="xpath">string-join(( ../marc:subfield[@code="a"]/text() , ../marc:subfield[@code="b"]/text() , ../marc:subfield[@code="c"]/text(), ../marc:subfield[@code="d"]/text() ), " " )</arg>
 							</instance_generator>
 						</entity>
 						<relationship>crm:P14.1_in_the_role_of</relationship>
@@ -930,7 +930,7 @@
 							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">string-join(( ../marc:subfield[@code="a"]/text() , ../marc:subfield[@code="c"]/text() ), " " )</arg>
+								<arg name="id" type="xpath">string-join(( ../marc:subfield[@code="a"]/text() ,../marc:subfield[@code="b"]/text() , ../marc:subfield[@code="c"]/text() , ../marc:subfield[@code="d"]/text() ), " " )</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -3248,7 +3248,7 @@
 						<type>crm:E21_Person</type>
 						<instance_generator name="URIwithType">
 							<arg name="type" type="constant">actor</arg>
-							<arg name="id" type="xpath">string-join(( marc:subfield[@code="a"]/text() , marc:subfield[@code="c"]/text() ), " " )</arg>
+							<arg name="id" type="xpath">string-join(( marc:subfield[@code="a"]/text() , marc:subfield[@code="b"]/text() , marc:subfield[@code="c"]/text(), marc:subfield[@code="d"]/text() ), " " )</arg>
 						</instance_generator>
 						<label_generator name="Literal">
 							<arg name="text" type="xpath">string-join(( marc:subfield[@code="a"]/text() , marc:subfield[@code="c"]/text() ), " " )</arg>
@@ -3269,7 +3269,7 @@
 								<type>custom:Namedgraph</type>
 								<instance_generator name="MultiHashingGenerator">
 									<arg name="hierarchy" type="constant">actor</arg>
-									<arg name="object_HASHED_CONTENTS" type="xpath">string-join(( marc:subfield[@code="a"]/text() , marc:subfield[@code="c"]/text() ), " " )</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">string-join(( marc:subfield[@code="a"]/text() , marc:subfield[@code="b"]/text() , marc:subfield[@code="c"]/text(), marc:subfield[@code="d"]/text() ), " " )</arg>
 									<arg name="term_simple" type="constant">graph</arg>
 								</instance_generator>
 								<additional>
@@ -3304,9 +3304,9 @@
 							<type>crm:E41_Appellation</type>
 							<instance_generator name="IdentifierURI">	
 								<arg name="subject_type" type="constant">actor</arg>
-								<arg name="subject_id" type="xpath">string-join(( text() , ../marc:subfield[@code="c"]/text() ), " " )</arg>
+								<arg name="subject_id" type="xpath">string-join(( text() , ../marc:subfield[@code="b"]/text() , ../marc:subfield[@code="c"]/text(), ../marc:subfield[@code="d"]/text() ), " " )</arg>
 								<arg name="identifier_type" type="constant">appellation</arg>
-								<arg name="identifier_id" type="xpath">string-join(( text() , ../marc:subfield[@code="c"]/text() ), " " )</arg>
+								<arg name="identifier_id" type="xpath">string-join(( text() , ../marc:subfield[@code="b"]/text() , ../marc:subfield[@code="c"]/text(), ../marc:subfield[@code="d"]/text() ), " " )</arg>
 							</instance_generator>
 							<label_generator name="Literal">
 								<arg name="text" type="xpath">string-join(( text() , ../marc:subfield[@code="c"]/text() ), " " )</arg>
@@ -3336,7 +3336,7 @@
 							<type>crm:E67_Birth</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">actor</arg>
-								<arg name="resourceId" type="xpath">string-join(( ../../marc:subfield[@code="a"]/text() , ../../marc:subfield[@code="c"]/text() ), " " )</arg>
+								<arg name="resourceId" type="xpath">string-join(( ../../marc:subfield[@code="a"]/text() , ../../marc:subfield[@code="b"]/text(), ../../marc:subfield[@code="c"]/text(), ../../marc:subfield[@code="d"]/text() ), " " )</arg>
 								<arg name="eventType" type="constant">birth</arg>
 							</instance_generator>
 						</entity>
@@ -3345,7 +3345,7 @@
 							<type>crm:E52_Time-Span</type>
 							<instance_generator name="TimespanUri">
 								<arg name="resourceType" type="constant">actor</arg>
-								<arg name="resourceId" type="xpath">string-join(( ../../marc:subfield[@code="a"]/text() , ../../marc:subfield[@code="c"]/text() ), " " )</arg>
+								<arg name="resourceId" type="xpath">string-join(( ../../marc:subfield[@code="a"]/text() , ../../marc:subfield[@code="b"]/text(), ../../marc:subfield[@code="c"]/text(), ../../marc:subfield[@code="d"]/text() ), " " )</arg>
 								<arg name="eventType" type="constant">birth</arg>
 							</instance_generator>
 						</entity>
@@ -3376,7 +3376,7 @@
 							<type>crm:E69_Death</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">actor</arg>
-								<arg name="resourceId" type="xpath">string-join(( ../../marc:subfield[@code="a"]/text() , ../../marc:subfield[@code="c"]/text() ), " " )</arg>
+								<arg name="resourceId" type="xpath">string-join(( ../../marc:subfield[@code="a"]/text() , ../../marc:subfield[@code="b"]/text(), ../../marc:subfield[@code="c"]/text(), ../../marc:subfield[@code="d"]/text() ), " " )</arg>
 								<arg name="eventType" type="constant">death</arg>
 							</instance_generator>
 						</entity>
@@ -3385,7 +3385,7 @@
 							<type>crm:E52_Time-Span</type>
 							<instance_generator name="TimespanUri">
 								<arg name="resourceType" type="constant">actor</arg>
-								<arg name="resourceId" type="xpath">string-join(( ../../marc:subfield[@code="a"]/text() , ../../marc:subfield[@code="c"]/text() ), " " )</arg>
+								<arg name="resourceId" type="xpath">string-join(( ../../marc:subfield[@code="a"]/text() , ../../marc:subfield[@code="b"]/text(), ../../marc:subfield[@code="c"]/text(), ../../marc:subfield[@code="d"]/text() ), " " )</arg>
 								<arg name="eventType" type="constant">death</arg>
 							</instance_generator>
 						</entity>
@@ -3419,7 +3419,7 @@
 							<type>crm:F51_Pursuit</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">actor</arg>
-								<arg name="resourceId" type="xpath">string-join(( ../marc:subfield[@code="a"]/text() , ../marc:subfield[@code="c"]/text() ), " " )</arg>
+								<arg name="resourceId" type="xpath">string-join(( ../marc:subfield[@code="a"]/text() , ../marc:subfield[@code="b"]/text(), ../marc:subfield[@code="c"]/text(), ../marc:subfield[@code="d"]/text() ), " " )</arg>
 								<arg name="eventType" type="constant">floruit</arg>
 							</instance_generator>
 						</entity>
@@ -3428,7 +3428,7 @@
 							<type>crm:E52_Time-Span</type>
 							<instance_generator name="TimespanUri">
 								<arg name="resourceType" type="constant">actor</arg>
-								<arg name="resourceId" type="xpath">string-join(( ../marc:subfield[@code="a"]/text() , ../marc:subfield[@code="c"]/text() ), " " )</arg>
+								<arg name="resourceId" type="xpath">string-join(( ../marc:subfield[@code="a"]/text() , ../marc:subfield[@code="b"]/text(), ../marc:subfield[@code="c"]/text(), ../marc:subfield[@code="d"]/text() ), " " )</arg>
 								<arg name="eventType" type="constant">floruit</arg>
 							</instance_generator>
 						</entity>
@@ -3448,7 +3448,6 @@
 				</range>
 			</link>
 			
-		
 		</mapping>
 
 		<mapping namedgraph="graph">
@@ -3673,7 +3672,7 @@
 						<type>crm:E21_Person</type>
 						<instance_generator name="URIwithType">
 							<arg name="type" type="constant">actor</arg>
-							<arg name="id" type="xpath">marc:subfield[@code="a"]/text()</arg>
+							<arg name="id" type="xpath">string-join(( marc:subfield[@code="a"]/text() , marc:subfield[@code="b"]/text() , marc:subfield[@code="c"]/text(), marc:subfield[@code="d"]/text() ), " " )</arg>
 						</instance_generator>
 						<label_generator name="Literal">
 							<arg name="text" type="xpath">marc:subfield[@code="a"]/text()</arg>
@@ -3694,7 +3693,7 @@
 								<type>custom:Namedgraph</type>
 								<instance_generator name="MultiHashingGenerator">
 									<arg name="hierarchy" type="constant">actor</arg>
-									<arg name="object_HASHED_CONTENTS" type="xpath">marc:subfield[@code="a"]/text()</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">string-join(( marc:subfield[@code="a"]/text() , marc:subfield[@code="b"]/text() , marc:subfield[@code="c"]/text(), marc:subfield[@code="d"]/text() ), " " )</arg>
 									<arg name="term_simple" type="constant">graph</arg>
 								</instance_generator>
 								<additional>
@@ -3729,7 +3728,7 @@
 							<type>crm:E41_Appellation</type>
 							<instance_generator name="IdentifierURI">	
 								<arg name="subject_type" type="constant">actor</arg>
-								<arg name="subject_id" type="xpath">text()</arg>
+								<arg name="subject_id" type="xpath">string-join(( text() , ../marc:subfield[@code="b"]/text() , ../marc:subfield[@code="c"]/text(), ../marc:subfield[@code="d"]/text() ), " " )</arg>
 								<arg name="identifier_type" type="constant">appellation</arg>
 								<arg name="identifier_id" type="xpath">text()</arg>
 							</instance_generator>
@@ -3761,7 +3760,7 @@
 							<type>crm:E67_Birth</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">actor</arg>
-								<arg name="resourceId" type="xpath">../marc:subfield[@code="a"]/text()</arg>
+								<arg name="resourceId" type="xpath">string-join(( ../marc:subfield[@code="a"]/text() , ../marc:subfield[@code="b"]/text() , ../marc:subfield[@code="c"]/text(), text() ), " " )</arg>
 								<arg name="eventType" type="constant">birth</arg>
 							</instance_generator>
 						</entity>
@@ -3770,7 +3769,7 @@
 							<type>crm:E52_Time-Span</type>
 							<instance_generator name="TimespanUri">
 								<arg name="resourceType" type="constant">actor</arg>
-								<arg name="resourceId" type="xpath">../marc:subfield[@code="a"]/text()</arg>
+								<arg name="resourceId" type="xpath">string-join(( ../marc:subfield[@code="a"]/text() , ../marc:subfield[@code="b"]/text() , ../marc:subfield[@code="c"]/text(), text() ), " " )</arg>
 								<arg name="eventType" type="constant">birth</arg>
 							</instance_generator>
 						</entity>
@@ -3850,7 +3849,7 @@
 						<exists>@person</exists>
 					</if>
                     <entity>
-						<type>crm:E39_Actor</type>
+						<type>crm:E55_Type</type>
 						<instance_generator name="URIwithType">
 							<arg name="type" type="constant">actor</arg>
 							<arg name="id" type="xpath">@person</arg>
