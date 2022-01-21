@@ -1644,7 +1644,7 @@
 <https://artresearch.net/fieldDefinition/2/context> {
   <https://artresearch.net/fieldDefinition/2> a <http://www.w3.org/ns/ldp#Resource>,
       prov:Entity, <http://www.researchspace.org/resource/system/fields/Field>;
-    prov:generatedAtTime "2021-09-20T15:10:05.167Z"^^xsd:dateTime;
+    prov:generatedAtTime "2022-01-19T13:30:03.781Z"^^xsd:dateTime;
     prov:wasAttributedTo User:admin;
     <http://www.researchspace.org/resource/system/fields/category> <http://www.researchspace.org/ontologies/platform/FieldCategories/photograph_info>,
       <http://www.researchspace.org/ontologies/platform/FieldCategories/work_info>, <https://artresearch.net/category/frick>,
@@ -1656,10 +1656,10 @@
       <http://www.researchspace.org/ontologies/platform/FieldCategories/artwork_monument>;
     <http://www.researchspace.org/resource/system/fields/domain> crm:E78_Curated_Holding,
       crm:E40_Group, crm:E22_Man-Made_Object, crm:E53_Place;
-    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t68780614;
+    <http://www.researchspace.org/resource/system/fields/insertPattern> _:t69409472;
     <http://www.researchspace.org/resource/system/fields/order> "100";
     <http://www.researchspace.org/resource/system/fields/range> crm:E42_Identifier;
-    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t68780613;
+    <http://www.researchspace.org/resource/system/fields/selectPattern> _:t69409471;
     <http://www.researchspace.org/resource/system/fields/xsdDatatype> xsd:anyURI;
     rdfs:comment "This field is used to indicate the preferred identifier attributed to the documented instance of the documented object.";
     rdfs:label "Title"@en .
@@ -2975,7 +2975,7 @@ SELECT DISTINCT ?value ?label  WHERE {
 { 
   	graph ?graph
 	{
-    ?subject <https://artresearch.net/resource/fr/Photo_depicts_work> ?value.
+    ?subject <https://artresearch.net/resource/fr/Photo_depicts_Work> ?value.
   	}
 	?graph <https://artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.
@@ -4089,20 +4089,19 @@ SELECT ?value ?provider ?providerLabel WHERE {
 }
 
 <https://artresearch.net/fieldDefinition/2/context> {
-  _:t68780613 a sp:Query;
-    sp:text """SELECT distinct ?value ?label ?provider ?providerLabel WHERE 
+  _:t69409471 a sp:Query;
+    sp:text """SELECT distinct ?value ?provider ?providerLabel WHERE 
 {
 	graph ?graph
 	{
-#    	?subject rdfs:label ?label.
   		?subject crm:P1_is_identified_by ?value. 
- 		?value  crm:P2_has_type <http://vocab.getty.edu/aat/300417193> . 
+ 		?value crm:P2_has_type <http://vocab.getty.edu/aat/300417193> . 
 	}
 	?graph <https://artresearch.net/custom/has_provider> ?provider .
 	?provider rdfs:label ?providerLabel.
 }""" .
   
-  _:t68780614 a sp:Query;
+  _:t69409472 a sp:Query;
     sp:text "INSERT { $subject ?predicate $value} WHERE {}" .
 }
 
@@ -4816,5 +4815,5 @@ SELECT distinct ?value (GROUP_CONCAT(DISTINCT ?provider; SEPARATOR=\", \") AS ?p
 }
 
 <http://www.researchspace.org/resource/system/fieldDefinitionContainer/context> {
-  _:node1fn46kl0ix4208 <http://www.w3.org/ns/ldp#contains> Platform:fieldDefinitionContainer .
+  _:node1fn46kl0ix11043 <http://www.w3.org/ns/ldp#contains> Platform:fieldDefinitionContainer .
 }

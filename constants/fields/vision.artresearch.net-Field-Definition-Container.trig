@@ -2845,7 +2845,7 @@
 { 
   	
 	{
-    ?subject <https://artresearch.net/resource/fr/Photo_depicts_work> ?value.
+    ?subject <https://artresearch.net/resource/fr/Photo_depicts_Work> ?value.
   	}
 	
 }""" .

@@ -252,9 +252,9 @@
   <https://artresearch.net/resource/fr/Photo_has_provider_Institution> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/custom/fc/photo> .
   <https://artresearch.net/resource/fr/Photo_has_provider_Institution> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/custom/fc/institution> .
 
-  <https://artresearch.net/resource/fr/Photo_depicts_work> <http://www.w3.org/2000/01/rdf-schema#label> "depicts" .
-  <https://artresearch.net/resource/fr/Photo_depicts_work> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/custom/fc/photo> .
-  <https://artresearch.net/resource/fr/Photo_depicts_work> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/work> .
+  <https://artresearch.net/resource/fr/Photo_depicts_Work> <http://www.w3.org/2000/01/rdf-schema#label> "depicts" .
+  <https://artresearch.net/resource/fr/Photo_depicts_Work> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/custom/fc/photo> .
+  <https://artresearch.net/resource/fr/Photo_depicts_Work> <http://www.researchspace.org/ontology/hasRange> <https://artresearch.net/resource/fc/work> .
   
   <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://www.w3.org/2000/01/rdf-schema#label> "has type".
   <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://www.researchspace.org/ontology/hasDomain> <https://artresearch.net/resource/custom/fc/photo> .
