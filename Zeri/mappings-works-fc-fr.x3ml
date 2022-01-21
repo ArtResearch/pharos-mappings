@@ -135,7 +135,7 @@
 							<type>fc:institution</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">string-join((text() , ../PVCC[@etichetta="Town / Municipality"]/text() , ../PVCS[@etichetta="Country"]/text() ),'_')</arg>
+								<arg name="id" type="xpath">string-join((text(), ../LDCS/text() , ../PVCC/text() , ../PVCP/text(), ../PVCR/text() , ../PVCS/text() ),'_')</arg>
 							</instance_generator>
 							<additional>
 								<relationship>fr:Institution_keeps_Work</relationship>
