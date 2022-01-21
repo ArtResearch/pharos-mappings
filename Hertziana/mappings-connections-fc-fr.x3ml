@@ -6,7 +6,7 @@
 		<namespace prefix="crm" uri="http://www.cidoc-crm.org/cidoc-crm/"/>
 		<namespace prefix="custom" uri="https://artresearch.net/custom/"/>
 		<namespace prefix="fc" uri="https://artresearch.net/resource/custom/fc/"/>
-		<namespace prefix="fr" uri="https://artresearch.net/resource/fr/"/>
+		<namespace prefix="fr" uri="https://artresearch.net/resource/custom/fr/"/>
 	</namespaces>
 
 	<mappings>
