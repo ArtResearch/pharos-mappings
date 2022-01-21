@@ -55,7 +55,7 @@
 								<type>custom:Namedgraph</type>
 								<instance_generator name="MultiHashingGenerator">
 									<arg name="hierarchy" type="constant">actor</arg>
-									<arg name="object_HASHED_CONTENTS" type="xpath">string-join((SCHEDA/PARAGRAFO[@etichetta="LOCATION"]/LDCN[@etichetta="Repository"]/text() ,SCHEDA/PARAGRAFO[@etichetta="LOCATION"]/PVCC[@etichetta="Town / Municipality"]/text() , SCHEDA/PARAGRAFO[@etichetta="LOCATION"]/PVCS[@etichetta="Country"]/text() ),'_')</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">string-join((SCHEDA/PARAGRAFO[@etichetta="LOCATION"]/LDCN[@etichetta="Repository"]/text() ,SCHEDA/PARAGRAFO[@etichetta="LOCATION"]/LDCS/text(),SCHEDA/PARAGRAFO[@etichetta="LOCATION"]/PVCC/text(),SCHEDA/PARAGRAFO[@etichetta="LOCATION"]/PVCP/text(),SCHEDA/PARAGRAFO[@etichetta="LOCATION"]/PVCR/text(),SCHEDA/PARAGRAFO[@etichetta="LOCATION"]/PVCS/text()),'_')</arg>
 									<arg name="term_simple" type="constant">graph</arg>
 								</instance_generator>
 							</entity>
@@ -337,7 +337,7 @@
 							<type>custom:Namedgraph</type>
 							<instance_generator name="MultiHashingGenerator">
 								<arg name="hierarchy" type="constant">actor</arg>
-								<arg name="object_HASHED_CONTENTS" type="xpath">string-join(( . ,../../PRVC[@etichetta="Town / Municipality"]/text() , ../../PRVS[@etichetta="Country"]/text() ),'_')</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">string-join(( . ,../../PRCS/text() , ../../PRVC/text(),../../PRVP/text() , ../../PRVR/text(), ../../PRVS/text() ),'_')</arg>
 								<arg name="term_simple" type="constant">graph</arg>
 							</instance_generator>
 						</entity>
@@ -1491,7 +1491,7 @@
 							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">string-join(( text() , ../PVCC[@etichetta="Town / Municipality"]/text() , ../PVCS[@etichetta="Country"]/text() ),'_')</arg>
+								<arg name="id" type="xpath">string-join(( text() , ../LDCS/text() , ../PVCC/text() , ../PVCP/text(), ../PVCR/text() , ../PVCS/text() ),'_')</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -1656,7 +1656,7 @@
 							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">string-join(( text() , ../PRVC[@etichetta="Town / Municipality"]/text() , ../PRVS[@etichetta="Country"]/text() ),'_')</arg>
+								<arg name="id" type="xpath">string-join(( text() , ../PRCS/text() , ../PRVC/text(), ../PRVP/text() , ../PRVR/text(), ../PRVS/text() ),'_')</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -1710,7 +1710,7 @@
 							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">string-join(( text() , ../PRVC[@etichetta="Town / Municipality"]/text() , ../PRVS[@etichetta="Country"]/text() ),'_')</arg>
+								<arg name="id" type="xpath">string-join(( text() , ../PRCS/text() , ../PRVC/text(), ../PRVP/text() , ../PRVR/text(), ../PRVS/text() ),'_')</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -3333,7 +3333,7 @@
 							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">string-join(( text() , ../PVCC[@etichetta="Town / Municipality"]/text() , ../PVCS[@etichetta="Country"]/text() ),'_')</arg>
+								<arg name="id" type="xpath">string-join(( text(), ../LDCS/text() , ../PVCC/text() , ../PVCP/text(), ../PVCR/text() , ../PVCS/text() ),'_')</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -3498,7 +3498,7 @@
 							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">string-join(( text() , ../PRVC[@etichetta="Town / Municipality"]/text() , ../PRVS[@etichetta="Country"]/text() ),'_')</arg>
+								<arg name="id" type="xpath">string-join(( text() , ../PRCS/text() , ../PRVC/text(), ../PRVP/text() , ../PRVR/text(), ../PRVS/text() ),'_')</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -3552,7 +3552,7 @@
 							<type>custom:noType</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">string-join(( text() , ../PRVC[@etichetta="Town / Municipality"]/text() , ../PRVS[@etichetta="Country"]/text() ),'_')</arg>
+								<arg name="id" type="xpath">string-join(( text() , ../PRCS/text() , ../PRVC/text(), ../PRVP/text() , ../PRVR/text(), ../PRVS/text() ),'_')</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -5120,7 +5120,7 @@
 						<type>crm:E39_Actor</type>
 						<instance_generator name="URIwithType">
 							<arg name="type" type="constant">actor</arg>
-							<arg name="id" type="xpath">string-join((text() , ../PVCC[@etichetta="Town / Municipality"]/text() , ../PVCS[@etichetta="Country"]/text() ),'_')</arg>
+							<arg name="id" type="xpath">string-join((text() , ../LDCS/text() , ../PVCC/text() , ../PVCP/text(), ../PVCR/text() , ../PVCS/text() ),'_')</arg>
 						</instance_generator>
 						<label_generator name="Literal">
 							<arg name="text" type="xpath">text()</arg>
@@ -5141,7 +5141,7 @@
 								<type>custom:Namedgraph</type>
 								<instance_generator name="MultiHashingGenerator">
 									<arg name="hierarchy" type="constant">actor</arg>
-									<arg name="object_HASHED_CONTENTS" type="xpath">string-join((text() , ../PVCC[@etichetta="Town / Municipality"]/text() , ../PVCS[@etichetta="Country"]/text() ),'_')</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">string-join((text() , ../LDCS/text() , ../PVCC/text() , ../PVCP/text(), ../PVCR/text() , ../PVCS/text() ),'_')</arg>
 									<arg name="term_simple" type="constant">graph</arg>
 								</instance_generator>
 								<additional>
@@ -5937,7 +5937,7 @@
 						<type>crm:E39_Actor</type>
 						<instance_generator name="URIwithType">
 							<arg name="type" type="constant">actor</arg>
-							<arg name="id" type="xpath">string-join(( text() , ../PRVC[@etichetta="Town / Municipality"]/text() , ../PRVS[@etichetta="Country"]/text() ),'_')</arg>
+							<arg name="id" type="xpath">string-join(( text() , ../PRCS/text() , ../PRVC/text(), ../PRVP/text() , ../PRVR/text(), ../PRVS/text() ),'_')</arg>
 						</instance_generator>
 						<label_generator name="Literal">
 							<arg name="text" type="xpath">text()</arg>
@@ -5958,7 +5958,7 @@
 								<type>custom:Namedgraph</type>
 								<instance_generator name="MultiHashingGenerator">
 									<arg name="hierarchy" type="constant">actor</arg>
-									<arg name="object_HASHED_CONTENTS" type="xpath">string-join(( text() , ../PRVC[@etichetta="Town / Municipality"]/text() , ../PRVS[@etichetta="Country"]/text() ),'_')</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">string-join(( text() , ../PRCS/text() , ../PRVC/text(), ../PRVP/text() , ../PRVR/text(), ../PRVS/text() ),'_')</arg>
 									<arg name="term_simple" type="constant">graph</arg>
 								</instance_generator>
 								<additional>
