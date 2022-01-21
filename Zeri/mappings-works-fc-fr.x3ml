@@ -15,7 +15,7 @@
 		<namespace prefix="iiif_json" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
 		<namespace prefix="marc" uri="http://www.loc.gov/MARC21/slim"/>
 		<namespace prefix="fc" uri="https://artresearch.net/resource/custom/fc/"/>
-		<namespace prefix="fr" uri="https://artresearch.net/resource/fr/"/>
+		<namespace prefix="fr" uri="https://artresearch.net/resource/custom/fr/"/>
 	</namespaces>
 	<mappings>
 		<mapping>
