@@ -5,6 +5,108 @@
                     "Frick" .
 }
 
+<https://artresearch.net/resource/zeri/source/Zeri/graph> {
+        <https://artresearch.net/resource/zeri/source/Zeri>
+            a       <https://artresearch.net/custom/Provider> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Zeri" .
+}
+
+<https://artresearch.net/resource/khi/source/KHI/graph> {
+        <https://artresearch.net/resource/khi/source/KHI>
+            a       <https://artresearch.net/custom/Provider> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "KHI" .
+}
+
+<https://artresearch.net/resource/hertziana/source/Hertziana/graph> {
+        <https://artresearch.net/resource/hertziana/source/Hertziana>
+            a       <https://artresearch.net/custom/Provider> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Hertziana" .
+}
+
+<https://artresearch.net/resource/marburg/source/Marburg/graph> {
+        <https://artresearch.net/resource/marburg/source/Marburg>
+            a       <https://artresearch.net/custom/Provider> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Marburg" .
+}
+
+<https://artresearch.net/resource/midas/source/MIDAS/graph> {
+        <https://artresearch.net/resource/midas/source/MIDAS>
+            a       <https://artresearch.net/custom/Provider> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "MIDAS" .
+        <https://artresearch.net/resource/midas/source/midas>;
+                a       <https://artresearch.net/custom/Provider> ;
+                <http://www.w3.org/2000/01/rdf-schema#label>
+                        "MIDAS" .
+}
+
+<https://artresearch.net/resource/itatti/source/ITatti/graph> {
+        <https://artresearch.net/resource/itatti/source/ITatti>
+            a       <https://artresearch.net/custom/Provider> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "I Tatti" .
+}
+
+<https://artresearch.net/resource/itatti/source/FotoIndex/graph> {
+        <https://artresearch.net/resource/itatti/source/FotoIndex>
+            a       <https://artresearch.net/custom/Provider> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "FotoIndex" .
+}
+
+<https://artresearch.net/resource/itatti/source/SharedShelf/graph> {
+        <https://artresearch.net/resource/itatti/source/SharedShelf>
+                a       <https://artresearch.net/custom/Provider> ;
+                <http://www.w3.org/2000/01/rdf-schema#label>
+                        "SharedShelf" .
+}
+
+<https://artresearch.net/resource/pharos/source/Pharos/graph> {
+        <https://artresearch.net/resource/pharos/source/Pharos>
+                a       <https://artresearch.net/custom/Provider> ;
+                <http://www.w3.org/2000/01/rdf-schema#label>
+                        "Pharos" .
+}
+
+<https://artresearch.net/resource/nypl/source/NYPL/graph> {
+        <https://artresearch.net/resource/nypl/source/NYPL>
+                a       <https://artresearch.net/custom/Provider> ;
+                <http://www.w3.org/2000/01/rdf-schema#label>
+                        "NYPL" .
+}
+
+<https://artresearch.net/resource/ulan/source/ULAN/graph> {
+        <https://artresearch.net/resource/ulan/source/ULAN>
+                a       <https://artresearch.net/custom/Provider> ;
+                <http://www.w3.org/2000/01/rdf-schema#label>
+                        "ULAN" .
+}
+
+<https://artresearch.net/resource/geonames/source/Geonames/graph> {
+        <https://artresearch.net/resource/geonames/source/Geonames>
+                a       <https://artresearch.net/custom/Provider> ;
+                <http://www.w3.org/2000/01/rdf-schema#label>
+                        "Geonames" .
+}
+
+<https://artresearch.net/resource/wikidata/source/Wikidata/graph> {
+        <https://artresearch.net/resource/wikidata/source/Wikidata>
+                a       <https://artresearch.net/custom/Provider> ;
+                <http://www.w3.org/2000/01/rdf-schema#label>
+                        "Wikidata" .
+}
+
+<https://artresearch.net/resource/getty/source/Getty/graph> {
+        <https://artresearch.net/resource/getty/source/Getty>
+                a       <https://artresearch.net/custom/Provider> ;
+                <http://www.w3.org/2000/01/rdf-schema#label>
+                        "AAT" .
+}
+
 <http://vocab.getty.edu/aat/300133025/graph> {
     <http://vocab.getty.edu/aat/300133025>
             <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <https://artresearch.net/resource/vocab/maintype>;
@@ -263,20 +365,6 @@
                     "Institution Type" .
 }
 
-<https://artresearch.net/resource/itatti/source/ITatti/graph> {
-        <https://artresearch.net/resource/itatti/source/ITatti>
-            a       <https://artresearch.net/custom/Provider> ;
-            <http://www.w3.org/2000/01/rdf-schema#label>
-                    "I Tatti" .
-}
-
-<https://artresearch.net/resource/itatti/source/FotoIndex/graph> {
-        <https://artresearch.net/resource/itatti/source/FotoIndex>
-            a       <https://artresearch.net/custom/Provider> ;
-            <http://www.w3.org/2000/01/rdf-schema#label>
-                    "FotoIndex" .
-}
-
 <https://artresearch.net/resource/itatti/type/F7CBDA9E-2020-3744-B081-E05916F0285C/graph> {
         <https://artresearch.net/resource/itatti/type/F7CBDA9E-2020-3744-B081-E05916F0285C>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
@@ -381,13 +469,6 @@
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Primary Photo" .
-}
-
-<https://artresearch.net/resource/itatti/source/SharedShelf/graph> {
-        <https://artresearch.net/resource/itatti/source/SharedShelf>
-                a       <https://artresearch.net/custom/Provider> ;
-                <http://www.w3.org/2000/01/rdf-schema#label>
-                        "SharedShelf" .
 }
 
 <http://vocab.getty.edu/aat/300265418/graph> {
@@ -552,12 +633,7 @@
                     "subjects (content of works)" .
 }
 
-<https://artresearch.net/resource/zeri/source/Zeri/graph> {
-        <https://artresearch.net/resource/zeri/source/Zeri>
-            a       <https://artresearch.net/custom/Provider> ;
-            <http://www.w3.org/2000/01/rdf-schema#label>
-                    "Zeri" .
-}
+
 
 <https://artresearch.net/resource/zeri/type/E1584640-6C21-39D3-A25F-EF26DAF637CA/graph> {
         <https://artresearch.net/resource/zeri/type/E1584640-6C21-39D3-A25F-EF26DAF637CA>
@@ -792,14 +868,6 @@
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Village / Foreign placename" .
 }
-
-<https://artresearch.net/resource/marburg/source/Marburg/graph> {
-        <https://artresearch.net/resource/marburg/source/Marburg>
-            a       <https://artresearch.net/custom/Provider> ;
-            <http://www.w3.org/2000/01/rdf-schema#label>
-                    "Marburg" .
-}
-
 
 <https://artresearch.net/resource/marburg/type/80D6A234-5466-34BC-8465-19DA816F65E2/graph> {
         <https://artresearch.net/resource/marburg/type/80D6A234-5466-34BC-8465-19DA816F65E2>
@@ -1257,27 +1325,6 @@
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Secondary Iconography" .
-}
-
-<https://artresearch.net/resource/khi/source/KHI/graph> {
-        <https://artresearch.net/resource/khi/source/KHI>
-            a       <https://artresearch.net/custom/Provider> ;
-            <http://www.w3.org/2000/01/rdf-schema#label>
-                    "KHI" .
-}
-
-<https://artresearch.net/resource/hertziana/source/Hertziana/graph> {
-        <https://artresearch.net/resource/hertziana/source/Hertziana>
-            a       <https://artresearch.net/custom/Provider> ;
-            <http://www.w3.org/2000/01/rdf-schema#label>
-                    "Hertziana" .
-}
-
-<https://artresearch.net/resource/midas/source/MIDAS/graph> {
-        <https://artresearch.net/resource/midas/source/MIDAS>
-            a       <https://artresearch.net/custom/Provider> ;
-            <http://www.w3.org/2000/01/rdf-schema#label>
-                    "MIDAS" .
 }
 
 <http://vocab.getty.edu/aat/300264091/graph> {
