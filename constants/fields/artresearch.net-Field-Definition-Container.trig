@@ -2515,7 +2515,7 @@
 { 
 	graph ?graph {
   		$subject crm:P128_carries ?visual_item.
-  		?visual_item crm:P128_is_carried_by ?negative.
+  		?visual_item crm:P128i_is_carried_by ?negative.
   		?negative crm:P108i_was_produced_by ?production.
   		?production crm:P4_has_time-span ?tm.
   		?tm crm:P82_at_some_time_within ?value.

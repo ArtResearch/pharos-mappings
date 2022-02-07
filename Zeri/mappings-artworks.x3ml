@@ -1366,6 +1366,50 @@
 			<link> 
 				<path>
 					<source_relation>
+						<relation>PARAGRAFO[@etichetta="AUTHOR"]/RIPETIZIONE/AUTS[@etichetta="Connection with artist"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P108i_was_produced_by</relationship>
+						<entity>
+							<type>crm:E12_Production</type>
+							<instance_generator name="EventUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P01i_is_domain_of</relationship>
+						<entity>
+							<type>crm:PC14_carried_out_by</type>
+							<instance_generator name="PropertyTypeUri">
+								<arg name="propertyType" type="constant">carried_out_by</arg>
+								<arg name="domain" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+								<arg name="range" type="xpath">../AUTN[@etichetta="Artist's name"]/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P14.1_in_the_role_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="AUTHOR"]/RIPETIZIONE/AUTS[@etichetta="Connection with artist"]</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E55_Type</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">type</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link> 
+				<path>
+					<source_relation>
 						<relation>PARAGRAFO[@etichetta="AUTHOR"]/RIPETIZIONE/AUTM[@etichetta="Reason for attribution"]</relation>
 					</source_relation>
 					<target_relation>
@@ -1474,7 +1518,61 @@
 					</target_node>
 				</range>
 			</link>
-			
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="DIFFERENT ATTRIBUTIONS"]/RIPETIZIONE/AATS[@etichetta="Connection with artist"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P108i_was_produced_by</relationship>
+						<entity>
+							<type>crm:E12_Production</type>
+							<instance_generator name="EventUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P140i_was_attributed_by</relationship>	
+						<entity>
+							<type>crm:E13_Attribute_Assignment</type>
+							<instance_generator name="ComplexEventUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+								<arg name="id" type="xpath">../AAT[@etichetta="Name"]/text()</arg>
+								<arg name="event_type" type="constant">attribute_assignment</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P141_assigned</relationship>
+						<entity>
+							<type>crm:PC14_carried_out_by</type>
+							<instance_generator name="PropertyTypeUri">
+								<arg name="propertyType" type="constant">carried_out_by</arg>
+								<arg name="domain" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+								<arg name="range" type="xpath">../AAT[@etichetta="Name"]/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P14.1_in_the_role_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="DIFFERENT ATTRIBUTIONS"]/RIPETIZIONE/AATS[@etichetta="Connection with artist"]</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E55_Type</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">type</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
 			<link> 
 				<path>
 					<source_relation>
@@ -3208,6 +3306,50 @@
 			<link> 
 				<path>
 					<source_relation>
+						<relation>PARAGRAFO[@etichetta="AUTHOR"]/RIPETIZIONE/AUTS[@etichetta="Connection with artist"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P108i_was_produced_by</relationship>
+						<entity>
+							<type>crm:E12_Production</type>
+							<instance_generator name="EventUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P01i_is_domain_of</relationship>
+						<entity>
+							<type>crm:PC14_carried_out_by</type>
+							<instance_generator name="PropertyTypeUri">
+								<arg name="propertyType" type="constant">carried_out_by</arg>
+								<arg name="domain" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+								<arg name="range" type="xpath">../AUTN[@etichetta="Artist's name"]/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P14.1_in_the_role_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="AUTHOR"]/RIPETIZIONE/AUTS[@etichetta="Connection with artist"]</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E55_Type</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">type</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link> 
+				<path>
+					<source_relation>
 						<relation>PARAGRAFO[@etichetta="AUTHOR"]/RIPETIZIONE/AUTM[@etichetta="Reason for attribution"]</relation>
 					</source_relation>
 					<target_relation>
@@ -3312,6 +3454,60 @@
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="DIFFERENT ATTRIBUTIONS"]/RIPETIZIONE/AATS[@etichetta="Connection with artist"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P108i_was_produced_by</relationship>
+						<entity>
+							<type>crm:E12_Production</type>
+							<instance_generator name="EventUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P140i_was_attributed_by</relationship>	
+						<entity>
+							<type>crm:E13_Attribute_Assignment</type>
+							<instance_generator name="ComplexEventUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+								<arg name="id" type="xpath">../AAT[@etichetta="Name"]/text()</arg>
+								<arg name="event_type" type="constant">attribute_assignment</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P141_assigned</relationship>
+						<entity>
+							<type>crm:PC14_carried_out_by</type>
+							<instance_generator name="PropertyTypeUri">
+								<arg name="propertyType" type="constant">carried_out_by</arg>
+								<arg name="domain" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+								<arg name="range" type="xpath">../AAT[@etichetta="Name"]/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P14.1_in_the_role_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="DIFFERENT ATTRIBUTIONS"]/RIPETIZIONE/AATS[@etichetta="Connection with artist"]</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E55_Type</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">type</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
 						</entity>
 					</target_node>
 				</range>
