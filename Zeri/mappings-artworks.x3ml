@@ -1731,8 +1731,9 @@
 								<arg name="to" type="constant">-</arg>
 								<arg name="timespan" type="xpath">../PRDU[@etichetta="Date OUT"]/text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">string-join(("Former Location:",text(),"- Acquisition:",../PRDU[@etichetta="Date OUT"]/text()),' ')</arg>
+							<label_generator name="AcquisitionFormerWithDate">
+								<arg name="From" type="xpath">string-join((text(), ../PRVP/text() , ../PRVR/text(), ../PRVS/text()),', ')</arg>
+								<arg name="Date" type="xpath">../PRDU[@etichetta="Date OUT"]/text()</arg>
 							</label_generator>
 							<additional>
 								<relationship>custom:has_order</relationship>
@@ -1785,8 +1786,8 @@
 								<arg name="to" type="constant">-</arg>
 								<arg name="timespan" type="constant">-</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">string-join(("Former Location:",text()),' ')</arg>
+							<label_generator name="AcquisitionFormerWithoutDate">
+								<arg name="From" type="xpath">string-join((text(), ../PRVP/text() , ../PRVR/text(), ../PRVS/text()),', ')</arg>
 							</label_generator>
 							<additional>
 								<relationship>custom:has_order</relationship>
@@ -1853,10 +1854,11 @@
 								<arg name="eventType" type="constant">acquisition</arg>
 								<arg name="from" type="xpath">../PRCD[@etichetta="Repository"]/text()</arg>
 								<arg name="to" type="constant">-</arg>
-								<arg name="timespan" type="xpath">../PRDU[@etichetta="Date OUT"]/text()</arg>
+								<arg name="timespan" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">string-join(("Former Location:",../PRCD[@etichetta="Repository"]/text(),"- Acquisition:",text()),' ')</arg>
+							<label_generator name="AcquisitionFormerWithDate">
+								<arg name="From" type="xpath">string-join((../PRCD[@etichetta="Repository"]/text(), ../PRVP/text() , ../PRVR/text(), ../PRVS/text()),', ')</arg>
+								<arg name="Date" type="xpath">text()</arg>
 							</label_generator>
 							<additional>
 								<relationship>custom:has_order</relationship>
@@ -3671,8 +3673,9 @@
 								<arg name="to" type="constant">-</arg>
 								<arg name="timespan" type="xpath">../PRDU[@etichetta="Date OUT"]/text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">string-join(("Former Location:",text(),"- Acquisition:",../PRDU[@etichetta="Date OUT"]/text()),' ')</arg>
+							<label_generator name="AcquisitionFormerWithDate">
+								<arg name="From" type="xpath">string-join((text(), ../PRVP/text() , ../PRVR/text(), ../PRVS/text()),', ')</arg>
+								<arg name="Date" type="xpath">../PRDU[@etichetta="Date OUT"]/text()</arg>
 							</label_generator>
 							<additional>
 								<relationship>custom:has_order</relationship>
@@ -3725,8 +3728,8 @@
 								<arg name="to" type="constant">-</arg>
 								<arg name="timespan" type="constant">-</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">string-join(("Former Location:",text()),' ')</arg>
+							<label_generator name="AcquisitionFormerWithoutDate">
+								<arg name="From" type="xpath">string-join((text(), ../PRVP/text() , ../PRVR/text(), ../PRVS/text()),', ')</arg>
 							</label_generator>
 							<additional>
 								<relationship>custom:has_order</relationship>
@@ -3793,10 +3796,11 @@
 								<arg name="eventType" type="constant">acquisition</arg>
 								<arg name="from" type="xpath">../PRCD[@etichetta="Repository"]/text()</arg>
 								<arg name="to" type="constant">-</arg>
-								<arg name="timespan" type="xpath">../PRDU[@etichetta="Date OUT"]/text()</arg>
+								<arg name="timespan" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">string-join(("Former Location:",../PRCD[@etichetta="Repository"]/text(),"- Acquisition:",text()),' ')</arg>
+							<label_generator name="AcquisitionFormerWithDate">
+								<arg name="From" type="xpath">string-join((../PRCD[@etichetta="Repository"]/text(), ../PRVP/text() , ../PRVR/text(), ../PRVS/text()),', ')</arg>
+								<arg name="Date" type="xpath">text()</arg>
 							</label_generator>
 							<additional>
 								<relationship>custom:has_order</relationship>
