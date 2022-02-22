@@ -1,0 +1,149 @@
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMdig/> .
+@prefix crminfluence: <http://www.cidoc-crm.org/cidoc-crm/influence/> .
+@prefix crmsci: <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix Help: <http://help.researchspace.org/resource/> .
+@prefix bds: <http://www.bigdata.com/rdf/search#> .
+@prefix crmba: <http://www.cidoc-crm.org/cidoc-crm/CRMba/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fc: <https://pharos.artresearch.net/resource/fc/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix pharos: <https://pharos.artresearch.net/resource/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix User: <http://www.researchspace.org/resource/user/> .
+@prefix forms: <http://www.researchspace.org/resource/system/forms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rshelp: <http://researchspace.org/help/> .
+@prefix sp: <http://spinrdf.org/sp#> .
+@prefix custom: <https://pharos.artresearch.net/resource/custom/fc/> .
+@prefix Platform: <http://www.researchspace.org/resource/system/> .
+@prefix crmgeo: <http://www.ics.forth.gr/isl/CRMgeo/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix fr: <https://pharos.artresearch.net/resource/fr/> .
+@prefix rso: <http://www.researchspace.org/ontology/> .
+@prefix Admin: <http://www.researchspace.org/resource/admin/> .
+@prefix ontodia: <http://ontodia.org/schema/v1#> .
+@prefix frbroo: <http://iflastandards.info/ns/fr/frbr/frbroo/> .
+@prefix crmarchaeo: <http://www.cidoc-crm.org/cidoc-crm/CRMarchaeo/> .
+@prefix rsp: <http://www.researchspace.org/resource/> .
+
+<http://www.researchspace.org/resource/system/fileContainer/context> {
+  Platform:fileContainer a prov:Entity, <http://www.w3.org/ns/ldp#Resource>, <http://www.w3.org/ns/ldp#Container>;
+    prov:wasAttributedTo User:admin;
+    rdfs:comment "Container to store resource of rdf:type <http://purl.org/net/provenance/ns#File>.";
+    rdfs:label "File Container";
+    prov:generatedAtTime "2021-03-03T08:48:31.484Z"^^xsd:dateTime .
+  
+  _:node1fqr1d7kex523 <http://www.w3.org/ns/ldp#contains> Platform:fileContainer .
+}
+
+<https://vision.artresearch.net/uploaded-file-5929038943809071366_CAM_SA_Salerno_Cattedrale_grandchild_other.jpg/context> {
+  Platform:fileContainer <http://www.w3.org/ns/ldp#contains> <https://vision.artresearch.net/uploaded-file-5929038943809071366_CAM_SA_Salerno_Cattedrale_grandchild_other.jpg> .
+  
+  <https://vision.artresearch.net/uploaded-file-5929038943809071366_CAM_SA_Salerno_Cattedrale_grandchild_other.jpg>
+    a <http://www.w3.org/ns/ldp#Resource>, prov:Entity, <http://www.metaphacts.com/ontologies/platform#File>;
+    prov:generatedAtTime "2021-03-03T14:59:48.764Z"^^xsd:dateTime;
+    prov:wasAttributedTo User:admin;
+    <http://www.metaphacts.com/ontologies/platform#fileName> "5929038943809071366_CAM_SA_Salerno_Cattedrale_grandchild_other.jpg";
+    <http://www.metaphacts.com/ontologies/platform#mediaType> "image/jpeg" .
+}
+
+<http://www.researchspace.org/resource/system/file8297499490739781163_native.jpg/context> {
+  Platform:fileContainer <http://www.w3.org/ns/ldp#contains> Platform:file8297499490739781163_native.jpg .
+  
+  Platform:file8297499490739781163_native.jpg a <http://www.w3.org/ns/ldp#Resource>,
+      prov:Entity, Platform:File;
+    prov:generatedAtTime "2021-03-04T11:53:17.340Z"^^xsd:dateTime;
+    prov:wasAttributedTo User:admin;
+    Platform:fileName "8297499490739781163_native.jpg";
+    Platform:mediaType "image/jpeg" .
+}
+
+<http://www.researchspace.org/resource/system/file2204689199884533658_native.jpg/context> {
+  Platform:fileContainer <http://www.w3.org/ns/ldp#contains> Platform:file2204689199884533658_native.jpg .
+  
+  Platform:file2204689199884533658_native.jpg a <http://www.w3.org/ns/ldp#Resource>,
+      prov:Entity, Platform:File;
+    prov:generatedAtTime "2021-03-04T12:10:23.856Z"^^xsd:dateTime;
+    prov:wasAttributedTo User:admin;
+    Platform:fileName "2204689199884533658_native.jpg";
+    Platform:mediaType "image/jpeg" .
+}
+
+<http://www.researchspace.org/resource/system/file3050254484292920293_Screenshot_2021-01-04_142417.png/context> {
+  Platform:fileContainer <http://www.w3.org/ns/ldp#contains> Platform:file3050254484292920293_Screenshot_2021-01-04_142417.png .
+  
+  Platform:file3050254484292920293_Screenshot_2021-01-04_142417.png a <http://www.w3.org/ns/ldp#Resource>,
+      prov:Entity, Platform:File;
+    prov:generatedAtTime "2021-03-05T09:17:05.327Z"^^xsd:dateTime;
+    prov:wasAttributedTo User:admin;
+    Platform:fileName "3050254484292920293_Screenshot_2021-01-04_142417.png";
+    Platform:mediaType "image/png" .
+}
+
+<http://www.researchspace.org/resource/system/file1947437061267673770_Screenshot_2021-01-04_142417.png/context> {
+  Platform:fileContainer <http://www.w3.org/ns/ldp#contains> Platform:file1947437061267673770_Screenshot_2021-01-04_142417.png .
+  
+  Platform:file1947437061267673770_Screenshot_2021-01-04_142417.png a <http://www.w3.org/ns/ldp#Resource>,
+      prov:Entity, Platform:File;
+    prov:generatedAtTime "2021-03-05T09:24:54.621Z"^^xsd:dateTime;
+    prov:wasAttributedTo User:admin;
+    Platform:fileName "1947437061267673770_Screenshot_2021-01-04_142417.png";
+    Platform:mediaType "image/png" .
+}
+
+<http://www.researchspace.org/resource/system/file6095423706951562434_Screenshot_2021-01-04_142417.png/context> {
+  Platform:fileContainer <http://www.w3.org/ns/ldp#contains> Platform:file6095423706951562434_Screenshot_2021-01-04_142417.png .
+  
+  Platform:file6095423706951562434_Screenshot_2021-01-04_142417.png a <http://www.w3.org/ns/ldp#Resource>,
+      prov:Entity, Platform:File;
+    prov:generatedAtTime "2021-03-05T09:28:43.507Z"^^xsd:dateTime;
+    prov:wasAttributedTo User:admin;
+    Platform:fileName "6095423706951562434_Screenshot_2021-01-04_142417.png";
+    Platform:mediaType "image/png" .
+}
+
+<http://www.researchspace.org/resource/system/file8159081350681057927_CAM_SA_Salerno_Cattedrale_grandchild_other.jpg/context> {
+  Platform:fileContainer <http://www.w3.org/ns/ldp#contains> Platform:file8159081350681057927_CAM_SA_Salerno_Cattedrale_grandchild_other.jpg .
+  
+  Platform:file8159081350681057927_CAM_SA_Salerno_Cattedrale_grandchild_other.jpg a
+      <http://www.w3.org/ns/ldp#Resource>, prov:Entity, Platform:File;
+    prov:generatedAtTime "2021-03-05T09:33:46.435Z"^^xsd:dateTime;
+    prov:wasAttributedTo User:admin;
+    Platform:fileName "8159081350681057927_CAM_SA_Salerno_Cattedrale_grandchild_other.jpg";
+    Platform:mediaType "image/jpeg" .
+}
+
+<http://www.researchspace.org/resource/system/file5783275492005305754_Picture2.jpg/context> {
+  Platform:fileContainer <http://www.w3.org/ns/ldp#contains> Platform:file5783275492005305754_Picture2.jpg .
+  
+  Platform:file5783275492005305754_Picture2.jpg a <http://www.w3.org/ns/ldp#Resource>,
+      prov:Entity, Platform:File;
+    prov:generatedAtTime "2021-03-05T09:39:47.596Z"^^xsd:dateTime;
+    prov:wasAttributedTo User:admin;
+    Platform:fileName "5783275492005305754_Picture2.jpg";
+    Platform:mediaType "image/jpeg" .
+}
+
+<http://www.researchspace.org/resource/system/file3423294192036780178_Screenshot_2021-01-04_142417.png/context> {
+  Platform:fileContainer <http://www.w3.org/ns/ldp#contains> Platform:file3423294192036780178_Screenshot_2021-01-04_142417.png .
+  
+  Platform:file3423294192036780178_Screenshot_2021-01-04_142417.png a <http://www.w3.org/ns/ldp#Resource>,
+      prov:Entity, Platform:File;
+    prov:generatedAtTime "2021-03-05T12:14:20.409Z"^^xsd:dateTime;
+    prov:wasAttributedTo User:admin;
+    Platform:fileName "3423294192036780178_Screenshot_2021-01-04_142417.png";
+    Platform:mediaType "image/png" .
+}
+
+<http://www.researchspace.org/resource/system/file8244864606773088628_Screenshot_2021-01-04_142417.png/context> {
+  Platform:fileContainer <http://www.w3.org/ns/ldp#contains> Platform:file8244864606773088628_Screenshot_2021-01-04_142417.png .
+  
+  Platform:file8244864606773088628_Screenshot_2021-01-04_142417.png a <http://www.w3.org/ns/ldp#Resource>,
+      prov:Entity, Platform:File;
+    prov:generatedAtTime "2021-03-05T12:21:46.328Z"^^xsd:dateTime;
+    prov:wasAttributedTo User:admin;
+    Platform:fileName "8244864606773088628_Screenshot_2021-01-04_142417.png";
+    Platform:mediaType "image/png" .
+}
