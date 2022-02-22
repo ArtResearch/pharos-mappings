@@ -121,7 +121,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>aob30/a3600</relation>
+						<relation>aob35/a3600</relation>
 					</source_relation>
 					<target_relation>
 						<if>
@@ -131,7 +131,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>aob30/a3600</source_node>
+					<source_node>aob35/a3600</source_node>
 					<target_node>
 						<entity>
 							<type>fc:artist</type>
@@ -698,7 +698,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>aob30/a3600</relation>
+						<relation>aob35/a3600</relation>
 					</source_relation>
 					<target_relation>
 						<if>
@@ -708,7 +708,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>aob30/a3600</source_node>
+					<source_node>aob35/a3600</source_node>
 					<target_node>
 						<entity>
 							<type>fc:artist</type>
@@ -1275,7 +1275,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>aob30/a3600</relation>
+						<relation>aob35/a3600</relation>
 					</source_relation>
 					<target_relation>
 						<if>
@@ -1285,7 +1285,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>aob30/a3600</source_node>
+					<source_node>aob35/a3600</source_node>
 					<target_node>
 						<entity>
 							<type>fc:artist</type>
@@ -1852,7 +1852,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>aob30/a3600</relation>
+						<relation>aob35/a3600</relation>
 					</source_relation>
 					<target_relation>
 						<if>
@@ -1862,7 +1862,7 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>aob30/a3600</source_node>
+					<source_node>aob35/a3600</source_node>
 					<target_node>
 						<entity>
 							<type>fc:artist</type>
