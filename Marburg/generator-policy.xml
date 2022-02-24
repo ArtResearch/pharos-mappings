@@ -46,6 +46,10 @@
 	<pattern>{type}/{id}</pattern>
 </generator>
 
+<generator name="RelatedDocument">
+	<pattern>{text}: {type}</pattern>
+</generator>
+
 <generator name="URIwithTypeAndId" prefix="prefix">
 	<pattern>{type}/{id}</pattern>
 </generator>

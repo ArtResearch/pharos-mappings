@@ -3267,7 +3267,7 @@
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
 							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
+								<arg name="text" type="xpath">string-join((../a2700/text(),../a2740/text()),": ")</arg>
 							</label_generator>
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
@@ -3311,8 +3311,9 @@
 								<arg name="type" type="constant">related_document</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
+							<label_generator name="RelatedDocument">
+								<arg name="text" type="xpath">../text()</arg>
+								<arg name="type" type="xpath">string-join((../a5009/text(),../a5013/text(),../a5010/text(),../a5011/text(),../a501r/text(),../a501s/text()),", ")</arg>
 							</label_generator>
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
@@ -3335,6 +3336,59 @@
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">work</arg>
 								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>a5007</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<not>
+								<if>
+									<exists>a5008/text()</exists>
+								</if>
+							</not>
+						</if>
+						<relationship>crm:P67i_is_referred_to_by</relationship>
+						<entity>
+							<type>crm:E73_Information_Object</type>
+							<instance_generator name="InformationObjectUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../a5000/text()</arg>
+								<arg name="type" type="constant">related_document</arg>
+								<arg name="id" type="xpath">string-join((a5009/text(),a5013/text(),a5014/text(),a5010/text(),a501c/text(),a5011/text(),a501r/text(),a501s/text(),a501k/text(),a501t/text()),", ")</arg>
+							</instance_generator>
+							<label_generator name="RelatedDocument">
+								<arg name="text" type="xpath">text()</arg>
+								<arg name="type" type="xpath">string-join((a5009/text(),a5013/text(),a5014/text(),a5010/text(),a501c/text(),a5011/text(),a501r/text(),a501s/text(),a501k/text(),a501t/text()),", ")</arg>
+							</label_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">http://vocab.getty.edu/aat/300435412</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+						<relationship>crm:P70i_is_documented_in</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a5007</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">work</arg>
+								<arg name="id" type="xpath">string-join((a5009/text(),a5013/text(),a5014/text(),a5010/text(),a501c/text(),a5011/text(),a501r/text(),a501s/text(),a501k/text(),a501t/text()),", ")</arg>
 							</instance_generator>
 						</entity>
 					</target_node>

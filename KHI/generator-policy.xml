@@ -100,6 +100,10 @@
 	<pattern>{Author} | Reason: {Reason}</pattern>
 </generator>
 
+<generator name="RelatedDocument">
+	<pattern>{text}: {type}</pattern>
+</generator>
+
 <generator name="IdentifierURI" prefix="prefix" shorten="yes">
 	<pattern>{subject_type}/{subject_id}/{identifier_type}/{identifier_id}</pattern>
 </generator>

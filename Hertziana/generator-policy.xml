@@ -121,6 +121,10 @@
 	<pattern>{resourceType}/{resourceId}/{eventType}/timespan/{timespan}</pattern>
 </generator>
 
+<generator name="RelatedDocument">
+	<pattern>{text}: {type}</pattern>
+</generator>
+
 <generator name="AcquisitionUri" prefix="prefix" shorten="yes">
 	<pattern>{resourceType}/{resourceId}/{eventType}/{from}{to}{timespan}</pattern>
 </generator>
