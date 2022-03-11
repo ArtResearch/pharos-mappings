@@ -14,8 +14,10 @@
 		<namespace prefix="iiif_image" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
 		<namespace prefix="iiif_json" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
 		<namespace prefix="marc" uri="http://www.loc.gov/MARC21/slim"/>
-		<namespace prefix="fc" uri="https://artresearch.net/resource/custom/fc/"/>
-		<namespace prefix="fr" uri="https://artresearch.net/resource/custom/fr/"/>
+		<namespace prefix="cfc" uri="https://artresearch.net/resource/custom/fc/"/>
+		<namespace prefix="cfr" uri="https://artresearch.net/resource/custom/fr/"/>
+		<namespace prefix="fc" uri="https://artresearch.net/resource/fc/"/>
+		<namespace prefix="fr" uri="https://artresearch.net/resource/fr/"/>
 	</namespaces>
 	<mappings>
 		<mapping>
@@ -23,15 +25,15 @@
 				<source_node>//RISULTATI/SCHEDA</source_node>
 				<target_node>
                     <entity>
-                        <type>fc:work</type>
+                        <type>cfc:work</type>
 						<instance_generator name="URIwithTypeAndId">
 						    <arg name="type" type="constant">work</arg>
 							<arg name="id" type="xpath">PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
 						</instance_generator>
 						<additional>
-							<relationship>fr:Work_has_provider_Institution</relationship>
+							<relationship>cfr:Work_has_provider_Institution</relationship>
 							<entity>
-								<type>fc:institution</type>
+								<type>cfc:institution</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">Zeri</arg>
@@ -48,25 +50,77 @@
 						<relation>PARAGRAFO[@etichetta="AUTHOR"]/RIPETIZIONE/AUTN[@etichetta="Artist's name"]</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>fr:Work_created_from_Artist</relationship>
+						<if>
+							<not>
+								<if>
+									<exists>../AUTHORITIES/ULAN/text()</exists>
+								</if>
+							</not>
+						</if>
+						<relationship>cfr:Work_created_from_Artist</relationship>
 					</target_relation>
 				</path>
 				<range>
 					<source_node>PARAGRAFO[@etichetta="AUTHOR"]/RIPETIZIONE/AUTN[@etichetta="Artist's name"]</source_node>
 					<target_node>
 						<entity>
-							<type>fc:artist</type>
+							<type>cfc:artist</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
 							<additional>
-								<relationship>fr:Artist_created_Work</relationship>
+								<relationship>cfr:Artist_created_Work</relationship>
 								<entity>
-									<type>fc:work</type>
+									<type>cfc:work</type>
 									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">work</arg>
 										<arg name="id" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>PARAGRAFO[@etichetta="AUTHOR"]/RIPETIZIONE/AUTN[@etichetta="Artist's name"]</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<exists>../AUTHORITIES/ULAN/text()</exists>
+						</if>
+						<relationship>cfr:Work_created_from_Artist</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>PARAGRAFO[@etichetta="AUTHOR"]/RIPETIZIONE/AUTN[@etichetta="Artist's name"]</source_node>
+					<target_node>
+						<entity>
+							<type>cfc:artist</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>cfr:Artist_created_Work</relationship>
+								<entity>
+									<type>cfc:work</type>
+									<instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">work</arg>
+										<arg name="id" type="xpath">../../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+							<additional>
+								<relationship>owl:sameAs</relationship>
+								<entity>
+									<type>fc:artist</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="xpath">../AUTHORITIES/ULAN/text()</arg>
 									</instance_generator>
 								</entity>
 							</additional>
@@ -81,7 +135,7 @@
 						<relation>PARAGRAFO[@etichetta="DATING"]/RIPETIZIONE/DTSI[@etichetta="From"]</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>fr:Work_from_Date</relationship>
+						<relationship>cfr:Work_from_Date</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -103,7 +157,7 @@
 						<relation>PARAGRAFO[@etichetta="DATING"]/RIPETIZIONE/DTSF[@etichetta="To"]</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>fr:Work_to_Date</relationship>
+						<relationship>cfr:Work_to_Date</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -125,22 +179,22 @@
 						<relation>PARAGRAFO[@etichetta="LOCATION"]/LDCN[@etichetta="Repository"]</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>fr:Work_kept_by_Institution</relationship>
+						<relationship>cfr:Work_kept_by_Institution</relationship>
 					</target_relation>
 				</path>
 				<range>
 					<source_node>PARAGRAFO[@etichetta="LOCATION"]/LDCN[@etichetta="Repository"]</source_node>
 					<target_node>
 						<entity>
-							<type>fc:institution</type>
+							<type>cfc:institution</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">string-join((text(), ../LDCS/text() , ../PVCC/text() , ../PVCP/text(), ../PVCR/text() , ../PVCS/text() ),'_')</arg>
 							</instance_generator>
 							<additional>
-								<relationship>fr:Institution_keeps_Work</relationship>
+								<relationship>cfr:Institution_keeps_Work</relationship>
 								<entity>
-									<type>fc:work</type>
+									<type>cfc:work</type>
 									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">work</arg>
 										<arg name="id" type="xpath">../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
@@ -158,22 +212,22 @@
 						<relation>PARAGRAFO[@etichetta="LOCATION"]/PVCL[@etichetta="Village"]</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>fr:Work_from_Place</relationship>
+						<relationship>cfr:Work_from_Place</relationship>
 					</target_relation>
 				</path>
 				<range>
 					<source_node>PARAGRAFO[@etichetta="LOCATION"]/PVCL[@etichetta="Village"]</source_node>
 					<target_node>
 						<entity>
-							<type>fc:place</type>
+							<type>cfc:place</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">place</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
 							<additional>
-								<relationship>fr:Place_of_Work</relationship>
+								<relationship>cfr:Place_of_Work</relationship>
 								<entity>
-									<type>fc:work</type>
+									<type>cfc:work</type>
 									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">work</arg>
 										<arg name="id" type="xpath">../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
@@ -191,22 +245,22 @@
 						<relation>PARAGRAFO[@etichetta="LOCATION"]/PVCC[@etichetta="Town / Municipality"]</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>fr:Work_from_Place</relationship>
+						<relationship>cfr:Work_from_Place</relationship>
 					</target_relation>
 				</path>
 				<range>
 					<source_node>PARAGRAFO[@etichetta="LOCATION"]/PVCC[@etichetta="Town / Municipality"]</source_node>
 					<target_node>
 						<entity>
-							<type>fc:place</type>
+							<type>cfc:place</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">place</arg>
 								<arg name="id" type="xpath">string-join((text() , ../PVCS[@etichetta="Country"]/text() ),'_')</arg>
 							</instance_generator>
 							<additional>
-								<relationship>fr:Place_of_Work</relationship>
+								<relationship>cfr:Place_of_Work</relationship>
 								<entity>
-									<type>fc:work</type>
+									<type>cfc:work</type>
 									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">work</arg>
 										<arg name="id" type="xpath">../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
@@ -224,22 +278,22 @@
 						<relation>PARAGRAFO[@etichetta="LOCATION"]/PVCP[@etichetta="District"]</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>fr:Work_from_Place</relationship>
+						<relationship>cfr:Work_from_Place</relationship>
 					</target_relation>
 				</path>
 				<range>
 					<source_node>PPARAGRAFO[@etichetta="LOCATION"]/PVCP[@etichetta="District"]</source_node>
 					<target_node>
 						<entity>
-							<type>fc:place</type>
+							<type>cfc:place</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">place</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
 							<additional>
-								<relationship>fr:Place_of_Work</relationship>
+								<relationship>cfr:Place_of_Work</relationship>
 								<entity>
-									<type>fc:work</type>
+									<type>cfc:work</type>
 									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">work</arg>
 										<arg name="id" type="xpath">../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
@@ -257,22 +311,22 @@
 						<relation>PARAGRAFO[@etichetta="LOCATION"]/PVCR[@etichetta="Region / Federal State"]</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>fr:Work_from_Place</relationship>
+						<relationship>cfr:Work_from_Place</relationship>
 					</target_relation>
 				</path>
 				<range>
 					<source_node>PARAGRAFO[@etichetta="LOCATION"]/PVCR[@etichetta="Region / Federal State"]</source_node>
 					<target_node>
 						<entity>
-							<type>fc:place</type>
+							<type>cfc:place</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">place</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
 							<additional>
-								<relationship>fr:Place_of_Work</relationship>
+								<relationship>cfr:Place_of_Work</relationship>
 								<entity>
-									<type>fc:work</type>
+									<type>cfc:work</type>
 									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">work</arg>
 										<arg name="id" type="xpath">../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
@@ -290,22 +344,22 @@
 						<relation>PARAGRAFO[@etichetta="LOCATION"]/PVCS[@etichetta="Country"]</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>fr:Work_from_Place</relationship>
+						<relationship>cfr:Work_from_Place</relationship>
 					</target_relation>
 				</path>
 				<range>
 					<source_node>PARAGRAFO[@etichetta="LOCATION"]/PVCS[@etichetta="Country"]</source_node>
 					<target_node>
 						<entity>
-							<type>fc:place</type>
+							<type>cfc:place</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">place</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
 							<additional>
-								<relationship>fr:Place_of_Work</relationship>
+								<relationship>cfr:Place_of_Work</relationship>
 								<entity>
-									<type>fc:work</type>
+									<type>cfc:work</type>
 									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">work</arg>
 										<arg name="id" type="xpath">../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
@@ -323,22 +377,22 @@
 						<relation>ALLEGATI[@etichetta="Attached documents"]/FOTO</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>fr:Work_depicted_by_Photo</relationship>
+						<relationship>cfr:Work_depicted_by_Photo</relationship>
 					</target_relation>
 				</path>
 				<range>
 					<source_node>ALLEGATI[@etichetta="Attached documents"]/FOTO</source_node>
 					<target_node>
 						<entity>
-							<type>fc:photo</type>
+							<type>cfc:photo</type>
 							<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">photo</arg>
 										<arg name="id" type="xpath">@fotoID</arg>
 									</instance_generator>
 							<additional>
-								<relationship>fr:Photo_depicts_Work</relationship>
+								<relationship>cfr:Photo_depicts_Work</relationship>
 								<entity>
-									<type>fc:work</type>
+									<type>cfc:work</type>
 									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">work</arg>
 											<arg name="id" type="xpath">../../PARAGRAFO[@etichetta="CODES"]/NRSCHEDA[@etichetta="Entry number"]/text()</arg>
@@ -356,14 +410,14 @@
 						<relation>PARAGRAFO[@etichetta="OBJECT"]/MTC[@etichetta="Medium or materials"]</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>fr:Work_consists_of_Material</relationship>
+						<relationship>cfr:Work_consists_of_Material</relationship>
 					</target_relation>
 				</path>
 				<range>
 					<source_node>PARAGRAFO[@etichetta="OBJECT"]/MTC[@etichetta="Medium or materials"]</source_node>
 					<target_node>
 						<entity>
-							<type>fc:material</type>
+							<type>cfc:material</type>
 							<instance_generator name="URIwithVocabType">
 								<arg name="type" type="constant">material</arg>
 								<arg name="id" type="xpath">text()</arg>
@@ -382,14 +436,14 @@
 						<relation>PARAGRAFO[@etichetta="OBJECT"]/SGTI[@etichetta="Subject"]</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>fr:Work_shows_Subject</relationship>
+						<relationship>cfr:Work_shows_Subject</relationship>
 					</target_relation>
 				</path>
 				<range>
 					<source_node>PARAGRAFO[@etichetta="OBJECT"]/SGTI[@etichetta="Subject"]</source_node>
 					<target_node>
 						<entity>
-							<type>fc:subject</type>
+							<type>cfc:subject</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">subject</arg>
 								<arg name="id" type="xpath">text()</arg>

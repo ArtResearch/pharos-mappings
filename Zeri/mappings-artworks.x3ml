@@ -14,6 +14,7 @@
 		<namespace prefix="image" uri="http://catalogo.fondazionezeri.unibo.it/foto"/>
 		<namespace prefix="iiif_json" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
 		<namespace prefix="marc" uri="http://www.loc.gov/MARC21/slim"/>
+		<namespace prefix="fc" uri="https://artresearch.net/resource/fc/"/>
 	</namespaces>
 
 	<mappings>
@@ -4698,6 +4699,94 @@
 			<link> 
 				<path>
 					<source_relation>
+						<relation>AUTHORITIES/VIAF</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>skos:exactMatch</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>AUTHORITIES/VIAF</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E21_Person</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>AUTHORITIES/WIKIPEDIA</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>skos:exactMatch</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>AUTHORITIES/WIKIPEDIA</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E21_Person</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>AUTHORITIES/WIKIDATA</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>skos:exactMatch</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>AUTHORITIES/WIKIDATA</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E21_Person</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>AUTHORITIES/DBPEDIA</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>skos:exactMatch</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>AUTHORITIES/DBPEDIA</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E21_Person</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link> 
+				<path>
+					<source_relation>
 						<relation>ATBD[@etichetta="Cultural context"]</relation>
 					</source_relation>
 					<target_relation>
@@ -4879,6 +4968,115 @@
 				</range>
 			</link>
 			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>../AUTHORITIES/VIAF</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>skos:exactMatch</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../AUTHORITIES/VIAF</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E21_Person</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>../AUTHORITIES/WIKIPEDIA</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>skos:exactMatch</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../AUTHORITIES/WIKIPEDIA</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E21_Person</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>../AUTHORITIES/WIKIDATA</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>skos:exactMatch</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../AUTHORITIES/WIKIDATA</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E21_Person</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>../AUTHORITIES/DBPEDIA</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>skos:exactMatch</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../AUTHORITIES/DBPEDIA</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E21_Person</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>../AUTHORITIES/ULAN</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>owl:sameAs</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../AUTHORITIES/ULAN</source_node>
+					<target_node>
+						<entity>
+							<type>fc:artist</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
 		</mapping>
 
 		<mapping namedgraph="graph">
