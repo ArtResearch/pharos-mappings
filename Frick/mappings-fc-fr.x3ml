@@ -960,6 +960,66 @@
 			</link>
 	
 		</mapping>	
+
+		<mapping>
+			<domain>
+				<source_node>//marc:datafield[@tag="600"]</source_node>
+				<target_node>
+                    <entity>
+						<type>fc:artist</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">actor</arg>
+							<arg name="id" type="xpath">string-join((marc:subfield[@code="a"]/text(),marc:subfield[@code="c"]/text(),marc:subfield[@code="d"]/text()),"_")</arg>
+						</instance_generator>
+					</entity>
+				</target_node>
+			</domain>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>marc:subfield[@code="d"]/@birth</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>fr:Artist_has_Date_of_Birth</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>marc:subfield[@code="d"]/@birth</source_node>
+					<target_node>
+						<entity>
+							<type>xsd:date</type>
+							<instance_generator name="Literal">
+								<arg name="text" type="xpath">../@birth</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>marc:subfield[@code="d"]/@death</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>fr:Artist_has_Date_of_Death</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>marc:subfield[@code="d"]/@death</source_node>
+					<target_node>
+						<entity>
+							<type>xsd:date</type>
+							<instance_generator name="Literal">
+								<arg name="text" type="xpath">../@death</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+		</mapping>
 		
 	</mappings>
 </x3ml>
