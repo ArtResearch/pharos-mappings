@@ -59,6 +59,9 @@
   <http://www.researchspace.org/ontologies/platform/FieldCategories/references> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories>.
   <http://www.researchspace.org/ontologies/platform/FieldCategories/notes> <http://www.w3.org/2000/01/rdf-schema#label> "Notes".
   <http://www.researchspace.org/ontologies/platform/FieldCategories/notes> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories>.
+
+  <http://www.researchspace.org/ontologies/platform/FieldCategories/vision_assertions> <http://www.w3.org/2000/01/rdf-schema#label> "Vision Assertions".
+  <http://www.researchspace.org/ontologies/platform/FieldCategories/vision_assertions> <http://www.w3.org/2004/02/skos/core#inScheme> <http://www.researchspace.org/resource/system/FieldCategories>.
 }
 
 <https://artresearch.net/resource/pharos/fundamental_categories/graph> {
