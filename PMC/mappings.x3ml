@@ -79,6 +79,7 @@
 					<target_node>
 						<entity>
 							<type>custom:Namedgraph</type>
+							
 							<instance_generator name="namedgraph">
 								<arg name="type" type="constant">material</arg>
 								<arg name="id" type="xpath">lido:termMaterialsTech/lido:term/text()</arg>
@@ -111,6 +112,83 @@
 					</target_node>
 				</range>
 			</link>
+
+			<!--type-->
+			<link>
+				<path>
+					<source_relation>
+						<relation>../../lido:descriptiveMetadata/lido:objectClassificationWrap/lido:objectWorkTypeWrap/lido:objectWorkType</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../../lido:descriptiveMetadata/lido:objectClassificationWrap/lido:objectWorkTypeWrap/lido:objectWorkType</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="namedgraph">
+								<arg name="type" type="constant">type</arg>
+								<arg name="id" type="xpath">lido:conceptID/text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<!--technique-->
+			<link>
+				<path>
+					<source_relation>
+						<relation>../../lido:descriptiveMetadata/lido:objectClassificationWrap/lido:classificationWrap/lido:classification</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../../lido:descriptiveMetadata/lido:objectClassificationWrap/lido:classificationWrap/lido:classification</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="URIwithVocabTypeAndId">
+								<arg name="type" type="constant">technique</arg>
+								<arg name="id" type="xpath">string-join((lido:conceptID/text(),"graph"),'/')</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<!-- Bibliography -->
+			<link> 
+				<path>
+					<source_relation>
+						<relation>../../lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventDescriptionSet</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="300311705">../lido:eventID/text()</equals>
+						</if>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../../lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventDescriptionSet</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGenerator">
+								<arg name="hierarchy" type="constant">bibliography</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">lido:descriptiveNoteValue/text()</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
 		</mapping>
 		<!-- Work -->
 		<mapping namedgraph="graph">
@@ -728,6 +806,7 @@
 				</range>
 			</link>
 
+			<!-- Inscription -->
 			<link>
 				<path>
 					<source_relation>
