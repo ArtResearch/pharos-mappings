@@ -879,6 +879,8 @@
 					</target_node>
 				</range>
 			</link>
+		
+
 		</mapping>
 
 		<!-- Photo -->
@@ -943,6 +945,146 @@
 					</entity>
 				</target_node>
 			</domain>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../lido:resourceRepresentation/lido:linkResource/@lido:recordInfoLink</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="recto">../../../@lido:type</equals>
+						</if>
+						<relationship>crm:P129i_is_subject_of</relationship>
+						<entity>
+							<type>crmdig:D1_Digital_Object</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">replace(.,"/info.json","/full/full/0/default.jpg")</arg>
+							</instance_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">http://iiif.io/api/image</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIwithType">
+										<arg name="type" type="constant">type</arg>
+										<arg name="id" type="constant">recto</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">http://vocab.getty.edu/aat/300078817</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+							<additional>
+								<relationship>crmdig:L58_has_thumbnail</relationship>
+								<entity>
+									<type>crmdig:D39_Thumbnail</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="xpath">../text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+						<relationship>crm:P129i_is_subject_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../lido:resourceRepresentation/lido:linkResource/@lido:recordInfoLink</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E73_Information_Object</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">.</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>	 
+
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>../lido:resourceRepresentation/lido:linkResource/@lido:recordInfoLink</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="verso">../../../@lido:type</equals>
+						</if>
+						<relationship>crm:P129i_is_subject_of</relationship>
+						<entity>
+							<type>crmdig:D1_Digital_Object</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">replace(.,"/info.json","/full/full/0/default.jpg")</arg>
+							</instance_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">http://iiif.io/api/image</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIwithType">
+										<arg name="type" type="constant">type</arg>
+										<arg name="id" type="constant">verso</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">http://vocab.getty.edu/aat/300010292</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+							<additional>
+								<relationship>crmdig:L58_has_thumbnail</relationship>
+								<entity>
+									<type>crmdig:D39_Thumbnail</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="xpath">../text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+						<relationship>crm:P129i_is_subject_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../lido:resourceRepresentation/lido:linkResource/@lido:recordInfoLink</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E73_Information_Object</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">.</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>	 
+
 		</mapping>
 	</mappings>
 </x3ml>
