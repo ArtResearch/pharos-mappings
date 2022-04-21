@@ -464,6 +464,21 @@
                     "verso" .
 }
 
+<https://artresearch.net/resource/pmc/type/DEDDF600-5882-37D4-B91C-7CCCD5556894/graph> {
+        <https://artresearch.net/resource/pmc/type/DEDDF600-5882-37D4-B91C-7CCCD5556894>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "verso" .
+}
+
+<https://artresearch.net/resource/pmc/type/4F6A2899-2950-328C-B172-54AD813EE993/graph> {
+        <https://artresearch.net/resource/pmc/type/4F6A2899-2950-328C-B172-54AD813EE993>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "recto" .
+}
+
+
 <https://artresearch.net/resource/vocab/primaryphoto/graph> {
         <https://artresearch.net/resource/vocab/primaryphoto>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
