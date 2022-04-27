@@ -42,6 +42,10 @@
 	<pattern>{type}/{id}</pattern>
 </generator>
 
+<generator name="URIwithULANId" prefix="ulan">
+	<pattern>{id}</pattern>
+</generator>
+
 <generator name="URIwithVocabType" prefix="vocab" shorten="yes">
 	<pattern>{type}/{id}</pattern>
 </generator>

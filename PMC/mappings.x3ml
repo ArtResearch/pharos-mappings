@@ -12,6 +12,8 @@
 		<namespace prefix="iiif_image" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
 		<namespace prefix="lido" uri="http://www.lido-schema.org"/>
 		<namespace prefix="vocab" uri="https://artresearch.net/resource/pmc/vocabulary/"/>
+		<namespace prefix="ulan" uri="http://vocab.getty.edu/ulan/"/>
+		<namespace prefix="cfr" uri="https://artresearch.net/resource/custom/fr/"/>
 	</namespaces>
 
 	<mappings>
@@ -182,6 +184,56 @@
 							<instance_generator name="MultiHashingGenerator">
 								<arg name="hierarchy" type="constant">bibliography</arg>
 								<arg name="object_HASHED_CONTENTS" type="xpath">lido:descriptiveNoteValue/text()</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			
+
+			<!--Repository-->
+			<link>
+				<path>
+					<source_relation>
+						<relation>../../lido:descriptiveMetadata/lido:objectIdentificationWrap/lido:repositoryWrap/lido:repositorySet/lido:repositoryName/lido:legalBodyID[@lido:source="ULAN"]/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../../lido:descriptiveMetadata/lido:objectIdentificationWrap/lido:repositoryWrap/lido:repositorySet/lido:repositoryName/lido:legalBodyID[@lido:source="ULAN"]/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="URIwithULANId">
+								<arg name="id" type="xpath">string-join((.,"graph"),'/')</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<!--Repository Location-->
+			<link>
+				<path>
+					<source_relation>
+						<relation>../../lido:descriptiveMetadata/lido:objectIdentificationWrap/lido:repositoryWrap/lido:repositorySet/lido:repositoryLocation/lido:namePlaceSet/lido:appellationValue</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../../lido:descriptiveMetadata/lido:objectIdentificationWrap/lido:repositoryWrap/lido:repositorySet/lido:repositoryLocation/lido:namePlaceSet/lido:appellationValue</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGenerator">
+								<arg name="hierarchy" type="constant">place</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">string-join((text(),@xml:label),'_')</arg>
 								<arg name="term_simple" type="constant">graph</arg>
 							</instance_generator>
 						</entity>
@@ -880,7 +932,51 @@
 				</range>
 			</link>
 		
-
+			<!-- Repository -->
+			<link>
+				<path>
+					<source_relation>
+						<relation>lido:descriptiveMetadata/lido:objectIdentificationWrap/lido:repositoryWrap/lido:repositorySet/lido:repositoryName/lido:legalBodyID[@lido:source="ULAN"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P50_has_current_keeper</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>lido:descriptiveMetadata/lido:objectIdentificationWrap/lido:repositoryWrap/lido:repositorySet/lido:repositoryName/lido:legalBodyID[@lido:source="ULAN"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithULANId">
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			<!-- Repository Location -->
+			<link>
+				<path>
+					<source_relation>
+						<relation>lido:descriptiveMetadata/lido:objectIdentificationWrap/lido:repositoryWrap/lido:repositorySet/lido:repositoryLocation/lido:namePlaceSet</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P55_has_current_location</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>lido:descriptiveMetadata/lido:objectIdentificationWrap/lido:repositoryWrap/lido:repositorySet/lido:repositoryLocation/lido:namePlaceSet</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">place</arg>
+								<arg name="id" type="xpath">string-join((lido:appellationValue/text(),lido:appellationValue/@xml:label),'_')</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
 		</mapping>
 
 		<!-- Photo -->
@@ -1086,5 +1182,168 @@
 			</link>	 
 
 		</mapping>
+
+		<!-- Repository -->
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>//lido:lido/lido:descriptiveMetadata/lido:objectIdentificationWrap/lido:repositoryWrap/lido:repositorySet/lido:repositoryName/lido:legalBodyID[@lido:source="ULAN"]</source_node>
+				<target_node>				
+					<entity>
+						<type>crm:E39_Actor</type>
+						<instance_generator name="URIwithULANId">
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">../lido:legalBodyName/lido:appellationValue/text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">PMC</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIorUUID">
+									<arg name="text" type="constant">http://vocab.getty.edu/aat/300264595</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="URIwithULANId">
+									<arg name="id" type="xpath">string-join((text(),"graph"),'/')</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:noType</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">PMC</arg>
+										</instance_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+
+					</entity>
+				</target_node>
+			</domain>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>../../lido:repositoryLocation/lido:namePlaceSet</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P55_has_current_location</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../../lido:repositoryLocation/lido:namePlaceSet</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">place</arg>
+								<arg name="id" type="xpath">string-join((lido:appellationValue/text(),lido:appellationValue/@xml:label),'_')</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>../lido:legalBodyWeblink</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>cfr:Institution_has_Original_Link</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../lido:legalBodyWeblink</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E32_Identifier</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">http://vocab.getty.edu/aat/300404630</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+		</mapping>
+
+		<!-- Repository Location-->
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>//lido:lido/lido:descriptiveMetadata/lido:objectIdentificationWrap/lido:repositoryWrap/lido:repositorySet/lido:repositoryLocation/lido:namePlaceSet</source_node>
+				<target_node>				
+					<entity>
+						<type>crm:E53_Place</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">place</arg>
+							<arg name="id" type="xpath">string-join((lido:appellationValue/text(),lido:appellationValue/@xml:label),'_')</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">lido:appellationValue/text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">PMC</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">place</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">string-join((lido:appellationValue/text(),lido:appellationValue/@xml:label),'_')</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:noType</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">PMC</arg>
+										</instance_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+		</mapping>
+
 	</mappings>
 </x3ml>
