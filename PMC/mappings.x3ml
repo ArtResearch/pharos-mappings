@@ -13,6 +13,7 @@
 		<namespace prefix="lido" uri="http://www.lido-schema.org"/>
 		<namespace prefix="vocab" uri="https://artresearch.net/resource/pmc/vocabulary/"/>
 		<namespace prefix="ulan" uri="http://vocab.getty.edu/ulan/"/>
+		<namespace prefix="aat" uri="http://vocab.getty.edu/aat/"/>
 		<namespace prefix="cfr" uri="https://artresearch.net/resource/custom/fr/"/>
 	</namespaces>
 
@@ -241,6 +242,50 @@
 				</range>
 			</link>
 
+			<!--Artist (ulan)-->
+			<link>
+				<path>
+					<source_relation>
+						<relation>../../lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor/lido:actorInRole/lido:actor/lido:actorID[@lido:source="ULAN"]/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../../lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor/lido:actorInRole/lido:actor/lido:actorID[@lido:source="ULAN"]/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="URIwithULANId">
+								<arg name="id" type="xpath">string-join((.,"graph"),'/')</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			<!--Artist type-->
+			<link>
+				<path>
+					<source_relation>
+						<relation>../../lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor/lido:actorInRole/lido:roleActor/lido:conceptID[@lido:source="AAT"]/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../../lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor/lido:actorInRole/lido:roleActor/lido:conceptID[@lido:source="AAT"]/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="URIwithAATId">
+								<arg name="id" type="xpath">string-join((.,"graph"),'/')</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
 		</mapping>
 		<!-- Work -->
 		<mapping namedgraph="graph">
@@ -667,7 +712,6 @@
 			</link>
 			
 			<!-- Production Date End -->
-
 			<link>
 				<path>
 					<source_relation>
@@ -711,7 +755,116 @@
 				</range>
 			</link>
 
-
+			<!-- Production artist (ulan) -->
+			<link>
+				<path>
+					<source_relation>
+						<relation>lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor/lido:actorInRole</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<and>
+								<if>
+									<equals value="300404387">../../lido:eventID/text()</equals>
+								</if>
+								<if>
+									<exists>lido:actor/lido:actorID[@lido:source="ULAN"]</exists>
+								</if>
+							</and>
+						</if>
+						<relationship>crm:P108i_was_produced_by</relationship>
+						<entity>
+							<type>crm:E12_Production</type>
+							<instance_generator name="EventUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../../../../../lido:administrativeMetadata/lido:recordWrap/lido:recordID/text()</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P01i_is_domain_of</relationship>
+						<entity>
+							<type>crm:PC14_carried_out_by</type>
+							<instance_generator name="PropertyTypeUri">
+								<arg name="propertyType" type="constant">carried_out_by</arg>
+								<arg name="domain" type="xpath">../../../../../../lido:administrativeMetadata/lido:recordWrap/lido:recordID/text()</arg>
+								<arg name="range" type="xpath">lido:actor/lido:actorID[@lido:source="ULAN"]/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P02_has_range</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor/lido:actorInRole</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithULANId">
+								<arg name="id" type="xpath">lido:actor/lido:actorID[@lido:source="ULAN"]/text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<!-- Production artist (not ulan) -->
+			<link>
+				<path>
+					<source_relation>
+						<relation>lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor/lido:actorInRole</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<and>
+								<if>
+									<equals value="300404387">../../lido:eventID/text()</equals>
+								</if>
+								<if>
+									<not>
+										<if>
+											<exists>lido:actor/lido:actorID[@lido:source="ULAN"]</exists>
+										</if>
+									</not>
+								</if>
+								<if>
+									<exists>lido:actor/lido:actorID[@lido:source="local"]</exists>
+								</if>
+							</and>
+						</if>
+						<relationship>crm:P108i_was_produced_by</relationship>
+						<entity>
+							<type>crm:E12_Production</type>
+							<instance_generator name="EventUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../../../../../lido:administrativeMetadata/lido:recordWrap/lido:recordID/text()</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P01i_is_domain_of</relationship>
+						<entity>
+							<type>crm:PC14_carried_out_by</type>
+							<instance_generator name="PropertyTypeUri">
+								<arg name="propertyType" type="constant">carried_out_by</arg>
+								<arg name="domain" type="xpath">../../../../../../lido:administrativeMetadata/lido:recordWrap/lido:recordID/text()</arg>
+								<arg name="range" type="xpath">lido:actor/lido:actorID[@lido:source="local"]/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P02_has_range</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor/lido:actorInRole</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">lido:actor/lido:actorID[@lido:source="local"]/text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
 			<!-- Exhibition Event -->
 			<link> 
 				<path>
@@ -977,6 +1130,45 @@
 					</target_node>
 				</range>
 			</link>
+			<!-- Inventory Number -->
+			<link> 
+				<path>
+					<source_relation>
+						<relation>lido:descriptiveMetadata/lido:objectIdentificationWrap/lido:repositoryWrap/lido:repositorySet/lido:workID[@lido:type="inventory number"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P1_is_identified_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>lido:descriptiveMetadata/lido:objectIdentificationWrap/lido:repositoryWrap/lido:repositorySet/lido:workID[@lido:type="inventory number"]</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E42_Identifier</type>
+							<instance_generator name="IdentifierURI">	
+								<arg name="subject_type" type="constant">work</arg>
+								<arg name="subject_id" type="xpath">../../../../../lido:administrativeMetadata/lido:recordWrap/lido:recordID/text()</arg>
+								<arg name="identifier_type" type="constant">identifier</arg>
+								<arg name="identifier_id" type="xpath">text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIwithType">
+										<arg name="type" type="constant">type</arg>
+										<arg name="id" type="constant">Inventory Number</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
 		</mapping>
 
 		<!-- Photo -->
@@ -1327,6 +1519,212 @@
 									<arg name="hierarchy" type="constant">place</arg>
 									<arg name="object_HASHED_CONTENTS" type="xpath">string-join((lido:appellationValue/text(),lido:appellationValue/@xml:label),'_')</arg>
 									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:noType</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">PMC</arg>
+										</instance_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<!-- Artist (ulan)-->
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>//lido:lido/lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor/lido:actorInRole</source_node>
+				<target_node>	
+					<if>
+						<exists>lido:actor/lido:actorID[@lido:source="ULAN"]</exists>
+					</if>			
+					<entity>
+						<type>crm:E21_Person</type>
+						<instance_generator name="URIwithULANId">
+							<arg name="id" type="xpath">lido:actor/lido:actorID[@lido:source="ULAN"]/text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">lido:actor/lido:nameActorSet/lido:appellationValue/text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">PMC</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="URIwithULANId">
+									<arg name="id" type="xpath">string-join((lido:actor/lido:actorID[@lido:source="ULAN"]/text(),"graph"),'/')</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:noType</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">PMC</arg>
+										</instance_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+
+			<!--type-->
+			<link>
+				<path>
+					<source_relation>
+						<relation>lido:roleActor/lido:conceptID[@lido:source="AAT"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P2_has_type</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>lido:roleActor/lido:conceptID[@lido:source="AAT"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithAATId">
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+		</mapping>
+
+		<!-- Artist (local)-->
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>//lido:lido/lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor/lido:actorInRole</source_node>
+				<target_node>
+					<if>
+						<and>
+							<if>
+								<exists>lido:actor/lido:actorID[@lido:source="local"]</exists>
+							</if>
+							<if>
+								<not>
+									<if>
+										<exists>lido:actor/lido:actorID[@lido:source="ULAN"]</exists>
+									</if>
+								</not>
+							</if>
+						</and>
+					</if>			
+					<entity>
+						<type>crm:E21_Person</type>
+						<instance_generator name="URIwithTypeAndId">
+							<arg name="type" type="constant">actor</arg>
+							<arg name="id" type="xpath">lido:actor/lido:actorID[@lido:source="local"]</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">lido:actor/lido:nameActorSet/lido:appellationValue/text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">PMC</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="URIwithULANId">
+									<arg name="id" type="xpath">string-join((lido:actor/lido:actorID[@lido:source="ULAN"]/text(),"graph"),'/')</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:noType</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">PMC</arg>
+										</instance_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+
+			<!--type-->
+			<link>
+				<path>
+					<source_relation>
+						<relation>lido:roleActor/lido:conceptID[@lido:source="AAT"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P2_has_type</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>lido:roleActor/lido:conceptID[@lido:source="AAT"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithAATId">
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+		</mapping>
+
+		<!-- Artist type-->
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>//lido:lido/lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor/lido:actorInRole/lido:roleActor/lido:conceptID[@lido:source="AAT"]</source_node>
+				<target_node>		
+					<entity>
+						<type>crm:E55_Type</type>
+						<instance_generator name="URIwithAATId">
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">../lido:term/text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">PMC</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="URIwithAATId">
+									<arg name="id" type="xpath">string-join((text(),"graph"),'/')</arg>
 								</instance_generator>
 								<additional>
 									<relationship>custom:has_provider</relationship>

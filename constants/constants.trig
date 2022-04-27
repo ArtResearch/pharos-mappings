@@ -478,6 +478,13 @@
                     "verso" .
 }
 
+<https://artresearch.net/resource/pmc/type/F2F30924-BC46-3FE3-BCFD-116A2C90BFAC/graph> {
+        <https://artresearch.net/resource/pmc/type/F2F30924-BC46-3FE3-BCFD-116A2C90BFAC>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Inventory Number" .
+}
+
 <https://artresearch.net/resource/pmc/type/4F6A2899-2950-328C-B172-54AD813EE993/graph> {
         <https://artresearch.net/resource/pmc/type/4F6A2899-2950-328C-B172-54AD813EE993>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
