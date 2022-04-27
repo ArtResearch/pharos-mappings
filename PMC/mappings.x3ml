@@ -14,6 +14,9 @@
 		<namespace prefix="vocab" uri="https://artresearch.net/resource/pmc/vocabulary/"/>
 		<namespace prefix="ulan" uri="http://vocab.getty.edu/ulan/"/>
 		<namespace prefix="aat" uri="http://vocab.getty.edu/aat/"/>
+		<namespace prefix="rkd" uri="https://rkd.nl/artists/"/>
+		<namespace prefix="viaf" uri="http://viaf.org/viaf/"/>
+		<namespace prefix="wikidata" uri="http://www.wikidata.org/entity/"/>
 		<namespace prefix="cfr" uri="https://artresearch.net/resource/custom/fr/"/>
 	</namespaces>
 
@@ -192,8 +195,6 @@
 				</range>
 			</link>
 
-			
-
 			<!--Repository-->
 			<link>
 				<path>
@@ -264,6 +265,7 @@
 					</target_node>
 				</range>
 			</link>
+
 			<!--Artist type-->
 			<link>
 				<path>
@@ -286,6 +288,32 @@
 					</target_node>
 				</range>
 			</link>
+			
+			<!--type-->
+			<link>
+				<path>
+					<source_relation>
+						<relation>../../lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor/lido:actorInRole/lido:actor/lido:nationalityActor/lido:term/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../../lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor/lido:actorInRole/lido:actor/lido:nationalityActor/lido:term/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGenerator">
+								<arg name="hierarchy" type="constant">group</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
 		</mapping>
 		<!-- Work -->
 		<mapping namedgraph="graph">
@@ -1541,10 +1569,17 @@
 		<mapping namedgraph="graph">
 			<domain>
 				<source_node>//lido:lido/lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor/lido:actorInRole</source_node>
-				<target_node>	
+				<target_node>
 					<if>
-						<exists>lido:actor/lido:actorID[@lido:source="ULAN"]</exists>
-					</if>			
+						<and>
+							<if>
+								<exists>lido:actor/lido:actorID[@lido:source="ULAN"]</exists>
+							</if>
+							<if>
+								<equals value="300404387">../../lido:eventID/text()</equals>
+							</if>
+						</and>
+					</if>
 					<entity>
 						<type>crm:E21_Person</type>
 						<instance_generator name="URIwithULANId">
@@ -1609,6 +1644,216 @@
 				</range>
 			</link>
 
+			<!--exactMatch-->
+			<link>
+				<path>
+					<source_relation>
+						<relation>lido:actor/lido:actorID[@lido:source="VIAF"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>skos:exactMatch</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>lido:actor/lido:actorID[@lido:source="VIAF"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithVIAFId">
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			<!--exactMatch-->
+			<link>
+				<path>
+					<source_relation>
+						<relation>lido:actor/lido:actorID[@lido:source="WikiData"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>skos:exactMatch</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>lido:actor/lido:actorID[@lido:source="WikiData"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithWikidataId">
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			<!--exactMatch-->
+			<link>
+				<path>
+					<source_relation>
+						<relation>lido:actor/lido:actorID[@lido:source="RKDartists"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>skos:exactMatch</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>lido:actor/lido:actorID[@lido:source="RKDartists"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithRKDId">
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+		
+			<!-- Identifiers -->
+			<link> 
+				<path>
+					<source_relation>
+						<relation>lido:actor/lido:actorID[@lido:type="id"]</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<and>
+								<if>
+									<not>
+										<if>
+											<equals value="WikiData">@lido:source</equals>
+										</if>
+									</not>
+								</if>
+								<if>
+									<not>
+										<if>
+											<equals value="RKDartists">@lido:source</equals>
+										</if>
+									</not>
+								</if>
+								<if>
+									<not>
+										<if>
+											<equals value="VIAF">@lido:source</equals>
+										</if>
+									</not>
+								</if>
+								<if>
+									<not>
+										<if>
+											<equals value="ULAN">@lido:source</equals>
+										</if>
+									</not>
+								</if>
+								<if>
+									<not>
+										<if>
+											<equals value="local">@lido:source</equals>
+										</if>
+									</not>
+								</if>		
+							</and>
+						</if>
+						<relationship>crm:P1_is_identified_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>lido:actor/lido:actorID[@lido:type="id"]</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E42_Identifier</type>
+							<instance_generator name="IdentifierURI">	
+								<arg name="subject_type" type="constant">actor</arg>
+								<arg name="subject_id" type="xpath">../lido:actorID[@lido:source="ULAN"]/text()</arg>
+								<arg name="identifier_type" type="constant">identifier</arg>
+								<arg name="identifier_id" type="xpath">text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<!-- Gender -->
+			<link> 
+				<path>
+					<source_relation>
+						<relation>lido:actor/lido:genderActor</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="male">text()</equals>
+						</if>
+						<relationship>crm:P2_has_type</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>lido:actor/lido:genderActor</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="constant">http://vocab.getty.edu/aat/300189559</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>lido:actor/lido:genderActor</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="female">text()</equals>
+						</if>
+						<relationship>crm:P2_has_type</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>lido:actor/lido:genderActor</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="constant">http://vocab.getty.edu/aat/300189557</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<!-- Nationality -->
+			<link> 
+				<path>
+					<source_relation>
+						<relation>lido:actor/lido:nationalityActor</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P107_is_current_or_former_member_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>lido:actor/lido:nationalityActor</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">group</arg>
+								<arg name="id" type="xpath">lido:term/text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+		
 		</mapping>
 
 		<!-- Artist (local)-->
@@ -1620,6 +1865,9 @@
 						<and>
 							<if>
 								<exists>lido:actor/lido:actorID[@lido:source="local"]</exists>
+							</if>
+							<if>
+								<equals value="300404387">../../lido:eventID/text()</equals>
 							</if>
 							<if>
 								<not>
@@ -1694,6 +1942,202 @@
 					</target_node>
 				</range>
 			</link>
+			
+			<!--exactMatch-->
+			<link>
+				<path>
+					<source_relation>
+						<relation>lido:actor/lido:actorID[@lido:source="VIAF"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>skos:exactMatch</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>lido:actor/lido:actorID[@lido:source="VIAF"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithVIAFId">
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			<!--exactMatch-->
+			<link>
+				<path>
+					<source_relation>
+						<relation>lido:actor/lido:actorID[@lido:source="WikiData"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>skos:exactMatch</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>lido:actor/lido:actorID[@lido:source="WikiData"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithWikidataId">
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			<!--exactMatch-->
+			<link>
+				<path>
+					<source_relation>
+						<relation>lido:actor/lido:actorID[@lido:source="RKDartists"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>skos:exactMatch</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>lido:actor/lido:actorID[@lido:source="RKDartists"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithRKDId">
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+		
+			<!-- Identifiers -->
+			<link> 
+				<path>
+					<source_relation>
+						<relation>lido:actor/lido:actorID[@lido:type="id"]</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<and>
+								<if>
+									<not>
+										<if>
+											<equals value="WikiData">@lido:source</equals>
+										</if>
+									</not>
+								</if>
+								<if>
+									<not>
+										<if>
+											<equals value="RKDartists">@lido:source</equals>
+										</if>
+									</not>
+								</if>
+								<if>
+									<not>
+										<if>
+											<equals value="VIAF">@lido:source</equals>
+										</if>
+									</not>
+								</if>
+								<if>
+									<not>
+										<if>
+											<equals value="ULAN">@lido:source</equals>
+										</if>
+									</not>
+								</if>
+								<if>
+									<not>
+										<if>
+											<equals value="local">@lido:source</equals>
+										</if>
+									</not>
+								</if>		
+							</and>
+						</if>
+						<relationship>crm:P1_is_identified_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>lido:actor/lido:actorID[@lido:type="id"]</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E42_Identifier</type>
+							<instance_generator name="IdentifierURI">	
+								<arg name="subject_type" type="constant">actor</arg>
+								<arg name="subject_id" type="xpath">../lido:actorID[@lido:source="ULAN"]/text()</arg>
+								<arg name="identifier_type" type="constant">identifier</arg>
+								<arg name="identifier_id" type="xpath">text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+
+		</mapping>
+
+		<!-- Nationality -->
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>//lido:lido/lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor/lido:actorInRole/lido:actor/lido:nationalityActor</source_node>
+				<target_node>
+                   <entity>
+						<type>crm:E39_Actor</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">group</arg>
+							<arg name="id" type="xpath">lido:term/text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">lido:term/text()</arg>
+						</label_generator>
+                        <additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIwithType">
+									<arg name="type" type="constant">type</arg>
+									<arg name="id" type="constant">National Group</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">PMC</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="namedgraph">
+									<arg name="type" type="constant">group</arg>
+									<arg name="id" type="xpath">lido:term/text()</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:noType</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">PMC</arg>
+										</instance_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
 		</mapping>
 
 		<!-- Artist type-->

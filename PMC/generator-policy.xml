@@ -50,6 +50,18 @@
 	<pattern>{id}</pattern>
 </generator>
 
+<generator name="URIwithRKDId" prefix="rkd">
+	<pattern>{id}</pattern>
+</generator>
+
+<generator name="URIwithVIAFId" prefix="viaf">
+	<pattern>{id}</pattern>
+</generator>
+
+<generator name="URIwithWikidataId" prefix="wikidata">
+	<pattern>{id}</pattern>
+</generator>
+
 <generator name="URIwithVocabType" prefix="vocab" shorten="yes">
 	<pattern>{type}/{id}</pattern>
 </generator>
