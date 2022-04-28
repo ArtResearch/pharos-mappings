@@ -123,20 +123,20 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>../../lido:descriptiveMetadata/lido:objectClassificationWrap/lido:objectWorkTypeWrap/lido:objectWorkType</relation>
+						<relation>../../lido:descriptiveMetadata/lido:objectClassificationWrap/lido:objectWorkTypeWrap/lido:objectWorkType/lido:conceptID/text()</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>custom:consists_of</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>../../lido:descriptiveMetadata/lido:objectClassificationWrap/lido:objectWorkTypeWrap/lido:objectWorkType</source_node>
+					<source_node>../../lido:descriptiveMetadata/lido:objectClassificationWrap/lido:objectWorkTypeWrap/lido:objectWorkType/lido:conceptID/text()</source_node>
 					<target_node>
 						<entity>
 							<type>custom:Namedgraph</type>
 							<instance_generator name="namedgraph">
 								<arg name="type" type="constant">type</arg>
-								<arg name="id" type="xpath">lido:conceptID/text()</arg>
+								<arg name="id" type="xpath">.</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -147,20 +147,20 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>../../lido:descriptiveMetadata/lido:objectClassificationWrap/lido:classificationWrap/lido:classification</relation>
+						<relation>../../lido:descriptiveMetadata/lido:objectClassificationWrap/lido:classificationWrap/lido:classification/lido:conceptID/text()</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>custom:consists_of</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>../../lido:descriptiveMetadata/lido:objectClassificationWrap/lido:classificationWrap/lido:classification</source_node>
+					<source_node>../../lido:descriptiveMetadata/lido:objectClassificationWrap/lido:classificationWrap/lido:classification/lido:conceptID/text()</source_node>
 					<target_node>
 						<entity>
 							<type>custom:Namedgraph</type>
 							<instance_generator name="URIwithVocabTypeAndId">
 								<arg name="type" type="constant">technique</arg>
-								<arg name="id" type="xpath">string-join((lido:conceptID/text(),"graph"),'/')</arg>
+								<arg name="id" type="xpath">string-join((.,"graph"),'/')</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -446,6 +446,7 @@
 					</target_node>
 				</range>
 			</link>
+			
 			<!--title-->
 			<link> 
 				<path>
@@ -2169,6 +2170,104 @@
 								<type>custom:Namedgraph</type>
 								<instance_generator name="URIwithAATId">
 									<arg name="id" type="xpath">string-join((text(),"graph"),'/')</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:noType</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">PMC</arg>
+										</instance_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<!-- Work type -->
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>//lido:lido/lido:descriptiveMetadata/lido:objectClassificationWrap/lido:objectWorkTypeWrap/lido:objectWorkType</source_node>
+				<target_node>		
+					<entity>
+						<type>crm:E55_Type</type>
+						<instance_generator name="URIwithTypeAndId">
+							<arg name="type" type="constant">type</arg>
+							<arg name="id" type="xpath">lido:conceptID/text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">lido:term/text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">PMC</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="namedgraph">
+									<arg name="type" type="constant">type</arg>
+									<arg name="id" type="xpath">lido:conceptID/text()</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:noType</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">PMC</arg>
+										</instance_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<!-- Technique -->
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>//lido:lido/lido:descriptiveMetadata/lido:objectClassificationWrap/lido:classificationWrap/lido:classification</source_node>
+				<target_node>		
+					<entity>
+						<type>crm:E55_Type</type>
+						<instance_generator name="URIwithVocabTypeAndId">
+							<arg name="type" type="constant">technique</arg>
+							<arg name="id" type="xpath">lido:conceptID/text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">lido:term/text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">PMC</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="URIwithVocabTypeAndId">
+									<arg name="type" type="constant">technique</arg>
+									<arg name="id" type="xpath">string-join((lido:conceptID/text(),"graph"),'/')</arg>
 								</instance_generator>
 								<additional>
 									<relationship>custom:has_provider</relationship>
