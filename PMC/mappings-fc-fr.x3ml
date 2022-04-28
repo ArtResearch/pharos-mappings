@@ -8,97 +8,420 @@
 		<namespace prefix="prefix" uri="https://artresearch.net/resource/pmc/"/>
 		<namespace prefix="vocab" uri="https://artresearch.net/resource/midas/vocabulary/"/>
 		<namespace prefix="custom" uri="https://artresearch.net/custom/"/>
-		<namespace prefix="fc" uri="https://artresearch.net/resource/custom/fc/"/>
+		<namespace prefix="fc" uri="https://artresearch.net/resource/fc/"/>
 		<namespace prefix="fr" uri="https://artresearch.net/resource/custom/fr/"/>
+		<namespace prefix="cfc" uri="https://artresearch.net/resource/custom/fc/"/>
+		<namespace prefix="cfr" uri="https://artresearch.net/resource/custom/fr/"/>
 		<namespace prefix="lido" uri="http://www.lido-schema.org"/>
+		<namespace prefix="ulan" uri="http://vocab.getty.edu/ulan/"/>
 	</namespaces>
+	
 	<mappings>
 
-	<!-- Work -->
-	<mapping>
-		<domain>
-			<source_node>//lido:lido/lido:administrativeMetadata/lido:recordWrap/lido:recordID</source_node>
-			<target_node>
-				<entity>
-					<type>fc:work</type>
-					<instance_generator name="URIwithTypeAndId">
-						<arg name="type" type="constant">work</arg>
-						<arg name="id" type="xpath">text()</arg>
-					</instance_generator>
-					<additional>
-						<relationship>fr:Work_has_provider_Institution</relationship>
-						<entity>
-							<type>fc:institution</type>
-							<instance_generator name="URIwithTypeAndId">
-								<arg name="type" type="constant">source</arg>
-								<arg name="id" type="constant">PMC</arg>
-							</instance_generator>
-						</entity>
-					</additional>
-				</entity>
-			</target_node>
-		</domain>
-
-		<link>
-			<path>
-				<source_relation>
-					<relation>../../lido:resourceWrap/lido:resourceSet/@lido:recordID</relation>
-				</source_relation>
-				<target_relation>
-					<relationship>fr:Work_depicted_by_Photo</relationship>
-				</target_relation>
-			</path>
-			<range>
-				<source_node>../../lido:resourceWrap/lido:resourceSet/@lido:recordID</source_node>
+		<!-- Work -->
+		<mapping>
+			<domain>
+				<source_node>//lido:lido</source_node>
 				<target_node>
 					<entity>
-						<type>fc:photo</type>
+						<type>cfc:work</type>
 						<instance_generator name="URIwithTypeAndId">
-							<arg name="type" type="constant">photo</arg>
-							<arg name="id" type="xpath">.</arg>
+							<arg name="type" type="constant">work</arg>
+							<arg name="id" type="xpath">lido:administrativeMetadata/lido:recordWrap/lido:recordID/text()</arg>
 						</instance_generator>
 						<additional>
-							<relationship>fr:Photo_depicts_Work</relationship>
+							<relationship>cfr:Work_has_provider_Institution</relationship>
 							<entity>
-								<type>fc:work</type>
+								<type>cfc:institution</type>
 								<instance_generator name="URIwithTypeAndId">
-									<arg name="type" type="constant">work</arg>
-										<arg name="id" type="xpath">../../../lido:recordWrap/lido:recordID/text()</arg>
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">PMC</arg>
 								</instance_generator>
 							</entity>
 						</additional>
 					</entity>
 				</target_node>
-			</range>
-		</link>			
-		
-	</mapping>	
-		
-	<!-- Photo -->
-	<mapping>
-		<domain>
-			<source_node>//lido:lido/lido:administrativeMetadata/lido:resourceWrap/lido:resourceSet/@lido:recordID</source_node>
-			<target_node>					
-				<entity>
-					<type>fc:photo</type>
-					<instance_generator name="URIwithTypeAndId">
-						<arg name="type" type="constant">photo</arg>
-						<arg name="id" type="xpath">.</arg>
-					</instance_generator>
-					<additional>
-						<relationship>fr:Photo_has_provider_Institution</relationship>
+			</domain>
+
+			<!-- Photo -->
+			<link>
+				<path>
+					<source_relation>
+						<relation>lido:administrativeMetadata/lido:resourceWrap/lido:resourceSet/@lido:recordID</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>cfr:Work_depicted_by_Photo</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>lido:administrativeMetadata/lido:resourceWrap/lido:resourceSet/@lido:recordID</source_node>
+					<target_node>
 						<entity>
-							<type>fc:institution</type>
+							<type>cfc:photo</type>
 							<instance_generator name="URIwithTypeAndId">
-								<arg name="type" type="constant">source</arg>
-								<arg name="id" type="constant">PMC</arg>
+								<arg name="type" type="constant">photo</arg>
+								<arg name="id" type="xpath">.</arg>
+							</instance_generator>
+							<additional>
+								<relationship>cfr:Photo_depicts_Work</relationship>
+								<entity>
+									<type>cfc:work</type>
+									<instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">work</arg>
+											<arg name="id" type="xpath">../../../lido:recordWrap/lido:recordID/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>			
+			
+			<!-- Technique -->
+			<link>
+				<path>
+					<source_relation>
+						<relation>lido:descriptiveMetadata/lido:objectClassificationWrap/lido:classificationWrap/lido:classification</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>cfr:Work_produced_using_technique_Technique</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>lido:descriptiveMetadata/lido:objectClassificationWrap/lido:classificationWrap/lido:classification</source_node>
+					<target_node>
+						<entity>
+							<type>cfc:technique</type>
+							<instance_generator name="URIwithVocabTypeAndId">
+								<arg name="type" type="constant">technique</arg>
+								<arg name="id" type="xpath">lido:conceptID/text()</arg>
 							</instance_generator>
 						</entity>
-					</additional>
-				</entity>
-			</target_node>
-		</domain>
-	</mapping>
+					</target_node>
+				</range>
+			</link>			
+			
+			<!-- from date -->
+			<link>
+				<path>
+					<source_relation>
+						<relation>lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventDate/lido:date/lido:earliestDate</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>cfr:Work_from_Date</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventDate/lido:date/lido:earliestDate</source_node>
+					<target_node>
+						<entity>
+							<type>xsd:date</type>
+							<instance_generator name="TypedLiteralGen">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>			
+			
+			<!-- to date -->
+			<link>
+				<path>
+					<source_relation>
+						<relation>lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventDate/lido:date/lido:latestDate</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>cfr:Work_to_Date</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventDate/lido:date/lido:latestDate</source_node>
+					<target_node>
+						<entity>
+							<type>xsd:date</type>
+							<instance_generator name="TypedLiteralGen">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>			
+			
+			<!-- artist (ulan)-->
+			<link> 
+				<path>
+					<source_relation>
+						<relation>lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor/lido:actorInRole</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<and>
+								<if>
+									<equals value="300404387">../../lido:eventID/text()</equals>
+								</if>
+								<if>
+									<exists>lido:actor/lido:actorID[@lido:source="ULAN"]</exists>
+								</if>
+							</and>
+						</if>
+						<relationship>cfr:Work_created_from_Artist</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor/lido:actorInRole</source_node>
+					<target_node>
+						<entity>
+							<type>fc:artist</type>
+							<instance_generator name="URIwithULANId">
+								<arg name="id" type="xpath">lido:actor/lido:actorID[@lido:source="ULAN"]/text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>cfr:Artist_created_Work</relationship>
+								<entity>
+									<type>cfc:work</type>
+									<instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">work</arg>
+										<arg name="id" type="xpath">../../../../../../lido:administrativeMetadata/lido:recordWrap/lido:recordID/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<!-- artist (local)-->
+			<link> 
+				<path>
+					<source_relation>
+						<relation>lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor/lido:actorInRole</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<and>
+								<if>
+									<equals value="300404387">../../lido:eventID/text()</equals>
+								</if>
+								<if>
+									<not>
+										<if>
+											<exists>lido:actor/lido:actorID[@lido:source="ULAN"]</exists>
+										</if>
+									</not>
+								</if>
+								<if>
+									<exists>lido:actor/lido:actorID[@lido:source="local"]</exists>
+								</if>
+							</and>
+						</if>
+						<relationship>cfr:Work_created_from_Artist</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor/lido:actorInRole</source_node>
+					<target_node>
+						<entity>
+							<type>cfc:artist</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">lido:actor/lido:actorID[@lido:source="local"]/text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>cfr:Artist_created_Work</relationship>
+								<entity>
+									<type>cfc:work</type>
+									<instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">work</arg>
+										<arg name="id" type="xpath">../../../../../../lido:administrativeMetadata/lido:recordWrap/lido:recordID/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<!-- institution -->
+			<link>
+				<path>
+					<source_relation>
+						<relation>lido:descriptiveMetadata/lido:objectIdentificationWrap/lido:repositoryWrap/lido:repositorySet/lido:repositoryName/lido:legalBodyID[@lido:source="ULAN"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>cfr:Work_kept_by_Institution</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>lido:descriptiveMetadata/lido:objectIdentificationWrap/lido:repositoryWrap/lido:repositorySet/lido:repositoryName/lido:legalBodyID[@lido:source="ULAN"]</source_node>
+					<target_node>
+						<entity>
+							<type>cfc:institution</type>
+							<instance_generator name="URIwithULANId">
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>cfr:Institution_keeps_Work</relationship>
+								<entity>
+									<type>cfc:work</type>
+									<instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">work</arg>
+										<arg name="id" type="xpath">../../../../../../lido:administrativeMetadata/lido:recordWrap/lido:recordID/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<!-- place -->
+			<link>
+				<path>
+					<source_relation>
+						<relation>lido:descriptiveMetadata/lido:objectIdentificationWrap/lido:repositoryWrap/lido:repositorySet/lido:repositoryLocation/lido:namePlaceSet</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>cfr:Work_from_Place</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>lido:descriptiveMetadata/lido:objectIdentificationWrap/lido:repositoryWrap/lido:repositorySet/lido:repositoryLocation/lido:namePlaceSet</source_node>
+					<target_node>
+						<entity>
+							<type>cfc:place</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">place</arg>
+								<arg name="id" type="xpath">string-join((lido:appellationValue/text(),lido:appellationValue/@xml:label),'_')</arg>
+							</instance_generator>
+							<additional>
+								<relationship>cfr:Place_of_Work</relationship>
+								<entity>
+									<type>cfc:work</type>
+									<instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">work</arg>
+										<arg name="id" type="xpath">../../../../../../lido:administrativeMetadata/lido:recordWrap/lido:recordID/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+		</mapping>	
+			
+		<!-- Photo -->
+		<mapping>
+			<domain>
+				<source_node>//lido:lido/lido:administrativeMetadata/lido:resourceWrap/lido:resourceSet/@lido:recordID</source_node>
+				<target_node>					
+					<entity>
+						<type>cfc:photo</type>
+						<instance_generator name="URIwithTypeAndId">
+							<arg name="type" type="constant">photo</arg>
+							<arg name="id" type="xpath">.</arg>
+						</instance_generator>
+						<additional>
+							<relationship>cfr:Photo_has_provider_Institution</relationship>
+							<entity>
+								<type>cfc:institution</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">PMC</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<!-- Artist (ulan) -->
+		<mapping>
+			<domain>
+				<source_node>//lido:lido/lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor/lido:actorInRole</source_node>
+				<target_node>
+					<if>
+						<and>
+							<if>
+								<equals value="300404387">../../lido:eventID/text()</equals>
+							</if>
+							<if>
+								<exists>lido:actor/lido:actorID[@lido:source="ULAN"]</exists>
+							</if>
+						</and>
+					</if>			
+					<entity>
+						<type>fc:artist</type>
+							<instance_generator name="URIwithULANId">
+								<arg name="id" type="xpath">lido:actor/lido:actorID[@lido:source="ULAN"]/text()</arg>
+							</instance_generator>
+						<additional>
+							<relationship>cfr:Artist_has_provider_Institution</relationship>
+							<entity>
+								<type>cfc:institution</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">PMC</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+
+			<!-- Gender -->
+			<link> 
+				<path>
+					<source_relation>
+						<relation>lido:actor/lido:genderActor</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="male">text()</equals>
+						</if>
+						<relationship>fr:Person_has_Gender</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>lido:actor/lido:genderActor</source_node>
+					<target_node>
+						<entity>
+							<type>fc:gender</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="constant">http://vocab.getty.edu/aat/300189559</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>lido:actor/lido:genderActor</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="female">text()</equals>
+						</if>
+						<relationship>fr:Person_has_Gender</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>lido:actor/lido:genderActor</source_node>
+					<target_node>
+						<entity>
+							<type>fc:gender</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="constant">http://vocab.getty.edu/aat/300189557</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+		</mapping>
 
 	</mappings>
 </x3ml>
