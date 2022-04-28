@@ -1320,7 +1320,6 @@
 				</range>
 			</link>
 			
-
 			<!-- Photo -->
 			<link>
 				<path>
@@ -1615,6 +1614,76 @@
 							<instance_generator name="URIwithTypeAndId">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">lido:actorInRole/lido:actor/lido:actorID[@lido:source="local"]/text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<!-- Rights -->
+			<link>
+				<path>
+					<source_relation>
+						<relation>lido:administrativeMetadata/lido:rightsWorkWrap/lido:rightsWorkSet/lido:rightsType</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P104_is_subject_to</relationship>
+						<entity>
+							<type>crm:E30_Right</type>
+							<instance_generator name="RightsUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../../lido:recordWrap/lido:recordID/text()</arg>
+								<arg name="rights_id" type="xpath">lido:term/text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">lido:term/text()</arg>
+							</label_generator>
+						</entity>
+						<relationship>crm:P2_has_type</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>lido:administrativeMetadata/lido:rightsWorkWrap/lido:rightsWorkSet/lido:rightsType</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithAATId">
+								<arg name="id" type="xpath">lido:conceptID/text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<!-- Rights Holder -->
+			<link>
+				<path>
+					<source_relation>
+						<relation>lido:administrativeMetadata/lido:rightsWorkWrap/lido:rightsWorkSet/lido:rightsHolder</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P104_is_subject_to</relationship>
+						<entity>
+							<type>crm:E30_Right</type>
+							<instance_generator name="RightsUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../../lido:recordWrap/lido:recordID/text()</arg>
+								<arg name="rights_id" type="xpath">../lido:rightsType/lido:term/text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">../lido:rightsType/lido:term/text()</arg>
+							</label_generator>
+						</entity>
+						<relationship>crm:P105_right_held_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>lido:administrativeMetadata/lido:rightsWorkWrap/lido:rightsWorkSet/lido:rightsHolder</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithULANId">
+								<arg name="id" type="xpath">lido:legalBodyID/text()</arg>
 							</instance_generator>
 						</entity>
 					</target_node>

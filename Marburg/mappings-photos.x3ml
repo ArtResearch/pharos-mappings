@@ -1313,7 +1313,7 @@
 					<source_node>a8541</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E30_Rights</type>
+							<type>crm:E30_Right</type>
 							<instance_generator name="RightsUri">
 								<arg name="resourceType" type="constant">photo</arg>
 								<arg name="resourceId" type="xpath">../a8540/text()</arg>
@@ -2129,7 +2129,7 @@
 					<source_node>a8541</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E30_Rights</type>
+							<type>crm:E30_Right</type>
 							<instance_generator name="RightsUri">
 								<arg name="resourceType" type="constant">photo</arg>
 								<arg name="resourceId" type="xpath">../a8555/text()</arg>
@@ -2937,7 +2937,7 @@
 					<source_node>a8541</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E30_Rights</type>
+							<type>crm:E30_Right</type>
 							<instance_generator name="RightsUri">
 								<arg name="resourceType" type="constant">photo</arg>
 								<arg name="resourceId" type="xpath">../a8540/text()</arg>
@@ -3780,7 +3780,7 @@
 					<source_node>a8541</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E30_Rights</type>
+							<type>crm:E30_Right</type>
 							<instance_generator name="RightsUri">
 								<arg name="resourceType" type="constant">photo</arg>
 								<arg name="resourceId" type="xpath">../a8555/text()</arg>
@@ -4588,7 +4588,7 @@
 					<source_node>a8541</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E30_Rights</type>
+							<type>crm:E30_Right</type>
 							<instance_generator name="RightsUri">
 								<arg name="resourceType" type="constant">photo</arg>
 								<arg name="resourceId" type="xpath">../a8540/text()</arg>
@@ -5431,7 +5431,7 @@
 					<source_node>a8541</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E30_Rights</type>
+							<type>crm:E30_Right</type>
 							<instance_generator name="RightsUri">
 								<arg name="resourceType" type="constant">photo</arg>
 								<arg name="resourceId" type="xpath">../a8555/text()</arg>
@@ -6239,7 +6239,7 @@
 					<source_node>a8541</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E30_Rights</type>
+							<type>crm:E30_Right</type>
 							<instance_generator name="RightsUri">
 								<arg name="resourceType" type="constant">photo</arg>
 								<arg name="resourceId" type="xpath">../a8540/text()</arg>
@@ -7083,7 +7083,7 @@
 					<source_node>a8541</source_node>
 					<target_node>
 						<entity>
-							<type>crm:E30_Rights</type>
+							<type>crm:E30_Right</type>
 							<instance_generator name="RightsUri">
 								<arg name="resourceType" type="constant">photo</arg>
 								<arg name="resourceId" type="xpath">../a8555/text()</arg>

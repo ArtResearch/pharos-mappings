@@ -934,7 +934,7 @@
 					<target_relation>
 						<relationship>crm:P104_is_subject_to</relationship>
 						<entity>
-							<type>crm:E30_Rights</type>
+							<type>crm:E30_Right</type>
 							<instance_generator name="RightsUri">
 								<arg name="resourceType" type="constant">photo</arg>
 								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
@@ -976,7 +976,7 @@
 					<target_relation>
 						<relationship>crm:P104_is_subject_to</relationship>
 						<entity>
-							<type>crm:E30_Rights</type>
+							<type>crm:E30_Right</type>
 							<instance_generator name="RightsUri">
 								<arg name="resourceType" type="constant">photo</arg>
 								<arg name="resourceId" type="xpath">../../PARAGRAFO[@etichetta="CLASSIFICATION"]/INVN/text()</arg>
