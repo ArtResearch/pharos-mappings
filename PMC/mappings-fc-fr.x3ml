@@ -403,6 +403,53 @@
 				</range>
 			</link>
 			
+			<!--subject concept-->
+			<link>
+				<path>
+					<source_relation>
+						<relation>lido:descriptiveMetadata/lido:objectRelationWrap/lido:subjectWrap/lido:subjectSet/lido:subject/lido:subjectConcept/lido:conceptID</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>cfr:Work_shows_Subject</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>lido:descriptiveMetadata/lido:objectRelationWrap/lido:subjectWrap/lido:subjectSet/lido:subject/lido:subjectConcept/lido:conceptID</source_node>
+					<target_node>
+						<entity>
+							<type>cfc:subject</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">subject</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<!--subject place-->
+			<link>
+				<path>
+					<source_relation>
+						<relation>lido:descriptiveMetadata/lido:objectRelationWrap/lido:subjectWrap/lido:subjectSet/lido:subject/lido:subjectPlace/lido:place/lido:placeID</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>cfr:Work_shows_Subject</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>lido:descriptiveMetadata/lido:objectRelationWrap/lido:subjectWrap/lido:subjectSet/lido:subject/lido:subjectPlace/lido:place/lido:placeID</source_node>
+					<target_node>
+						<entity>
+							<type>cfc:subject</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">subject</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
 		</mapping>	
 			
 		<!-- Photo -->
