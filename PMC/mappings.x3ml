@@ -1200,6 +1200,49 @@
 				</range>
 			</link>
 
+			<!-- Exhibition Event -->
+			<link> 
+				<path>
+					<source_relation>
+						<relation>lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="300157782">lido:eventID/text()</equals>
+						</if>
+						<relationship>crm:P24i_changed_ownership_through</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E8_Acquisition</type>
+							<instance_generator name="AcquisitionUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../../../lido:administrativeMetadata/lido:recordWrap/lido:recordID/text()</arg>
+								<arg name="eventType" type="constant">acquisition</arg>
+								<arg name="from" type="xpath">lido:eventActor/lido:actorInRole/lido:actor/lido:actorID[@lido:source="local"]/text()</arg>
+								<arg name="to" type="constant">-</arg>
+								<arg name="timespan" type="constant">-</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">string-join(("Acquisition :",lido:eventActor/lido:displayActorInRole/text()," (",lido:eventActor/lido:actorInRole/lido:roleActor/lido:term/text(),")")," ")</arg>
+							</label_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="xpath">lido:eventType/lido:conceptID/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
 		</mapping>
 
 		<!-- Photo -->
@@ -1590,7 +1633,7 @@
 							<arg name="id" type="xpath">lido:actor/lido:actorID[@lido:source="ULAN"]/text()</arg>
 						</instance_generator>
 						<label_generator name="Literal">
-							<arg name="text" type="xpath">lido:actor/lido:nameActorSet/lido:appellationValue/text()</arg>
+							<arg name="text" type="xpath">lido:actor/lido:nameActorSet/lido:appellationValue[@lido:pref="preferred"]/text()</arg>
 						</label_generator>
 						<additional>
 							<relationship>custom:has_provider</relationship>
@@ -1858,6 +1901,44 @@
 				</range>
 			</link>
 		
+			<!-- alternate names -->
+			<link> 
+				<path>
+					<source_relation>
+						<relation>lido:actor/lido:nameActorSet/lido:appellationValue[@lido:pref="alternate"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P1_is_identified_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>lido:actor/lido:nameActorSet/lido:appellationValue[@lido:pref="alternate"]</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E41_Appellation</type>
+							<instance_generator name="IdentifierURI">	
+								<arg name="subject_type" type="constant">actor</arg>
+								<arg name="subject_id" type="xpath">../../lido:actorID[@lido:source="ULAN"]/text()</arg>
+								<arg name="identifier_type" type="constant">identifier</arg>
+								<arg name="identifier_id" type="xpath">text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">http://vocab.getty.edu/aat/300417226</arg>
+									</instance_generator>
+								</entity>
+							</additional>					
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
 		</mapping>
 
 		<!-- Artist (local)-->
@@ -1889,7 +1970,7 @@
 							<arg name="id" type="xpath">lido:actor/lido:actorID[@lido:source="local"]</arg>
 						</instance_generator>
 						<label_generator name="Literal">
-							<arg name="text" type="xpath">lido:actor/lido:nameActorSet/lido:appellationValue/text()</arg>
+							<arg name="text" type="xpath">lido:actor/lido:nameActorSet/lido:appellationValue[@lido:pref="preferred"]/text()</arg>
 						</label_generator>
 						<additional>
 							<relationship>custom:has_provider</relationship>
