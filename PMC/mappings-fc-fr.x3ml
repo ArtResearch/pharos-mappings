@@ -4,17 +4,22 @@
 		<namespace prefix="xsd" uri="http://www.w3.org/2001/XMLSchema#"/>
 		<namespace prefix="crm" uri="http://www.cidoc-crm.org/cidoc-crm/"/>
 		<namespace prefix="crmdig" uri="http://www.ics.forth.gr/isl/CRMext/CRMdig.rdfs/"/>
-		<namespace prefix="owl" uri="http://www.w3.org/2002/07/owl#"/>
+		<namespace prefix="display" uri="http://catalog.sharedshelf.artstor.org/display"/>
 		<namespace prefix="prefix" uri="https://artresearch.net/resource/pmc/"/>
-		<namespace prefix="vocab" uri="https://artresearch.net/resource/midas/vocabulary/"/>
 		<namespace prefix="custom" uri="https://artresearch.net/custom/"/>
+		<namespace prefix="owl" uri="http://www.w3.org/2002/07/owl#"/>
+		<namespace prefix="iiif_image" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
+		<namespace prefix="lido" uri="http://www.lido-schema.org"/>
+		<namespace prefix="vocab" uri="https://artresearch.net/resource/pmc/vocabulary/"/>
+		<namespace prefix="ulan" uri="http://vocab.getty.edu/ulan/"/>
+		<namespace prefix="aat" uri="http://vocab.getty.edu/aat/"/>
+		<namespace prefix="rkd" uri="https://rkd.nl/artists/"/>
+		<namespace prefix="viaf" uri="http://viaf.org/viaf/"/>
+		<namespace prefix="wikidata" uri="http://www.wikidata.org/entity/"/>
 		<namespace prefix="fc" uri="https://artresearch.net/resource/fc/"/>
 		<namespace prefix="fr" uri="https://artresearch.net/resource/custom/fr/"/>
 		<namespace prefix="cfc" uri="https://artresearch.net/resource/custom/fc/"/>
 		<namespace prefix="cfr" uri="https://artresearch.net/resource/custom/fr/"/>
-		<namespace prefix="lido" uri="http://www.lido-schema.org"/>
-		<namespace prefix="ulan" uri="http://vocab.getty.edu/ulan/"/>
-		<namespace prefix="wikidata" uri="http://www.wikidata.org/entity/"/>
 	</namespaces>
 	
 	<mappings>
@@ -95,6 +100,30 @@
 							<type>cfc:technique</type>
 							<instance_generator name="URIwithVocabTypeAndId">
 								<arg name="type" type="constant">technique</arg>
+								<arg name="id" type="xpath">lido:conceptID/text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>			
+			
+			<!-- Material -->
+			<link>
+				<path>
+					<source_relation>
+						<relation>lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventMaterialsTech/lido:materialsTech/lido:termMaterialsTech</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>cfr:Work_consists_of_Material</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventMaterialsTech/lido:materialsTech/lido:termMaterialsTech</source_node>
+					<target_node>
+						<entity>
+							<type>cfc:material</type>
+							<instance_generator name="URIwithVocabType">
+								<arg name="type" type="constant">material</arg>
 								<arg name="id" type="xpath">lido:conceptID/text()</arg>
 							</instance_generator>
 						</entity>
@@ -257,6 +286,9 @@
 								<if>
 									<equals value="300025976">../lido:eventID/text()</equals>
 								</if>
+								<if>
+									<equals value="300264595">../lido:actorInRole/lido:roleActor/lido:conceptID/text()</equals>
+								</if>
 							</and>
 						</if>
 						<relationship>cfr:Work_kept_by_Institution</relationship>
@@ -303,6 +335,9 @@
 								</if>
 								<if>
 									<equals value="300025976">../lido:eventID/text()</equals>
+								</if>
+								<if>
+									<equals value="300264595">../lido:actorInRole/lido:roleActor/lido:conceptID/text()</equals>
 								</if>
 							</and>
 						</if>
