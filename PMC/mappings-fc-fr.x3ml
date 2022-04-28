@@ -443,7 +443,7 @@
 						<entity>
 							<type>cfc:subject</type>
 							<instance_generator name="URIwithTypeAndId">
-								<arg name="type" type="constant">subject</arg>
+								<arg name="type" type="constant">place</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
 						</entity>

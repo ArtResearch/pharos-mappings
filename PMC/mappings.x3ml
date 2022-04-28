@@ -452,7 +452,7 @@
 						<entity>
 							<type>custom:Namedgraph</type>
 							<instance_generator name="namedgraph">
-								<arg name="type" type="constant">subject</arg>
+								<arg name="type" type="constant">place</arg>
 								<arg name="id" type="xpath">.</arg>
 							</instance_generator>
 						</entity>
@@ -1332,9 +1332,9 @@
 					<source_node>lido:descriptiveMetadata/lido:objectRelationWrap/lido:subjectWrap/lido:subjectSet/lido:subject/lido:subjectPlace/lido:place</source_node>
 					<target_node>
 						<entity>
-							<type>custom:noType</type>
+							<type>crm:E36_Visual_Item</type>
 							<instance_generator name="URIwithTypeAndId">
-								<arg name="type" type="constant">subject</arg>
+								<arg name="type" type="constant">place</arg>
 								<arg name="id" type="xpath">lido:placeID/text()</arg>
 							</instance_generator>
 						</entity>
@@ -3945,9 +3945,9 @@
 				<source_node>//lido:lido/lido:descriptiveMetadata/lido:objectRelationWrap/lido:subjectWrap/lido:subjectSet/lido:subject/lido:subjectPlace/lido:place</source_node>
 				<target_node>		
 					<entity>
-						<type>crm:E36_Visual_Item</type>
+						<type>crm:E53_Place</type>
 						<instance_generator name="URIwithTypeAndId">
-							<arg name="type" type="constant">subject</arg>
+							<arg name="type" type="constant">place</arg>
 							<arg name="id" type="xpath">lido:placeID/text()</arg>
 						</instance_generator>
 						<label_generator name="Literal">
@@ -3968,7 +3968,7 @@
 							<entity>
 								<type>custom:Namedgraph</type>
 								<instance_generator name="URIwithTypeAndId">
-									<arg name="type" type="constant">subject</arg>
+									<arg name="type" type="constant">place</arg>
 									<arg name="id" type="xpath">string-join((lido:placeID/text(),"graph"),"/")</arg>
 								</instance_generator>
 								<additional>
