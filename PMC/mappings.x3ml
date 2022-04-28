@@ -17,6 +17,7 @@
 		<namespace prefix="rkd" uri="https://rkd.nl/artists/"/>
 		<namespace prefix="viaf" uri="http://viaf.org/viaf/"/>
 		<namespace prefix="wikidata" uri="http://www.wikidata.org/entity/"/>
+		<namespace prefix="fr" uri="https://artresearch.net/resource/fr/"/>
 		<namespace prefix="cfr" uri="https://artresearch.net/resource/custom/fr/"/>
 	</namespaces>
 
@@ -195,23 +196,71 @@
 				</range>
 			</link>
 
-			<!--Repository-->
+			<!--Repository (Wikidata)-->
 			<link>
 				<path>
 					<source_relation>
-						<relation>../../lido:descriptiveMetadata/lido:objectIdentificationWrap/lido:repositoryWrap/lido:repositorySet/lido:repositoryName/lido:legalBodyID[@lido:source="ULAN"]/text()</relation>
+						<relation>../../lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<and>
+								<if>
+									<exists>lido:eventActor/lido:actorInRole/lido:actor/lido:actorID[@lido:source="WikiData"]/text()</exists>
+								</if>
+								<if>
+									<equals value="300025976">lido:eventID/text()</equals>
+								</if>
+							</and>
+						</if>
 						<relationship>custom:consists_of</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>../../lido:descriptiveMetadata/lido:objectIdentificationWrap/lido:repositoryWrap/lido:repositorySet/lido:repositoryName/lido:legalBodyID[@lido:source="ULAN"]/text()</source_node>
+					<source_node>../../lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event</source_node>
 					<target_node>
 						<entity>
 							<type>custom:Namedgraph</type>
-							<instance_generator name="URIwithULANId">
-								<arg name="id" type="xpath">string-join((.,"graph"),'/')</arg>
+							<instance_generator name="URIwithWikidataId">
+								<arg name="id" type="xpath">string-join((lido:eventActor/lido:actorInRole/lido:actor/lido:actorID[@lido:source="WikiData"]/text(),"graph"),'/')</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<!--Repository (local)-->
+			<link>
+				<path>
+					<source_relation>
+						<relation>../../lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<and>
+								<if>
+									<not>
+										<if>
+											<exists>lido:eventActor/lido:actorInRole/lido:actor/lido:actorID[@lido:source="WikiData"]/text()</exists>
+										</if>
+									</not>
+								</if>
+								<if>
+									<equals value="300025976">lido:eventID/text()</equals>
+								</if>
+							</and>
+						</if>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../../lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">string-join((lido:eventActor/lido:actorInRole/lido:actor/lido:actorID[@lido:source="local"]/text(),"graph"),'/')</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -1114,23 +1163,71 @@
 				</range>
 			</link>
 		
-			<!-- Repository -->
+			<!-- Repository (Wikidata)-->
 			<link>
 				<path>
 					<source_relation>
-						<relation>lido:descriptiveMetadata/lido:objectIdentificationWrap/lido:repositoryWrap/lido:repositorySet/lido:repositoryName/lido:legalBodyID[@lido:source="ULAN"]</relation>
+						<relation>lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<and>
+								<if>
+									<exists>lido:actorInRole/lido:actor/lido:actorID[@lido:source="WikiData"]/text()</exists>
+								</if>
+								<if>
+									<equals value="300025976">../lido:eventID/text()</equals>
+								</if>
+							</and>
+						</if>
 						<relationship>crm:P50_has_current_keeper</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>lido:descriptiveMetadata/lido:objectIdentificationWrap/lido:repositoryWrap/lido:repositorySet/lido:repositoryName/lido:legalBodyID[@lido:source="ULAN"]</source_node>
+					<source_node>lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
-							<instance_generator name="URIwithULANId">
-								<arg name="id" type="xpath">text()</arg>
+							<instance_generator name="URIwithWikidataId">
+								<arg name="id" type="xpath">lido:actorInRole/lido:actor/lido:actorID[@lido:source="WikiData"]/text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<!-- Repository (local)-->
+			<link>
+				<path>
+					<source_relation>
+						<relation>lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<and>
+								<if>
+									<not>
+										<if>
+											<exists>lido:actorInRole/lido:actor/lido:actorID[@lido:source="WikiData"]/text()</exists>
+										</if>
+									</not>
+								</if>
+								<if>
+									<equals value="300025976">../lido:eventID/text()</equals>
+								</if>
+							</and>
+						</if>
+						<relationship>crm:P50_has_current_keeper</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">lido:actorInRole/lido:actor/lido:actorID[@lido:source="local"]/text()</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -1450,18 +1547,28 @@
 
 		</mapping>
 
-		<!-- Repository -->
+		<!-- Repository (Wikidata) -->
 		<mapping namedgraph="graph">
 			<domain>
-				<source_node>//lido:lido/lido:descriptiveMetadata/lido:objectIdentificationWrap/lido:repositoryWrap/lido:repositorySet/lido:repositoryName/lido:legalBodyID[@lido:source="ULAN"]</source_node>
-				<target_node>				
+				<source_node>//lido:lido/lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor</source_node>
+				<target_node>
+					<if>
+						<and>
+							<if>
+								<exists>lido:actorInRole/lido:actor/lido:actorID[@lido:source="WikiData"]/text()</exists>
+							</if>
+							<if>
+								<equals value="300025976">../lido:eventID/text()</equals>
+							</if>
+						</and>
+					</if>
 					<entity>
 						<type>crm:E39_Actor</type>
-						<instance_generator name="URIwithULANId">
-							<arg name="id" type="xpath">text()</arg>
+						<instance_generator name="URIwithWikidataId">
+							<arg name="id" type="xpath">lido:actorInRole/lido:actor/lido:actorID[@lido:source="WikiData"]/text()</arg>
 						</instance_generator>
 						<label_generator name="Literal">
-							<arg name="text" type="xpath">../lido:legalBodyName/lido:appellationValue/text()</arg>
+							<arg name="text" type="xpath">lido:actorInRole/lido:actor/lido:nameActorSet/lido:appellationValue[@lido:pref="preferred"]/text()</arg>
 						</label_generator>
 						<additional>
 							<relationship>custom:has_provider</relationship>
@@ -1486,8 +1593,8 @@
 							<relationship>crm:P67i_is_referred_to_by</relationship>
 							<entity>
 								<type>custom:Namedgraph</type>
-								<instance_generator name="URIwithULANId">
-									<arg name="id" type="xpath">string-join((text(),"graph"),'/')</arg>
+								<instance_generator name="URIwithWikidataId">
+									<arg name="id" type="xpath">string-join((lido:actorInRole/lido:actor/lido:actorID[@lido:source="WikiData"]/text(),"graph"),'/')</arg>
 								</instance_generator>
 								<additional>
 									<relationship>custom:has_provider</relationship>
@@ -1501,7 +1608,6 @@
 								</additional>
 							</entity>
 						</additional>
-
 					</entity>
 				</target_node>
 			</domain>
@@ -1509,14 +1615,14 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>../../lido:repositoryLocation/lido:namePlaceSet</relation>
+						<relation>../../../../lido:objectIdentificationWrap/lido:repositoryWrap/lido:repositorySet/lido:repositoryLocation/lido:namePlaceSet</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P55_has_current_location</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>../../lido:repositoryLocation/lido:namePlaceSet</source_node>
+					<source_node>../../../../lido:objectIdentificationWrap/lido:repositoryWrap/lido:repositorySet/lido:repositoryLocation/lido:namePlaceSet</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
@@ -1532,14 +1638,141 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>../lido:legalBodyWeblink</relation>
+						<relation>../../../../lido:objectIdentificationWrap/lido:repositoryWrap/lido:repositorySet/lido:repositoryName/lido:legalBodyWeblink</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>cfr:Institution_has_Original_Link</relationship>
+						<relationship>fr:Institution_has_Original_Link</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>../lido:legalBodyWeblink</source_node>
+					<source_node>../../../../lido:objectIdentificationWrap/lido:repositoryWrap/lido:repositorySet/lido:repositoryName/lido:legalBodyWeblink</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E32_Identifier</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIorUUID">
+										<arg name="text" type="constant">http://vocab.getty.edu/aat/300404630</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+		</mapping>
+
+		<!-- Repository (local) -->
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>//lido:lido/lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor</source_node>
+				<target_node>
+					<if>
+						<and>
+							<if>
+								<not>
+									<if>
+										<exists>lido:actorInRole/lido:actor/lido:actorID[@lido:source="WikiData"]/text()</exists>
+									</if>
+								</not>
+							</if>
+							<if>
+								<equals value="300025976">../lido:eventID/text()</equals>
+							</if>
+						</and>
+					</if>
+					<entity>
+						<type>crm:E39_Actor</type>
+						<instance_generator name="URIwithTypeAndId">
+							<arg name="type" type="constant">actor</arg>
+							<arg name="id" type="xpath">lido:actorInRole/lido:actor/lido:actorID[@lido:source="local"]/text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">lido:actorInRole/lido:actor/lido:nameActorSet/lido:appellationValue[@lido:pref="preferred"]/text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">PMC</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIorUUID">
+									<arg name="text" type="constant">http://vocab.getty.edu/aat/300264595</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">actor</arg>
+									<arg name="id" type="xpath">string-join((lido:actorInRole/lido:actor/lido:actorID[@lido:source="local"]/text(),"graph"),'/')</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:noType</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">PMC</arg>
+										</instance_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>../../../../lido:objectIdentificationWrap/lido:repositoryWrap/lido:repositorySet/lido:repositoryLocation/lido:namePlaceSet</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P55_has_current_location</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../../../../lido:objectIdentificationWrap/lido:repositoryWrap/lido:repositorySet/lido:repositoryLocation/lido:namePlaceSet</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">place</arg>
+								<arg name="id" type="xpath">string-join((lido:appellationValue/text(),lido:appellationValue/@xml:label),'_')</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>../../../../lido:objectIdentificationWrap/lido:repositoryWrap/lido:repositorySet/lido:repositoryName/lido:legalBodyWeblink</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>fr:Institution_has_Original_Link</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../../../../lido:objectIdentificationWrap/lido:repositoryWrap/lido:repositorySet/lido:repositoryName/lido:legalBodyWeblink</source_node>
 					<target_node>
 						<entity>
 							<type>crm:E32_Identifier</type>

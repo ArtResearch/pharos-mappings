@@ -14,6 +14,7 @@
 		<namespace prefix="cfr" uri="https://artresearch.net/resource/custom/fr/"/>
 		<namespace prefix="lido" uri="http://www.lido-schema.org"/>
 		<namespace prefix="ulan" uri="http://vocab.getty.edu/ulan/"/>
+		<namespace prefix="wikidata" uri="http://www.wikidata.org/entity/"/>
 	</namespaces>
 	
 	<mappings>
@@ -241,23 +242,33 @@
 				</range>
 			</link>
 			
-			<!-- institution -->
+			<!-- Repository (Wikidata)-->
 			<link>
 				<path>
 					<source_relation>
-						<relation>lido:descriptiveMetadata/lido:objectIdentificationWrap/lido:repositoryWrap/lido:repositorySet/lido:repositoryName/lido:legalBodyID[@lido:source="ULAN"]</relation>
+						<relation>lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<and>
+								<if>
+									<exists>lido:actorInRole/lido:actor/lido:actorID[@lido:source="WikiData"]/text()</exists>
+								</if>
+								<if>
+									<equals value="300025976">../lido:eventID/text()</equals>
+								</if>
+							</and>
+						</if>
 						<relationship>cfr:Work_kept_by_Institution</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>lido:descriptiveMetadata/lido:objectIdentificationWrap/lido:repositoryWrap/lido:repositorySet/lido:repositoryName/lido:legalBodyID[@lido:source="ULAN"]</source_node>
+					<source_node>lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor</source_node>
 					<target_node>
 						<entity>
-							<type>cfc:institution</type>
-							<instance_generator name="URIwithULANId">
-								<arg name="id" type="xpath">text()</arg>
+							<type>fc:institution</type>
+							<instance_generator name="URIwithWikidataId">
+								<arg name="id" type="xpath">lido:actorInRole/lido:actor/lido:actorID[@lido:source="WikiData"]/text()</arg>
 							</instance_generator>
 							<additional>
 								<relationship>cfr:Institution_keeps_Work</relationship>
@@ -265,7 +276,7 @@
 									<type>cfc:work</type>
 									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">work</arg>
-										<arg name="id" type="xpath">../../../../../../lido:administrativeMetadata/lido:recordWrap/lido:recordID/text()</arg>
+										<arg name="id" type="xpath">../../../../../lido:administrativeMetadata/lido:recordWrap/lido:recordID/text()</arg>
 									</instance_generator>
 								</entity>
 							</additional>
@@ -273,6 +284,55 @@
 					</target_node>
 				</range>
 			</link>
+			
+			<!-- Repository (local)-->
+			<link>
+				<path>
+					<source_relation>
+						<relation>lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<and>
+								<if>
+									<not>
+										<if>
+											<exists>lido:actorInRole/lido:actor/lido:actorID[@lido:source="WikiData"]/text()</exists>
+										</if>
+									</not>
+								</if>
+								<if>
+									<equals value="300025976">../lido:eventID/text()</equals>
+								</if>
+							</and>
+						</if>
+						<relationship>cfr:Work_kept_by_Institution</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor</source_node>
+					<target_node>
+						<entity>
+							<type>cfc:institution</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">lido:actorInRole/lido:actor/lido:actorID[@lido:source="local"]/text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>cfr:Institution_keeps_Work</relationship>
+								<entity>
+									<type>cfc:work</type>
+									<instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">work</arg>
+										<arg name="id" type="xpath">../../../../../lido:administrativeMetadata/lido:recordWrap/lido:recordID/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
 			
 			<!-- place -->
 			<link>
