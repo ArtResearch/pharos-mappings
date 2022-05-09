@@ -1407,7 +1407,7 @@
 }
 
 <https://artresearch.net/resource/zeri/actor/EECC2458-22B0-3E3B-905A-31F8A43E8866/graph> {
-        <https://artresearch.net/resource/zeri/actor/EECC2458-22B0-3E3B-905A-31F8A43E8866> a <https://artresearch.net/custom/E39_Actor> ;
+        <https://artresearch.net/resource/zeri/actor/EECC2458-22B0-3E3B-905A-31F8A43E8866> a <http://www.cidoc-crm.org/cidoc-crm/E39_Actor> ;
             <http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by> <https://artresearch.net/resource/zeri/actor/EECC2458-22B0-3E3B-905A-31F8A43E8866/graph> ;
             <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/zeri/source/Zeri>;
             <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://vocab.getty.edu/aat/300264595>;
