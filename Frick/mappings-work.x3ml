@@ -1405,7 +1405,7 @@
 								<entity>
 									<type>xsd:integer</type>
 									<instance_generator name="TypedLiteralGen">
-										<arg name="text" type="xpath">@index</arg>
+										<arg name="text" type="xpath">../@index</arg>
 									</instance_generator>
 								</entity>
 							</additional>
