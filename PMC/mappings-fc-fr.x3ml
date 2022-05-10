@@ -17,7 +17,7 @@
 		<namespace prefix="viaf" uri="http://viaf.org/viaf/"/>
 		<namespace prefix="wikidata" uri="http://www.wikidata.org/entity/"/>
 		<namespace prefix="fc" uri="https://artresearch.net/resource/fc/"/>
-		<namespace prefix="fr" uri="https://artresearch.net/resource/custom/fr/"/>
+		<namespace prefix="fr" uri="https://artresearch.net/resource/fr/"/>
 		<namespace prefix="cfc" uri="https://artresearch.net/resource/custom/fc/"/>
 		<namespace prefix="cfr" uri="https://artresearch.net/resource/custom/fr/"/>
 	</namespaces>
