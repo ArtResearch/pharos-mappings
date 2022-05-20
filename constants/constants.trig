@@ -9,7 +9,9 @@
         <https://artresearch.net/resource/pmc/source/PMC>
             a       <https://artresearch.net/custom/Provider> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
-                    "PMC" .
+                    "PMC" ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Paul Mellon Centre".
 }
 
 <https://artresearch.net/resource/zeri/source/Zeri/graph> {
@@ -23,7 +25,9 @@
         <https://artresearch.net/resource/khi/source/KHI>
             a       <https://artresearch.net/custom/Provider> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
-                    "KHI" .
+                    "KHI";
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "Kunsthistorisches Institut" .
 }
 
 <https://artresearch.net/resource/hertziana/source/Hertziana/graph> {
