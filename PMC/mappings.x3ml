@@ -400,6 +400,33 @@
 			<link>
 				<path>
 					<source_relation>
+						<relation>../../lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor/lido:actorInRole/lido:roleActor/lido:term/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../../lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor/lido:actorInRole/lido:roleActor/lido:term/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">type</arg>
+								<arg name="id" type="xpath">string-join((../../lido:conceptID/text(),"graph"),'/')</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">.</arg>
+							</label_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<!--Artist type-->
+			<link>
+				<path>
+					<source_relation>
 						<relation>../../lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor/lido:actorInRole/lido:roleActor/lido:conceptID[@lido:source="AAT"]/text()</relation>
 					</source_relation>
 					<target_relation>
@@ -489,30 +516,6 @@
 							<instance_generator name="namedgraph">
 								<arg name="type" type="constant">place</arg>
 								<arg name="id" type="xpath">.</arg>
-							</instance_generator>
-						</entity>
-					</target_node>
-				</range>
-			</link>
-
-
-			<!-- type Photo Archive Reference Number -->
-			<link>
-				<path>
-					<source_relation>
-						<relation>../../lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor/lido:actorInRole/lido:roleActor/lido:conceptID[@lido:source="AAT"]/text()</relation>
-					</source_relation>
-					<target_relation>
-						<relationship>custom:consists_of</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>../../lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor/lido:actorInRole/lido:roleActor/lido:conceptID[@lido:source="AAT"]/text()</source_node>
-					<target_node>
-						<entity>
-							<type>custom:Namedgraph</type>
-							<instance_generator name="URIwithAATId">
-								<arg name="id" type="constant">300435704/graph</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -4014,15 +4017,6 @@
 						<label_generator name="Literal">
 							<arg name="text" type="xpath">lido:term/text()</arg>
 						</label_generator>
-						<additional>
-							<relationship>owl:sameAs</relationship>
-							<entity>
-								<type>custom:noType</type>
-								<instance_generator name="URIwithAATId">
-									<arg name="id" type="xpath">lido:conceptID[@lido:source="AAT"]/text()</arg>
-								</instance_generator>
-							</entity>
-						</additional>
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
