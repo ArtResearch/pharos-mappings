@@ -697,19 +697,17 @@
 				</range>
 			</link>
 			
-			<!--title-->
+			<!--title primary-->
 			<link> 
 				<path>
 					<source_relation>
 						<relation>lido:descriptiveMetadata/lido:objectIdentificationWrap/lido:titleWrap/lido:titleSet/lido:appellationValue</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<equals value="preferred">@lido:pref</equals>
+						</if>
 						<relationship>crm:P1_is_identified_by</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>lido:descriptiveMetadata/lido:objectIdentificationWrap/lido:titleWrap/lido:titleSet/lido:appellationValue</source_node>
-					<target_node>
 						<entity>
 							<type>crm:E41_Appellation</type>
 							<instance_generator name="IdentifierURI">	
@@ -721,6 +719,62 @@
 							<label_generator name="Literal">
 								<arg name="text" type="xpath">text()</arg>
 							</label_generator>							
+						</entity>
+						<relationship>crm:P2_has_type</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>lido:descriptiveMetadata/lido:objectIdentificationWrap/lido:titleWrap/lido:titleSet/lido:appellationValue</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="constant">http://vocab.getty.edu/aat/300417204</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+
+			<!--title alternate-->
+			<link> 
+				<path>
+					<source_relation>
+						<relation>lido:descriptiveMetadata/lido:objectIdentificationWrap/lido:titleWrap/lido:titleSet/lido:appellationValue</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<not>
+								<if>
+									<equals value="preferred">@lido:pref</equals>
+								</if>
+							</not>
+						</if>
+						<relationship>crm:P1_is_identified_by</relationship>
+						<entity>
+							<type>crm:E41_Appellation</type>
+							<instance_generator name="IdentifierURI">	
+								<arg name="subject_type" type="constant">work</arg>
+								<arg name="subject_id" type="xpath">../../../../../lido:administrativeMetadata/lido:recordWrap/lido:recordID/text()</arg>
+								<arg name="identifier_type" type="constant">title</arg>
+								<arg name="identifier_id" type="xpath">text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>							
+						</entity>
+						<relationship>crm:P2_has_type</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>lido:descriptiveMetadata/lido:objectIdentificationWrap/lido:titleWrap/lido:titleSet/lido:appellationValue</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="constant">http://vocab.getty.edu/aat/300417227</arg>
+							</instance_generator>
 						</entity>
 					</target_node>
 				</range>
@@ -4119,5 +4173,8 @@
 			</domain>
 		</mapping>
 
+
+
+		
 	</mappings>
 </x3ml>

@@ -122,12 +122,28 @@
                     "works of art".
 }
 
+<http://vocab.getty.edu/aat/300417204/graph> {
+    <http://vocab.getty.edu/aat/300417204>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "original titles" .
+}
+
+<http://vocab.getty.edu/aat/300417227/graph> {
+    <http://vocab.getty.edu/aat/300417227>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                    "alternate titles" .
+}
+
+
 <http://vocab.getty.edu/aat/300417193/graph> {
     <http://vocab.getty.edu/aat/300417193>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "titles (general, names)" .
 }
+
 
 <https://artresearch.net/resource/vocab/maintype/graph> {
     <https://artresearch.net/resource/vocab/maintype>
