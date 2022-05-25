@@ -4339,52 +4339,6 @@
 		</mapping>
 
 
-		<!-- Photo Archive Reference Number -->
-		<mapping namedgraph="graph">
-			<domain>
-				<source_node>//lido:lido/lido:lidoRecID/text()</source_node>
-				<target_node>		
-					<entity>
-						<type>crm:E55_Type</type>
-						<instance_generator name="URIwithAATId">
-							<arg name="id" type="xpath">300435704</arg>
-						</instance_generator>
-						<label_generator name="Literal">
-							<arg name="text" type="constant">record identifiers</arg>
-						</label_generator>
-						<additional>
-							<relationship>custom:has_provider</relationship>
-							<entity>
-								<type>custom:noType</type>
-								<instance_generator name="URIwithTypeAndId">
-									<arg name="type" type="constant">source</arg>
-									<arg name="id" type="constant">PMC</arg>
-								</instance_generator>
-							</entity>
-						</additional>
-						<additional>
-							<relationship>crm:P67i_is_referred_to_by</relationship>
-							<entity>
-								<type>custom:Namedgraph</type>
-								<instance_generator name="URIwithAATId">
-									<arg name="id" type="constant">300435704/graph</arg>
-								</instance_generator>
-								<additional>
-									<relationship>custom:has_provider</relationship>
-									<entity>
-										<type>custom:noType</type>
-										<instance_generator name="URIwithTypeAndId">
-											<arg name="type" type="constant">source</arg>
-											<arg name="id" type="constant">PMC</arg>
-										</instance_generator>
-									</entity>
-								</additional>
-							</entity>
-						</additional>
-					</entity>
-				</target_node>
-			</domain>
-		</mapping>
 
 		
 	</mappings>
