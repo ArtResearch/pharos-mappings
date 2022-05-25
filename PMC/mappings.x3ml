@@ -364,6 +364,8 @@
 				</range>
 			</link>
 
+
+
 			<!--Artist type-->
 			<link>
 				<path>
@@ -383,9 +385,6 @@
 								<arg name="type" type="constant">type</arg>
 								<arg name="id" type="xpath">string-join((../../lido:conceptID/text(),"graph"),'/')</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">.</arg>
-							</label_generator>
 						</entity>
 					</target_node>
 				</range>
@@ -3763,6 +3762,15 @@
 						<label_generator name="Literal">
 							<arg name="text" type="xpath">lido:term/text()</arg>
 						</label_generator>
+						<additional>
+							<relationship>owl:sameAs</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIwithAATId">
+									<arg name="id" type="xpath">lido:conceptID[@lido:source="AAT"]/text()</arg>
+								</instance_generator>
+							</entity>
+						</additional>
 						<additional>
 							<relationship>custom:has_provider</relationship>
 							<entity>
