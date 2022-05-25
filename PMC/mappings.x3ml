@@ -1305,7 +1305,7 @@
 										<arg name="id" type="constant">Exhibition</arg>
 									</instance_generator>
 									<label_generator name="Literal">
-										<arg name="text" type="constant">Exhibition</arg>
+										<arg name="text" type="xpath">Exhibition</arg>
 									</label_generator>	
 								</entity>
 							</additional>
