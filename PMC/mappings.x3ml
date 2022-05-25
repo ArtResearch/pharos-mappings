@@ -1088,6 +1088,50 @@
 				</range>
 			</link>
 
+				<!-- Production DisplayDate -->
+				<link>
+					<path>
+						<source_relation>
+							<relation>lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventDate/lido:displayDate</relation>
+						</source_relation>
+						<target_relation>
+							<if>
+								<equals value="300404387">../../../lido:eventID/text()</equals>
+							</if>
+							<relationship>crm:P108i_was_produced_by</relationship>
+							<entity>
+								<type>crm:E12_Production</type>
+								<instance_generator name="EventUri">
+									<arg name="resourceType" type="constant">work</arg>
+									<arg name="resourceId" type="xpath">../../../../../../lido:administrativeMetadata/lido:recordWrap/lido:recordID/text()</arg>
+									<arg name="eventType" type="constant">production</arg>
+								</instance_generator>
+							</entity>
+							<relationship>crm:P4_has_time-span</relationship>
+							<entity>
+								<type>crm:E52_Time-Span</type>
+								<instance_generator name="TimespanUri">
+									<arg name="resourceType" type="constant">work</arg>
+									<arg name="resourceId" type="xpath">../../../../../../lido:administrativeMetadata/lido:recordWrap/lido:recordID/text()</arg>
+									<arg name="eventType" type="constant">production</arg>
+								</instance_generator>						
+							</entity>
+							<relationship>crm:P82_at_some_time_within</relationship>						
+						</target_relation>
+					</path>
+					<range>
+						<source_node>lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventDate/lido:date/lido:latestDate</source_node>
+						<target_node>
+							<entity>
+								<type>rdfs:Literal</type>
+								<instance_generator name="Literal">
+									<arg name="text" type="xpath">text()</arg>
+								</instance_generator>
+							</entity>
+						</target_node>
+					</range>
+				</link>
+
 			<!-- Production artist (ulan) -->
 			<link>
 				<path>
