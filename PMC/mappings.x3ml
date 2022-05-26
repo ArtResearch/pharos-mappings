@@ -1635,16 +1635,6 @@
 							<instance_generator name="URIwithWikidataId">
 								<arg name="id" type="xpath">lido:actorInRole/lido:actor/lido:actorID[@lido:source="WikiData"]/text()</arg>
 							</instance_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>custom:noType</type>
-									<instance_generator name="URIwithTypeAndId">
-										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="xpath">lido:actorInRole/lido:roleActor/lido:conceptID/text()</arg>
-									</instance_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -1686,16 +1676,6 @@
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">lido:actorInRole/lido:actor/lido:actorID[@lido:source="local"]/text()</arg>
 							</instance_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>custom:noType</type>
-									<instance_generator name="URIwithTypeAndId">
-										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="xpath">lido:actorInRole/lido:roleActor/lido:conceptID/text()</arg>
-									</instance_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -1732,16 +1712,6 @@
 							<instance_generator name="URIwithWikidataId">
 								<arg name="id" type="xpath">lido:actorInRole/lido:actor/lido:actorID[@lido:source="WikiData"]/text()</arg>
 							</instance_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>custom:noType</type>
-									<instance_generator name="URIwithTypeAndId">
-										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="xpath">lido:actorInRole/lido:roleActor/lido:conceptID/text()</arg>
-									</instance_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -1783,16 +1753,6 @@
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">lido:actorInRole/lido:actor/lido:actorID[@lido:source="local"]/text()</arg>
 							</instance_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>custom:noType</type>
-									<instance_generator name="URIwithTypeAndId">
-										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="xpath">lido:actorInRole/lido:roleActor/lido:conceptID/text()</arg>
-									</instance_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
