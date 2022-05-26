@@ -446,6 +446,30 @@
 				</range>
 			</link>
 
+			<!-- Subject Concept -->
+			<!-- <link>
+				<path>
+					<source_relation>
+						<relation>../../lido:descriptiveMetadata/lido:objectRelationWrap/lido:subjectWrap/lido:subjectSet/lido:subject/lido:subjectConcept/lido:conceptID/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../../lido:descriptiveMetadata/lido:objectRelationWrap/lido:subjectWrap/lido:subjectSet/lido:subject/lido:subjectConcept/lido:conceptID/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">type</arg>
+								<arg name="id" type="xpath">string-join((.,"graph"),'/')</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link> -->
+
 
 			<!-- subject concept type -->
 			<link>
@@ -1305,7 +1329,7 @@
 										<arg name="id" type="constant">Exhibition</arg>
 									</instance_generator>
 									<label_generator name="Literal">
-										<arg name="text" type="xpath">Exhibition</arg>
+										<arg name="text" type="constant">Exhibition</arg>
 									</label_generator>	
 								</entity>
 							</additional>
@@ -1586,6 +1610,16 @@
 							<instance_generator name="URIwithWikidataId">
 								<arg name="id" type="xpath">lido:actorInRole/lido:actor/lido:actorID[@lido:source="WikiData"]/text()</arg>
 							</instance_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">type</arg>
+										<arg name="id" type="xpath">lido:actorInRole/lido:roleActor/lido:conceptID/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -1627,6 +1661,16 @@
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">lido:actorInRole/lido:actor/lido:actorID[@lido:source="local"]/text()</arg>
 							</instance_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">type</arg>
+										<arg name="id" type="xpath">lido:actorInRole/lido:roleActor/lido:conceptID/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -1663,6 +1707,16 @@
 							<instance_generator name="URIwithWikidataId">
 								<arg name="id" type="xpath">lido:actorInRole/lido:actor/lido:actorID[@lido:source="WikiData"]/text()</arg>
 							</instance_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">type</arg>
+										<arg name="id" type="xpath">lido:actorInRole/lido:roleActor/lido:conceptID/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -1704,6 +1758,16 @@
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">lido:actorInRole/lido:actor/lido:actorID[@lido:source="local"]/text()</arg>
 							</instance_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">type</arg>
+										<arg name="id" type="xpath">lido:actorInRole/lido:roleActor/lido:conceptID/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -4229,6 +4293,57 @@
 				</target_node>
 			</domain>
 		</mapping>
+
+
+		<!-- Subject Concept -->
+		<!-- <mapping namedgraph="graph">
+			<domain>
+				<source_node>//lido:lido/lido:descriptiveMetadata/lido:objectRelationWrap/lido:subjectWrap/lido:subjectSet/lido:subject/lido:subjectConcept</source_node>
+				<target_node>		
+					<entity>
+						<type>crm:E55_Type</type>
+						<instance_generator name="URIwithTypeAndId">
+							<arg name="type" type="constant">type</arg>
+							<arg name="id" type="xpath">lido:conceptID/text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">lido:term/text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">PMC</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">subject</arg>
+									<arg name="id" type="xpath">string-join((lido:conceptID/text(),"graph"),"/")</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:noType</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">PMC</arg>
+										</instance_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+		</mapping> -->
+
 
 		
 		<!-- Subject Concept Type -->
