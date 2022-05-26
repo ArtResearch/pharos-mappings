@@ -47,6 +47,12 @@
 					</entity>
 				</target_node>
 			</domain>
+
+
+
+
+
+
 			<!-- Actor -->
 			<link>
 				<path>
@@ -507,6 +513,31 @@
 							<instance_generator name="namedgraph">
 								<arg name="type" type="constant">place</arg>
 								<arg name="id" type="xpath">.</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+
+			<!-- type Photo Archive Reference Number -->
+			<link>
+				<path>
+					<source_relation>
+						<relation>../../lido:lidoRecID/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../../lido:lidoRecID/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">type</arg>
+								<arg name="id" type="constant">Photo Archive Reference Number/graph</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -2174,6 +2205,45 @@
 							<instance_generator name="URIwithAATId">
 								<arg name="id" type="xpath">lido:conceptID/text()</arg>
 							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>../../../../lido:lidoRecID</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P1_is_identified_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../../../../lido:lidoRecID</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E42_Identifier</type>
+							<instance_generator name="IdentifierURI">	
+								<arg name="subject_type" type="constant">photo</arg>
+								<arg name="subject_id" type="xpath">../lido:administrativeMetadata/lido:resourceWrap/lido:resourceSet/@lido:recordID</arg>
+								<arg name="identifier_type" type="constant">identifier</arg>
+								<arg name="identifier_id" type="xpath">text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">type</arg>
+										<arg name="id" type="constant">Photo Archive Reference Number</arg>
+									</instance_generator>
+								</entity>
+							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -4346,6 +4416,53 @@
 			</domain>
 		</mapping>
 
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>//lido:lido/lido:lidoRecID/text()</source_node>
+				<target_node>		
+					<entity>
+						<type>crm:E55_Type</type>
+						<instance_generator name="URIwithTypeAndId">
+							<arg name="type" type="constant">type</arg>
+							<arg name="id" type="constant">Photo Archive Reference Number</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="constant">Photo Archive Reference Number</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">PMC</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">subject</arg>
+									<arg name="id" type="constant">Photo Archive Reference Number/graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:noType</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">PMC</arg>
+										</instance_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+		</mapping>
 
 
 		
