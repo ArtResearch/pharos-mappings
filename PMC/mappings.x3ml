@@ -524,20 +524,19 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>../../lido:lidoRecID/text()</relation>
+						<relation>../../lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor/lido:actorInRole/lido:roleActor/lido:conceptID[@lido:source="AAT"]/text()</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>custom:consists_of</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>../../lido:lidoRecID/text()</source_node>
+					<source_node>../../lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor/lido:actorInRole/lido:roleActor/lido:conceptID[@lido:source="AAT"]/text()</source_node>
 					<target_node>
 						<entity>
 							<type>custom:Namedgraph</type>
-							<instance_generator name="URIwithTypeAndId">
-								<arg name="type" type="constant">type</arg>
-								<arg name="id" type="constant">Photo Archive Reference Number/graph</arg>
+							<instance_generator name="URIwithAATId">
+								<arg name="id" type="constant">300435704/graph</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -2269,9 +2268,8 @@
 								<relationship>crm:P2_has_type</relationship>
 								<entity>
 									<type>custom:noType</type>
-									<instance_generator name="URIwithTypeAndId">
-										<arg name="type" type="constant">type</arg>
-										<arg name="id" type="constant">Photo Archive Reference Number</arg>
+									<instance_generator name="URIwithAATId">
+										<arg name="id" type="constant">300435704</arg>
 									</instance_generator>
 								</entity>
 							</additional>
@@ -4438,18 +4436,19 @@
 			</domain>
 		</mapping>
 
+
+		<!-- Photo Archive Reference Number -->
 		<mapping namedgraph="graph">
 			<domain>
 				<source_node>//lido:lido/lido:lidoRecID/text()</source_node>
 				<target_node>		
 					<entity>
 						<type>crm:E55_Type</type>
-						<instance_generator name="URIwithTypeAndId">
-							<arg name="type" type="constant">type</arg>
-							<arg name="id" type="constant">Photo Archive Reference Number</arg>
+						<instance_generator name="URIwithAATId">
+							<arg name="id" type="xpath">300435704</arg>
 						</instance_generator>
 						<label_generator name="Literal">
-							<arg name="text" type="constant">Photo Archive Reference Number</arg>
+							<arg name="text" type="constant">record identifiers</arg>
 						</label_generator>
 						<additional>
 							<relationship>custom:has_provider</relationship>
@@ -4465,9 +4464,8 @@
 							<relationship>crm:P67i_is_referred_to_by</relationship>
 							<entity>
 								<type>custom:Namedgraph</type>
-								<instance_generator name="URIwithTypeAndId">
-									<arg name="type" type="constant">subject</arg>
-									<arg name="id" type="constant">Photo Archive Reference Number/graph</arg>
+								<instance_generator name="URIwithAATId">
+									<arg name="id" type="constant">300435704/graph</arg>
 								</instance_generator>
 								<additional>
 									<relationship>custom:has_provider</relationship>
@@ -4485,7 +4483,6 @@
 				</target_node>
 			</domain>
 		</mapping>
-
 
 		
 	</mappings>
