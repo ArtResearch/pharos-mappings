@@ -355,7 +355,7 @@
 							<type>fc:institution</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">string-join((text(), ../marc:subfield[@code="b"]/text(), ../marc:subfield[@code="d"]/text() ),'_')</arg>
+								<arg name="id" type="xpath">string-join((text(), ../marc:subfield[@code="b"]/text(), ../marc:subfield[@code="c"]/text(), ../marc:subfield[@code="d"]/text() ),'_')</arg>
 							</instance_generator>
 							<additional>
 								<relationship>fr:Institution_keeps_Work</relationship>
@@ -884,7 +884,7 @@
 						<type>fc:institution</type>
 						<instance_generator name="URIwithType">
 							<arg name="type" type="constant">actor</arg>
-							<arg name="id" type="xpath">string-join((marc:subfield[@code="a"]/text(), marc:subfield[@code="b"]/text(), marc:subfield[@code="d"]/text() ),'_')</arg>
+							<arg name="id" type="xpath">string-join((marc:subfield[@code="a"]/text(), marc:subfield[@code="b"]/text(), marc:subfield[@code="c"]/text(), marc:subfield[@code="d"]/text() ),'_')</arg>
 						</instance_generator>
 					</entity>
 				</target_node>
