@@ -6,7 +6,9 @@
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Frick Art Reference Library";
             <http://www.w3.org/2000/01/rdf-schema#label>
-                    "The Frick Collection" .
+                    "The Frick Collection";
+                <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "The Frick Collection".
 }
 
 <https://artresearch.net/resource/pmc/source/PMC/graph> {
@@ -15,7 +17,9 @@
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Paul Mellon Centre";
             <http://www.w3.org/2000/01/rdf-schema#label>
-                    "Paul Mellon Centre for Studies for British Art".
+                    "Paul Mellon Centre for Studies for British Art";
+                <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "Paul Mellon Centre".
 }
 
 <https://artresearch.net/resource/zeri/source/Zeri/graph> {
@@ -24,7 +28,9 @@
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Zeri";
             <http://www.w3.org/2000/01/rdf-schema#label>
-                    "Fondazione Federico Zeri" .
+                    "Fondazione Federico Zeri";
+                <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "Fondazione Federico Zeri".
 }
 
 <https://artresearch.net/resource/khi/source/KHI/graph> {
@@ -33,7 +39,9 @@
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "KHI";
             <http://www.w3.org/2000/01/rdf-schema#label>
-                    "Kunsthistorisches Institut in Florenz" .
+                    "Kunsthistorisches Institut in Florenz";
+                <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "Kunsthistorisches Institut in Florenz".
 }
 
 <https://artresearch.net/resource/hertziana/source/Hertziana/graph> {
@@ -42,7 +50,9 @@
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Hertziana";
             <http://www.w3.org/2000/01/rdf-schema#label>
-                    "Bibliotheca Hertziana" .
+                    "Bibliotheca Hertziana" ;
+                <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "Bibliotheca Hertziana".
 }
 
 <https://artresearch.net/resource/marburg/source/Marburg/graph> {
@@ -51,7 +61,9 @@
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "Marburg";
             <http://www.w3.org/2000/01/rdf-schema#label>
-                    "Bildarchiv Foto Marburg" .
+                    "Bildarchiv Foto Marburg";
+                <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "Bildarchiv Foto Marburg".
 }
 
 <https://artresearch.net/resource/midas/source/MIDAS/graph> {
@@ -69,7 +81,9 @@
         <https://artresearch.net/resource/itatti/source/ITatti>
             a       <https://artresearch.net/custom/Provider> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
-                    "I Tatti" .
+                    "I Tatti" ;
+                <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "I Tatti".
 }
 
 <https://artresearch.net/resource/itatti/source/FotoIndex/graph> {
@@ -90,42 +104,54 @@
         <https://artresearch.net/resource/pharos/source/Pharos>
                 a       <https://artresearch.net/custom/Provider> ;
                 <http://www.w3.org/2000/01/rdf-schema#label>
-                        "Pharos" .
+                        "Pharos" ;
+                <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "Pharos".
 }
 
 <https://artresearch.net/resource/nypl/source/NYPL/graph> {
         <https://artresearch.net/resource/nypl/source/NYPL>
                 a       <https://artresearch.net/custom/Provider> ;
                 <http://www.w3.org/2000/01/rdf-schema#label>
-                        "NYPL" .
+                        "NYPL" ;
+                <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "NYPL".
 }
 
 <https://artresearch.net/resource/ulan/source/ULAN/graph> {
         <https://artresearch.net/resource/ulan/source/ULAN>
                 a       <https://artresearch.net/custom/Provider> ;
                 <http://www.w3.org/2000/01/rdf-schema#label>
-                        "ULAN" .
+                        "ULAN" ;
+                <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "ULAN".
 }
 
 <https://artresearch.net/resource/geonames/source/Geonames/graph> {
         <https://artresearch.net/resource/geonames/source/Geonames>
                 a       <https://artresearch.net/custom/Provider> ;
                 <http://www.w3.org/2000/01/rdf-schema#label>
-                        "Geonames" .
+                        "Geonames" ;
+                <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "Geonames".
 }
 
 <https://artresearch.net/resource/wikidata/source/Wikidata/graph> {
         <https://artresearch.net/resource/wikidata/source/Wikidata>
                 a       <https://artresearch.net/custom/Provider> ;
                 <http://www.w3.org/2000/01/rdf-schema#label>
-                        "Wikidata" .
+                        "Wikidata" ;
+                <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "Wikidata".
 }
 
 <https://artresearch.net/resource/getty/source/Getty/graph> {
         <https://artresearch.net/resource/getty/source/Getty>
                 a       <https://artresearch.net/custom/Provider> ;
                 <http://www.w3.org/2000/01/rdf-schema#label>
-                        "AAT" .
+                        "AAT" ;
+                <http://www.w3.org/2004/02/skos/core#prefLabel>
+                "AAT".
 }
 
 <http://vocab.getty.edu/aat/300133025/graph> {
