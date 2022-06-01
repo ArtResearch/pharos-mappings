@@ -71,10 +71,10 @@
 					<target_node>
 						<entity>
 							<type>custom:Namedgraph</type>
-								<instance_generator name="namedgraph">
-									<arg name="type" type="constant">actor</arg>
-									<arg name="id" type="xpath">.</arg>
-								</instance_generator>
+							<instance_generator name="namedgraph">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">.</arg>
+							</instance_generator>
 						</entity>	
 					</target_node>
 				</range>
@@ -95,10 +95,10 @@
 					<target_node>
 						<entity>
 							<type>custom:Namedgraph</type>
-								<instance_generator name="namedgraph">
-									<arg name="type" type="constant">actor</arg>
-									<arg name="id" type="xpath">.</arg>
-								</instance_generator>
+							<instance_generator name="namedgraph">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">.</arg>
+							</instance_generator>
 						</entity>	
 					</target_node>
 				</range>
