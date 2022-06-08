@@ -1783,7 +1783,7 @@
 			</link>
 			
 			<!-- Inventory Number -->
-			<link> 
+			<!-- <link> 
 				<path>
 					<source_relation>
 						<relation>lido:descriptiveMetadata/lido:objectIdentificationWrap/lido:repositoryWrap/lido:repositorySet/lido:workID[@lido:type="inventory number"]</relation>
@@ -1819,7 +1819,7 @@
 						</entity>
 					</target_node>
 				</range>
-			</link>
+			</link> -->
 
 			<!-- Exhibition Event linked to work of art -->
 			<link> 
@@ -2428,6 +2428,53 @@
 				</range>
 			</link>
 
+			<link> 
+				<path>
+					<source_relation>
+						<relation>../../../../lido:objectIdentificationWrap/lido:repositoryWrap/lido:repositorySet/lido:workID[@lido:type="inventory number"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>fr:Institution_has_Original_Link</relationship>
+						<entity>
+							<type>crm:E32_Identifier</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">../lido:repositoryName/lido:legalBodyWeblink/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P1_is_identified_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../../../../lido:objectIdentificationWrap/lido:repositoryWrap/lido:repositorySet/lido:workID[@lido:type="inventory number"]</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E42_Identifier</type>
+							<instance_generator name="IdentifierURI">	
+								<arg name="subject_type" type="constant">work</arg>
+								<arg name="subject_id" type="xpath">../../../../../lido:administrativeMetadata/lido:recordWrap/lido:recordID/text()</arg>
+								<arg name="identifier_type" type="constant">identifier</arg>
+								<arg name="identifier_id" type="xpath">text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIwithType">
+										<arg name="type" type="constant">type</arg>
+										<arg name="id" type="constant">Inventory Number</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+
+
 			<!-- alternate names -->
 			<link> 
 				<path>
@@ -2649,6 +2696,51 @@
 									<type>custom:noType</type>
 									<instance_generator name="URIorUUID">
 										<arg name="text" type="constant">http://vocab.getty.edu/aat/300404630</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>../../../../lido:objectIdentificationWrap/lido:repositoryWrap/lido:repositorySet/lido:workID[@lido:type="inventory number"]</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>fr:Institution_has_Original_Link</relationship>
+						<entity>
+							<type>crm:E32_Identifier</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">../lido:repositoryName/lido:legalBodyWeblink/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P1_is_identified_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../../../../lido:objectIdentificationWrap/lido:repositoryWrap/lido:repositorySet/lido:workID[@lido:type="inventory number"]</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E42_Identifier</type>
+							<instance_generator name="IdentifierURI">	
+								<arg name="subject_type" type="constant">work</arg>
+								<arg name="subject_id" type="xpath">../../../../../lido:administrativeMetadata/lido:recordWrap/lido:recordID/text()</arg>
+								<arg name="identifier_type" type="constant">identifier</arg>
+								<arg name="identifier_id" type="xpath">text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
+							<additional>
+								<relationship>crm:P2_has_type</relationship>
+								<entity>
+									<type>custom:noType</type>
+									<instance_generator name="URIwithType">
+										<arg name="type" type="constant">type</arg>
+										<arg name="id" type="constant">Inventory Number</arg>
 									</instance_generator>
 								</entity>
 							</additional>
