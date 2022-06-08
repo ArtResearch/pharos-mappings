@@ -13,9 +13,9 @@
 		<namespace prefix="custom" uri="https://artresearch.net/custom/"/>
 		<namespace prefix="owl" uri="http://www.w3.org/2002/07/owl#"/>
 		<namespace prefix="original" uri="http://foto.biblhertz.it/"/>
-		<namespace prefix="iiif_image" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
-		<namespace prefix="image" uri="http://fotothek.biblhertz.it/bh/320px/"/>
-		<namespace prefix="iiif_json" uri="https://img.biblhertz.it/digilib/Scaler/IIIF/fototeca!2048px!im!"/>
+		<namespace prefix="thumb_image" uri="https://hertz-foto-os1.biblhertz.it/iiif/2/320px%2F"/>
+		<namespace prefix="image" uri="https://hertz-foto-os1.biblhertz.it/iiif/2/2048px%2F"/>
+		<namespace prefix="iiif_json" uri="https://hertz-foto-os1.biblhertz.it/iiif/2/2048px%2F"/>
 		<namespace prefix="gernsheim" uri="https://artresearch.net/resource/gernsheim/"/>
 	</namespaces>
 	
@@ -1015,7 +1015,7 @@
 								<type>crmdig:D1_Digital_Object</type>
 								<instance_generator name="Image_Generator">
 									<arg name="id" type="xpath">a8540/text()</arg>
-									<arg name="postfix" type="constant">.jpg</arg>
+									<arg name="postfix" type="constant">.jpg/full/full/0/default.jpg</arg>
 								</instance_generator>
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
@@ -1054,7 +1054,17 @@
 										<type>crm:E73_Information_Object</type>
 										<instance_generator name="JSON_Generator">
 											<arg name="id" type="xpath">a8540/text()</arg>
-											<arg name="postfix" type="constant">/info.json</arg>
+											<arg name="postfix" type="constant">.jpg/info.json</arg>
+										</instance_generator>
+									</entity>
+								</additional>
+								<additional>
+									<relationship>crmdig:L58_has_thumbnail</relationship>
+									<entity>
+										<type>crmdig:D39_Thumbnail</type>
+										<instance_generator name="Thumb_Image_Generator">
+											<arg name="id" type="xpath">a8540/text()</arg>
+											<arg name="postfix" type="constant">.jpg/full/full/0/default.jpg</arg>
 										</instance_generator>
 									</entity>
 								</additional>
@@ -1837,7 +1847,7 @@
 								<type>crmdig:D1_Digital_Object</type>
 								<instance_generator name="Image_Generator">
 									<arg name="id" type="xpath">a8540/text()</arg>
-									<arg name="postfix" type="constant">.jpg</arg>
+									<arg name="postfix" type="constant">.jpg/full/full/0/default.jpg</arg>
 								</instance_generator>
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
@@ -1876,7 +1886,17 @@
 										<type>crm:E73_Information_Object</type>
 										<instance_generator name="JSON_Generator">
 											<arg name="id" type="xpath">a8540/text()</arg>
-											<arg name="postfix" type="constant">/info.json</arg>
+											<arg name="postfix" type="constant">.jpg/info.json</arg>
+										</instance_generator>
+									</entity>
+								</additional>
+								<additional>
+									<relationship>crmdig:L58_has_thumbnail</relationship>
+									<entity>
+										<type>crmdig:D39_Thumbnail</type>
+										<instance_generator name="Thumb_Image_Generator">
+											<arg name="id" type="xpath">a8540/text()</arg>
+											<arg name="postfix" type="constant">.jpg/full/full/0/default.jpg</arg>
 										</instance_generator>
 									</entity>
 								</additional>
@@ -2687,7 +2707,7 @@
 								<type>crmdig:D1_Digital_Object</type>
 								<instance_generator name="Image_Generator">
 									<arg name="id" type="xpath">a8540/text()</arg>
-									<arg name="postfix" type="constant">.jpg</arg>
+									<arg name="postfix" type="constant">.jpg/full/full/0/default.jpg</arg>
 								</instance_generator>
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
@@ -2726,7 +2746,17 @@
 										<type>crm:E73_Information_Object</type>
 										<instance_generator name="JSON_Generator">
 											<arg name="id" type="xpath">a8540/text()</arg>
-											<arg name="postfix" type="constant">/info.json</arg>
+											<arg name="postfix" type="constant">.jpg/info.json</arg>
+										</instance_generator>
+									</entity>
+								</additional>
+								<additional>
+									<relationship>crmdig:L58_has_thumbnail</relationship>
+									<entity>
+										<type>crmdig:D39_Thumbnail</type>
+										<instance_generator name="Thumb_Image_Generator">
+											<arg name="id" type="xpath">a8540/text()</arg>
+											<arg name="postfix" type="constant">.jpg/full/full/0/default.jpg</arg>
 										</instance_generator>
 									</entity>
 								</additional>
@@ -3536,7 +3566,7 @@
 								<type>crmdig:D1_Digital_Object</type>
 								<instance_generator name="Image_Generator">
 									<arg name="id" type="xpath">a8540/text()</arg>
-									<arg name="postfix" type="constant">.jpg</arg>
+									<arg name="postfix" type="constant">.jpg/full/full/0/default.jpg</arg>
 								</instance_generator>
 								<additional>
 									<relationship>crm:P2_has_type</relationship>
@@ -3575,7 +3605,17 @@
 										<type>crm:E73_Information_Object</type>
 										<instance_generator name="JSON_Generator">
 											<arg name="id" type="xpath">a8540/text()</arg>
-											<arg name="postfix" type="constant">/info.json</arg>
+											<arg name="postfix" type="constant">.jpg/info.json</arg>
+										</instance_generator>
+									</entity>
+								</additional>
+								<additional>
+									<relationship>crmdig:L58_has_thumbnail</relationship>
+									<entity>
+										<type>crmdig:D39_Thumbnail</type>
+										<instance_generator name="Thumb_Image_Generator">
+											<arg name="id" type="xpath">a8540/text()</arg>
+											<arg name="postfix" type="constant">.jpg/full/full/0/default.jpg</arg>
 										</instance_generator>
 									</entity>
 								</additional>

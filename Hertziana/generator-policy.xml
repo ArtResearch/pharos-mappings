@@ -97,6 +97,10 @@
 	<pattern>{id}{postfix}</pattern>
 </generator>
 
+<generator name="Thumb_Image_Generator" prefix="thumb_image">
+	<pattern>{id}{postfix}</pattern>
+</generator>
+
 <generator name="PropertyTypeUri" prefix="prefix">
 	<pattern>{propertyType}/{domain}/{range}</pattern>
 </generator>
