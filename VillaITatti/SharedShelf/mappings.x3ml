@@ -279,7 +279,14 @@
 					</source_relation>
 					<target_relation>
 						<if>
-							<equals value="11309059">.</equals>
+							<or>
+								<if>
+									<equals value="11309059">.</equals>
+								</if>
+								<if>
+									<equals value="11309063">.</equals>
+								</if>
+							</or>
 						</if>
 						<relationship>custom:consists_of</relationship>
 					</target_relation>
@@ -2377,12 +2384,24 @@
 					</source_relation>
 					<target_relation>
 						<if>
-							<not>
+							<and>
 								<if>
-									<equals value="11309059">@type_lkup_id</equals>
+									<not>
+										<if>
+											<equals value="11309059">@type_lkup_id</equals>
+										</if>
+									</not>
 								</if>
-							</not>
+								<if>
+									<not>
+										<if>
+											<equals value="11309063">@type_lkup_id</equals>
+										</if>
+									</not>
+								</if>
+							</and>
 						</if>
+
 						<relationship>crm:P65_shows_visual_item</relationship>
 					</target_relation>
 				</path>
@@ -2407,7 +2426,14 @@
 					</source_relation>
 					<target_relation>
 						<if>
-							<equals value="11309059">@type_lkup_id</equals>
+							<or>
+								<if>
+									<equals value="11309059">@type_lkup_id</equals>
+								</if>
+								<if>
+									<equals value="11309063">@type_lkup_id</equals>
+								</if>
+							</or>
 						</if>
 						<relationship>crm:P65_shows_visual_item</relationship>
 					</target_relation>
