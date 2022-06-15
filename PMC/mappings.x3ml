@@ -26,7 +26,7 @@
 		<mapping namedgraph="">
 			<domain>
 				<source_node>//lido:lido/lido:administrativeMetadata/lido:recordWrap</source_node>
-				<target_node>					
+				<target_node>
 					<entity>
 						<type>custom:SourceNamedgraph</type>
 						<instance_generator name="namedgraph">
