@@ -12,7 +12,7 @@
 		<namespace prefix="owl" uri="http://www.w3.org/2002/07/owl#"/>
 		<namespace prefix="original" uri="http://foto.biblhertz.it/"/>
 		<namespace prefix="iiif_image" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
-		<namespace prefix="image" uri="http://fotothek.biblhertz.it/bh/320px/"/>
+		<namespace prefix="image" uri="https://fotothek.biblhertz.it/bh/320px/"/>
 		<namespace prefix="iiif_json" uri="https://foto.biblhertz.it/exist/foto/"/>
 		<namespace prefix="ico" uri="http://iconclass.org/"/>
 	</namespaces>
