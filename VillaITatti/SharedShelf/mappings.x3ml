@@ -90,6 +90,30 @@
 				</range>
 			</link>
 
+				<!--place graph-->
+				<link>
+					<path>
+						<source_relation>
+							<relation>../Locations/Location/@id</relation>
+						</source_relation>
+						<target_relation>
+							<relationship>custom:consists_of</relationship>
+						</target_relation>
+					</path>
+					<range>
+						<source_node>../Locations/Location/@id</source_node>
+						<target_node>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="namedgraph">
+									<arg name="type" type="constant">place</arg>
+									<arg name="id" type="xpath">.</arg>
+								</instance_generator>
+							</entity>
+						</target_node>
+					</range>
+				</link>
+
 			<!--institution graph-->
 			<link>
 				<path>
@@ -2102,6 +2126,29 @@
 				</path>
 				<range>
 					<source_node>Locations/Repository/location</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">place</arg>
+								<arg name="id" type="xpath">@id</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>Locations/Location</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P55_has_current_location</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>Locations/Location</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
@@ -5398,6 +5445,64 @@
 		<mapping namedgraph="graph">
 			<domain>
 				<source_node>//ssw:Work/Locations/Repository/location</source_node>
+				<target_node>
+                   <entity>
+						<type>crm:E53_Place</type>
+						<instance_generator name="URIwithTypeAndId">
+							<arg name="type" type="constant">place</arg>
+							<arg name="id" type="xpath">@id</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">@term</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">ITatti</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="namedgraph">
+									<arg name="type" type="constant">place</arg>
+									<arg name="id" type="xpath">@id</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:noType</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">ITatti</arg>
+										</instance_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">SharedShelf</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+					</entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>//ssw:Work/Locations/Location</source_node>
 				<target_node>
                    <entity>
 						<type>crm:E53_Place</type>
