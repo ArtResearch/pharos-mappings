@@ -27,9 +27,6 @@
 			<domain>
 				<source_node>//lido:lido/lido:administrativeMetadata/lido:recordWrap</source_node>
 				<target_node>
-					<if>
-						<equals value="false">matches(../../lido:recordID/text(),'^PA-F[0-9]{5}$')</equals>
-					</if>					
 					<entity>
 						<type>custom:SourceNamedgraph</type>
 						<instance_generator name="namedgraph">
@@ -561,10 +558,7 @@
 		<mapping namedgraph="graph">
 			<domain>
 				<source_node>//lido:lido</source_node>
-				<target_node>
-					<if>
-						<equals value="false">matches(lido:recordID/text(),'^PA-F[0-9]{5}$')</equals>
-					</if>				
+				<target_node>				
 					<entity>
 						<type>crm:E22_Man-Made_Object</type>
 						<instance_generator name="URIwithTypeAndId">
