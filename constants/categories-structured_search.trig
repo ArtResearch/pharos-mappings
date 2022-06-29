@@ -470,3 +470,17 @@
   <https://artresearch.net/resource/marburg/source/Marburg> <https://artresearch.net/custom/has_iiif_server> "https://iiif.artresearch.net/iiif/2".
   <https://artresearch.net/resource/khi/source/KHI> <https://artresearch.net/custom/has_iiif_server> "https://iiif.khi.fi.it/iiif/2".
 }
+
+
+insert data {
+  graph <https://artresearch.net/custom/MainProvider/graph>{
+     <https://artresearch.net/resource/itatti/source/ITatti> a <https://artresearch.net/resource/fc/MainProvider>.
+     <https://artresearch.net/resource/marburg/source/Marburg> a <https://artresearch.net/resource/fc/MainProvider>.
+     <https://artresearch.net/resource/hertziana/source/Hertziana> a <https://artresearch.net/resource/fc/MainProvider>.
+     <https://artresearch.net/resource/khi/source/KHI> a <https://artresearch.net/resource/fc/MainProvider>.
+     <https://artresearch.net/resource/frick/source/Frick> a <https://artresearch.net/resource/fc/MainProvider>.
+     <https://artresearch.net/resource/nypl/source/NYPL> a <https://artresearch.net/resource/fc/MainProvider>.
+     <https://artresearch.net/resource/pmc/source/PMC> a <https://artresearch.net/resource/fc/MainProvider>.
+     <https://artresearch.net/resource/zeri/source/Zeri> a <https://artresearch.net/resource/fc/MainProvider>.
+  }
+}

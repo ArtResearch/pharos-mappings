@@ -615,6 +615,24 @@
 							</entity>
 						</additional>
 						<additional>
+							<relationship>custom:has_original_record</relationship>
+							<entity>
+								<type>crm:E32_Identifier</type>
+								<instance_generator name="URIorUUID">
+									<arg name="text" type="xpath">lido:descriptiveMetadata/lido:objectIdentificationWrap/lido:repositoryWrap/lido:repositorySet/lido:repositoryName/lido:legalBodyWeblink/text()</arg>
+								</instance_generator>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>custom:noType</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">http://vocab.getty.edu/aat/300404630</arg>
+										</instance_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
 							<relationship>crm:P67i_is_referred_to_by</relationship>
 							<entity>
 								<type>custom:Namedgraph</type>
@@ -1144,49 +1162,49 @@
 				</range>
 			</link>
 
-				<!-- Production DisplayDate -->
-				<link>
-					<path>
-						<source_relation>
-							<relation>lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventDate/lido:displayDate</relation>
-						</source_relation>
-						<target_relation>
-							<if>
-								<equals value="300404387">../../../lido:eventID/text()</equals>
-							</if>
-							<relationship>crm:P108i_was_produced_by</relationship>
-							<entity>
-								<type>crm:E12_Production</type>
-								<instance_generator name="EventUri">
-									<arg name="resourceType" type="constant">work</arg>
-									<arg name="resourceId" type="xpath">../../../../../../lido:administrativeMetadata/lido:recordWrap/lido:recordID/text()</arg>
-									<arg name="eventType" type="constant">production</arg>
-								</instance_generator>
-							</entity>
-							<relationship>crm:P4_has_time-span</relationship>
-							<entity>
-								<type>crm:E52_Time-Span</type>
-								<instance_generator name="TimespanUri">
-									<arg name="resourceType" type="constant">work</arg>
-									<arg name="resourceId" type="xpath">../../../../../../lido:administrativeMetadata/lido:recordWrap/lido:recordID/text()</arg>
-									<arg name="eventType" type="constant">production</arg>
-								</instance_generator>						
-							</entity>
-							<relationship>crm:P82_at_some_time_within</relationship>						
-						</target_relation>
-					</path>
-					<range>
-						<source_node>lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventDate/lido:date/lido:latestDate</source_node>
-						<target_node>
-							<entity>
-								<type>rdfs:Literal</type>
-								<instance_generator name="Literal">
-									<arg name="text" type="xpath">text()</arg>
-								</instance_generator>
-							</entity>
-						</target_node>
-					</range>
-				</link>
+			<!-- Production DisplayDate -->
+			<link>
+				<path>
+					<source_relation>
+						<relation>lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventDate/lido:displayDate</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="300404387">../../../lido:eventID/text()</equals>
+						</if>
+						<relationship>crm:P108i_was_produced_by</relationship>
+						<entity>
+							<type>crm:E12_Production</type>
+							<instance_generator name="EventUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../../../../../lido:administrativeMetadata/lido:recordWrap/lido:recordID/text()</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P4_has_time-span</relationship>
+						<entity>
+							<type>crm:E52_Time-Span</type>
+							<instance_generator name="TimespanUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../../../../../lido:administrativeMetadata/lido:recordWrap/lido:recordID/text()</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>						
+						</entity>
+						<relationship>crm:P82_at_some_time_within</relationship>						
+					</target_relation>
+				</path>
+				<range>
+					<source_node>lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventDate/lido:date/lido:latestDate</source_node>
+					<target_node>
+						<entity>
+							<type>rdfs:Literal</type>
+							<instance_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
 
 			<!-- Production artist (ulan) -->
 			<link>
@@ -1995,11 +2013,54 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>../../../../../lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor</source_node>
+					<source_node>../../../../lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
 							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">lido:actorInRole/lido:actor/lido:actorID[@lido:source="local"]/text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>../../../../lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<and>
+								<if>
+									<equals value="300157782">../lido:eventID/text()</equals>
+								</if>
+								<if>
+									<equals value="300312296">lido:actorInRole/lido:roleActor/lido:conceptID/text()</equals>
+								</if>
+							</and>
+						</if>
+						<relationship>crm:P108i_was_produced_by</relationship>
+						<entity>
+							<type>crm:E12_Production</type>
+							<instance_generator name="EventUri">
+								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="resourceId" type="xpath">../../../../../lido:administrativeMetadata/lido:resourceWrap/lido:resourceSet/@lido:recordID</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P14_carried_out_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../../../../lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">lido:actorInRole/lido:actor/lido:actorID[@lido:source="local"]/text()</arg>
 							</instance_generator>
@@ -2396,6 +2457,7 @@
 					</target_node>
 				</range>
 			</link>
+			
 
 			<link> 
 				<path>
@@ -2673,7 +2735,7 @@
 				</range>
 			</link>
 
-			<link> 
+			<!-- <link> 
 				<path>
 					<source_relation>
 						<relation>../../../../lido:objectIdentificationWrap/lido:repositoryWrap/lido:repositorySet/lido:repositoryName/lido:legalBodyWeblink</relation>
@@ -2702,9 +2764,9 @@
 						</entity>
 					</target_node>
 				</range>
-			</link>
+			</link> -->
 
-			<link> 
+			<!-- <link> 
 				<path>
 					<source_relation>
 						<relation>../../../../lido:objectIdentificationWrap/lido:repositoryWrap/lido:repositorySet/lido:workID[@lido:type="inventory number"]</relation>
@@ -2747,7 +2809,7 @@
 						</entity>
 					</target_node>
 				</range>
-			</link>
+			</link> -->
 			
 			<!-- alternate names -->
 			<link> 
