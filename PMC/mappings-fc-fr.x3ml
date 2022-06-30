@@ -495,22 +495,22 @@
 								</if>
 							</and>
 						</if>
-						<relationship>fr:Photo_created_by_Photographer</relationship>
+						<relationship>cfr:Photo_created_by_Photographer</relationship>
 					</target_relation>
 				</path>
 				<range>
 					<source_node>../../../../lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor</source_node>
 					<target_node>
 						<entity>
-							<type>fc:photographer</type>
+							<type>cfc:photographer</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">lido:actorInRole/lido:actor/lido:actorID[@lido:source="local"]/text()</arg>
 							</instance_generator>
 							<additional>
-								<relationship>fr:Photographer_created_Photo</relationship>
+								<relationship>cfr:Photographer_created_Photo</relationship>
 								<entity>
-									<type>fc:photo</type>
+									<type>cfc:photo</type>
 									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">photo</arg>
 										<arg name="id" type="xpath">../../../../../lido:administrativeMetadata/lido:resourceWrap/lido:resourceSet/@lido:recordID</arg>
