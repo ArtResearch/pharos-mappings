@@ -510,7 +510,7 @@
 							<additional>
 								<relationship>cfr:Photographer_created_Photo</relationship>
 								<entity>
-									<type>cfc:photo</type>
+									<type>cfc:photo</type>        
 									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">photo</arg>
 										<arg name="id" type="xpath">../../../../../lido:administrativeMetadata/lido:resourceWrap/lido:resourceSet/@lido:recordID</arg>
