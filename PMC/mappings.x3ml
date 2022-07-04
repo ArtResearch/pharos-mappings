@@ -1966,67 +1966,6 @@
 				</target_node>
 			</domain>
 
-
-
-
-			<!-- <link> 
-				<path>
-					<source_relation>
-						<relation>../../../../lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor</relation>
-					</source_relation>
-					<target_relation>
-						<if>
-							<and>
-								<if>
-									<equals value="300157782">../lido:eventID/text()</equals>
-								</if>
-								<if>
-									<equals value="300312296">lido:actorInRole/lido:roleActor/lido:conceptID/text()</equals>
-								</if>
-							</and>
-						</if>
-						<relationship>crm:P24i_changed_ownership_through</relationship>
-						<entity>
-							<type>crm:E8_Acquisition</type>
-							<instance_generator name="AcquisitionUri">
-								<arg name="resourceType" type="constant">photo</arg>
-								<arg name="resourceId" type="xpath">../../../../../lido:administrativeMetadata/lido:resourceWrap/lido:resourceSet/@lido:recordID</arg>
-								<arg name="eventType" type="constant">acquisition</arg>
-								<arg name="from" type="xpath">lido:actorInRole/lido:actor/lido:actorID[@lido:source="local"]/text()</arg>
-								<arg name="to" type="constant">-</arg>
-								<arg name="timespan" type="constant">-</arg>
-							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">string-join(("Acquisition :",lido:displayActorInRole/text()," (",lido:actorInRole/lido:roleActor/lido:term/text(),")")," ")</arg>
-							</label_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>custom:noType</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="xpath">../lido:eventType/lido:conceptID/text()</arg>
-									</instance_generator>
-								</entity>
-							</additional>
-						</entity>
-						<relationship>crm:P23_transferred_title_from</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>../../../../lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor</source_node>
-					<target_node>
-						<entity>
-							<type>custom:noType</type>
-							<instance_generator name="URIwithTypeAndId">
-								<arg name="type" type="constant">actor</arg>
-								<arg name="id" type="xpath">lido:actorInRole/lido:actor/lido:actorID[@lido:source="local"]/text()</arg>
-							</instance_generator>
-						</entity>
-					</target_node>
-				</range>
-			</link> -->
-
-
 			<link> 
 				<path>
 					<source_relation>
