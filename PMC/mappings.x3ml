@@ -1969,7 +1969,7 @@
 
 
 
-			<link> 
+			<!-- <link> 
 				<path>
 					<source_relation>
 						<relation>../../../../lido:descriptiveMetadata/lido:eventWrap/lido:eventSet/lido:event/lido:eventActor</relation>
@@ -2024,7 +2024,7 @@
 						</entity>
 					</target_node>
 				</range>
-			</link>
+			</link> -->
 
 
 			<link> 
