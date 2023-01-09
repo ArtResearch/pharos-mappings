@@ -1290,9 +1290,17 @@
 								<arg name="unit" type="xpath">../MISU/text()</arg>
 								<arg name="value" type="xpath">text()</arg>
 							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">string-join((text(),../MISU/text(),", height"),' ')</arg>
-							</label_generator>
+							<additional>
+								<relationship>rdfs:label</relationship>
+								<entity>
+									<type>rdfs:Literal</type>
+									<instance_generator name="DimensionConcatenated">
+										<arg name="length" type="xpath">../MISL[@etichetta="Length"]/text()</arg>
+										<arg name="height" type="xpath">text()</arg>
+										<arg name="unit" type="xpath">../MISU[@etichetta="Unit of measurement"]/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
 							<additional>
 								<relationship>crm:P2_has_type</relationship>
 								<entity>

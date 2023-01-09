@@ -114,7 +114,7 @@
 </generator>
 
 <generator name="DimensionConcatenated">
-	<pattern>{length} x {height} {unit}</pattern>
+	<pattern>{height} x {length} {unit}</pattern>
 </generator>
 
 <generator name="PageUri" prefix="prefix" shorten="yes">
