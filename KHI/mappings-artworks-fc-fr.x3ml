@@ -519,6 +519,49 @@
 			<link>
 				<path>
 					<source_relation>
+						<relation>a8450</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<and>
+								<if>
+									<exists>a8470/text()</exists>
+								</if>
+								<if>
+									<equals value="Corpus Photographicum of Drawings">a8460/text()</equals>
+								</if>
+							</and>
+						</if>
+						<relationship>fr:Work_depicted_by_Photo</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a8450</source_node>
+					<target_node>
+						<entity>
+							<type>fc:photo</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">photo</arg>
+								<arg name="id" type="xpath">a8470/text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>fr:Photo_depicts_Work</relationship>
+								<entity>
+									<type>fc:work</type>
+									<instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">work</arg>
+										<arg name="id" type="xpath">../a5000/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
 						<relation>a5300</relation>
 					</source_relation>
 					<target_relation>
@@ -1058,6 +1101,49 @@
 									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">work</arg>
 										<arg name="id" type="xpath">../a5001/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>a8450</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<and>
+								<if>
+									<exists>a8470/text()</exists>
+								</if>
+								<if>
+									<equals value="Corpus Photographicum of Drawings">a8460/text()</equals>
+								</if>
+							</and>
+						</if>
+						<relationship>fr:Work_depicted_by_Photo</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a8450</source_node>
+					<target_node>
+						<entity>
+							<type>fc:photo</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">photo</arg>
+								<arg name="id" type="xpath">a8470/text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>fr:Photo_depicts_Work</relationship>
+								<entity>
+									<type>fc:work</type>
+									<instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">work</arg>
+										<arg name="id" type="xpath">../a5000/text()</arg>
 									</instance_generator>
 								</entity>
 							</additional>
@@ -1619,6 +1705,49 @@
 			<link>
 				<path>
 					<source_relation>
+						<relation>a8450</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<and>
+								<if>
+									<exists>a8470/text()</exists>
+								</if>
+								<if>
+									<equals value="Corpus Photographicum of Drawings">a8460/text()</equals>
+								</if>
+							</and>
+						</if>
+						<relationship>fr:Work_depicted_by_Photo</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a8450</source_node>
+					<target_node>
+						<entity>
+							<type>fc:photo</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">photo</arg>
+								<arg name="id" type="xpath">a8470/text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>fr:Photo_depicts_Work</relationship>
+								<entity>
+									<type>fc:work</type>
+									<instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">work</arg>
+										<arg name="id" type="xpath">../a5000/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
 						<relation>a5300</relation>
 					</source_relation>
 					<target_relation>
@@ -2158,6 +2287,49 @@
 									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">work</arg>
 										<arg name="id" type="xpath">../a5003/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>a8450</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<and>
+								<if>
+									<exists>a8470/text()</exists>
+								</if>
+								<if>
+									<equals value="Corpus Photographicum of Drawings">a8460/text()</equals>
+								</if>
+							</and>
+						</if>
+						<relationship>fr:Work_depicted_by_Photo</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a8450</source_node>
+					<target_node>
+						<entity>
+							<type>fc:photo</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">photo</arg>
+								<arg name="id" type="xpath">a8470/text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>fr:Photo_depicts_Work</relationship>
+								<entity>
+									<type>fc:work</type>
+									<instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">work</arg>
+										<arg name="id" type="xpath">../a5000/text()</arg>
 									</instance_generator>
 								</entity>
 							</additional>

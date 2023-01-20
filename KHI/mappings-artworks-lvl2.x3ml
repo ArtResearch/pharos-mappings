@@ -1684,6 +1684,47 @@
 			<link> 
 				<path>
 					<source_relation>
+						<relation>a8450</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<and>
+								<if>
+									<exists>a8470/text()</exists>
+								</if>
+								<if>
+									<equals value="Corpus Photographicum of Drawings">a8460/text()</equals>
+								</if>
+							</and>
+						</if>
+						<relationship>crm:P138i_is_represented_by</relationship>
+						<entity>
+							<type>crm:E36_Visual_Item</type>
+							<instance_generator name="VisualItemUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../a5001/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P128i_is_carried_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a8450</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E22_Man-Made_Object</type>
+							<instance_generator name="URIwithTypeAndId">
+								<arg name="type" type="constant">photo</arg>
+								<arg name="id" type="xpath">a8470/text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
+			<link> 
+				<path>
+					<source_relation>
 						<relation>a8450/a8470</relation>
 					</source_relation>
 					<target_relation>
