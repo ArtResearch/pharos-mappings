@@ -1702,7 +1702,7 @@
 							<type>crm:E36_Visual_Item</type>
 							<instance_generator name="VisualItemUri">
 								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../a5001/text()</arg>
+								<arg name="resourceId" type="xpath">../a5002/text()</arg>
 							</instance_generator>
 						</entity>
 						<relationship>crm:P128i_is_carried_by</relationship>
