@@ -1281,10 +1281,10 @@
 										<arg name="type" type="constant">type</arg>
 										<arg name="id" type="constant">Alternative Date</arg>
 									</instance_generator>
-								</entity>
+						</entity>
 							</additional>
 						</entity>
-						<relationship>crm:P82_at_some_time_within</relationship>
+						<relationship>crm:P86_falls_within</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -3223,10 +3223,10 @@
 										<arg name="type" type="constant">type</arg>
 										<arg name="id" type="constant">Alternative Date</arg>
 									</instance_generator>
-								</entity>
+						</entity>
 							</additional>
 						</entity>
-						<relationship>crm:P82_at_some_time_within</relationship>
+						<relationship>crm:P86_falls_within</relationship>
 					</target_relation>
 				</path>
 				<range>
