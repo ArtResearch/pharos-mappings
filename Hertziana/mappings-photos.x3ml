@@ -1204,6 +1204,41 @@
 					</target_node>
 				</range>
 			</link>
+	
+			<link> 
+				<path>
+					<source_relation>
+						<relation>a8460</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="Gernsheim Corpus of Drawings">text()</equals>
+						</if>
+						<relationship>crm:P108i_was_produced_by</relationship>
+						<entity>
+							<type>crm:E12_Production</type>
+							<instance_generator name="EventUri">
+								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="resourceId" type="xpath">../a8540/text()</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P14_carried_out_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a8460</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
 			
 			<link> 
 				<path>
@@ -2026,6 +2061,43 @@
 					</target_node>
 				</range>
 			</link>
+
+				
+			<link> 
+				<path>
+					<source_relation>
+						<relation>a8460</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="Gernsheim Corpus of Drawings">text()</equals>
+						</if>
+						<relationship>crm:P108i_was_produced_by</relationship>
+						<entity>
+							<type>crm:E12_Production</type>
+							<instance_generator name="EventUri">
+								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="resourceId" type="xpath">../a8540/text()</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P14_carried_out_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a8460</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
 			<!--
 			<link> 
 				<path>
@@ -2876,6 +2948,43 @@
 					</target_node>
 				</range>
 			</link>
+
+				
+			<link> 
+				<path>
+					<source_relation>
+						<relation>a8460</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="Gernsheim Corpus of Drawings">text()</equals>
+						</if>
+						<relationship>crm:P108i_was_produced_by</relationship>
+						<entity>
+							<type>crm:E12_Production</type>
+							<instance_generator name="EventUri">
+								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="resourceId" type="xpath">../a8540/text()</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P14_carried_out_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a8460</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
 			<!--
 			<link> 
 				<path>
@@ -3725,6 +3834,43 @@
 					</target_node>
 				</range>
 			</link>
+
+				
+			<link> 
+				<path>
+					<source_relation>
+						<relation>a8460</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="Gernsheim Corpus of Drawings">text()</equals>
+						</if>
+						<relationship>crm:P108i_was_produced_by</relationship>
+						<entity>
+							<type>crm:E12_Production</type>
+							<instance_generator name="EventUri">
+								<arg name="resourceType" type="constant">photo</arg>
+								<arg name="resourceId" type="xpath">../a8540/text()</arg>
+								<arg name="eventType" type="constant">production</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P14_carried_out_by</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a8460</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
 
 			<!--
 			<link> 

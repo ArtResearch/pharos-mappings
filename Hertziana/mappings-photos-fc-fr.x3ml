@@ -151,6 +151,42 @@
 					</target_node>
 				</range>
 			</link> 
+
+			<link> 
+				<path>
+					<source_relation>
+						<relation>a8460</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="Gernsheim Corpus of Drawings">text()</equals>
+						</if>
+						<relationship>fr:Photo_created_by_Photographer</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a8460</source_node>
+					<target_node>
+						<entity>
+							<type>fc:photographer</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>fr:Photographer_created_Photo</relationship>
+								<entity>
+									<type>fc:photo</type>
+									<instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">photo</arg>
+										<arg name="id" type="xpath">../a8540/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
 			
 		</mapping>	
 		
@@ -285,6 +321,42 @@
 				</range>
 			</link> 
 			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>a8460</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="Gernsheim Corpus of Drawings">text()</equals>
+						</if>
+						<relationship>fr:Photo_created_by_Photographer</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a8460</source_node>
+					<target_node>
+						<entity>
+							<type>fc:photographer</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>fr:Photographer_created_Photo</relationship>
+								<entity>
+									<type>fc:photo</type>
+									<instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">photo</arg>
+										<arg name="id" type="xpath">../a8540/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
 		</mapping>	
 		
 		<!-- lvl3 -->
@@ -418,6 +490,42 @@
 				</range>
 			</link> 
 			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>a8460</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="Gernsheim Corpus of Drawings">text()</equals>
+						</if>
+						<relationship>fr:Photo_created_by_Photographer</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a8460</source_node>
+					<target_node>
+						<entity>
+							<type>fc:photographer</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>fr:Photographer_created_Photo</relationship>
+								<entity>
+									<type>fc:photo</type>
+									<instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">photo</arg>
+										<arg name="id" type="xpath">../a8540/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			
 		</mapping>	
 		
 		<!-- lvl4 -->
@@ -550,6 +658,42 @@
 					</target_node>
 				</range>
 			</link> 
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>a8460</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="Gernsheim Corpus of Drawings">text()</equals>
+						</if>
+						<relationship>fr:Photo_created_by_Photographer</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>a8460</source_node>
+					<target_node>
+						<entity>
+							<type>fc:photographer</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+							<additional>
+								<relationship>fr:Photographer_created_Photo</relationship>
+								<entity>
+									<type>fc:photo</type>
+									<instance_generator name="URIwithTypeAndId">
+										<arg name="type" type="constant">photo</arg>
+										<arg name="id" type="xpath">../a8540/text()</arg>
+									</instance_generator>
+								</entity>
+							</additional>
+						</entity>
+					</target_node>
+				</range>
+			</link>
 		</mapping>	
 	</mappings>
 </x3ml>
