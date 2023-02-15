@@ -2244,7 +2244,7 @@
 			<link> 
 				<path>
 					<source_relation>
-						<relation>//marc:datafield[@tag="590" and @ind1="9"]</relation>
+						<relation>marc:datafield[@tag="590" and @ind1="9"]</relation>
 					</source_relation>
 					<target_relation>
 						<if>
