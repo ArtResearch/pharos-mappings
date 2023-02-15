@@ -2240,6 +2240,49 @@
 				</range>
 			</link>
 
+			
+			<link> 
+				<path>
+					<source_relation>
+						<relation>//marc:datafield[@tag="590" and @ind1="9"]</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<and>
+								<if>
+									<equals value="Photograph">marc:subfield[@code="a"]/text()</equals>
+								</if>
+								<if>
+									<equals value="Gernsheim Corpus Photographicum">marc:subfield[@code="b"]/text()</equals>
+								</if>
+							</and>
+						</if>
+						<relationship>crm:P138i_is_represented_by</relationship>
+						<entity>
+							<type>crm:E36_Visual_Item</type>
+							<instance_generator name="VisualItemUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P128i_is_carried_by</relationship>
+					</target_relation>
+				</path>				
+				<range>
+					<source_node>marc:datafield[@tag="590" and @ind1="9"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="FrickPhotowithTypeAndId">
+								<arg name="type" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">../marc:datafield[@tag="996"]/marc:subfield[@code="a"]/text()</arg>
+								<arg name="photo_id" type="xpath">marc:subfield[@code="c"]/text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
 			<link> 
 				<path>
 					<source_relation>
