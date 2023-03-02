@@ -2800,11 +2800,11 @@
 					</target_node>
 				</range>
 			</link>
-
+			
 			<link>
 				<path>
 					<source_relation>
-						<relation>marc:subfield[@code="d"]</relation>
+						<relation>marc:subfield[@code="d"]/@birth</relation>
 					</source_relation>
 					<target_relation>
 						<relationship>crm:P98i_was_born_by</relationship>
@@ -2812,7 +2812,7 @@
 							<type>crm:E67_Birth</type>
 							<instance_generator name="EventUri">
 								<arg name="resourceType" type="constant">actor</arg>
-								<arg name="resourceId" type="xpath">string-join(( ../marc:subfield[@code="a"]/text() , ../marc:subfield[@code="b"]/text() , ../marc:subfield[@code="c"]/text(), text() ), " " )</arg>
+								<arg name="resourceId" type="xpath">string-join(( ../../marc:subfield[@code="a"]/text() , ../../marc:subfield[@code="b"]/text(), ../../marc:subfield[@code="c"]/text(), ../../marc:subfield[@code="d"]/text() ), " " )</arg>
 								<arg name="eventType" type="constant">birth</arg>
 							</instance_generator>
 						</entity>
@@ -2821,7 +2821,7 @@
 							<type>crm:E52_Time-Span</type>
 							<instance_generator name="TimespanUri">
 								<arg name="resourceType" type="constant">actor</arg>
-								<arg name="resourceId" type="xpath">string-join(( ../marc:subfield[@code="a"]/text() , ../marc:subfield[@code="b"]/text() , ../marc:subfield[@code="c"]/text(), text() ), " " )</arg>
+								<arg name="resourceId" type="xpath">string-join(( ../../marc:subfield[@code="a"]/text() , ../../marc:subfield[@code="b"]/text(), ../../marc:subfield[@code="c"]/text(), ../../marc:subfield[@code="d"]/text() ), " " )</arg>
 								<arg name="eventType" type="constant">birth</arg>
 							</instance_generator>
 						</entity>
@@ -2829,12 +2829,52 @@
 					</target_relation>
 				</path>
 				<range>
-					<source_node>marc:subfield[@code="d"]</source_node>
+					<source_node>marc:subfield[@code="d"]/@birth</source_node>
 					<target_node>
 						<entity>
 							<type>rdfs:Literal</type>
 							<instance_generator name="Literal">
-								<arg name="text" type="xpath">text()</arg>
+								<arg name="text" type="xpath">../@birth</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>marc:subfield[@code="d"]/@death</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>crm:P100i_died_in</relationship>
+						<entity>
+							<type>crm:E69_Death</type>
+							<instance_generator name="EventUri">
+								<arg name="resourceType" type="constant">actor</arg>
+								<arg name="resourceId" type="xpath">string-join(( ../../marc:subfield[@code="a"]/text() , ../../marc:subfield[@code="b"]/text(), ../../marc:subfield[@code="c"]/text(), ../../marc:subfield[@code="d"]/text() ), " " )</arg>
+								<arg name="eventType" type="constant">death</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P4_has_time-span</relationship>
+						<entity>
+							<type>crm:E52_Time-Span</type>
+							<instance_generator name="TimespanUri">
+								<arg name="resourceType" type="constant">actor</arg>
+								<arg name="resourceId" type="xpath">string-join(( ../../marc:subfield[@code="a"]/text() , ../../marc:subfield[@code="b"]/text(), ../../marc:subfield[@code="c"]/text(), ../../marc:subfield[@code="d"]/text() ), " " )</arg>
+								<arg name="eventType" type="constant">death</arg>
+							</instance_generator>
+						</entity>
+						<relationship>crm:P82_at_some_time_within</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>marc:subfield[@code="d"]/@death</source_node>
+					<target_node>
+						<entity>
+							<type>rdfs:Literal</type>
+							<instance_generator name="Literal">
+								<arg name="text" type="xpath">../@death</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -3678,10 +3718,10 @@
 					</if>
 					<entity>
 						<type>crm:E36_Visual_Item</type>
-						<instance_generator name="URIwithType">
-							<arg name="type" type="constant">subject</arg>
-							<arg name="id" type="xpath">text()</arg>
-						</instance_generator>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">subject</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
 						<label_generator name="Literal">
 							<arg name="text" type="xpath">text()</arg>
 						</label_generator>
