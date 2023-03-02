@@ -389,6 +389,118 @@
 					</target_node>
 				</range>
 			</link>
+
+			<!-- person subject -->
+			<link>
+				<path>
+					<source_relation>
+						<relation>../marc:datafield[@tag="600"]/marc:subfield[@code="a"]/text()</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="NGA_NAME">../../marc:subfield[@code="2"]/text()</equals>
+						</if>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../marc:datafield[@tag="600"]/marc:subfield[@code="a"]/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGenerator">
+								<arg name="hierarchy" type="constant">actor</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">string-join(( . , ../../marc:subfield[@code="c"]/text()), " " )</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<!-- location subject -->
+			<link>
+				<path>
+					<source_relation>
+						<relation>../marc:datafield[@tag="610"]/marc:subfield[@code="a"]/text()</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="NGA_NAME">../../marc:subfield[@code="2"]/text()</equals>
+						</if>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../marc:datafield[@tag="610"]/marc:subfield[@code="a"]/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGenerator">
+								<arg name="hierarchy" type="constant">subject</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">string-join(( . , ../../marc:subfield[@code="b"]/text()), " " )</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<!-- general subject -->
+			<link>
+				<path>
+					<source_relation>
+						<relation>../marc:datafield[@tag="650"]/marc:subfield[@code="a"]/text()</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="NGA_SUBJ">../../marc:subfield[@code="2"]/text()</equals>
+						</if>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../marc:datafield[@tag="650"]/marc:subfield[@code="a"]/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGenerator">
+								<arg name="hierarchy" type="constant">subject</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<!-- location subject -->
+			<link>
+				<path>
+					<source_relation>
+						<relation>../marc:datafield[@tag="651"]/marc:subfield[@code="a"]/text()</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="NGA_SUBJ">../../marc:subfield[@code="2"]/text()</equals>
+						</if>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../marc:datafield[@tag="651"]/marc:subfield[@code="a"]/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGenerator">
+								<arg name="hierarchy" type="constant">subject</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
 		</mapping>
 
 		<mapping namedgraph="graph">
@@ -1387,50 +1499,6 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>marc:datafield[@tag="590" and @ind1="4"]/marc:subfield[@code="a"]</relation>
-					</source_relation>
-					<target_relation>
-						<relationship>crm:P43_has_dimension</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>marc:datafield[@tag="590" and @ind1="4"]/marc:subfield[@code="a"]</source_node>
-					<target_node>
-						<entity>
-							<type>crm:E54_Dimension</type>
-							<instance_generator name="DimensionURI">
-								<arg name="subject_type" type="constant">work</arg>
-								<arg name="subject_id" type="xpath">../../marc:controlfield[@tag="001"]/text()</arg>
-								<arg name="type" type="constant">colour</arg>
-								<arg name="unit" type="constant">-</arg>
-								<arg name="value" type="xpath">text()</arg>
-							</instance_generator>
-							<additional>
-								<relationship>crm:P2_has_type</relationship>
-								<entity>
-									<type>custom:noType</type>
-									<instance_generator name="URIorUUID">
-										<arg name="text" type="constant">http://vocab.getty.edu/aat/300127013</arg>
-									</instance_generator>
-								</entity>
-							</additional>
-							<additional>
-								<relationship>crm:P90_has_value</relationship>
-								<entity>
-									<type>rdfs:Literal</type>
-									<instance_generator name="Literal">
-										<arg name="text" type="xpath">text()</arg>
-									</instance_generator>
-								</entity>
-							</additional>
-						</entity>
-					</target_node>
-				</range>
-			</link>
-
-			<link>
-				<path>
-					<source_relation>
 						<relation>marc:datafield[@tag="300"]/marc:subfield[@code="c"]/@dimension1</relation>
 					</source_relation>
 					<target_relation>
@@ -1787,32 +1855,202 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>marc:datafield[@ind2="0" and @tag="650"]/marc:subfield[@code="a"]</relation>
+						<relation>marc:datafield[@tag="600"]/marc:subfield[@code="a"]</relation>
 					</source_relation>
 					<target_relation>
+						<if>
+							<equals value="NGA_NAME">../marc:subfield[@code="2"]/text()</equals>
+						</if>
 						<relationship>crm:P65_shows_visual_item</relationship>
-						<entity>
-							<type>crm:E36_Visual_Item</type>
-							<instance_generator name="SubjectUri">
-								<arg name="resourceType" type="constant">work</arg>
-								<arg name="resourceId" type="xpath">../../marc:controlfield[@tag="001"]/text()</arg>
-								<arg name="subject_id" type="xpath">../../marc:datafield[@ind2="7" and @tag="650"]/marc:subfield[@code="a"]/text()</arg>
-							</instance_generator>
-							<label_generator name="Literal">
-								<arg name="text" type="xpath">../../marc:datafield[@ind2="7" and @tag="650"]/marc:subfield[@code="a"]/text()</arg>
-							</label_generator>
-						</entity>
-						<relationship>crm:P2_has_type</relationship>
 					</target_relation>
 				</path>
 				<range>
-					<source_node>marc:datafield[@ind2="0" and @tag="650"]/marc:subfield[@code="a"]</source_node>
+					<source_node>marc:datafield[@tag="600"]/marc:subfield[@code="a"]</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E36_Visual_Item</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">string-join(( . , ../marc:subfield[@code="c"]/text()), " " )</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>marc:datafield[@tag="600"]/marc:subfield[@code="0"]</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="aat">../marc:subfield[@code="2"]/text()</equals>
+						</if>
+						<relationship>crm:P65_shows_visual_item</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>marc:datafield[@tag="600"]/marc:subfield[@code="0"]</source_node>
 					<target_node>
 						<entity>
 							<type>custom:noType</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+						
+			<link>
+				<path>
+					<source_relation>
+						<relation>marc:datafield[@tag="610"]/marc:subfield[@code="a"]</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="NGA_NAME">../marc:subfield[@code="2"]/text()</equals>
+						</if>
+						<relationship>crm:P65_shows_visual_item</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>marc:datafield[@tag="610"]/marc:subfield[@code="a"]</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E36_Visual_Item</type>
 							<instance_generator name="URIwithType">
-								<arg name="type" type="constant">type</arg>
+								<arg name="type" type="constant">subject</arg>
+								<arg name="id" type="xpath">string-join(( . , ../marc:subfield[@code="b"]/text()), " " )</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>marc:datafield[@tag="610"]/marc:subfield[@code="0"]</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="tgn">../marc:subfield[@code="2"]/text()</equals>
+						</if>
+						<relationship>crm:P65_shows_visual_item</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>marc:datafield[@tag="610"]/marc:subfield[@code="0"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>marc:datafield[@tag="650"]/marc:subfield[@code="a"]</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="NGA_SUBJ">../marc:subfield[@code="2"]/text()</equals>
+						</if>
+						<relationship>crm:P65_shows_visual_item</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>marc:datafield[@tag="650"]/marc:subfield[@code="a"]</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E36_Visual_Item</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">subject</arg>
 								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>marc:datafield[@tag="650"]/marc:subfield[@code="0"]</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="aat">../marc:subfield[@code="2"]/text()</equals>
+						</if>
+						<relationship>crm:P65_shows_visual_item</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>marc:datafield[@tag="650"]/marc:subfield[@code="0"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>marc:datafield[@tag="651"]/marc:subfield[@code="a"]</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="NGA_SUBJ">../marc:subfield[@code="2"]/text()</equals>
+						</if>
+						<relationship>crm:P65_shows_visual_item</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>marc:datafield[@tag="651"]/marc:subfield[@code="a"]</source_node>
+					<target_node>
+						<entity>
+							<type>crm:E36_Visual_Item</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">subject</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>marc:datafield[@tag="651"]/marc:subfield[@code="0"]</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="tgn">../marc:subfield[@code="2"]/text()</equals>
+						</if>
+						<relationship>crm:P65_shows_visual_item</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>marc:datafield[@tag="651"]/marc:subfield[@code="0"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">text()</arg>
 							</instance_generator>
 						</entity>
 					</target_node>
@@ -3244,6 +3482,250 @@
 							</entity>
 						</additional>
 					</entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>//marc:datafield[@tag="600"]/marc:subfield[@code="a"]</source_node>
+				<target_node>
+					<if>
+						<equals value="NGA_NAME">../marc:subfield[@code="2"]/text()</equals>
+					</if>
+					<entity>
+						<type>crm:E36_Visual_Item</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">actor</arg>
+							<arg name="id" type="xpath">string-join(( . , ../marc:subfield[@code="c"]/text()), " " )</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">string-join(( . , ../marc:subfield[@code="c"]/text()), ", " )</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">NGA</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">actor</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">string-join(( . , ../marc:subfield[@code="c"]/text()), " " )</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:noType</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">NGA</arg>
+										</instance_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIorUUID">
+									<arg name="text" type="constant">http://vocab.getty.edu/aat/300404126</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+					 </entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>//marc:datafield[@tag="610"]/marc:subfield[@code="a"]</source_node>
+				<target_node>
+					<if>
+						<equals value="NGA_NAME">../marc:subfield[@code="2"]/text()</equals>
+					</if>
+					<entity>
+						<type>crm:E36_Visual_Item</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">subject</arg>
+							<arg name="id" type="xpath">string-join(( . , ../marc:subfield[@code="b"]/text()), " " )</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">string-join(( . , ../marc:subfield[@code="b"]/text()), " " )</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">NGA</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">subject</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">string-join(( . , ../marc:subfield[@code="b"]/text()), " " )</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:noType</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">NGA</arg>
+										</instance_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIorUUID">
+									<arg name="text" type="constant">http://vocab.getty.edu/aat/300404126</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+					 </entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>//marc:datafield[@tag="650"]/marc:subfield[@code="a"]</source_node>
+				<target_node>
+					<if>
+						<equals value="NGA_SUBJ">../marc:subfield[@code="2"]/text()</equals>
+					</if>
+					<entity>
+						<type>crm:E36_Visual_Item</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">subject</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">NGA</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">subject</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:noType</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">NGA</arg>
+										</instance_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIorUUID">
+									<arg name="text" type="constant">http://vocab.getty.edu/aat/300404126</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+					 </entity>
+				</target_node>
+			</domain>
+		</mapping>
+
+		<mapping namedgraph="graph">
+			<domain>
+				<source_node>//marc:datafield[@tag="651"]/marc:subfield[@code="a"]</source_node>
+				<target_node>
+					<if>
+						<equals value="NGA_SUBJ">../marc:subfield[@code="2"]/text()</equals>
+					</if>
+					<entity>
+						<type>crm:E36_Visual_Item</type>
+						<instance_generator name="URIwithType">
+							<arg name="type" type="constant">subject</arg>
+							<arg name="id" type="xpath">text()</arg>
+						</instance_generator>
+						<label_generator name="Literal">
+							<arg name="text" type="xpath">text()</arg>
+						</label_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">NGA</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P67i_is_referred_to_by</relationship>
+							<entity>
+								<type>custom:Namedgraph</type>
+								<instance_generator name="MultiHashingGenerator">
+									<arg name="hierarchy" type="constant">subject</arg>
+									<arg name="object_HASHED_CONTENTS" type="xpath">text()</arg>
+									<arg name="term_simple" type="constant">graph</arg>
+								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:noType</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">NGA</arg>
+										</instance_generator>
+									</entity>
+								</additional>
+							</entity>
+						</additional>
+						<additional>
+							<relationship>crm:P2_has_type</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIorUUID">
+									<arg name="text" type="constant">http://vocab.getty.edu/aat/300404126</arg>
+								</instance_generator>
+							</entity>
+						</additional>
+					 </entity>
 				</target_node>
 			</domain>
 		</mapping>

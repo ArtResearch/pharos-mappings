@@ -16,8 +16,10 @@
 		<namespace prefix="iiif_image" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
 		<namespace prefix="iiif_json" uri="https://ids.lib.harvard.edu/ids/iiif/"/>
 		<namespace prefix="marc" uri="http://www.loc.gov/MARC21/slim"/>
-		<namespace prefix="fc" uri="https://artresearch.net/resource/custom/fc/"/>
-		<namespace prefix="fr" uri="https://artresearch.net/resource/custom/fr/"/>
+		<namespace prefix="fc" uri="https://artresearch.net/resource/fc/"/>
+		<namespace prefix="fr" uri="https://artresearch.net/resource/fr/"/>
+		<namespace prefix="cfc" uri="https://artresearch.net/resource/custom/fc/"/>
+		<namespace prefix="cfr" uri="https://artresearch.net/resource/custom/fr/"/>
 	</namespaces>
 	<mappings>
 		<mapping>
@@ -25,15 +27,15 @@
 				<source_node>//marc:record</source_node>
 				<target_node>
 					<entity>
-						<type>fc:work</type>
+						<type>cfc:work</type>
 						<instance_generator name="URIwithTypeAndId">
 							<arg name="type" type="constant">work</arg>
 							<arg name="id" type="xpath">marc:controlfield[@tag="001"]/text()</arg>
 						</instance_generator>
 						<additional>
-							<relationship>fr:Work_has_provider_Institution</relationship>
+							<relationship>cfr:Work_has_provider_Institution</relationship>
 							<entity>
-								<type>fc:institution</type>
+								<type>cfc:institution</type>
 								<instance_generator name="URIwithTypeAndId">
 									<arg name="type" type="constant">source</arg>
 									<arg name="id" type="constant">NGA</arg>
@@ -50,22 +52,22 @@
 						<relation>marc:datafield[@tag="100"]/marc:subfield[@code="a"]</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>fr:Work_created_from_Artist</relationship>
+						<relationship>cfr:Work_created_from_Artist</relationship>
 					</target_relation>
 				</path>
 				<range>
 					<source_node>marc:datafield[@tag="100"]/marc:subfield[@code="a"]</source_node>
 					<target_node>
 						<entity>
-							<type>fc:artist</type>
+							<type>cfc:artist</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">string-join(( text() , ../marc:subfield[@code="b"]/text() , ../marc:subfield[@code="c"]/text(), ../marc:subfield[@code="d"]/text() ), " " )</arg>
 							</instance_generator>
 							<additional>
-								<relationship>fr:Artist_created_Work</relationship>
+								<relationship>cfr:Artist_created_Work</relationship>
 								<entity>
-									<type>fc:work</type>
+									<type>cfc:work</type>
 									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">work</arg>
 										<arg name="id" type="xpath">../../marc:controlfield[@tag="001"]/text()</arg>
@@ -83,7 +85,7 @@
 						<relation>marc:datafield[@tag="260"]/marc:subfield[@code="c1"]</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>fr:Work_from_Date</relationship>
+						<relationship>cfr:Work_from_Date</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -105,7 +107,7 @@
 						<relation>marc:datafield[@tag="260"]/marc:subfield[@code="c2"]</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>fr:Work_to_Date</relationship>
+						<relationship>cfr:Work_to_Date</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -127,7 +129,7 @@
 						<relation>marc:datafield[@tag="260"]/marc:subfield[@code="c"]</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>fr:Work_from_Date</relationship>
+						<relationship>cfr:Work_from_Date</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -149,22 +151,22 @@
 						<relation>marc:datafield[@tag="260"]/marc:subfield[@code="a"]</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>fr:Work_from_Place</relationship>
+						<relationship>cfr:Work_from_Place</relationship>
 					</target_relation>
 				</path>
 				<range>
 					<source_node>marc:datafield[@tag="260"]/marc:subfield[@code="a"]</source_node>
 					<target_node>
 						<entity>
-							<type>fc:place</type>
+							<type>cfc:place</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">place</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
 							<additional>
-								<relationship>fr:Place_of_Work</relationship>
+								<relationship>cfr:Place_of_Work</relationship>
 								<entity>
-									<type>fc:work</type>
+									<type>cfc:work</type>
 									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">work</arg>
 										<arg name="id" type="xpath">../../marc:controlfield[@tag="001"]/text()</arg>
@@ -182,22 +184,22 @@
 						<relation>marc:datafield[@tag="270"]/marc:subfield[@code="a"]</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>fr:Work_from_Place</relationship>
+						<relationship>cfr:Work_from_Place</relationship>
 					</target_relation>
 				</path>
 				<range>
 					<source_node>marc:datafield[@tag="270"]/marc:subfield[@code="a"]</source_node>
 					<target_node>
 						<entity>
-							<type>fc:place</type>
+							<type>cfc:place</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">place</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
 							<additional>
-								<relationship>fr:Place_of_Work</relationship>
+								<relationship>cfr:Place_of_Work</relationship>
 								<entity>
-									<type>fc:work</type>
+									<type>cfc:work</type>
 									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">work</arg>
 										<arg name="id" type="xpath">../../marc:controlfield[@tag="001"]/text()</arg>
@@ -215,22 +217,22 @@
 						<relation>marc:datafield[@tag="270"]/marc:subfield[@code="b"]</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>fr:Work_from_Place</relationship>
+						<relationship>cfr:Work_from_Place</relationship>
 					</target_relation>
 				</path>
 				<range>
 					<source_node>marc:datafield[@tag="270"]/marc:subfield[@code="b"]</source_node>
 					<target_node>
 						<entity>
-							<type>fc:place</type>
+							<type>cfc:place</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">place</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
 							<additional>
-								<relationship>fr:Place_of_Work</relationship>
+								<relationship>cfr:Place_of_Work</relationship>
 								<entity>
-									<type>fc:work</type>
+									<type>cfc:work</type>
 									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">work</arg>
 										<arg name="id" type="xpath">../../marc:controlfield[@tag="001"]/text()</arg>
@@ -248,22 +250,22 @@
 						<relation>marc:datafield[@tag="270"]/marc:subfield[@code="c"]</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>fr:Work_from_Place</relationship>
+						<relationship>cfr:Work_from_Place</relationship>
 					</target_relation>
 				</path>
 				<range>
 					<source_node>marc:datafield[@tag="270"]/marc:subfield[@code="c"]</source_node>
 					<target_node>
 						<entity>
-							<type>fc:place</type>
+							<type>cfc:place</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">place</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
 							<additional>
-								<relationship>fr:Place_of_Work</relationship>
+								<relationship>cfr:Place_of_Work</relationship>
 								<entity>
-									<type>fc:work</type>
+									<type>cfc:work</type>
 									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">work</arg>
 										<arg name="id" type="xpath">../../marc:controlfield[@tag="001"]/text()</arg>
@@ -281,22 +283,22 @@
 						<relation>marc:datafield[@tag="270"]/marc:subfield[@code="d"]</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>fr:Work_from_Place</relationship>
+						<relationship>cfr:Work_from_Place</relationship>
 					</target_relation>
 				</path>
 				<range>
 					<source_node>marc:datafield[@tag="270"]/marc:subfield[@code="d"]</source_node>
 					<target_node>
 						<entity>
-							<type>fc:place</type>
+							<type>cfc:place</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">place</arg>
 								<arg name="id" type="xpath">text()</arg>
 							</instance_generator>
 							<additional>
-								<relationship>fr:Place_of_Work</relationship>
+								<relationship>cfr:Place_of_Work</relationship>
 								<entity>
-									<type>fc:work</type>
+									<type>cfc:work</type>
 									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">work</arg>
 										<arg name="id" type="xpath">../../marc:controlfield[@tag="001"]/text()</arg>
@@ -314,22 +316,22 @@
 						<relation>marc:datafield[@tag="590" and @ind1="1"]/marc:subfield[@code="a"]</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>fr:Work_kept_by_Institution</relationship>
+						<relationship>cfr:Work_kept_by_Institution</relationship>
 					</target_relation>
 				</path>
 				<range>
 					<source_node>marc:datafield[@tag="590" and @ind1="1"]/marc:subfield[@code="a"]</source_node>
 					<target_node>
 						<entity>
-							<type>fc:institution</type>
+							<type>cfc:institution</type>
 							<instance_generator name="URIwithType">
 								<arg name="type" type="constant">actor</arg>
 								<arg name="id" type="xpath">string-join((text(), ../marc:subfield[@code="b"]/text(), ../marc:subfield[@code="c"]/text(), ../marc:subfield[@code="d"]/text() ),'_')</arg>
 							</instance_generator>
 							<additional>
-								<relationship>fr:Institution_keeps_Work</relationship>
+								<relationship>cfr:Institution_keeps_Work</relationship>
 								<entity>
-									<type>fc:work</type>
+									<type>cfc:work</type>
 									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">work</arg>
 										<arg name="id" type="xpath">../../marc:controlfield[@tag="001"]/text()</arg>
@@ -347,23 +349,23 @@
 						<relation>marc:datafield[@tag="AVD"]</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>fr:Work_depicted_by_Photo</relationship>
+						<relationship>cfr:Work_depicted_by_Photo</relationship>
 					</target_relation>
 				</path>
 				<range>
 					<source_node>marc:datafield[@tag="AVD"]</source_node>
 					<target_node>
 						<entity>
-							<type>fc:photo</type>
+							<type>cfc:photo</type>
 							<instance_generator name="NGAPhotowithTypeAndId">
 								<arg name="type" type="constant">photo</arg>
 								<arg name="work_id" type="xpath">../marc:controlfield[@tag="001"]/text()</arg>
 								<arg name="photo_id" type="xpath">marc:subfield[@code="b"]/text()</arg>
 							</instance_generator>
 							<additional>
-								<relationship>fr:Photo_depicts_Work</relationship>
+								<relationship>cfr:Photo_depicts_Work</relationship>
 								<entity>
-									<type>fc:work</type>
+									<type>cfc:work</type>
 									<instance_generator name="URIwithTypeAndId">
 										<arg name="type" type="constant">work</arg>
 										<arg name="id" type="xpath">../marc:controlfield[@tag="001"]/text()</arg>
@@ -374,6 +376,220 @@
 					</target_node>
 				</range>
 			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>marc:datafield[@tag="600"]/marc:subfield[@code="a"]</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="NGA_NAME">../marc:subfield[@code="2"]/text()</equals>
+						</if>
+						<relationship>cfr:Work_shows_Subject</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>marc:datafield[@tag="600"]/marc:subfield[@code="a"]</source_node>
+					<target_node>
+						<entity>
+							<type>cfc:subject</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">actor</arg>
+								<arg name="id" type="xpath">string-join(( . , ../marc:subfield[@code="c"]/text()), " " )</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>marc:datafield[@tag="600"]/marc:subfield[@code="0"]</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="aat">../marc:subfield[@code="2"]/text()</equals>
+						</if>
+						<relationship>cfr:Work_shows_Subject</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>marc:datafield[@tag="600"]/marc:subfield[@code="0"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			
+			<link>
+				<path>
+					<source_relation>
+						<relation>marc:datafield[@tag="610"]/marc:subfield[@code="a"]</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="NGA_NAME">../marc:subfield[@code="2"]/text()</equals>
+						</if>
+						<relationship>cfr:Work_shows_Subject</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>marc:datafield[@tag="610"]/marc:subfield[@code="a"]</source_node>
+					<target_node>
+						<entity>
+							<type>cfc:subject</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">subject</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>marc:datafield[@tag="610"]/marc:subfield[@code="0"]</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="tgn">../marc:subfield[@code="2"]/text()</equals>
+						</if>
+						<relationship>cfr:Work_shows_Subject</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>marc:datafield[@tag="610"]/marc:subfield[@code="0"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>marc:datafield[@tag="650"]/marc:subfield[@code="a"]</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="NGA_SUBJ">../marc:subfield[@code="2"]/text()</equals>
+						</if>
+						<relationship>cfr:Work_shows_Subject</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>marc:datafield[@tag="650"]/marc:subfield[@code="a"]</source_node>
+					<target_node>
+						<entity>
+							<type>cfc:subject</type>
+							<instance_generator name="URIwithType">
+								<arg name="type" type="constant">subject</arg>
+								<arg name="id" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>marc:datafield[@tag="650"]/marc:subfield[@code="0"]</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="aat">../marc:subfield[@code="2"]/text()</equals>
+						</if>
+						<relationship>cfr:Work_shows_Subject</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>marc:datafield[@tag="650"]/marc:subfield[@code="0"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>marc:datafield[@tag="651"]/marc:subfield[@code="a"]</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="NGA_SUBJ">../marc:subfield[@code="2"]/text()</equals>
+						</if>
+						<relationship>cfr:Work_shows_Subject</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>marc:datafield[@tag="651"]/marc:subfield[@code="a"]</source_node>
+					<target_node>
+						<entity>
+							<type>cfc:subject</type>
+							<instance_generator name="SubjectUri">
+								<arg name="resourceType" type="constant">work</arg>
+								<arg name="resourceId" type="xpath">../../marc:controlfield[@tag="001"]/text()</arg>
+								<arg name="subject_id" type="xpath">text()</arg>
+							</instance_generator>
+							<label_generator name="Literal">
+								<arg name="text" type="xpath">text()</arg>
+							</label_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>marc:datafield[@tag="651"]/marc:subfield[@code="0"]</relation>
+					</source_relation>
+					<target_relation>
+						<if>
+							<equals value="tgn">../marc:subfield[@code="2"]/text()</equals>
+						</if>
+						<relationship>cfr:Work_shows_Subject</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>marc:datafield[@tag="651"]/marc:subfield[@code="0"]</source_node>
+					<target_node>
+						<entity>
+							<type>custom:noType</type>
+							<instance_generator name="URIorUUID">
+								<arg name="text" type="xpath">text()</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
 		</mapping>
 
 		<mapping>
@@ -381,7 +597,7 @@
 				<source_node>//marc:datafield[@tag="100"]</source_node>
 				<target_node>
 					<entity>
-						<type>fc:artist</type>
+						<type>cfc:artist</type>
 						<instance_generator name="URIwithType">
 							<arg name="type" type="constant">actor</arg>
 							<arg name="id" type="xpath">string-join(( marc:subfield[@code="a"]/text() , marc:subfield[@code="b"]/text() , marc:subfield[@code="c"]/text(), marc:subfield[@code="d"]/text() ), " " )</arg>
@@ -396,7 +612,7 @@
 						<relation>marc:subfield[@code="d"]/@birth</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>fr:Artist_has_Date_of_Birth</relationship>
+						<relationship>cfr:Artist_has_Date_of_Birth</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -418,7 +634,7 @@
 						<relation>marc:subfield[@code="d"]/@death</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>fr:Artist_has_Date_of_Death</relationship>
+						<relationship>cfr:Artist_has_Date_of_Death</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -440,7 +656,7 @@
 				<source_node>//marc:datafield[@tag="700"]</source_node>
 				<target_node>
 					<entity>
-						<type>fc:artist</type>
+						<type>cfc:artist</type>
 						<instance_generator name="URIwithType">
 							<arg name="type" type="constant">actor</arg>
 							<arg name="id" type="xpath">string-join(( marc:subfield[@code="a"]/text() , marc:subfield[@code="b"]/text() , marc:subfield[@code="c"]/text(), marc:subfield[@code="d"]/text() ), " " )</arg>
@@ -455,7 +671,7 @@
 						<relation>marc:subfield[@code="d"]/@birth</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>fr:Artist_has_Date_of_Birth</relationship>
+						<relationship>cfr:Artist_has_Date_of_Birth</relationship>
 					</target_relation>
 				</path>
 				<range>
@@ -477,7 +693,7 @@
 						<relation>marc:subfield[@code="d"]/@death</relation>
 					</source_relation>
 					<target_relation>
-						<relationship>fr:Artist_has_Date_of_Death</relationship>
+						<relationship>cfr:Artist_has_Date_of_Death</relationship>
 					</target_relation>
 				</path>
 				<range>
