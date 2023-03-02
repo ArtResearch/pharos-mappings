@@ -40,18 +40,6 @@
 								</instance_generator>
 							</entity>
 						</additional>
-						<!-- related actor -->
-						<additional>
-							<relationship>custom:consists_of</relationship>
-							<entity>
-								<type>custom:Namedgraph</type>
-								<instance_generator name="MultiHashingGenerator">
-									<arg name="hierarchy" type="constant">actor</arg>
-									<arg name="object_HASHED_CONTENTS" type="xpath">string-join(( ../marc:datafield[@tag="700"]/marc:subfield[@code="a"]/text() , ../marc:datafield[@tag="700"]/marc:subfield[@code="b"]/text() , ../marc:datafield[@tag="700"]/marc:subfield[@code="c"]/text(), ../marc:datafield[@tag="700"]/marc:subfield[@code="d"]/text() ), " " )</arg>
-									<arg name="term_simple" type="constant">graph</arg>
-								</instance_generator>
-							</entity>
-						</additional>
 						<!-- related actor relation type-->
 						<additional>
 							<relationship>custom:consists_of</relationship>
@@ -85,6 +73,55 @@
 							<instance_generator name="MultiHashingGenerator">
 								<arg name="hierarchy" type="constant">actor</arg>
 								<arg name="object_HASHED_CONTENTS" type="xpath">string-join(( . , ../../marc:subfield[@code="b"]/text() , ../../marc:subfield[@code="c"]/text(), ../../marc:subfield[@code="d"]/text() ), " " )</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+			<!-- related actor  -->
+			<link>
+				<path>
+					<source_relation>
+						<relation>../marc:datafield[@tag="700"]/marc:subfield[@code="a"]/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../marc:datafield[@tag="700"]/marc:subfield[@code="a"]/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGenerator">
+								<arg name="hierarchy" type="constant">actor</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">string-join(( ../../marc:subfield[@code="a"]/text() , ../../marc:subfield[@code="b"]/text() , ../../marc:subfield[@code="c"]/text(), ../../marc:subfield[@code="d"]/text() ), " " )</arg>
+								<arg name="term_simple" type="constant">graph</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+
+			<!-- related actor relation  -->
+			<link>
+				<path>
+					<source_relation>
+						<relation>../marc:datafield[@tag="700"]/marc:subfield[@code="e"]/text()</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>custom:consists_of</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>../marc:datafield[@tag="700"]/marc:subfield[@code="e"]/text()</source_node>
+					<target_node>
+						<entity>
+							<type>custom:Namedgraph</type>
+							<instance_generator name="MultiHashingGenerator">
+								<arg name="hierarchy" type="constant">actor</arg>
+								<arg name="object_HASHED_CONTENTS" type="xpath">.</arg>
 								<arg name="term_simple" type="constant">graph</arg>
 							</instance_generator>
 						</entity>
