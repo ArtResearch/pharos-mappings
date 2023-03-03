@@ -346,40 +346,6 @@
 			<link>
 				<path>
 					<source_relation>
-						<relation>marc:datafield[@tag="AVD"]</relation>
-					</source_relation>
-					<target_relation>
-						<relationship>cfr:Work_depicted_by_Photo</relationship>
-					</target_relation>
-				</path>
-				<range>
-					<source_node>marc:datafield[@tag="AVD"]</source_node>
-					<target_node>
-						<entity>
-							<type>cfc:photo</type>
-							<instance_generator name="NGAPhotowithTypeAndId">
-								<arg name="type" type="constant">photo</arg>
-								<arg name="work_id" type="xpath">../marc:controlfield[@tag="001"]/text()</arg>
-								<arg name="photo_id" type="xpath">marc:subfield[@code="b"]/text()</arg>
-							</instance_generator>
-							<additional>
-								<relationship>cfr:Photo_depicts_Work</relationship>
-								<entity>
-									<type>cfc:work</type>
-									<instance_generator name="URIwithTypeAndId">
-										<arg name="type" type="constant">work</arg>
-										<arg name="id" type="xpath">../marc:controlfield[@tag="001"]/text()</arg>
-									</instance_generator>
-								</entity>
-							</additional>
-						</entity>
-					</target_node>
-				</range>
-			</link>
-
-			<link>
-				<path>
-					<source_relation>
 						<relation>marc:datafield[@tag="600"]/marc:subfield[@code="a"]</relation>
 					</source_relation>
 					<target_relation>
