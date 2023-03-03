@@ -22,8 +22,17 @@
 	<pattern>{type}/{id}/graph</pattern>
 </generator>
 
-<generator name="NGAPhotoNamedgraph" prefix="prefix">
+<!-- <generator name="NGAPhotoNamedgraph" prefix="prefix" shorten="yes">
 	<pattern>{type}/{work_id}/{photo_id}/graph</pattern>
+</generator> -->
+
+<generator name="NGAPhotoNamedgraph" prefix="prefix">
+	<custom generatorClass="gr.forth.MultiHashingGenerator">
+		<set-arg name="type"/>
+		<set-arg name="work_id"/>
+		<set-arg name="object_HASHED_CONTENTS"/>
+		<set-arg name="term_simple"/>
+	</custom>
 </generator>
 
 <generator name="URIwithType" prefix="prefix" shorten="yes">
@@ -81,6 +90,10 @@
 
 <generator name="DimensionURI" prefix="prefix" shorten="yes">
 	<pattern>{subject_type}/{subject_id}/dimension/{type}/{unit}/{value}</pattern>
+</generator>
+
+<generator name="PhotoDimensionURI" prefix="prefix" shorten="yes">
+	<pattern>{subject_type}/{subject_id}/dimension/{type}/{value}</pattern>
 </generator>
 
 <generator name="EventUri" prefix="prefix">
@@ -171,7 +184,7 @@
 	<pattern>{work_id} {count_id}</pattern>
 </generator>
 
-<generator name="NGAPhotowithTypeAndId" prefix="prefix">
+<generator name="NGAPhotowithTypeAndId" prefix="prefix" shorten="yes">
 	<pattern>{type}/{work_id}/{photo_id}</pattern>
 </generator>
 
