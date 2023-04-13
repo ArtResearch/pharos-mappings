@@ -38,6 +38,16 @@
 									<arg name="type" type="constant">work</arg>
 									<arg name="id" type="xpath">replace(replace(text(),"https://libraryimage.nga.gov/manifest/ic/",""), ".json", "")</arg>
 								</instance_generator>
+								<additional>
+									<relationship>custom:has_provider</relationship>
+									<entity>
+										<type>custom:noType</type>
+										<instance_generator name="URIwithTypeAndId">
+											<arg name="type" type="constant">source</arg>
+											<arg name="id" type="constant">NGA</arg>
+										</instance_generator>
+									</entity>
+								</additional>
 							</entity>
 						</additional>
 					</entity>
@@ -107,6 +117,16 @@
 							<arg name="type" type="constant">work</arg>
 							<arg name="id" type="xpath">replace(replace(../id/text(),"https://libraryimage.nga.gov/manifest/ic/",""), ".json", "")</arg>
 						</instance_generator>
+						<additional>
+							<relationship>custom:has_provider</relationship>
+							<entity>
+								<type>custom:noType</type>
+								<instance_generator name="URIwithTypeAndId">
+									<arg name="type" type="constant">source</arg>
+									<arg name="id" type="constant">NGA</arg>
+								</instance_generator>
+							</entity>
+						</additional>
 					</entity>
 				</target_node>
 			</domain>
@@ -224,6 +244,28 @@
 										<instance_generator name="URIorUUID">
 											<arg name="text" type="constant">http://iiif.io/api/image</arg>
 										</instance_generator>
+									</entity>
+								</additional>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>custom:noType</type>
+										<instance_generator name="URIorUUID">
+											<arg name="text" type="constant">http://vocab.getty.edu/aat/300078817</arg>
+										</instance_generator>
+									</entity>
+								</additional>
+								<additional>
+									<relationship>crm:P2_has_type</relationship>
+									<entity>
+										<type>custom:noType</type>
+										<instance_generator name="URIwithType">
+											<arg name="type" type="constant">type</arg>
+											<arg name="id" type="constant">recto</arg>
+										</instance_generator>
+										<label_generator name="Literal">
+										    <arg name="text" type="constant">recto</arg>
+										</label_generator>
 									</entity>
 								</additional>
 							</entity>
@@ -516,10 +558,6 @@
 					</target_node>
 				</range>
 			</link>
-
-
-
-
 		</mapping>
 
 		<mapping namedgraph="graph">

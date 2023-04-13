@@ -69,6 +69,10 @@
   <https://artresearch.net/resource/pmc/fcrs> <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/pmc/source/PMC>.
 }
 
+<https://artresearch.net/resource/nga/fcrs> {
+  <https://artresearch.net/resource/nga/fcrs> <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/nga/source/NGA>.
+}
+
 <https://artresearch.net/resource/khi/fcrs> {
   <https://artresearch.net/resource/khi/fcrs> <https://artresearch.net/custom/has_provider> <https://artresearch.net/resource/khi/source/KHI>.
 }

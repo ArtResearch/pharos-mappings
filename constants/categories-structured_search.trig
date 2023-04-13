@@ -481,6 +481,7 @@ insert data {
      <https://artresearch.net/resource/frick/source/Frick> a <https://artresearch.net/resource/fc/MainProvider>.
      <https://artresearch.net/resource/nypl/source/NYPL> a <https://artresearch.net/resource/fc/MainProvider>.
      <https://artresearch.net/resource/pmc/source/PMC> a <https://artresearch.net/resource/fc/MainProvider>.
+     <https://artresearch.net/resource/nga/source/NGA> a <https://artresearch.net/resource/fc/MainProvider>.
      <https://artresearch.net/resource/zeri/source/Zeri> a <https://artresearch.net/resource/fc/MainProvider>.
   }
 }

@@ -22,6 +22,17 @@
                 "Paul Mellon Centre".
 }
 
+<https://artresearch.net/resource/nga/source/NGA/graph> {
+    <https://artresearch.net/resource/nga/source/NGA>
+        a       <https://artresearch.net/custom/Provider> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+            "NGA";
+        <http://www.w3.org/2000/01/rdf-schema#label>
+            "National Gallery of Art";
+        <http://www.w3.org/2004/02/skos/core#prefLabel>
+            "National Gallery of Art".
+}
+
 <https://artresearch.net/resource/zeri/source/Zeri/graph> {
         <https://artresearch.net/resource/zeri/source/Zeri>
             a       <https://artresearch.net/custom/Provider> ;
@@ -224,21 +235,21 @@
     <http://vocab.getty.edu/aat/300055863>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
-                    "provenance (history of ownership)" .    
+                    "provenance (history of ownership)" .
 }
 
 <http://vocab.getty.edu/aat/300435424/graph> {
     <http://vocab.getty.edu/aat/300435424>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
-                    "exhibitions description" .    
+                    "exhibitions description" .
 }
 
 <http://vocab.getty.edu/aat/300435425/graph> {
     <http://vocab.getty.edu/aat/300435425>
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
-                    "condition/examination description" .    
+                    "condition/examination description" .
 }
 
 <http://vocab.getty.edu/aat/300404764/graph> {
@@ -348,7 +359,7 @@
 }
 
 <http://vocab.getty.edu/aat/300264595/graph> {
-        <http://vocab.getty.edu/aat/300264595> 
+        <http://vocab.getty.edu/aat/300264595>
         <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <https://artresearch.net/resource/vocab/maintype>;
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
@@ -546,6 +557,20 @@
             a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
             <http://www.w3.org/2000/01/rdf-schema#label>
                     "recto" .
+}
+
+<https://artresearch.net/resource/nga/type/DEDDF600-5882-37D4-B91C-7CCCD5556894/graph> {
+    <https://artresearch.net/resource/nga/type/DEDDF600-5882-37D4-B91C-7CCCD5556894>
+        a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+        <http://www.w3.org/2000/01/rdf-schema#label>
+            "verso" .
+}
+
+<https://artresearch.net/resource/nga/type/4F6A2899-2950-328C-B172-54AD813EE993/graph> {
+        <https://artresearch.net/resource/nga/type/4F6A2899-2950-328C-B172-54AD813EE993>
+            a       <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            <http://www.w3.org/2000/01/rdf-schema#label>
+                "recto" .
 }
 
 

@@ -65,17 +65,6 @@
 								<arg name="type" type="constant">work</arg>
 								<arg name="id" type="xpath">replace(replace(text(),"https://libraryimage.nga.gov/manifest/ic/",""), ".json", "")</arg>
 							</instance_generator>
-							<additional>
-								<relationship>fr:Work_depicted_by_Photo</relationship>
-								<entity>
-									<type>fc:photo</type>
-									<instance_generator name="NGAPhotowithTypeAndId">
-										<arg name="type" type="constant">photo</arg>
-										<arg name="work_id" type="xpath">replace(replace(text(),"https://libraryimage.nga.gov/manifest/ic/",""), ".json", "")</arg>
-										<arg name="photo_id" type="xpath">../sequences/canvases/id/text()</arg>
-									</instance_generator>
-								</entity>
-							</additional>
 						</entity>
 					</target_node>
 				</range>
@@ -105,10 +94,10 @@
 							<additional>
 								<relationship>fr:Photographer_created_Photo</relationship>
 								<entity>
-									<type>fc:photo</type>
+									<type>cfc:photo</type>
 									<instance_generator name="NGAPhotowithTypeAndId">
 										<arg name="type" type="constant">photo</arg>
-										<arg name="work_id" type="xpath">replace(replace(text(),"https://libraryimage.nga.gov/manifest/ic/",""), ".json", "")</arg>
+										<arg name="work_id" type="xpath">replace(replace(../../../../id/text(),"https://libraryimage.nga.gov/manifest/ic/",""), ".json", "")</arg>
 										<arg name="photo_id" type="xpath">../../id/text()</arg>
 									</instance_generator>
 								</entity>
@@ -119,5 +108,43 @@
 			</link>
 		</mapping>
 
+		<mapping>
+			<domain>
+				<source_node>//ObjectNode</source_node>
+				<target_node>
+					<entity>
+						<type>cfc:work</type>
+						<instance_generator name="URIwithTypeAndId">
+							<arg name="type" type="constant">work</arg>
+							<arg name="id" type="xpath">replace(replace(id/text(),"https://libraryimage.nga.gov/manifest/ic/",""), ".json", "")</arg>
+						</instance_generator>
+					</entity>
+				</target_node>
+			</domain>
+
+			<link>
+				<path>
+					<source_relation>
+						<relation>sequences/canvases/id</relation>
+					</source_relation>
+					<target_relation>
+						<relationship>cfr:Work_depicted_by_Photo</relationship>
+					</target_relation>
+				</path>
+				<range>
+					<source_node>sequences/canvases/id</source_node>
+					<target_node>
+						<entity>
+							<type>cfc:photo</type>
+							<instance_generator name="NGAPhotowithTypeAndId">
+								<arg name="type" type="constant">photo</arg>
+								<arg name="work_id" type="xpath">replace(replace(../../../id/text(),"https://libraryimage.nga.gov/manifest/ic/",""), ".json", "")</arg>
+								<arg name="photo_id" type="xpath">.</arg>
+							</instance_generator>
+						</entity>
+					</target_node>
+				</range>
+			</link>
+		</mapping>
 	</mappings>
 </x3ml>
